@@ -1,0 +1,11 @@
+transformers==4.57.1
+sentence-transformers==5.1.2
+torch==2.8.0
+python-pptx==1.0.2
+nltk==3.9.3
+numpy==2.2.6
+pandas==2.3.3
+scikit-learn==1.7.2
+matplotlib==3.10.6
+rouge-score
+bert-score
