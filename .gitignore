@@ -211,3 +211,6 @@ outputs/*.npy
 outputs/*.png
 outputs/*.csv
 outputs/*.json
+
+# Data
+data/.DS_Store
