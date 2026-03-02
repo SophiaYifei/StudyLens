@@ -91,11 +91,13 @@ class BARTSummarizer(BaseSummarizer):
         # Return the summary_text string
 
         # Safety checks
-        # text_tokens = self._count_tokens(text)
-        # if text_tokens < min_length:
-        #     min_length = max(10, text_tokens // 2)
-        # if max_length <= min_length:
-        #     max_length = min_length + 20
+        text_tokens = self._count_tokens(text)
+        if text_tokens < min_length:
+            # Adjust min_length downwards for very short inputs
+            min_length = max(10, text_tokens // 2)
+        if max_length <= min_length:
+            # Ensure max_length is always greater than min_length
+            max_length = min_length + 20
 
         result = self.pipe(
             text,
