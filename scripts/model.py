@@ -204,7 +204,7 @@ def process_all_topics(input_dir, output_dir, model):
             "summary_words": len(summary.split()),
         }
 
-        print(f"Summarized {len(results)} files.")
+    print(f"Summarized {len(results)} files.")
         
     return results
 
