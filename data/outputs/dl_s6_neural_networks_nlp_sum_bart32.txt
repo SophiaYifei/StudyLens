@@ -1,1 +1,0 @@
-This week's topic is Natural Language Processing (NLP) Next week we’ll look at Transformers, Advanced Topics (LLMs) and Deep Learning. We’re also going to look at the challenges and opportunities in NLP.

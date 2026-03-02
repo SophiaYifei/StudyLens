@@ -1,0 +1,1 @@
+This week's Daily Discussion tackles a series of questions. The questions are designed to help students prepare for the next module of their course. Next week we'll cover the fundamentals of attention, the transformer architecture, and popular implementations like Bert and GPT.

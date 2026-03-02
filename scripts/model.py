@@ -1,6 +1,4 @@
-# ============================================
 # scripts/model.py
-# ============================================
 from transformers import pipeline, AutoTokenizer
 from nltk.tokenize import sent_tokenize
 import nltk
@@ -19,17 +17,8 @@ class BaseSummarizer:
 # --- BART Summarizer ---
 class BARTSummarizer(BaseSummarizer):
 
-#     def __init__(self):
-#         self.model_name = "pszemraj/long-t5-tglobal-base-16384-book-summary"
-#         self.pipe = pipeline("summarization", model=self.model_name)
-#         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
-#         self.max_input_tokens = 16384
-
     def __init__(self):
         # Load the HuggingFace pipeline once
-        # model = "facebook/bart-large-cnn"
-        # max_input_tokens = 1024
-        # store these as self.xxx
         self.model_name = "facebook/bart-large-cnn"
         self.pipe = pipeline("summarization", model=self.model_name)
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
@@ -58,26 +47,32 @@ class BARTSummarizer(BaseSummarizer):
         #         to each ideal cut point
         chunks = []
         current_chunk = []
-        current_tokens = 0
-        # Which chunk we're filling (0-indexed)
+        current_tokens = 0  # cumulative (for ideal_cutoff comparison)
+        chunk_tokens = 0    # current chunk only (for hard limit check)
         chunk_index = 0
 
         for i, sentence in enumerate(sentences):
-            current_chunk.append(sentence)
-            current_tokens += sent_token_counts[i]
+            sent_toks = sent_token_counts[i]
 
-            # The ideal total tokens consumed by the time we finish this chunk
+            # Hard limit: if adding this sentence would exceed max_input_tokens, flush first
+            if chunk_tokens + sent_toks >= self.max_input_tokens and current_chunk:
+                chunks.append(" ".join(current_chunk))
+                current_chunk = []
+                chunk_tokens = 0
+                chunk_index += 1
+
+            current_chunk.append(sentence)
+            current_tokens += sent_toks
+            chunk_tokens += sent_toks
+
             ideal_cutoff = target * (chunk_index + 1)
 
-            # Should we cut here? Only if:
-            # 1. We've reached or passed the ideal cutoff
-            # 2. This isn't the last chunk (last chunk just takes everything remaining)
             if current_tokens >= ideal_cutoff and chunk_index < num_chunks - 1:
                 chunks.append(" ".join(current_chunk))
                 current_chunk = []
+                chunk_tokens = 0
                 chunk_index += 1
 
-        # Last chunk gets whatever is left
         if current_chunk:
             chunks.append(" ".join(current_chunk))
 
@@ -107,9 +102,7 @@ class BARTSummarizer(BaseSummarizer):
         )
         return result[0]['summary_text']
 
-    def summarize(self, text: str) -> str:
-        # This is the main method called from outside
-
+    def summarize(self, text: str, final_pass: bool = True) -> str:         # This is the main method called from outside
         # Step 1: Count tokens of input text
         total_tokens = self._count_tokens(text)
 
@@ -145,24 +138,31 @@ class BARTSummarizer(BaseSummarizer):
 
         #   d. final_summary = self._summarize_single(combined)  ← second pass
         if combined_tokens > self.max_input_tokens:
-            print(f"Combined summary still too long ({combined_tokens} tokens), summarizing again with truncation.")
-            return self.summarize(combined)
+            print(f"Combined summary still too long ({combined_tokens} tokens), summarizing again.")
+            return self.summarize(combined, final_pass=final_pass)
         else:
-            print(f"Final pass: generating coherent summary...")
-            max_len = min(combined_tokens, 600)
-            return self._summarize_single(combined, max_length=max_len, min_length=40)
+            if final_pass:
+                print(f"    Final pass: generating coherent summary...")
+                max_len = min(combined_tokens, 800)
+                return self._summarize_single(combined, max_length=max_len, min_length=50)
+            else:
+                print(f"    Returning concatenated summaries ({len(combined.split())} words)")
+                return combined
 
-        # #   d. final_summary
-        # if combined_tokens > self.max_input_tokens:
-        #     print(f"Combined summary still too long ({combined_tokens} tokens), summarizing again.")
-        #     return self.summarize(combined)
-        # else:
-        #     # If combined is short enough, just return it directly
-        #     # The chunk summaries together already form a good summary
-        #     print(f"    Combined summary: {combined_tokens} tokens, {len(combined.split())} words")
-        #     return combined
+
+# --- Long-T5 Summarizer ---
+class LongT5Summarizer(BARTSummarizer):
+    """Long-T5 model for long-document summarization. Inherits all logic from BARTSummarizer."""
+
+    def __init__(self):
+        self.model_name = "pszemraj/long-t5-tglobal-base-16384-book-summary"
+        self.pipe = pipeline("summarization", model=self.model_name)
+        self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+        self.max_input_tokens = 16384
+
+
 # --- Helper function to process all files ---
-def process_all_topics(input_dir, output_dir, model):
+def process_all_topics(input_dir, output_dir, model, model_tag="default", strategy="final"):
     """
     Loop through all _ori.txt files in input_dir,
     summarize each, save as _sum.txt in output_dir.
@@ -170,6 +170,7 @@ def process_all_topics(input_dir, output_dir, model):
     input_path = Path(input_dir)
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
+
     # Step 1: Find all files ending with _ori.txt in input_dir
     ori_files = sorted(input_path.glob("*_ori.txt"))
 
@@ -187,11 +188,12 @@ def process_all_topics(input_dir, output_dir, model):
         print(f"Input length: {len(text.split())} words")
 
     #     b. summary = model.summarize(text)
-        summary = model.summarize(text)
+        final_pass = (strategy == "final")
+        summary = model.summarize(text, final_pass=final_pass)
         print(f"Summary length: {len(summary.split())} words")
 
     #     c. Create output filename: replace _ori with _sum
-        output_filename = file.name.replace("_ori.txt", "_sum.txt")
+        output_filename = file.name.replace("_ori.txt", f"_sum_{model_tag}_{strategy}.txt")
         output_file = output_path / output_filename
 
     #     d. Write summary to output_dir / output_filename
@@ -213,11 +215,30 @@ def process_all_topics(input_dir, output_dir, model):
 # --- Test block ---
 if __name__ == "__main__":
     # Quick test to verify everything works
-    # model = BARTSummarizer()
     # process_all_topics("data/processed", "data/outputs", model)
-    model = BARTSummarizer()
 
-    results = process_all_topics("data/processed", "data/outputs", model)
+    all_results = {}
 
-    for filename, info in results.items():
-        print(f"{filename}: {info['input_words']} words -> {info['summary_words']} words")
+    # --- BART ---
+    print("=" * 60)
+    print("Loading BART model...")
+    print("=" * 60)
+    bart = BARTSummarizer()
+
+    process_all_topics("data/processed", "data/outputs", bart,
+                       model_tag="bart", strategy="concat")
+    process_all_topics("data/processed", "data/outputs", bart,
+                       model_tag="bart", strategy="final")
+
+    # --- Long-T5 ---
+    print("=" * 60)
+    print("Loading Long-T5 model...")
+    print("=" * 60)
+    longt5 = LongT5Summarizer()
+
+    process_all_topics("data/processed", "data/outputs", longt5,
+                       model_tag="longt5", strategy="concat")
+    process_all_topics("data/processed", "data/outputs", longt5,
+                       model_tag="longt5", strategy="final")
+
+    print("\nDone! Check data/outputs/ for all summary files.")
