@@ -170,6 +170,7 @@ def process_all_topics(input_dir, output_dir, model):
     """
     input_path = Path(input_dir)
     output_path = Path(output_dir)
+    output_path.mkdir(parents=True, exist_ok=True)
     # Step 1: Find all files ending with _ori.txt in input_dir
     ori_files = sorted(input_path.glob("*_ori.txt"))
 
