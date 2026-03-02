@@ -1,0 +1,1 @@
+This week’s focus is on Natural Language Processing. Hidden Markov models can be used in text generation, text classification or text clustering. This is the first lecture of two. Next week: Transformers, Advanced Topics (LLMs), and NLP Applications.
