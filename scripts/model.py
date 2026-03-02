@@ -25,7 +25,6 @@ class BARTSummarizer(BaseSummarizer):
 #         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
 #         self.max_input_tokens = 16384
 
-    # --- BART Summarizer ---
     def __init__(self):
         # Load the HuggingFace pipeline once
         # model = "facebook/bart-large-cnn"
