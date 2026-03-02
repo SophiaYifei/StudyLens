@@ -87,7 +87,7 @@ class BARTSummarizer(BaseSummarizer):
 
 
     def _summarize_single(self, text: str, max_length=150, min_length=40) -> str:
-        # Call self.pipeline(text, max_length=..., min_length=..., do_sample=False)
+        # Call self.pipe(text, max_length=..., min_length=..., do_sample=False)
         # Return the summary_text string
 
         # Safety checks
