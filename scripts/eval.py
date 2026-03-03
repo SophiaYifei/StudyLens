@@ -26,7 +26,7 @@ nltk.download("punkt_tab", quiet=True)
 
 
 # ── Paths ────────────────────────────────────────────────────────────────
-ROOT_DIR    = Path(__file__).resolve().parent
+ROOT_DIR    = Path(__file__).resolve().parent.parent
 SOURCE_DIR  = ROOT_DIR / "data" / "processed"
 SUMMARY_DIR = ROOT_DIR / "data" / "outputs"
 
@@ -37,10 +37,17 @@ TOPICS = {
 }
 
 # Summary variants: {model}_{strategy}
-VARIANTS = ["bart_final", "longt5_final", "bart_concat", "longt5_concat"]
+# Evaluate ALL models and ALL strategies.
+VARIANTS = [
+    "bart_final",         "bart_concat",
+    "longt5_final",       "longt5_concat",
+    "bart-samsum_final",  "bart-samsum_concat",
+    "led-arxiv_final",    "led-arxiv_concat",
+    "sonnet_final",       "sonnet_concat",
+]
 
 # NLI settings
-NLI_MODEL_NAME     = "roberta-large-mnli"
+NLI_MODEL_NAME     = "cross-encoder/nli-distilroberta-base"
 NLI_PREMISE_TOKENS = 400   # max tokens per source chunk (leaves room for hypothesis in 512 limit)
 NLI_TOP_K          = 5     # only check top-k most relevant source chunks per sentence
 
@@ -131,15 +138,20 @@ def evaluate_nli(
         is_contradicted = False
 
         for premise in top_chunks:
+            # Force pairwise truncation to avoid >512-token sequences for RoBERTa MNLI.
             inputs = nli_tokenizer(
-                premise, hyp,
-                return_tensors="pt", truncation=True, max_length=512,
+                premise,
+                hyp,
+                return_tensors="pt",
+                truncation="longest_first",
+                max_length=512,
+                padding=False,
             )
             with torch.no_grad():
                 logits = nli_model(**inputs).logits
             probs = torch.softmax(logits, dim=-1)[0]
-            # roberta-large-mnli classes: 0=contradiction, 1=neutral, 2=entailment
-            max_entail = max(max_entail, probs[2].item())
+            # nli-distilroberta-base classes: 0=contradiction, 1=entailment, 2=neutral
+            max_entail = max(max_entail, probs[1].item())
             if probs[0].item() > 0.5:
                 is_contradicted = True
 
@@ -252,8 +264,9 @@ def main():
 
     # ── Phase 2: NLI factual consistency ─────────────────────────────────
     print("Phase 2/3: NLI factual consistency ...")
-    print("  Loading NLI model (roberta-large-mnli) ...")
+    print(f"  Loading NLI model ({NLI_MODEL_NAME}) ...")
     nli_tokenizer = AutoTokenizer.from_pretrained(NLI_MODEL_NAME)
+    nli_tokenizer.model_max_length = 512
     nli_model = AutoModelForSequenceClassification.from_pretrained(NLI_MODEL_NAME)
     nli_model.eval()
     print("  NLI model loaded.\n")
@@ -330,7 +343,8 @@ def main():
     print(f"    BERTScore F1      = {avg.loc[best_idx, 'bertscore_f1']:.4f}")
 
     # ── Save ─────────────────────────────────────────────────────────────
-    output_path = SUMMARY_DIR / "evaluation_results.csv"
+    # Save to a separate file so we don't overwrite multi-model runs.
+    output_path = SUMMARY_DIR / "evaluation_results_all.csv"
     df.to_csv(output_path, index=False)
     print(f"\n  Results saved to {output_path}")
 

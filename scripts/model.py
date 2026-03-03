@@ -3,7 +3,13 @@ from transformers import pipeline, AutoTokenizer
 from nltk.tokenize import sent_tokenize
 import nltk
 import math
+import os
+import torch
 from pathlib import Path
+from dotenv import load_dotenv
+
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+load_dotenv(_PROJECT_ROOT / ".env", override=True)  # reads .env file for ANTHROPIC_API_KEY
 
 nltk.download('punkt_tab')
 
@@ -185,6 +191,59 @@ class LEDArxivSummarizer(BARTSummarizer):
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         self.max_input_tokens = 16384
 
+
+
+# --- Claude Sonnet Summarizer (API-based) ---
+class ClaudeSummarizer(BaseSummarizer):
+    """Claude Sonnet 4 via Anthropic API. No chunking needed — 200K context."""
+
+    def __init__(self):
+        import anthropic
+        api_key = os.environ.get("ANTHROPIC_API_KEY")
+        if not api_key or api_key == "paste-your-key-here":
+            raise ValueError(
+                "Set ANTHROPIC_API_KEY in .env file. "
+                "Get one at https://console.anthropic.com"
+            )
+        self.client = anthropic.Anthropic(api_key=api_key)
+        self.model_name = "claude-sonnet-4-20250514"
+        self.max_input_tokens = 200000  # 200K context window
+
+    def summarize(self, text: str, final_pass: bool = True) -> str:
+        word_count = len(text.split())
+        print(f"Sending {word_count} words to {self.model_name} ...")
+
+        if final_pass:
+            # Final strategy: concise, coherent summary
+            prompt = (
+                "You are an expert educational summarizer. "
+                "Summarize the following lecture content into a concise, coherent summary "
+                "suitable for a student reviewing for exams. "
+                "Focus on key concepts, definitions, methods, and relationships. "
+                "Be factual — only include information present in the source material. "
+                "Keep the summary between 100-300 words.\n\n"
+                f"LECTURE CONTENT:\n{text}"
+            )
+        else:
+            # Concat strategy: detailed, structured summary
+            prompt = (
+                "You are an expert educational summarizer. "
+                "Create a detailed, structured summary of the following lecture content. "
+                "Cover all major topics and subtopics with key details. "
+                "Use clear section headers. Be factual — only include information "
+                "present in the source material. "
+                "Aim for 300-600 words.\n\n"
+                f"LECTURE CONTENT:\n{text}"
+            )
+
+        response = self.client.messages.create(
+            model=self.model_name,
+            max_tokens=1024,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        summary = response.content[0].text
+        print(f"  Received {len(summary.split())} words from API.")
+        return summary
 
 
 # --- Helper function to process all files ---

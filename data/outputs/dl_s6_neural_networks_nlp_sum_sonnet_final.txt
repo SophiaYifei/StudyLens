@@ -1,0 +1,37 @@
+# Natural Language Processing - Week 6 & 7 Summary
+
+## Text Preprocessing & Traditional Approaches
+**Tokenization** divides text into substrings, splitting on whitespace/punctuation. Types include word-level, sentence-level, subword, and character tokenization.
+
+**Bag of Words (BoW)** represents documents as word frequency vectors, ignoring order but losing negation and context. **TF-IDF** weights terms by frequency and rarity across documents.
+
+**N-grams** capture word sequences: unigrams (single words), bigrams (2-word sequences), trigrams (3-word sequences) to preserve some local context.
+
+## Word Embeddings
+**Word2Vec (2013)** uses shallow neural networks to learn dense word representations. Two architectures:
+- **CBOW**: Predicts center word from context words (faster, better for frequent words)
+- **Skip-gram**: Predicts context words from center word (better for rare words)
+
+The model learns semantic relationships enabling arithmetic operations (king - man + woman ≈ queen). However, embeddings remain **static** - same vector regardless of context.
+
+**GloVe** uses matrix factorization on global word co-occurrence statistics. **Doc2Vec** extends Word2Vec by adding paragraph vectors for document-level representations.
+
+## Recurrent Neural Networks
+**RNNs** process sequences by feeding previous outputs back as inputs, maintaining hidden states that carry historical information. However, they suffer from **vanishing gradients** in long sequences.
+
+**LSTMs** solve this using cell states with gating mechanisms:
+- Forget gate: decides what information to discard
+- Input gate: determines new information to store  
+- Output gate: controls hidden state output
+
+**GRUs** simplify LSTMs by combining forget/input gates and merging cell/hidden states.
+
+## Attention & Transformers
+**Self-attention** creates contextual embeddings by computing relationships between all words in a sequence using queries, keys, and values. The **Transformer** architecture uses multi-head attention with positional encoding.
+
+**BERT** (bidirectional encoder) excels at understanding tasks through masked language modeling. **GPT** (unidirectional decoder) specializes in text generation through next-token prediction.
+
+## Implementation Considerations
+**Variable-length sequences** require padding (adding special tokens) or packed sequences. **Transfer learning** involves fine-tuning pre-trained models, often with gradual unfreezing of layers.
+
+Popular libraries include **NLTK** (traditional NLP tools), **spaCy** (fast tokenization/parsing), and **Transformers** (pre-trained models).

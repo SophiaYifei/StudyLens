@@ -1,0 +1,21 @@
+topic,model,strategy,file,summary_words,rouge_l_precision,rouge_l_recall,rouge_l_f1,entailment_ratio,avg_entailment_score,contradiction_ratio,bertscore_precision,bertscore_recall,bertscore_f1
+Neural Networks for NLP,bart,final,dl_s6_neural_networks_nlp_sum_bart_final.txt,50,0.8889,0.0037,0.0075,0.0,0.1236,0.4,0.1539,-0.5077,-0.198
+Neural Networks for NLP,bart,concat,dl_s6_neural_networks_nlp_sum_bart_concat.txt,98,0.9151,0.0076,0.015,0.0,0.1141,0.3333,-0.0032,-0.4534,-0.2371
+Neural Networks for NLP,longt5,final,dl_s6_neural_networks_nlp_sum_longt5_final.txt,47,0.7917,0.003,0.0059,0.0,0.1557,1.0,0.0211,-0.5919,-0.3035
+Neural Networks for NLP,longt5,concat,dl_s6_neural_networks_nlp_sum_longt5_concat.txt,220,0.583,0.0101,0.0199,0.0,0.1082,0.4,-0.156,-0.411,-0.2849
+Neural Networks for NLP,bart-samsum,final,dl_s6_neural_networks_nlp_sum_bart-samsum_final.txt,175,0.5674,0.0079,0.0155,0.0,0.1083,0.6667,-0.1585,-0.4491,-0.3063
+Neural Networks for NLP,bart-samsum,concat,dl_s6_neural_networks_nlp_sum_bart-samsum_concat.txt,227,0.5565,0.01,0.0196,0.0,0.106,0.625,-0.1858,-0.4213,-0.3044
+Neural Networks for NLP,led-arxiv,final,dl_s6_neural_networks_nlp_sum_led-arxiv_final.txt,220,0.6684,0.0097,0.0192,0.0,0.3123,0.9091,-0.2525,-0.5828,-0.4214
+Neural Networks for NLP,led-arxiv,concat,dl_s6_neural_networks_nlp_sum_led-arxiv_concat.txt,1042,0.383,0.0291,0.0541,0.0,0.1656,0.1813,-0.4288,-0.5429,-0.4842
+Neural Networks for NLP,sonnet,final,dl_s6_neural_networks_nlp_sum_sonnet_final.txt,325,0.5706,0.0145,0.0283,0.0,0.1674,0.8,-0.1662,-0.2331,-0.198
+Neural Networks for NLP,sonnet,concat,dl_s6_neural_networks_nlp_sum_sonnet_concat.txt,532,0.6325,0.0246,0.0473,0.0,0.1659,0.9231,-0.0108,0.0231,0.0077
+Attention & Transformers,bart,final,dl_s7_attention_transformers_sum_bart_final.txt,39,0.825,0.0058,0.0115,0.0,0.1797,1.0,0.1463,-0.486,-0.1889
+Attention & Transformers,bart,concat,dl_s7_attention_transformers_sum_bart_concat.txt,378,0.9342,0.0646,0.1208,0.0,0.1927,0.8276,-0.1697,-0.3593,-0.2644
+Attention & Transformers,longt5,final,dl_s7_attention_transformers_sum_longt5_final.txt,146,0.5629,0.0149,0.029,0.0,0.2428,0.5714,0.0694,-0.4423,-0.1983
+Attention & Transformers,longt5,concat,dl_s7_attention_transformers_sum_longt5_concat.txt,146,0.5629,0.0149,0.029,0.0,0.2428,0.5714,0.0694,-0.4423,-0.1983
+Attention & Transformers,bart-samsum,final,dl_s7_attention_transformers_sum_bart-samsum_final.txt,58,0.5333,0.0056,0.0111,0.0,0.1883,0.5,0.1046,-0.4721,-0.1993
+Attention & Transformers,bart-samsum,concat,dl_s7_attention_transformers_sum_bart-samsum_concat.txt,113,0.5478,0.011,0.0216,0.0,0.1675,0.6,-0.0054,-0.4291,-0.2248
+Attention & Transformers,led-arxiv,final,dl_s7_attention_transformers_sum_led-arxiv_final.txt,285,0.4758,0.0224,0.0428,0.0,0.3065,0.1176,-0.6535,-0.541,-0.5954
+Attention & Transformers,led-arxiv,concat,dl_s7_attention_transformers_sum_led-arxiv_concat.txt,461,0.4388,0.0333,0.0618,0.0,0.2985,0.6071,-0.7734,-0.5798,-0.6761
+Attention & Transformers,sonnet,final,dl_s7_attention_transformers_sum_sonnet_final.txt,273,0.4727,0.0228,0.0434,0.0667,0.2774,0.8,-0.1448,-0.234,-0.1879
+Attention & Transformers,sonnet,concat,dl_s7_attention_transformers_sum_sonnet_concat.txt,522,0.4205,0.0389,0.0711,0.0833,0.2896,0.7917,0.0105,-0.1534,-0.0711
