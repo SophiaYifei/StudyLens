@@ -7,6 +7,8 @@ from pathlib import Path
 
 nltk.download('punkt_tab')
 
+DEVICE = 0 if torch.cuda.is_available() else -1
+
 # --- Base Class ---
 class BaseSummarizer:
     """All summarizers must implement .summarize(text) -> str"""
@@ -20,7 +22,7 @@ class BARTSummarizer(BaseSummarizer):
     def __init__(self):
         # Load the HuggingFace pipeline once
         self.model_name = "facebook/bart-large-cnn"
-        self.pipe = pipeline("summarization", model=self.model_name)
+        self.pipe = pipeline("summarization", model=self.model_name, device=DEVICE)
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         self.max_input_tokens = 1024
 
@@ -156,9 +158,33 @@ class LongT5Summarizer(BARTSummarizer):
 
     def __init__(self):
         self.model_name = "pszemraj/long-t5-tglobal-base-16384-book-summary"
-        self.pipe = pipeline("summarization", model=self.model_name)
+        self.pipe = pipeline("summarization", model=self.model_name, device=DEVICE)
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         self.max_input_tokens = 16384
+
+
+# --- BARTSamsumSummarizer ---
+class BARTSamsumSummarizer(BARTSummarizer):
+    """BART fine-tuned on SAMSum dialogue summarization dataset."""
+
+    def __init__(self):
+        self.model_name = "philschmid/bart-large-cnn-samsum"
+        self.pipe = pipeline("summarization", model=self.model_name, device=DEVICE)
+        self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+        self.max_input_tokens = 1024
+
+
+
+# --- LED Arxiv Summarizer ---
+class LEDArxivSummarizer(BARTSummarizer):
+    """Longformer Encoder-Decoder fine-tuned on arXiv papers."""
+
+    def __init__(self):
+        self.model_name = "allenai/led-large-16384-arxiv"
+        self.pipe = pipeline("summarization", model=self.model_name, device=DEVICE)
+        self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+        self.max_input_tokens = 16384
+
 
 
 # --- Helper function to process all files ---
