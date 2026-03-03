@@ -30,6 +30,11 @@ DATA_DIR      = ROOT_DIR / "data" / "raw"
 OUTPUT_DIR    = ROOT_DIR / "outputs"
 PROCESSED_DIR = ROOT_DIR / "data" / "processed"
 
+# ── Relevance threshold ──────────────────────────────────────────────────
+# Chunks with cosine similarity below this value are dropped as noise.
+# Raise to keep only high-confidence chunks; lower to include more context.
+MIN_SIMILARITY = 0.35
+
 # ── Topic queries for concatenation ──────────────────────────────────────
 # Keys become filenames: {key}_ori.txt  ->  data/processed/
 TOPIC_QUERIES = {
@@ -92,7 +97,10 @@ def main() -> None:
 
     # 7. Concatenate per-topic text for BART summarization
     print(f"\nConcatenating text per topic -> data/processed/")
-    concatenate_by_topic(TOPIC_QUERIES, embed_model, embeddings, all_chunks, PROCESSED_DIR)
+    concatenate_by_topic(
+        TOPIC_QUERIES, embed_model, embeddings, all_chunks, PROCESSED_DIR,
+        min_similarity=MIN_SIMILARITY,
+    )
 
     # 8. Save chunking/embedding outputs
     print(f"\nSaving outputs -> outputs/")

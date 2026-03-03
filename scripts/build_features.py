@@ -266,10 +266,13 @@ def concatenate_by_topic(
     embeddings: np.ndarray,
     all_chunks: List[Dict],
     output_dir,
+    min_similarity: float = 0.35,
 ) -> Dict:
     """
-    Assign every chunk to its best-matching topic via cosine similarity,
-    then write one combined .txt per topic to output_dir.
+    Assign each chunk to its best-matching topic via cosine similarity,
+    but only if the similarity exceeds *min_similarity*.
+    Chunks below the threshold are dropped as irrelevant noise.
+    Writes one combined .txt per topic to output_dir.
     """
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -278,17 +281,47 @@ def concatenate_by_topic(
     query_texts  = [topic_queries[k] for k in topic_names]
     q_vecs       = embed_model.encode(query_texts, normalize_embeddings=True)
     scores       = cosine_similarity(q_vecs, embeddings)   # (n_topics, n_chunks)
-    assignments  = np.argmax(scores, axis=0)
+
+    # Best topic per chunk and its similarity score
+    best_topic = np.argmax(scores, axis=0)       # (n_chunks,)
+    best_score = np.max(scores, axis=0)           # (n_chunks,)
+
+    # Filter: only keep chunks whose best score exceeds threshold
+    above_thresh = best_score >= min_similarity
+
+    n_total   = len(all_chunks)
+    n_kept    = int(above_thresh.sum())
+    n_dropped = n_total - n_kept
+
+    print(f"  Relevance threshold : {min_similarity}")
+    print(f"  Chunks kept/total   : {n_kept}/{n_total}  ({n_dropped} dropped)")
+    print(f"  Similarity stats    : min={best_score.min():.3f}  "
+          f"mean={best_score.mean():.3f}  median={np.median(best_score):.3f}  "
+          f"max={best_score.max():.3f}")
 
     saved = {}
     for t_idx, name in enumerate(topic_names):
-        chunk_indices = sorted(np.where(assignments == t_idx)[0])
+        # Chunks assigned to this topic AND above threshold
+        mask = (best_topic == t_idx) & above_thresh
+        chunk_indices = sorted(np.where(mask)[0])
+
+        # Stats: how many assigned to this topic were dropped
+        assigned_total   = int((best_topic == t_idx).sum())
+        assigned_dropped = assigned_total - len(chunk_indices)
+
         text = "\n\n".join(all_chunks[i]["text"] for i in chunk_indices)
 
         out_path = output_dir / f"{name}_ori.txt"
         out_path.write_text(text, encoding="utf-8")
-        saved[name] = {"path": str(out_path), "n_chunks": len(chunk_indices), "chars": len(text)}
-        print(f"  {out_path.name}: {len(chunk_indices)} chunks, {len(text):,} chars")
+        saved[name] = {
+            "path": str(out_path),
+            "n_chunks": len(chunk_indices),
+            "n_dropped": assigned_dropped,
+            "chars": len(text),
+        }
+        print(f"  {out_path.name}: {len(chunk_indices)} chunks "
+              f"({assigned_dropped} dropped below {min_similarity}), "
+              f"{len(text):,} chars")
 
     return saved
 
