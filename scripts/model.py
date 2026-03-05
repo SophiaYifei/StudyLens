@@ -1,4 +1,5 @@
 # scripts/model.py
+import torch
 from transformers import pipeline, AutoTokenizer
 from nltk.tokenize import sent_tokenize
 import nltk
@@ -8,6 +9,7 @@ from pathlib import Path
 nltk.download('punkt_tab')
 
 DEVICE = 0 if torch.cuda.is_available() else -1
+
 
 # --- Base Class ---
 class BaseSummarizer:
@@ -186,6 +188,113 @@ class LEDArxivSummarizer(BARTSummarizer):
         self.max_input_tokens = 16384
 
 
+# --- QwenSummarizer class ---
+class QwenSummarizer(BaseSummarizer):
+    """
+    LLM-based summarizer using Qwen2.5-7B-Instruct with 4-bit quantization.
+    Unlike BART/T5 models, this uses text-generation pipeline with prompting.
+    128K context window allows single-pass summarization without chunking.
+    """
+
+    def __init__(self):
+        from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+
+        self.model_name = "Qwen/Qwen2.5-7B-Instruct"
+
+        # 4-bit quantization config to fit in GPU memory
+        bnb_config = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_compute_dtype=torch.float16,  # compute in float16 for speed
+            bnb_4bit_quant_type="nf4",              # normalized float 4-bit
+        )
+
+        # Load tokenizer
+        self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+
+        # Load model with quantization
+        self.model = AutoModelForCausalLM.from_pretrained(
+            self.model_name,
+            quantization_config=bnb_config,
+            device_map="auto",   # automatically place layers on available GPU(s)
+        )
+
+        # TODO: to see whether we should modify this value
+        self.max_input_tokens = 65536  # use 65K of the 128K window, leave room for output
+
+    def _count_tokens(self, text):
+        return len(self.tokenizer.encode(text, add_special_tokens=False))
+
+
+    def summarize(self, text: str, final_pass: bool = True) -> str:
+        """
+        Summarize using LLM with prompting.
+        final_pass parameter is accepted for compatibility with process_all_topics
+        but has no effect — LLM always produces a coherent final summary.
+        """
+        total_tokens = self._count_tokens(text)
+        print(f"Input text: {total_tokens} tokens.")
+
+        # If input exceeds our limit, truncate from the end
+        # (lectures often have Q&A / chit-chat at the end which is less important)
+        if total_tokens > self.max_input_tokens:
+            print(f"Input too long ({total_tokens} tokens), truncating to {self.max_input_tokens}.")
+            tokens = self.tokenizer.encode(text, add_special_tokens=False)
+            text = self.tokenizer.decode(tokens[:self.max_input_tokens])
+
+        # Build prompt using Qwen's chat template
+        messages = [
+            {"role": "system", "content": (
+                "You are an expert academic summarizer specializing in computer "
+                "science and deep learning courses. You produce clear, "
+                "well-organized summaries from university lecture materials."
+            )},
+            {"role": "user", "content": (
+                "Summarize the following university lecture material into a 300-500 word "
+                "summary. The input combines slide text, lecture transcript, and student "
+                "notes, so it contains filler words, informal language, typos, and "
+                "off-topic conversations — ignore all of these.\n\n"
+                "Your summary should:\n"
+                "- Cover every major topic and subtopic discussed\n"
+                "- Include key definitions, formulas, and technical details\n"
+                "- Preserve the logical flow of the lecture\n"
+                "- Use clear academic language\n\n"
+                f"INPUT TEXT:\n{text}"
+            )},
+        ]
+
+        # Apply chat template (Qwen uses a specific format for instruction following)
+        prompt = self.tokenizer.apply_chat_template(
+            messages,
+            tokenize=False,
+            add_generation_prompt=True,
+        )
+
+        # Tokenize and generate
+        inputs = self.tokenizer(prompt, return_tensors="pt").to("cuda")
+
+        # Dynamic output length: ~5-8% of input tokens, clamped to [200, 1500]
+        target_output = int(total_tokens * 0.06)  # 6% of input
+        max_new = max(300, min(target_output, 1500))
+        min_new = max(150, max_new // 4)
+
+        print("Generating summary...")
+        with torch.no_grad():
+            outputs = self.model.generate(
+                **inputs,
+                max_new_tokens=max_new,     # max output length (~500 words)
+                min_new_tokens=min_new,     # min output length (~150 words)
+                do_sample=False,        # greedy decoding for reproducibility
+                temperature=1.0,
+                repetition_penalty=1.1, # slight penalty to avoid repetitive output
+            )
+
+        # Decode only the NEW tokens (exclude the prompt)
+        generated_tokens = outputs[0][inputs["input_ids"].shape[1]:]
+        summary = self.tokenizer.decode(generated_tokens, skip_special_tokens=True)
+
+        print(f"Generated summary: {len(summary.split())} words.")
+        return summary.strip()
+
 
 # --- Helper function to process all files ---
 def process_all_topics(input_dir, output_dir, model, model_tag="default", strategy="final"):
@@ -238,33 +347,47 @@ def process_all_topics(input_dir, output_dir, model, model_tag="default", strate
         
     return results
 
+
+
 # --- Test block ---
 if __name__ == "__main__":
-    # Quick test to verify everything works
-    # process_all_topics("data/processed", "data/outputs", model)
+    import argparse
 
-    all_results = {}
+    parser = argparse.ArgumentParser(description="StudyLens Summarization Pipeline")
+    parser.add_argument("--model", type=str, required=True,
+                        choices=["bart", "longt5", "bart-samsum", "led-arxiv", "qwen7b"],
+                        help="Which model to run")
+    parser.add_argument("--strategy", type=str, default="both",
+                        choices=["concat", "final", "both"],
+                        help="Summarization strategy (default: both)")
+    parser.add_argument("--input_dir", type=str, default="data/processed")
+    parser.add_argument("--output_dir", type=str, default="data/outputs")
+    args = parser.parse_args()
 
-    # --- BART ---
-    print("=" * 60)
-    print("Loading BART model...")
-    print("=" * 60)
-    bart = BARTSummarizer()
+    # Model dispatch
+    if args.model == "bart":
+        model = BARTSummarizer()
+    elif args.model == "longt5":
+        model = LongT5Summarizer()
+    elif args.model == "bart-samsum":
+        model = BARTSamsumSummarizer()
+    elif args.model == "led-arxiv":
+        model = LEDArxivSummarizer()
+    elif args.model == "qwen7b":
+        model = QwenSummarizer()
 
-    process_all_topics("data/processed", "data/outputs", bart,
-                       model_tag="bart", strategy="concat")
-    process_all_topics("data/processed", "data/outputs", bart,
-                       model_tag="bart", strategy="final")
+    # Run strategies
+    if args.model == "qwen7b":
+        # LLM only needs one strategy
+        process_all_topics(args.input_dir, args.output_dir, model,
+                           model_tag=args.model, strategy="final")
+    elif args.strategy == "both":
+        process_all_topics(args.input_dir, args.output_dir, model,
+                           model_tag=args.model, strategy="concat")
+        process_all_topics(args.input_dir, args.output_dir, model,
+                           model_tag=args.model, strategy="final")
+    else:
+        process_all_topics(args.input_dir, args.output_dir, model,
+                           model_tag=args.model, strategy=args.strategy)
 
-    # --- Long-T5 ---
-    print("=" * 60)
-    print("Loading Long-T5 model...")
-    print("=" * 60)
-    longt5 = LongT5Summarizer()
-
-    process_all_topics("data/processed", "data/outputs", longt5,
-                       model_tag="longt5", strategy="concat")
-    process_all_topics("data/processed", "data/outputs", longt5,
-                       model_tag="longt5", strategy="final")
-
-    print("\nDone! Check data/outputs/ for all summary files.")
+    print("\nDone!")
