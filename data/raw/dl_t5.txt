@@ -1,0 +1,3417 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+Yeah. And I tried to find one that says, uh, BYOB.
+
+Yeah. Because then it's like they tried to make you guys. Have you made the, um.
+
+What's the rules for being index card for the next exam yet?
+
+Yes, we'll talk about that. Getting out because, uh.
+
+Uh, if you just put your name on each one of them. Yeah. Honestly, your handwriting is probably unique enough that I'm sure most of you have.
+
+Really, I don't know, I don't know what it is, but as you can read it.
+
+Yeah, yeah. No, I'm totally fine. I got to say.
+
+You think sass is dead? Sass? Yeah.
+
+Then software as a service? Yeah. I was in the statistical software company.
+
+The markets think so. Markets are always in the.
+
+Yeah. Oh, God. Not the sass. This course. Sass is dead, though.
+
+No, SAS is not dead. And it won't be until you get these giant.
+
+Even companies like Duke University that will finally get off staff, which will never happen.
+
+I mean, I think you've got business as though that's local and that that lever that you use, like, do you enjoy your HR stuff?
+
+Yeah. Sorry, I can't get your free school that's on prem and you can see right behind me.
+
+I mean, it looks like it certainly does. It does. Yeah.
+
+So I mean, I guess there was I mean, I, I imagine they have stuff like how it's like two from 2010 that was in really good use.
+
+And all of the tutorial videos are from like 2008 because they all have like the windows XP,
+
+like, you know, and it's already here, something from the 20 tens.
+
+I'm like, oh, that wasn't that long ago. I'm like, oh my God, it was a decade ago.
+
+I'm also really starting to do it on prem also. I think the only thing that like is major that isn't hosted on premise, canvas and box.
+
+Oh yeah. Box two definitely got more behind the testing.
+
+Oh, yeah, I better, no matter how well that is.
+
+Summing up the mid semester it doesn't matter. And. The fact that I have turbo drafted this.
+
+Just in case. I know the morning edition read it, but I guess the due date is what?
+
+Soon? Yeah, I'm going to finish it today. So. I was saving for the weekend and then Sunday night came and I still hadn't started the day.
+
+You know, I have written a whole paper from not knowing what the idea was that you submitted in the morning.
+
+So you were not behind me for. That.
+
+Yes. I hope you know. I was calling my friend. He was like, you'll be fine.
+
+I mean, this story that we went to college together, he was like, I remember I started writing a ten page paper and right away.
+
+I wrote my entire career because that is a permanent part of my world.
+
+I was asked to write my dissertation.
+
+It was done three months before I could get my family to sit down.
+
+With me. But it was like three months wait because you didn't do the correction, you know?
+
+Yeah, I think that place. Uh, I don't I'm not like that.
+
+I'm only fast, but it's like. Oh, it was due yesterday.
+
+You design people are all the same. It's not frustrating, you know.
+
+And I got, like, during design school, right.
+
+He was just I mean, he'd have a school project to do.
+
+It was do the next day, every single day, you know massive like capstone big project.
+
+And he would not sleep the whole night. Just come up with something amazing in the morning.
+
+But I was like, this frustrates me so much. You know, he goes to the depths of despair.
+
+It's like, oh, this is better. All right.
+
+So this slide numbers, artwork and I'm going to try to answer this, but I wish I could do this because it's been like me already.
+
+It was just it gave me the first entire period. You know what?
+
+My best friends told me this yesterday and he was like, so yeah, I was like, you saw that on TikTok?
+
+And he was like, yes, I did the week before. And it was gaslighting.
+
+I don't know why because it just mentioned it once. The one word of yeah, that's what happened not on TikTok, but somebody like that.
+
+I knew as well. Yeah. All right everyone, how's it going? Do you read?
+
+Okay. Yeah. I downloaded it like.
+
+Oh, God, it doesn't matter anymore. And it's happening.
+
+It doesn't even matter because in the end, I don't. We were all at those that mid-semester time.
+
+I got us in that semester. Yes. For a break is only a week and a half away.
+
+Oh my God. So hopefully you all are planning something fun for spring break.
+
+Yeah, I'm going to rebuild shibboleth. All right.
+
+Shibboleth is going to be reborn. Wonderful.
+
+Have you any other exciting things going on spring break?
+
+Anybody do anything fun? We're all nerds in an AI program.
+
+There's the kick. You can see that. You can see game.
+
+Okay. Did you. I guess you guys, you would have had to camp out last semester, right?
+
+It's going to camp out. Oh, you can do script. Oh, you can do a spring.
+
+They have a spring. Yeah. Wow. You know, what do you want to do that center graduates.
+
+Uh, you know. Yes. This is there's no undergraduates in this class.
+
+I can't say that. It's reinforcement learning. Okay. Um, so.
+
+Oh, one thing I wanted to get your, uh, thoughts on. Um.
+
+So I've been thinking about 510. You know, you all took 510.
+
+Most of you took 510 last semester. So we're thinking about 510 and trying to think about, okay,
+
+how should I how can I get you guys to actually listen, watch and learn the topics like outside of class?
+
+Because I think the activities in class worked really well. I think the videos outside of class worked less well.
+
+So I want to know, like formats that would get you guys to like digest some of the material.
+
+So one thing that I was thinking about and I just like had a brainstorming moment yesterday was so,
+
+you know, notebook alum has that like podcast feature.
+
+But when you listen to the podcast, like it sounds really good, but they don't really go into depth on anything.
+
+I just kind of stay surface level.
+
+What if it was like an actual podcast where I have like a to and the team and I are like having a conversation about this stuff?
+
+Um, not for this class, but obviously for 510,
+
+like the statistics concepts or data engineering and like talk about like stories and that kind of stuff,
+
+like, does that sound like that would be something that you guys would actually listen to?
+
+It's fine to say no. Like I'd rather no than like put a bunch of work in. To it and, like, it doesn't work out.
+
+Sam. Um, I probably in the minority here, and I wasn't alternative data about podcasts, but yeah, I don't I don't I can't pay attention to them.
+
+It all becomes back. You know, Sam, I'm the same. I cannot stand podcast, but lots of people like them.
+
+So that is why I'm like trying to come up with like some way that is beyond like the videos and the videos don't seem to be working for people.
+
+Can I be like, brutally honest? Yes. I freaking love exams.
+
+Like I shouldn't be that honest. Okay, okay, but hear me out.
+
+I really like the way that John did it, where it actually it was a really boring lecture.
+
+I took notes, I went home, I made flashcards to the PowerPoints and my notes, studied the crap out of it.
+
+And then like, there were quizzes. Like, honestly, that's how I learned, like the absolute best.
+
+But I probably even the very, very minority who with that, I imagine you are not,
+
+because at the end of 540 I always ask people like, what is the best assessments?
+
+Like, should I change up the assessments? I actually the first semester I experimented with three different types of assessments,
+
+and everybody said it was the exam that they learned the most from rich.
+
+So the like, just like the one you just had, which is why we still have them.
+
+Because I hate exams. I hate creating them. I hate sitting up here when you guys take exams.
+
+It's very boring. Um, so I don't like them. But every semester people have told me the same thing.
+
+A lot of people tell me the same thing, that it's like the only way they learned is to have, like, this, like checkpoint.
+
+Maybe I have to put exams in five, ten. Yeah.
+
+Big. Like small quizzes on the content. They're supposed to work. Okay.
+
+It could be like a small portion of the grade. So they do it. Yeah. Okay.
+
+So, like a small quiz. Kind of like, like every week lectures and you show the videos.
+
+Just have like a 25 question quiz I like that. Would that be in person?
+
+Man. Just do I do that. Yeah. At the beginning of class would be a quick quiz.
+
+Distributed the lecture content in the week before I like that.
+
+Yeah, that's a good idea. Yeah. Let's see I don't like in one of my classes we do have like a mini quiz at the start.
+
+And it's like not hard, but it is still a little stressful.
+
+So I think maybe like in high school, I remember I did this like there were some there was a flipped classroom.
+
+Yeah. And they'd have like little pauses, like kind of like a commercial on like Amazon Prime or something like that.
+
+And then it would ask you like a simple question about like what you had just said in the video.
+
+So, okay, you can actually tell that they're engaging with the video.
+
+Okay. Yeah, I really like that idea. Um, that is how with all of our onboarding stuff, it takes words to it's like a,
+
+it's like a faculty member, which is terrible because then you actually have to watch the videos.
+
+So yeah, I agree that they're very useful.
+
+Yeah, yeah. How about you? I love a good podcast, but having experience produced one, they are like extremely hard to put together.
+
+So you don't you can't just like having a conversation. No. It's like actually it's like terrible.
+
+Oh this is helpful isn't on podcasters because every podcast I've been a part of,
+
+you know I just like show up and I talk and then like podcast comes out in a few months.
+
+I don't know what happens. Um, good to know. Yeah. Like, um, I was going to say I agree with Lindsey.
+
+I like some sort of engagement. Yeah, would be good.
+
+And maybe, maybe a different way to do it might be like playing to a game sort of format where there's like, you know,
+
+you get a score at the end and maybe like the person, um,
+
+that comes into class with like the highest score, it gets one of those trophies or something.
+
+Uh, okay. But I think that, like, engagement is like, uh, like, engaging and like having that back and forth with, uh,
+
+with the material helps lot things that would take a few of these ideas and like, test them out next semester.
+
+Yeah, I guess would be next semester. Try them out. Yeah.
+
+Tiffany, I think I enjoyed the week, the Python bootcamp, the year where where it was like,
+
+uh, speaking to you by all sorts of engaging terms of the graphics.
+
+And after there were modules. So maybe set up like students quizzes at the beginning of class.
+
+It could be some of those modules to do, but it doesn't take the full grade where people are still learning,
+
+like in John's class, even though we have the class wise, he says.
+
+You just have to get 50% or more and you only have to pass about, I think, 70% of all the quizzes.
+
+And just by doing the quizzes you get 5%. So it's not so strict there.
+
+You have to like get everything by at least reading the material.
+
+So all right. So having some leniency in there as well.
+
+That's. Especially for those times you like to zone out.
+
+Got to come back to. Yeah. These are good ideas.
+
+Thank you. Um, for, um, subscribing to that.
+
+All right. Um, so we got a fun lecture today. We're going to talk about attention in Transformers.
+
+We talked about the fundamentals of attention, the transformer architecture.
+
+We'll briefly go over some popular implementations like Bert and GPT, which may be ones that you use for your module project.
+
+We are going to talk about a few different applications of NLP, uh, type similarity,
+
+text summarization and topic modeling, which might be different options that you might look into for your projects.
+
+And then we'll talk about some advanced topics large language models and multimodal models, including Cliff.
+
+Any questions about the agenda for today? Okay.
+
+Awesome. All right. So last week we kind of left off with representing text.
+
+Right. And we said okay we want some number that represents this word.
+
+Um so being in bacon River we need a number that represents that.
+
+We talked about different approaches for traditional approaches as well as uh, things like word to back that use,
+
+um, shallow neural networks in order to create these embeddings talked about.
+
+Yeah. We're back. Um, and we're to back is getting better, right?
+
+Uh, it still has static embeddings that lack contextual awareness.
+
+And so this bank of the river, um, deposited money at the big bank is going to be encoded as the same number still.
+
+Right. Because the when you encode the word bank in a word to bank model, all it's getting is bank.
+
+It's not looking at any of the surrounding words around bank.
+
+And so you're still missing that contextual information. So you still have some of those same challenges.
+
+So that brings us to attention and Transformers.
+
+And so we're going to try to build today in conceptual understanding.
+
+Um self-attention multi-head attention and cross attention.
+
+And then we're going to talk about the application of attention specifically in the transformer architecture.
+
+All right. So we're going to talk about Bank of the River and Bank of the river.
+
+We have some naive vector embeddings. So we have a vector embedding for big number that represents big number that represents um the and river.
+
+And our whole goal with self-attention is just to improve our embeddings with context.
+
+So all we want to do is we want to say we want to create a better version of the one that is based on all of the surrounding words in my sequence.
+
+So we want this. We want new representations that are better than our original embeddings.
+
+So why said one should be better than v sub one, y sub two should be better than these are two y sub three should be better than be sub three.
+
+And is it four should be better than this and for better meaning that it has more context and
+
+a better semantic representation of what these words mean in the context that they are in.
+
+All right. So let's start here with the word bank. We've got we're starting with V1 and we're trying to get to Y1.
+
+So how are we going to get there. Well first we're going to do a dot product between our vectors v1 and v1.
+
+So the same thing. And what we're going to do is we're going to do that dot product.
+
+And we're going to get what we call a score. The score one one is just that.
+
+That's our first word dot product.
+
+By our first word two vectors dot product score one one.
+
+We're going to do that for every word. So we're going to do that for v1 v2 v1 by the three and 154.
+
+Remember we're still just focused on this one word and changing the embedding from v1 to Y1.
+
+Trying to make that better. Okay, so we've got all of these scores that represent the dot product between that
+
+word or the vector of that word and the vector of every word in the sequence.
+
+Now what we're going to do is we're going to normalize these via a softmax function.
+
+Uh, and basically remember this is what the softmax function does is it says all of our weights need to sum to them.
+
+So we're have a series of weights here.
+
+So weight 11.12813 and weight one four that are just the normalized versions of these scores.
+
+Now. This is where. Transformers get a little bit annoying in the notation.
+
+And so something to be focused on is we call these weights.
+
+They are not trainable weights. So the weights and biases that we've been talking about all semester long.
+
+These are not those. They're still called weights, which is really annoying.
+
+But these are just representation the normalized representation of these scores not trainable.
+
+Okay. So now what we're going to do is we're just going to do a weighted sum where we've got our weight on one,
+
+uh, multiplied by v one plus weight one, two.
+
+Right. That's the normalized um, uh, the normalized score between our V1 and v2 and v3 if you want it, v4.
+
+And so we do this weighted sum. And that is what is going to be one.
+
+So we're going to reweight all of our vectors towards V1.
+
+So river is going to be influencing big and vice versa.
+
+And again, these are called weights because they allow us to reweight the vectors.
+
+They're not trainable weights. Okay.
+
+So we did that or we want we converted it into why what we are going to do this for every word in our sequence and get y1, y2, y3 and y for.
+
+So every word of our sequence, we're just going to do the exact same thing that we just did where we do the dot product,
+
+get our scores, normalize them through a softmax and get our weights.
+
+And then we do a weighted sum. A couple of notes here is that order has no influence.
+
+So how close River is to bank does not matter for self attention.
+
+Proximity has no influence and their shape independent.
+
+So long for short sequences are going to work here.
+
+All right. So here is just another way to look at what we just did.
+
+So this is looking at the word bank again.
+
+And for the word bank we're doing a dot product between v1 v2 v3 and before and then v1 right.
+
+So this is where our dot product is. And then we get our scores from that dot product.
+
+We're going to normalize the scores into our non trainable weights.
+
+And then we do a weighted sum by bringing in v1 v2 v3.
+
+And before that we multiply them by their respective weights.
+
+And then we get our output embeddings. Y1 y2 y3 and y4.
+
+So this is exactly what we just did. Just put in. All in one slide.
+
+Questions. You see why I've condensed to one slide in just a moment.
+
+Okay. So again remember non-tradable weights.
+
+So we have no weights that are being trained so far.
+
+And so what happens if we do introduce trainable parameters here.
+
+And we're going to introduce trainable parameters at every input point where you are using these original vector embeddings.
+
+And so that is here. That is here. Right.
+
+Because we do v1 times um v1 or the dot product of v1 v2 v3 and before and then here what we do the weighted sum.
+
+So these are where these three inputs come in.
+
+And so we are going to use these. And this is where we are going to put our trainable weight matrices again with notation.
+
+Um attention we have keys queries and values.
+
+Now you might think oh this just has some kind of like nice elegant databases.
+
+It really doesn't worry too much into the fact that they're called keys, queries and values.
+
+It's like generally that you have a query here that I want v1 to get more context.
+
+And then the values when I combine my query and my keys, I want to get back the values.
+
+So you can kind of see where they like had this idea. But the idea wasn't great and it really makes people confused.
+
+So just think you'll be okay.
+
+So these are what we call our keys our query and our values.
+
+And this is where we're going to introduce our weights then our trainable weight parameters.
+
+So we're gonna have a key matrix. We're going to have a query matrix.
+
+And we're going to have a value matrix. And our matrix looks like this.
+
+We are embedding is one by k. So some length k.
+
+Our weights matrix is going to be k by k um.
+
+And so then our output is one by k right.
+
+Because we want just an updated version of that embedding. And so we want that output to be one by k.
+
+Lindsay qualifies at one. Um, for the, uh, the vector and body.
+
+Um. So it's like, uh, so when you think about it, like an embedding is just like a series of numbers, right?
+
+A vector, a single vector, uh, not a matrix.
+
+And so we are only having a series of numbers that is equivalent to a word.
+
+Could you get into some kind of two dimensional. That would be a little bit, I think intense.
+
+Um, and I mean, I guess you could do it.
+
+I mean, theoretically, you could do it. Um, but typically we transform word embeddings into some one by k vector,
+
+and this allows us to flatten it makes it a little bit easier to run algorithms on.
+
+It allows us to easily, more easily integrate into other architectures.
+
+Right. We use one by k for our word defect models as well as are all written in sequence models.
+
+Um, and so for all of our embedding models, we pretty much use the same great question,
+
+which I feel like this is I'm not understanding how this works, but I know like in church and beauty, right.
+
+Like if you in the memory of the conversation, you append like the response and like,
+
+doesn't that mean that you're like regenerating this like every time with a larger and larger set of like, tokens?
+
+Or is that, like not true? I just it seems to imply that.
+
+But I feel like that must be wrong. So when you say that and so that's what the context window is.
+
+Right. Right is like there, there is some limited amount of information that you can put through one of these systems and it be computationally,
+
+quote, efficient, um, and work well, uh, given the mean.
+
+And so there is a context window, is it large? Yes.
+
+Is a much larger than bank of the river. Yes. I guess my question is like if y one is like the, the weighted sum of like the,
+
+the the like for every token, doesn't that mean you have to like, recalculate everything every time you do.
+
+Oh that's good. Now there's parallelization right.
+
+Like with GPUs and like a lot of fancy tricks that you can do which they do, they do a lot of like different kinds of caching of embeddings.
+
+And so there's a lot of like software engineering that goes into it so that it's not exactly what you're thinking.
+
+You're like, oh my gosh, this they do a lot of software engineering under the hood to make these more computationally efficient.
+
+But at its base, like if you look at, you know, attention is all you need.
+
+That is what it does. Okay. All right.
+
+So this is just another way of viewing this particular slide.
+
+And this is going to look a little bit more familiar to us. Um, as folks who look at neural networks.
+
+And so we got our input here, a number that's that one by one by n, um, embedding.
+
+And we're have three linear layers.
+
+And so these linear layers are basically where we do that um weighting with our trainable weights that PS queries and values matrices.
+
+We take our keys and queries and we do the dot product. That's this right here.
+
+Here we've got our fees and our queries. We're going to do a dot product here.
+
+We get our scores out and then we normalize these scores.
+
+So we're going to normalize the scores. Here. We get our non trainable weights out.
+
+And then we bring in our values here. That's this piece.
+
+We bring in those values with our weights. And we do unweighted sum here.
+
+And then we get our output which is just the updated embedding.
+
+I wonder why it. And so this is if you break it down into what this would look like in the context of a more traditional neural network.
+
+Okay. Questions here. So you've seen it now in three different representations.
+
+And so the Tldr with self-attention is it's just the process of adding more context to our embeddings.
+
+That's all it's doing. Just adding more context to her embeddings.
+
+Given the context of the surrounding words. Now, do we have enough attention?
+
+So if I'm looking at gave, perhaps I need more than one attention mechanism, right?
+
+I want trainable weights that are going to allow me to be able to attend to multiple things differently within a sequence.
+
+And so that's where Multi-head attention comes in. Which is the exact same thing we just talked about.
+
+Except now you have multiple linear layers.
+
+And so now you have multiple trainable weight matrices.
+
+Allows you to train more weights and be able to learn more.
+
+So you have your keys queries and values. I mean now these matrices are one through each.
+
+And then we have one through H linear layers. We still do our dot product.
+
+And now we get scores out of one through H. We're going to normalize these.
+
+We get our non-trivial weights one through each. We do our weighted sum and then we get our outputs one through each.
+
+Now we only want one embedding right. We don't want one through each different embeddings.
+
+So we need to choose one. So this is the step that looks a little bit different.
+
+We're going to concatenate all of those one through H.
+
+And then we're going to put those through a dense layer. And that is going to give us our output embedding Y1 through wire.
+
+And this allows us to paralyze. Attention mechanism so that we have what we call multiple heads.
+
+Going through this process multiple candidate scores and weights.
+
+And then output embeddings. Concatenate and concatenate those.
+
+Put them through a dense layer and then we get our output embedding.
+
+The now has even more context and more information because we're able to have more trainable parameters,
+
+allowing us to learn more things and more relationships between concepts.
+
+Questions. Yeah, you can get cheese curds and onions.
+
+Great question. We train them the same way that we train any weights inside of a neural network through backpropagation.
+
+So we assume that they are different. They are different, um, in their names.
+
+Pretty much the keys, queries and values parts really throws people off because they're like they should mean something.
+
+They really don't mean anything except where they're placed. So our keys.
+
+Our keys are placed with that v1, v2, v3 and before, which gets a dot product with the query matrix which is still v1.
+
+And then we still have v1, v2, v3. And before down here uh, and we use the value matrix here.
+
+But at this point this is where it's going through the weighted sum.
+
+Right. And being uh, with those weights. And so we're really separating out what is happening here from what is happening down here.
+
+And so that's why when you look at it from this perspective,
+
+we see our keys and queries going up and doing the dot product and going through that process to try to find those weights.
+
+And we see our values coming here, going directly into that weighted sum at that end phase.
+
+Yeah, it's a really good question. It gets people like, really tripped up the naming convention here, right.
+
+Like the non-tradable weights. Like why do they call it weights? He's queries and values that make no sense.
+
+So, yes, uh, from a naming convention, they're weird,
+
+but you can just think of it as these are three different trainable weight matrices that come into our, um, in our self-attention at different points.
+
+Good question. Yeah.
+
+Let me um, in this slide after this, I think it's like.
+
+Or maybe not. Yeah. Uh, this one, I don't know which one with this, but, um, where it's like you use the dot product.
+
+It was like the key matrices. The query matrices. Yeah.
+
+No. Yeah. That one, this one.
+
+Um, so the dot product there, is that like matching up the key of like one word with the query of another word to see like how similar they are.
+
+Is that one. Exactly. So in this case we're looking just at bank.
+
+And so we just have v one here. And then when you do this process for YouTube two would be here at the query matrix um b3, B4 etc.
+
+So the key matrix will always um stay with the same um vector embedding.
+
+Um, but the query matrix, this vector embedding is what changes depending on which word you're looking at.
+
+Yeah. What? You. All right.
+
+So we've talked primarily about self-attention so far.
+
+And self-attention is going to operate within a single sequence.
+
+That's what we've been talking about so far. Right.
+
+Bank of the river single sequence cross attention is where is used between two different sequences.
+
+So we have two different sequences. And for cross attention.
+
+And so when we think about cross attention like two different sequences.
+
+A really good example of this is translation, right? Yeah.
+
+Uh, in English version. And you have a Chinese version of the same sentence.
+
+You want to do a translation. And so cross attention.
+
+You have those two different sequences that you want words to attend to each other in those two different sequences.
+
+So for each element in one sequence, which is going to be our query sequence,
+
+cross attention is going to compute the attention scores based on its relationship with every element in the other sequence,
+
+which is that key value sequence. So that query sequence um becomes um, so that query matrix comes in at our query sequence point mercies are uh,
+
+key value sequence is going to be the other sequence that we're looking at.
+
+This allows us to selectively focus on relevant parts of the other sequence when we're generating some output.
+
+So here, for example um, is machine translation.
+
+Text to image is another great application of cross attention,
+
+where you may have points of the text that you want to correspond to different parts of your image.
+
+So really understanding how elements from different sources are relating to one another.
+
+Okay. So now we're going to actually start talking about the transformer architecture then and how intention gets incorporated in.
+
+And the figures for this can be a little bit overwhelming.
+
+Um, but I want to walk us through it and say, we already actually know almost everything about this,
+
+and we're going to talk about the things that we don't know yet right now.
+
+Okay. So this is figure two in the attention is all you need. Paper I talked to you guys about the attention is all you need paper.
+
+This came out in 2017. How? Like nobody cared about it emotionally.
+
+So this came out in 2017. Nobody cared about it because everyone was talking about LSTMs at the time.
+
+And Grus and they're like, sequence models are the future.
+
+And then this paper came out, um, and we were like, oh, okay, whatever this attention thing.
+
+Um, and it wasn't until years, um, later that it boomed onto the scene, um,
+
+because OpenAI started it, grabbed this and started building out those GPT models.
+
+Um, and so those GPT models are really what, um, allowed attention and the transformer architecture to come into public view,
+
+but goes to show you that the first time you put something out into the world, people might hate it,
+
+and it will still be one of the most highly cited papers of all time at some point.
+
+So wait it out. Be patient.
+
+If somebody says you have a stupid idea, you might have a stupid idea, but you also might have the attention is you need paper.
+
+Okay, so this is from figure two of attention is all you need.
+
+This is scaled dot product attention. Now we have seen almost all of this before right.
+
+We've got our, um, query keys and values matrices.
+
+Right. This is where our, um, uh, initial embedding comes in V1 through VN.
+
+We're going to pass that through our queries keys and values. Uh, we have that, uh, dot product here.
+
+Uh, we've got um, some uh, scaling here, which I'm going to talk about in a second.
+
+This is what you haven't seen yet, but you here is where we get our scores, right.
+
+We do the dot product, we get our scores, we do our softmax, we get those non-tradable weights,
+
+and then we do our weighted sum up there, uh, at the top bringing in those values.
+
+And so we've already seen almost every aspect of this. The masking part is optional.
+
+We're going to talk about that, um, when we talk about the decoder part of it and then the scaling part.
+
+Um so each scaled dot product attention.
+
+So previously we didn't do any scaling. Uh, we need this because variance increases in high dimensions.
+
+Um, so you're summing more and more terms. Your variance is increasing.
+
+Um, and so very large magnitude dot products can cause a lot of issues for our softmax function.
+
+And this can lead to small gradients. So we get our vanishing gradient problem.
+
+So what we're going to do is we're just going to um do a scaling here.
+
+So after our dot product we're going to do a scale of one divided by the square root of d sub k.
+
+We're deep sub k is the dimensionality or size of our word embedding such as the dimensions of our word embedding.
+
+We're just going to do a scaling. And if you are the kind of person that likes equations, this is the equation for it.
+
+So attention we've got our query key and value weight matrices.
+
+We're going to put um our queries and keys transposed um over the scaling function through our softmax um, and then multiply it by our values.
+
+Questions. Skill dot product. Attention. Basically what we've been talking about the whole class so far.
+
+Okay. All right. And then this is the next figure from Attention's on me.
+
+Still figure two. Um, and so this is Multi-head attention, where we've got basically the values, keys and queries here.
+
+We have multiple of these linear layers as weight matrices.
+
+We've got our scaled dot product attention here, which is what we saw on the last slide and what we've been talking about.
+
+We do that concatenation and put it through a linear or dense layer,
+
+which is the exact same thing as what we talked about when we talked about multi-head attention.
+
+So basically just like the flipped version of this.
+
+So just flip this whole thing over and you get this figure.
+
+Questions. Yeah.
+
+Tiffany. Sorry. My question is more of the tech like the.
+
+So in June 1st we had to do this like regular job.
+
+And one main thing that confused me and I think still confused as to why we are going back to content.
+
+So what are we missing? The most hit we had two separate like the number when we were right,
+
+producing the algorithm to separate the number of IDs from the betting sites like the embedding size,
+
+where within the minute one vector for the dimension by where we are coming back, we have to bring it back together.
+
+And when I was trying to follow do it change the position of where the head and the body size, where and ADR.
+
+When you did that, it it makes sense because it's hard to do it sense of multiplication for the matrix multiplication.
+
+But later I didn't get why they would have to be in order like before they can be used because you defined at the beginning.
+
+Before we start that, if we want to get back the full embedding size, we have to multiply the hits by the sub embedding sizes.
+
+So when we are finally cutting 18, I don't get why the order has to change back for them to be side by side in dimensional space,
+
+because like I thought 12, I would still be able to do that multiplication.
+
+So I think you're asking about like, why do we need positional encodings to give us the position of these positional encodings?
+
+But the, the I don't know what the actual, um.
+
+So I think in the final output, like dimension vector you'd have.
+
+Yeah, it's would have the batch, the sequence length, the embedding size and then the number of pips.
+
+But for the final concatenation they make sure the number of hits in the embedding size by by each other
+
+before it finally needs to multiply the head by the embedding size to get that final concatenation.
+
+And I don't understand why in the what is it?
+
+Because I don't know like that dimensional that contains the batch link.
+
+I don't get why they have to be by each other to find decrease the concatenation.
+
+I think that was the mean. Were you working with an encoder, decoder and encoder?
+
+Um hmm. That is interesting.
+
+If you like, theoretically, you shouldn't have to. So it'd be.
+
+Maybe after you can show me the code. Yeah. I'd be curious to see, um.
+
+Conceptualization standpoint. I'm not sure.
+
+Yeah, yeah. Show me. Might be easier to see. Question.
+
+Okay, so if you look at figure one from attention is all you need.
+
+This is bringing in all of these different pieces together.
+
+And so here these orange blocks, these are our multi-head attention.
+
+That's just this figure here. Now a lot of this stuff we've already seen, right.
+
+These are our input embeddings. Um, so we know what embeddings look like.
+
+We've got an additional normalization step here a feed forward.
+
+So just a normal feed forward dense layer here.
+
+And so those are in blue. Um we've got our softmax function function which we're pretty familiar with.
+
+So almost all of these elements we are familiar with. And let's break them down a little bit further.
+
+When we break down the encoder and we break down the decoder.
+
+And so there's two different parts to our transformer architecture.
+
+We've got our encoder over here I got our decoder over here.
+
+And let's talk about um the encoder first.
+
+But before we talk about that we can talk about different transformer types. So there's different transformer types.
+
+And whether you use the encoder only the decoder only or encoder decoder.
+
+Now encoder only is going to process your input text through that self-attention before layers.
+
+It's going to produce a representation um input. So it's not going to generate new text from scratch but can modify or interpret your input text.
+
+So you might use an encoder only structure if you're doing sentence classification or
+
+named entity recognition or text similarity or clustering or information extraction.
+
+And probably the most well known encoder only model is Bert.
+
+Bidirectional encoder representations from transformers.
+
+Are decoder only models are designed to generate text, so it's going to process your input sequence and generate an output sequence.
+
+Um, one token at a time. It's going to use self-attention mechanisms to allow each output token to depend on your previously generated tokens.
+
+So here think text generation or text completion. Obviously, the most famous model here is GPT t, noting that the current GPT models,
+
+whatever model we're on now, the current GPT models are encoder decoder.
+
+So they're not decoder only. But the original GPT models were decoder only.
+
+And then sorry, I just said oh sorry, sorry.
+
+I was like uh. And then we got encoder decoder,
+
+which is going to map an input sequence to an abstract continuous representation that holds all of the information of our input and encoder.
+
+Right. And then the decoder is going to take this representation and generate an output sequence from it.
+
+So think machine translation summarization Q&A,
+
+any kind of text to test text task where we convert one form of text to another to like rewrite writing a sentence in different style.
+
+Uh, some of the more famous, um, Transformers here are T5 text to text transfer,
+
+transformer and Bart, the bidirectional and autoregressive transformers model.
+
+So as you can kind of give you a rundown. Encoder only very useful for some things.
+
+Decoder only very useful for some things. Encoder decoder got a lot more going on there, but useful for quite a lot of stuff.
+
+Okay. So let's take a look at just the encoder part of this.
+
+Um, and a couple of the hyperparameters that you get to tune.
+
+So of course the number of heads in your multi-head attention, um,
+
+is a hyperparameter that you get to tune and you get to decide how many heads you want in your multi-head attention.
+
+Uh, we can also stack encoder blocks on top of each other.
+
+So you basically stack the blocks on top of each other.
+
+You can have multiple then layers of this, um, and so and so x here indicates that we can stack these encoder blocks.
+
+And that is another hyperparameter that you get to choose.
+
+So the output of Multi-head attention here is going to combine with your original input.
+
+Uh, what does this look like? Something that we've seen before.
+
+I could have got here going on in the teal. Let's get let's get connection.
+
+Yeah, exactly. This is just a skip connection from our ResNet days.
+
+So, uh, very useful to minimize our vanishing gradients.
+
+And so that is why we're going to have these teal here where we have the outputs that are going to be combined back with the inputs.
+
+And then they're going to be normalized. And so that's just to avoid that vanishing gradient just like in ResNet.
+
+Okay, so the one case we haven't talked about yet in this figure is this guy right here, that positional encoding.
+
+Um, so remember that attention doesn't care at all about the position of the word right.
+
+It doesn't care. It River is close to bank or if it's far away.
+
+But that might be really important, especially as you get into longer sequences.
+
+Um, and you might say, you know, I walk to the bank, the financial institution, before I watch by the bank of the river.
+
+Right. And you've got bank there, and you need to have two different embeddings for bank, but there's no position known.
+
+I don't know which bank corresponds to what. And so I want to add in that positional encoding.
+
+And this is what this is going to do is it's going to add values element wise to our word embedding that represent the position.
+
+So our original word embedding there would be sub I we're just going to add element wise the position of that we'll have a new V star.
+
+So by. And so this is really weird.
+
+But you can define a positional encoding however you want.
+
+You can do whatever you want here. Um, and attention is all you need.
+
+They tried both learned positional embeddings. So they actually built a neural network to, um, add this positional embedding.
+
+And then they also try this pretty simple sinusoidal positional encoding where they have the dimensions of your model,
+
+your embedding dimensions like 512 position in the sequence.
+
+And then they have dimension. And they added this.
+
+And this worked just as well as like the complicated learned positional embedding.
+
+So they went with this. So they have a sinusoidal positional encoding.
+
+But you can do whatever you want to at the position. Okay.
+
+So let's talk about the decoder now. So in the decoder there's a couple of differences right.
+
+First we have our previous timestep outputs.
+
+They are going to be used as the inputs here. So everything is kind of shifted right.
+
+So when we get an output of our model and we're generating tax rate, we want to know what that output was before we generate that next token.
+
+I walk to the I need to know I walk that to know that I should put dog after that right.
+
+And so that those outputs are going to be used as my inputs.
+
+So we're going to do that positional encoding. We're going to do something uh that we skipped over earlier.
+
+And we're going to do masked multi-head attention.
+
+And for the decoder masking is going to prevent tokens from attending to future tokens in a sequence.
+
+And so we don't want to have happen is that we're attending to those future tokens that we have in a sequence.
+
+We want it to go one by one.
+
+And so how this works is we're going to add a very large negative value, like negative infinity to the scores at positions that should be matched.
+
+And that results of course, in a near zero probability. After we do our softmax function.
+
+So we're going to combine those previous timesteps with our masked multi-head attention.
+
+Now here we can see that our decoder output. So we do the same stuff that we pretty much did in the encoder.
+
+And then the output of our decoder is going to be mapped to logits for each word in some train vocabulary by a linear layer.
+
+So we're going to have this really large vocabulary words.
+
+We're going to have a logit that's going to represent uh which word is the likely next word.
+
+Softmax of course converts these logits to probability scores for each word.
+
+And the word with the highest probability is going to be selected as the most likely word here.
+
+And your output probabilities. Questions.
+
+Yeah. When it's decoder. Is it just that.
+
+And they asked me a outputs uh to the key values of it.
+
+Okay. Yeah. Okay.
+
+Um, so how do we go about evaluating the decoder output?
+
+Well, we get a probabilistic prediction of each word at the position,
+
+and we can compare this to the actual words at each position and use cross-entropy loss to train the model.
+
+So if you train the model on large sequences of words. Right.
+
+And of course we use masking. So those are future words in a sequence are masked out.
+
+And so we're predicting the next word. And we can look and see how well it matched up to the actual words in those sequences.
+
+And we can use cross-entropy loss in order to do this. Okay.
+
+And then we've got our encoder decoder model.
+
+And so what happens here conceptually is that the encoder is going to compress our input into contextualized representations.
+
+Right. Better embeddings before passing it to the decoder.
+
+So this is the decoder here. I mean this creates a sort of information bottleneck that helps focus on relevant information.
+
+Here we've got our cross attention mechanism. Then where our decoders are going to attend to our encoder outputs.
+
+And this creates a direct information pathway between our input and your output.
+
+And so this the power of both of these together.
+
+Um and having that information bottleneck is why the modern GPT models and most modern models are going to be using an encoder decoder structure.
+
+Okay, so, um, I can't really require you to do anything.
+
+Um, but if I could refer you to do one, uh, thing this semester.
+
+Um, and definitely this week is to read the Annotated Transformer.
+
+Um, it is not super long. I mean, it's it's pretty long.
+
+Um, but the picture is okay. Um, but it's it's incredibly helpful.
+
+Um, if you feel confused about different components of the attention architecture,
+
+you can go through this in detail and really, like, try to grok these different concepts.
+
+Um, it's not it's not that fun. It's not that long, but it's very visual, right?
+
+The pictures are very large.
+
+It's not a ton of words, but if you go through here and really try to understand, um, what each of these images is really focused on,
+
+and if you can get through this, then you have a much better understanding of the transfer architecture.
+
+So I highly recommend that you look at the annotated transformer.
+
+Okay, so what happens at inference time?
+
+Um, and this is the next slides are based on questions that I've gotten in previous years.
+
+So what happens at inference time is one of our questions.
+
+Well we have our input data. We're going to tokenize that input data.
+
+The token gets converted into a naive embedding.
+
+And then positional encodings are going to be added to those embeddings.
+
+If we are using an encoder only model or an encoder decoder,
+
+the self-attention weights the importance of other tokens when processing the specific token in an input sequence.
+
+And then we go through our feed forward neural network layer. If you are decoder only, each decoder layer has a self-attention mechanism.
+
+Is math to prevent tokens from attending to future tokens in a sequence.
+
+Um, when you have the encoder decoder model,
+
+the decoder also has those cross attention layers that allow it to attend to the output of our encoder layers.
+
+And then we generate our output. So the final decoder layers output is going to be passed to a linear layer and a
+
+softmax function to generate probabilities for each token in the model tabular.
+
+And the token with the highest probability is selected as the output at each step.
+
+Um, I think there's one thing I'm still not understanding, which is in that decoder.
+
+Um, with an encoder, all it's trying to do is like, understand what the input is, right?
+
+Like at a pretty high level, but with a decoder, if it's generating that text based off of what the input is, how does it.
+
+I still don't think I'm fully under understanding or grasping how it can like, generate that without it being an encoder.
+
+So I guess, or without it using the encoder. Um, and like understanding what that input is just because like at that point,
+
+maybe it's just I'm not understanding the difference between a decoder and encoder decoder, but like oh, I was so not understanding.
+
+Yeah, this is a great question. So if you look at this, we're actually doing pretty much the exact same thing here.
+
+Right. Like the decoder block is pretty much the same as our encoder block.
+
+Um, it's just what is going into that block is your outputs.
+
+And so you're going to be shifted. Right. So you're adding those outputs to that sequence.
+
+Um, and so um, what will happen then is basically your context window is usually a lot smaller.
+
+Um, but you still have that information bottleneck, right? You still have an information bottleneck.
+
+It just might not be quite as strong as if you also have an encoder model.
+
+So it is doing the encoding part of it. It is just adding like the input, um, that it spits out as well.
+
+Exactly. So you got you still have attention, right?
+
+You still have multi-head attention actually, uh, you know, you still have that in two places in your decoder only.
+
+So you're still doing that process of converting it to more optimized embeddings, right?
+
+Which is the whole point of attention.
+
+You're still going through that process of understanding the information better, whether you have the encoder or you or the decoder.
+
+It's really what's happening here at the input and what's happening at the output of the decoder,
+
+which makes it decoder for the attention is the same whether you're in an encoder and decoder.
+
+Okay. Question. Did that help? Maybe. I think so.
+
+I think it helps me understand the decoder aspect of it.
+
+But I think the one thing that I'm still getting a little confused on then, is like the difference between a decoder and an encoder decoder.
+
+So an encoder basically allows us to do this cross like basically separate out this
+
+information from this information right where you've got like all of these inputs.
+
+And then you have just your outputs. And so let's say a prompt right.
+
+You can put your input prompt here, um here as part of your input.
+
+And then the output of the model is just being put into your decoder part.
+
+Right.
+
+And so you don't have to get all of that information first focused on like generating that next word point in that word and then combining that with,
+
+you know, the input from your quote prompt here. Yeah.
+
+So that allows you to then bring in all of this contextual information into the decoder and allows you to have a larger context window such.
+
+Yeah. Sorry, this might be a dumb question. Uh, where are the outputs coming from?
+
+The model itself.
+
+So but not the like the encoder decoder are like, sort of like separate pieces that are attached, like the book and some of the model.
+
+Yeah. I mean, you can kind of just think of them as separate pieces.
+
+Um, really the big piece is just like the cross attention between them, right?
+
+So when you build this model, it's going to look the same as building any model.
+
+You're just going to have a cross attention between, you know, the head of this model and the head of this model.
+
+But like. Sorry. Where are the outputs? Like, what do you mean by the model itself?
+
+Like, so you're generating a word. You are.
+
+And then the next word should be generating. So what you are is here.
+
+So as it's generating words it's pulling those words into the output.
+
+Just like a sequence model. Just like our own. Okay. Right. So you can think of this just like we have that loop around our.
+
+It's the same thing here. So it's just looping through. So the output of our model just goes back and basically the output goes into the input here.
+
+I mean it's cyclical. So it's relying on the previous outputs of the decoder structure.
+
+Gotcha. Okay. So as I'm generating text that's coming back in here as I'm generating the next word in my sentence.
+
+So I see. And the input only like goes through one.
+
+So the decoder loops over and over again. Exactly. Yeah, exactly.
+
+Um, which allows for some of the stuff that you were talking about, right. Where this, like, gets very.
+
+That's why we use the encoder only to create those really large like prompts we can use.
+
+And that's why, you know, GPT two you can put in like this tiny little bit of like quote prompt.
+
+And then it kind of like figures. It's not great.
+
+Right. But you can kind of get it to do some things.
+
+But when you add the power of both of them together, that's where you can do the things that we can do today.
+
+Yeah. Yeah, definitely. Um, you know, curious, when I was thinking about how we were trying to learn the positions.
+
+Like what? The inputs and outputs like. Oh, if you're not using the sinusoidal.
+
+Yeah. It's it's a great question. And they if you, if you go through and read the paper, it's actually really complex.
+
+Like they created this extremely complex model to do um, to just learn um, like an encoding, like basically an embedding space.
+
+Really tried to learn an embedding space for the position of a word in space, every word, uh, every word in the input sequences.
+
+Yeah. They tried to learn like a position, um, which is kind of a weird concept to think about, right?
+
+To grok, it's like, how do you, like, learn a position in an in, in an embedding model.
+
+Right. And like build an embedding model to learn a position, which is probably why didn't end up working in that well.
+
+And they just went with this idea, so I don't. Okay.
+
+And then the generated. So where we last left off here token with highest probability often selected as the output.
+
+And then the generated sequence of tokens are then converted back into our desired format like the string of text.
+
+So at inference time there are different embeddings for different meanings.
+
+So in the context of AI Agent Orange, the embedding for orange is going to be closer to the embeddings for other foods or food related contexts.
+
+In the context of the sun is orange,
+
+the embedding for orange is going to be closer to color related terms or descriptions of nature at inference time when the model encounters the word.
+
+It's not going to rely on a predetermined static vector.
+
+It's going to dynamically generate an embedding for orange, considering the entire sentence or surrounding text around orange.
+
+And attention is what allows us to weigh the relevance of each surrounding word
+
+to determine the most appropriate meaning of orange in that specific context.
+
+So you can think of attention and like most of the transformer architecture of just like a word to back model, right?
+
+It's just like transforming, like a naive embedding into something a lot better.
+
+And then that's something that's a lot better. We can do whatever you want with it.
+
+We can do sentence classification. We can do machine translation.
+
+We can do text generation, all kinds of interesting things.
+
+Okay in terms of token limits, because this is always a question.
+
+Um, less of a question now because you guys don't run into token limits as much as they did a year or two ago.
+
+Um, theoretically there is not a token limit.
+
+So there is a complexity involved in calculating attention scores, and it is quadratic with respect to the sequence of life length.
+
+And um, when we think about it from a computation of memory perspective, gradients calculated over very long sequences can become less meaningful.
+
+We do have those skip connections in there. Um, that helps with this, but that still can be problematic.
+
+Uh, training is going to be less efficient on really long sequences.
+
+I'm sure you can imagine. Uh, and then batch size and sequence length are going to directly affect the memory required during training,
+
+because to maintain manageable memory, there's, you know, some trade off between our batch size and our maximum token limit.
+
+So there's been some optimizations to try to increase token limits.
+
+So sparse attention patterns like long form are a big word.
+
+Techniques like gradient checkpointing mixed precision training.
+
+These allow us to manage our memory more efficiently. And then a lot of parallel processing on specialized features.
+
+And this is just showing us a few of the architectures that you might use for your projects.
+
+Um, remember that Bert is an encoder only model.
+
+And then we've got our GPT model, which is a decoder only model.
+
+Uh, and Bert is using that BI transformer.
+
+So you can see we are, um, going in multiple directions here for our mechanisms.
+
+And then Elmo is really interesting, um, because it basically uses a bunch of Lstm layers within the architecture itself.
+
+Um, and so that one's also a fun one to to look into and explore.
+
+Elmo is a feature based approach versus Bert and GPT two or more fine tuning based approaches.
+
+Okay in terms of building, uh, with Transformers, uh, I really recommend the Huggingface Transformers library.
+
+It has three building blocks for you, a tokenizer. You still got tokenized stuff.
+
+It's got the transformer architecture.
+
+It has a bunch of different architectures to explore, and then it's going to give you a head for different NLP tasks.
+
+So the head meaning you could do something about text classification generation, sentiment analysis translation and summarization.
+
+Right. Um so these are the different components of building blocks of creating your own, um, transformer application.
+
+Okay. We are going to take a break. Now, for ten minutes, we'll come back at one to talk about applied NLP.
+
+What do you think, Virtu? I've seen this multiple times. Yeah I was it was get easier every time.
+
+It does every time I'm like, oh, um, thank you for explaining the encoder decoder thing because I was like, was this like itself or what?
+
+But now I'm like, oh, okay. And it's just like, yeah, I mean, because attention, it's doing the same thing no matter what the inputs are, right?
+
+It's just what that input is. If that input is like recursive, right.
+
+In the decoder, only it's recursive versus encoder only it's going to take an input.
+
+It's going to give you an output. Right.
+
+So why why is it that I feel like sources on the internet always say like for low and moderate models or decoder.
+
+So it's interesting. Um, some of the smaller models, uh, they may be using a decoder only structure.
+
+Um, and so you'll see that like, you know, like for a mini might be, I don't know specifically if it is or not, but, um, that one in particular.
+
+Um, but most of the modern models are using this encoder decoder structure.
+
+Yeah. Okay. The reason to get rid of the encoder would just be efficiency, right?
+
+It's a lot more um, but on the other hand, it creates better outputs.
+
+And people are much more about creating better outcomes right now than they are about efficiency.
+
+And I think a lot of people on the internet also get confused because the original GPT two model was decoder only, like GPT or decoder only.
+
+Right. But GPT is not like there's the model DVD and then there's like GPT 405 and all of that.
+
+That's that's marketing, right? That's not necessarily a GPT three model.
+
+Even more. Yeah. They're probably doing, um, you know, all sorts of architectures.
+
+It's not a GPT model at this point right there. I'm sure they're doing a lot of different things.
+
+Are they still doing like auto regressive prediction?
+
+Yeah. Um, for some things my guess is like GPT five or whatever.
+
+You know, the newest model is is just like basically your problem comes in and it routes you to different models,
+
+um, different like home architectures. And then they test stuff out.
+
+They do a, B testing on these textures. If something is like easily cache rate, like, you know, what's the capital of North Carolina?
+
+They're just going to give you that response and they're not going to spend compute uh generating that.
+
+Yeah. So I'm guessing they just have a bank of cache stuff in there.
+
+And so from a software engineering perspective, right. It doesn't make sense to have a single model.
+
+It would make much more sense to have a bunch of different models.
+
+You can test out these different models on different types of some of these different things.
+
+Caching. Right. All of that.
+
+So we like to think, oh, it's one model, but it's probably if that happens sir you can be sure about that more something more.
+
+Uh, I do think you're probably using a mixture of experts. We'll talk just briefly about that at the end of class today.
+
+Um, but I think mixtures of experts, I mean, the architecture makes a lot of these really cool.
+
+That's I don't know where it goes, but they're probably coming up with these, um, sort of how how are they dealing with,
+
+like, room inference and like, you know, if you, if you're having some adjudication on like where to row.
+
+Yeah, that takes away even like a chain of thought and stuff around actually.
+
+Oh yeah. Definitely. Potentially. I mean they might also do like, you know, some real water cooler than this.
+
+You know, how they might be able to do stuff based off of sticks to you. Right.
+
+And looking at just like a statistical like distribution of what the words are that you have a best guess.
+
+I think when you have that much data, there's so many interesting things you can do with it.
+
+I hope they're taking advantage of it. Right I yeah missed opportunities.
+
+Yeah. It's harvest my data so you can improve your mega corporate profits.
+
+I mean they're doing it anyway so they might as well do something useful with it.
+
+You know. So interesting you know.
+
+No, I know scary.
+
+I. Must.
+
+And. And he uses.
+
+I think that this is like, just. You know, I feel like everybody feels that way.
+
+I'm like, uh. We'll see.
+
+I was looking at some of the accepted workshop papers in 35, but I was like, like, I don't know about this one.
+
+I mean, send it over to me. I'll give you an honest feedback on whether I think, you know, it has a probability of getting it.
+
+I mean, there's always a probability that you get a new interview and they're like, oh, good reason for that.
+
+And when you're done with this, we should talk about cold as well. I was going to yeah I'm going to drop by.
+
+Sorry I've just yes I'll go to my closet. Totally.
+
+Stuff. No worries. And if you want to push the meeting to another time this week, I think it'll be good.
+
+Yeah, yeah. So, like I said, trying to get stuff done.
+
+So the rest of the time, um, I feel like I can still take it, let's say Thursday, Friday.
+
+And then next week I'm in New York City. Yes.
+
+I just have, like, uh, super crazy now. Yeah.
+
+So that's how I was like, I need to finish the thing. Yeah, well, it's been great.
+
+Yes. Doing anything fun? No. My friend is visiting from.
+
+I have two different friends who are visiting. Oh, my God, it's so weird.
+
+Like, how is it? Oh, as soon as, like, I have all decided that they're coming to Durham in spring of 2020.
+
+So this woman, I have someone else who's coming in like, oh, yeah, that's great.
+
+I've, like, built up, uh, this is like my best friend from college.
+
+I build up like a cache of, like, horrible TV that we're just going to, like, binge for four days.
+
+I'm like, that new love is played. See the menu?
+
+Um. The gaps. Uh, when you break into the America's Next Top model, like, oh, my gosh, this is like, insane.
+
+You've watched it, I haven't. I saw the trailer for it. And I was like, I remember I was like, I want to have like orgy,
+
+like watched all of this and now like to see it come out like, oh my God, I know I'm trying so hard not to spoil myself.
+
+Uh oh. Yeah. Because, I mean, I used to watch it. I used to, uh, it's like not good just enough, but I used to, like, doesn't come to it.
+
+Like all the American sites tell me, like, middle school and high school, uh, like, uh, I just remember this clip where they had,
+
+like, a a button that was like a clock where there were these massive capitalism like jobs and one just start to pull out.
+
+And I was like, I forgot how, um, I can, you know, that show that, like, this was really bad.
+
+I'm like, oh, that's remodeling, right? Yeah.
+
+Yeah, it's it's wild. Yeah. Um. Insane.
+
+What is what is called like I looked at it.
+
+It's going to be in San Francisco. I know like conference on language model.
+
+Yeah. And so I was thinking that might be a good place for the temporal transformer.
+
+Cool. I don't know, like, it seems like it's pretty quick.
+
+Right. It's like a March 31st deadline. Yeah, but I think we can do it.
+
+Well, James and I, you know, he's like, uh. Yeah. It's just like a killer once you said so then.
+
+So. Yeah. Yeah. Um.
+
+Oh, cool. Yeah. So maybe we can just brainstorm some like after this papers and and stuff like that and, you know, just submitted it.
+
+Yeah. Because it is in San Francisco. It's like it'd be like, really easy, you know, the conference you go to.
+
+And then it should be good.
+
+Yeah, I was for it. Or not.
+
+And then of course it will come tomorrow and it might even look I mean,
+
+I'm pretty sure this is like the first foray into like, oh, really, really like, architecture type stuff.
+
+I think it's a better form. Like a lot of the work around, like, evaluations and stuff isn't is it?
+
+Oh. Yeah. Yeah I know, yeah, I did it.
+
+I just, I did a little update. This is actually not its first, so just slap it in because I was like I haven't said any of these.
+
+Yeah I'm available. That's right. I need to have you ask me.
+
+And we have a pretty good group. They're doing it partially because a bunch of people in the West, and I'm very much interested in what you want.
+
+Like, so where have you met? That should be good.
+
+That's good stuff. All right.
+
+Oh, if you want to come back to your seat.
+
+You guys are in the most, like, arc. Like it's so close to the door.
+
+It's crazy. Yeah, yeah. Too open. I'm, like, worried that I'm going to like it.
+
+Tiffany. It's a little peanut. Thank you for everything.
+
+Just lost. It's sweet.
+
+All right, so let's talk about some applied NLP.
+
+You're going to talk about text similarity, text summarization and topic modeling.
+
+I don't know if you all have thought at all about working in NLP projects you're wanting to do,
+
+but these might be some topics that can be of interest to you. All right.
+
+So let's talk about text similarity. Uh, text similarity measures how similar to documents are.
+
+Um, so think our plagiarism checker by Grammarly.
+
+We've got, um, two different types of similarity. One is lexical similarity.
+
+So this is a similar vocabulary and one is a semantic similarity which is a similar meaning.
+
+And so if we wanted to measure how similar two documents are, how would we do this?
+
+Well, we could calculate a similarity between embeddings.
+
+So we have our user query. Um, we've got our frequently asked questions.
+
+Um this could also be document one, document two things that our pre-processing pipeline we're going to create embeddings.
+
+We're going to create um two different embeddings for each of these.
+
+And then we're going to calculate the similarity of those embeddings.
+
+And so these embeddings can be created however you want.
+
+This could be done with a traditional approach like that for words. Or it can be done for um uh based on a more semantic approach.
+
+The thing where two vec or transformers.
+
+Um, but you can create these embeddings however you want. In tech summarization, we also have two types of summarization.
+
+One is extractive summarization, where we select a subset of sentences from the original text,
+
+and we attempt to retain the most important parts of the document.
+
+So the important note here is that all elements are going to come from the original document.
+
+So you just pull out sentences from that original document and use those versus abstractive summarization,
+
+which attempts to understand that original document and then generate a shorter document that retains the key points of the original.
+
+And in abstractive summarization, this may use different language than the original document.
+
+Okay, so you put a document into the ChatGPT and you say.
+
+To summarize it, is that extractive summarization or abstractive summarization?
+
+Obstructed. Obstructed. Great. Yep. Because you are anticipating that it's probably going to use different language than the original document.
+
+So some great examples here. Web page summaries. Email summaries.
+
+Scientific article summaries, video transcription summaries.
+
+Um, the summary that I see the most often is on Amazon where it's the customers say,
+
+and then I read through the customers say, uh, a little like you guys generated.
+
+Summary. Um, and so summaries can be really helpful, um, and can be very useful across different domains.
+
+So one of your module projects might be to do some kind of summarization within a particular
+
+domain and see if you can do better summarization using a fine tune model than summarization.
+
+It's just like more general. Here's an example of extractive.
+
+So this uses something called text rank.
+
+Which text rank uses an unsupervised graph based approach to identify and extract the most central sentences in a document.
+
+So we've got a raw document. We're going to convert each sentence into a feature vector.
+
+We're going to build a graph of the document. And we keep sentences by similarity.
+
+And we are in the recommendation module. We're going to talk a lot more about graph based um approaches.
+
+Um and so don't worry if you're like what is a graph of a document.
+
+We're going to talk a lot more about that uh, in module.
+
+And then you're going to use an algorithm like PageRank to get the most central sentences and extract those to create a summary.
+
+And this algorithm is just going to rake sentences, um, basically by their importance.
+
+An abstract of example is that we can use a transformer model pre-trained on the summarization data set.
+
+Train them ourselves. Um, and one note here is that larger documents are probably going to have to be broken
+
+down into sequences with a maximum length dictated by the model architecture.
+
+We've got a raw document here. We're going to do pre-processing, tokenization, breaking it down into sequences.
+
+We're going to use our pre-trained transformer summarization model. And then we'll get our generated summary.
+
+And then the worst application to briefly go over is topic modeling.
+
+So it can be really useful to tag documents based on topics or attributes.
+
+So applications here are like auto tagging of web articles, unsupervised document classification, identifying attributes and product reviews.
+
+So also look at that on Amazon and then auto tagging customer support tickets.
+
+Those are all examples of the topic modeling. So a couple of different approaches.
+
+Um, so we can do a supervised approach if you have sufficient labeled training data available and you can use whatever architecture you want to do,
+
+that supervised approach. Uh, unsupervised approaches.
+
+Um, if you are going to do a topic modeling include um, uh, traditional.
+
+So we've got a latent semantic analysis, LSA, uh, latent Dirichlet Allocation, LDA.
+
+And if you want to go with a deep learning approach, of course you can use transformer embeddings in order to do your topic modeling.
+
+So you might talk about LSA and LDA and John tell us. Okay, I will chat with him about that, but that might be something to, um, uh,
+
+to look into if you're aren't familiar with those and you want to do topic modeling.
+
+In topic modeling, we can assume the topic keywords are contained in the document.
+
+Now we have to ask the question then which words are the right keywords,
+
+and compare the encoding of each word in the document to our overall document encoding,
+
+and then words with our closest embedding to the document based on a cosine similarity are probably going to be keywords.
+
+That's kind of the general idea behind doing topic modeling and using embeddings to do that.
+
+So. Compare the encoding of each word in the document to the overall document.
+
+Encoding in whichever ones are the most similar are probably your keywords.
+
+All right. Questions? On our brief overview of applications.
+
+Most people know about, like text generation and all of that.
+
+But these are maybe slightly lesser known or things that might prompt you to think about what you want to do for that module project.
+
+All right. Let's talk about some advanced topics.
+
+We're going to talk about visualizing embedding spaces. We're going to talk about large language models.
+
+And then we're going to talk about multimodality. So going beyond language.
+
+All right. We have seen this before. We've got 512 dimensions here.
+
+Um, we have a bunch of captions from our lion esthetics data set that are embedded with our clip model.
+
+Uh, and then we have our 2D representation of that, um, plotted in two dimensions that we talked about all of the interesting things about this photo,
+
+how things are clustered, um, semantically close to things that are semantically similar.
+
+I going to talk about, um, embedding models in general?
+
+Um, because I think this is something that is important to note.
+
+And so if we were going to embed, um, two concepts, I'm going to embed ice cream, and I'm going to embed soup.
+
+When we think about the dimensions that we have.
+
+Each dimension does correspond to some aspect of meaning.
+
+And so here you might have a dimension of action a dimension that is food and not food.
+
+That may be one of our dimensions. One of our dimensions might be cold versus hot or ice cream is over.
+
+Cold hot is over here. We might have a dimension that are flavor profiles.
+
+And so we've got money here. That's sweet.
+
+Here might have a dimension for served in a bowl or cone where soup should be always served in a bowler cone.
+
+But ice cream maybe is a little bit more. Could be served donuts.
+
+Um, and then maybe we have a dimension for contains vegetables and should not contain vegetables.
+
+And so these are all potential dimensions that we have. And when we try to compress all of these dimensions, we lose some information.
+
+And it makes it a little bit challenging to understand these concepts and how they are related.
+
+We only get relative distances between things when we have this impression, right?
+
+We know that soup is kind of close to ramen and pasta.
+
+We see ice cream is up there from desserts, and they are relatively farther away from clothes.
+
+But this compression removes a lot of that important information that says when some things are really similar to one another and in other aspects,
+
+they're much farther away. Now for dimensionality reduction.
+
+We can do, uh, there's multiple approaches. Here are three of the most popular.
+
+We've got PCA, but we're going to focus on capturing those global linear relationships in our data.
+
+Uh, we can use those to simplify and find those global linear relationships.
+
+We've got t-SNE, which is going to construct a lower dimensional representation where similar data points are going to be placed closer together.
+
+Uh, I personally really like t-SNE.
+
+Um, I think t-SNE works the best for visualization and being able to reveal some of those, uh, really nice patterns in clusters.
+
+And then we've got you map, which uses manifold learning, uh, which is a non-linear dimensionality reduction technique.
+
+And this tries to understand the underlying structure or shape of your data.
+
+And its focus is on capturing those more complex, non-linear relationships with our data.
+
+Okay. And then when we talk about similarity in embedding space or semantic space, um, we can measure similarity in multiple different ways.
+
+And so here are just a few of those similarity metrics. Right. We've got our cosine similarity which measures the angle between two vectors.
+
+We're all very familiar with cosine similarity at this point.
+
+You can also measure things like Euclidean distance or dot product or Manhattan distance.
+
+Um Jaccard similarity. There are many, many different ways to determine similarity and semantic space.
+
+Now cosine similarity. We're very familiar with it's used very often in industry right now.
+
+Measure the angle between vectors normalizes that dot product by the size of the vectors.
+
+And it's invariant to vector magnitude. The nice part here is that we do have a fixed range -1 to 1 where higher is more similar.
+
+And then of course you have your patient up there for cosine similarity.
+
+But cosine similarity is not perfect. So there's actually no concept of proximity and cosine similarity.
+
+So two vectors on opposite sides of the space can have a very high similarity if they point in similar directions.
+
+It's going to assume linear relationships, which as we know in the real world relationships are not always linear.
+
+It's going to struggle with sparse vectors. And how do we actually define what a good cosine similarity is?
+
+Any thoughts? Well, what you have to compare them to other because it's all relative.
+
+It's all relative. Things are really hard, right?
+
+Because if you're within one, um, application, within one embedding space, you can, you know, make a relative comparison.
+
+But after you and you can rank things. Right. So very useful for ranking things like for Rag.
+
+But cosine similarity on its own is kind of challenging to use because of the fact that you don't really know what a good one is.
+
+And how do you set thresholds for this. Right. People were like, so I did, um, a couple of couple of summers ago, actually, um,
+
+did a bunch of consulting work for a company that wanted to do a lot of evaluations of their, um,
+
+AI systems that they were building, and they were currently using cosine similarity,
+
+and they were having a hard time setting thresholds because the cosine similarity is relative.
+
+And so they were like, well, you come up with some thresholds.
+
+Consultant. Um, and I was like, that is a really interesting problem.
+
+And you probably should be thinking about your evaluation process very differently.
+
+I mean, we went we did still use some cosine similarity.
+
+Um, but we augmented it with some other approaches.
+
+Have you guys, uh, used this platform before this projector dot TensorFlow?
+
+I think the people in my class have used it. This is really a fun way to look at embedding spaces.
+
+Um, and so this is um, a dimensionality reduction down to three dimensions with PCA.
+
+Um, and this is the word to back ten k corpus.
+
+And so you can click on a word.
+
+Let's see in me. Okay. So there you can see nearest points in the original space here based on the cosine distance.
+
+You can also look at Euclidean distance. And then you can see in this 3D representational space where all of these um different concepts fall.
+
+And this I think is a great example of embedding space.
+
+When you look at it in 2 or 3 dimensions, it's not necessarily representative of the, um, the multitude of dimensions.
+
+I forget how many dimensions this. This one is.
+
+I think it's probably around like 500 dimensions.
+
+Um, for this particular, um, this particular data set.
+
+Very. So one thing that I think is, is pretty interesting here is um, so the, the nearest points in the original space.
+
+So this is the closest in via cosine similarity is liver.
+
+And liver is actually much farther than one. When you do this compression down into um three dimensions using PCA.
+
+And then if we do a different approach. So let's look at t-SNE because t-SNE will be faster than your map.
+
+Now you can see everything's moving around a lot.
+
+As we transition from our PCA into PCA into our t-SNE visualization.
+
+Should be this. And so now you can see that things have moved in different places based on the different dimensionality technique that we used here.
+
+It's really interesting. So that's in the slides.
+
+You should go check it out and play with it. It's very fun. This is so freaking cool.
+
+Isn't it cool? Yeah. Thank you. Sam.
+
+Sam, my hype man. All right.
+
+We want to talk about large language models next. Um, what is a large language model?
+
+Hi. Sam with the hot take.
+
+Anyone else? Yes, that means that, right?
+
+You guys use these things like every day. Are they?
+
+Which model? That is large language. Model large.
+
+Thank you for choosing. A model for languages.
+
+That is large. A model for languages that is large. What does large mean?
+
+Bigger than two more data.
+
+Um, well, the definition is evolving. So, uh, if you didn't know the answer, that is okay.
+
+Uh, especially if you don't know the answer to big. It is larger than to appreciate it.
+
+Um, so GPT one of 2018, uh, is considered the first, um, um, even though it has or has only 170 million parameters.
+
+So as opposed to the multiple trillions that models have now.
+
+Um, I thought this would be interesting to point out. This was 2019, the OpenAI press release.
+
+Um, gpt2 this was February 14th, 2019.
+
+Um, and so this was seven years ago. And uh, seven years ago, I took this picture on Valentine's Day just for fun.
+
+Our model called GPT two, a successor to GPT. It was trained simply to predict the next word in 40GB of internet text.
+
+Due to our concerns about malicious applications of the technology, we are not releasing the trained model as an experiment in responsible disclosure.
+
+We are instead releasing a much smaller model for researchers to experiment with, as well as a technical paper.
+
+That was kind of interesting. Gpt2 was too powerful for us.
+
+And anyone use Gpt2 before? And give you.
+
+Yeah. GPT two is really bad. Um, we used GPT two, uh, back when it was released.
+
+So. So in 2020, um, we use GPT two for a bunch of, um, market research for a client.
+
+And that was, um, an interesting process that was actually back in the day when you had to, like, apply to OpenAI to get API.
+
+Um, and so we actually, um, somebody working at the company knew someone at OpenAI.
+
+And so he got us access because they had like, you know, these applications,
+
+if you weren't able to get an API key, if you didn't, like, get passed the application process.
+
+And so we got all got API keys because they was friends with somebody at the company wild.
+
+So we used GPT two for a bunch of market research stuff. It it really did not perform well.
+
+Um, and so I think it's just funny that it's, um, too powerful, um, to release to the world.
+
+But now, some years later, where we are.
+
+Interesting. Interesting. Um, so this is from two years ago, right?
+
+October of 2024. Um, and this is like that comparison.
+
+I thought this is just kind of funny. Um, like, you know, two years ago, it's like.
+
+Seems that was historic at the time to think about, like, the biggest models at the time were 10 trillion.
+
+And then looking forward, the models have just gotten much, much larger.
+
+And then this is a really fun one. So we see Bert over here.
+
+Some of you might use Bert T5 GPT two here right.
+
+And this is that pre 2020 era. And then here we go all the way up to uh 2025.
+
+And we can see some of the, the much larger models here. So interesting to see this like trajectory but then also like this filling in.
+
+Right. And that we have all of these like really small models and then these really large models being released each year,
+
+which I think is really interesting.
+
+But you can see the volume of models just kinds of it's like it's like we're just chillin here and then it just explodes, right?
+
+Very interesting. Uh, for small language models, the definition is also evolving.
+
+So current small language models are a few million to a few billion parameters in size.
+
+But this is also something that is evolving.
+
+I'm curious if at some point a trillion parameter model is going to be considered small, and these are going to be considered like micro models?
+
+No. Okay. So what can you do with the language model?
+
+Well, pretty much anything you want.
+
+Um, so a couple of notes here is we would encourage you to lie on those fundamentals and don't really get caught up in the magic of language models.
+
+Um, fine tuning or transfer learning, really small language models is often more effective at using a large language model.
+
+And that can be something that you can test or your project if you want it to.
+
+So in years past. We'll see if that's the case this year.
+
+In years past, people have thought that the path to an easy NLP project is just a drag.
+
+Um, so just to do some retrieve augmented generation. Hook that up to an OpenAI API key.
+
+And there you go. Your NLP project is done. All good to go.
+
+Um, so my question is, is this the path to an easy NLP project, or is this just a huge amount of work?
+
+You probably know the answer to this one. All right. So let's talk about retrieval augmented generation.
+
+I think you guys have seen this right. Because you all built Ram systems I showed this slide to you guys in 510.
+
+Some people are confused. So I'll go through it again. Okay. So this is basically how retrieval augmented generation works.
+
+We've got our user here. The user made some query. We embed that query model into a vector embedding using some embedding model.
+
+This is gonna be the same embedding model that we use to create constructor vector database.
+
+Our vector database has all of that information um in unstructured data.
+
+And then we have a vector that's basically a pointer in that database.
+
+That vector was embedded. Um, these concepts are embedded.
+
+You get that vector which is the same embedding model we're using here. Okay.
+
+So we're going to use a similarity approach to find the closest match between items in our database and our user query.
+
+And because vectors are numbers we can just do math which is super fun.
+
+So typically we're gonna do something like cosine similarity or some other distance metric here.
+
+The closest matches are then set in as part of the prompt to a large language model.
+
+The large language model generates a response to the user's query. This response is sent back to use it.
+
+So the basics of how Rag within LM works.
+
+Okay. So let's talk about some of the considerations that you need to make when you're building a retrieval augmented generation system.
+
+So how do you want to split your data to be fed into your embedding model.
+
+So each chunk of data is going to correspond to a vector.
+
+And you get to choose that split. So do you want to do this by sentence, by paragraph, by section, by document.
+
+And so here we did we have unstructured data where we have a square description image.
+
+So each product is given a particular vector.
+
+So we chunked this by product. But you can chunk this however you want.
+
+How do you choose this. Well it's going to be based on your application. What level of information do you need to access.
+
+Are you doing a question answer app or are you doing some kind of product search what you embed and
+
+chunk what chunks you embed are going to look different depending on what that application is,
+
+and you might need to run experiments to determine your best strategy.
+
+And then if you're going to run experiments, then you need to figure out how you're going to evaluate those experiments.
+
+So how are you going to evaluate those experiments? Okay.
+
+We'll put a pause on that and move on. Okay. So you also have to choose an embedding model right.
+
+There are hundreds maybe thousands of embedding models at this point.
+
+How are you going to choose which one. Well you can consider accuracy for your application right.
+
+You might be doing text classification. So you're going to look at the most accurate model for text classification.
+
+You might look at the hugging face and leaderboard.
+
+Uh you might be thinking about open source versus paid or commercial versus noncommercial license if you're developing a product.
+
+When you go out into industry or you start your own startup,
+
+you're gonna have to think much more carefully about the embedding models you choose than the ones you choose in this class.
+
+When you choose one in this class, it's for an educational project. You can do whatever you want.
+
+You can choose whatever many model you want.
+
+However, out in industry, you have to be really careful because most open source models are noncommercial use.
+
+So you can use that open source model for research or for education, but you're not actually going to be able to use it to sell a product.
+
+So got to be careful about that. There's also difficulty in hosting embedding models.
+
+You know, depending on the size of your embedding model that you choose.
+
+You could have some problems with hosting that and maintaining that.
+
+How easy is it to implement into existing tools?
+
+That's another question to ask. And then lastly, how are you actually going to evaluate which embedding model you should choose?
+
+You also need to think about a similarity method. So how are you going to choose your similarity method?
+
+Because everyone else uses cosine similarity is actually not valid rationale.
+
+All of your friends jumped off a bridge. Would you agree?
+
+Um, you actually have to think about why cosine similarity or another approach is the best for your use case.
+
+Question here being how are you going to evaluate it? And you also have to choose a large language model, right?
+
+Um, so which large language model are you going to choose? You might think about accuracy for your particular application.
+
+You might consider cost. You might consider size. You might consider deployment.
+
+Is this via some kind of API? Do you need to run it on prem?
+
+On the edge? How are you going to think about deployment of this system?
+
+And have you evaluated the rest of your pipeline using your target Elm?
+
+And this is what I call the curse of evaluation. Where we need to evaluate all of these things.
+
+But all of these things relate to one another.
+
+And so, for example, if you needed to decide on a chunking approach and we're thinking about sentence paragraph in the section as a document,
+
+as a custom manual sections, you know, different documents may require different approaches.
+
+So we've got this problem. How are we actually going to evaluate this.
+
+Right. How are we going to decide on a chunking approach. Well we need to hold our similarity metric constant hold our embedding model constant.
+
+Hold our large language model constant, hold our architecture constant, hold our prompting constant.
+
+And then we can run through different chunking approaches across the different documents.
+
+We get the output of our pipeline. We can also look at a subset of our pipeline.
+
+Right. Like just the retrieval component minus generation being the elements that we can get rid of that part.
+
+Or we have to look at that subset. And then how do you know if your output is correct?
+
+There's not actually a best practice to know what you're out if your output is correct.
+
+So now we want to evaluate the embedding model. We evaluated chunking.
+
+So confused on how exactly to quantify it. But we evaluated that.
+
+How about that self-concept. But now we want to evaluate the embedding model.
+
+We decide that we want to use an indifferent embedding model than the one used previously to determine the best chunking approach.
+
+So do we need to run that experiment again? Get the cursive evaluation.
+
+It is a big challenge in space because we need to evaluate one thing and make a decision there based on things being held constant.
+
+But then when you change another piece, now you have to reevaluate.
+
+Okay. So these are deployed in the real world.
+
+So we actually do have to evaluate them. So how can you think about evaluation.
+
+And they all come with their own pros and cons. I can't tell you which one is best but things to consider.
+
+So we got user judgment right. You can do AB testing here.
+
+You can do user research metrics. Oh I'm as a judge is an option.
+
+A better option is a different L one is a judge or multiple judges.
+
+You can do tech similarity metrics. So a similarity in embedding space between your output and your desired output.
+
+What is that desired output? Usually you need to have a data set or create your own data set of what you want the given an input.
+
+What do you want the output to be right? You have to construct that if you don't already have it.
+
+And then basic metrics right? Things like latency and cost of inference.
+
+These may impact your decision on what design choices you make when you're building a Rec based system.
+
+So before you build it. Before you decide to do this for your module project, I want you to answer these questions.
+
+How are you going to evaluate it and what will you need in order to evaluate it?
+
+And this is all from very much real world learnings.
+
+Perhaps struggle through this in an industry setting and really have to think deeply about these problems for different applications.
+
+It's a really hard problem and there are no good solutions for it, but maybe you'll come up with it in this class.
+
+Okay. Questions there. The curse of evaluation. If you repeat the question.
+
+Just any questions. Okay.
+
+All right. So, a brief foray into beyond language.
+
+Um, so anything that you can tokenize.
+
+You can use a transformer for. So I know we like hinted at transformer uses back in computer vision.
+
+We'll talk about transformer uses in recommendation systems.
+
+We'll definitely talk about them in our generative AI lecture.
+
+So anything that you can imagine how you would be able to tokenize that you can use a transformer.
+
+So you can make images spectrograms of speech, audio time series, video.
+
+All of these things can be tokenized. And thus all of these things you can use a transformer for.
+
+So this is Vit or Vision Transformer came out in 2020.
+
+Up until this paper, research attempted to introduce self-attention at the pixel level.
+
+So you would do self-attention and you would attend to each individual other pixel in an image.
+
+As you can imagine, this didn't work super well. So people were like, well, can't just can't use transformers for images.
+
+Uh, 8224 by 224 pixel image would be a 50,000 sequence plot, right?
+
+It just becomes, uh, rather intractable.
+
+So in the Vision Transformer paper in 2020, what they did is they tokenize the image by chopping it up into patches of 16 by 16 pixels.
+
+And then they treated each patch as a token, embedding that into input space.
+
+And this paper is called an image is worth 16 by 16 words.
+
+Transformers for image recognition at scale. And this is how they did it.
+
+And so you can see the images. Uh, they also have position embeddings.
+
+Pretty important for an image as well. Um, so they do these patches, they do a linear projection to flatten those patches.
+
+They added that position embedding. And then you have the same transformer block that we talked about earlier.
+
+Uh, for this one.
+
+For image classification, you have an MLP head and then a class, but you can put whatever head on here that you want to do an application for.
+
+I came out in 2021.
+
+And Cliff is a really interesting architecture because it allowed us to take images and text and map them to the same embedding space,
+
+which is just really cool. And what this allowed us to do is to be able to do zero shot prediction.
+
+So even if we had not did not have a large training data set of something, some kind of image, I like to use unicorns.
+
+Even though there's lots of unicorn images on the internet. We don't have a lot of unicorns, but we have a lot of text of unicorns.
+
+Well, because it didn't seem embedding space, we can actually construct an image of unicorn based on or,
+
+um, text input because we're mapping them to the same embedding space.
+
+So how we do this is we take our image and we take our caption.
+
+And what we're going to do is we're going to, uh, embed both of those.
+
+So we're going to have an image encoder, a text encoder. We're going to embed both of those.
+
+And then we get our text embedding in our image embedding. And then we're going to see how similar they are.
+
+And we want them to be really similar. And so we're going to update the models through backpropagation if uh based on how similar those are.
+
+And so we're trying to get those embeddings to be the exact same. And what comes out on the other side of all of this training, um,
+
+is that you end up with a model that when you put in an image and you put in its caption, ideally these are really, really close semantically.
+
+So they're mapped in the same spot in an embedding space.
+
+It's really, really cool. Now, the reason this is done with images and captions is because this is a very large data set.
+
+You know, you can grab a bunch of images and their captions from the internet to be able to train this.
+
+Could you do this with other things? Absolutely. But you need to find a data set to be able to do it right.
+
+Um, and so thinking about like the construction of a data set of two different modalities and embedding those both in the same embedding space,
+
+that's where it gets challenging. Um, images and captions were readily available.
+
+Data set and clip is still used. So Cliff has a lot of problems.
+
+Um, first of all, but it's still used in a variety of applications, including most diffusion models.
+
+So most image generation models are using clip behind the scenes.
+
+And clip is actually a really simple implementation.
+
+And so this is pseudocode for all of Cliff.
+
+Um, which is kind of crazy. So we've got, um, we have here our, uh, image.
+
+So we have image and see, this is a batch of n images with a height h, a width w and C channels.
+
+Right. Red, green, blue maybe are a number of channels.
+
+We've got a learn temperature parameters hue scale or similarity scores we've got that's here T we've got TNL which
+
+is a batch of N text sequences each with a given length L we've got I.f so we've got our image encoder here.
+
+And so obviously we have an architecture of our image encoder.
+
+We encoder. We have an architecture for our text encoder. Here we have an image encoder.
+
+We have a text encoder. We are going to try to project image features to a common embedding space and then normalize those.
+
+So this is our joint multimodal embedding for both our image and or text based encodings.
+
+And then we are going to calculate our cosine similarity between all of our image text pairs in our batch.
+
+Scale them by that temperature parameter that we learn.
+
+Uh, we get our, uh, labels here, um, and our, um, lost.
+
+So we're going to use cross entropy loss, but we treat arrows as predictions, uh,
+
+in image and then in text, um, we're going to treat the columns as predictions.
+
+And our final loss is just the average of both of our directional losses from our image and or text based, uh, portion.
+
+And then this is what's used as a loss function to train the model. So pretty simple implementation to implement all of what.
+
+And this format could be used for multiple other things that you may think of for your module project.
+
+Okay. The last thing to talk about is very briefly, it is mixture of experts.
+
+So the Transformers architecture is not the end all be all right.
+
+Um, and there are a variety of new architectures coming out all the time.
+
+Uh, I went to, um, Nvidia GTC, I guess I was two years ago now and went to a panel with almost all of the authors of attention All You Need.
+
+One guy was missing and he missed his flight, which kind of sucks, but everybody else from the original author list was there,
+
+and they were basically talking about how the transformer architecture, it was just kind of like this toy approach that they like, threw together.
+
+They didn't think much of it. They didn't think it would work so well. And they think that there's other stuff that could work a lot better.
+
+And so that stuff is still being worked on, and some of you may go out and work on the next iterations of these models.
+
+And I might be here in five years talking about the architecture you build that takes the place of this transformer lecture at some point.
+
+But mixture of experts is pretty cool because it combines, um, routers with transformers.
+
+So in traditional transformers, all parameters are going to be used for every input.
+
+But in mixture of experts models, they only activate a small subset of parameters, the experts for each input token.
+
+So instead of that dense feed forward network ah, make sure that expert layers have a certain number of experts where each expert is a neural network.
+
+That's going to be any neural network.
+
+Um, and then there's also a router network that's composed and learned parameters and trained at the same time as the network.
+
+And so you can see here that our dense transformer blocks break up or text images whatever.
+
+If you have a router that's going to route it to a different expert.
+
+And then we have additional transformer blocks or additional mixture of expert blocks and then our output layer.
+
+So this is just giving us additional layers to be able to make more efficient use of the parameters in our model.
+
+All right. Questions? Kanter's.
+
+Looks like you raise your hand for answers. All right. What's the answer? What are your thoughts on why scaling laws work?
+
+Why scaling laws work? Yeah. Can you be more specific?
+
+Like why did. What are you? What are your thoughts on how like when we make these bigger, it's more like why?
+
+Like it work? Gosh, I have no idea.
+
+Okay. Yeah, it's a great question. I think everyone is just, like, shocked that this stuff works as well as it does.
+
+Myself included. And I think there's a good chunk of it too, is like we got to a certain point, right.
+
+And now we're seeing like that scaling doesn't necessarily it scales to a certain extent.
+
+And now we're kind of seeing that plateau happen not in the models, but that's because of other techniques, right.
+
+Like reinforcement learning that we are applying, um, the outset of these models, that human feedback component, that human right.
+
+There's a lot of other stuff we're doing.
+
+We're doing a lot of software engineering behind the scenes to make these models feel faster and feel better.
+
+But there is like an extent, and I think we've kind of reached that with the transformer architecture of like,
+
+we have enough data now to pre-train one of these things, and now a lot of the challenge is going to come in that like post pre-training.
+
+But in terms of like why this stuff works at scale, I don't know, it's crazy.
+
+And I think the original Authors of Attention is all you need.
+
+Would completely agree with me that it's like we have no idea why this stuff works so well.
+
+Crazy. Like some simple linear algebra. Just like.
+
+Like I feel like it's the self-supervised it's building.
+
+It's less of a classification model, like next token prediction and more of it like a world.
+
+So much of a world is encapsulated in language, right?
+
+And but there is so much missing from that.
+
+Which is why, like, I don't think anyone's ones are going to get us to, you know,
+
+you are close to whatever superintelligence or whatever the new terminology is these days, right?
+
+AGI superintelligence as ever. Um, I do think there's going to need to be more input modalities.
+
+Question. Wish I had an answer for you. I mentioned that, uh, um, the evaluation of this architecture is, uh, I wonder how does that evolution work?
+
+Because it can be challenging if the router doesn't run to the most capable, uh, uh, model for a specific task.
+
+Um, it kind of brings the evolution down, and I don't know how how how does that how does the how are researchers,
+
+like handling, uh, evaluation, this architecture? Yeah. It's such a great question.
+
+Um, they're primarily looking at it at the output.
+
+Right. They're not looking in between to see, like what experts it's being routed to.
+
+They're really looking at the end evaluation and looking at the metrics there.
+
+So like latency is one. Right. Uh, these models are slightly lower latency.
+
+Um, but from a computational perspective they're looking at computational memory, um, and computational needs.
+
+And then they're also looking at, you know, accuracy on different evaluation benchmarks and comparing that to a traditional
+
+transformer model without the mixture of experts and seeing know marginal gains on this.
+
+So they're looking at the entire output rather than anywhere internal in the model, which is kind of crazy to to your point.
+
+All right, well, there's no further questions. I'll see you guys next week for a hackathon.
+
+Bring coffee. Bagels, donuts. Heck, yeah.
+
+We'll see you guys next week. I'll see most of you in reinforcement learning later, but do not reinforcement learning.
+
+See you next week. There'll be yummy food.
+
+There'll be a really fun hackathon project for us to do.
+
+And then of course, we have our prizes, right? So have a great week.
+
+So we'll see you next week. And then after that is spring break.
+
+So if you have a something you should plan something new.
+
+If you guys are yeah you guys are cute 12 or 16 months. You only get one spring break and graduate school one.
+
+Got to do something. Okay. All right.
+
+I'll see you guys next three years already. I actually do have a question for you, Sam.
+
+You will be happy to know that I got sick at the end of last week,
+
+so I was sick last week, but that was that was a week after the exam, though, wasn't it?
+
+That wasn't. Yeah, it was over a week. No, it wasn't you. I'm just saying you were like you, you seemed very like upset that I had not gotten sick.
+
+You. No, I was last week, I was I was like, she was going to be so happy that I got sick.
+
+Oh, I'm not running at your downfall.
+
+Oh my God. Oh, wait. No, that was if you got sick last week.
+
+The exam was two weeks ago, so. I mean, I want to you.
+
+Oh, there's gonna be a that. I'm not trying to. You see, um, I do have a question, though.
+
+It's kind of unrelated to click save posts. Yeah. So in terms of, like, training our data for it.
+
+Yeah. What's it doing? I've actually. It was better.
+
+And I realize it was limited to all the different types of data.
+
+Right. There's actual data that's like from Wikipedia.
+
+Uh, what it means a few years ago with simple facts.
+
+Yeah, but then there's, like, conversations, like some form and sort of like it's all here.
+
+It's all sort of like that. And how do you describe your voice from now at stations?
+
+Right. Like if they give a podcast, it's like then, but are you getting the same results in the back to the right?
+
+Oh yeah. And I'm wondering, oh my god.
+
+Yeah. That is there own like derive facts and.
+
+Yeah. And make those kind of. Oh really. Yeah. Like I'm treating it.
+
+Oh yeah. Where like it's not like, you know, it is the conversation rather than like with his thoughts on Twitter.
+
+So what's the purpose of this to be conversation on the podcast.
+
+Oh no I didn't used to if they would like a good question.
+
+I was thinking fast or but also like actually also conversational because I feel like, you know, I was experimenting with both.
+
+And the conversational one feels like you don't even really need to track it down.
+
+You can just take it out of the system prompt an emulator.
+
+But in terms of facts, you know, it doesn't end up polluting the system prompt with like facts that you've personally derived.
+
+Which is why, you know, like that's why I was thinking,
+
+like fine tuning to actually like take the coordinates of like for the case and the discord notifications and like,
+
+like true conversations and like actually trying to write like the facts from that conversation to really take it.
+
+Yeah. The really challenging part about that is how do you separate out the fact from we can.
+
+Yeah. Okay. It's not like, you know, from a semantic assessment, we probably could do it.
+
+How to pull out like sentiments. Are these facts or these opinions though.
+
+And that is much harder. Right. Because that's um, I mean,
+
+you might find humans that don't agree on a lot of whether it's a factual whether it's a is I don't agree like that maybe is that,
+
+you know, like there's some point that's fine.
+
+But yeah, I guess I was kind of wondering, like ignoring that problem.
+
+It's let's say it's not like let's say, you know, like who cares?
+
+Yeah. It's just this, not you.
+
+Is there like, let's just say, like, we don't even care after like, because ultimately, like cats like that,
+
+like we we're not gonna want to be seen as more concerned with, like, no one actually reciting in part because everything.
+
+Oh for like, oh. Is there any way, you know, like, maybe it's like with classical.
+
+I know it's like very scary, right?
+
+You can get the same group and like pass it on to like, you know, like, you know, like a if, you know, to fine tune the.
+
+No, seriously, you can check it out based.
+
+But you got it. So yeah there's it's and it's like, is it like some kind.
+
+And the record is in, uh, group chat model.
+
+Yeah. Yeah, yeah, we would definitely use that train for our.
+
+So, you know, you can go in and it might have been like an 11 judge approach.
+
+And yeah, we only have a few minutes or something like that.
+
+And you know you can show that I can show works.
+
+And and also looking at things is that.
+
+Oh yeah yeah yeah yeah yeah I mean.
+
+If you like to like where he's like 2000, that's like really hard to learn about.
+
+Yeah. Yeah, yeah.
+
+I was just wondering about that. Oh.
+
+Yeah. Like actually like make a model for guys have. Like the facts that are, like, actually like actual facts.
+
+Not like, you know, we put it in the system or it's like a big corpus and it rags it.
+
+And so it takes forever to get looked at. Can you see like, hold on, let me questions for you.
+
+And then like, you know, we're in a range rank algorithm I think.
+
+And like, yeah. Um, and we did it was like super important.
+
+Let's talk about the threats. Yeah.
+
+All right. Do whatever you want. Oh.
+
+Or like. Like, um. Like like I think it's like influence.
+
+Um, like. Okay, that's what a crowd control crowd is understanding give you.
+
+How much? Hey, how's it going? Did you commit to us for this project?
+
+That's kind of. Like we like came.
+
+That's. Another.
+
+Nothing. The only thing I remember is that you said. I mean, like, that was great.
+
+Like China do us on our game. But. Yeah, because.
+
+Oh, it's like, I don't really I actually don't like that.
+
+That's controversial. That was my question. Um, yeah.
+
+I think on I, I think that that's a real one example like, but I would.
+
+It's not much of a second harvest.
+
+So this is like actually it is almost tax. Yeah. It's like oh my god.
+
+Oh that's really good. I like that idea. I'm just scared. I'm not sure.
+
+Yeah I know what it is. Yeah. I was organized by the way.
+
+Well, I'll go first. Okay. I would do it.
+
+Yeah. Look, I know I have a 15.
+
+I use this model. For anybody.
+
+Yeah, I got, I got something. I think it's coming. Well, it's coming next year.
+
+Let's see a little bit. Now.
+
+It's so funny because it's like a massive computer.
+
+Yeah. It's like I said, I should go on TikTok.
+
+So I'm glad you did.
+
+Yeah. No, because I actually don't want to, like, get it on my luggage, like, have a wagon.
+
+I'm like, you're lucky. Hook it up and then, like, do our hackathon demo off computer just for this.
+
+Yeah. So. I called when I did was coming out here with this post-processing.
+
+Kind of like how we can totally do it now because all of us have the video views now.
+
+I know. Yeah. So now we're actually.
+
+No. I cannot help, but I was like, oh, you succeeded.
+
+Oh yeah. Well, I mean, I was born, but then sometimes they could be like, yeah.
+
+And then for that, I don't know. I mean even though it was GPU was everything.
+
+Yeah. Yeah. Yeah. You. Know, I took labs.
+
+Not that because they have like, it's not working at all.
+
+Yeah I got like a few like tips and everything and then also it has.
+
+Yeah. I mean like, you're good. Yeah. Yeah. Yeah yeah, yeah.
+
+Downstairs. Yeah. It's like I try to use those, but like, I lucked out.
+
+Yeah yeah yeah yeah yeah.
+
+That's probably do it. Like, the thing is you have to go there during the.
+
+You know what? I'm going to try and make it there. And you can install Cuda for using the I mean.
+
+I tried that if I'm going to have like a difficult but like I know.
+
+I can't I just got screwed up. Yeah. Because if I screwed up it's because like, the actual.
+
+Yeah, I like it. Yeah. That's. Thanks.
+
+I actually building a front page.
+
+So that anyone can submit to it. And then I do, like, automatically.
+
+Turn the weights. Yeah yeah yeah yeah yeah yeah.
+
+If you want to win I think it's good. I think we should just be like, oh yeah.
+
+Oh that's like yes, it's possible right now the game like yeah I don't know.
+
+Oh actually just basically made the numbers to the actual in the corresponding.
+
+That's actually no. But I'm like, oh man. I know this sounds crazy, but we have another one here.
+
+And we have like a lot of different kinds of meadows, bikes or anything else that I know, but I that's a that's polarizing.
+
+So that's not what you see. But yeah, I mean that's something I compared to the real level.
+
+And I saw the love of the I know the thousand number of my work even though I didn't do anything.
+
+And then I made all the rest brownies and I think I actually kind of like, but I basically.
+
+I was just, I was already so I mean, like, like numbering was I think we never talked about like the name.
+
+Okay. Oh yeah. Put that on that. Also the deal sounds like it.
+
+Actually, yeah. I haven't given one yet. I want to get three interviews.
+
+Oh yeah. Okay. So we can now we can go.
+
+We can go crazy. Even even you might have a little bit more stuff.
+
+Yeah. Yeah yeah yeah I have I'm interested in like about like like ROI stuff like the time.
+
+I read that which was previously discussed on Twitter. I'm sorry.
+
+But I feel like actually, you're basically right. I'm pretty big, actually.
+
+Yeah. Oh, yeah. They have got the contract, got them questions and make it stand alone.
+
+Yeah. I'm like, I'm totally fine.
+
+Structure another. What did you think. So yeah I actually informed about in class a while ago.
+
+But that's a contract. Yeah. It's like oftentimes I am giving out maps based around is what I just.
+
+Say that but which you can actually synthesize facts about.
+
+The culture. So it might be something I think that's like okay. And also I try to yeah.
+
+That is that is really hard I think I go from scratch to help you in trouble.
+
+Yeah. So so that might be something to because especially if they work on military stuff, they might be doing not just,
+
+you know, that more like backed up like knowledge that I would practice coming up a couple of.
+
+I feel like you could just from abstract from you.
+
+Know can show the rest of you right.
+
+You. Like what you actually guys which I'm not.
+
+And you just figure out what we know. We need to come up with a name. As I'm making the folder, I just took a couple architectures.
+
+Let's go. Okay, look, Twitter, that's like we that.
+
+But, like, you know. Yeah, I think it's, uh.
+
+Yeah, that's actually like almost an integrated concept just because like the so we should call it could screen more often.
+
+Yeah. It's probably not.info about. Raccoons I not know that.
+
+All right. Something you should probably more.
+
+Yeah. Right. Yeah. There's more that we just as a more amount.
+
+Right. I'm just so behind it from the description of.
+
+Very. Okay. Yeah. This gives you a lot more coming all the way over the description just said you get one project for the whole thing.
+
+What you like, like costumes or whatever.
+
+Oh, well, that's kind of cool. Uh, so really good about evaluation, are you?
+
+So we basically like we did similar to solve my problem like users get graphs depending on my conversation.
+
+I figure in the congregation they did say, you know, like the metrics of action and even under the interpretable like,
+
+oh, I agree with all those as well, or the company or something, but definitely more.
+
+Yeah, yeah, yeah, it's one of my things.
+
+Like that's the main thing. I can know them as concepts like coding is where I have written a problem and according to your problem,
+
+you know, honestly and you write it in there, there.
+
+Because yeah, you charge, you know, did you know that they are friendly company and then you write them and then they're like,
+
+no, you just like totally like put it from scratch. So I also don't think that would be the case if you use that much.
+
+I actually, you know, they might they probably wouldn't. You want to use less.
+
+So as you know hold it. Right. Oh. Yeah.
+
+Very exciting though. I the inhalers.
+
+Thank you. Professor. Hey, not sure if you saw my, uh, email said sorry.
+
+Like, we, uh, we we happen to have, like, all three of us.
+
+So we're not able to do that. Oh, yeah.
+
+Yeah, yeah, we, uh, if you have time, you know, we are actually redeploying our website since it's been a while.
+
+We are, but it seems like, um, I don't know, some confusion about, um.
+
+And basically, that's why I probably, you know, that's based off of everything, right?
+
+Yeah. So, so the. Only difference is at least the data, this is part of the availability of all the other data sources.
+
+No, there's a net file. So there's no way out that's.
+
+Did you remember. Yeah I think so.
+
+Something like it or it's a different I realized like you know how to and I got me excited about giving up.
+
+So if you have I'm gonna hit the audio. So we don't have this big stuff that happened for the past week.
+
+We have a. I see what a debugging leader I want to pick up.
+
+What do you think? Let me see what I see. What about, um.
+
+Um, um, who actually submitted, like, five things to try to be different links, like, uh, one link one time.
+
+So you probably five times like that. Oh my goodness, I saw that.
+
+And I was like, uh, probably I made a mistake, um, of, you know,
+
+somebody else that didn't like it and then it like, you know, give me the number of Twitter stuff,
+
+but instead I could change it to like it, think about it like, oh, my gosh, I could be, like,
+
+building on one of those, um, and then just see what it's like, and then we can figure out, like what to do.
+
+We have a knowledge module because we forgot one of these.
+
+It cannot be any work you've done in the past ever ever any code to do it.
+
+The first one, the final project, I was like, oh yeah, one.
+
+I would like to hear you do that. So we would have to leave the level of data.
+
+Yeah. So I think, like we should, we should target like.
+
+But you may not be somebody whom I think that we're already working on.
+
+So we can do that. I think is that because I think what we can do is we can look for the tweets with what topic you can.
+
+So like when we scrape stuff like that. Yeah, that would make sense because we are so grateful for that.
+
+Yeah. So the topic is the label. Yeah.
+
+Because apparently like so what do you think of that topic we're scraping.
+
+Well it's for now at least like that tells you which is actually like it's hard to look at.
+
+Yeah. There's not really nothing like a little bit even on that.
+
+Yeah. Like a lot of things, but. I don't know, like, okay, we meet.
+
+No, we can just talk. Yeah. I'm trying to remember this type of testing.
+
+I know I was trying to go here.
+
+I don't know. I mean, we were them.
+
+So. Busy person scripts, is that right?
+
+We say some the other 530 in the morning.
+
+Something? Yeah. You build a module or something?
+
+Well, honey, I just thought that you mentioned random. Yes.
+
+No, no, we have the restrictions. But no matter if I just ask for, like, the set them for later when you work last.
+
+I was in the week because I needed to work on, like you guys do whatever you need.
+
+Yeah, that's going to work, because we do. Okay, I don't know that.
+
+I think because we know you're pretty out in any of my own work.
+
+I don't. And what do you use as the quiz next week? So how do you follow going to models.
+
+Do you find the models folder.
+
+So Alex. Yeah I think so. There's two passes that it does.
+
+One is it's right under. If you go back to what is like the Broad Street.
+
+And the second one is a different topic, right. Cuz I didn't analyze like the importance of analyzing like it analyzes the.
+
+I don't think those. Oh, this is actually really interesting.
+
+Let me do an even deeper dive specifically on this topic. So it's kind of like let's say I wanted to show you have it.
+
+This is can you try how your data are different. So how.
+
+So we'll learn a lot from this. Actually it's not that expensive okay.
+
+Like it's actually so can you show us because you're not use. Because the thing is you're not using advanced model.
+
+Like you can use like for a minute or haikus 4.5.
+
+Yeah. Because it's just making one judgment. And so um, but then what we do is we basically like, let's say, you know, what we have here, right?
+
+Oh, I know, but you're used to it person like let's say.
+
+Yeah, um, it can and it can actually do a deeper drive, drive, dive and see trunk and see like Netflix version and you know,
+
+like you can see like all the people can do an even deeper dive into Trump in the five tweets.
+
+Right. Rather than just a big group of every empty house.
+
+Are you. Because this is actually a different place? Oh no no.
+
+Oh wait. Oh no, I mean, no, not at all.
+
+Just you. Yeah. Um.
+
+For how we can divide up the text. Should we do it by writing?
+
+If you feel a researcher reading it. But if you finish the.
+
+Original claim, we do it by user. Do you then text in some content?
+
+So can you say like the text matters more than the user?
+
+But yeah, actually matters a lot more than just the users saying it.
+
+Okay. Yeah. Because Twitter is not like a forum where it's like there's three popular people
+
+and like it's kind of like a back and forth conversation unless you like. That's not how Twitter works, unless you own Twitter.
+
+That's true.
+
+Top of every page before I go on.
+
+We think like we should.
+
+And you're saying there's a there is a correlation, but it's not like the reason I was not able to open or it's not like that.
+
+So that's probably what they need right. We are you guys doing it because then we want to like I don't want to do the same thing.
+
+Well I don't want to do it if you're doing. Yeah.
+
+So here I'm it. Well yeah.
+
+But I just want to make sure that yeah we're not doing the same thing.
+
+Oh okay. We're doing Twitter. Oh yeah. We're not doing if you share on SharePoint.
+
+Uh, I'll get to because we, because we have a better Twitter.
+
+We had I don't want for them to get access to it. Yeah yeah yeah yeah.
+
+That's why I mean so in the future I probably recommend like doing like Google's um,
+
+so like or maybe really even if you just take your dog and just put it up in the Google Drive fusion project in here to do that.
+
+The sharing. Yeah. Yeah yeah yeah. We could collab just actually hey, that's just how modern capitalism works.
+
+It's gonna big mergers and collaboration. What, you mean working together?
+
+No, I mean like, are you talking about capitalism?
+
+Well, I mean,
+
+in some consolidation because it would be a disadvantage because like everyone else is working individual groups and have one giant or say,
+
+sorry, what you do, you're being pedantic. This is actually not going to be super correct.
+
+So I it's just like, I think this should be the crash.
+
+Oh yeah. This is like another one.
+
+Yeah, I think that will work.
+
+You know that one I think I like that I like can grow.
+
+Up and I can would. Yeah. Yeah.
+
+So maybe we can do better. Otherwise we can build a website by doing this.
+
+Okay. That was quite good I think. Yeah. Yeah.
+
+No I mean not to mention it. Yeah. I mean I feel like it'd be really hard.
+
+Yeah. I see a day.
+
+Yeah. I think it's probably just way too much, which is kind of like the cheat code or like I want to try and do as much NLP as.
+
+Yeah, yeah, some prediction. But if we cluster, misinformation might be useful to see the problems and mean we need a fact checker.
+
+And, uh, there's a, um. Well, Hycu doesn't know the facts.
+
+That's that's where you have to, like, build a pipeline. I'm looking at your writing structure here and validated, which actually in your.
+
+Oh, yes. Rather than I have generally actually, it's just probably.
+
+Yeah. That's, you know, for short stories.
+
+But even if I'm stripping it out here, you can just put your train script.
+
+And so I would recommend doing that. Let's, let's focus our exercise controls with regards to what is it like between me or something.
+
+And and can you give me access to that. Yeah. Just give me I can we can I think Hemingway said.
+
+Yeah. Well these are on make sure to add it with my I don't know if you can like I got to do that.
+
+We're more focused. We're not just unprofessional. That was. Yeah I think you have a better project.
+
+Not going to agree. So what if we like. So we actually have an yet.
+
+Yeah. What if what if there was a the large form before because we said that it was a lot of text.
+
+So I just you just cross-reference that text okay.
+
+Yeah. It says and it was able to verify the actual API of the model that you built in.
+
+And then because you said that, you know, it should be like startup kind of thing, and then the people in front of analysts.
+
+Yeah. So that we thought that, you know, if if is not working, there would be a fallback option, the fallback option.
+
+But yeah, it's uh, it's more of that. It doesn't need to run inference when I review the code.
+
+Yeah. So the API is that, I mean the code you have the fallback option actually.
+
+So we haven't does the code, you can go there and actually say good.
+
+So we uh actually actually doing a frequency matching the code.
+
+Actually not not great for NLP.
+
+So I'm actually telling quite to get rid of the new stream for now because.
+
+Yeah. So we have to keep it super simple.
+
+You want. Yeah. I want. What do you think?
+
+Some of this. Yeah. Conversation of, like, cash. Yeah. That's great.
+
+Eric handling. Uh, this also we have a that's, uh.
+
+We don't we don't. Okay. Well, I think now you can try from your at least the, the relationships, the trajectories,
+
+like the pat conversations take in a very simple point, but not not necessarily.
+
+Yeah. It should be racing like like take a look at the Twitter like replies as well.
+
+And yeah, once I get access over time okay. It's I would think of embedding space like oh it's nice.
+
+Yeah. Yeah. So, so yeah, this is the same thing that we have put into the market graph and we'll say like embed like the first conversations,
+
+you see like uh, it's on GitHub. I think it's also it's kind of like watch it, see if the conversation like like how it lives over time on this graph.
+
+Yes. That could actually be interesting to see if it devolves from like factual to conspiracy.
+
+Right. Like if that's what's on the graph. Right.
+
+Or I'm misunderstanding or licensing I think that's yeah that's right I can we see like I've interaction.
+
+It takes like does it. Yeah I would misinformation or it.
+
+Yeah I actually think something like that could work because but like like I would have to do a lot from scratch.
+
+But that's like the point right? Yeah. Like we don't need necessarily to like put a label on it yet.
+
+You can do that later for final project or we don't have to do it at all.
+
+We can already love it because because we don't want to do any part.
+
+Because we can't use LP to add labels for it. And then for the next two months, you have to like, uh, tell someone, uh, my story.
+
+I think it probably is. You always say, let's do that.
+
+Yeah, yeah, I got that. They actually. And I'll just try.
+
+And, uh. Yeah. That is so weird. That's why we were not able to show the pictures.
+
+Because. During the class, and, uh, I should have stored them.
+
+Anyway. Yeah yeah yeah yeah.
+
+Can you. Tell me about this place there?
+
+This one is a backup, like a secondary. Had to be nice, actually.
+
+Then we don't do tables. Here.
+
+Sometimes you learn more from you say.
+
+Yeah, let's just take, like, a bakery. You're like, your thing works every time I have him.
+
+So he can already organize like this, right? So hard I can't keep going down it and.
+
+It's like. It's like a picture of your actual posture.
+
+Oh, really? I was like, I can't believe in.
+
+Yeah, yeah, honestly. Yeah, bro. Everyone I know, I just read this article actually interesting about how I was trying to write this.
+
+Woman just feeling like I was like, oh, it was stuff that would benefit them directly.
+
+But we're like, exactly as a whole. And then men in their hands because they just just like, you know, this is working so crazy.
+
+No, no, I think that's just like I was like, I just try to help ourselves.
+
+We should have looked at someone like this, and we're just like, if I try to do stuff, that's one of those things up.
+
+For that, we get selves out and then we need to focus on.
+
+I was just checking to see me see so many good times after projects like come check it out.
+
+That's just how we that we forget about the manifold. That's about it.
+
+But, um, in a sense, or like a like like these in a conversation real world, like start up, we're talking about work, right?
+
+Like I say, Trump's the conversation isn't like and I shouldn't say please adjust like over time how the conversation evolves.
+
+I will um, yeah. Yeah. I mean, we could just go to class 2016 next week, like, oh thank you, thank you segment at a time.
+
+Did you know all that out on the post. Thank you so much.
+
+So it's kind of like so it's kind of like building an actual timeline but labeling.
+
+Yeah. We just want to make sure that our work, you know, that they can be seen by you.
+
+Yeah. That actually can be really good. But I feel like we're kind of like going back now because we have like the first we were like, yeah,
+
+you can actually see visual tweets when we are here is not just for free, but, you know, we totally could do like a broad topic.
+
+Doing the exact same thing in the bike timeline starts here. And update do I president approval.
+
+Low approval. High approval. Biden no no relevance.
+
+And that even starts over like Trump. President low approval.
+
+High approval low low I mean um yeah.
+
+Thank you doctor Red. Yeah. Things for things are because as we could visualize it.
+
+Yeah. And we could oh we can quantify it in embedding space the direction it takes I don't know.
+
+Yeah. Like a conversation takes like the change in direction over.
+
+You know what I'm saying. Like over time. Yeah. So next week, are we still in the same um, you mostly just stick it out because.
+
+And that also shows our front end back end problem. We have something to visualize.
+
+Like we can visualize like that timeline. And so then it's not just like a Twitter scraper, like GPA.
+
+It's like it's like an actual time. Do we need a trend? Something.
+
+We actually I don't think so. I don't think would be true.
+
+Yeah. Oh, we need two baselines. We do need a discord message cuz I put my laptop away, so I do need to, um.
+
+We do. I forgot about that. We need a night. You were.
+
+I would also like honestly the lay of approach.
+
+Approach. Just saying. Like, you know, just manually selecting some five minutes to come and yeah like awesome.
+
+You missed. We just manually labeled approaches like Trump equals bad.
+
+Oh but it equals you know like just take it's super, super biased to call you know it's the president contribution I don't know if I can do.
+
+But like we don't need you know I'm not saying about labels I'm talking about the actual timeline.
+
+Like we talked about like what I'm saying is I like that.
+
+That's not what what I'm saying, which is that you get after you're actually right.
+
+What? Oh, yeah. Because we needed like a naive question on that approach.
+
+So that's actually a really good point. What do we what do we train.
+
+Because if we're just running like existing like like like if yeah, if we're just running existing language models like oh my.
+
+Sorry. I just wonder what I'm thinking is maybe we quickly.
+
+Yeah. I mean I would do train a neural that understands and.
+
+Struck twice and after training and just like complained to them like they're not there.
+
+This is not what all this means.
+
+Yeah, we think so. So I felt like, I guess if you want to play what I did.
+
+So I'm not proceeding and had it out because I wouldn't be here.
+
+I think you just had a pro to make it happen. Oh, yeah.
+
+So so so. Oh, wait. Absolutely right. So you're only.
+
+Yeah. Yeah. You can. So it might just be you.
+
+Yeah. Oh yes it is. What if, what if it was outside.
+
+But then you can paste a new tweet so that you can add it all the time.
+
+Yeah. Right. We haven't decided I think what we're gonna do, we should probably go live any security that we do that.
+
+But yeah, I'm trying to answer everything. Like we need to start with fresh and open.
+
+Do you know anything else about that?
+
+I can tell you we'll just run inference on what you can do, right?
+
+Sure. Oh, oh, then you can park like, this whole, like, old school together.
+
+Just like we couldn't, like, cluster GP is, like, actually quite different.
+
+Oh, so we should, we should. You know, she says she doesn't like what happened.
+
+I, I have nothing just because then we have to come back.
+
+Like the problem is then it's like I feel like, you know, basically let him after his apartment.
+
+Yeah. Yeah. You know, honestly, like, honestly, I can probably do,
+
+like you're talking about people actually needed cheap stuff as long as for the amount that we do, we probably won't.
+
+Yeah, I think if that makes sense. But does somebody say maybe next time on this thing.
+
+Yeah. She says not, you know, not cheat. You know that on the way ticket.
+
+You know we have before we even have a ticket.
+
+It is kind of but you know, when you're doing something, you just and you're going to charge your terminal manually.
+
+Yeah. I don't know, using you a lot of people are saying that. Yeah I think that's what she does.
+
+The only thing I really ask is like, it's the same as just so she makes it every time she said she said meet strangers.
+
+But hopefully everybody did it because that makes the entire GitHub looks like cloud.
+
+But also there is no. Yeah. Like, oh, you're really I mean you can use.
+
+The thing is though, they fix it responsible for not ever did it.
+
+I suppose this is not working because I just happened to I was going to pay for the ticket.
+
+I actually don't, I just think, oh [INAUDIBLE], I guess that's me.
+
+Maybe I just want to make it better, but it's, you know, we're doing that out through us.
+
+I'm just like, I'm okay. Oh, wait, that's a hackathon.
+
+Oh, a simple misinformation. Oh, we've already done the hackathon.
+
+And like everything like. Okay. So like we're going to copyright everybody.
+
+We're going to steal. And you don't know it's probably an exact. Well, there we go.
+
+I mean, if you look hard enough, you can just find the repo that has my Twitter scraper.
+
+And, like, I'm just thinking, where else can we get so much data?
+
+We don't know what to do with so much. They're really, really publicly available.
+
+Yeah, I know, that's why I like. But honestly though, good luck because I have special connections.
+
+Yeah, I got my social connections where I get like a hundred Twitter accounts.
+
+I have special proxies to worry about. Are you going to get your 100 Twitter accounts when you get to your tables of data?
+
+I mean, but I will. I know people on the web. Let me just say that I'm actually one of those people that I send out.
+
+Hey, Sam, but stay focused. I'm just messing with you.
+
+It's actually super easy. You can actually do a lot with just even, like, one time signatures and if you register it right away.
+
+But if you register your Twitter accounts on Duke's network, it doesn't really like you because it's just going to ask you that.
+
+Yeah, I was just going to ask this because I worked for last year and I heard I hated it, bro.
+
+I think the reason I might after become X as well, the API shouldn't pay for anything or anything.
+
+Well that's true, that's why. Why don't you see what he does? He's actually web scraping.
+
+Yeah, it's actual stream. So then. Actually, no, it is the API.
+
+Yeah, it's it's, but it's. But it's not because he's here.
+
+If you're worried about the wave numbers, I'm assuming you work with the API or if you're just scraping, you don't have any members to worry about.
+
+Actually you do. Right? Actually, yeah. Because if you do go too fast, even with normal browsing, you can't run ins rate limits.
+
+No, no, that's just because it thinks you're not human. So you just put like a weight in in the middle.
+
+Oh, that's that's what I had to do. That's. Yeah. Yeah. I think it's the description of the scraping library that I'm using.
+
+It's so it's so bad by default because it just spams all the requests at once.
+
+Right. Yeah. It's like I have to find a way to actually work that crap that limits myself.
+
+Yeah, that would make sense. I wouldn't call that algorithm, though. It's just because it doesn't think you're human.
+
+It'll stop you from accessing your data. Yeah. Uh, the same thing on, like, scholarly and everything.
+
+The research papers. It is pretty intense that, I mean, you know, like.
+
+You can call him going, but nothing but the demo that you can, like call your friends or family to come watch too.
+
+Uh, yeah. Just go. I don't want to do that. Oh my God.
+
+You can be embarrassed. My sister, who was there before.
+
+Honestly? No one. No one. Right? Yeah. I'm sorry.
+
+Miss. I'm sorry. Have you been on Twitter this morning?
+
+I've been looking to go to. Yeah, yeah.
+
+They're saying, uh, so Instagram to entropic claims a lot of crap.
+
+But I also don't want to stock up a tactic or distillate.
+
+You want to bring me back to starting? They. You come back to our.
+
+I'm gonna have to bring you back. Let me see. With no car in here, I'm going to be there.
+
+Uh, they just made a bunch of money. Oh, I want to sound like this.
+
+I don't, I don't. So what are you going to do? Go home. Go home to the bed.
+
+Eat something in return. That's a good idea.
+
+Come with. Me, then. Is this ever happened to you?
+
+Yeah. You kissed me, I swear I wasn't there. Know I don't want you to think of.
+
+Oh, well, I have a keyboard attachment. If you were hungry.
+
+Yeah, well. Maybe making a resolution to not say sorry.
+
+Yes. You do. Once we're about two months behind you.
+
+That's a that's the song I was going to say that you should have said. Yeah, I'm sorry I do that.
+
+I was thinking about. I was thinking of that to her. Yeah, she could have.
+
+She would have. I probably would have if I wasn't, like, [INAUDIBLE] I.
+
+Yeah. Yeah. They have some jumper cables in there. So I'm gonna go in and work on this.
+
+Replace it with a bun. Mhm.
+
+I don't think this is you know. I don't know what I'm thinking.
+
+Is everything about the backwards. Mhm.
+
+Like the words you can say in Australia. Oh right.
+
+Right. Yeah. You need to be all over it.
+
+Well if you say rise up but it sounds like razor blades.
+
+You know Australians the more you know.
+
+Uh okay. Very good. Yeah. Come on.
+
+We don't have all day. I'm going to leave you. Leave it. Uh, I think we see you.
+
+Never. If we have to go back now.
+
+Oh, what did you say? What do you mean, Mary? I think we have.
+
+I think we have the Kansas Arnold, bruh. Backing up to go on.
+
+He's packing up to, like, go on a weeklong retreat in Raspberry Pi.
+
+The whole mission is in two days. Uh. Just started.
+
+Yeah. Oh, my God, there's a lot of things in that.
+
+Yeah. Hurry! I have to pee, and I'm going to go home. Okay.
+
+I'll make you think about it. That's true, you know. Yeah, but this is the other one.
+
+Is that you want to be back, believe me, right? Wait a minute.
+
+I have some other. Calls about some things you should know.
+
+Wow. I get to pick you up, and she's going to leave two minutes early.
+
+Wow. Wow. You too. Minister? Yes. Oh, hey.
+
+Purple Violet. I want you to walk to your apartment. Was I supposed to give you my test, too?
+
+Or just the corrections? Um, the testing would be helpful. Oh, okay.
+
+So she know what questions you got wrong? Yeah. I didn't quite remember every question that definitely got wrong.
+
+I'm not quite that level. My name's on the list.
+
+Oh. Yeah.
+
+All right. Uh, that's your office, right?
+
+Okay. I will see you later. So, uh, that's our having our address.
+
+Yeah. I'm going to take it out. What's the game? I think it's at 333.
+
+Or is it at three? That's at 330. Okay. I'm taking it out over you.
+
+Okay. Cool. Isn't it? Okay. See you on the zoom.
+
+You know I can't wait. This is so exciting. I know right?
+
+So after this, we have to add, like, a little more before. So now it's only the basic one.
+
+Next, we need to add computer vision or elements or something like that.
+
+And we can do some things for the. Okay.
+
+Uh, if you end up, uh, because I've been involved with this project, I think just getting to know what you're working on is also helpful for me.
+
+Oh, if I can help. Yeah, let me know. Yes, I was telling him that it's going to be beneficial.
+
+Yeah. Uh, I have, like, this, um, this computer too, uh, I mean, this is, uh, is, uh.
+
+Ross. All right? Okay. Uh, is, uh, the JavaScript library, actually.
+
+Oh, so this is running in, like, HTML, like it's there's no back interpreter, and, uh, maybe, but should connect to the Ross Bridge.
+
+This is a simulated robot. And I can kind of move the robot around.
+
+Uh, right now, I was making some of my kind of changes in architecture, so it's not going to work.
+
+But you can see there's some, like, simulations in it. Yeah. So I'm able to control, just like the robots via this.
+
+Uh, I can either, like, send the message, just publish them.
+
+Okay. And see this, um, this person actually use, uh, correctly that they can send the publisher message.
+
+Oh, you can see how you connect. You got the connected robots, and it's ergonomic.
+
+Oh, that's pretty nice. But this control is only like simulation, but it control also the breath of the robot.
+
+Okay. So that's all of the of this interface.
+
+Uh, it's kind of exploring the basic components that, uh, that simulated robot is explored, giving you that.
+
+Um, yeah. It's like, uh, Rover. Let's see.
+
+Yeah. There's a prototype. So we're not we're going to be very creative.
+
+But we were originally supposed to be like, oh, like we they were like, yeah, just JavaScript functions or some, um, elements.
+
+Okay. Um, and just like anything else, you want to turn out, right?
+
+But I can I can show you like how how that is compared to MCP, for example.
+
+And how obviously there are some for this use as well that you can control robots in the code.
+
+Web browser. Yeah. How do you. Yeah, that's that's a lot of, uh, it's a lot of like I just put back together a lot of, uh, credible and fun.
+
+Yeah. I want to see. I want to see it. I definitely want to see, like, you know, a button on top of a question for doing this idea.
+
+So what we did before, right? Yeah. Yeah, yeah.
+
+Can I, can I, can I make an extension, an extension request.
+
+Yeah. So I know that I yeah.
+
+$5 worth of me. Yeah. Yeah. That looks good.
+
+Uh, so when you build one that's that tracks.
+
+How do we use that changes in canvas.
+
+Like for example, let's say that I thought they started like let's say that like you have canvas exactly as it is, right.
+
+Yeah, yeah. What, uh, what I want is a canvas tracker that can see, like, when do, like modules prototype, like.
+
+Yeah. Yeah, yeah. Like like here. Like like this. Like. Yeah.
+
+Like we have all of the all of these here. But over time, what I want to see is like an extension that can look at this and tell you like,
+
+hey, there was a new one added randomly, like in the middle of here by.
+
+Yeah. Like, I mean it was very, very recent right.
+
+Recently. Yeah. But then you can't, you can't sort it by any that or do any of that here.
+
+You know what I mean. Yeah. But it can be a API because I'm saying he has at the time the.
+
+Yeah. Yeah, yeah. That's, that's, that's my, that's my that's my extension request.
+
+Uh, that's that's all the extensions. I mean, they're, uh, like a different extension.
+
+Just that, that's all. I mean, this dude right here, uh, I mean, I can for you later, actually.
+
+Uh, yeah. Yeah. And yeah, we can.
+
+We're going to. Yeah.
+
+Uh, yeah. I'll talk to you later. All right.
+
+Um, so I have this disable. I've seen files. Uh, yeah.
+
+Yeah.
+
