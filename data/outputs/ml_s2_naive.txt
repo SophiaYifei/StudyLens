@@ -1,0 +1,4 @@
+Goal of predictive modeling is to create a model that makes accurate predictions on new unseen data
+We cannot estimate performance on data we do not have, so instead we split our data into two sets
+Training set  - build and train the model
+Test set – Evaluate model performance performance

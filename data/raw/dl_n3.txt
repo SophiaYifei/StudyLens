@@ -1,0 +1,91 @@
+applied CV map
+
+classification → probabilities
+
+detection → boxes
+
+segmentation → pixel labels / instance masks
+
+classification models
+
+DenseNet
+
+dense connections (concat), feature reuse
+
+pros: gradient flow, propagation
+
+cons: memory, complexity
+
+SqueezeNet
+
+squeeze 1x1 + expand (1x1,3x3)
+
+small params / efficient
+
+pretrained model workflow
+
+load, freeze, replace head
+
+optional unfreeze + fine-tune
+
+object detection framing
+
+why location matters: explainability, autonomy
+
+bbox formats (COCO: x,y,w,h) + variants
+
+anchor boxes concept
+
+NMS + IoU thresholding
+
+YOLO
+
+grid cells, multiple anchors
+
+predict offsets + class + confidence
+
+fast inference / near real-time emphasis
+
+R-CNN family
+
+R-CNN: selective search + per-region CNN features (slow)
+
+Faster R-CNN: RPN proposals + shared feature map + RoI pooling (faster)
+
+semantic segmentation
+
+U-Net encoder-decoder
+
+skip connections preserve spatial detail
+
+mention Mask R-CNN / DeepLab as neighbors
+
+evaluation
+
+classification: accuracy, precision/recall/F1, AUC, confusion matrix
+
+detection: mAP, IoU thresholds (0.5, 0.75, COCO 0.5:0.95)
+
+segmentation: mIoU, pixel accuracy, boundary metrics
+
+error analysis: qualitative failures, condition slices
+
+advanced topics
+
+Vision Transformers
+
+patches → tokens, position embeddings
+
+attention global context, compute cost
+
+Grounding DINO + SAM
+
+zero-shot detection + promptable masks
+
+diffusion models
+
+forward noise, reverse denoise
+
+text-conditioned diffusion, latent diffusion
+
+fine-tuning pointers

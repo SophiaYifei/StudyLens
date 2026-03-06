@@ -1,0 +1,103 @@
+neuron (McCulloch & Pitts, 1943)
+
+weighted sum, linear separator, manual weights
+
+perceptron (Rosenblatt, 1958)
+
+threshold / activation concept
+
+still linear decision boundary
+
+perceptron limitation
+
+XOR / non-linear separability vibe
+
+linear hyperplane only with single unit
+
+multilayer perceptron
+
+hidden layers → nonlinearity
+
+universal approximation (enough units)
+
+“why now” deep learning
+
+data + labels (ImageNet)
+
+compute growth
+
+algorithmic advances
+
+when to use NNs
+
+lots of data, unstructured, complex relationships, low explainability needs
+
+limitations
+
+expensive compute/energy
+
+non-convex optimization
+
+interpretability hard
+
+overfitting risk
+
+activation functions
+
+role: gate signal, add nonlinearity, output range control
+
+examples: sigmoid, ReLU, softmax
+
+training loop overview
+
+init weights small random
+
+forward pass → prediction
+
+loss function
+
+backprop gradients
+
+gradient descent update
+
+repeat epochs / batches
+
+loss vs cost
+
+loss: per example
+
+cost: averaged over dataset
+
+gradient descent
+
+learning rate sensitivity (too small slow / too big diverge)
+
+optimizers
+
+SGD issues
+
+momentum, Adagrad, RMSprop, Adam (+ variants)
+what loss makes sense for “blueberries count” vs classification? when would you pick SGD+one-cycle over Adam?
+
+how do you detect vanishing vs exploding gradients early?
+
+training challenges
+
+vanishing gradients (sigmoid/tanh)
+
+exploding gradients (large weights, deep nets)
+
+local minima / long cycles / overfit
+
+regularization + training tricks
+
+early stopping
+
+LR schedules (StepLR, one-cycle)
+
+L1/L2 penalties
+
+batch norm
+
+dropout
+create a 5-min exercise: tune LR (too small vs too large) + observe curves

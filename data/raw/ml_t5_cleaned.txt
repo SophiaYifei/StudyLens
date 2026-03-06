@@ -1,0 +1,1415 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+
+And you will link to that. Thank.
+
+You. We work.
+
+I. Oh.
+
+ that's... That's..., exactly.
+
+If you'd, I got a site.
+
+Thanks. For listening.
+
+And. If.
+
+You. This is very slow projector screen today.., we've got a lot to cover today.
+
+We're going to switch over our discussion and start talking about classification models.
+
+And we're going to try to knock off,, three different algorithms today., in class we look to see if we succeed in doing it., we'll also spend a little bit of time taking any questions that you might have about Project one we introduced last week., and we will talk about,, how our little,, in class exercise went,, as you wrapped it up over the week and compare notes on that.
+
+ first thing we're going to do, though is our knowledge check., I just sent it out,, on email., I will, I think it's too long to type in, I just sent out an email.
+
+You should,, have the link there., from the canvas announcement.
+
+That's three questions again. A few folks were saying earlier it didn't feel we covered that much in class last week.., we didn't, but you might be surprised as you go through the knowledge check.
+
+There is quite a quite a lot of,, a lot of meat there to think through.,, again, these are,, ungraded.
+
+I just want to see that you're, you're passing these, which tells me that you're actually paying attention and understanding things., not something you need to stress over., few people mentioned they've been studying for. I, I actually prefer you don't study because I don't want this.
+
+I want you some measure of whether you're actually learning the things or not.
+
+Not your ability to just quickly memorize everything from the slides before you walk in the classroom.
+
+ my preference would be that you don't study, but,, of course I can't stop you from doing that if you want.,,, go ahead and give that a shot. Three questions.
+
+ if we have a I'll check the room in about 15 minutes or and see if we're we're done and ready to go.
+
+All. I., by the way, I didn't. If you didn't realize.,, I forgot to mention, I didn't have a I didn't have a chance to make any changes to,, class questions last week.,,, if you still have your results up, if you do want to save,,, copy about,,, otherwise,
+
+I'll try to get an export functionality put in for next week you can,, you can dump them all out.
+
+It was good for the last one in the tunnel. And unlike the actual, I don't know how crucial it is that we use that particular.
+
+Scikit learn.. Statsmodels is all decomp.
+
+I didn't say that. I did not the answer. What was the,..,, it's not I described it, but it's you didn't mention actual.. It's just we're in tunnel vision..,.
+
+ in the feedback, it,, it mentioned that.,.
+
+There's one option for how to decompose it...., the,..
+
+One is got describing what it is. The second part was what is the,, potential of relying on an automated decomposition method.
+
+ who is it going answer to that. You may want to share your answer with one or not.
+
+If some trend is occurring every two weeks in my tunnel vision and find one that's different every one week or vice versa.
+
+And it doesn't actually understand the fluctuations in the data.
+
+ we can find seasons that are baseline. Yes.. The big the biggest, potential risk of the automated methods is that they are guaranteed to, to show you a seasonality.. they're going to show you a nice., sine wave curve., that seems to indicate seasonality., the big question you have to assess using your own critical thinking is,. And the way to do that, again, is to look at the relative magnitude of the peaks and valleys in that,, seasonality versus the,, the magnitude of the residuals or the errors.. Remember, it shows you the trend,, up or down, it shows you a seasonality and then it'll show you errors.. If you see that the magnitude of,, the, of your,,
+
+seasonality curve is high relative to the magnitude of the errors or the residuals in the lower curve or in the lower chart., that's a good sign. It's a it's a real seasonality.
+
+If,, the magnitude is low,, relative to the,, to the residuals or errors, that's a good sign.
+
+It's just a noise, just some random noise that the model is picking up and showing and showing.
+
+ you have to you have to use your own critical thinking to assess how real,, that is.
+
+All., let's start with project one., hopefully everybody's had a chance to get together with their teams and kick out kick off that process., if you haven't, you probably want to want to do that soon.
+
+It's a it's a very significant project. And that's not something you want to save to the last minute.
+
+Part one is you need to find the data and build a model.
+
+And then part two is you need to evaluate your model on the,,, the actual data from that date range that we talked about., I had a couple questions that were good questions between last week and this week that I thought I'd share the answers to,
+
+First of all, there was a question of am I going to,,
+
+run your model for other dates outside of that date range that,, provided the answer to that is no, I'm not.,, they count on you to evaluate,, for yourself the quality of your model.
+
+Only on the test set of that,, that date range., in case I of you shouldn't really make a difference one way or the other, I don't think for your model,
+
+but just know that I'm not going to be doing any other type of,, assessment on it.
+
+There's lots of sources of data., the reason I picked the location of,, Raleigh-Durham airport or the U., for, for or this exercise is that there's a, a government owned weather station at the airport.
+
+And every no matter what weather service you check,, or where you get the data,,
+
+to use for your evaluation, it should always give you the exact same values,, meaning that every service,
+
+no matter where it's from and whether it's government or private,
+
+should be giving you the actual values recorded at that weather station,, at the airport,, because they all work off of that.,, it shouldn't really make a difference where you choose to get the data for your evaluation., same thing with historical data, generally speaking., if you're using,, actual historical values, they should all be consistent no matter where you happen to get them from.
+
+Of course, if you're using, historical forecast and then it's going to vary depending on where what source you're, you're getting those from.., and generally speaking as a little that's.
+
+True.. the way weather forecasting typically works is there's a network of thousands here in the U.S. anyway., and globally, there's thousands of weather stations., many of the, most of those are owned by governments.. And typically they tend to be in airports. They can also be at other locations,, hospitals, schools, sometimes,, state parks, etc., and they're managed by the government. And that data is provided free to anybody that wants it.
+
+And, that's the data then gets used in, forecasting models.
+
+ for any of the government forecasting models or the private forecasting models, they'll use that data.
+
+Sometimes they may supplement it with their own data.
+
+ a company might have their own network of weather stations as that they may choose to add into their forecasts., if you get forecasts if we were to get a forecast here for Duke University, I don't we may have a weather station here.
+
+I'm not sure, but let's assume we don't.,, in that case, the forecast is going to be interpolating between the locations of the nearest weather stations.. it's going to be using actual data from the, ah, the airport and, and whatever other stations are around here,,
+
+and generate predictions for those locations and then doing some interpolation between those locations to get the forecast for the specific,, area. the closer you are to the location of an actual weather station, the better quality your forecast is going to be., and for an area this where we probably have several weather official weather stations nearby,,
+
+the weather is probably not going to be that much different between our new airport and Duke campus.. But you can imagine if you're out in the middle of the country where it's just,,
+
+miles and miles of cornfields and the nearest airport is maybe 30 miles away,
+
+then it might be a very big difference between the weather and your specific location and the weather at the airport.
+
+ that's a little bit of context on again, for this exercise, as I told you,
+
+you can use whatever data you want you can use historical actual data.
+
+You can use for historical forecast that if you want to go get forecasts from different providers,
+
+government providers or private providers,, you can build time series models.
+
+You can build,., sequence models.
+
+You can,, you have ensemble models., lots of different ways you can.
+
+You can go with this., one of your models has to be a linear regression., and then the other one can be whatever you want it to be. All.
+
+Any questions have come up on project one far. All.
+
+ let's switch over and,, talk a little bit about the bike share exercise.
+
+Raise your hand about half of the class or..
+
+For those that got below it., see if see if you still remember,, raise your hand if you are below that number.
+
+Oh, I think I can't find my own solution for this anymore.., I have to keep digging to see where I can find it.
+
+I think that I have seen something in the 9000 range., I don't think it was mine. Actually, I think it was from a student.,. And I'll dig out, see if I can find that.
+
+Just out of curiosity, what they and what they end up doing to get there.
+
+But I think the 10,000, 10,000 high 10,000 is about the reasonably best they're probably going to do on this.,. For, for you guys that got in that range., I actually it began for both of you to share, maybe, and see if you end up with the same or different approaches here to get there.
+
+Too many, too many features., go ahead and walk.
+
+Walk us through what you did., honestly, it'd be easier if I could,, share my screen and share your screen because there's a lot of code that I use to do it.. I don't know how long you want me to spend on this, though, because I spent, let's say, no more than five minutes.
+
+I say more clearly, long time. let's just go through the highlights here.
+
+All. I'll go to the highlights.. Good for you. For things that make a really long time of the year for performance.
+
+And I'm sure that,, sure, it's probably completely wrong.
+
+Let's switch the output..
+
+Make visible screen and actually. See you... the first thing I did was that I actually merged the time stamps together.
+
+Irrelevant. I converted the date times to,, a time stamp, just to make it a lot easier to read the data., I took the date, time and the day and just made it an actual, UTC timestamp.
+
+Just. Just to make it easier to merge data. I just dropped NAS because I didn't have the time to impute it.
+
+And this is a lot of the feature selection that I did., the first thing I did was just immediately split everything out our day, month, day of the week.
+
+And I plotted out the,, the auto autocorrelation with,, a lag of 24 hours,
+
+ how correlated it is over a days period of time.
+
+And then I also have the,, trend and the seasonality and the residuals plotted out here.
+
+Honestly, I couldn't figure out how these graphs work, I didn't really use this that much., actually I did,, and I was, I want to go to that,, in the feature engineering, but I actually did,, use this to make features.., and actually, I cut it out in terms of that.
+
+I took these hours here this zero through eight and,, 18 through 23.
+
+And I actually had to say, all, if it's between hour zero and 8 or 18 through 23, it's a good correlation and use it.
+
+And if it's not then just throw it away.
+
+ I actually had that I actually made it that it would ignore the ones that are down here which did lose a couple hundred points., and, that's just splitting the data. And for feature engineering, oh my God, I don't even get me started on this., the numeric as, I use a lot of features., I did a lot of lags. I did a 24, 48, 72, 168.
+
+These were all just guesses., these were the best numbers that worked,, having,, a correlation of 24, 48, 72, 168., those just work the best. It was a complete guess of these numbers., and,, for the categorical ones.
+
+Actually quite categorical that our day of week, the weather's situation, and I actually had to go in for the actual season and weekend., and I also had a,, rolling seven, which would basically take the average of the last seven days and the,
+
+ every hour of the average for seven days and put that in.
+
+ that's a rolling number of,,, of the week.
+
+That's one of the things that really helps. And then, this is the best of lag hours.
+
+ it's between zero. And I was actually six zero and six and 19 through 23.
+
+This is where it'll say it's a good correlation.
+
+And that's what I did. That's what I did. And otherwise it'll just set it to.
+
+Otherwise it'll just set it to no., and then because it shifts the data,, I had to drop more rows because,
+
+the way that it works in pandas is, it shifts shifted a day down.,, if you have January 1st and then January 2nd, it'll move the data from January 1st to January 2nd.
+
+And because of that there's Nans. you have to drop them. that's what I did.
+
+You have to drop the missing ones and,.
+
+And then I did create a lot of interaction features,, getting the weekly,, autocorrelation and doing an interaction with that of the actual temperature.
+
+And the weather situation I was trying to do is a Friday and Saturday night one,
+
+and also the weather for Friday and Saturday, and also in the here's the one for the,, seasons.
+
+It's basically just saying if the month is in 12, 1 or 2, it's winter and on for all of them and for the weekend., if it's just in 5 or 6, it's, it's the weekend. And then, I had a lot of features here.
+
+And, honestly in terms of the powers honestly I use did manual gradient descent.
+
+I know it sounds silly, but honestly I just powered them until I got the best MSE., I have no idea if I'm allowed to do that, but it lowered it and,
+
+then I have the full weekend temperature and then this is creating the dummies for the,, the weekend, which,, encodes the, the weather situation for each scenario.
+
+ that it's not trying to say,, one is,, you do a categorical feature.
+
+It's a weather detection of one is greater than four because it's because it's not it's three different,.
+
+For not liking Mary Goldman's., and,. Then I use the column transformer.
+
+That's pretty basic. Just one hot encoding. Scale it down.
+
+I think you have to stop there. Oh,, that's, I did., I was in the library for three hours, actually.
+
+And,.., I didn't read. Look, I have bad anger issues.
+
+I need to go to caps, but, seriously,, I genuinely have really bad anger issues.
+
+actually break the desk or something when I figured out that the reason why my model was bad was because I forgot remainder equals rough.
+
+I don't know how I didn't just completely. Break my computer at that moment because doing that brought up my MSI significantly., don't forget to put remainder equals drop I guess., and then oh this was just testing them out.
+
+This was me testing Lasso and, Ridge, I tried them. They actually made it worse.
+
+I assume it's because all the features that I chose were very,, useful.
+
+ and.
+
+The thing is, I didn't use polynomial or polynomial,, regression here where it would create that the x1, x2 and x3.
+
+I actually just did the powers myself. there was no redundant things to,, to, minimize or get rid of.
+
+ honestly,, the ridge and lasso didn't help, I just ended up using plain old linear regression, of course.. And, then I got my MSC, the R squared, and then I plotted it out.
+
+Oh and then I also tried to get the worst days of the Ma in the MSC to try and plot out., how many riders was it off by per day. And to figure out what the worst days were.
+
+And then, I plotted out. this is my final MSC 10,288 with an R squared of 78.78.
+
+And these were the worst days that I actually did get rid of a lot of the September ones., there were a lot in September. It seemed to shift October,, and November.
+
+But. And you can see that it just, this is what it does fit it, but not towards the end here.
+
+And I was really trying to boost that part up. A lot of it was brute force.
+
+But that's that's what I did. And I'm sure that I probably did a lot wrong.
+
+But hey, it's 10,200. There's no or wrong.
+
+It works. Let's get started on. All.
+
+That's great. And clearly a lot of thought went into that. yes, I did.
+
+Yes. Fantastic.,, you had one also.
+
+Do you, do you want to. You don't have to share if you don't want to. It's up to you.
+
+You're welcome to if you want to talk a little bit about your upbringing., I didn't do as much.
+
+Obviously., since then, demand.
+
+Demand from the previous day, from the same hour the previous day or something entirety from the entire thing.
+
+Just because we it. And when I run correlation these two features, that gave me the highest motivation.
+
+ I just kept them and dropped everything else..
+
+And you go about the same. that's a that's a perfect example., we've got Sam on this end of the spectrum, but there's,, interaction,, features and, and his,, and his,, transforms and on.
+
+And,, and then we've got this end of the spectrum with just two features.,., and we got about the same answer.,, that's a perfect example,, that there's not necessarily a or wrong in modeling.
+
+There's better or worse., but there's not a or wrong., that's great,, that you were able to do that two features I have, I do recall, I have seen students do with just two features.
+
+I never seen those two features exactly that., very that works as.
+
+I., I don't exactly, which comes not all the time, but I do remember seeing a lot where I just where I go.., if you look closely, I think,.
+
+I think I told you this. I use this as a final exam for 510., when I used to teach it. And,., I think for fun, I threw in.
+
+I just went in and change some of the weather values to just random numbers., and if you look closely at, some of the temperature values, if you plot them,
+
+you'll notice,, there are random,, times in there that they just have a temperature value.
+
+That just doesn't make any sense at all., and if you if you look closely at the data, you'll see, I don't know if it's I think I did that with several different,,,
+
+of the weather parameters, but you'll, you'll notice there's some,, some intentional anomalies put in the weather information.
+
+And if you go through,,,, exploratory data analysis of visualizing your data, you'll catch those.
+
+And then you,, have to decide what to do about them.
+
+Either you if you believe that they're real,, you might just leave them and proceed with your modeling.
+
+But,, the way that I did them, it's hard to believe that they're real., when you look at it, I'm just gonna make this up. It. This is.
+
+But the temperature, for example, is at,, at 2:00.
+
+It's maybe 70 degrees, and at 3:00, it's minus ten degrees, and at 4:00 it's 68 degrees.
+
+ now, it probably didn't drop to minus ten degrees over the course of an hour or., most likely those are anomalous values..
+
+And you will then have to decide what do you want to do with that. You just want to drop those observations.
+
+Do you want to,, replace those by inferring what they should be given the hour before,
+
+an hour after,, or some average across the day or something that.,. there's a few, a few details in there that you could, you could catch,,, that might help a little bit., those are the types of things that because it wasn't there wasn't that large scale,, what I did, it's not going to make a massive difference in your MSC,
+
+but,,, if you are doing this project for real, those are the types of things you would want to try to catch in your data and try to fix.,,, I'm going to take a look at if you want to go back over this time., I handled that by just dropping everything plus or minus two standard deviations away from the mean temperature.
+
+Just figuring out of this. Too hot or too cold, no one's going to want to buy it that the data is going to impact it regardless.. You get something crazy that., oh,.. there are different ways strategies you could take. One would be just let's just drop them.
+
+And if you only have a few of those, maybe just dropping them out is the answer., depending on what type of model you're using, if you're using a sequence model or something that relies on having every observation,
+
+maybe you can't drop them, you need to keep them., an alternative would be again, just filling them with a more realistic value.
+
+ if you see that the there's a temperature anomaly at 3 p.m.,
+
+maybe you just take the average between 2 p.m. and 4 p.m. or something and just call it that.,,, or you take the last a common way to do that with,,
+
+with sensor, the data is just take the last known accurate measurement.. if 3 p.m. is reporting minus ten degrees, we're probably just going to keep the 2 p.m. recording and just report that for 3 p.m. as.
+
+That's a simple and simple way to have a problem., depending on how much or,, or little of it you have, you might use a different.
+
+Different approach., this is,.
+
+This is not my solution. As I mentioned, I have lost my,, but,, this is one, one solution from one of the students that I found on my laptop., this is several years ago.., they went through,, they showed some of the same charts.
+
+This indicates there's a some level of daily seasonality to it.
+
+ if you look at the correlation, this is this is ours,., and if you look at the correlation, this is,, current hour.. Highly correlated to what happened 24 hours ago.., and not strongly correlated to what happened 12 hours ago.. if you see something this is a good indication, there's a level of daily seasonality,
+
+meaning that there's a certain pattern throughout the day that tends to repeat each day,, where the demand is varying quite a bit depending on the time of day., there's a bunch of charts that,, he did in here., I'll. I'll share this around if you want to look at how,, this particular student did it as again.
+
+And there's not a single answer., as we just saw, there are many ways to get to a similar level of performance.,, feature selection.
+
+Let me scroll down to the more interesting part here.
+
+ I think,, this student ended up using.. he got to 10,002 82.,, he used,, I think all of the weather,, conditions.
+
+ that's a an interesting choice and might if, if,.
+
+He had one hot encoded that might actually have a little bit better performance.. Because it's not necessarily,,
+
+if you just leave this one to 3 or 4 that a linear model is gonna try to infer a linear relationship with that to that value,
+
+but that value is not a numeric value. It's a category.. And one hot encoding, those categories make sense here., he,, I think standardized temperature and they time and humidity.
+
+It looks maybe I'm wrong, but I think that's against normalization or standardization,
+
+something that you typically is a good practice, but not something that's going to make a big difference one way or another.
+
+On performance., the two big things that this particular student did is,, one hot encoding hour of day and day of the week.
+
+meaning that it fluctuates in a known pattern throughout the course of a single day.
+
+a lot of people might be on bikes and then it dies down, and then maybe it's busy again in the afternoon, in the evening and overnight.
+
+We don't expect a lot of people on bikes in the middle of the night., that's very logical to say that if there's some known pattern that reoccurs every day., and to account for that, he actually treated each, each hour of the day as a separate,, feature,, or created a feature for our day and one hot encoded that.. you end up with 24 different features, each representing an hour, the hour of the day.
+
+And,, same thing with day of the week. you identify that weekly seasonality that it does fluctuate.,,, depending on the day, particular day of the week, some days will have more, more traffic than others.
+
+And he created a,, a 100 feature representing day of the week as., and. And that was it.
+
+Go get pretty good performance. this is maybe middle of the spectrum between the two to answers.
+
+We saw, we saw earlier,, where it's,, it's, more than two features,
+
+but not quite as many as Sam had in his,,, and again, a similar range of,, performance.,, hopefully that was a useful exercise.
+
+You learned something about how to approach time series modeling, understanding the seasonality.
+
+Again, as we said last week, that's probably the number one thing that,,
+
+is important the time series model is understanding the seasonality factors., what the,, seasonality is,,, do we have multiple seasonality,, factors that we need to account for in this case,
+
+this particular model was using two our daily seasonality and then this weekly seasonality., and then,, he did not include anything around,,, month of the year or the day of the year or something.
+
+You could argue that there's also maybe a seasonality throughout the course of the year, depending on the seasons., one way to handle that would just be to use a single feature for day on day,
+
+number of the year, zero, three, 64 or month of the year.
+
+Maybe,, an alternative to doing any of that would just be using the weather conditions.
+
+ if you use the weather, that's maybe a proxy for,, the month of the year question., with is sharing,. I won't share this.. I'll send I'll send this around if anybody wants to take a look at this as an example.., I won't guarantee this is perfect.
+
+ if you see something that seems an error and maybe it doesn't make sense, maybe.
+
+Maybe it maybe it doesn't make sense., it's entirely possible or something wrong in here, but it's a, I think a pretty good,, pretty good example.
+
+One way to approach this.. I'll send this around..
+
+And as I mentioned, we're gonna try to do three algorithms. If we don't make the last one, we'll pick that one up next week., I also want to spend some time on the Kaggle exercise.
+
+I think most likely that we're going to do that the start of the class next week.
+
+We got to week 11 for that. we got some we got some time, but I do want to kick that up., guys, on vacation, I think everybody understands what classification is.
+
+Again, instead of predicting a numeric target or predicting some class or category,.
+
+And, on the simple end of the spectrum, we might just have two categories positive and negative, plus or plus or -0 or 1., the,,, far end of the spectrum, we might have something language modeling where,, the number of classes or categories that we have is equal to the number of words in our vocabulary.
+
+ in the case of,, more recent language models, we may end up with,, something 100,000 different classes.
+
+And we're trying to predict the,, which out of the,, 100,000 different words in vocabulary is the most logical next word,, in our sequence., classes can be numerical in nature.
+
+ we did talk, I think, at the first class,, about the fact that there are some problems which we may choose to approach as a regression problem,
+
+or we may choose to approach as a classification problem,, by binning the,,
+
+the numbers, if we're predicting income rather than trying to predict an exact income,
+
+maybe we great income bins of $10,000 and we try to predict which bin or,,
+
+sales lead scoring, for example, which means predicting how promising.
+
+ when a if you're selling something on your website and a visitor comes to your website,, we could assign, a numeric score to that and try to regress what that score is.
+
+Or we could just simply say, let's create a what is it, one, two, 3 or 5 and 4 or 5,,, and try to create a classification model., one big difference between regression and classification models,, is that,,
+
+unlike regression models, classification models cannot extrapolate beyond what they're trained on.. They can go into perpetuity either direction.
+
+ in theory we should be able to,, handle any value that we get as an endpoint..
+
+Even if that the input value is outside of the distribution of the data that's trained on,, it's still capable of providing some prediction for it., may not be a great prediction, but it's still provides you some prediction for it.
+
+ it's impossible for a classification model to generate a prediction if was not,, found in its,, training set.. if we,, train a classification model to use to build an app that you can,,,,, hold your,, cellphone camera over a flower and it tells you what flower it is., and we train it on a hundred different types of flowers, and then we go on some hike in the,,, in the mountains in Switzerland.
+
+And we come across this,, really rare flower that only lives in high elevations.
+
+And we try it. And,, of course, it's not going to tell us what that flower is unless that flower is in our training set.. It doesn't it doesn't know, and there's no way for it to know.
+
+ it's going to take its best guess from among the,, values that it was trained on, when it can't extrapolate,, beyond that.
+
+ that could be a big limitation of,, classification models.., let's start with a simple example of binary classification.
+
+We want to predict a one or a zero... Suppose we've got, a single feature x.
+
+And then our y value is either a 0 or 1. It's, it's a binary classification.
+
+ our data set looks this. We've got a bunch of zeros and we've got a bunch of ones.. And if we try to fit out linear regression, to this we end up with something that looks this., there are a few problems. One is how should we think about.
+
+ if we use a linear regression and we get a prediction of this, how should we think about what this is.
+
+Is this a zero or a one.., that's one issue.
+
+Certain thresholds., exactly. the threshold.. let's say we were predicting for and actually it was 0.3.
+
+And we get here is about 0.4. Let's say we set a threshold value.
+
+And we say that anything above a 0.5 I'm going to convert to a one predict anything below 0.5 I'm going to convert to a zero prediction.. we can solve that problem by just using a threshold.. Where if we're predicting here and we say this is 0.4, that's below our 0.5 threshold.
+
+ let's call it a zero. We solved it.
+
+ now we can actually make an accurate prediction with that. that's one problem that we could solve., we have other problems, which is what about predictions that are above one or below zero,.
+
+Where we could just set our threshold at point five. And if it ends up way down here off the chart or way up there off the chart,
+
+we just compared to our 0.5 threshold, we say,, let's just call it a 0 or 1,., these are solvable problems. And we can actually come up with a little algorithm that does that., and,, and maybe that would, would work.., the other big problem is that if you just look at this,
+
+the conclusion you come to is that linear regression is almost always predicting the wrong value.
+
+ we've got to do all this extra post-processing work on it to get it to actually predict a value as 0 or 1.., rather than.
+
+Thinking about,, this is trying to predict the zero or the one is two discrete values.
+
+A different approach that we could take is,, let's try to predict the probability that Y is equal to one or the probability of one.. And probably because it's probability it's going to fall somewhere between 0 or 1.., we could take,, go back to this and we could treat this prediction here as a probability that y is equal to one.. if we go back to our example, let's say our input this point three or outputs point four.
+
+ we say the probability of y is equal to one is 0.44.
+
+That means there's a 0.6 probability the y is equal to zero.
+
+ therefore let's go with let's go zero.
+
+ that's a reasonable and maybe logical thing to do., to make this approach a little bit more robust.
+
+Another thing we could do is, use some transformation function that bounds the output of it between 0 or 1.. Because here this is unbounded. this will go on forever.
+
+And this would go on forever. And then it's a question of what do we do with these extreme which are these values that are,
+
+ of, zero or below zero, above one.. We can't really treat them as probabilities anymore because probabilities have to be between 0 or 1.
+
+ if we get a value of five, how do we think about that in terms of, that doesn't make any sense to us.
+
+ to convert that into a probability which is bounded in the range of 0 to 1,, we can apply a simple transformation function,,
+
+that takes whatever the output of that linear regression is and then bounds it between the range of 0 to 1 and the,,
+
+transformation function that we,, typically use,,, is what's called the sigmoid or the logistic function.. And this is how we now get to,, logistic regression from,, linear regression., we take our linear regression model..
+
+Whatever the output of this linear regression is, we pass that then through this transformation function,
+
+the sigmoid function or logistic function,, which looks this.. And then that's bounded between 0 and 1.. now we're making some progress.. We can feed our inputs into our linear regression.
+
+We take the output of our linear regression. We pass it through this transformation.
+
+And we get something in the range of 0 to 1 that looks this., where if we have a high probability that y is equal to one up here, we're going to we're going to predict one.
+
+If it's lower than a threshold value typically 0.5, we're going to predict y is equal to zero.,, more formally,, we write the probability of y is equal to one is the,, sigmoid of Z, where z is our linear regression.. Which is just our,, weights times our, our features x.., there's a couple different ways you can write that. This is one way, this is the other.
+
+ you'll commonly see both of these notations. Just know that the same depending what textbook or I assistant you use,
+
+you may get one or the other, but they're just,, rewritten forms of each other.. let's look visually just to make sure this is clear for everybody here.
+
+What we're what we're doing I to try to visualize,, these things whenever possible.., our goal here is to create a model that,, predicts the probability that the y is equal to one,
+
+the probability the output is one instead of zero..
+
+And that the probability y is equal to one by nature has to be somewhere between 0 and 1..,, the way we're going to do that is we're going to take our, our inputs,,
+
+our input X is we're going to multiply each one by a weight corresponding to that feature.. exp and then we're gonna add them up.
+
+ this is just linear regression at this point.
+
+That's how we do linear regression. we're going to take the output of that linear regression.
+
+And we're going to pass it through this sigmoid function, this transformation function that's going to bound that output in the range of 0 to 1.
+
+And we're going to we're going to treat that as being the probability that y is equal to one.. Pretty good far.
+
+Many folks have seen this before. Some have not., that's,, what we call logistic regression.
+
+Now we have a, an algorithm that is capable of doing classification, at least far binary classification at this point.
+
+All. the next question here is,, how do we,, figure out what the weights or the parameters, the coefficients the W's should be... If you think back to,, linear regression,.
+
+The way we did it in linear regression was we created a cost function,, sum of squared error.
+
+And then we,, tried to minimize that cost function.
+
+And we could do it different ways in linear regression. One way could be,, a closed form solution.
+
+ that's that's one, one way. Another way could be to use some iterative solving method., something gradient descent., retirement today..
+
+We can do the same thing here,, to estimate those coefficients or weights.. we can define some cost function, which you can see as j of w.
+
+It's a function of the weights., then we can try to find the values for the weights that minimize that cost function.., we can approach this the same way we approached it for linear regression, which is we could calculate the derivative or the gradient of it.
+
+We set that equal to zero and just solve for the coefficients just we did, just you did in your homework for linear regression.., however, now we run into some problems,, because of that sigmoid function that's in there though., one is that,, if we're using some a square there as our cost function here,, that's a valid thing to do.
+
+But mathematically it becomes tricky because it's not a,,
+
+convex function for logistic regression anymore, it is for,,, for linear regression., instead of using sum of squared error, we did for,, the regression, we could use a different cost function., but the trade off of doing that is now we lose the ability to have a closed form solution,, to., is let's choose a different,, cost function., but we're not going to be able to solve this ourselves. We're going to have to use some iterative solving approach.. instead. for logistic regression, instead of using sum of square there we're going to use what's called maximum likelihood estimation.
+
+ to create our cost function. All. And I'm going to walk through the details of this for, people that have already seen this., it's probably fairly straightforward to follow along for people that are seeing this for the first time., I would say this is one of those things where you might need to go over a couple of times,, to really, really get it., and that's totally. There's, there's some concepts that we go through in this class that if you haven't seen before,
+
+it could take you a few runs through to really understand what's going on.., here's the way maximum likelihood estimation works.
+
+ our logistic regression model gives us these two things.
+
+The probability that y is equal to one given x is the sigmoid of our linear regression.. This was our linear regression. And we just pass it through this sigmoid transformation function.
+
+And that gives us the probability of y is equal to one. That's what we're just saying., now,, it's logical that the probability of y is equal to zero is just one minus that.. If they have to add up to one..
+
+ we can,,, parametrize this by using these two equations.. There's the probability of y is equal to one. Given x to the probability y is equal to zero given x.. and now we have a relationship between x the input and y, the output., our goal here, as always, is to find the set of weights,, or W's,,, that,, minimize the cost., in this case, we call it this set of weights, the maximum likelihood estimate.
+
+ this means that this is the set of weights that results in the highest likelihood,, or the highest probability of getting the correct y's given some inputs.
+
+Actions.. That hopefully that's a fairly logical statement.. There are many different,, sets of values we could use for the X's here., sorry for that. There's a single set of values we could use for the X's that's fixed.
+
+That's part of our training data. And we can't change that. There are many sets of values we can use for our W's here.
+
+The one that we should use is the one that gives us the highest probability of getting the correct Y and correct outputs given the inputs.
+
+All. And we say that's the set that gives us the highest, likelihood.
+
+ how do we find that set of W's. let's talk about let's just start with a single observation.. And then we'll build this up to doing this over the entire training data set., the likelihood,,, of a,,, over a model for a single observation., the y is one, or if the y is zero, it's the probability that y I equals zero.. And remember,, previously we had two different,, equations that we're using.. And the probability is y is equal to one. The probability of y is equal to zero.
+
+And if we were to pick a single observation a single XY pair.., if that y happens to be one, we should be using the top equation.., and if that way I happen to be zero, we should be using that bottom equation.
+
+All. But this is,, difficult to manage using two separate equations.. we can use,,, a little clever trick to combine these into a single equation,.
+
+By doing this,, the probability of y given x I,, is equal to probability y equals 1XI,
+
+to the y, I multiplied by a probability of y equals zero given x I to the one minus y.. In that case we should be using just the upper equation.. And if y I is equal to one and we plug y I end over here.
+
+ one minus y is zero. this goes away.
+
+This goes away. and we only have that part.
+
+And then vice versa, when y is equal to zero that goes away. I only have that part..,, we can, with this clever trick, combine these things into a single equation., which is more math., now, we also know from the way,, we form our logistic regression model that probability y equals one is equal to the same way that w x.. And the probability of y equals zero is just one minus that.. we can take these two things and we can plug them in that equation up there.
+
+And now we get this., now we have a single equation that we could use for the likelihood,., of any given observation..., now we want to move from the likelihood,, of a single observation., and now we need to get the likelihood for the entire training set, which is what we care about.
+
+And we can write it this.. This was the,, equation from the previous slide for a single observation.
+
+And we take the product across,, all of the points in our training set.. And that gives us the likelihood.. Of the upcoming training set.. And the goal again here is to try to maximize the likelihood.. Maximize the probability that we're going to,, predict the correct values.
+
+Put two but simply..
+
+And our goal here and now, we have a,, an equation to quantify likelihood.. And our goal was to try to maximize this.. Maximize the probability that we're predicting the correct values.. The only thing in this we can control is the W's.
+
+And we want to set these W's that tries to maximize this likelihood equation.
+
+ and to do that we typically we calculate the gradient or derivative, and with respect to w and try to maximize it., that is difficult to do with that product term in there.. instead of that, we apply a creative trick, which is to say rather than trying to maximize this, let's maximize the log of this.. when we take the log of this,, this product term goes away.
+
+And we now get this. And mathematically, this is easier to handle than that of the product term.. And if we maximize the log we've we've actually also maximized the original equation as., logically if this is called the likelihood this is called the log likelihood., now instead of maximizing the likelihood here with dealing with and dealing with that product,
+
+or we're going to maximize the log likelihood here., alternatively,, to maximizing the likelihood.
+
+Sorry to maximizing the log likelihood. We could minimize the negative log likelihood.
+
+ we can just add a negative sign in front of it and then try that minimize that., and you'll see this again depending on what textbook or what source you read., different things will, and you walk through how to approach,,, logistic regression and how to solve for the optimal weights.
+
+You may some books may say,, we just maximize the log likelihood.
+
+Other books, should we say we minimize the negative log likelihood.
+
+We're just adding a negative sign and flipping from maximum, maximizing the minimizing., I think more commonly you'll see,, it written that the way to,,
+
+find the optimal weights is to minimize the negative log likelihood, also called nll.
+
+And our goal was to try to minimize that cost function..
+
+ sticking with this idea of having some cost function which quantifies the error and trying to minimize that cost function,.
+
+That's an idea that we can reuse across all different algorithms.
+
+And each different algorithm is going to have a different cost function, perhaps that we're not,, that we're dealing with., to stay consistent with that idea of a cost function that quantify error and trying to minimize that cost function.
+
+You could probably say it makes more sense to say for logistic regression, we're going our cost function is negative log likelihood.
+
+And we're going to try to minimize that versus saying we where we trying to get the log likelihood that we're going to try to maximize that.. Now that becomes inconsistent with what we would commonly do for other algorithms.
+
+But mathematically they're they're really the same thing..
+
+ if we want to go with minimizing,, negative log likelihood, and now we just add a negative sign out front of our log likelihood,, and we,.
+
+We now will,.,, it's up for that., everybody with me. far, more or less..
+
+I think we'll go through,. Trying to make it through this, and we'll take our a break.
+
+ we can't we can't just,, mathematically reorganize these things and solve., we have to use an iterative solving method,, to find the,, weights that minimize this.
+
+And the,, approach that we typically would take is a method that's called gradient descent.. How many people are familiar with gradient descent have seen it before.
+
+Must, must be.. you go through this,, fairly quickly that,, it's not a not a difficult concept., we're gonna,, introduce a concept, and then we'll come back to talk about how I, how it applies.
+
+And,, to the particular case of negative block.. I think actually in your homework three, which I'll release later,, I'm gonna have you actually do that out through this out.,, and.,. The gradient descent for,, logistic regression code.
+
+ you get some practice for that. All. let's talk about the overall concept of how this works.
+
+Suppose we've got some function. y is equal to x squared.. And we want to try to minimize that...., we take,, that's very simple, but suppose it wasn't,, or suppose we just we wanted to do it,, iteratively,, instead.
+
+ one way that we might do that is to just pick some point along the curve.
+
+And we want to try to somehow iteratively move towards the minimum of this particular curve.. how would we figure out figure that out.
+
+All. We could move this way, or we could move this..
+
+And a simple way to do that would be to say,,, which direction is the,, in this case, the derivative pointing.. And let's move it back. All.,, derivative here are two axes at this point.
+
+Axes, whatever this point six or whatever this or,, the derivative is pointing that way.. And if we move opposite the way the derivative is pointing, that should lead us towards the minimum.
+
+How far should we. in that direction., and the way we,, try to do that is we don't want to move too much.
+
+And if we move too much, we might just jump over here.
+
+And then if we try to do that again, we might just, jump back over here and just keep going back and forth.
+
+ we want to take very small steps that we eventually get to the minimum., the way we do that is we,, we,, move by some small value., and the way we get that small value is we take some constant,,,
+
+that we call the,, the learning rate,, multiplied by the,, the gradient.
+
+until we either hit the minimum point or we run some large number of iterations,
+
+at which point we say,, let's just stop here because we can't keep doing this forever.. let's walk through how this would work mathematically.
+
+ we're gonna try to minimize f of x equals x squared.
+
+ for the room pairs to x.
+
+And we're going to start here to keep things simple, we're going to start at randomly star that.11.., now each iteration we're going to move opposite the gradient.
+
+And the, amount we're going to move is the learning rate multiplied by the, gradient or derivative in this particular case.. And our new x, our z iteration I plus one is equal to the old x.
+
+Minus learning rate times. derivative.. And then r y is always y or f of x is x squared.
+
+We're going to randomly pick a point on this curve to start that. And for convenience, let's just randomly take the.11.
+
+And we were that we plug this plug one in here.
+
+ Z is one, we now have one -0.1 times.
+
+ times two is, one minus 0.2 is 0.8.., and now we calculate our y,,, and we plug those in and we get,, our second point is,,, point eight and.64,.
+
+Our y is x squared.. And now we have moved to point location number one.
+
+And now we do the same thing again.. And we take the X of point eight and we plug it in here.
+
+ for XY and we get,, now we get,, our second point,.
+
+And we now move here two point number two. And then we do it again. And we move to point number three.
+
+And we keep going until we eventually converge to the minimum point.. And we're not moving., that's the idea behind gradient descent,.
+
+And it can be applied really to solve all sorts of different,, problems., but it's commonly applied in machine learning for things logistic regression to,, find the minimum of the negative log likelihood curve., the key ingredient that we have to think about when we apply this method is to,, is our choice of the learning rate.. What we're going to use for,,,, our learning rate here.., and that's a constant that we need to,, that we need to pick.. in this case, we just randomly picked, let's say, let's just call it point one.. But we could affect,, 0.01 or 0.5 instead.
+
+The general rule is you want to select some fairly small value., no. what is happening is that for no one really small.
+
+ the resolution was just the impact as.. Exactly.., that we would have still gone through the same process, except each of these steps would have been much smaller.. Because the magnitude of our move would be much smaller. 1.1 would be here and point two might be here and point three and etc.
+
+And eventually we would get there. It would just take much longer to get there.. What would have happened if we had picked,.
+
+Three further. I followed this up just to learn that you run the risk of overshooting local or global missions.. if we had picked a high value for learning rate and we were starting here, it might have jumped us across to over here.
+
+And then when we ran our next iteration, we might have jumped back over here and kept going back and forth.. And never got converged into our minimum point.
+
+All. this is visually an example of that,.
+
+If you're learning rate is very small, you're going to end up with something this,.
+
+You're still going to get to the answer. It's just going to take you a long time..
+
+And all that stuff together., if you're learning rate is too big, you could end up with something this where you never get to the answer.,, when you think about setting learning rates again, that's one of those things that it's more in art than a science.
+
+This is an inconvenience because it's going to take more computational power and more time to get us to the answer., but it's not really a problem because we'll get to the answer eventually. This is a problem because we're not going to get to the answer this way., have or very the US that based on the slope.
+
+And for example, it's a relatively shallow slope. You might go for smaller and smaller and just keep your local.
+
+Oh. And, in two classes from now,, when we talk about,, neural networks, we're going to talk about strategies for varying step size.. at the moment we are assuming the learning rate stays constant throughout this whole process up.
+
+You just pick a constant learning rate., when you're working with neural networks, you can keep a constant learning rate.
+
+And that's very common to do.
+
+But you can be a little bit smarter about it, and you can maybe change the learning rate over the course of your training.
+
+You're already going to take bigger steps because of the gradient, but you may want to take even bigger steps when you're out here., you want a larger learning rate versus when you're getting close.
+
+You may want a smaller learning rate to fine tune,, the minimum.,, you can you can vary the rate,, over the course of the training.
+
+All., that's a little bit about the learning rate., that's,.
+
+You can take a look at this. We'll take a quick break in., I'll pull up a quick,.
+
+Demo here. This is in the repo., this has some visuals I'm not going to walk through.
+
+But,, let's start with a simple example here.,, y is equal to x squared.
+
+ our the ribbon here is two x., if we plot this,, we can see f of x,, and, the derivative here,, and, we want to find, try to find the global minimum here., let me scroll down here. This is just,, because it visualizes this..,, I've run a,,, a,, a gradient descent function here.
+
+I'll let you walk through the details of, of doing that here., but this is,,, given some starting point, it's going to walk through a gradient descent process to try to get down to the., it's going to visualize that process. let's watch it go.
+
+We started up here. It's moving quickly.
+
+But you can see it started up here and started taking steps down, down, going down, closer, closer.
+
+And eventually it settles in at the..
+
+And if you want to. If you look at the iterations, you can see that the how the values are changing for each iteration.. that's what the gradient descent process looks in action. this is an easy function to do this for.. It's a it's a straightforward function. We don't even really need gradient descent to solve this.
+
+Let's try something a little more complicated. let's try a sine function.
+
+ this is now applying that same process to a sine function.., and we can see what happens here., we started up,, I should start here.
+
+And we settled down into this,, valley here., minima and then we have maybe a global minimum point elsewhere,.
+
+ what if instead of a sine function in this or something else where this was a
+
+local minimum point and then it went back up and then it came down here,
+
+When it hits this point, it seems it's probably going to be,,
+
+ stuck and it's not really going to go up here and then down here and find the global point.. And you would be about that.
+
+And that's one of the big limitations of gradient descent,, that it can get stuck in the local minimum point.. And never find a global point. And that's one of the challenges of training., there on networks is that type of behavior.
+
+ let's now take a,,, more interesting, more complicated,, function,, this one,, and let's see what happens when we run.
+
+Gradient descent on.. this is if we were to,, visualize that, that,, that function,, this is what it would look.
+
+We have two inputs x and y or x1, x1, x2, whatever you prefer.
+
+And then an output z.. And this is what that looks.
+
+And we can see here that we,,, this is now a very different,,, curve than what we saw,, previously,, where we have some peaks and valleys and some local minimum points, it looks here maybe,, maybe here.
+
+And then we have probably,, global minimum points here somewhere in this area down here.. And now let's run,, gradient descent and let's see what happens.
+
+And let's, let's, we're gonna run it,, from several different starting points.
+
+ you can see what happens as the starting point changes., hopefully you can see that if you look closely, you see some red dots on the,, on the screen there and they're moving.. those are different runs of gradient descent, each with a different initial starting point along the curve.. And you can see what happens..,. Some of them are going down, down.. This one and this one's coming down here..
+
+ and others up here maybe be getting stuck in local, if you look at that one up here,
+
+maybe getting stuck in the local minimum, this one looks maybe it's also getting stuck in the local minimum point there as.., this illustrates a couple of things.
+
+Unless it's unless it's a convex curve x squared where it doesn't really matter where we start, where you're going to get to the same place., otherwise where you start along that curve can make a difference in where you end up,, along the curve.
+
+ a big concern you have to think about is getting stuck in these local,, points here.
+
+And how are we going to handle that,, that issue.
+
+And we're going to,, not answer that question now. We're going to table that question for,.
+
+Actually., maybe,, and when we talk about neural networks, because that's a big problem with neural networks,
+
+it's probably the number one challenge in neural networks.
+
+And there are different strategies that have been built over time that try to try to handle., let's take our break for now. We'll come back with wrap up logistic regression and move on.
+
+Set 1009 ten 1021 restart.....,.
+
+I was wondering if you might be able to.. That.
+
+Oh,..
+
+Very good answer... Good job. Very good.. That's a good thing.
+
+ did you end up with specific cases that I think.
+
+They are.. That's that's another, approach that you can do for versus maybe.
+
+Interesting to try one hot encoding for our team that makes a difference., I think you might find it maybe. A little more interesting... Exactly...
+
+That's a,. I'm not as good as I get to be.
+
+Trying to,. One. Week.
+
+I don't think this second I don't forget.,. There you go.
+
+Oh...
+
+It's here.,. it's up to you. All of the,, the current state.
+
+It's only depends on the last thing that something wasn't.,, you don't take in any other information other than what happened in the last, the last time.
+
+only thing we consider is what happened yesterday and nothing else from the past,
+
+only what happened yesterday.. And then we have some,, what we call a transition matrix, which says that., let's suppose we're trying to predict the weather conditions. A message that says it's raining isn't allowed, isn't sunny.
+
+And if only thing we're considering is yesterday., and we say that., it's if yesterday was cloudy and there's a,, 70% chance it today is going to be., yesterday was cloudy. There's a 30% chance.
+
+ that's what that's what. I meant.
+
+By. For the car.,, for the car, that would be. We're assuming that the,,, typically it's there's a fault correlation of,, zero because it's of itself.
+
+And I was saying that we're assuming that today is entirely dependent on yesterday.. As what saying which is a an assumption that in reality is almost never true.., but it's a simplifying assumption in order to follow it a certain way.
+
+All. That's it. I'm sure charms are definitely chocolates.. And I said to use, a, a Markov model.,, whether it's nice, the easiest way to understand that again,, whatever,
+
+if we're gonna predict the weather condition for tomorrow, we're going to assume it's it's entirely dependent on what the weather condition is today.. And then there's some,, transition matrix from today to tomorrow.
+
+Again, if it's,, cloudy today, likely cloudy tomorrow.
+
+Probably today, maybe a small chance. Sunny tomorrow.. Country.. It's where you.
+
+It doesn't taste coffee. It's just because.
+
+Expected to. Open government offices.
+
+Zebrafish. The prince.
+
+Thank you very. I really to do that.
+
+Good things. Yes., that's..
+
+I don't the competition..
+
+Preservation.. Because,, I had a.
+
+Vision. this Wednesday at time., no, I don't want to,, leave my students me because it's everyone seems.
+
+Oh,..,, you shouldn't skip class where you're,, I know it..,, I could catch, the last 15 minutes on zoom, but I'm, not sure.
+
+I haven't done that once. This., I would,.,,, I think every class should take precedence over here.. just tell me. Tell the faculty member that you've got class until,.,. No, I just wanted to you..,., just tell them you,., that you have class 15.,.
+
+See if they can, if they change the meeting time for me to.,,.
+
+They should. Class schedule., I know people... I would just you just have to take into account.. I think you might have to do,.,.,. I know it's very easy... I've been, reading about that space.
+
+Cool., using the novels too.... Cool. it is.
+
+It is a lot... That's a neat space... I.
+
+Exactly.. If it's something that is in the oven, then it's a lot of meat.
+
+Oh,, it's a lot. I just I was thinking of, maybe he said he might buy a 25 CD, and,, it's we should move on.
+
+But he's not one of us to,, changes in product., we have inconsistent answers for one place.. You. All of us...
+
+It's very interesting..,, that was an interesting area.
+
+Embedding wasn't. It.. Lots of observations about research. On the challenge, the dramatic changes.
+
+We have large scale, but not a huge rest.
+
+ I would to see you next.. I just wanted to let.., I think... It's too bad. I think I was, but, I don't know that you have class because I know nothing changes.
+
+But.. But I think you.. That's..
+
+Yes. And.
+
+He. Does not even make sense.
+
+This question is not on the., I have,, 9 a.m. on Fridays for more than two years now.
+
+ you can see here. Oh, sorry.
+
+I'm just out of town. And I was,, I'm just., I am more than 20 at this hour., if you can't make it, there's no one here.
+
+I lost a gift for this thing., for someone to learn about the cost function, for the loss function and the loss function., Thursday. I was actually confused by that. I was actually look over that.
+
+I was looking at this, that doesn't work. If you and you have a conflict.
+
+I feel that's a good question. I thought that the cost and loss function work a loss function.
+
+It's just that they're used to have confidence., that's what I remember, 9 a.m. Friday.
+
+But now I think it's I was actually it's not just me.
+
+ it's a lot of work. Not only did I find myself and I realized that others do.
+
+You have a lot of things I was going to ask you about the holidays, and we're,, you don't say it's the same thing., it's to the cost function as., that helps. That does help.
+
+ then when you use that,, it's not just it,,, it's the same thing.. every algorithm has a, there are, there are several different now.
+
+There are several different cost functions you will use depending on what you're doing.
+
+ if you're doing regression, you're you always reduce the sum of squared error and a.
+
+Binary classification and regression.
+
+You. Always think that.
+
+Yes. I just I just wanted to, it's because the thermostat.
+
+Detects and people are going for you just because you just didn't, I changed.
+
+It's no turn it back on. It is going to be 72 degrees in varying degrees for binary classification.
+
+I know you because you're in some. Other just 92.2 Celsius.
+
+It's supposed to be 22%.. that might be helpful.
+
+It's 2020 points out.
+
+That's gonna be.. That's I think the thermostat is hiding behind it doesn't see anyone in the room.
+
+ it just turned off the thing. But.
+
+It was an algorithm actually I think it's called that.
+
+I think there's certain things that we don't want to go on., for example, we could choose a value of.
+
+Your condition doesn't work at all... 33%.. some thermostats can detect it because it starts to detect whether a person is there.. That's only for in building thermostats and not detect if you're there,.
+
+Is it. What do you say. I have to think about what I don't to have to know.
+
+Not with. Our thermostats., but it's positive here.,. I just touched the thermostat to get it to go back on., I that score. that I might as say something to that thermostat.. I think. I don't know what it. Is.
+
+I just be,, that's what. These guys do as to what controls they have.
+
+Oh, that was it's just the thermostat.
+
+I think that was., that controls air conditioning.
+
+Few. It was off because. Because no one was moving in the classroom for an hour and a half.
+
+ no one was in the classroom on. This one, just, yes, that thermostat over there can detect when someone is moving around and everything.
+
+Let's get you started.,. I'm turning the heat on to save energy.
+
+Believe it or not, it's already warmer.
+
+It's already warmer. It's cool down there..
+
+Thank you. Safe house. Cool.., one question during the break, I want to clarify.
+
+ it sounds there's maybe some confusion. What say,., we were just talking about.
+
+I think everyone terms using loss function, cost functions., and we've talked about loss functions before., the answers are the same thing., typically, generally speaking, you'll see,, people use either the terminology cost function or the terminology loss function., I'm not sure.. Not sure this one is more commonly used.., the way we train the model again is we have some, some set of parameters, some W's that we need to find.
+
+And depending on what, what algorithm we're using that, that set it will be different.
+
+But in any algorithm we have some parameters or W's that we need to solve.
+
+And the way we solve for that generally is using some iterative solving approach gradient descent.
+
+We just talked about,, but how do we know how to how to adjust those W's.. How do we how do we know what's good or bad. The way we do that is we need some function to measure the error at any point in our training.., and then we want to try to minimize that function.. To get them, find a set of parameters that minimizes the error.
+
+That's. And the way we quantify that error is through what we call a cost or loss function.., and when we start our training,, we, will randomly set the W's.. if we were going to do linear regression, let's say, and we're going to,, do it in a,, iterative solving,, approach.
+
+And we're going to use gradient descent, just where we had that,, that curve,, y is equal to x squared.
+
+Then we randomly picked a point on that curve and we started moving towards the optimum.
+
+We do the same thing with the, the weights for, for linear regression.. we'll randomly pick some weights.. if you think about, think about the weights,, as being the dimensions.. And the simplest way to visualize I would just be let's say there's just one feature,.
+
+Just x., we have a simple y is equal to x.., we have one feature one weight.. And, we'll randomly pick a place on that curve.. And, if we add more features then the curve becomes multi-dimensional.
+
+But it's still a curve. And, we randomly are going to pick a point along there somewhere.
+
+ if it's just a single weight, then it's obvious,,, if it's a multi-dimensional space, we're picking a point.
+
+And that point has values in each of the dimensions. And the values in each of the dimensions are equal, the weight values for that dimension.. we populate the weight values initially with some random values that we pick., and then we start doing our gradient descent and start working our way from wherever we initially were towards the optimal,
+
+the towards the location of the W's in that space that minimizes the cost or loss function.. And that's that's how the algorithm gets trained.., and that applies for linear regression.
+
+Applies for logistic regression applies for neural networks., most, most,, algorithms that we can have a set of weights.
+
+Not all algorithms actually do, but the ones and do we follow that same process.. Does that help clear things up a little bit about the high level of how this whole process works.
+
+All., we were we took a little detour now from logistic regression to talk about gradient descent.. And now let's come back to,, logistic regression and dive back into those equations., again. here's where we left off with logistic regression.
+
+We again recap where we were., we for logistic regression, we have that sigmoid function in there to bounded between 0 or 1., that means that we,, no longer,, that we can't use,,
+
+some square error or we choose not to use something square there as our cost function.
+
+Instead, we take a different approach, which is maximizing the likelihood.
+
+ let's find the weights that maximize the likelihood or the probability we're going to get the correct outputs given the inputs., instead of maximizing the likelihood because the likelihood of the training set is
+
+the product of the likelihoods of each individual point in the training set,, and dealing with that product term is difficult.
+
+ instead of that, we're going to maximize the log likelihood.
+
+I'm going to take the log of that likelihood function., but to be consistent with our notation of having a cost or loss function and trying to minimize that instead of maximizing the log likelihood,
+
+we're going to add a negative sign. And instead we're going to minimize the negative log likelihood or and L.
+
+ and where we left off last time is here where I said this is the equation for.
+
+This is our cost or loss function.
+
+And now we need to take the gradient of this cost, our loss function with respect to w.
+
+And across its all its dimensions., and it turns out that even though this is complex, the gradient is actually,, fairly simple.
+
+Is that. And I'm going to skip over those steps of how they go from here to there, because you're going to do that for your homework.
+
+And. you got to have the fun of doing that.. gradient descent again is equal to w2 minus one minus a learning rate times the great.. And gradient is here.
+
+ we can plug that in. now here's our equation for gradient descent for logistic regression., I think we just walked through this far one more time here.
+
+We're predicting the probabilities Y is equal to one., we take the linear regression,, and we pass it through the sigmoid,, transformation, the boundary between 0 or 1 that looks this., we then,, calculate the likelihood of,, w and we try to minimize the negative log likelihood.., we use gradient descent in order to do that.
+
+And once we have solved for the optimal values of w using our gradient descent process,, now we have our,.
+
+Our model for logistic regression, that we can plug in those W's and have a model that,, hopefully effectively can generate,, probabilistic predictions.., again, the outputs of the model R represent the probability y is equal to one.
+
+ there's some values in the range of 0 to 1. And we need to now convert those into a discrete 0 or 1 prediction.
+
+ we will apply a threshold value. Typically we use point five.
+
+ and we'll just say if it's above point five it's a one. If it's below point five it's a zero.., I'm going to skip over. Over this.., logistic regression is a,, it's still considered a linear model, even though we have that sigmoid tournament there.,, one way to understand that would be to plot what we call the decision boundary.
+
+ for any, any classification model, we can generate a plot of the decision boundary,, of that model.
+
+ this is what a plot that looks. And I think you have some code in the repo that generates these., this is a binary classification, but you could generate these multi-class as., we have a binary classification. Either it's a, it's a yellow triangle or it's a green square., and what we can do once we have a model, we can use that model to generate predictions for every point in this space.
+
+That's visualized here.. And then we can just color code that prediction.
+
+Was it predicted green or was it predicted yellow..
+
+And that's what we've done here. we've taken every point in this space here along both axes.
+
+We've passed it through our logistic regression model generated the prediction.
+
+And, and now we're just visualizing that prediction. And we can see here that it's a linear,, decision boundary here.. This is the boundary between predicting yellow and predicting green in our model.., and we can see that it is, in fact linear.
+
+We see some green squares over here. These represent the actual values.. And our model though is predicting yellow.
+
+ it's going to misclassify, those. And over here we see a couple of yellow triangles in the green area.
+
+That means our model is misclassified. That's.,. That's a great that's a great question.,. linear regression. Still forms really the basis of it here to linear regression here., and it's a different form of, regression that actually is, is used for classification purposes., I know the name is confusing., but that's just dates back to the history of what growth was and the,
+
+the fact that it derived from linear regression,, into what we call logistic regression., arguably it's still a form of regression in the sense it's predicting a numeric value.. But what we're doing now with it is taking that numeric value and translating that as probability wise.. And therefore now becomes a classification... Comment. Coming to name terminology is not ideal.
+
+In this case,, it's called linear regression, but it is actually a classification the way we... is this. Is this.
+
+and you can see that we actually did create a linear decision boundary in this case with are logistic regression between these two different classes.
+
+All. far, we've been,, focused on the,.. The situation where,, we have just two classes.. We can still use logistic regression.
+
+ previously we were we were interpreting the output of our logistic regression
+
+as the probability y is equal to one or the probability of the positive class.
+
+But if there's multiple classes, which one is which one is now positive., now that it's hard to,, interpret it in that way., now if we have more than two classes., we have what's called a multi-class problem.
+
+And now, instead of the setup that we use before, we're actually going to,, generate a prediction for each class.
+
+ previously we had,, one set of weights in our logistic regression.. We took our inputs multiplied by that single set of weights.
+
+We took the output of this, our linear regression. We pass it through our sigmoid.
+
+And we interpret that, that as the probability was equal., now with, multiclass logistic regression or what we commonly call softmax,,
+
+regression, we're actually going to have a different set of weights for each class.,, moving away from single set of weights to,, individual set of weights for each class.. if we have five different classes, we're going to have five different sets of weights for them.. We take our inputs multiplied by the set of weights for the class, add them up, pass them through instead of a sigmoid a softmax function., and now we get a probability that y is equal to that class.., and once we have the probability that y is equal to that class, we have a probability for each class.. And we could just take the argmax..
+
+Or we could take whatever class as the highest predicted probability that y is equal to that class and use that as our prediction.., this is what we call softmax regression,., again, the key difference here is that we've got a unique set of weights for each class.., the structure of the algorithm is the same. We take a linear combination of logistic regression.
+
+Now we pass it through a softmax function instead of a sigmoid function,, to normalize it.
+
+And the reason we do this is that the outputs, the output is the probability y is equal to that class K.
+
+ it's a normalized probability.., is it less accurate to use softmax, when there's let's say you have three classes instead of two classes.
+
+Couldn't you just do binary classification for each class.
+
+ would that be better in that case. But if you have 100 classes then you obviously wouldn't want to do that many binary classification.
+
+ what is the difference in accuracy., you can do you can.
+
+An alternative way to do this would be a one versus rest binary classification.., you could do this where you have.
+
+And then you take the next class and say that's the positive., and then that's an alternative way to do it., which, which you sometimes will see,, more commonly, when generate, when you have more than two classes, you use a softmax regression.
+
+I'm not sure that I think they, I would say they probably get you to the same place in the end.
+
+I'm not sure one is,, preferred or mathematically preferred over another one., but,, this is a much more common approach anytime you have 1 to 2 classes... this the end result of this again, there's going to be,, probability,, that y is equal to k for each of the k classes.. if we have three classes, we'll have a probability that,, we'll have three different,, three different probabilities.., they all sum to one because of the softmax function.
+
+And we will choose as our prediction whichever one is the highest.
+
+In some cases,, you can have a,, multi-class multi-label problem,
+
+meaning that you have more than two classes, but a thing can have more than one label.
+
+And that sets of rules sets out..,, very common I don't.
+
+ the things that come to mind for me,, would be,,.,, a lot of times when you're processing, you're doing,.
+
+Image classification.,, let's say you are doing, classifying, trying to identify diseases from,, chest X-ray images.
+
+Where you're not. It's not you can only have one disease at a specific time., if, if it's a multi-label problem that,
+
+instead of just taking whatever class had the highest probability and using that as the prediction, what you will do is,,
+
+you'll set some threshold value and you'll say that,, any,, class that is above a,,,
+
+a certain threshold, we're going to, if it's above,, 0.4, we're going to add that label to it.. you'll, you'll process an x ray and it's got,,, point,,
+
+point four to for disease one and 0.43,, for disease two or something that., and, and we'll say,,, let's take those two as our, as our predicted labels,., that's an alternative way to deal with a multi-label., we'll take all the pixels of the images as individual features.
+
+We'll pass them. We'll multiply them by weights, which are different for each class., the dog weights, the cat weights, the bear weights.,,, some of those up, we'll pass it through our softmax function, and then we'll get,,,, dog,, cat bear.
+
+And, and it will predict in this case dog. All,, one thing that,, changes in how we,, structure., our approach to training here with softmax regression versus., is a question., just a question on the softmax function compared to the sigmoid function., in terms of what actually it looks on a graph... That would be one way to think of it.. sigmoid is,.,.
+
+ you can think about it that way,. Sigmoid is, is the specialized case of softmax of the block where the by the two classes.., with softmax again the idea is to do a normalization.., such that they add to they all add up to one.., that we can interpret these things as probabilities... Mostly for convenience... You can actually an alternative to doing.
+
+fairly easily, we can actually get the same result if we took off a softmax.. We actually don't really need that softmax as far as getting to the answer.. We could just use the raw outputs of these instead and take whichever one was the highest., it's more of a convenience normalization approach.. You could also argue the same thing about,.
+
+You have a probability. The y is equal to y, and the probability is y is equal to zero.
+
+This is 2 to 1.,, the,,., the sigmoid in the binary setting is a little bit different in that you need it,, in order to be able to interpret that.. Because we're getting a single output from our model and we're interpreting that as the probabilities Y is equal to one.
+
+If,, it weren't bounded in that range of 0 to 1 by a sigmoid, we wouldn't really know how to interpret it.
+
+in order to bound it to 0 to 1, we can interpret it and convert it to a discrete prediction.
+
+ it's a little bit of a different purpose,,, versus the normalization that is what we use in software.., another change, another difference too, with softmax regression versus,,
+
+logistic regression is that we use a,, a different cost function or a loss function, whatever you prefer., again, with logistic regression, we use negative log likelihood with softmax regression when there's multiple classes., we use we call cross-entropy instead as the cost function.. And this is what cross-entropy is..
+
+ it's the cross entropy of two distributions p and q is equal to this,, if you.,. P think of P as being the actual values of the y's., and the way we found out this as a cost function is J w, which is our common terminology for cost function.
+
+Our loss function,, is equal to the sum over all the data points over all the classes,, of the,, y for that class.. And the, the Y or the actual value for that class is either 0 or 1, depending on whether it's that in class or not.. Multiplied by the log of the prediction of that class, which is softmax of the weights for that class multiplied by the x's.. this and this are the same when you,, interpret it such that,, the actual values,
+
+the y's are the p distribution and the predictions are the y hat are the, the softmax w k which is the predictions are the Q's.. if two distributions are a actual value distribution and prediction value distribution.
+
+And we're calculating the cross entropy between those, those two.
+
+ if we only had two classes, you can show mathematically that this is equal to negative log likelihood.
+
+Actually,, very nice to have some fun with math., you can work through that., it, you can actually apply this even when you,, when you have,, logistic regression,
+
+which is just two classes of binary classification, it'll still work and still get you to the same place at the end....
+
+ and we, we train this the same way. our goal here is to get is to solve for,, the set up that,,, optimize this cost function.
+
+All.. That's probably.
+
+Cover this, and I think we'll leave,. Support vector machines, maybe for next... All, one algorithm checked off our list for today, which is logistic regression., you have a couple of homework questions on that to,,,, to get you thinking about that a little bit more..
+
+If that one felt if you haven't seen that one before and that one felt complex with all the math behind it, then you'll this one., which is the opposite end of things., for,, K groups, you pick and you cluster them that the aggregate around each of those.
+
+And you do a point by point comparison., they're everyone's optimizing it,
+
+but you start to force clusters such that you minimize the losses distance from the center of that cluster.., somewhat.. There's two semi related things, which is,, K-nearest neighbors and local K-means clustering,, which are very similar.
+
+Is that you, you look at given some point, you look at.
+
+You, you put a plot that points or put that point in the,, space of,, or the feature dimensions and you look at what are the points around it.. the,, simplest way to do this would be,.
+
+Would be there. let's say we have to two features x1 and x2.. And we've got a binary classification. It's either a red or it's a blue.. And we've plotted here's our points in our training set.
+
+We plotted in these two dimensions. Now we get a new point.
+
+Let's say this is a new point in our test set. and it's there.. Should we,., predict.
+
+This is this is a poorly drawn., I should change that.
+
+ it's a little bit more obvious, but,, it turns out that this red point here is the closest point in here to this star.
+
+ the simplest thing we could do is let's say, let's just find the closest point in our training set to that point.
+
+And,, it happens to be that one in this case.
+
+And that one's red. let's just predict this one's red to.. Very easy. No math, really, and little math involved in your distance calculation, but that's really.., it's a pretty straightforward,.
+
+ a more robust way to do this would be rather than just looking at the single closest point to that,
+
+could be to say, let's take an average over the, k nearest points.
+
+ to make it a little bit more,, robust.., and if we.. now let's let's say we're going to set k is equal to three.
+
+Which means we're going to take the three nearest neighbors.
+
+And we're going to we're going to do a majority vote of those three nearest neighbors.. if we did that in this case. Those are our three nearest neighbors, and two of them are blue ones red.
+
+ we're actually going to predict blue in this case..
+
+ I've actually flipped our prediction from red to blue by using our three neighbors instead of just a single nearest neighbor.
+
+Or we could set k equal to five. And we could take the five years neighbors or the 50 nearest neighbors or whatever we want., that's one of those things again, that we want to,, to,, solve for the set using a validation set or cross-validation., to try to find out what is the optimal number of neighbors to use for this approach.
+
+ we would run this using different values for k and use a cross-validation,
+
+or use a validation set to figure out what's the optimal,, k value,, that minimizes our error...., that's that's the way this works. the only hard thing about this really is figuring out what value should I use for k.
+
+And instead of arbitrarily picking three or 1 or 50,
+
+it's better they use a validation set and run cross-validation and let the data tell you what the optimal should be.. Or. I think if you have a higher value for k.
+
+The simpler, simpler, and smoother easier for data points to call.., exactly., a simpler and smoother model.. take that to the extreme where you said you set K equal to the total number of points in your training set.. you're going to have a super simple model that's always predicting the most common.,, in your training set., the higher value we set for K, the more points you average over,
+
+Versus if you set K very low..
+
+I think I have a chart here., I think I think there might be one in the repo.
+
+If you said k very low, you're going to get,, a very complex model that's only looking at the single nearest point.
+
+ you if you plot the decision boundary, it's going to be very jagged all over the place., and let's see what it..
+
+ with K-nearest neighbors, a couple of choices and a couple important things to decide.
+
+One is the,, everything that the number,, and selection of the dimensions or the features that we're going to use.. This operates,, geographically..
+
+ we have to put these points in some space, geographically.
+
+The space we put them in, it depends on the set of features that we choose to use.
+
+How many dimensions are there and what are the dimensions.., and that's going to make a huge difference., in this second, which we can choose our similarity,, function, Euclidean distance, we might use something else cosine similarity.
+
+And third is the choice of k as we mentioned would ideally use cross-validation or something that.. Can.
+
+And despite being really simple, it can actually perform better than some other algorithms., in particular where there's highly non-linear relationships because it's not making any assumptions,, assumptions or,, modeling things with linear decision boundaries.
+
+ if we look at this particular problem here, I am proposing riverside yellows.
+
+This would be what happens if we do this with logistic regression.,, versus if we're doing and then we get a non-linear decision boundary.. we have some more flexibility which can be can be good or bad.. Every,, computer takes a lot of time to actually run.. if you have a big data set,, you really need to load that., your data set,, in the memory or,,
+
+run through your entire training data set somehow in order to figure out the nearest neighbors.
+
+But for really large data, you probably don't want to have to work through every single data point in
+
+your training set just to get it to run inference or make connections.. just a question.,, not specifically just for canon., but in general, we're doing all these feature engineering and,, polynomial regression and things that.. Accuracy.., it depends on the size of the data and what model you're using.
+
+ everything we're doing in this class for 520,, you should be able to run on your laptop,, for the homework assignments and on.,,, they're designed that you can run sometimes it may take a few minutes, maybe five minutes., nothing should really take if something's taking longer than,, 10 or 15 minutes, you probably have something wrong., somewhere. everything's been designed to be able to run reasonably efficiently on your laptop., now, what you do for your projects is maybe a different story.
+
+ depending on how you approach the projects and what data you decide to use and how much you could find that did it can take a long time.
+
+Maybe you need a GPU to run, and,, there are good there are good options,, for that., Kaggle kernels is a good one. Colab. Google Colab.,, that should be enough for this class., different story next semester., if you take a large language model class, it's a totally different thing.
+
+I didn't, I didn't. I wanted this because I wanted to keep the focus really on understanding,
+
+ that what's going on with the algorithms versus just trying to figure out how to get things that run,, GPUs or whatever.., it's it's useful in,, some research settings.
+
+Sometimes you see it, if you read the research paper in particular, maybe not.
+
+And by research, not AI research, but, let's say,,
+
+science research or something where they're bringing in some machine learning,, you may see that.,, does anybody know before I get to this site,, you said for the prediction, whether that was clicked or not on the website.
+
+Cool.., that's. And why was there a good reason use case and then versus another algorithm., a the features I had. They were more specific to, the decisioning of an ad on the website or,.. Model. Performance wise, it was more easier to predict that way, but another example, could be spam detection or email.. Could be.,. You might see it used, in some places.
+
+ there are usually it performs pretty for being simple.
+
+It actually can perform pretty. And it's often a good model to use as a starting point if you want to get something going really quickly,, you might run and then it can see how it's going. And then maybe you try other algorithms and compare them.,, it's rarer I'd say in production, it's rare that you'll see those, but you will see in some places.
+
+ would it be good for. Correct., similarity of words.
+
+You mean with,.. what word you're trying to... Because, if you,, trying to if it's really close to a weird.. You're., you got one of the,.
+
+Or,, these are,, these are for heirs.
+
+Now, this is,.. And then the,, the idea of neighbor search.
+
+And if you think about this concept more,, a bit broader than just., and then,, for prediction purposes, that is the idea of neighbor search is used in a lot of places.,,, creating embeddings of text documents, for example, for retrieval,
+
+when we use large language models and we use something a pinecone database or something else.. Again, that's operating off of a neighbor search.,, recommendation systems, in some cases,, depending on the type of recommendation system, it will operate off of a neighbor search,
+
+trying to find other Netflix viewers who are very much you in terms of their preferences for
+
+movies or other movies that are very much a particular movie that you really happen to.,,., and spelling mistakes., which means that,,, there's probably no matter what medical conditions you have,. that's the high level idea of precision medicine., but in order to do any of this, we need to find people similar to,, to you or me.
+
+And finding similar people,, becomes a neighbor search problem.,, that's a common area as. the idea of neighbor search generally is used in a lot of places,.
+
+It's not necessarily directly for prediction purposes.
+
+All. I think we'll stop there and not go in the support vector machines today.
+
+ you wouldn't want to start a one., the highest.
+
+It's 100.,, really depends on the size of your data and how many classes that you have and how they're balanced.,,. you, it would be rare to store that one., but again, it depends on,, the size of your data.,, if you have, if you only have,, 50 data points that maybe it is realistic to start at one., if you have,, 5 million data points, maybe it's not., it does vary a little bit by the size of the data.
+
+And there's also an there should be an upper bound to it as.. if you're if your K is getting anywhere close to and over to having the total number of data points you have,
+
+You're you're just smoothing things out, way too much.,, unless it's a binary classification.
+
+But if it's not, you're smoothing things out too much.,, somewhere in that range, but it's,, again, it's an imprecise science.,,, one way to approach it,, in particular,
+
+if you have a high end and you have a lot of possible values for K might be to do look at where there's a magnitude,, where you take a broad view,,, you try,,, 1000 thousand, 10,000., and then you see roughly whether their magnitudes seem to be performing better,
+
+and then you run another facet of it where you fine tune within that, or the magnitude of it more., that can be a good strategy if you don't if your hand is large and you don't really know where it might be, but it depends on,
+
+on the your and your size of your data and how many also how many classes,,, that you have or any other questions for today.
+
+You could, but it actually be good for what we did for homework one where we had the handwriting detection,
+
+ you're the number detection because I never use that algorithm for that actually the best algorithm to use.
+
+Or is that just for, for, for the numbers that and this.,. setting the best k can be, could be used for that... Certainly. Certainly a valid would be a valid approach.. That.. I'm not sure I don't know that I don't, know that's necessarily the best approach., but it could be good. It could be worth. It could be worth Ryan., revisions of homework two. I'll publish the,, solutions., check through the solutions. You can resubmit,, by,,, next week., and also homework three will be released. I think we got some time for homework three, because we've got the midterm and project one in between.
+
+ I think that's after those two things to get time there. But,, we'll get them released.
+
+And, next week we'll, we'll cover,, support vector machines.
+
+And then we got a two week,, session on neural networks.. All. Have a good one, everybody. See you on Friday.
+
+Thank you. Let's have a look.
+
+Somebody comes up. We might as.,..
+
+Exactly..
+
+But it's an interesting space.. It's there's a lot of time though.
+
+That's probably. Just enough because we have a large number of data points.
+
+You often, often do a search because that's, that's very expensive to do.
+
+And you're, you're using a sample actually Neil.. there are different approaches.
+
+But often that involves buildings,, the use of data points or some clustering.
+
+And then figuring out which community you belong in is not something that would be really nice.
+
+It's an interesting area. Thank you much.
+
+Might as not,.
+
+I don't know because I. Was.
+
+Sitting over here and I was oh.. All.... Everything up to that. I don't think.
+
+That there's not any others.
+
+I don't it., I really it.
+
+It's I said, I don't you guys having to or I'm.
+
+It's a it's I guess I'm just I don't know.,, oh no, I didn't do that to.
+
+Allow for the midterm. Oh out loud.
+
+What we. Now that is my notes.
+
+And,, I need to finalize this is I'm changing how, how many classes and how I'm thinking is do allow,
+
+you're making notes, your assignments, the GitHub repo, slides, any of that stuff.
+
+But,, there's nothing else. I know. I just,, it's going to start.
+
+ I'm going to say, I don't know any stuff that we've been doing in class.
+
+The repo is the assignments and that's all. I'll forgive you for sure.. This is everything I have. A lot of people say, oh, I.
+
+Also think that you. And I did that we had over.
+
+There that. Was Kubernetes the same thing I still have not exactly this book of rules that we keep checking.
+
+With it.. I got attacked by the first few people to get.
+
+Back to you, if you will last. And we'll go back.
+
+To the video. she.
+
+Not that's not just she just tired of this.. She wanted.
+
+I think it's,, it's. Not going to be somebody else or maybe..., honestly., not even. My forte.
+
+Just fine. That's why.
+
+I thought I thought that's what we about that I..
