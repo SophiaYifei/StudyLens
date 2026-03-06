@@ -1,0 +1,3249 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+Test. Test. That's really weird, because in none of the classes that I taught.
+
+Does anybody share the answers? Yeah, but it's Fuqua, so I feel like everybody in that class is from different backgrounds.
+
+So I looked at the roster and everyone is kind of random. That is true.
+
+There's a lot of scattered. But, uh, yeah, I was disappointed because I very clearly saw some.
+
+That's what I about is that I.
+
+But, uh, how Ryan told me, like, you know, about I.
+
+I think those people in that class have no idea that, like.
+
+I actually, like, go through the assignment and the system handle 60 and 60.
+
+For the entire time. We just for everything, you know. Yeah. You know, I actually read the papers that they submit.
+
+That's good. You never, you know, you gotta you gotta.
+
+You always got to be a positive and setting expectations early.
+
+Well, that's what I'm saying. That's why I graded their papers really harshly.
+
+But I set expectations. Exactly. Their papers working.
+
+I see, see, now you understand what? The first day weeks.
+
+If you like Sanders. Oh, but you know what?
+
+They're also very good price because they're in great everything.
+
+Oh, yeah. No, I could completely like something a little different.
+
+The thing is, it's so much easier when it's like it follows the exact format that you're looking for.
+
+So you can just be like, there, there, there there there there. Yes, yes, yes, yes on your rubric.
+
+But if it's not there then you have to like, you could actually like redo the whole thing and like,
+
+you know, like part through like this is what's wrong here. This is what's right here. No, no, no, this is in this section.
+
+You know, it's like it's a giant web. Oh, yeah.
+
+I spent nine hours getting those papers. Nine hours?
+
+You know. Yeah, I know. Nine hours.
+
+At least you get paid for it. That is true. That's what I told Ryan.
+
+Faculty member. You get paid the same. Why do you bring nothing and everything?
+
+Exactly. That is.
+
+Yeah. That's. Yeah, that's. That's sad. That's sad.
+
+Yeah. But when I was at. Yeah, it was great.
+
+And you get paid by the hour and I was just. Well it was mostly innovations that I was grading.
+
+But go through equations and drink wine and it was great.
+
+But the thing is, is that a certain point though, you kind of get it going for it, right?
+
+Yeah. So that's why it's really important when you're drinking is to every other time you like switch the order.
+
+And also if you can't do it question by question. So like for your test I will go like question by question.
+
+So I'll do Sam's question one and that'll be Mike's question. Yes.
+
+Question one. And so I'll do question one. And then I'll go through new question. Do so because I can't do it all at once.
+
+Yeah. But I can get one at least one question all at a time.
+
+And if you can get through at least one question that it could be fair ish.
+
+Yeah, I didn't think of that.
+
+But like for this one, it made more sense to go through the whole thing at once, mainly because it's like a paper that's like, no.
+
+Mhm. Yeah. Yeah. Well I don't think it wouldn't have made sense to go.
+
+Not quite in my pocket, but like I try to be as hard as I could because at first Wright was like, there's no room.
+
+And then I made my own rubric because I realized I was grading super inconsistently.
+
+Wow. I've tried this. This is the pattern now, and that's what we call it.
+
+You have nothing. All right.
+
+Before we jump into the lecture today, I do want to get thoughts and feedback on the hackathon format.
+
+The big instructions for it, the lack of snacks, etc. and what would make the hackathon a better experience.
+
+Krispy Kreme okay. Krispy Kreme from Sam.
+
+Other other notes I my notebook here. I'm going to take notes.
+
+Uh, this is the first time I've ever done one of these hackathons in class, so I want your feedback to make the next one better.
+
+Do you guys remember that? You have to go.
+
+I think we just got green back on. The one thing.
+
+Sorry. The one thing that I will say is that, like, I feel like it's very good.
+
+Majority of the hackathon even just like getting set up, you know what I mean?
+
+So like, I feel like it would have been better if we had, you know, like actually like set up,
+
+like our GitHub environment and like our computers and everything to be insane and just like,
+
+get started to go and save time rather than, you know, because we spent like a solid like I was like our just trying to get everything.
+
+Yeah, so a good learning. Other folks have the same kind of thing or a lot of setup time.
+
+Nice. Are there are modifications you're going to make next time?
+
+Same for getting GitHub stuff up and running before the hackathon.
+
+Or yes, I think if it's like we did that allowed because you know, you only want to like do stuff beforehand and it's like, you know what I mean?
+
+Like strictly be allowed to set the environment beforehand and like just open your computer, be ready to go.
+
+All right. So in future hackathons, you all would like to be able to set up like your GitHub and get all of that set up beforehand.
+
+Yeah. So that's the thing. Like just you and I need data sources and get that stuff downloaded ahead of time.
+
+Okay. That's a great thing that for sure. Nice.
+
+Okay. That's great. Yeah I think I agree. But give you.
+
+So maybe you could use a 3D sculpture. Yeah.
+
+Yeah. That's great. Um, I think preparation can definitely be a thing if we're all in agreement that that's how we would like the hackathons to be.
+
+Uh, the original, uh, motivation for the hackathons,
+
+and basically the hackathon is the time that you have in class to be able to do that is
+
+what was happening was a lot of people were struggling with these exact same issues,
+
+but it was the day before the project was due.
+
+Um, and so now, at least as a couple of weeks before the project is due, and that's kind of the main idea there.
+
+Um, I was actually, like, really impressed with how much you guys were able to do in such a short period of time.
+
+Like you always had stuff to show. That was pretty awesome.
+
+I was, you know, kind of anticipating about 50% would actually have something to show.
+
+And so the fact that everybody came in at least, like had some kind of like, you know, results is pretty awesome.
+
+So kudos to you all for, you know, really pushing forward and pushing to do this.
+
+Uh, preparation. Yeah. Like I said, I think yeah, I think you kind of already touched on this, but, uh,
+
+I really like the idea of, um, um, letting us kind of get started with the project.
+
+Okay. Good. Thanks. You.
+
+For some of you who maybe didn't like it as much. You're gonna like it a lot better this weekend when you're like, oh, okay.
+
+Like, I already have, like a third of my project done. Um, but yes.
+
+Thanks for. Other comments and feedback and what would make it better.
+
+What kind of snacks do you guys want other than Krispy Kreme, which I have written down?
+
+That carried me to the hackathon in my bathroom or for bagels to. Okay, I've got a preference for bagels.
+
+Uh, preference. Okay. Bagels. Raise hands. What are you going to do about.
+
+Okay, now I'm going to have to count 12345.
+
+Six. Seven. Eight. Donut. Are you ready, Carver?
+
+I don't know. You said donuts. Oh, my.
+
+I'm so in the mood. Okay, so about ten. Okay, how about donuts?
+
+Okay. It's good enough. I'll get full faith and do for me.
+
+I feel. Okay.
+
+Um, so I don't drink coffee, and I never drink coffee, so I don't know what coffee to get you.
+
+I have no clue. Like, I would be, like, in the coffee.
+
+I'm getting, like, one of those big jugs of coffee and then put it here and be like, here's coffee.
+
+I don't know, Krispy Kreme has coffee. You can get a giant jug of coffee.
+
+Krispy Kreme, that's what we did is, uh, all right. I think that carried that.
+
+So that is the kind of coffee you guys like. It's like in a big jug.
+
+Dunkin's the other half that you could do with that. Good thing we got some arguments for this.
+
+This is the issue with coffee. You say coffee. So people are like, okay, donuts or bagels, but coffee people have opinions about coffee.
+
+Real opinions like it is a don't. It's good to have a good coffee as well.
+
+And that that's all want place for things. Okay.
+
+There's bagels. That's good coffee. Good to know I mean, I, I don't even know how much coffee to get though.
+
+Like, how much does a typical person consume? Like the essential brown.
+
+Yeah. Like one of those for this class. Ten of those I don't for like 5 to 8 people.
+
+Okay. 5 to 8. Are you okay? From coffee up okay.
+
+So bring your own coffee then. I think I got this.
+
+Okay. Three. Three. Ten. So the cardboard things.
+
+Okay. You can probably too. I don't know. I mean, speak for yourself.
+
+I mean, you slow or you can just get Red bull instead.
+
+My expectations of your next hackathon event. Rene, why not just do Red bull instead of coffee?
+
+Because Red bull is right. I know I've never done this right.
+
+We get negotiated. I don't know want.
+
+Is everyone all right? Join us for research purposes. Bagels or donuts?
+
+Um, okay, so we are pretty split.
+
+I mean, it is pretty easy to every day. With a few people abstaining.
+
+So I assume you don't like bagels or donuts?
+
+But you can come up after class and tell me if you would like some other than you, other than bagels and donuts.
+
+I don't want to lead people out, you know? Gluten intolerances or all of that.
+
+I get that. I think you should. If you're if you're sourcing stuff about just pure gold for all of us.
+
+Okay. Awesome.
+
+All right. That's right. Coffee, too.
+
+All right. We're checking this box up.
+
+All right. Moving on. Okay, so we got a lecture today.
+
+It's like it's not too long of a lecture. It'll probably be, like, an hour.
+
+And then the rest of the time is for you guys to work on your projects.
+
+Um, and or study. We'll have a little session. We had a little session before everyone got in here talking about the test.
+
+At the end of this, I will open the floor for questions about the test, knowing that the test is not fully built out yet.
+
+So any of the questions that you asked may influence the way I make the test.
+
+So we're just putting that out there. So we'll have that session. And then the rest of the time, which is going to be for you guys,
+
+you guys can leave the classroom if you want or you can stay here, whatever you need to work on project stuff.
+
+So I'm good. Okay. We will take a five minute break halfway through this lecture just so that everybody is still awake.
+
+Cool questions before we get started burning questions.
+
+All right, let's jump in then. All right. Today is our second computer vision lecture.
+
+Today we're going to talk about the applications of stuff, which you guys started to dive into in your have fun.
+
+We're going to talk about image classification.
+
+We talked a lot about image classification models last time, because most of the models we talked about were image classification models.
+
+So things like ResNet and VG net.
+
+Um, we're going to talk about some um, other uh, stuff, some, uh, object detection bounding boxes and talk about YOLO today, faster R-cnn.
+
+Then we'll talk about semantic segmentation and U-Net today.
+
+One big thing that we're going to talk about is model evaluation. So how are you going to appropriately evaluate your model.
+
+And some of you are starting to do that in the hackathon. Right. You were like F1 score accuracy.
+
+What should I choose. How should I present these. We'll talk about that in model evaluation.
+
+And then would kind of just clearly touch on some of these advanced topics,
+
+noting that we have other lectures later this semester that are going to go into a lot more detail into those architectures,
+
+but I thought I would introduce you to them, since some of you may end up using these for your project.
+
+All right. So let's jump in. All right. Applied computer vision. Image classification looks like this.
+
+You got an image of, uh, dog here.
+
+You put it through our model.
+
+And then at the output here we have, um, a softmax, which gives us the probability that this is classified as a dog, cat, fair bird, etc.
+
+And so however many classes that you have for your model, that's how long this array is going to be.
+
+And it's just going to be those probabilities. So this is what it looks like.
+
+We've got our input image. This is going to be 2224 by 224 by three right.
+
+We've got red, green and blue. Um and our values are between 0 and 255.
+
+Before we normalize we're gonna put that through our network. Then our output is going to be one by however many classes we have.
+
+In this case, we have 1000, um, 1000 different classes that do image can be classified as.
+
+And then the values here are going to be between 0 and 1.
+
+Okay, this is a really fun example of an image classification.
+
+Domino's number one complaint is my pizza doesn't look like it.
+
+Should we eat? That's why we created some pizza.
+
+Check out a smart scanner to check the quality of every piece so we make the right pizza, correct toppings, and even distribution.
+
+You can meet the quality standards ready to go. If it doesn't, we make it right by making it again.
+
+Test us today with any large pizza, including premium from just 15 bucks delivered because at Domino's we're hungry to be better.
+
+So now here in the U.S., obviously, but a global Domino's has, um, a really good quality assessment.
+
+And then they take pictures. I guess this is a YouTube video.
+
+So I don't know if I may take pictures of pizza and then they classify it as a good pizza or not a good pizza.
+
+So that's pretty cool. Um, and then they'll make you a new one.
+
+I want to know what happens to all the reject pizzas. That's kind of an interesting thought.
+
+Okay, here's another example. This is Google's dermatology assistant.
+
+Uh, you can't take a close up photo of an infected skin area using this tool.
+
+Um, and then it gives you possible, um, diagnoses.
+
+Um, so, uh, for example, here you can see that I have symptom severity, treatment duration, all from taking a picture with your phone.
+
+That's Google's services. We've already talked about a bunch of these.
+
+We talked about AlexNet last week.
+
+Um, remember, that's the one that broke ImageNet, introduced the world back to CNN and the usefulness of them now that we have all this data.
+
+We looked at VGG 11, 13, 16 and 19.
+
+And then remember when we got above VGG 19, suddenly our models were failing or really confused because we had accuracy saturation.
+
+Um, so then we talked about ResNet where we had this residual connection.
+
+Um, and ResNet allowed us to then be able to scale, uh, to much larger models.
+
+We talked about inception V3, uh, which is an augmentation of that residual network.
+
+Um, and then there's a couple of other networks that we haven't talked about,
+
+which include Densenet and Squeeze Net, which we're going to talk about right now.
+
+Okay, so this one is Densenet. Here you can see your standard, um, your standard kind of, uh, CNN.
+
+Right. We've got our image here, we've got layers here. You're all just, um, forward feeding through, uh, the network.
+
+Now we've got our ResNet connectivity here. So now we have these ResNet connections, skip connections that allow us to skip layers.
+
+Um, and remember, they're allowing us to basically be able to have an identity function as our base,
+
+and then we're just making modifications from that identity function.
+
+So basically you can just pass all these numbers through. Um, but then we just make modifications to those by hand.
+
+We skip connection. Our dad said, did something a little crazier, which instead of just having a skip connection,
+
+that Skippy layers, now it's connecting everything everywhere.
+
+So that's Densenet connectivity. So now you're connecting this with every point here, every node between your layers.
+
+And you're doing that for all of your nodes. Every layer connected to all previous layers through concatenation.
+
+So if there's L layers, there's going to be L times L plus one.
+
+I would like to direct connections here. And this allows features to be able to be reused throughout the entire network.
+
+What this allows us to do is completely alleviate the vanishing gradient.
+
+So we guess we don't have a vanishing gradient anymore. I mean, it does strengthen feature propagation to your network.
+
+However, as I'm sure looking at this, you can imagine this requires a lot more memory due to storing and then containing those different feature maps.
+
+It's more complex and much harder to do, so it's used less frequently in the real world.
+
+And another image classification architecture is called squeeze net.
+
+So this is a pretty small CNN architecture that uses what we call a squeeze layer.
+
+And it's going to reduce your input channels using one by one convolutions.
+
+So we're basically going to compress all of that information at the beginning of your network.
+
+And then you're going to expand it.
+
+And so you're going to compress the information you have and then expand it back out in both one by one and three by three filters.
+
+And then this allows us to learn a variety of different features.
+
+And this design reduces the parameters and computation as compared to some of the previous networks that we've talked about, like ResNet or VGG.
+
+Net. By having this kind of compressive mechanisms in the beginning of your network.
+
+Any network this reminds you of a little bit. From last time.
+
+Also the name of a popular movie from the.
+
+Early 20 tens. Late, late.
+
+2000. Inception. Inception.
+
+Yes. Thank you. Yeah.
+
+So pretty similar to our inception network, right where we are compressing information and we're doing expansion of that information.
+
+Inception does it with multiple different blocks. Whereas squeezing out as a much smaller model uh, but similar idea.
+
+Now, what's really nice is that, um, a lot of these classification models.
+
+Um, so all of these, uh, that we've talked about so far in this class are available in both the PyTorch model zoo and the TensorFlow model garden.
+
+I just think it's funny that they give these names like Zoo and garden. Um, but all of those models that are trained on, um, ImageNet are available.
+
+And so you can use these pre-trained classification models for your project if you want to.
+
+So we start here with one of these architecture. And then you do some kind of transfer learning or fine tuning process.
+
+Um, similar to how we talked about it last week. Questions.
+
+That's pretty easy to pull. These aren't right. Pretty neat.
+
+That's built into PyTorch. A lot of these models. Yeah, that's the power, the connections.
+
+We did it because there are multiple connections coming to.
+
+What? You don't like them? That's a great question.
+
+They're weighted equally in the original architecture, but there's been modification since that we've them differently.
+
+Yeah. The question. So these pre-trained classification models and ML model that's been trained on
+
+large data set can be used as a starting point for developing new ML models.
+
+If that sounds familiar. This has recently been rebranded to foundation models or Foundational models.
+
+So if you have heard the terminology Foundation model,
+
+it is just a pre-trained model just rebranded because pre-trained wasn't as fancy sounding for the investors.
+
+All right. We talked about this last week. But let's give a quick reminder here of using pre-trained models.
+
+You're going to select and load your existing pre-trained model.
+
+You're going to freeze the model weights. And you're going to do this by turning autograd off.
+
+Um, so basically you're not going to be adjusting any of the model weights, um, in those layers in your network that you decide to freeze.
+
+You're going to remove that final fully connected layer, and you're going to replace it with an empty,
+
+fully connected layer that matches the output dimensions to the number of classes that you desire for your model.
+
+Basically, taking that first big chunk of your network and saying, this is just for feature engineering.
+
+And now I'm going to use this final, fully connected layer to actually make a decision or make a prediction.
+
+Then you're going to train the model as normal. Remembering that most of your model weights are frozen here,
+
+which means you're not actually going to change and you're going to train that final layer weights.
+
+Um, and then, of course, you know, we talked about this last week. You can also unfreeze the whole model and retrain it.
+
+And what this does is it allows it to take less time and training a whole model from scratch,
+
+because those weights are already pretty close to what they will be.
+
+Um, and so convergence happens a lot faster.
+
+And then we have code demos in GitHub for that. So we'll PyTorch and TensorFlow based on your preference.
+
+So go in there check it out if you want to use a pre-trained model.
+
+I imagine for most of your projects I think at the hackathon, most of your projects are working with some kind of pre-trained model.
+
+Yes. I was going to ask for the, um. Uh, component of, uh.
+
+Computer vision. Um, the project there is, uh,
+
+is that the recommendation is saying to unfreeze the last few layers is just to read like the mechanism you recommend or the other one.
+
+Fine tuning that last few layers. This is what I recommend is turning Autograd off for the rest of the layers,
+
+and just focusing on putting a new head on your model and then treating that.
+
+That's usually the easiest way to do it. If you have a really complex problem and you might need to do is unfreeze a few of those last layers, um,
+
+because especially if you're doing something like medical imaging, um,
+
+all the feature engineering might not be quite appropriate, but it's trained on like image net.
+
+So you might have to unfreeze some of those like final CNN layers in addition to changing a fully connected layer.
+
+Regressions based. All right.
+
+So that kind of concludes image classification.
+
+So we kicked off talking about that last week. We talked loosely about that last week.
+
+And then we just finished it up today. And now we'll talk about some object detection.
+
+So it's often more useful to identify the locations of objects in an image rather than just classifying, uh, the image itself.
+
+Um, and for a couple of reasons. Explainability is a need for human validation.
+
+This is not an explainability technique. So not to be confused with explainable AI,
+
+but rather increases understand human understandability and explainability of what the model is, uh, seeing and then autonomy.
+
+So this gives a model, uh, the model is required to have spatial awareness.
+
+Um, and so a model that is an object detection model essentially has more autonomy.
+
+So, um, a couple of different approaches to object detection.
+
+Um, one is going to be bounding boxes. These are these boxes that are going to be placed around, uh, whatever the object is.
+
+And so you can see the label as a person. And there you actually see a confidence of that confidence.
+
+That's 100%. We can also do object masking.
+
+So you can see here how the object is kind of segmented out, almost like you took like a highlighter and tried to highlight the bike.
+
+Um, and so similarly, rather than having a box around it, which is also the box, now we're actually going to segment out that bicycle.
+
+So here's what the inputs and outputs look like. So for bounding boxes let's have our input image height times width times three.
+
+We remember um and our inputs are always going to be the same for these examples.
+
+Then we have our network. And then if we look at the output of our bounding box detection we get a list of detections.
+
+And so we have a list of detections where we have a bounding box x y um so x y coordinate of the uh top.
+
+Right point and then width and height. Uh, these are going to be normalized between 0 and 1.
+
+You're going to have a class identification. So person or dog or bicycle.
+
+And then you're gonna have a confidence. So how confident the model is that this is a dog or a person or a bicycle.
+
+Object match game looks a little bit different. So now we have our original input image with height ten times three.
+
+We have a binary mask here which is height times width, so the exact same size as our input image but by one.
+
+So now we have a binary mask where our values are 0 or 1.
+
+So it's gonna be zero everywhere. There's not a bicycle and one everywhere that there is a bicycle.
+
+Morning. Good morning. Do you have a funny story?
+
+Hello? Have you gone late? Look at the arrows attacking you or something.
+
+We're working on a story.
+
+Okay, so you have a binary mask, right? So? When you're masking an image, that bicycle is only going to be part of your image.
+
+So every single pixel in your image, you're going to have a 0 to 0.
+
+You know, we're up in the sky 000000. We get to our bicycle and that's going to 011111.
+
+And so that's how we got to the outfits.
+
+And I was like, foreign object basket approach. All right.
+
+So this is just a look at what bounding boxes will look like.
+
+Um, for those of you who are more visual and like to see what this would look like as an output in code.
+
+So here we have our bounding box. It says that x y coordinate.
+
+Um, and then we have our width and or height of the bounding box.
+
+This is all normalized between 0 and 1. We've got our class ID.
+
+So for example two might mean car. Um and so we'll have a number there that is representative of some class.
+
+And then we have a component. So 98% confident that it's a car.
+
+And for each bounding box in our image we're going to have a detection for each of those.
+
+So it's just going to be a list of these detections with this information.
+
+There are some variations here. Um, so you might see min max coordinates of your bounding box.
+
+So x, y and x max. And why max. You might see class names instead of IDs.
+
+So it might actually give you a string there like car. Um, and you might have raw output as three lists.
+
+Um, so your output here, instead of this all being contained within one list,
+
+you might have a list for boxes, a list for scores, and a list for classes.
+
+So these are all different variations that you may see,
+
+but more than likely you're going to have a list of detections that's going to look something like this.
+
+Questions. Okay.
+
+So we get a little bit more detailed here and we can talk about, um,
+
+some image segmentation stuff, which we sort of talk about with our object masking.
+
+And then we can talk about some keypoint detection.
+
+So image segmentation. How does this different than our object masking before.
+
+It's like 100%. Yeah, exactly.
+
+So your whole image is covered, right? So you're identifying the sky to see the bicycle to sand.
+
+You're identifying everything in your image instead of just the bicycle.
+
+That's great. How about over here in your, uh, keypoint detection?
+
+Yeah. Uh, you just identify first with that.
+
+And. Yeah, like other people.
+
+Yeah, exactly. And so can anyone think of something? Uh, application wise, that key points would be really helpful for.
+
+Yeah, but. Uh. So.
+
+Great. Yeah.
+
+To make sure that somebody key points are in the correct orientation is they're like bending and lifting something in like a factory environment.
+
+That's great. Yeah, Danny, there's a lot of apps that use that for like, sports or like.
+
+Yeah. Absolutely. So lots of apps out there to do pose estimation.
+
+So that's the task called pose estimation.
+
+To estimate your pose and to estimate the accuracy of your pose in some kind of, you know, um, holidays move or sports move.
+
+Um, it's really fun to watch. Um, uh, like, like basketball games and where they all are and just key points and you just see all those
+
+key points running around while I just put a video in here for the next class on that.
+
+Okay. So for key point detection. So we're gonna look at this first.
+
+We've still got our same inputs. We've got our model. And now our output.
+
+Here is a list of key points x and y.
+
+Um that of course is normalized between 0 and 1. And then we've got a type ID and then a confidence four.
+
+So you're gonna have a list so very similar um, to what we showed with your bounding boxes.
+
+We're gonna have a list here. Um, and each one of these is going to be a key point.
+
+So x and y value where this key point exists in your image.
+
+Um a type. So zero might be nose and then a confidence score over 98% confident that this is a nose.
+
+Similarly here x y type is like the left eye.
+
+And then we're 96% competent and you'll have more than twice as many key points as is found in your image.
+
+Yeah. Tiffany. Only for one.
+
+So. No. So, um, the key points is looking at, um, typically what you're looking at with key points is going to be humans or animals.
+
+And so the key point model is going to be looking for um, specific points.
+
+Um, the human or animal, um, that it is uh, detecting.
+
+And so it's detecting these different points of an animal. So not in, in every image, you're not going to see the nose, for example.
+
+Right. Somebody's got their back turned and you're not going to actually see the nose at all.
+
+Uh, but then it's some person might be facing forward and you're going to see the nose.
+
+So you're not going to see all of the key points, just the key points that are found in that image.
+
+And so if an image has just a tree, you're not gonna have any key points in that tree.
+
+For a model that was trained on keypoint detection.
+
+Unless somebody went and did like key points of it, like built a data set of key points of a tree, which would be really boring data set.
+
+Typically they're developed with humans or animals and. So we're working in the Truss lab right now on a pretty fun project with, um,
+
+elephants and looking at keypoint detection of elephants to determine their behaviors,
+
+um, in both, um, captive and wild environments, uh,
+
+to compare and contrast those and other project where they are cracking down on life and their company.
+
+And for the best measure that's happening. Not know, but our collaborators were.
+
+So yeah, some of our test data will come from that. Yeah.
+
+We're primarily looking at camera tracks that are usually like mounted in trees or closer to the ground,
+
+so you see more of the full body rather than the drone imagery that's going over the top.
+
+But you can still get key points from. It's just a slightly different data set.
+
+Yeah. Tiffany. Yeah. Before we.
+
+Or if you think. You can kind of think of the type as being like a class, and that's based on what it was trained on.
+
+So you'll have a whole list of classes like, you know what you might be interested in identifying as facial features.
+
+And so all of your classes, the model you trained, all of the classes are related just to facial features like, uh, the eyes, nose, the mouth.
+
+Um, and actually they have really detailed, um, keypoint detection for faces of all these different points on the face that,
+
+you know, like, you know, I wouldn't be able to necessarily point out myself,
+
+but a model can um, a lot of the models that you'll see in an application are more of like the typical like one at the wrist,
+
+one of the top of the hand, one of the elbow, one of the shoulder. So they have standard formats for keypoints, for like pose estimation.
+
+Um, but you can really build a key point model that just key points of anything.
+
+Okay. So coming back to our segmentation piece.
+
+Um, so this is uh, an important distinction. So there's actually two different types of segmentation.
+
+We have semantic segmentation, which assigns a class label to every single pixel of the image.
+
+So here you can see an example of that. Every single uh point in this image is going to have a class label assigned to it.
+
+This is similar but different to instance segmentation.
+
+So an instance segmentation. The model distinguishes between different objects of the same class.
+
+So here you can see this is person and this is person.
+
+They're both given the same class. It doesn't identify that this is person one.
+
+And this is person two an instance segmentation.
+
+What our model would say is this is person one and this is person two.
+
+So it actually identify that there's two different people in an image.
+
+We're done here. Right. There's two different dogs in our image.
+
+So this is what it will look like. So we got our input image. And depending on whether we have semantic for instance segmentation.
+
+Or output it's going to look a little bit different. So in semantic segmentation.
+
+We have a semantic mask. So we have height times.
+
+What times one. So just the dimensions of our original image.
+
+And we're going to have a class per pixel. So every single pixel in your image gets labeled as a class.
+
+And this is just values of zero to plus minus one.
+
+So you just have all of these different asset classes and you're just going to label, um, all every pixel in your image as a particular class.
+
+Instant smarts are a little bit more tricky, right.
+
+Because you're trying to identify between different objects that are in the same class in an image.
+
+So an instance maps or output is a list of different instance masks where we have h by w.
+
+So height by width of our input image.
+
+And then we apply a mask on top of it for a particular class.
+
+Our class ID and then our confidence. And so here is what that might look like.
+
+You might have a numpy array that is a mask that is the same shape as your image.
+
+You'll have a class ID associated with that mask. So let's say that's the mask for car.
+
+Um, and then we'll have a confidence score which is 90 seen 98% here.
+
+Questions. The difference between semantic and instant segmentation really trips people up.
+
+Um, but if you think about it from a concept of instance, you are looking at every instance.
+
+Of a particular class. So most of our object detection models were pre-trained on the common objects in Context or Coco dataset.
+
+Um, this is a data set of over 200,000 labeled images, 1.5 million object instances, and 80 object categories.
+
+And you can see, um, the segmentation that they have here on the image from the Coco dataset.
+
+Um, this is pretty interesting because you got number of categories by instances per category.
+
+And so over here we see ImageNet um classification.
+
+We have image net detection. And then we have Coco here.
+
+So there's actually a much higher instances per category than there are for ImageNet classification.
+
+Three more um instances for each of these categories.
+
+So we see more sheep in the data set for example. Okay.
+
+So let's look at some model architectures then to do this object detection with bounding boxes.
+
+And so we've got our picture of our dog here. We've got our model.
+
+The model is going to output, of course the bounding box, the class ID and the confidence.
+
+And so this allows us to be able to draw a bounding box around that dog.
+
+Really funny example of this is a Lego brick finder. Um, and so this is a DIY tutorial if you want to go and check it out,
+
+but somebody actually created a Lego brick finder where they could just take a picture of their,
+
+um, a big pile of Legos, and then they could try to find particular bricks.
+
+Fun if you're into Legos. Another one.
+
+That's pretty fun. Is this a smart trap for agriculture?
+
+And so here you can see, uh, detections.
+
+Uh, uh, these, uh, these particular type of insects that I guess are eating this plant.
+
+And so then you can do like counting and see how many or how many insects there are.
+
+And that can help you with resourcing for, um, pest control for example.
+
+Another thing is in dentistry. So this is an example of teeth numbering for dentists.
+
+And so you can actually do an object detection approach to identify like different teeth, um,
+
+in the mouth and be able to draw boxes around different um, types of teeth in the mouth, which is pretty fun.
+
+Like I might look familiar. Um. So when we talk about bounding boxes, typically, and I, I give you some idea that there are variations of this.
+
+Um, typically, uh, we're going to use the Coco annotation standard.
+
+So we're looking at the top left, the top right before, uh, we're looking at the top left.
+
+Um, x and y coordinates. So like x and y coordinate and then the width and height of the box.
+
+And then each object is going to be labeled with that object class.
+
+And so here you can see that example in real life here where you see the x and y coordinates of this dog image.
+
+And then you have the width and the height of it as well.
+
+And then I'm guessing category ID 58 is dotted.
+
+Okay, so how would we go about doing this? What do you think?
+
+I'm going to figure out how to put a box around something in an image.
+
+If you're processed through the window. Technique. Sound.
+
+Yeah. So this this is like the basic technique that everybody first thinks about, right?
+
+Is like. Well, could we just do basically this sliding window approach where we slide a box around our full image?
+
+Makes sense from a simple perspective. Now what are problems with that?
+
+Slow. Okay. What else? Expensive?
+
+No. Hard to like.
+
+Watch them. They. Okay.
+
+Well, we're just looking at still images here. Like, depending on the size of the box and like.
+
+Exactly, Danny. So how do we actually decide how large your box should?
+
+Uh, so that's where that simple approach falls short a little bit.
+
+But we're going to do something kind of similar in that we are going to use a concept called anchor boxes.
+
+So because we have objects of varying size and shape and location or image,
+
+what we're going to do is we're going to take thousands of patches of the image of different sizes and shapes and make a prediction for each one,
+
+and then keep only the best. And then these patches of varying shape, size, location.
+
+These are what are called anchor boxes. And we can set the anchor box size or shape range to determine it.
+
+And we can determine it from our training data. But we get to set that.
+
+So if we have really large objects in our data set we might have larger anchor boxes like elephant in an image very large.
+
+I will use large anchor boxes to do those detections.
+
+If you have are looking at a top down view of a basketball game being played basketball very tiny.
+
+You do not want a box this big, uh, because it's going to not be localized to that where that particular basketball is.
+
+So you really want to think about this from a training data perspective.
+
+And like whether the objects that you want to detect are small or large.
+
+Now when you're using a pre-trained model, this is already set for you. So for a lot of the applications we're actually going to do that.
+
+You're going to be using anchor boxes that already exist. But know that this is an option for you to think about is modifying the anchor box sizes.
+
+There's a lot of these. So this image represents 1% of the anchor boxes in retina net.
+
+1%. That's 100 times more boxes here.
+
+I will, but then it would just be flat screen.
+
+Sorry. Go on for a little trippy. It looks like that Cubism style of art.
+
+Got a little bit of an issue here though. So if we make predictions for every anchor box.
+
+I mean, many of them are going to be low probability and many are going to be overlapping.
+
+Right. We take a look at this. I mean, just let's say your basketball is right here or basketball is right here.
+
+There's like at least ten anchor boxes around that.
+
+Basketball and all of this other stuff is useless.
+
+So what we do is something called non maximal suppression.
+
+And ask me why it's called that noise where we are going to keep only the best one.
+
+So only the best anchor boxes are going to be kept.
+
+So we're going to remove all predictive boxes that have a detection probability less than some confidence threshold be set.
+
+So we're going to say okay, any box that doesn't have at least a 90% confidence that the object exists within this box is going to be just thrown out.
+
+And then second, we're going to eliminate duplicate boxes which refer to the same object.
+
+And the way that we're going to do that is we're going to calculate the intersection over union
+
+value for each pair of boxes and eliminate one when this value is above a certain threshold.
+
+The box we keep is on the one with a higher detection probability.
+
+So here we have our area of overlap over our area of union.
+
+And this gives us our intersection over union. We've got a ground truth box here.
+
+And green got our predicted box here in red.
+
+This is our area of overlap, right? We're not super close to that ground truth, but a little bit.
+
+And then we take this divided by our area of union, which is both of them together.
+
+And ideally what you want is this predicted box to be exactly over that ground truth box, or at least very close.
+
+And so we're going to do this with all of our boxes that are overlapping.
+
+And we're going to find the box with the highest detection probability.
+
+And we're going to use that one as our detection. We're going to need this slide.
+
+Frowny face. Yeah. You better. This is what we want, right?
+
+Okay. So one of the architectures that we use to do this is called YOLO.
+
+Or you only look once. Um, so it is divided and you can probably tell, like the era that this was developed based on the name.
+
+Uh, so yellow divides an image into a grid of S by S cells, so S by S,
+
+and each grid cell is going to be responsible for predicting objects that are centered in it, centered in it.
+
+And each grid cell predicts and number of bounding boxes of varying shape dimensions for each cell.
+
+So we're going to have s by s right size of that grid by n total predictions where and bounding boxes.
+
+That's going to predict. And the idea is for us to eventually get to here, right where we have the bounding boxes around.
+
+Dog bicycle. So for each grid cell, we're going to use nine anchor boxes to make bounding box predictions centered within that grid cell.
+
+So there were some modifications of yellow. My favorite.
+
+So you almost up to like the ten. Now is there a B11 for yellow?
+
+B9 is the most pop. BB8 and B nine are the most popular, and probably the ones you will use because there's actually documentation support.
+
+Um, but a bunch of people have modified the yellow model in some way.
+
+My favorite is yellow B three though, and that is because of the paper that came out.
+
+Uh, with your will be three. And we're going to take a look at in just a second. Okay.
+
+But YOLO v3 to give you the background here, uh, it says that what we predict for each bounding box is the offset from its corresponding anchor box.
+
+So the center point location within the grid, so the change in width from the anchor box and then the change in height from the anchor box.
+
+And so we're going to make this this is our prediction. And then we're also going to predict a class for each box.
+
+So here you can see our original anchor box. Dimensions are in black and our predicted bounding box.
+
+Then here is in blue. And so we're measuring that offset.
+
+So the backbone here is darknet 53, uh, which you can see here, uh, uses a number of convolutional layers as well as residual connections.
+
+So very similar to those ResNet models that we were looking at.
+
+Um, and. This paper came out in 2018.
+
+I love this paper. Our new network is a hybrid approach between a network using YOLO v2, darknet 19 and that new fangled residual network stuff.
+
+This paper has been cited tens of thousands of times.
+
+More paper excerpts. We tried lots of stuff, but we were working on a lot of it didn't work.
+
+Here's a stop number. So if you ever feel bad about your projects or how they're going, want you to remember you and this paper that.
+
+I mean, many thousands of people have used and cited um, and.
+
+Um, yeah. I feel better about the work you were doing. Um, I like this one.
+
+But maybe a better question. This is what they close with.
+
+Maybe a better question is, what are we going to do with these detectors now that we have them?
+
+A lot of the people doing this research are Google and Facebook.
+
+I guess at least we know the technology is in good hands and definitely won't be used to harvest your personal information and sell it to.
+
+Wait, you're saying that's exactly what it would be used for? Oh, let me close.
+
+So just a wonderful paper. Another wonderful.
+
+Oh, this is the plot in the paper. So to be sat.
+
+So note for poor practice. I'm going to start at 50.
+
+And so this isn't actually sort of zero. But they said that you know there's this off the charts.
+
+So I mean it does do better, right?
+
+So inference time here at the bottom, uh, we've got uh, basically our um, accuracy score there that we're going to talk about today, um, up here.
+
+And so it was had reasonably high performance and pretty quick inference time.
+
+So it could even run in almost real time because it's running, you know, less than 50 milliseconds.
+
+It's pretty cool. Okay, so getting past, uh, YOLO models, uh, and there's just been many advances upon the YOLO model since then.
+
+You architecture is different layers. It tried out different things.
+
+Um, and so when you use a YOLO model today, this is kind of that history, that backbone of where it is today, um,
+
+with, you know, little modifications to make it more efficient, um, and to make it less computationally expensive.
+
+All right. So let's talk about our CNN.
+
+So this, uh, paper came out around the same time and it was called regions with CNN features.
+
+Where are CNN and Yahoo! The main concept here is that they have region proposals.
+
+So they have this three stage pipeline where they generated 2000 region proposals using a selective search process,
+
+and then they warped or cropped each region proposal to a standard size, and then they send it through a pre-trained CNN.
+
+Originally that was AlexNet. They extract the CNN features for each proposed region, and then they classify each region with an SVM.
+
+So this is one of those like modify. They use deep learning to do a lot of the feature engineering.
+
+And then they're going to throw it in SVM to make the actual prediction of where the boxes.
+
+And then that didn't work so well. So they also added a bounding box regressor that basically predicts your offset adjustments for x,
+
+y, width and height, and refines the initial region proposal to better fit the actual objects.
+
+So they were like, we can quantify this error and you can actually build a model to quantify our errors.
+
+And so we're also going to tack on this model at the end.
+
+And you'd be surprised how much this happens in real life where you don't really get the results you want.
+
+But you can kind of quantify the error. You can build another model to just like offset your error a little bit.
+
+I mean here is a picture example. So we have these like region proposals.
+
+Um and then we're going to put that through our convolutional neural network feature engineering or feature extraction basically.
+
+And then we put it through our SVMs. And then we say well this is how far off you are.
+
+So we're going to like try to scoot you back, um, towards reality.
+
+Um, what? Some issues here. Um, as you can probably imagine, training and inference are really slow when you do this.
+
+Um, so for. Each of your region proposals.
+
+You're putting that through a network and then you're running SVM, and then you're doing this regression on the back end.
+
+Training inference as well.
+
+Um, also, the CNN features needed to be cached for each region proposal from all the training images in order to train the SVM.
+
+So it also required significant storage space. Which made it pretty untenable.
+
+And so now we introduce faster R-cnn, which replaced that slow selective search with a neural network to generate the proposals.
+
+So remember we have that selective search that says what these region proposals are.
+
+And then we put it through this whole system. Now we're going to actually do it in our own network to generate proposals.
+
+And we're going to use anchor boxes. Do you think our boxes were defined in a previous papers that were like this.
+
+Might as well use those. Those seem a little bit more efficient than our region proposals.
+
+And so RCN required separate training stages for all of these.
+
+But faster our CNN can be trained end to end up with a multi-task loss function,
+
+so it can be all trained at once instead of in separate training stages.
+
+And so here is, um, a good visual of this. You got our image.
+
+So convolutional layers here we build out some feature maps that become our region proposal network.
+
+Um, these proposals are then put through, um, our pipeline.
+
+But all of this happens within one training block. So rather than having all of these separate things, it's all in one.
+
+So we can compute features for the entire image at once.
+
+And then we're going to use some pooling to extract features for each proposal from that shared feature map.
+
+Major improvement. So 47 seconds is how long it took our CNN to process each image.
+
+47. Point two seconds was faster RC unit.
+
+A huge difference in only a couple of years between these papers.
+
+It also completely eliminated the need to store features for each proposal on disk.
+
+So that storage requirement, we were able to get rid of it.
+
+All right. We are now going to take a five minute break.
+
+We're going to come back, stretch and grab some water, and we'll come back in and we'll finish up the lecture.
+
+How are you doing? Too bad. I think you guys are worse than the sweat lodge in my head.
+
+It's like I got rangers. I'm sorry. I've never met you.
+
+Because you haven't. I never liked my friends.
+
+Especially that, actually. And then first thing is, I was going to.
+
+Kill yourself. But like I said, it's one of those things about like, oh, it's like structurally a different thing.
+
+I'm just like, short skirt and dress. Like.
+
+Or shorts for short. Oh, man. How are they not?
+
+Very short. Period.
+
+Okay. Yeah. You're right. That's fine.
+
+I have been a manager ish, but it keeps because I like the article that.
+
+Way too long. If you try to do anything, I want you guys to shut us down.
+
+Oh. So, like, don't think you can run it for, like, one epoch, and then I'm sure it's not.
+
+Or it doesn't. I don't even know. It literally is like 26 million parameters that, like, spits this out.
+
+And then it's like, if you can see this is like, no, like maybe just so you can diagnose, it'll send that stuff over.
+
+So some of that. Okay. Other quick question.
+
+Um, I did have a male for me. I do remember that one of the, um, like, it's like it's all about, you know, if you want, I know it's okay, I issue.
+
+So I was just. Oh. Oh, okay. Okay. Yeah.
+
+But. So the class was not originally supposed to be my class.
+
+Well, so, I mean, I have not done anything wrong with my job because, you know, she wanted to share, which was fine.
+
+Um, but then set up my content, and I was like.
+
+Oh, yeah, we have that next time and again just to trade it on.
+
+Okay. Well, I mean, so if you need someone to go at.
+
+Exactly. Yeah, I just like some of them should be good.
+
+But yeah, if you want to go and look and just make sure there is some way to submit all features with one person.
+
+I had a question about it. Uh, faster R-cnn or different stuff or and share them all in general.
+
+So I know that it's significantly faster.
+
+But I did question like about the GPUs in like first place because I assume, like the GPU power got faster in those couple of years anyway.
+
+But like I was, you know,
+
+so we were kind of like having a debate about this yesterday because when we were like setting up for a project because like, I know, you know,
+
+you said like we had actually I said, look, you know, you know,
+
+in a sense that we can't just be streaming that I'm trying to fix for like, my final submission on this.
+
+Um, and so I was kind of wondering, like, we were kind of debating between server and serverless where, like, hosting everything,
+
+like running pod and stuff, because that's when you were set to, like, have your friends or like server because,
+
+you know, I was advocating for server because even though there's no GPU like we Alex has cluster,
+
+I guess we would be training the model like on the cluster and then just like loading it out on like a server, that CPU only.
+
+And I was wondering, do you like, do you know how like, well it can do like, you know,
+
+configuration can use CPU only, especially if it's just like, you know, an image, right?
+
+Who's just running out. Yeah. So that I can as I can access.
+
+Um, it's kind of it's, it's, it's Java.
+
+So it's kind of like and also like Samsung's kind of like doing depth detection.
+
+Yeah. That I also I tried also to come in I might that's one thing you could do if you
+
+are like you kind of insisted on running on the CPU is doing distillation of it.
+
+Um, so yeah, go get a smaller neural network that is training.
+
+Really? Yeah. I was just wondering because I know neural networks, especially smaller ones, can work perfectly fine.
+
+So, you know, I like I said, you know.
+
+I thought I had one project I had not. So let me say like weights or what do you call it, MLflow or like I trained it on my computer then like,
+
+oh, I got to try out a lot of people on the cloud.
+
+But. I might tell that maybe they're already.
+
+Yeah, I started cloud, I just. You know, here we go.
+
+About to do my final project. What do you like to do?
+
+I don't know. It's kind of like my understanding of the ecology, the clogs.
+
+I got the sense that that was itself. Yeah. It's just.
+
+It's just really. I just do like that long. Yeah.
+
+Yeah, yeah. That's where you got your emails.
+
+You know, because cell phones today, I. There we go.
+
+Yeah, yeah, yeah. You know what you get for killing you.
+
+I don't really know what to say. Sorry for the GPU inference for sheep and its ad run pod, but, uh.
+
+Okay. I mean, I'm sure there's plenty of other ones I've used in the past, and I like it because the documentation is pretty good, and that's okay.
+
+And you can. So what I was thinking was to make it look professional, like take over the existing Z,
+
+because it's going to put like an API in front of you so that, you know, you can actually like communicate with the web and so on.
+
+And then we build like just simple reading react. And they could just, you know, communicate with that flask, which looks pretty cool.
+
+Yeah. I mean, I think there's a lot of options and it kind of depends on what skills you want
+
+to develop as well and like what you want to be able to say that you've done.
+
+Oh yeah. That's that's for Mike though.
+
+So like I was I was trying to teach him like the most like simplistic but also like professional but also real world scenario where you're not like,
+
+you know, locked into a vendor, you know, to for serverless for the rest of your life.
+
+But also I didn't want to like overcomplicate it with like react to like serverless Kubernetes.
+
+So like, you know what I mean? Just like the way we've done everything like last semester where I was like, play to our strengths.
+
+Yeah. Never weaknesses. Yeah.
+
+And I wanted to do things differently this semester because I'm not familiar at all with like react, Node.js, something like that.
+
+So once like actually start work like, yeah, I did a lot of the production advising and stuff before, but like it's his turn to system to learn.
+
+So I'm trying to like come up with like the simplest but also like real world and nice way of doing it, you know what I mean?
+
+It's not like serverless. Like something that's here before Friday.
+
+Before Friday. Okay. Yeah. I do think that, you know, I think the replicate might be a good option because then,
+
+I mean, yeah, I do worry about the deployment aspect of that yesterday.
+
+Right. The other day.
+
+Yeah. Yeah. You know I do think that that's going to break down.
+
+Yeah.
+
+If you always challenging what you've done with the network is kind of like I'm a VC and then you know I'm going to go move it to Android anyway.
+
+Right. Cool. Right. Yeah okay. Yeah.
+
+Yeah. We don't have to. I'd be looking to replicate that because that that's that's the tool that I know.
+
+You said I was trying to remember yesterday what it was.
+
+I was trying to remember that it's really nice to get a really, very well next video from okay,
+
+because that's what I was having them do react just because it's the most popular. And if I could just say.
+
+Why are you doing so I, I don't know who he works.
+
+And everybody will start coming back together after the brand.
+
+Yes. And as we move towards more generalizable models.
+
+Sorry. Under the value valuations we're talking about like task specific.
+
+Yes. How would you the valuation like the more like generalized model that everybody model is really quick.
+
+Oh, no. That's a great question. Uh, with, uh, we'll talk about like how.
+
+No, we don't talk about this.
+
+I think we talked about this in the generative AI lecture, but we'll talk a lot more about clip in like how it was built.
+
+How was developed, how it was evaluated. Um, embedding models in general are quite challenging to evaluate in the real world though, right?
+
+You know, you can evaluate it while training and all of that. But like in real world settings, really, really hard to evaluate.
+
+Um, yeah.
+
+I spent, uh, a lot of consulting time working on ways to evaluate embedded models, and they are all very challenging and very domain specific.
+
+Unfortunately. What is.
+
+Um, clip is, uh, the major embedding model that connects, uh, images and text, and it's kind of the backbone behind most image generation models.
+
+It's kind of crazy. Like the fact that it works.
+
+Yeah, while this is absolutely bonkers, loss functions for the win on that.
+
+All right, let's jump into some semantic segmentation.
+
+And some architectures for this. So reminder here.
+
+So we get our semantic segmentation. And we have our semantic mask which is just going to be our class per pixel.
+
+So our output is the exact same as our input.
+
+Except now we are just going to output a class for every pixel in our image.
+
+Um, so here are some real world examples of that.
+
+And so this is a, um, fashion prediction, uh, where it's, uh, predicting from an image, um, what different pieces of clothing are.
+
+Um, this is a really fun paper. Uh, that's actually doing a segmentation of plants for agricultural purposes.
+
+Um, and so they have, uh, so you can see the images up here, and then you can see the segmentations here of the leaves versus the, um, the fruit.
+
+And, uh, they were doing a bunch of like plant health work here,
+
+which is kind of cool looking at the health of the plants based on these segmentation.
+
+And so the main architecture that's going to be used for segmentation is, um, a network called U-Net,
+
+which is actually going to be very important, um, ironically for diffusion modeling as well.
+
+Um, but the basic idea behind net is it's going to label each pixel in an image with its corresponding class,
+
+and it's going to do that semantic segmentation. Um, this is a fun cell tracking challenge.
+
+Um, instead of tracking, um, cells across different images.
+
+So the unit architecture is pretty interesting and it looks kind of scary at first.
+
+But these are all different components that we've already talked about.
+
+Um, so we start at our input image, um, and our input image, um, whatever size it is I think here it's.
+
+572 by 572. So we start out with this and remember that semantic segmentation where I put in the exact same size.
+
+So out here it needs to be the same size or some scaled version of that size that we can transfer directly to that size.
+
+And so what we're going to do is we're going to do this like um, basically encoding decoding a path for our unit.
+
+So we have our contracting path here. This is our encoder.
+
+And what it's going to do is it's going to use repeated blocks of convolution and max pooling operation.
+
+And it's going to try to capture some of those hierarchical features,
+
+and it's going to reduce spatial dimensions and increase the number of feature channels we have.
+
+So this is basically our feature engineering right.
+
+We're doing a lot of feature engineering here bringing that image and encoding it um and pulling out features.
+
+Then we have our expanding path or decoder which is going to use, um, upsampling operations.
+
+So remember maxpooling is downsampling or going from big to smaller.
+
+Um, we're going to use an upsampling operation, which is basically the opposite of max pooling.
+
+I'm going to upsample operations, uh, followed by convolutions that are going to help us restore our spatial resolution.
+
+And this is going to allow us to combine some of our high level semantic information with our fine grained spatial details from our encoder,
+
+through the use of skip connections. So these gray points here are skip connections from our residual networks and skip connections.
+
+Concatenate feature maps from the encoder to the corresponding decoder layers.
+
+This allows us to preserve some of those fine spatial details that would otherwise have been lost during that downsampling process.
+
+So that residual, those residual connections allow us to then be able to access the fine grained feature information that existed
+
+earlier in our network and be able to pull that in later in our network after we do this entropy cooking process.
+
+And then our final layer is just going to use a one by one convolution to map the feature vector to a desired number of classes,
+
+followed by pixel wise softmax activation to produce class probability maps for each of our pixels.
+
+And for a segmentation there's many more models. So mask R-cnn.
+
+So basically our CNN end. But with masks there's deep lab three.
+
+Plus there's the pyramid scheme passing network with PSP that.
+
+And then there's also segment. So there are many models that you can explore for segmentation purposes.
+
+But, you know, it is kind of that major one. All right.
+
+So let's jump in and talk a little bit about model evaluation.
+
+And so this is you know kind of key knowledge which is why we put the break directly before this key knowledge towards your projects.
+
+Um, so really good, you know, time to be. Thinking and asking questions about how you might evaluate your projects.
+
+All right. So image classification. So classifying image.
+
+Our primary metrics here are going to be accuracy. Precision recall, F1 score and area under our ROC curve as well as our confusion matrix.
+
+You all are probably familiar with these. From John.
+
+Things are not okay. Excellent. So image classification should look really familiar.
+
+We're going to get into some stuff that looks less familiar, but at least image classification is going to look familiar.
+
+In terms of best practices. So some best practices are to use stratified sampling for your train validation and
+
+test split to handle any class imbalance that you have in your image classification.
+
+Reporting your per class metrics for multi-class problems.
+
+So not just your overall um. Your overall F1 score, but what your F1 score is per class?
+
+Using the top key accuracy for problems that have many facets.
+
+And then using cross-validation for smaller data sets.
+
+So all best practices for the evaluation of image classification models.
+
+Questions. All right.
+
+How about evaluation of object detection with bounding boxes?
+
+We're here. We're going to use something called a mean average precision map.
+
+We're going to talk about that in the next slide. We are.
+
+You can also use intersection over union or IOU.
+
+Uh, we have some standard thresholds here. Um, like, you know, average precision .54.75.
+
+Um, and, um, our Coco metric uses an average over multiple IOU thresholds.
+
+And if this seems confusing, we're going to go into this in a little bit more detail in just a minute.
+
+You can also look at your standard precision recall curves. You can look at false positives per image.
+
+Um, and you can also do a log average miss rate.
+
+You can look at your miss and walk average or miss rate. Some best practices here are to use the Coco evaluation protocol or standardized comparison.
+
+Report performance at different scales. So if you have small,
+
+medium and large objects is to actually go to report performance at those different scales and then evaluate with different IOU thresholds.
+
+All right. So mean average precision is a measure of the prediction quality in object detection.
+
+Because if you don't have if you just look at accuracy right, how are you going to define accuracy.
+
+Is the accuracy going to be just that inside the box somewhere.
+
+Is that object that you're trying to detect? So if you have a bounding box and it's supposed to detect this cat,
+
+but the bounding box is like here and only detects part of the ear, how do you classify how accurate that is?
+
+Because it got close to the cat. Go for the cats here. But I didn't get the whole cat.
+
+So is that is that really accurate? Or is it not accurate because I did get part of the cap.
+
+So maybe average precision allows us to actually be able to quantify how good it is.
+
+And if we did use that same metric we talked about earlier, that intersection over union, where again,
+
+we're looking at that area of overlap between our predicted box and red, our ground truth box in green.
+
+And we're going to divide that by the area of Union, which is both of those boxes combined together.
+
+And so first. Yeah. So yeah. But it's like around true products that's just like human.
+
+Before you training. All around. Exactly.
+
+So this comes from your test data set. Um, similar to your training data set, right.
+
+Somebody is going to have had to go there. And do you have any boxes?
+
+Yeah, exactly. So it gets into questions of how old the human labor is.
+
+But we are going to assume that humans label everything perfectly when we are doing mean average precision.
+
+And so we have our ground truth, which is in green, our predicted box here in red.
+
+Here are IOU isn't great. We still get part of the cat, but we aren't getting the whole cap.
+
+And we're cutting off part of the cap here. This is what we want, right?
+
+We want to have our predicted box intersecting with that ground truth box as much as possible, and getting as much of that object as possible.
+
+So this one is an IOU of approximately 0.3, whereas this one is approximately 0.7.
+
+Yeah. Like this. Maybe this. What's the difference in the two pictures of being one?
+
+What makes the left one a false positive? And what?
+
+Excellent question. Just your threshold where you set. Right to your threshold here.
+
+If you're. If I were you threshold is point five. And this becomes a false positive because you are saying that this is not accurate and this
+
+one becomes a true positive because you were saying this one is an accurate detection.
+
+This one is correct detection, this one is an incorrect detection.
+
+And you get to determine that by setting a threshold,
+
+which may be different depending on your application or your application, you might only care about the faces of the cat.
+
+And so this could be a perfectly fine, um, and perfectly fine threshold.
+
+Um, or you might desire that you have that entire academy image and then you're going to get higher threshold.
+
+And the other thing I also understand was the difference between a value and, uh.
+
+It's just like the mean of all the IOUs.
+
+We're getting there. Yes. Good questions. So first we calculate the IOU for each box.
+
+We set an IOU threshold and use it to classify predictions as true positives or false positives.
+
+Mind in here. Type one error versus type two error.
+
+I have a hard time remembering these in my head. Um, so I really like this one.
+
+Is that you, grandma? And it was like. Yes, dear. And then here.
+
+You're not my grandma. You're a wolf. No, dear. I'm here for false negatives here.
+
+Okay, but coming back to true positives. False positives.
+
+Remember, we get to set what is defined as a true positive.
+
+And what gets set is a false positive based on our definition of what that threshold is.
+
+So we can vary that our threshold value. And what we can do is we can calculate a precision recall curve for each of our classes that.
+
+And so we've got our precision here. Remember precision is true positives divided by 20 plus false positive.
+
+We've got a recall here. Remember recall is true positives you know.
+
+Need to update this line. Okay. Um, area under our precision recall curve is then our average precision.
+
+And we're going to calculate the mean average precision across all of our classes that.
+
+So the mean average precision takes into account this IOU threshold that we see here.
+
+And it's going to construct this precision recall curve for us.
+
+And then we're going to calculate the mean average precision across all classes, which is then our math for mean average precision.
+
+Questions about mean average precision. Who's doing object detection for their project.
+
+Okay. Only one team. Okay. Well, you guys will need to be very familiar with me now.
+
+Precision. Um, the rest of you, um, you will likely be using something different.
+
+How of you are doing image classification. Are there that many people doing segmentation?
+
+How many of you are doing segmentation? Okay, we've got some abstaining.
+
+I'm curious what you guys are doing, but you're like, wait, we're in the NLP module Army.
+
+Okay, so for evaluation of semantic segmentation, the primary metrics we're going to use here are mean intersection over union.
+
+And so. Mike, you talked about like the difference between LSP and intersection over union as a measurement.
+
+You can use mean intersection over union as your measurement.
+
+And that is used for both object detection, but then used very commonly for our semantic segmentation as a primary metric.
+
+You can also look at pixel accuracy. So just how many pixels are correctly um classified.
+
+Uh you can look at a frequency weighted IOU.
+
+So that kind of can help with some class imbalance there. And you can look at boundary F1 score.
+
+So looking at just the boundaries of objects and seeing, um, how finely grained your, um, predictions are for the semantic segmentation.
+
+So that's especially if you're really concerned with, um, something being very precise.
+
+You might look at a boundary F1 score. Another best practice is to evaluate performance on different object sizes, um and report per class IOU scores.
+
+So similar to our classification you want to report what are your IOU scores for?
+
+Um, each of your, um, classes? Okay.
+
+And then in terms of general evaluation. So for everyone who didn't raise their hand I don't know what kind of project.
+
+So what kind of project you're doing. But you guys will fall into this category which is general evaluation.
+
+So error analysis is really helpful. Right. To do a qualitative analysis under failure cases.
+
+Right. The cool thing about computer vision is we're all pretty good at it.
+
+Everyone in this classroom is pretty darn good at computer vision. We can identify things.
+
+We can put boxes around things in our head. We can do semantic segmentation.
+
+And so looking at some of those failure cases and doing a qualitative assessment can be
+
+really helpful towards debugging your model and evaluating what your next steps are.
+
+Doing some visualization of your predictions. And so that confusion matrix, for example, really nice to do that.
+
+Um, if you're doing an image classification so peop other people can have a visual of this.
+
+Uh, analysis and performance across different conditions. And we did this a little bit.
+
+So some of you did, um, some of this, uh, last week at the hackathon, uh, looking at differences in lighting scale occlusion.
+
+This can be really helpful towards identifying gaps in your training data where you might need to apply augmentation for.
+
+And then in terms of model resources, um, looking at reporting computational resources, um, can be really helpful.
+
+Um, measuring inference time, uh, considering your model size and memory requirements.
+
+Oftentimes, if you're going to be developing a model for a company,
+
+you're going to want to know this information just as much as they're going to want to know,
+
+like accuracy scores, because they're going to want to know how this is going to affect their bottom line.
+
+And part of that is how much it's going to cost to train this model and run inference on this model.
+
+All right. I'm giving you a.
+
+I'm telling you about my project, which is classifying the difference between a dog and a cat from an image, and I get 57% accuracy.
+
+How much information does this give you? Not a lot.
+
+Yeah. So there's not much information here. So in your projects, if you just tell me your accuracy is 57%.
+
+I don't know that much information about it, and neither does anybody who might want to use your model or be interested in using your model.
+
+What might be better here. So I was there.
+
+I went. All right. Yeah. So matrix A there.
+
+So here we've got our ground truth cat. Ground truth dog. Predicted cat.
+
+Predicted dog. We've got, um, six cats predicted correctly, six, um, that are, uh, predicted.
+
+Now. I never predicted incorrectly. The gods are dog.
+
+Uh, six are classified as a cat. 14 are predicted correctly.
+
+And this gives us a little bit more information. What else?
+
+Like, cause I'm. Yeah, great.
+
+So model cost and runtime. Those are great additions here.
+
+Layers. Yeah, all the information. What about like that 57% accuracy?
+
+Can we break that down further? Yeah, absolutely.
+
+You can use different evaluation metrics. If we wanted to stick with accuracy, which we may or may not want to.
+
+One thing is to do the per class accuracy rate.
+
+This is really informative for me because this says the model is pretty good at dogs but sucks at cats.
+
+So this can be really helpful when looking at debugging your model,
+
+but also looking at presenting your model as you can present the full picture of accuracy,
+
+because what you might determine here is that you can deploy this model for dogs, but you can't deploy this model for cats.
+
+And so this is a real world application. You might see cats coming soon.
+
+This predicts dogs. Cats comes in.
+
+Even better is to actually show images from your test data, where we have a ground truth cat that is predicted as cat looks pretty normal.
+
+But then we've got a ground truth cat here that is predicted as a dog.
+
+Looks less. Less like that cat. And so maybe we need more cats like this in our dataset.
+
+Similarly, we got round true dog predicted as cat first is predicted as dog.
+
+I found this image on Google by typing in dog that looks like cat.
+
+But it's going to be really, really helpful.
+
+And so if you, you know, show an evaluation of your model, right, which you might do in your report that you have to put together for your project,
+
+this can be a really helpful figure to have of just having a couple images from your test data that show where your misclassifications are.
+
+You can also identify biases in your original data,
+
+like this one where we've got tabby cats that are all predicted as dogs because maybe tabby cats were not present in our original training dataset.
+
+And so this can give you clues into saying, okay, I need to add tabby cats back into my data set in order to make my model more accurate.
+
+All right. Questions? Tiffany. It's like that.
+
+The. May I add to that? That is no.
+
+Yeah, that is such a great question. It can definitely confuse your model.
+
+Um, and we see this with, uh, when we talk about adversarial A.I. and we talk about, okay,
+
+we're going to put these adversarial inputs in so that our model is resistant now to adversarial attacks.
+
+But it makes our overall model performance worse because our model, it makes it's harder to determine what's real.
+
+And so it can drop the overall accuracy of our model.
+
+And similarly here if we anticipate that.
+
+We're never going to see a dog that looks like that, and we might decide not to include that.
+
+But if we say, well, we know that half of the owners of cats have cats of whatever type this cat is,
+
+then we're going to be using our app and we should probably include this cat.
+
+So it's really application focused, right? It's really like what is your end like user demographic of whatever model that you're building.
+
+Why? It's really important if you are thinking about like developing a model for either a company or for your own company is to talk to stakeholders.
+
+They really get out there and talk to people who are going to be using this, you know, go and say like, does your cat look like that?
+
+Or does your cat look like this?
+
+And start to understand that user group a little bit more so that you can make sure that your model is able to generalize to that end use case.
+
+All models are biased, right? That's the whole point of models is they have the recognize pattern and they are biased.
+
+They will have these problems and these biases. It's whether that bias matters towards your end user group.
+
+Right. Whether this matter, it matters that this cat of this particular type is actually going to be in that user group.
+
+And if it is, then you need to go find some more data with this cat.
+
+If it's not, then you might not need to. The question.
+
+All right. Some advanced topics. Um, a note here, uh, before we jump in.
+
+Uh, Transformers are going to be discussed in very great detail.
+
+I know everyone wants to talk about Transformers. I get it. Uh, we are going to discuss these in very, very great detail in just a couple of weeks.
+
+Um, under NLP in this lecture, I'm going to basically gloss over all of the details of the architecture of the transformer.
+
+Uh, and this is entirely on purpose because I think it's much easier to learn about a transformer in the context of text,
+
+which is what we're going to do in two weeks. I'm going to gloss over that and kind of give you the details that you would need to know if you are
+
+deploying a transformer model for your project and give you a couple of those computer vision details.
+
+We're also going to go over diffusion models in great detail in the generative AI lecture at the end of the semester.
+
+We're just going to cover a few basics here. Questions.
+
+Okay. You want people coming at me because I'm not going into all the details in these architectures.
+
+All right. Vision Transformers. All right, so with a vision transformer,
+
+we're adapting our transformer architecture from natural language processing to handle image processing tasks.
+
+And how we do this is just super duper cool. Okay.
+
+Because you all understand the concept of, like, a token, right?
+
+Just based on your use of ChatGPT, a token is, um, basically like a word or part of a word that gets put into, um, the new transformer architecture.
+
+Here we're basically how to treat images as sequences of patches.
+
+So a patch of an image becomes our token. So we can tokenize anything we want which is really fun.
+
+And we're going to take an image and we're going to tokenize an image by breaking it down into little patches.
+
+So into 16 by 16 patches all across our image, we're going to put all of those in um to our transformer.
+
+And you can see that here. Right. We've got our image and we're going to break that up um, and flatten out our image.
+
+So our image is divided into fixed size patches, typically 16 by 16 pixels.
+
+Each patch flattened into a 1D vector and it's going to be linearly embedded.
+
+And then our position embeddings are added to maintain our spatial information.
+
+So we say what is the position of each of these in our original image.
+
+So that we know what that composition of that original image was.
+
+And so all of this information is what is put into our transformer architecture, which here has been abstracted away to be a gray black box.
+
+So envision transformers are standard. Transformer encoder blocks have a multi-head self-attention that captures the relationship between patches.
+
+And this one is kind of fun. We use, um, MLP blocks with a J view activation, and you can see our ReLU activation shown here in orange.
+
+Um, and then you can see we have um, our J layer shown here in blue.
+
+Um, and so this is very similar to our leaky ReLU, if you remember back to our leaky ReLU um,
+
+and gets around some of those, um, uh, those challenges that we had with our ReLU activation.
+
+We do layered normalizations. We have residual connections in here.
+
+We're going to talk a lot more about what each component of this means, and go through a bunch of examples in two weeks.
+
+Now, what it allows us to be able to do is now each patch can attend to or pay attention to all other patches in our image.
+
+And then our attention weights can tell us which parts of an image are relevant for moral decision.
+
+So multiple attention categories, different types of relationships between our patches.
+
+And so it's really cool because we can understand a more global perspective of our image.
+
+So we have that small receptive field from the start.
+
+It has very strong performance on large data set and has a flexible architecture for multimodal tasks.
+
+So we're talking about the put model as folks are filtering into class um put models.
+
+Um, uses a transformer architecture and it's going to combine uh, pictures, uh, images and text.
+
+And so you're doing a multimodal task.
+
+Um, we have a lot of mechanisms within the transformer that allow us to be able to do that, which is really cool.
+
+Some challenges. Um. Computationally intensive, especially for our higher resolution images.
+
+It requires large data sets, and it does miss a lot of that fine grained local features that CNN is naturally captured.
+
+When Transformers, you know, kind of came out and people were really excited about then like the 2020 ish era,
+
+uh, people are really excited to use these for computer vision tasks.
+
+And what we find is that they're generally okay.
+
+And for some tasks they do work better at first glance.
+
+But for a lot of tasks, especially domain specific tasks. A decent dataset and a CNN architecture work just as well, if not better.
+
+So kind of an interesting evolution of the field as we see this huge rise in popularity of music that transform architecture.
+
+And then people are starting to say, oh, well, you know, can we use some CNN layers within our transformer architecture?
+
+Can we take some from the transformer architecture and inject that into more of our CNN based architectures?
+
+As you see a lot more combining of different types of architectures, rather than just saying,
+
+oh, this is a CNN, it just says this is a transformer that does this.
+
+Some applications of vision transformers include. Image classification.
+
+Detection. Segmentation. Um, one thing that we haven't talked a lot about is image generation and editing.
+
+Um, so Transformers really allow this image generation and editing component because they are generative models.
+
+Uh, which we will talk about. What all of that means, um, when we, uh, get into our generative AI lecture.
+
+Also, transformers are underpinning of video understanding and so tokenizing video and being able to look
+
+at that more global perspective is extremely helpful when you have that temporal component of video.
+
+We're going to take a look at the transformer architecture and how it's being used for object detection segmentation,
+
+which I believe is one of the tasks that are decently helped by the new transformer architecture.
+
+We're talking about grounding Duino. Um, pretty Duino is a state of the art, zero shot, uh, object detection model.
+
+And basically what that means is that grounding at Duino can identify objects that were not in its training data.
+
+Quite right. So even if that object did not exist, demonstrating that it is possible that it can still identify it.
+
+Uh, and it does this by using advantage of transformers, which is that multimodal component.
+
+So we have built an image backbone, which is our Swin transformer, and the text backbone, which is our word transformer.
+
+How by combining these two architectures together.
+
+Now what we can do is we can use any text that we have and we um, we have the same embedding space for both text and for images.
+
+And now we can probe that embedding space with text and then get an image.
+
+And sometimes this looks kind of weird. Um. Um, when we actually do object detection with it.
+
+But often times it actually does pretty well.
+
+Uh, it's that new records on benchmarks for object detection, including a zero shot factory benchmark code.
+
+And I go into a lot more details. I have a view on canvas. If you guys are really curious if you're using Brown detail for your project,
+
+I would definitely recommend going and checking that out because I go into a lot more detail there.
+
+And we can pair ground you Dido, which does the bounding boxes with something called a segment anything level.
+
+And this was released in Meta by Meta in April 2023.
+
+And we have two stages. We have an image encoder encoder that uses a vision transformer.
+
+It computes image embeddings once per image. And then we've got a prompt encoder that's coupled with a mask decoder.
+
+And this uses a transformer architecture to combine the image embeddings with our prompt embeddings and generates mask through cross attention layers,
+
+which there's going to be a lot of words in there that maybe you're like a little confused about.
+
+That's okay. We're going to cover it in two weeks.
+
+Um, this is more of a very brief intro, and we'll talk about what all of this stuff means in much greater detail.
+
+But what's really neat, neat here is now we have this universal segmentation model done that can be prompted using text.
+
+And so here we can see our text prompt is horse clouds, grass is sky hill.
+
+And then grounding Duino just to text all of that. Um and so we can see here some clouds detected, some horses detected.
+
+You got a giant green box around the grass. And now we have ground and Sam where we detect everything.
+
+But then we also segment it using the segment anything model.
+
+And now you can see segmentations of the cloud and the horses in the grass.
+
+This was called Rounded Segment Anything and came out in 2024.
+
+Note that this was published in 2024. We were experimenting with this, um, two years before it was, uh, published,
+
+which is kind of crazy to think about because with archive and preprints that go up,
+
+people will post, um, some of the work that they're doing, uh, in a draft paper form, and then other people can work off of that.
+
+So we're doing this beforehand, but it was really buggy.
+
+So it also came out in 2024 was YOLO world. So remember back to YOLO to be free in that really fun paper that I talked about earlier.
+
+Well, now we've got YOLO world, which is a Yolo V8 backbone and then a pre-trained clip text encoder.
+
+Um, and now we have, um, basically this vision language, path aggregation network.
+
+Uh, they have a full network here that basically connecting our text features and our image feature to that, our image features here, our yellow.
+
+And then we've got our text features up here. And so it's combining these to put it into a network.
+
+That's our vision uh language aggregation network. And then during inference our text encoder can just be removed.
+
+And the text embeddings can be amortized into weights for efficient deployment.
+
+Um, and so what we can do here is we have this object detection uh using prompts, which is pretty neat.
+
+So similar to our grounding domino approach in many ways, but this time using a YOLO backbone.
+
+Anybody doing any image generation for their project. It's so interesting to chart like what people's projects are on.
+
+Um, over the course of the years, because it was like.
+
+You say? Frequency.
+
+Um. Energy temperature. And this is like, let's say 20.
+
+Through. Or. And it was like.
+
+Zero, maybe one, in 2025. It was like.
+
+Right here and now it's back to here. So we're at the point of it's not cool.
+
+It's just interesting. It's like data over time while such a temporal component to the classroom.
+
+Okay. So let's talk about diffusion models noting that we'll go into this in more detail.
+
+And so um, also noting that this is not going to be on the exam.
+
+Um, so none of these advanced topics are going to be on the exam that we've talked about since we started talking about Transformers.
+
+So let's see where is this, um. Yeah.
+
+So. So we started here with this note.
+
+Anything after this note, um, is mostly because people complained a lot that I didn't talk about transformers or diffusion models in this lecture.
+
+And so I included all of this. But it's not going you're not going to test it on it, because we haven't really gone into the concepts in great detail.
+
+So we've kind of glossed over them for the people who might be interested, um, in it, but this will not be on the assessment next week.
+
+Okay. Okay, cool. I forgot to mention that note.
+
+Yeah, I'm going to. Yeah.
+
+So this will actually you guys won't be tested on diffusion models at all because we won't have an assessment for generative AI.
+
+We just have a haircut on. So you won't be assessed on diffusion models.
+
+Great question. Diffusion models are really fun.
+
+Um, so they came to us in about 2020 and they learn to gradually denoise data.
+
+So it's crazy. So you typically hear diffusion models like stable diffusion.
+
+Dall-E two is a diffusion model which all the image generation models that are used today are based on diffusion the process of diffusion.
+
+And what's crazy is that you think of this as an image generation model.
+
+But what it actually is is a denoising model.
+
+So that's all it is. It's it's trying to you. You're you're basically de-noising noise into something which is crazy.
+
+So you're going to try to transform random noise into a high quality sample.
+
+Uh, and you're going to try to inverse a fixed, noisy process.
+
+So basically how you do this is you gradually add Gaussian noise to a training image.
+
+So we start with this training imagery. This is in our data set.
+
+And then we gradually are going to add noise to it. So now we have a dataset where we know exactly how much noise is in an image.
+
+And then we have the original image.
+
+And so now what we do is we train a neural network to predict how much noise is in the image and to just reverse it.
+
+So here in the green you can see training a diffusion model where we have our training image.
+
+And we use an image encoder to this encoded into numbers.
+
+And then we have this forward diffusion process for basically just adding noise
+
+to this image and collecting a large amount of data just on all of that,
+
+uh, all of that noisy images at different levels of noise.
+
+And then we do inference. So we start with our pre-trained classifier here.
+
+And we're going to start and we're going to try to gradually denoise our image.
+
+By removing noise and doing a reverse diffusion process, which then goes through an image decoder and turns it back into an image.
+
+Now. One thing that you might not hear is be like, okay, well, how are we actually going from noise to anything that actually makes sense,
+
+let alone something that's guided by human to be the Duke Chapel.
+
+And that is this process here. So we actually have a process here where at each step we are giving it some guidance
+
+on what it should do next based on the embedding of a text prompt or image prompt.
+
+After that, you get it. So when you tell ChatGPT to make a funny image of a banana with a cowboy hat.
+
+Every step of this process. It's going to go through and incorporate that in to that the process of then creating an image at the end.
+
+Okay? Okay. So all of these models are using this basic diffusion, uh, framework.
+
+Uh, and then enables that text conditional image generation in painting where you can take part of an image and modify it.
+
+So there's a lot of that going on right now. Deepfakes. I was reading like 40 fake articles this morning about crazy stuff.
+
+Um, and then any kind of image editing that's all been able to be done because of this diffusion framework.
+
+They also typically use a unit architecture. So it comes back to what we talked about earlier today.
+
+It's going to combine that with cross attention from our transformers to incorporate text embeddings into that denoising process.
+
+And now, you know,
+
+I can't fully talk about the diffusion model because we have this cross attention piece that we're going to talk about in two weeks.
+
+All right. So now I have this piece here which is a conditioning element.
+
+And this is you putting an image or you putting in text.
+
+And this is going to be encoded. And then that's going to be used to guide this process of removing noise in the image.
+
+This is the architecture. I know it looks kind of crazy.
+
+Because it's not in the typical like format that we think about. But here up top is our encoder.
+
+And down here is our decoder. So up top, what we see up there is just the training process.
+
+Down here is what we actually see, the inference process and the key coder here, which is decoding back into what they call pixel space.
+
+This is the image at the end. And remember everything in the network is numbers.
+
+So you have to spit out. Something. You have to have an encoder to change the numbers to an image.
+
+And so that's what that process is. Here is your user prompt.
+
+Could be text, images all kinds of different things.
+
+You're going to have your conditioning here and it's conditioning. It's going to be encoded here into numbers.
+
+Right. Because you're going to turn that text or images into some kind of number.
+
+And then this number is going to be used within our view that our denoising unit here, um,
+
+it's going to be used in these cross attention modules to guide that unit towards, in that uh, reverse diffusion process towards removing noise.
+
+And then here is your diffusing denoising unit. So this is what actually does the process of that denoising.
+
+And so you can see here we've got our residual connections here in gray.
+
+Um these blocks here, the cube. We're going to learn about those in two weeks.
+
+That's the cross attention which allows us to be able to actually condition this process.
+
+Otherwise the unit is just removing noise, but it doesn't know how to remove noise.
+
+It doesn't know how to remove noise in such a way that it turns into a picture of the deep channel, or turns into whatever you tell it to.
+
+That is where our attention mechanisms are going to come in, which we'll talk about.
+
+Pretty cool. You can fine tune diffusion models.
+
+I mean, see, you can actually do some fine tuning on these, and there's a colab and paper and a tutorial on hugging face on how to do that.
+
+If anybody's interested in trying that out. All right.
+
+That's my last line for today. And remember advanced topics.
+
+You don't have to worry about those for the assessment. Advanced topics are really fun now,
+
+and I'm excited in two weeks because then you're going to have a lot of moments after watching these and then you'll be like,
+
+oh, that's what that meant, or that's what that meant. So we're going to have one of those interviews.
+
+Coming to my promise that I've heard you said none of them are corrupt.
+
+Anything that sly that I have to note on anything. Onward.
+
+Not going to worry about that. All right.
+
+We're going to take some time, and I'm open for questions from the class around your upcoming assessment.
+
+No questions asked. 100% prepared.
+
+Or I scared you all by saying your questions could result in modifications of the test and make.
+
+Sam, I do have one question that's actually unrelated to the exam.
+
+And, uh, that's to do with the YOLO paper. What would we lose points for writing our paper for project one in the same style as below?
+
+Three. What are we going to eat? Or would it not make any difference because it wouldn't make any difference.
+
+I had like a little bit of fun with that. It will not make a difference as long as you meet all other aspects of the rubric.
+
+So we can write a completely unhinged paper like YOLO p three for the graph.
+
+It's literally off the charts if we want it. If your results are that good.
+
+You know what I mean? This is going to be a factor at. YOLO v3 could only do that because your theory was so much better than yellow V2.
+
+So if you guys are that much better than the previous version of this, or your naive solution, or your traditional animal model, then be my guest.
+
+I think that's a change in the research community. Is it frowned upon to write like a paper like that, or does it help?
+
+Oh, yeah. This was this was a PhD student who was like, I'm not going to stay in academia.
+
+I'm going out to industry. And this is my last paper for my defense.
+
+So I don't care. They're usually pretty serious. Usually pretty serious.
+
+Um, yeah. But occasionally you'll get somebody who's very courageous, and then they get immortalized in, uh, deep learning lectures for.
+
+But if you want to, like, personalize it, then all press is compressed.
+
+But if he. Nice to make it all entertaining.
+
+You know, the academic institution doesn't believe so.
+
+But I think it's I think it's fun to have fun with things.
+
+Right. But that's also why I think that in like the 2018 era, people started writing blogs alongside their papers.
+
+So nobody actually reads the papers anymore. They just read the blogs, which are more sassy and fun.
+
+Um, so that's kind of why we still have the very traditional academic literature,
+
+but then we also have blogs in all of these papers, so I'll write that down.
+
+Yeah. But if we weren't going to do a blog post, it really was that good.
+
+I'm not gonna take points off for it. Professionalism isn't actually a category in the rubric, so.
+
+It's not good to know. It might be next year. We'll see.
+
+Tiffany, did you have a question for us? Yeah.
+
+Very responsive to their offer. Response. Some of them will fire one word and some will require more than one more.
+
+Yeah. How long is it like? They seem to like the.
+
+I'll try to make it such that the fastest person will be out of here in 35 minutes.
+
+And that everyone else will be able to finish it within that like an hour and 25 minutes.
+
+She usually means I make it so that I think that everyone would be able to finish within 40 minutes.
+
+And then what ends up happening is it's an hour and 20 or so.
+
+Yeah. With, uh. Well, it is for the good.
+
+So will be content explicitly from the intro to neural networks.
+
+Be factored in on this one. Yeah. Yeah. Good question.
+
+Yes. Intro to neural networks. Any of the three lectures we've had thus far.
+
+Yeah. And the other question is going to be more like define a sliding window or like describe an example.
+
+Like. Like, is it more like definition based or kind of.
+
+Both with a lean towards application based. Yeah.
+
+We're here to code. Okay. No, no.
+
+No code. Bring a pencil or a pen or whatever writing utensil you like to use.
+
+It will be on paper. You.
+
+If you are not good at simple math, you may want to bring a calculator.
+
+Simple math. Maybe you should be able to do it. But if you you know, if you freeze up during tests and can't do some of that,
+
+then bring a calculator so we can bring, uh, Texas Instruments to 84, plus the calculator.
+
+I will be monitoring the classroom as well.
+
+Stuart. So you know playing game number 84.
+
+Dang it. Yeah. That's. Is it like the kind of exam where it's good to know, like, big concepts and big ideas?
+
+Like if there's like a keyword, like a specific feature for computer vision or something.
+
+And that's the question. If you don't remember that, uh, every I would say everything is pretty, like, spread out throughout the lecture.
+
+So it's not like if you don't know anything about semantic segmentation, you're screwed for the whole exam.
+
+It's not like that. It's pretty much spread out across the different topics.
+
+You're just like screwed for that one question. Exactly. Okay, so. It may answer the questions.
+
+Would it be something like. Name five different types of.
+
+That could be it. I think that would be one. And.
+
+It was published in. It was published as a report rather than a research article.
+
+So there are different, um, review criteria for a report versus a research article.
+
+It was. It's crazy. An awesome.
+
+No other questions. How many of you have seen Stuart in office hours?
+
+Nope. That makes sense. All right. I will see you guys next week for a presentation.
+
+If I could see him, it keeps snowing and it keeps getting warm.
+
+It's the snow. The snow? Yeah, it's the snowstorm. It's never anyone.
+
+Right. Who's next door? Everybody. All right.
+
+Um. Yep. You have the rest of the time, about an hour to work on projects if you want.
+
+Or head out and get a head start on finishing up that module project and the.
+
+Okay, I'm ready for the assessment. Oh.
+
+We're not. Do you mind? Uh. Understand suicide?
+
+Yes. Maybe that is totally bad. Um, so it wasn't originally going to be an ongoing course, and so.
+
+Just let us know, I guess. But you're going to be checking in, making sure all future you should be able to submit that.
+
+Like, yes, somebody you know is fine if that's not a thing.
+
+So yes, yes, some of the discussions.
+
+And right now if that happens again I'll make sure I thank you for that.
+
+Yeah. Yeah. Okay.
+
+Um. I. Think there's room that you have to go back to.
+
+Okay. So far. Yeah. So like I was like, yeah, I guess I'm just like, where do you think of that?
+
+Are you happy? Well, I didn't really.
+
+Know it was like the content. It was just like.
+
+We were tested on our way. So, like.
+
+I knew that. That would have been on.
+
+Your report for sure. That was trying to make, you know.
+
+That's what. It's all right. It's like.
+
+Yeah. It's just like my life on it, I thought so, I mean, I went on all the time, so.
+
+Oh, forget it. I keep you out of that would look.
+
+Yeah. Uh, hello.
+
+How are you? I don't think this is quite like.
+
+That kind. Of like.
+
+Oh, this is fine. So. We're talking about it, you know?
+
+Like. I.
+
+Felt like. Oh, yeah.
+
+So. Yeah. How do you know her?
+
+So. Good.
+
+She's here. Uh, why don't you, um.
+
+Uh, I'm pretty sure I got, I got, I got okay.
+
+Yeah, yeah, yeah, I got, I see, um, kids, I can say I'm going to get coffee, like, maybe I'm going to.
+
+Come with you to introduce our kids. Yeah. Oh, yeah.
+
+Andrew. Okay. Yeah, we're done here at home.
+
+We were. You know, I know, I know, I know you just like.
+
+You messed up. I'm not sure. Yeah, like you have to be all right.
+
+I don't want to, you know, like, we always make sure we go wherever we go.
+
+That's right. Uh, I'm just gonna move my car, right?
+
+You know, I will. Go get an animal. Where do we go?
+
+Are you so right? So. Well, you know, wherever you can go, visit them, cause.
+
+We want to make sure. You get down here, I love you.
+
+Oh, yeah. I think if you if you want to let you know, let us know.
+
+So I don't want a live audience. Okay? I don't know what.
+
+Maybe there was a 20 year captivity.
+
+Yeah. Yeah, yeah, we've heard about that.
+
+Yeah. Yeah, that's what happened right now.
+
+Well, not hard, I don't know. I know that. And they usually, you know, it's like they were like.
+
+What is. I think because I like get because I used know if you play but I think.
+
+You can do both. I, you know I second bought a bottle.
+
+I'm saying I would say exactly what about, um, you know, I'm not really in the NBA there.
+
+Uh, we just say.
+
+Um, we're going to have. More than an hour.
+
+Checkout two minutes. That's like.
+
+Right, I think I might I might get a chance to call.
+
+Oh yeah, I do, I like, I like, I laugh like, make sure I get out of here.
+
+I do this, I don't know what it was.
+
+Mean so far, but I thought I'm doing so.
+
+You know, I did. I was burst out laughing and that's so, so this is like this is the most I keep saying I was hitting.
+
+It's the same, you know, it is it.
+
+I don't think that the I think you'll see that in the going and see which I confess now.
+
+But the thing was it's not. Yeah. I was set up.
+
+It's like so you. Just the guy with the hot chocolate.
+
+Okay, Sam, this is extra in every time.
+
+Yeah, but to help us, we want you.
+
+Yeah. Why? Yes, I made it, I made so it's a thing is like one of the models is like the anthropic.
+
+But I got to do the other one, the correct, and I did, and I just want a lot of stuff.
+
+The I was like. How do you guys like like nowadays I guess.
+
+So the tag on Friday.
+
+Friday. Right. Yeah. Let me see what time. Yeah. Yeah that will work.
+
+Does that still work? Yeah, yeah. So, um, and this is 5 p.m. on Friday because I saw, like, grade math right here.
+
+Okay. Yeah, I'm ready to. Yeah.
+
+This moves. Are you guys doing this work?
+
+Yeah yeah yeah yeah. Yeah yeah yeah.
+
+Well, this one is gonna be, like, intense. Yeah. Okay, this one I.
+
+Oh. Yeah, I.
+
+Know I, I don't, I don't like it, you know.
+
+Yeah I know, but I just like being like.
+
+Oh really. No no no I don't know. Do you like when you have like necessary like yesterday I was actually.
+
+So I had no idea. Like I didn't even understand what you do.
+
+So yeah I mean like I, I understood like what I like I was saying like, oh, these are tactics I know you don't have like, so that's really nice.
+
+I didn't what you're trying to get on top of the line.
+
+Yeah. Just put on I think that's classification like I, I also.
+
+Don't really so yeah. So like like Chinese consider. Right.
+
+Because this is similar like you know what I mean.
+
+Yeah yeah yeah.
+
+Yeah yeah. When should we meet. Uh, yeah.
+
+Because our meetings at 330. Yeah. Today with intrinsics.
+
+So. Oh, my goal is to say, um, when do you want to, like, is 32, 30 minutes, which.
+
+Is today. So say that he's going to be the next 20 minutes.
+
+So we'll meet at three. Yes.
+
+Okay. And then you want to, um.
+
+Do another one. Record the meeting three hours.
+
+Yeah. That's that's just like this.
+
+Like, you know, how much is being like, I'm sorry, did I have, like, I don't even know what we say.
+
+I mean, we generally don't think we actually try to do this kind of thing about running.
+
+Like what, so many people. Right? Yeah. Andrew.
+
+And you're like, assignment. I love my you.
+
+I got my day. Three.
+
+Yeah, yeah 2020 or I can try to respond.
+
+Okay, I see, I can do like this stuff. Okay, fine.
+
+Listen, I'm not going to work if you don't give you all the time that I'm putting into the audit that the other girls don't have to do that.
+
+I have no idea. So it's not like a lot of them, you or next person that you are managing.
+
+And this is very much about the concentration.
+
+At hand. Right?
+
+Exactly. Well, what do you mean? Do you think it's.
+
+Uh, I mean, that was the fun, but, like. But only for a great number.
+
+I always invite. I mean, look, you want to view what is ahead.
+
+You know, it's almost the same thing as, like, we're talking about, like,
+
+I'm sure you know where I'm driving, which means I totally shut you down yesterday, though.
+
+I think that's why the case has always has been.
+
+Oh, really? Um. I thought it was funny that you said that.
+
+She said, like, especially because I was like, we're not. It's not clear because it has a swear word in it, like, okay.
+
+But the point is, is I think so many times I might be a woman.
+
+Oh my God. Oh, I bet I can tell. I mean, like, I bet you lower your offer.
+
+Um, I do appreciate that. Yeah.
+
+I know why, because you normally. You know, when I was in there.
+
+And so I think, oh, that's a doozy.
+
+I, I think she is kinda there. Um, she is kind of a nut case.
+
+Probably not. We got it, like, attention over you.
+
+Actually, uh, I think that's how receptive.
+
+Yeah. This is. All right, so I just wrote email out here.
+
+Do you want to. Be on time.
+
+Oh that's right. I think that's how I imagine it, but I.
+
+Don't think, you know, I think the most humiliating part of your class is how people are simulating.
+
+One of the class that was watching hazard slides. What is that?
+
+Oh, I think that's so cute. Yeah, I got. I was I was like, I was like, I can't even know what to do.
+
+I think, uh, I just, I kind of like because at first I basically fear, how do you have to be like.
+
+And then they're off like, so that when they couldn't figure it out except for this is in my head, I think.
+
+I mean, I'll be honest with you, I'm still raising my hand at this.
+
+Oh, thank you so. Much.
+
+Um. Or anything about. You.
+
+Know, pushing boundaries. And I don't even want to do that, like. No, no, no, I don't want to stay here two hours.
+
+Yeah. And then. Uh, I mean, that's true, but, like, you feel like you have.
+
+To, er, witness, I swear to, like, one of theirs is just a dream.
+
+I still believe this. And then.
+
+Chris. That's all right.
+
+I swear. What do you think? Um.
+
+Yeah. Yeah. Yeah, yeah. No, I do not like I told you so.
+
+Honestly, I had no idea what you were even talking about.
+
+You that I was. I mean, with you.
+
+I was just in there. I was not like you were happening there.
+
+I was just there. Yeah. How did you come to this?
+
+Yeah, right. Oh, yeah. So as soon as she said like that.
+
+Oh, my. I guess we're happy to.
+
+My fiancee. Why is it not ring? It was powder.
+
+All right, come on. Yeah.
+
+Or if you have. Uh. I'm good. Okay, let me go to your house, and then you have a loss function that is looking at me.
+
+And. I'll just stay behind you and, you know, small talk.
+
+Oh, my God, you did help us, and I got you. Oh, yeah.
+
+Whatever. After dinner. Thank you.
+
+But have you ever played a sports team before? Okay. This is. Is that a win?
+
+Okay. Any way possible for anybody to hold your hand while you're, you know, or hold anything?
+
+Take action as soon as it feels like. What do you need? And then you can throw your hands.
+
+I have some paper towels, but I don't like that.
+
+Okay? Because it's just like my size.
+
+Like. Oh, yeah.
+
+Like a lot of space. Yeah. Actually, probably figure it out right now, you guys.
+
+You see how we go over? Here, anyway?
+
+Yeah. Because when you do not, I was like, oh, it's so deep that you, like, just want to hold on to what you do too much to me.
+
+Like, uh, because like in Texas. Yeah.
+
+That's true. Yeah. Yeah. You see, we have to talk to you guys.
+
+Um, do you like it because you have a degree lawyer.
+
+So this would teach you, right? It might actually. She also had T1. T1 has more different architectures.
+
+Yeah. What are you talking about? I don't know, like what these wires.
+
+About. This one is special.
+
+Spatial information. Oh. We did. Yeah. This is like, um, I look at the problem with all these.
+
+Different parts, and it will hurt me. I mean, like, why is it not maybe helpful?
+
+So like, there's so many reasons for it. That's why I love this field, that it never ends.
+
+Oh, so what, you were going to focus on this and to add something that's just okay with me now.
+
+And I know it's so satisfying to stay home. Oh, yeah.
+
+Um, because it's like, these are just.
+
+Too many times I it was just focus on, you know, like I have more great video.
+
+And definitely look at this point kind of like. Oh there you go.
+
+Yeah. That's it? Yeah. If you just want to.
+
+You'll be able. What I mean.
+
+Right. Yeah. Because you like more names that we use. Just like Moscow coaches are actually.
+
+This is less than five years. This closet.
+
+The closet. Do you see the younger generation who are so impatient because they are like, what is going?
+
+I have a friend who's like three kids or just two, I, I and she's like a lot of things,
+
+but also very patient because like that's, that's like what I'm saying.
+
+You have these images like before that I or she could be like, you know what like, needs to, like have a desired toy you want to see.
+
+She doesn't have any TV because, I mean, all parents like, I know that's what I'm doing right now, but in that dog, you get to be competitive.
+
+And also these are all patients health loves the dog.
+
+Oh yeah. Yeah, yeah. That's healthy.
+
+So how do you like all of that? So I like how much time I spend doing stupid [INAUDIBLE] like this.
+
+Right. One.
+
+Of orchestrating or. Receiving.
+
+Left. Yeah. I'm not giving up.
+
+There you go. You got the, uh, what it already had already.
+
+We know. Still doing ties.
+
+I got a room. Like you want to join the program, but there are a lot of work in the background.
+
+Can you get down to the procedures?
+
+Oh. Yes.
+
+Yes. Yes.
+
+Should I do it for. You.
+
+That's fine. We're in the. Open.
+
+We have all the ports open. I, I know it's because right now there's all this.
+
+But. Yeah. So you just need to.
+
+I'm driving to actual insanity. No, that's just like human abuse.
+
+But it's nobody here, right? Another. Day.
+
+All right? I mean, look at it. Look at it. And they're like about 8 or 10.
+
+You might have said like, what is that?
+
+Uh. Are. You ready?
+
+Yes. I want to give.
+
+Hopefully. This.
+
+Yeah. See what? This is deeply suspicious.
+
+Or. Now who am I kidding?
+
+You say all we have. That's a decent.
+
+It's not easy to get. We're not. Not bad enough to stop.
+
+I. Mhm. Hmm?
+
+Yeah. Did you come for that one? Yes.
+
+That's what. That's what you think. Oh, finally it does.
+
+It's it doesn't even know. But like, I know, but it like it it still has no concept that it's leaking its answer.
+
+It hasn't. No concept word. There's a way to buy them separately.
+
+I'm not. I got. That's what we I think. Pumps this in the air 70.
+
+This is getting absolutely ridiculous at this point. It going to be a little bit after my two year fight but also this winning streak.
+
+Yes. How would you characterize different conferences?
+
+How would you like certain parts where you are?
+
+I guess, like, um, like I said, they had 100% acceptance last year and then 30%, it was like 400 papers this last year and then 1000 submissions.
+
+I think if I did a report but they passed. Yeah. It's like, uh, it's uh, yeah.
+
+It really um, yeah, it's it's interesting.
+
+It's also usually depends on where the conference is being held to and what size of the venue they have available to them.
+
+So that might be if they had a really big venue to make sure that they may be able to allow more in.
+
+Yeah. Um. Typically, you know, there's like the class that's like NeurIPS, icMl, I see a large amount CVR.
+
+Right. That's like. You know, AC, DC, um, uh, I think those are like one of the global main conferences.
+
+And then there's a whole host of other, um, like, cool.
+
+Um, like, uh, I so there's some that are very specific to specific discipline.
+
+So like ethics, fairness, explainability, like their premier conferences are like fact and I guess, okay.
+
+Uh, for language modeling I can pull up my did what's happening.
+
+So we're predicting on Thursday. How do you explain that?
+
+I didn't do you of the. So I mean this one.
+
+If you don't mind. So you know, they have like adjacent ones for different disciplines of like film, TV.
+
+Um, is one that's for computer vision. So they're going to have one by CCP, which is for consideration.
+
+A lot of our. Um, you know, apps that are more on like your in your privacy.
+
+Yeah. Um, um, they have this one and, uh.
+
+It's like. Yeah, I would do all. Yeah.
+
+So I first saw it in science and I've read more recently is focused one on sale, which is how tokens like working are important.
+
+So that's important. It's like you can make things and there's actually monsters almost there.
+
+Because I said it's like a science team with like, knowledge, data science.
+
+So I can write you just like you right at home then.
+
+You. And so I also looked at to work.
+
+So normally I find that like just creative Mueller exploration and some of these workshops at the larger group.
+
+So you can still go to the larger conferences. Workshop papers aren't quite as prestigious as conference papers, but they're still peer reviewed.
+
+So published usually published in the proceedings of the conference.
+
+And I actually prefer going to workshops more because everybody's focused on the same thing.
+
+They're all interested in your work.
+
+There's a lot more networking and talking that happens, but they've got all kinds of different workshops on these different topics.
+
+Um, at CVR, for example, they'll have them at icMl and they'll have workshops on language modeling work.
+
+They might even have someone with role models.
+
+So that would be perhaps interesting for you to present some of your work out that might be smaller in scope,
+
+somewhat too small for a conference paper, but is still something interesting to share with you.
+
+And how can that work in that? Um.
+
+Um, so NeurIPS was like, I think you remember this past year or is it just the date in December?
+
+Yeah. So it's already December. Okay. Yeah. Um.
+
+Oh, that's so mission submission. Oh, okay. Which is way more important.
+
+Information technology. Yeah. So you can see I really got, you know, I do see a there's a lot that go like in January.
+
+Um, so a lot of them are doing January NeurIPS and do um, but are going to meet they um CVP is due in November.
+
+Um, but they've got like workshops for example that can't do it till March at QPR.
+
+Uh, it can also be more like late breaking work that you want to show in the conference.
+
+But, you know, you obviously usually didn't do it before November.
+
+You might have done it in January. And so you want to share it and submit it to a workshop.
+
+Yeah. So do you, um, do you go to some around?
+
+Yeah, not all of them, but, um, I try to go to uncover at least a year.
+
+Okay. Yeah. Did you get NeurIPS or.
+
+I was supposed to go to NeurIPS. I had a family health emergency, and, um, I wasn't able to, but two of my students did.
+
+Oh, actually. Education chat with her, um, before reinforcement learning about it,
+
+she went and she presented at, um, the nurse workshop, an image of some of her work.
+
+Um, we have two other lab members going present at workshops as well.
+
+How did you come up? How did you, like, figure this? Is that just like doing spirit.
+
+Jumping? Yeah, just kind of adding stuff as I go.
+
+So it is short and then it just like grew longer and longer and longer.
+
+And um, some of these like the workshops, you never know what workshops are going to be each year.
+
+But a lot of these workshops, like they happen year after year. And so like Cdpr workshop on, um, uh, explainable AI for computer vision.
+
+They're in their fifth year of their workshop. So you kind of know that one's going to be there.
+
+And is there a difference between conferences or like in, um, like how it is for conferences and.
+
+Yes. And they're kind of two different ratings. And they do so greatly on the field that you're in.
+
+So like in computer science, it's like it's like AI conferences that are typically more prostitutes than journals.
+
+Just weird and different than every other field. For most fields, they have a kind of a ranking of journals like, you know,
+
+you got natural science and then you get like, you're writing, um, specific journals for a particular domain.
+
+And then from there you'll have a bunch of smaller journals or journals that accept more, um, that kind of stuff.
+
+So. And journals are rated by impact factor.
+
+Um, and so in fact factor is how many citations on average a paper gets in that journal.
+
+So, for example, if one person cites your paper and here's the impact of that and there's only one paper in the journal,
+
+and that impact factor would be one. So you take the average across all of the papers that are submitted to that journal each year.
+
+The average citation is going to have to, um, do impact factors fluctuate every year?
+
+They mostly remain pretty steady. Conferences.
+
+There's not really official regular conferences.
+
+You know, there's a bunch of reasons put together, like little talks to like, say, which one is more prestigious or what you're trying to do.
+
+Managers. I mean, it's kind of the knowledge that there are some big ones and then there's other adjacent ones,
+
+and then there's major ones for specific different like to.
+
+Have you ever heard like tracks published in terms of common vision and what are these different interests?
+
+Sorry, I haven't published there yet so I don't know. And I outside.
+
+No, no. You first. I was just going to ask what's in the other.
+
+Uh, the other is, uh, like, uh, faculty like awards do apply to you and that kind of stuff.
+
+Uh, these conferences, there's a lot of, like, young career awards that have so many submissions for mine.
+
+So others just for me to look at occasionally and look at like the week after it was and be like, dang it, next year.
+
+Oh, you did not hear the ice cubes. I don't really understand how I got here.
+
+That you can't. I don't know. But, yeah, I think it's good because.
+
+Yeah, it's it's interesting. You know, it's, um, a combination of things.
+
+I feel really different. So I don't know quite a few different fields.
+
+And I is the weirdest one to coalition because there's so many people in it, and it's just growing exponentially.
+
+So I guess the reviews are really bad, usually because it's usually like, they like, assign it to a graduate student or it's I or something.
+
+And so usually the reviews are not great. And it's.
+
+Um, yeah. It's not as. If you're published in journals and it's like journals, it's like it's a very much like a process that you go through.
+
+And everybody kind of follows the process. And most people have the opportunity to revise their work.
+
+Or that's it. Like that's so fresh, for example, as well here at.
+
+Okay. Well yeah. Have um, if you keep on my game, I see, you know, one of the first year there's a spot like paper, you know,
+
+straight from conference because like, I only get older because we only do crossover, which means that we do the talk.
+
+And so it's it's impossible for we could be here.
+
+So I was like I was rejected. Every time I'm in this with the same paper.
+
+Not everyone the best paper award and got to be like the time.
+
+So we should do this again.
+
+It's not the same type. There's there's so many reasons why if you get rejected is apartment arbitrage internet.
+
+There's no better than just one. We have.
+
+So it just kind of shows through processes. I don't I don't think it was the.
+
+I don't want to remind you. I mean, this is really internal to like a lot of people are like, I'm so dumb, they kind of know their work.
+
+And so my friends like. Will.
+
+Um. Maybe because we had, uh, to leave before green for yellow to me.
+
+And I was there too much, so that's great. And then.
+
+Oh, yeah, I like him some very much.
+
+I mean, I can reduce.
+
+I don't know what that was. It's kind of sure. I'm pretty sure you can do some sort of surgery.
+
+I don't know what I don't like. Or someone missing in Texas.
+
+Um, would probably take a load. That later?
+
+I've been working on this. Pretty crazy.
+
+I would say when I was in middle school last semester, but I think I would like to take this one.
+
+Yeah, I should probably. Yeah, maybe just try the things that you like to do.
+
+Um, just. Like.
+
+Of. You are pretty good for the target application.
+
+I know that you have a theory. Maybe you just try it and then you're like, open your copy.
+
+There's no work. You have a head on your head. Um, but just really, how you say you know, how to move your heart from going from, like.
+
+Because I know it was not learning, you know, like or interesting.
+
+Like, it's probably not the requirement, but, um, you know, pretty hard.
+
+Helping you out of your plastic transformers are necessary to be conscious of these things.
+
+Yeah, because. It doesn't include that.
+
+I don't think I increase that definition. Yeah, like they won't like that.
+
+That's why even though you're far off. Right?
+
+I'll be the same. Like. But.
+
+Back home. And.
+
+Right now, we might not get into it as a physical security, but they aren't for me to get nervous.
+
+I don't actually get published. Right. So you did your prediction of the audience to see our data?
+
+You see what? I'm trying to help the company according to his ideas.
+
+And that's my job. And do what's next. And I'm like, I'm going to get sent here in the U.S. on that.
+
+Oh, sure. Yeah, I mean, I didn't like it. Yeah.
+
+I mean. I didn't do them right.
+
+Oh, yeah, they do. For different people for some reason. Yes.
+
+I do. And you just like it's not published.
+
+But you have something you have that you can send. So I was invited because the submission process was that you just wrote for the Hub.
+
+Oh. For archive. Yeah. Yeah. No, I mean, it'll be the same thing that you submit to forms.
+
+For the rest of our lives. Um, your API [INAUDIBLE].
+
+Now, they don't have any problems with it.
+
+And just like they haven't updated for the long, you know.
+
+I would recommend it. I would say I will.
+
+I'll make it the best. Yeah I do as good as I can make it.
+
+You said you require that you provide code.
+
+So by the time it published, you'll definitely want to have me by the time you submit it.
+
+It can look. Like this.
+
+This is what explains. We explain, like how we set it up.
+
+We did that with art, you know?
+
+So. It's sort of like.
+
+Right. Um. This is more than just an example of why we use this method that I've no doubt we use, because we want to use it as we commit.
+
+I mean, personally, so like one of PR.
+
+Yes, but we can just like doing this.
+
+And then for each appropriate side, we can see.
+
+This is how we appreciate all your paintings left. That's right.
+
+Don't even ask. And I'll probably be bringing it to you before I.
+
+But. Yeah.
+
+I mean, besides, aside from the title.
+
+Oh. Uh. Um. That's a good question.
+
+There's a lot of different factors. I mean, some are the time, um, a lot of it is like location of where it is because I can only afford to send,
+
+um, like a couple of people a year, usually to, um, national or like conferences that are based in the US.
+
+So that's a big part of it too. Like last year, um, your sister's in San Diego, so I could send you a couple students to it,
+
+but previously it'd have been like, uh, somewhere, somewhere internationally.
+
+And then it gets a lot more tricky to do that.
+
+Like, I was in Florida in Spain this year, and so normally it would be able to go because it's international.
+
+Um, but I was giving a talk at a different conference and they paid for my travel.
+
+So I got my travel paid for by different countries. And then all I had to pay for was at Intel Room.
+
+And so it comes out of like my discretionary research funds.
+
+Um, and so I have a small amount of money to go to conferences, which means I have to amortize.
+
+So that's what makes us like swinging a little bit more towards journalists in some cases,
+
+especially when we have collaborators who are in a very specific domain and would prefer journal papers.
+
+So when you talk about the timing cost and what is spiritual, um, how do you decide which students?
+
+The first author on the paper. I don't know.
+
+Typically. You know what I mean. They are welcome to go. But if they don't get the funding from the lab to go.
+
+That's because they didn't. They wrote the paper.
+
+Yeah, that typically if you are a first author, you're writing a paper and doing relativity experiments and then,
+
+um, other people order on it are usually in more supporting roles or always like data or providing a model.
+
+And you helped with reviewing a paper was given.
+
+Are there many other important things. So we also use those same metrics for.
+
+Audience. Do you structure different papers in different idea based on what?
+
+Oh yeah. Absolutely. They usually have templates that you have to. And then they have requirements for each.
+
+So before every conference like I would tell my students to go and make sure to read like papers from last year so that they know kind of the format.
+
+What kinds of experiments are expected, what types of data sets are usually used for evaluations because that differs based out of conference.
+
+So you can have a really good body of work. You're going to have to wrap it in such a way that it would be interesting to that particular conference.
+
+It's an interesting game. And do you have do you like.
+
+Um. Also do we do not like that contact if you have contacted like you.
+
+Know. Um, I think some of our readers have, um, some contacts that like more journalism.
+
+They can kind of help us push things to better results, um, for conferences and stuff.
+
+Um, I don't I don't do any of that. I think it's poor practice from.
+
+Okay, let's just say conference first question. And the expectations when it comes to using that.
+
+Totally differs by conference. Yeah.
+
+Yes. Yes. Which energy? You see?
+
+Like. We were testing like those guys.
+
+That's why we were doing it, to create a sense of data just like the same.
+
+Have you ever used jacks? I think it's like the bargain.
+
+I have not. I have some like, previous colleagues who, like, swear by it, though.
+
+Yeah, they really like it. Like so. Because we have to. I was thinking, I want to work with it and just throw it on.
+
+Like what devices. Yeah, there's like application fees, but I keep because I keep running, you know, because I have like.
+
+Real things to do on. Yeah.
+
+The research backlog is long. So a fun place to try out.
+
+Yeah. He was.
+
+Getting food and food. I.
+
+Yeah. Today it's. Like, it makes me feel like.
+
+You know, it's like, you know, like, the most prestigious projects in the world, and then you end up playing.
+
+So, like, the white flag with the scratch, you guys.
+
+See ya later. But like the the. Oh, you.
+
+Uh. We did.
+
+You is the canvas. Experimentation.
+
+Oh. But. This was. If you know that we didn't have to do this.
+
+Like like the type of. Yes.
+
+So much with you. Yeah.
+
+That's why I think we should just, like, stick to him in the end.
+
+Decide now. Yeah.
+
+I think it's just like based with the result. And the interpretation will be like that.
+
+They will treat the recommendation with light, which they say is more.
+
+Hey, guys, let's go in. It's, um, we're a bit confused on the evaluation you have of our data.
+
+Um, so we're doing image regression, and we're predicting the age.
+
+Okay. So, um.
+
+Based on the results we have right now. You know, like the true age and age.
+
+Yep. And. Of this difference between them.
+
+But we're wondering, like whether that's because we actually have like a healthier or like strong older or like a younger, younger brain.
+
+Uh, or is that because our model is doing a bad job?
+
+So we were planning to do some literature review to see like, what the threshold is.
+
+It's really crazy that that's the age difference that it's predicting or, uh.
+
+And the range. Yeah. Acceptable. Yeah. So we're going to do stuff with that and then finish.
+
+Friends yet also using a credit card to show. The visualization of how it's understood the age.
+
+But do you have any other suggestions on like evaluation?
+
+So the, um, your loss function is looking at the age.
+
+Right. So like that is your label is the actual age.
+
+Um, so you'll probably also want to just like show like, you know, based on your loss function, your training data.
+
+Like, this is like you're Orange City, right? This is like your mean squared error.
+
+And this is like overall on your your data set.
+
+And then go into that like finer detail of saying okay, but does that mean that like the brains are actually younger.
+
+Right. And then you can go into your evaluation in that regard.
+
+So I do like the overall one of these try make sense here and then go into finer detail and ask that question.
+
+Do you think we just like a. Oh yeah.
+
+Yeah yeah. Thank you. Um.
+
+I love, like, a lot of the different rooms. You noticed that they didn't exist for 20 years.
+
+So he's like, you know who you are and who you.
+
+Really? Like. Yeah, that's what we needed to see.
+
+So we saw it on CNN, right? Actually, every Russian airfare disaster happened here.
+
+So they did the same thing, right? Because they want to keep all their errors like this pattern.
+
+And we can identify that pattern and reduce it with a model.
+
+Um, no. A better approach is to, you know, refine the data set, which is better for you all, or to think about like how to, um,
+
+modify your loss function if you might have a custom loss function that you're using, um, which might help with that or some regularization in there.
+
+It sounds like maybe you're probably overfitting on your training data set.
+
+Um, and so we tried some regularization techniques as well. And then we.
+
+With the expanded rotation part of it. We're going to expand.
+
+Which data center line? Which imaging does the best job that I can for each of the different brands?
+
+Yeah I like yeah. Yeah. We need to follow the exact structure that you.
+
+You can find someone for you to buy it as long as it contains everything.
+
+Yeah, there's not a specific format I'm looking for other than what was listed there that you want to have it in, like a technical report format.
+
+Paper format. Yeah. Thank you.
+
+Thank. Those type of improvements.
+
+That's what we're going to skip today.
+
+Yeah yeah yeah yeah yeah.
+
+That's what I'm. Like. Because I don't like them.
+
+What is important is just like how we interpret and look at the results.
+
+So it's for the kids to just have the model put it into the script.
+
+She's like explicitly said, we're just using a few words and then we're having.
+
+We're having it. It has to mean to.
+
+Because I. Just say that word again.
+
+We just keep smiling. It's like, make sure. Yeah, the model is confirmed.
+
+Yes. And then we can just read different audiences through the model or like.
+
+The experimentation. And I like to think so because I.
+
+To choose the best. Choose.
+
