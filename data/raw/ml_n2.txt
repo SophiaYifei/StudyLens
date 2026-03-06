@@ -1,0 +1,291 @@
+Goal of Predictive Modeling
+	•	Predict well on unseen data
+	•	Generalization > training performance
+	•	Cannot evaluate on unknown data
+	•	Must simulate “future data”
+Question
+	•	If training accuracy = 99%, does that mean model is good?
+
+🧪 Training & Test Sets
+	•	Training set → build model
+	•	Test set → final evaluation
+	•	Typical split:
+	◦	80–90% training
+	◦	10–20% testing
+⚠ Test set = untouched until final
+Question
+	•	What happens if we tune hyperparameters using test set?
+To-Do
+	•	Always split before feature selection
+	•	Fix random_state for reproducibility
+
+📦 Sampling
+Why Sample?
+	•	Cannot access full population
+	•	Too expensive to process everything
+	•	Sampling happens multiple times
+
+Types of Sampling
+Nonprobability Sampling
+	•	Convenience
+	•	Snowball
+	•	Judgment
+	•	Quota
+⚠ High risk of bias
+Examples:
+	•	LLM trained on Reddit/Wikipedia
+	•	IMDB sentiment bias
+	•	Self-driving car location bias
+Question
+	•	Does your dataset reflect real-world distribution?
+
+Random Sampling
+	•	Simple random
+	•	Stratified sampling
+	•	Weighted sampling
+Stratified → preserve class proportions
+Weighted → emphasize certain data (e.g., recent data)
+To-Do
+	•	Use stratify for imbalanced classification
+
+🚨 Data Leakage
+Definition:
+	•	Test information leaks into training
+Consequences:
+	•	Inflated performance
+	•	Over-optimistic results
+	•	Useless model in production
+
+Common Leakage Sources
+	•	Feature selection before split
+	•	Scaling before split
+	•	Imputing before split
+	•	Duplicate observations
+	•	Future data in training
+	•	Random split in time series
+Question
+	•	Why is random split bad for time series?
+To-Do
+	•	Split first
+	•	Fit preprocessing on training only
+
+📊 Model Comparison
+Why Not Use Test Set?
+	•	Becomes biased
+	•	Overfits to test set
+Solution:
+	•	Train / Validation / Test split
+Typical:
+	•	60–80% training
+	•	10–20% validation
+	•	10–20% test
+
+Validation Set Risks
+	•	Small validation set → noisy estimate
+	•	Model selection bias
+	•	Repeated tuning = indirect leakage
+Question
+	•	What happens if validation set too small?
+
+🔁 Cross-Validation
+K-Folds
+	•	Divide into K folds
+	•	Train on K-1
+	•	Validate on 1
+	•	Repeat K times
+	•	Average error
+Benefits:
+	•	More stable performance estimate
+	•	Uses more data
+
+Other CV Types
+	•	ShuffleSplit
+	•	Leave-One-Out
+Tradeoff:
+	•	More folds → higher compute
+To-Do
+	•	Use 5-fold or 10-fold CV by default
+
+⚖ Bias-Variance Tradeoff
+Bias:
+	•	Model too simple
+	•	Underfitting
+Variance:
+	•	Model too complex
+	•	Overfitting
+Total Error:
+	•	Bias² + Variance + Irreducible error
+
+Recognizing Overfitting
+	•	Training score ↑
+	•	Validation score ↓
+	•	Divergence
+Question
+	•	Does more features always improve performance?
+
+🎯 Model Complexity Influenced By
+	•	Algorithm choice
+	•	Number of features
+	•	Hyperparameters
+	•	Amount of data
+More data → tolerate more complexity
+
+📈 Outcomes vs Outputs
+Outcome:
+	•	Business impact
+	•	$ savings
+	•	Fewer accidents
+Output:
+	•	MSE
+	•	AUROC
+	•	Precision
+⚠ Set outcome first
+Question
+	•	Are you optimizing the right thing?
+
+📏 Baselines
+Metrics meaningless without baseline
+Baselines:
+	•	Zero rule (mean / majority class)
+	•	Heuristic
+	•	Human
+	•	Existing solution
+To-Do
+	•	Always compute baseline first
+
+📊 Regression Metrics
+MSE:
+	•	Penalizes large errors
+	•	Sensitive to outliers
+MAE:
+	•	More robust
+	•	Easier interpretation
+MAPE:
+	•	Percentage error
+	•	Biased when y small
+R²:
+	•	Variance explained
+	•	In-sample metric
+Adjusted R²:
+	•	Penalizes extra features
+Question
+	•	When is MAE better than MSE?
+
+🧮 Classification Metrics
+Accuracy:
+	•	Misleading with imbalance
+Confusion Matrix:
+	•	TP
+	•	FP
+	•	TN
+	•	FN
+Recall (TPR):
+	•	Of actual positives, how many found?
+Precision:
+	•	Of predicted positives, how many correct?
+FPR:
+	•	Of actual negatives, how many mislabeled?
+
+Edge Case Thought
+Model predicts all positive:
+	•	Recall = high
+	•	FPR = high
+	•	Precision = low
+
+📉 ROC Curve
+	•	TPR vs FPR
+	•	Threshold variation
+	•	Default threshold = 0.5
+Higher threshold:
+	•	Lower TPR
+	•	Lower FPR
+Lower threshold:
+	•	Higher TPR
+	•	Higher FPR
+AUROC:
+	•	0.5 = random
+	•	1 = perfect
+
+📊 Precision-Recall Curve
+	•	Better for imbalanced data
+	•	Ignores TN
+Question
+	•	When should PR curve preferred over ROC?
+
+🧠 Multiclass Evaluation
+	•	Confusion matrix
+	•	classification_report()
+	•	Macro average
+
+🛠 Preparing for Modeling
+Steps:
+	•	Train/test split
+	•	Feature selection
+	•	Feature engineering
+	•	Encoding
+	•	Scaling
+	•	Class imbalance handling
+
+🔎 Feature Selection
+Why:
+	•	Reduce overfitting
+	•	Improve generalization
+	•	Improve interpretability
+Methods:
+	•	Univariate
+	•	SelectKBest
+	•	Random Forest importance
+To-Do
+	•	Remove >50% null features
+
+🏷 Categorical Encoding
+Ordinal:
+	•	Preserve order
+	•	Risk artificial ordering
+One-hot:
+	•	Safer
+	•	Expands dimensions
+Question
+	•	When is ordinal encoding appropriate?
+
+📏 Scaling
+Needed for:
+	•	KNN
+	•	Clustering
+	•	Regularized regression
+	•	PCA
+MinMax:
+	•	0–1 range
+StandardScaler:
+	•	Mean 0
+	•	Std 1
+⚠ Fit scaler on training only
+
+⚖ Class Imbalance
+Model favors majority class
+Fix:
+	•	Collect more minority data
+	•	Undersampling
+	•	Oversampling
+⚠ Accuracy unreliable
+
+🔄 Pipelines
+Why:
+	•	Prevent leakage
+	•	Reproducibility
+	•	Cleaner code
+Pipeline:
+	•	Impute
+	•	Encode
+	•	Scale
+	•	Model
+Fit only on training
+To-Do
+	•	Always use sklearn Pipeline + ColumnTransformer
+
+🔥 Big Reflection Questions
+	•	Did I check for leakage?
+	•	Did I compare against baseline?
+	•	Am I using correct metric for business goal?
+	•	Is my model overfitting?
+	•	Is my data representative?

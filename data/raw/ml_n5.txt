@@ -1,0 +1,203 @@
+Classification – Overview
+	•	Predict categorical target
+	•	Binary or multiclass
+	•	Examples:
+	◦	Handwritten digits
+	◦	Tumor type
+	◦	Disease category
+	◦	Next word prediction
+	•	Can bin numeric variables into classes
+	•	Cannot extrapolate beyond classes
+Question
+	•	Why can regression extrapolate but classification cannot?
+To-Do
+	•	List 3 real-world classification problems
+
+Why Not Use Linear Regression for Classification?
+	•	Outputs not constrained between 0 and 1
+	•	Hard to interpret probabilities
+	•	Predictions may exceed logical bounds
+	•	Poor classification performance
+Question
+	•	What happens if model predicts 1.7 for a class label?
+
+Logistic Regression – Core Idea
+	•	Predict probability P(y=1)
+	•	Use sigmoid function
+	•	Input = linear combination of features
+	•	Output between 0 and 1
+Sigmoid
+	•	S-shaped curve
+	•	Maps real numbers to probability
+Decision rule
+	•	Apply threshold (default 0.5)
+	•	Probability ≥ threshold → class 1
+Question
+	•	How would changing threshold affect precision and recall?
+To-Do
+	•	Plot sigmoid curve
+	•	Try different thresholds and observe confusion matrix
+
+Parameter Estimation
+	•	Cannot use SSE
+	•	Use maximum likelihood estimation
+	•	Define likelihood of observing data
+	•	Maximize log-likelihood
+	•	Equivalent to minimizing negative log likelihood
+No closed-form solution
+	•	Use gradient descent
+	•	Iterative optimization
+Question
+	•	Why is log-likelihood preferred over likelihood?
+To-Do
+	•	Write down negative log likelihood formula
+	•	Implement gradient descent for small dataset
+
+Gradient Descent
+	•	Move opposite direction of gradient
+	•	Learning rate controls step size
+	•	Too small → slow convergence
+	•	Too large → divergence
+Question
+	•	How detect if learning rate too large?
+To-Do
+	•	Experiment with different learning rates
+
+Logistic Regression in sklearn
+	•	model.predict → class labels
+	•	model.predict_proba → probabilities
+	•	L2 regularization applied by default
+	•	Iterative solver used internally
+Important
+	•	Still linear decision boundary
+Question
+	•	Why is logistic regression considered linear?
+
+Multiclass Classification – Softmax
+	•	One weight vector per class
+	•	Compute score for each class
+	•	Apply softmax to normalize
+	•	Probabilities sum to 1
+	•	Choose class with highest probability
+Cost function
+	•	Cross entropy
+Binary case
+	•	Equivalent to logistic regression
+Question
+	•	Why use cross entropy instead of SSE?
+To-Do
+	•	Compare binary vs softmax formulation
+
+K Nearest Neighbors (KNN)
+	•	Instance-based method
+	•	No explicit model training
+	•	Assign class based on nearest neighbors
+	•	k = hyperparameter
+Choices
+	•	Value of k
+	•	Distance metric
+	•	Feature scaling
+Small k
+	•	Low bias
+	•	High variance
+	•	Risk overfitting
+Large k
+	•	Higher bias
+	•	Smoother boundary
+Question
+	•	Why must we scale features for KNN?
+To-Do
+	•	Test k = 1 vs k = 5 vs k = 15
+	•	Compare validation accuracy
+Limitations
+	•	Computationally expensive
+	•	Memory intensive
+	•	Not ideal for large datasets
+
+Support Vector Machines (SVM)
+	•	Can do classification and regression
+	•	Often used for classification
+	•	Strong theoretical foundation
+	•	Convex optimization problem
+Core idea
+	•	Find separating hyperplane
+	•	Maximize margin between classes
+Support vectors
+	•	Points closest to margin
+	•	Determine decision boundary
+	•	Other points irrelevant
+Question
+	•	Why focus only on support vectors?
+To-Do
+	•	Visualize margin in 2D example
+
+Soft Margin SVC
+	•	Data not perfectly separable
+	•	Allow misclassification
+	•	Tradeoff between margin width and errors
+Hyperparameter C
+	•	Large C → smaller margin, fewer training errors
+	•	Small C → wider margin, more tolerance
+Interpretation
+	•	C controls model complexity
+Question
+	•	Which C likely generalizes better? Large or small?
+To-Do
+	•	Use cross-validation to tune C
+
+Kernel Trick
+	•	Map data to higher-dimensional space
+	•	Make non-linear boundaries linear in new space
+Common kernels
+	•	Linear
+	•	Polynomial
+	•	Radial Basis Function (RBF)
+Polynomial kernel
+	•	Adds polynomial interactions
+RBF kernel
+	•	Uses distance from landmarks
+	•	Flexible decision boundary
+Question
+	•	When would RBF outperform linear kernel?
+To-Do
+	•	Compare linear vs RBF SVC on nonlinear dataset
+
+SVC in sklearn
+	•	Standardize features first
+	•	Choose kernel
+	•	Set C
+	•	Set degree for polynomial
+	•	Tune via cross-validation
+Important
+	•	No inherent probability output
+	•	Use Platt scaling for probabilities
+Question
+	•	Why might probabilities be important in real applications?
+
+SVC Pros and Cons
+Advantages
+	•	Flexible with kernels
+	•	Works well in high dimensions
+	•	Convex optimization
+Disadvantages
+	•	Slow for large datasets
+	•	Often outperformed by tree ensembles or neural networks
+	•	No native probabilistic output
+Best suited for
+	•	“Short and fat” datasets
+	•	High feature dimension
+
+Concept Review Questions
+	•	Difference between logistic regression and softmax
+	•	Why cross entropy better for classification
+	•	Bias-variance tradeoff in KNN
+	•	Role of C in SVM
+	•	When to choose logistic vs SVM vs KNN
+
+To-Do Summary
+	•	Implement logistic regression
+	•	Tune threshold
+	•	Compare logistic vs KNN vs SVM
+	•	Use cross-validation
+	•	Standardize data when required
+	•	Evaluate with precision/recall, not only accuracy

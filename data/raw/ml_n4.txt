@@ -1,0 +1,133 @@
+Time Series – Basics
+	•	Sequence of data points
+	•	Equally spaced in time
+	•	Natural temporal ordering
+	•	Time-ordered data ≠ true time series
+	•	Sensors and hardware data common examples
+Question
+	•	What makes something a true time series instead of just time-stamped data?
+To-Do
+	•	Identify 3 real-world time series examples
+	•	Identify 1 dataset that is time-ordered but not a true time series
+
+Trend and Seasonality
+	•	Trend = long-term movement
+	•	Seasonality = cyclical patterns
+	•	Can exist simultaneously
+	•	Trend may increase or decrease
+	•	Seasonality may repeat hourly, daily, weekly, yearly
+Examples
+	•	Temperature
+	•	Power demand
+	•	Retail / bookstore sales
+Question
+	•	How would you distinguish trend from seasonality visually?
+To-Do
+	•	Sketch a time series with upward trend + weekly seasonality
+
+Time Series Modeling
+	•	Standard regression assumes independence
+	•	Time series violates independence
+	•	Present correlated with past
+	•	Autocorrelation key concept
+	•	Must model time dependence explicitly
+	•	Methods include ARIMA, exponential smoothing
+Question
+	•	Why is random train/test split problematic for time series?
+To-Do
+	•	Explain in one sentence why time dependence breaks i.i.d. assumption
+
+Time Series Decomposition
+	•	Break into components:
+	◦	Trend
+	◦	Seasonality
+	◦	Residual
+Two models
+Additive
+	•	Y = Trend + Seasonality + Residual
+	•	Linear trend
+	•	Constant seasonal amplitude
+Multiplicative
+	•	Y = Trend × Seasonality × Residual
+	•	Non-linear trend
+	•	Seasonal amplitude grows with trend
+Question
+	•	If seasonal swings get larger as values increase, which model fits better?
+To-Do
+	•	Look at a dataset and decide additive or multiplicative
+
+seasonal_decompose()
+	•	From statsmodels
+	•	Requires estimated period
+	•	Must choose additive or multiplicative
+	•	Automated detection may overfit patterns
+Warning
+	•	Apparent seasonality may be noise
+Question
+	•	How would you validate that seasonality is real?
+
+Autocorrelation
+	•	Correlation with lagged version of itself
+	•	Measured with Pearson correlation
+	•	Durbin-Watson test
+	•	Indicator of seasonality
+	•	Lag length matters
+Question
+	•	If hourly data shows strong correlation at lag 24, what does that mean?
+To-Do
+	•	Compute lag-1 and lag-24 correlation for a dataset
+
+Markov Processes
+	•	Full autocorrelation at lag 1
+	•	Current state depends only on previous state
+	•	Transition matrix defines probabilities
+	•	Used in science, finance, ranking algorithms
+Question
+	•	Do most real-world time series truly satisfy Markov property?
+To-Do
+	•	Write a simple 2-state transition matrix example
+
+Autoregression Model
+	•	Use past values as features
+	•	Lag features
+	•	Can use multiple lags
+	•	Turns time series into supervised learning
+Example
+	•	y(t-1)
+	•	y(t-24)
+	•	y(t-168)
+Question
+	•	How many lags should be included?
+To-Do
+	•	Create lag-1, lag-24 features
+	•	Drop rows with missing lag values
+
+Project 1
+Objective
+	•	Predict hourly temperature at RDU airport
+	•	Specific time window
+Rules
+	•	Any data except ground truth future
+	•	Any features
+	•	Must include:
+	◦	1 linear regression model
+	◦	1 other model
+Deliverables
+	•	Presentation
+	•	Code repository
+	•	2–4 page writeup
+Writeup should cover
+	•	Inputs
+	•	Data pipeline
+	•	Feature engineering
+	•	Models
+	•	Evaluation approach
+	•	Performance
+Question
+	•	What features beyond past temperature might improve prediction?
+To-Do
+	•	Plan feature engineering before modeling
+	•	Use time-based split
+	•	Compare linear vs non-linear model
+	•	Report MAE or RMSE
+	•	Avoid data leakage from future timestamps
