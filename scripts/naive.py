@@ -3,26 +3,32 @@ from pptx import Presentation
 from zipfile import BadZipFile
 import re
 
-target_directory = Path("StudyLens/data/raw")
+target_directory = Path("StudyLens/data/output/naive")
 
-def get_first_sentence_min_words(filepath, min_words=10):
+
+def get_first_sentence_from_first_5_slides(filepath):
     prs = Presentation(filepath)
+    collected_sentences = []
 
-    for slide in prs.slides:
+    for i, slide in enumerate(prs.slides):
+        if i >= 5:
+            break
+
         for shape in slide.shapes:
             if hasattr(shape, "text") and shape.text:
                 text = shape.text.strip()
 
-                # split into sentences
                 sentences = re.split(r'(?<=[.!?])\s+', text)
 
                 for sentence in sentences:
                     clean = sentence.strip()
-                    word_count = len(re.findall(r"\b\w+\b", clean))
-                    if word_count >= min_words:
-                        return clean
+                    if clean:
+                        collected_sentences.append(clean)
+                        break  # first sentence from this slide
 
-    return ""
+        # continue to next slide automatically
+
+    return collected_sentences
 
 
 def process_all_ppts(directory: Path):
@@ -32,10 +38,10 @@ def process_all_ppts(directory: Path):
             continue
 
         try:
-            sentence = get_first_sentence_min_words(ppt_file, min_words=10)
+            sentences = get_first_sentence_from_first_5_slides(ppt_file)
 
-            output_file = ppt_file.with_name(ppt_file.stem + "_naive.txt")
-            output_file.write_text(sentence + "\n", encoding="utf-8")
+            output_file = ppt_file.with_name(ppt_file.stem + "_first5.txt")
+            output_file.write_text("\n".join(sentences) + "\n", encoding="utf-8")
 
             print(f"Created: {output_file}")
 
@@ -44,4 +50,5 @@ def process_all_ppts(directory: Path):
         except Exception as e:
             print(f"Error processing {ppt_file}: {e}")
 
-
+if __name__ == "__main__":
+    process_all_ppts(target_directory)
