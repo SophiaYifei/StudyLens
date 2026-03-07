@@ -215,3 +215,4 @@ outputs/*.json
 # Data
 data/.DS_Store
 .DS_Store
+data/raw
