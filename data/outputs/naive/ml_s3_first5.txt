@@ -1,0 +1,14 @@
+Enter code
+d147bbc6-c9db-46c2-b704-a4373e55690b
+Go to:
+fastapi-app-690891431278.us-central1.run.app/
+https://fastapi-app-690891431278.us-central1.run.app/student/quiz/d147bbc6-c9db-46c2-b704-a4373e55690b
+Linear Regression
+Which are linear models?
+Linear models are linear in the parameters w.
+Linear regression
+What is linear regression?
+Simple vs.
+Simple linear regression models y as a function of a single feature x
+Multiple linear regression models y as a function of a feature vector x containing multiple features x1,x2…xn
+Image source: https://www.alsharif.info/iom530
