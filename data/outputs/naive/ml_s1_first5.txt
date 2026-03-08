@@ -1,13 +1,0 @@
-AIPI 520:Modeling Process & Algorithms
-“It is easy to sit in your office and run an algorithm on a data set you downloaded from the web.
-Context
-What we will learn
-Modeling process best practices
-Modeling, evaluation, interpretation
-Key algorithms
-How they work
-Strengths and limitations
-How to get the most from them
-Applying ML to real-world structured data
-Syllabus review
-Introduction to Machine Learning

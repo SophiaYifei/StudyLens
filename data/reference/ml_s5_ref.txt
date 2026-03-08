@@ -1,0 +1,13 @@
+Classification – Logistic Regression (Week 5)
+
+• Classification: Predict a category (binary or multi-class). Examples: benign vs malignant, digit recognition, next word. Unlike regression, classification does not extrapolate beyond seen classes. Classes can be created by binning continuous outcomes (e.g. income bins).
+
+• Why not linear regression for classification: We could predict 0/1 with regression, but (1) predictions between 0 and 1 are hard to interpret as classes, (2) we can get values < 0 or > 1, (3) fit is poor. Better: model probability P(y=1).
+
+• Logistic regression: Model P(y=1) with the sigmoid of a linear function: P(y=1) = σ(w0 + w1x1 + …) = 1 / (1 + e^{−(w0+w1x1+…)}). Sigmoid maps any real number to (0, 1). Input to sigmoid is the same linear combination as in linear regression; output is a probability.
+
+• Estimation: No closed-form solution. Use maximum likelihood: find w that maximizes the probability of observing the given labels. Equivalently minimize negative log-likelihood (NLL). NLL is convex for logistic regression; optimize with gradient descent (or iterative methods like IRLS).
+
+• Gradient descent: Iteratively update w in the direction that decreases the cost. Step size = learning rate. Too small → slow; too large → instability or divergence. Batch gradient descent: use all data per update.
+
+• Decision boundary: P(y=1) = 0.5 when linear part = 0; that defines a linear boundary in feature space. Logistic regression learns a linear decision boundary (like the perceptron) but with probabilistic outputs.

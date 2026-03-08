@@ -1,0 +1,2129 @@
+Week 1
+Introduction to Neural Networks
+Journey from Neuron to Neural Network
+1943
+A simple linear model that produced a positive or negative output, given a set of inputs and weights:
+f(x,w) = x1w1 + … + xnwn
+In this original model, weights were set manually.
+The Neuron
+∑
+x1
+x2
+x3
+w1
+w2
+w3
+f(x,w) = x1w1 + x2w2+ x3w3
+f(x,w)
+∑
+x1
+x2
+x3
+w1
+w2
+w3
+f(x,w) = x1w1 + x2w2+ x3w3
+f(x,w)
+yi = β0 + x1β1 + x2β2+ x3β3
+*
+*representation of linear hyperplane
+1958
+“Stories about the creation of machines having human qualities have long been a fascinating province in the realm of science fiction,” Rosenblatt (1958)
+∑
+x1
+x2
+x3
+w1
+w2
+w3
+f(x,w) = x1w1 + x2w2+ x3w3
+f(x,w)
+T
+y =
+1, if Σᵢ wᵢxᵢ - T > 0
+0, otherwise
+The perceptron introduces a threshold!
+The Perceptron
+z1
+x1
+x2
+x3
+w1
+w2
+w3
+Φ(z1) = activation function
+f(x,w)
+Φ1
+∑
+x1
+x2
+x3
+w1
+w2
+w3
+f(x,w) = Φ(x1w1 + x2w2+ x3w3)
+f(x,w)
+yi = β0 + x1β1 + x2β2+ x3β3
+*
+*representation of linear hyperplane
+Image Source
+The Perceptron Problem
+Threshold=0
+w₁x₁ + w₂x₂ + b > 0 for orange points
+w₁x₁ + w₂x₂ + b < 0 for green points
+Our decision boundary:
+w₁x₁ + w₂x₂ = 0
+This is always linear!
+Image Source
+The Perceptron Problem
+2x₁ - x₂ + 1 = 0
+-x₁ + x₂ - 2 = 0
+With only one neuron, the perceptron can only represent a linear decision boundary.
+Image Source
+The Perceptron Problem
+Image Source
+The Multilayer Perceptron
+Image Source
+The Multilayer Perceptron
+With a sufficiently large number of units, a multilayer perceptron can approximate any function.
+x3
+z1(2)
+z2(2)
+1
+x2
+x1
+1
+z(3)
+b1(3)
+b1(2)
+w1,1(2)
+w1,1(3)
+Φ1(2)
+Φ2(2)
+z1(2) = w1,1(2)x1 + w2,1(2)x2 + w3,1(2)x3 + b1(2)
+Φ(z1(2)) = activation function
+Input Layer (1)
+Hidden Layer (2)
+Output Layer (3)
+Neural Network
+Φ(3)
+History of Neural Networks
+1950s
+1960s
+1970s
+1980s
+1990s
+2000s
+2010s
+2020s
+1943 - McCulloch and Pitts propose the model of the Neuron
+1958 - Rosenblatt demonstrates Perceptron
+1982 - Hopfield’s bidirectional neural network revives research efforts
+1986 - Three independent research groups develop backpropagation method for training neural networks
+2009 - ImageNet competition(Fei Fei Li)
+2017 - “Attention is all you need” published
+2012 - AlexNet
+Early AI Research
+Deep Learning Boom
+Gen AI Boom
+AI Winter
+AI Winter
+2022 - ChatGPT
+2015 - ResNet architecture
+1940s
+Why Now?
+Training Data + Labels
+Computational Power
+Algorithmic Advances
+The amount of data available for training has grown exponentially
+Sensors / connected devices
+Lower cost of storage
+Efforts have been made to label vast amounts of data for training
+ImageNet (1.2M images of 1000 objects)
+Computational power has increased tremendously, allowing for much deeper neural nets
+Major algorithmic advances have overcome limitations of neural nets
+When to Use?
+Lots of training data
+Very large number of features (unstructured data!)
+Complex relationships between features and the target
+Low concern for explainability
+Limitations
+Neural networks can be very computationally expensive
+For a small 28x28 image and a 3 layer network, we have 28x28x100x10 = 784,000 weights to learn!
+As a result, NNs can be very power-hungry
+Computational resources of best-in-class NN have doubled every 3-4 months, a 300,000x increase since 2012 [Source]
+Neural networks can be difficult to train
+Use of nonlinear activation functions means the error optimization is non-convex
+Difficult to interpret the outputs of deep neural networks
+Easy to overfit, particularly on small data
+Deep Learning
+"Deep" refers to the number of layers through which the data is transformed.
+More layers allow the network to learn more complex features at various levels of abstraction
+Deep Learning
+Deep learning algorithms automatically discover and learn the features from the data
+This ability to learn high-level features from data makes deep learning particularly powerful for tasks like image recognition, natural language processing, and complex decision making.
+Activation Functions
+z1
+x1
+x2
+x3
+w1
+w2
+w3
+Φ(z1) = activation function
+f(x,w)
+Φ1
+∑
+x1
+x2
+x3
+w1
+w2
+w3
+f(x,w) = x1w1 + x2w2+ x3w3
+f(x,w)
+T
+y =
+1, if Σᵢ wᵢxᵢ - T > 0
+0, otherwise
+The perceptron introduces a threshold!
+Activation Function =
+Decision-Maker
+Answers the question: how much of the signal should be passed forward in the neural network?
+x3
+z1(2)
+z2(2)
+1
+x2
+x1
+1
+z(3)
+b1(3)
+b1(2)
+w1,1(2)
+w1,1(3)
+Φ1(2)
+Φ2(2)
+z1(2) = w1,1(2)x1 + w2,1(2)x2 + w3,1(2)x3 + b1(2)
+Φ(z1(2)) = activation function
+Input Layer (1)
+Hidden Layer (2)
+Output Layer (3)
+Φ(3)
+Activation Function =
+WHY?
+Adds nonlinearity!
+Controls output range (makes the model easier to understand)
+Learn more complex patterns in data
+Activation Function =
+WHAT
+Function that maps your input (weighted sum) into an output (typically within some predefined range).
+Example: Sigmoid, maps z → (0,1)
+N/A
+(maps into probability distribution)
+QR code here
+x3
+z1(2)
+z2(2)
+1
+x2
+x1
+1
+z(3)
+b1(3)
+b1(2)
+w1,1(2)
+w1,1(3)
+Φ1(2)
+Φ2(2)
+z1(2) = w1,1(2)x1 + w2,1(2)x2 + w3,1(2)x3 + b1(2)
+Φ(z1(2)) = activation function
+Input Layer (1)
+Hidden Layer (2)
+Output Layer (3)
+Φ(3)
+Image Source
+Bias (the good kind)
+Bias (the good kind)
+Training a Neural Network
+x3
+z1(2)
+z2(2)
+1
+x2
+x1
+1
+z(3)
+b1(3)
+b1(2)
+w1,1(2)
+w1,1(3)
+Φ1(2)
+Φ2(2)
+z1(2) = w1,1(2)x1 + w2,1(2)x2 + w3,1(2)x3 + b1(2)
+Φ(z1(2)) = activation function
+Φ(3)
+x3
+z1(2)
+z2(2)
+1
+x2
+x1
+1
+z(3)
+b1(3)
+b1(2)
+w1,1(2)
+w1,1(3)
+Φ1(2)
+Φ2(2)
+z1(2) = w1,1(2)x1 + w2,1(2)x2 + w3,1(2)x3 + b1(2)
+Φ(z1(2)) = activation function
+Φ(3)
+Terminology
+x3
+z1(2)
+z2(2)
+1
+x2
+x1
+1
+z(3)
+b1(3)
+b1(2)
+w1,1(2)
+w1,1(3)
+Φ1(2)
+Φ2(2)
+z1(2) = w1,1(2)x1 + w2,1(2)x2 + w3,1(2)x3 + b1(2)
+Φ(z1(2)) = activation function
+Φ(3)
+Blueberry Muffin
+Dog
+Image Source: Reddit
+x3
+z1(2)
+z2(2)
+1
+x2
+x1
+1
+z(3)
+b1(3)
+b1(2)
+w1,1(2)
+w1,1(3)
+Φ1(2)
+Φ2(2)
+z1(2) = w1,1(2)x1 + w2,1(2)x2 + w3,1(2)x3 + b1(2)
+Φ(z1(2)) = activation function
+Φ(3)
+Image Source: Reddit
+Prediction: Dog
+Label: Blueberry Muffin
+x3
+z1(2)
+z2(2)
+1
+x2
+x1
+1
+z(3)
+b1(3)
+b1(2)
+w1,1(2)
+w1,1(3)
+Φ1(2)
+Φ2(2)
+z1(2) = w1,1(2)x1 + w2,1(2)x2 + w3,1(2)x3 + b1(2)
+Φ(z1(2)) = activation function
+Φ(3)
+Image Source: Reddit
+Prediction: Dog
+Label: Blueberry Muffin
+Update weights + biases
+Initialize the weights to be small random values
+For each observation/batch/mini-batch in the training set:
+Starting at the input layer, forward propagate the training data through the network layers to generate an output
+Calculate the error of the output using the selected cost function
+Calculate the gradient (derivative) of the error with respect to every weight in the network
+Use gradient descent to update each weight in the direction that minimizes the error
+Repeat step 2 until convergence
+Training Overview
+x3
+z1(2)
+z2(2)
+1
+x2
+x1
+1
+z(3)
+b1(3)
+b1(2)
+w1,1(2)
+w1,1(3)
+Φ1(2)
+Φ2(2)
+Φ(3)
+Image Source: Reddit
+Prediction: 2
+Label: 4
+Error: 2
+How many blueberries?
+Feedback for training - we want to minimize this!
+Loss function
+x3
+z1(2)
+z2(2)
+1
+x2
+x1
+1
+z(3)
+b1(3)
+b1(2)
+w1,1(2)
+w1,1(3)
+Φ1(2)
+Φ2(2)
+Φ(3)
+Image Source: Reddit
+Prediction: 2
+Label: 4
+Error:
+Mean Absolute Error
+L = |y - ŷ| = |4 - 2| = 2
+Mean Squared Error
+L = (y - ŷ)² = (4 - 2)² = 4
+How many blueberries?
+Feedback for training - we want to minimize this!
+Loss function
+Loss Function
+Error of one training example
+Cost Function
+Average error across entire training set
+Loss function
+Loss function
+Loss functions can be anything! Custom loss functions can improve model outcomes by aligning better with the problem you are trying to solve.
+Custom loss functions in PyTorch
+Choosing your loss function
+Type of Learning Problem
+Classification v. Regression; Binary v. Multiclass classification
+Model Sensitivity to Outliers
+Some loss functions are more sensitive to outliers (e.g. MSE)
+Computational Efficiency
+Some loss functions are more computationally expensive
+Convergence Properties
+The smoothness and convexity of a loss function can affect the ease and speed of training
+Scale
+For large-scale tasks, the loss function must be scalable
+loss function
+defines the model’s goal(s)
+tells us how wrong the model is
+How many blueberries?
+Prediction: 2
+Label: 4
+Error: 2
+Prediction: 400
+Label: 4
+Error: 396
+Image Source: Reddit
+what we do once we know how wrong the model is?
+we figure out how much we need to change the parameters to improve the prediction
+backpropagation
+goes backward through the network to calculate how much each parameter impacted the loss, and whether we should increase or decrease that parameter to make the model’s prediction closer to the correct label
+then we make the changes to the parameters
+gradient descent
+uses the information from backpropagation to update each parameter slightly in the direction that reduces the loss, helping the model make better predictions over time.
+🏁
+📍
+🏁
+parameter is randomly initialized
+📍
+🏁
+parameter is randomly initialized
+loss: minimize  distance from goal
+📍
+🏁
+parameter is randomly initialized
+loss: minimize  distance from goal
+backpropagation: says which direction to move to reduce loss
+📍
+🏁
+parameter is randomly initialized
+loss: minimize  distance from goal
+backpropagation: says which direction to move to reduce loss
+gradient descent: takes a step in that direction
+📍
+📍
+🏁
+how large this step is is called the learning rate
+📍
+gradient descent: takes a step in that direction
+📍
+🏁
+if your learning rate is too small, it will take a long time to reach your goal (train your model)
+📍
+📍
+🏁
+if your learning rate is too large, you will end up very far from your goal and risk never finding it
+📍
+📍
+🏁
+parameter is randomly initialized
+loss: minimize  distance from goal
+backpropagation: says which direction to move to reduce loss
+gradient descent: takes a step in that direction
+📍
+learning rate: how large this step is
+Gradient Descent
+Image Source
+A first-order iterative algorithm for finding a local minimum of a differentiable multivariate function
+The idea is to take repeated steps in the opposite direction of the gradient (or approximate gradient) of the function at the current point, because this is the direction of steepest descent.
+Gradient Descent
+Weight wj
+at current timestamp or iteration, t
+Learning rate η (eta)
+Partial derivative of the loss function J with respect to weight j
+Minus sign = opposite direction of gradient (minimize loss)
+Weight wj
+at next timestamp or iteration, t+1
+Gradient Descent
+Image Source
+Learning Rate (η)
+Image Source
+Learning Rate (η)
+No “one size fits all” - the optimal learning rate varies with the data and architecture.
+Often in the range 0.001 - 0.01
+The most significant hyperparameter to tune
+Training a neuron with Stochastic Gradient Descent
+x3
+z = wTX
+x2
+x1
+1
+w1
+w2
+w3
+w0
+Φ(z) = σ(z)
+Sum z
+Z
+Activation Φ(Z)
+ŷ = Φ(z)
+Step 1: Forward propagate a datapoint
+Training a neuron with Stochastic Gradient Descent
+x3
+z = wTX
+x2
+x1
+1
+w1
+w2
+w3
+w0
+Φ(z) = σ(z)
+Sum z
+Z
+Activation Φ(Z)
+ŷ = Φ(z)
+Step 2: Calculate the gradient of the cost function with respect to each weight
+y-values
+Training a neuron with Stochastic Gradient Descent
+x3
+z = wTX
+x2
+x1
+1
+w1
+w2
+w3
+w0
+Φ(z) = σ(z)
+Sum z
+Z
+Activation Φ(Z)
+ŷ = Φ(z)
+Step 3: Update each weight using gradient descent and repeat
+Training a neuron with Stochastic Gradient Descent
+x3
+z = wTX
+x2
+x1
+1
+w1
+w2
+w3
+w0
+Φ(z) = σ(z)
+Sum z
+Z
+Activation Φ(Z)
+ŷ = Φ(z)
+Step 3: Update each weight using gradient descent and repeat
+x3
+z1(2)
+z2(2)
+1
+x2
+x1
+1
+z(3)
+b1(3)
+b1(2)
+w1,1(2)
+w1,1(3)
+Φ1(2)
+Φ2(2)
+Cost Function J(w)
+Backpropagation
+Φ(3)
+ŷ = Φ(3)(z(3))
+Layer l
+node j
+z2(2)
+1
+Layer l-1
+node i
+1
+bi(out)
+bj(l)
+wi,j(l)
+wi,j(out)
+Cost Function J(w)
+Backpropagation
+ŷ
+x3
+x2
+x1
+1
+Layer l-1
+Layer l
+Gradient Descent Methods
+Momentum
+We add a term to the update rule which helps speed up learning and avoid getting stuck in local minima of the cost function
+The term we add is a factor of the previous weight change.  This has the effect of reducing the influence of the current iteration and “smoothing” training
+Without momentum:
+With momentum:
+Image Source
+Optimization Algorithms
+SGD has issues:
+Learning rates and schedules have to be set in advance, without knowing what may work best
+Same learning rate applies to all weight updates each epoch
+If our data is sparse we may want to update frequently occurring features less and rarely occurring features more
+Alternatives
+Adapt the learning rate to the weights
+Image Source
+Adagrad
+Adapts the learning rate to each weight, at each time step
+Lower LR (smaller updates) for weights of frequently occurring features and higher LR (larger updates) for weights of rare features
+Well suited for sparse datasets (e.g. text)
+Eliminates need to manually tune the LR
+Weakness is that accumulated gradient in denominator eventually makes the step size too small to change weights
+RMSprop
+Alternative adaptive LR approach originally proposed by Geoffrey Hinton in his Coursera course
+Attempt to resolve the radically diminishing learning rate in Adagrad
+Adam
+Adaptive Moment Estimation (Adam)
+Combination of the ideas behind RMSprop and momentum:
+Uses both moving average of squared gradient (RMSprop) and moving average of the gradient (momentum)
+Adam is generally regarded as the current “best” all-around optimizer
+Other optimizers may work better for certain situations
+E.g. Adagrad works very well for sparse data
+Recent improvements have been made on Adam e.g. Radam, Nadam, AdamW
+Image Source
+Popularity
+Get visualization tool here
+Training Challenges
+Challenges
+Vanishing and Exploding Gradients
+Getting stuck in local minima
+Overfitting to training data
+Long training cycles
+When using activation functions like sigmoid or tanh:
+These functions "squish" values into a range (0-1 for sigmoid)
+Their derivatives are always less than 1 (maximum of 0.25 for sigmoid)
+Vanishing Gradients
+Wait, why do we care about the derivative of the activation function?
+Backpropagation!
+When we multiply many small numbers together during backpropagation, the result gets exponentially smaller
+In a best case scenario, each layer back reduces the gradient by roughly 75% (multiplied by 0.25)
+By the time we reach the early layers, the gradient is practically zero
+Vanishing Gradients
+Vanishing Gradients
+Simplified example to understand theory:
+Start at the last layer (gradient = 1.0)
+Move back to previous layer
+Multiply by sigmoid derivative (let’s assume maximum derivative 0.25)
+Multiply by weight (let’s assume weight ~1)
+New gradient = ~1*0.25 = 0.25
+Move back another layer
+Multiply sigmoid derivative again (<0.25)
+New gradient 0.25 * 0.25 = 0.0625
+Move back another layer
+Multiply sigmoid derivative again (<0.25)
+New gradient 0.25 * 0.0625 = 0.015625
+Repeat for n layers
+Vanishing Gradients
+Solutions:
+Use ReLU activation function
+Exploding gradients occur when large numbers multiply together
+Most commonly happens with:
+Large weight initializations (> 1.0)
+Activation functions with derivatives ≥ 1 (like ReLU)
+Effects compound in deep networks
+Exploding Gradients
+How to spot:
+Loss fluctuates widely across training cycles
+Model weights become very large or go to NaN
+Solutions:
+Reduce mini-batch size
+Use gradient clipping – limit the size of gradients
+Use batch norm
+Training Considerations
+Activation function(s) ✅ (examples: sigmoid, ReLu)
+Loss function ✅ (examples: MSE, binary crossentropy)
+Choice of Optimization Algorithm ✅ (examples: SGD, Adam)
+Data splitting
+Regularization (prevent overfitting)
+TEST DATA
+VALIDATION DATA
+TRAINING DATA
+DATA
+Regularization
+Neural networks are prone to overfitting
+We often use regularization techniques to reduce overfitting risk and improve convergence
+Early Stopping
+Image Source
+The model will overfit at some point during training!
+We ideally want to stop training when the validation error is at a global minimum
+Good: stop when val error begins to increase
+Better: stop at global minimum of val error
+Best: stop at point that gives best “price-performance” ratio (optimal ratio of training time to val error)
+Early Stopping
+Large Learning Rate
+Larger LRs help avoid getting stuck in local minima, but create risk of not converging
+Has been shown that large initial LRs reduce overfitting [Source]
+LR Schedules
+One strategy is to start with a higher learning rate and reduce it as training progresses and the weights approach the optimum
+There are many methods we can use to decay the LR
+With StepLR we decay the LR every step_size epochs by a factor gamma
+One-cycle LR Policy
+The 1cycle LR policy cycles the LR over the training, changing it after every batch
+Small initial LR increases to a set max value and then decays back down to a small value
+Momentum is cycled inversely to LR to balance regularization applied
+Do LR schedulers play nice with Adam?
+Use of an adaptive optimizer may not be compatible with use of a learning rate scheduler
+Benefits of adaptive optimizer are few/no hyperparameters to set
+Benefit of LR scheduler (one-cycle policy) is potential for much quicker training (superconvergence)
+In practice, try both – one-cycle policy with SGD, and Adam with no LR scheduler
+Other forms of regularization can be used with adaptive optimizers:
+Early stopping, weight decay, dropout, batch norm
+L1 Regularization (Lasso) -
+Adds a penalty equal to the absolute value of the magnitude of coefficients.
+This encourages sparsity in the model (many coefficients become exactly zero).
+L2 Regularization (Ridge) -
+Adds a penalty equal to the square of the magnitude of coefficients.
+This encourages small, but non-zero coefficients.
+Regularization via loss function
+Batch Normalization
+In backpropagation, weights of a layer are updated under the expectation that the prior layer outputs have a given distribution
+In reality the distribution shifts due to variation across batches and updates to prior layer weights (internal covariate shift)
+This slows learning by requiring lower learning rates and careful initialization of weights
+x3
+z1(2)
+z2(2)
+1
+x2
+x1
+1
+z(3)
+b1(3)
+b1(2)
+w1,1(2)
+w1,1(3)
+Φ1(2)
+Φ2(2)
+Φ(3)
+bn
+bn
+Batch Normalization
+BatchNorm standardizes the inputs of each layer, for each minibatch
+Each layer sees a consistent distribution of inputs
+Usually standardize the summed inputs before the activation function
+Helps speed up and smooths training
+Batch Normalization
+These are learned, just like a normal network layer’s weights and biases, and updated through backpropagation
+Batch Normalization
+Impact of batch norm is largest when combined with other changes it enables:
+Increase initial learning rate
+Accelerate learning rate decay
+Reduce weight decay regularization
+Remove dropout
+Image Source
+Dropout
+Original Network:                 Network with Dropout:
+o   o   o   o              			o   x   o   o
+\ / \ / \ / \              			\ / \   \ / \
+o---o---o---o              			o---x---o---o
+\ / \ / \ / \              			\ /   \   \ / \
+o---o---o---o              			o---o---x---o
+Dropout is when you randomly drops neurons during training to prevent overfitting.
+During each training step, each neuron has a probability of being ignored. This forces the network to not rely on any specific neurons, promoting redundancy.
+Dropout
+Loss Landscape created with data from the training process of a convolutional network that uses dropout. The use of dropout produces this distinctive morphology and sharp patterns during the training process
+SOURCE: losslandscape.com
+Code Resources
+<>
+PyTorch:
+GitHub
+WarpWire (Demo by Jon Reifschneider)
+Tensorflow:
+GitHub
+Panopto
+Before you leave
+Find a group of 2-3 people for Module Project 1 (Computer Vision)
+Ask: do you have aligned goals for the module project?
+Come up with a name for your team
+Brainstorm ideas
+Tell me your team name + team members
+
+[Auto-generated transcript. Edits may have been applied for clarity.], I didn't know that. Except for that hybrid question.
+Because that's what you don't. You. Know., whenever you are talking,, I can't hear things that...
+Oh,.. That's hard to get because I.
+See it. I our class more than nothin.
+Cause I was doing I work. Wow. That is a dedicated student.
+It's beautiful. Very nice. All, that's a job.
+Anybody can talk that into Madrid. My friend is doing a year long fellowship in the Dominican Republic.
+No.. No, we made it up.. That's good.
+That's good.. I know somebody who is in Puerto Rico and couldn't get out for,, a week that you can get there before.
+Oh, wow. I saw some dolphins in Tampa. Very nice.
+We probably crossed paths. I was there when I was in Orlando last week.
+Not seeing dolphins, sea land animals and humans.
+Oh,.., you don't sleep all semester, it's nice to.
+And then you're not going to sleep at all this spring semester..., I want you to be sleeping even though we have this class.
+Because I only know you when you're in my classes. I don't know what's going on in capstone.
+I don't know what's going on in all your other classes, but you got.
+you got to keep me posted on what's going on, because this is the one shared class we have together.
+we need to shift some things around. You guys got to tell me.. Let me know that.
+Hey, it'd be really great if we did presentations this day, but not everything was due today because we also have this huge thing for capstone, too.
+keep me posted on what you guys knew this semester, because we're going to make it to the end of this semester,
+and a lot of you are going to be graduating after the summer.
+It's crazy, sad and bittersweet, but then some of you are going to be returning next semester and you'll have to deal with me again.
+All, this is deep learning applications.
+And let's jump into a few of the things that we're going to be talking about this semester.
+originally when I joined the program they covered three topics computer vision,
+natural language processing not including anything generative and then recommendation systems.
+And when I joined, I was,, generative AI is starting to become really important.
+I added a module on generative AI.
+And then also Stuart was there last semester when I revamped and added a bunch of large language models to up to NLP.
+you're going to get a lot more generative stuff.
+And people had a few years ago, I think we're probably familiar with this, but in case you're not computer vision, anything with images and videos,
+anything that you see will be in computer vision all about text is going to be natural language processing and then recommending stuff in content.
+you go on Amazon and they recommend you something that is going to be our recommendation systems.
+And then generative systems are in images creating something from random noise and modeling different probability distributions.
+And then talk about all that good stuff this semester. some a few examples from computer vision., from object Detection and classification, which are two application threats.
+And this is really fun because when you're in a home with multiple people, you can go in and just change people's names.,, I when my husband and I first moved into the house, I changed his name to Bob.
+every time he was walking outside, I would say, Bob is,, on the front porch or Bob is by the garage.. And I was going back and change it to Bob. And then after a while,, that got,, boring.
+I changed his name to Kevin. And it was Kevin for a while, and then,, I changed his name to Stuart.
+And if you're if,, the minions movies, I'm just changing it to all the new names.
+And he's he's still on Stuart., but he eventually did figure it out once I put him on Stuart, that he was,.
+Actually, I was the one going in the changing room. smart doorbell is computer vision.
+We're going to talk all about,, these types of applications. Vacuum robots., a couple people have them at home., I have one at home., lovingly called dumpling., we used to have one that was called Dash Brown., these are the reason that I tell people when I give talks that I'm not worried about
+any Terminator type situation happening because they are not very good at their job.
+You're running into stuff all the time. You're just going in and just running into the wall.
+It's just. They're.
+And I just keep running into the wall. I'm not too worried about AI taking over anytime soon,
+but we're going to talk about how we can improve these and make them better using,, more modern object detection methods., this one is really cool. I'm going to play this video here. this is actually harvesting,, grapes.
+And this is a robotic system, and it's using computer vision to tell where these grapes are and to be able to harvest them.
+I think these are grapes. Are these Kiwi and I.
+I think the kiwi. Oh, man. I've been seeing grapes all these years., and then,, manufacturing ergonomics.
+If anyone in here is really interested in going into manufacturing, there is a huge need for computer vision,, in manufacturing, especially if we think about,, who's estimation,,
+when there's a lot of challenges in manufacturing because people doing a lot of repetitive jobs and then they have a lot of ergonomic problems,
+health problems, they can't return to work worker's comp.
+And there's a lot of,, startups out there now that are doing pose estimation using computer vision,
+because there's already cameras in these factories.
+could you use computer vision and doing pose estimation to see when somebody is doing too many repetitive movements,
+or maybe when they don't have a hard hat on and they could be at risk of getting their head smashed by one of these machines.
+In NLP., if you've used any plagiarism checkers,, that would be, a form of NLP called text similarity.
+We're going to talk about that this semester. We're going to talk about machine translation.
+any translation system that you use will use natural language processing of course.
+Generation of text. I think we are all,, pretty familiar with this.
+Is deep learning. But deep learning can definitely be fun.
+I love that answer. Searching online.
+this is where we get both natural language processing and recommendation systems.
+You're ranking those results before I mode and all of that.
+You still have to provide a recommendation of which one should be first, or at least which one should be first after the ads.. Shopping recommendations.
+all kinds of shopping recommendations. Everything from books to baby wipes to clothes.
+We're pretty much inundated with recommendation systems all of the time.
+Social media content connections, all of that.
+everything from ECS to TikTok to LinkedIn to dating apps.
+This is all driven by recommendation systems. These are huge.
+And then content platforms. other platforms you might be on a weekly basis, daily basis.
+YouTube, Spotify, Netflix. They are doing an immense amount of recommendation systems there.
+We're actually going to do a case study on Netflix when we get to the recommendation system later this semester,
+but we're going to go in depth into a few of the different recommendation algorithms they use.
+They actually use dozens of recommendation algorithms at Netflix.
+We've got this week to add it. away.
+Linear regression. Linear regression. here's our course timeline.
+It's pretty tight. we've got computer vision. This is going to be.
+today we're going to do an intro to neural networks which should be review for you all.
+But it might you might hear it a little bit differently. And you might be oh now I understand this a little bit better.
+we'll do that today. And now we're going to spend a few weeks on computer vision., next we're going to go to natural language processing. We're going to spend a few weeks on natural language processing.
+We're going to spend a couple weeks on recommendation systems and have some overlap with generative AI., and do,, a session on generative AI. And throughout all of this is your individual project.
+this is all looming in the background., and we'll talk about the individual project in just a few minutes.
+And I here, that's me.
+That's graduation or quasi graduation, because you still have to pass the courses in the summer, which, as far as I know, only one person has failed.
+I'm sure you all get it. All.
+let's go through the syllabus.
+The syllabus is going to look pretty similar to our syllabus from last semester, with a few modifications that I want to talk about.
+Let me pull up your slide. You all know me, but I don't know if everyone here knows Stuart, want him to introduce himself.. Hi, everyone. I'm sure I'm,., I, I run track, and I also in this program, I'm really interested in,, the sports,
+and I,, I'm,, borderline obsessed with,,, tracking and quantifying movement., I the whole thing. Start ups. I run my own startup, and,, we have things in ML, out of the box ideas.
+I love one of those., and I was also a neuroscience undergrad,,, I love talking about,,, similarities and differences between human brains and computer brains.
+I'm sorry. I don't want to call., and then this was just,, me with,, a monument to Alan Turing.
+There's only a thousand points in London is not good.
+That's a good catch. You guys give me a t shirt. Exactly. Manchester, UK.
+It's not in the United Kingdom. It is.
+On the west coast. It is San Francisco.. It's in,, it's in Hay Ashbury where they have,, they have a bus, an equivalent of a Walk of Fame.
+But for gay people, I'm not sure as.., and that was the summer., quick note about this, cause,, it is hard.
+There's no getting around it, but,, it should be because it's 70 years of research into,,, humanity's greatest target compressed into three months.
+don't be surprised. It is hard, but lean into it.,, it makes the content exciting a lot., but,, just prepare yourself,, difficult concepts.
+That's my best advice. Oh,.
+come see Stuart if you need any help. He's going to be around.
+[INAUDIBLE] be coming to our hackathon days for our next hackathon day.
+I don't think we'll be in class every time, but he will be here during our,, events office hours.
+I'm I have, quite a lot of availability,. Who's free on Thursdays.
+Hands up. Just all day.
+Thursday is our capstone class., not Thursday. I'm sorry.
+We wanted to show them out. Saturday Sunday Friday.
+Man the light. Three. Perfect.
+And after my office hours. And when they're confused by me, they can go and see you.
+It sounds good. Awesome. I got used to it.
+Come on. All.
+This is actually the first time our class of 78, which is pretty exciting because usually we don't have returning folks in the spring semester.
+When I heard Stuart was sticking around, I was,, I'm going to have to year this year.
+I was very excited. All. let's see.
+We've got this is going to look pretty familiar.
+We have of course GitHub repo., this is going to have a bunch of tutorials on pretty much everything that we're going to talk about in the class.
+And we've got a whole code resource there. And,, we're not going to do a bunch of code demos in class.
+I don't find them super effective to just go through things in class.
+And they're all those code demos are there for you to pour over for you to put into ChatGPT and get it to evaluate and look over for you to update,, your thought process on. And all of that is in our GitHub repo., there is an optional textbook.
+you are the person that really likes to do proofs and you really to read about,, deep theory.
+And I would highly recommend this deep learning book.
+I'm going to in canvas, you'll see that I'll tell you which chapters are going along with,, some of our,, stuff in class., optional text, but not required., most of the assignments here are going to require access to a GPU.
+You guys should be the class that is most familiar with GPUs by this point, which is great.
+we talked about them in 510. I think you got into them a little bit in 520., hopefully you have some comfort level with at least accessing the GPU., Google has granted each of you $50 in compute credits.
+Those go fast, but everybody in here has $50 in computer credits.
+You can use those for your projects with your teams.
+You can pool money together. You can use them for your individual projects, whatever you want.
+But each of you has $50., and the information for that is in canvas, which I'm going to show you., let's see. And then canvas. Canvas is pretty much what we use for communication.
+we'll send out announcements and canvas.
+And then you're going to see all of the course material there in canvas, which we'll go through in just a minute., we also tend to use the API discord server more in this class.
+if you took HCI with me,, the level of communication on the Xdai discord,
+we just moved over to the API discord for this particular class.
+I'll set up a channel if we haven't set it up already., and that channel will be used just for general communication for this class.
+ask questions there, especially questions that you're asking in the WhatsApp.
+Just put them in the discord. And then Stuart I can answer those for you.
+All. of course grading. we got 25% of the coarse grade is going to be the computer vision module., and this year I'm doing something a little bit differently.
+you might have noticed our three trophies up here..
+We have three modules that we're going to have hackathons in.
+These are going to be in class in person., you are going to work for two hours on some small project that is related to computer vision or natural language processing,
+or is going to be related to generative AI. Now, the idea here is that for computer vision and NLP, you can roll this into your module project.
+you could go work with the same team that you're working on for the module project, and you'll work on a piece of that in class.
+And there will be winners, of course.
+at the end of each hackathon for your piece, you'll get up here and do a 1 to 2 minute pitch of what you guys accomplished.
+And because this is a democracy, we are all going to vote on which team is going to win the trophy for each of our hackathons.
+These hackathons are going to occur on January 27th, the first one is in two weeks from today on computer vision., and then going to happen again March 3rd.
+That's going to be before spring break. And then, March 31st is going to be our generative AI one., not for generative AI, but for recommendation systems, NLP and computer vision.
+You're going to have a team project. The team project is going to be 2 to 3 people on that team project.
+if I'm 2 to 3 people to work with on this project, and then you'll see here,, 10%,, is going to be your computer vision assessment.
+the assessment can take many forms. I think Stuart's class had some challenges.
+And we did exams for each of those.
+But if we don't have challenges on the first assessments and they go really, then we won't have to do exams for every assessment.. if you work really hard in that first one, we will have an easier time later in the semester.
+some motivation there. I'm pretty sure I gave the same motivation to Stuart's class, teamwork didn't work.
+Stuart always did great though. He always got 100, of course.. Let's see. And then,, that's all the modules.
+And then the 20% is your final course project. This is done individually.
+each person will craft over the course of the semester or the one week before the end of the class.
+You guys will put together a course project. Now, these course projects are pretty cool because they often lead to jobs., for example, a couple of years ago,, somebody did a movie recommendation system for their individual final project,
+and then they got hired by TikTok because it. you can really craft these to try to get that job that you want afterwards,
+That job that now you have this really nice project that you can show, or maybe, Stewart, you will roll it into a startup that you start.
+All. of course, schedule wise we've got into neural networks today.
+We're going to do CNNs transfer learning data augmentation.
+Next week. We'll do an in-class hackathon and then we'll do computer vision applications.
+That's pretty much going to cover a bunch of other computer vision stuff.
+We'll do our module assessment and module project presentations on the same day.
+we'll have,, project presentations. These will be very short and pitch for your teams.
+And then we'll do our assessment. Similarly NLP is going to be week six.
+We're going to do an overview of NLP applications a deep dive.
+Then we'll do it in class hackathon before spring break. We'll head out to spring break.
+Not think about any of this stuff, and then we'll come back and give presentations and have our module assessment.
+March 24th. We're getting to the end of the semester here,. we're going to have our generative deep learning lecture.
+We'll do our generative AI in class hackathon the following week. And we're gonna wrap up this semester by doing a lecture on recommendation systems
+and our module assessment and module project presentations recommendation systems.
+The last day of class is going to be April 21st. That is Demo day.
+That is where you all come here and you present your final projects to one another.
+And we usually live stream that you can have family and friends stream as.
+I will talk to Amanda about trying to get a bigger room. if you have local friends and family, we could get them to come to the class.
+I will talk to Amanda about trying to get a room for that. All.
+Questions far. All.
+We're going to talk about this stuff in just a minute when we talk about this.
+Let's see., one thing that has changed is my policy on using AI resources.
+I'd to give you guys a really good reason for a change in the policy,
+other than I was just really sick of dealing with having to go back and forth with people about the AI policy.
+I policy on using AI resources this semester is I'm going to assume you're using some generative AI for your assignments,
+whether that's cursor or whether that's ChatGPT. Your assignments this semester have been appropriately scaled as a result.
+everything you will do in this class has been scaled such that it is much harder than students here., but I'm going to be assuming that you are using these tools.
+they should still you should still be able to do them.
+I still recommend getting in the habit of citing your AI resources, but points are not going to be taken off,
+and we are not going to be assessing whether or not you use AI resources in the class.
+I typically use cursor, but most of the coding that I do now,, is mostly web development to create new tools and interactive elements.
+I have heard that cloud code is probably the best, but I cannot assess that because I have not used it since the summer and the summer was crap... I'm curious what you mean by, more challenging than last year., is that in terms of, how much time you expect this to spend on it, theoretical or.
+It's a wonderful question. I am going to pull up the canvas now and we'll go through it together.
+All. Let's go ahead and take a look at these assignments.
+All. your projects, they're all going to look the exact same.
+They're just going to say up here I underlined computer vision.
+It will be underlined NLP or will be underlined recommendation systems.
+But everything else is the exact same. one note here.
+You may not reuse a project you are already working on for another course,
+prior research or your job, this project must be new work developed specifically for the course.
+This is not the case for the individual project.
+for example, if you are working on a startup and for your individual project, you want to do some of your startup for that, that is totally fine.
+However,
+you can't do anything that was worked on with a team and now go solo and rely on a lot of that foundation because it gets a little bit messy there,
+similar to IP in the real world., here we go.
+we have three modeling approaches. This is the same as last year.
+you have to create a naive baseline model. Now when I say a naive model people get really confused by this.
+this is the time to think.
+And then focus in I'm saying something really basic, not something that,, you have to think very deeply about thinking,, you're doing a mean prediction, you're just predicting the mean, or you're doing a majority class classifier.
+you have,, all of this training data and you have, I don't know, 100 rabbits and you have 50 goats.
+You are going to just predict the majority class, which is rabbits.
+You're also going to create a classical non deep learning machine learning model for your project.
+this is to compare against your deep learning approach. Sometimes a classical approach works better than the deep learning approach.
+And that actually happens quite a bit in this class. you're going to create a classical non deep learning machine learning model.
+Think linear logistic regression random forest gradient boosting SVMs,
+anything that you pretty much learned in John's class except for neural networks you can apply here.
+And then finally you're going to do your neural network based deep learning model.
+And you're going to have all three of these. And now you only have to deploy one of them.
+you get to choose which one you deploy. Sam.
+this might be a stupid question, but let's just say, you're theoretically for your computer vision,
+How would you.
+next week we're going to talk about some traditional approaches for computer vision.. I know it sounds crazy, but you can actually do computer vision classically.
+It's not done very often because it's not very good.
+However, you all are going to do it in this class that you recognize why we do deep learning models.
+And how challenging it is to do a classical approach to computer vision.. Great question. All.
+You choose one of these for your final deployed model, but all of them have to be in your code repository that you're going to submit for the project.
+All. This part is new. All. Required experimentation.
+You have to conduct at least one focused experiment that probes your modeling choices.
+you can do a sensitivity analysis looking at a varying your training set size and looking at the performance.
+those evaluation metrics, you could do some robustness testing.
+you could do a noise injection or a distribution shift and see how your model does.
+on robustness you could compare different preprocessing pipelines.
+You could do ablation studies. You could do any other experiments that are going to result in something meaningful to develop and test your system.
+And your experiment should be motivated, clearly described, and properly implemented.
+All. Next you have an interactive application component.
+your project has to include a working, interactive proof of concept application that's publicly accessible via the internet.
+don't do any training in the app. I don't want to sit there for ten minutes while your model trains in the app., you're just running inference on that. You can use any front end or deployment framework that you want.
+Flask, Streamlit, dash. You can do whatever you want here., but it has to be publicly accessible via a link that myself and Stuart can access for up to one week after.. make it clear we don't need to do anything with Docker. Again, I having the user be able to run it on their own.
+You do not have to do anything with Docker unless you want more skills with Docker.
+And you can incorporate into your project if you wish. There are some replicate.
+It's often they have a Docker container that you can put models in, but you are not required to do it.
+All, this is new UX actually matters this time.
+Because if nobody wants to use your crappy application, then they're not going to use it.
+this year,, a minimal or poorly designed interface is going to be penalized.
+This is a product level proof of concept. I want you to think this is a startup that I'm trying to get funding for, and it has to look the part.
+Not going to be some,, simple. Streamwood app., not going to cut it. think about the UX.
+Think about how to implement this using your generative AI code tools of choice.
+And, spend some time on it because it does matter.
+And it does matter what people's perception of you and your level of work is.
+All. If the app does not run when you and I are breathing, you're going to receive a zero for that portion of the project.
+Really important because we're going through and trying to grade all of it at one time.
+We have the where we're coming in. We're saying,, we're going to do all of the grading now.
+we don't have these biases of, oh,, I just had a pizza and I'm tired versus,, maybe I just had a salad and I'm still tired.., but if regardless, we, we try to do it all at one time and we really don't want to have to go back and do that.
+our pasta run. Think of it this.
+If it's an investment investor demo, if it doesn't work, it's not going to get funded.
+I want you to think about that for this. What that might mean, especially if you use something Streamlit and Streamlit,
+has some challenges, as you may want to go in and just check it every day for that week.
+just set yourself a little reminder.
+Someone on your team set a little reminder, and then just go and check it every morning and make sure that it's still running.
+All. the goal of this project is to create some unique contribution to solving a problem., that's outside are beyond what somebody has done previously.
+There's different options for this. You can work on a data set or problem for which there has not been previous modeling approaches., you could create a new test,, text data set., you could create a new data set, just you., did some of that in,, in five, ten., and you can do all that., alternatively, you can choose an existing data set or problem that others have worked on.
+But you have to do something new or novel in your approach.
+It doesn't have to be more accurate than the previous approaches, but it has to be improved in robustness,
+for example, or it has to be improved in some way, or maybe it's more efficient, whatever it may be.
+All. Project deliverables. This is new., you're going to have a written report.
+Remember, you can use generative AI tools for this,, written report., you're going to submit it in one of the following formats. You're going to do a NeurIPS or icMl style research paper.
+And you can look up the format for those. You can do a white paper.
+And you can also look up the formats for white paper or technical report.
+These all are pretty similar as they have. But you're going to pick one of those formats and you're going to submit a written report in that format.
+It has to include the following sections problem statement data sources, related work evaluation strategy and metrics.
+Really important here for justification.
+Just in 510, I want you to justify and provide rationale for why you choose to do a particular evaluation strategy., your hyperparameter tuning strategy, the different models you evaluated and why you chose each of those models.
+Your results.
+You are required to have a quantitative comparison across models and metrics, as visualizations,, confusion matrices where appropriate., you need to do an error analysis.
+You need to identify five specific mis predictions and try to explain the root causes of those, and propose mitigation strategies.
+And then you're going to write up that experiment that we talked about as. All.
+The motivation for it, it'll be just a really fun time to learn about some of the techniques that other people used in the class.
+And then your code and deployment.
+submitting a link to your GitHub repository with your full code base, as a live deployed web or mobile application.
+And then of course, following best practices we talked about in 510, including PR's made by each team member and good peer reviews made.
+That should be made on each PR by other team members prior to merging code into the main branch.
+follow me. Get best. Practice is really important., Stuart's class had a lot of problems with this one.
+I think I remember this specific.,.
+And then I was, I'm going to give you guys a chance to redeem yourselves for your grades.
+But all you guys have to do is just have PR reviews by every person on your teams.
+Didn't happen., they're there for us.
+Every PR has to be reviewed by everyone else or no.
+Every PR has to be reviewed by someone. But then everybody on a team has to have at least one PR review.
+Don't give me crappy code, please. I want to look through it.. that's that's what we're going to do for each of the assessments.
+And then your individual project is going to look pretty much the exact same.
+Except now you can choose anything that you want.
+But you're going to see that it's required experimentation interactive application.
+It's pretty much the exact same thing.
+But now you're doing it individually, and you can work on a problem of your choice with any type of deep learning.
+in this class we cover computer vision, NLP recommendation systems, and generative.
+We don't cover a lot of time series, but if you're, I really want to dive into some time series deep learning, you can go for that.
+Totally fine to do that for this class, you can choose whatever you want for that final project.
+All..
+Coming back here. There's a couple of things about, oh, before I do that,
+I should show you guys on campus is otherwise you might never look at it if you miss a class, totally fine., all the videos are here, we'll have the in-class lecture.
+The entire one is here from last semester. I'll post the ones from this semester.
+They're also on Panopto you can find those. Here are individual lectures because I teach this course online in the summer,
+I have it broken down into specific components of the lecture they don't have to sit there and watch two hours.
+They can just sit there and watch ten minutes at a time.
+if you prefer that format, also if you're, I'm really confused about this concept, you can go back here and rewatch stuff., slides are all here., different resources are here, apps that we'll talk about in class., it's a great question., the lectures are pretty similar.
+I've made some modifications. What I have given you guys this semester is you guys have access to my Google Slides.
+when I make changes, you guys will see those changes immediately., in previous years, I have only given access to the PDFs, and that's been a real pain in the butt that you could change those., you have the PDFs from last year you can see what's different between last year and this year., but you'll also have links to this year's,, slides.
+Which do tend to change a little bit, but not too much because the content stays pretty similar., let's see, you got code here. we got video demos of code,, for TensorFlow and PyTorch.
+We've got the GitHub. And then here is the specific chapters of the textbook I would recommend reading if you're
+really interested in diving a little bit deeper into the stuff we're talking about in class.
+Let's see, I think.. And then here is where you get the Google Cloud credits.,, the instructions for the credits are here in canvas.
+you're going to want to go and check those out. Also, my office hours schedule is here.
+come to office hours if you have any questions, either mine or Stuart's which will which look they're going to be after mine., Mondays are the days to get help in this class. Questions on canvas.
+Okie dokie., a couple helpful hints for this class.
+there's a couple places where people always have challenges in this class as we have just a couple slides on it.
+One is model evaluation. really thinking through the evaluation metrics for your use case and having rationale are really important.
+Also having proper validation and test sets.
+three different sets. when you have your part of data divided into three pieces really important.
+And then, Occam's razor keeping it simple., you have to do that traditional email approach and then you have to use the naive approach.
+And I am probably being a dead horse here. But now you've approached there's always many questions on it.
+An example of this is algorithm to determine heart rate from a camera.
+The mean heart rate in my data set would be a naive approach here.
+Another example when fine tuning, typically the naive approach is going to be the model before fine tuning.
+you have based ResNet 50. You're going to do it on whatever task you have before you fine tune it.
+And then you go through a transfer learning fine tuning process and then you evaluate it afterwards.
+your naive is usually just your model without any fine tuning.
+Questions.. Building prototypes,, is a big portion of this class., when I started working as a data scientist, it didn't really matter that you could build stuff in.
+Mostly matter, that you could put together really nice slides with really nice visualizations., showing the results of your model,, having really nice loss curves,
+confusion matrices, pulling out images,, that showed failure cases for your models.
+That was pretty much it.
+But then Darwin to ChatGPT came out and that at that moment, people were suddenly, we want to use the tools ourselves.
+And all of our clients wanted us to build things that they could personally interact with,
+which is a lot harder than having really nice curated visualizations.
+But that's the reality of the world now, is that we're in build mode.
+And building prototypes really important. This is why it's such,, an emphasis in this class.
+But that doesn't mean it has to be publicly accessible to everyone.
+You could have a password protected and just give us the password in your submission.
+if you are working on something that's a little bit more sensitive that you don't want the general public to have, there are options for that.
+And I want you to think in this class, this is a demo to a senior.
+This is in a demo to an investor. And then this is really important especially for this class.. You're in a class. You don't want to spend a lot of money putting together a demo.
+And thinking about hosting costs these have come down significantly.
+You can host much for free or for $5 a month., talk through a lot of these resources already, but here's just a bunch of links to them.
+when you go back to the slide, you can see them hugging face is great to host models, to host data sets.
+You can even host a demo on Streamlit or radio.
+It is free for CPAs and then you can pay a small fee for GPU.
+if you need to run a GPU, that can be a good option.
+A replicate is another great option if you are building a model that you are going to need to run a GPU because you only pay for inference,
+you are paying for this GPU to be on all the time. All you are paying for is when somebody pings that model and they run inference on it.
+you're paying a lot less money.
+You could also do a lot of fun things create discord bots,, using replicate models or models that you host to replicate., web demos. You can. You can host your model,, elsewhere.
+But you could do a Next.js app here. vercel.
+In Next.js, it's free for individual. They have a bunch of cool templates that you can go off of.
+thinking about that UX and then of course you can use the traditional AWS, GCP, Azure.
+There's a lot of other platforms. Stuart do you have anything to add here is resources for them when they're building prototypes.
+the sell is always on that...,. Convex. Convex stuff makes a lot of,, of, back end stuff that would normally require things.
+Awesome. With that, they've got a free. And it's really good with cutting agents., I'll be doing more about it.
+That's great., that's a good one. Super base also..
+If you need a database. Super bass has a pretty nice free option., you're building stuff., thinking about,, where both people actually want to use.
+And it's going to be hard to get other people to be excited about your project.
+thinking about things that are actually useful or interesting.
+Exactly..
+Over 100 years, I think.
+I think that I can utilize Mr. Maxwell.
+Put it back. You've been modified.
+Nothing works.. It was.
+It was already going on..
+What was. I feel,, I just want you out there.
+No worries. I suppose you could have done that today.
+And it was really good back in. It's been hard for me to get the front ends here that.
+It's not even that fast. I just made first 506.
+It's I thought I was good at school. Thanks for that.
+And I don't it., I'm probably going to try and use whatever, but really not that hard.
+In case you didn't., it's. A little bird that you.
+Always. It just feels good. And there's one more.
+Thing that happens.., I'm actually looking forward to it.
+Oh my God. I have to tell you, because I actually, I think I've seen you actually me and you said.. And then I'm that, I already told you., and you can look at me. I think you are being,, a little bit.
+You can tell I love story., the naive approach.
+And it's it's a little bit.. This is actually what's happening.
+It's not I'm sorry for the same reason as being,, I have this class, and I have no idea.
+We have a number. As long as my heart is.
+Oh,. Pretty much too much.
+There you go. I actually have a question for you now.
+Oh. Cool.. It's.. And that's where. I started going to,,, they're all going to be, oh, I can organize my homework.
+Oh,, I know, I know, it's. I know, I know.
+I know, I feel what is not.,, I'd to read all this stuff. Because I was out here.
+I did, I did, I did I was,, 45.
+No, there's no way. No, I knew I was legally actually, I knew I was, I was.
+Sitting out. Oh. For sure. I was..
+When I say. Sure I know.
+And they actually. You think that's not what I'm worried about.
+That's really you interact with.., I'm not sure.. I'm just explaining that I don't know how you don't have to use,.
+Oh my God. Oh my God.
+Oh my God. And then have you ever thought about.
+I don't remember eating out. Oh.
+No. But I was I'm making up.
+I think maybe I presented for an interview today.,, I think it doesn't automatically,.
+Other modifications. We also are using the chart experts.
+I don't know if I'm wrong.
+I think we just have to go out.
+I can find a way I. Know, I know, I really.
+Wanted to I this you.
+I actually you almost, I did I, I can think about that.
+And I'm,, I'm.,, I'm good.. just.,, but I have,, that it comes from how,, it's even an educational person.
+I was, oh, she was and I, I don't know anything about that issue.
+And then I went on. I can put that.
+Over some way of representing I have. No, that's not.
+I'm not sure if I know, but you.
+Know. I it is more this one.
+I just felt. I felt I know what I talked about and,, maybe coming out.
+What are you. I don't know, you should be, oh, I didn't see that.
+It wasn't,, that's it. I. Was gonna say, oh, I do.
+3000 a month I think.
+Oh that's crazy. It was much time with them. I know what they use. It was.,,. I have a problem.
+When I was your partner.
+We are mad this afternoon. Yes. Oh, no. Oh, no.
+You guys can keep. It that way.
+I'm just gonna wear a shirt. We'll see how much.. Oh,.
+I'm doing. Something.
+That's fine. Thank you. All, now let's come back to you.
+I wish you might be able. To do it.
+Oh. I don't know, you asked me to tell you about.
+This the longest break sequence. Can't go back to ruin.
+This is the shortest Breaking bad., if I had to grab the break for, six, seven, 6 or 7 where you are, and then I don't.
+I don't know how much I want reinforcement learning, deep learning.
+You have to wait and see. You don't have to wait long. It's only a few hours away.
+No, I can't wait. I'm pretty sure you will be able to win a trophy today in reinforcement learning.
+That's the difference.. All, let's talk about the journey from a neuron to a neural network., actually a good number. Next., if you don't know, you're going to basically hear the whole part of that movie.
+When I tell you about a young man in 1943 named Walter Pitts.
+Walter Pitts,, he was a young man who was,, bullied a lot., he was running away from some bullies one day and,, popped into,, the library.
+To hide from his bullies, and he started reading some books there.
+And he came across a book called Principia mathematica.
+It is a tome of knowledge. It's large. Comprehensive., written by Greek mathematician of the day, Bertrand Russell.
+And,, young Walter Pitts was reading this book and found three errors in Principia mathematica.
+And thinking that Doctor Russell needed to know about this.
+He penned him a letter and he,, wrote out,, these are the problems.
+These are the three errors that I see in this book.
+And Bertrand Russell,, being a,, a not a cranky academic, he was very surprised and impressed.
+He was, yes, you did find three errors in the book., we'll correct that in the next version.
+A few years later, Bertrand Russell actually came to university in Chicago,
+and Walter Pitts, finding that Bertrand Russell was coming over, he ran away from home.
+He didn't have a great home life, 15 at the time ran away from home and ended up at University of Chicago and,, started to become a janitor there. they gave him some odd jobs, and he would sneak into the back of classrooms and then,, in office hours,
+he would go to office hours of great logicians and mathematicians and tell them about how their theories were completely wrong., this young man,, ended up in the office of a neuro psychiatrist,, named Warren McCullough.
+And McCullough had a soft spot for young Walter Pitts and actually,, brought him home because Walter Pitts was living outside at the time.
+He was completely homeless. we offered him a home.
+And Walter Pitts, being a self-study mathematician, had a lot of ideas on how you might go about doing this.
+And they would stay up until 4 a.m. thinking about how they could possibly mathematically model the human brain, starting with the human neuron.
+But that brings us to the neuron that they came up with.
+at the age of 18, Walter Pitts and Warren McCulloch, who was much older, he was in his 50s at the time.
+They published a paper introducing a mathematical model of a neuron.
+And here's what it is. It's a simple linear model produces a positive or negative output given a set of inputs and weights.
+this is a human neuron. And Stuart cover your ears because you're a neuroscientist., this is a oversimplification of a human neuron,
+but basically you've got dendrites here and they bring in all this information from other cells.
+This information is processed. It travels down the axon. And then here it is.
+It goes out to other cells. They wanted to model this and figure out how to model this.
+And they have this note here. They have inputs that come into this node or two neuron.
+And then they have an output similar to how this neuron is.
+And here is what it looks. we have our inputs x1, x2 and x3.
+We have weights, weights one, two and three that are determining the importance of each of these.
+You sum these and then you get some output. Now to some of you.
+Here you go Sam. It's your linear regression. Some of you might be saying.
+yes, the model of the neuron that they came up with is actually just linear regression.. let's flash forward a little bit to 1958.
+Another young man, a graduate student,, named Rosenblatt.
+He created the first perceptron stories about the creation of machines.
+Having human qualities have long been a fascinating province in the realm of science fiction.
+And he brought together a bunch of reporters and showed them the very first computer,
+the very first computational machine, a perceptron that brought this mathematical idea of a neuron to life.
+let's talk about how this worked. what the perceptron does is introduces a little something here.
+It introduces a threshold. it's just spitting out an output.
+Now we do something with that output. Now we actually make a decision about that output here.
+now my output is going to be one.
+If we're greater than that threshold. Whatever number comes out of here is greater than this threshold.
+We're going to be one and it's going to be zero otherwise. now we actually make a decision based on that number.
+And this is called an activation function. the simplest form of an activation function is a threshold.
+We're going to talk about other activation functions today that are a bit more complex than a simple threshold.
+But when you're confused about the concept of an activation function,
+just think of it a threshold just passing some information through and not other information.
+That's our activation function, denoted by phi.
+It's just linear regression, which means I can only model something that is linear.
+I want to create a model for this curve separating out my orange data from my green data.
+Unfortunately, our decision boundary is always in line when we're talking about a single neuron.
+we could draw a line this 2X1 minus x two plus one equals zero.
+But then we getting some orange overlapping with the green.
+And similarly here if we try a different line we're still not able to approximate this curve.
+with only one neuron, we can only represent that one. Your decision boundary.
+And now we can actually approximate that non-linear boundary by using two neurons.
+This is called the multilayer perceptron. And with a sufficiently large number of units we can approximate any function., for example, if we were going to approximate a circle, which would be the hardest curve to approximate,., with eight perceptrons you can see that we can almost approximated.
+But by the time we get to 16 perceptrons, 16 neurons that each represent a line.
+only we can approximate it nearly perfectly.
+And that is the whole concept of a neural network where we stick multiple neurons together and we stack them in
+order to be able to look at non evaluate non linear decision boundaries and to be able to evaluate over those.
+And here's just a little bit of terminology. this is very simple three layer neural network.
+We've got our input layer here. We've got our hidden layer here.
+any layer that is not seen at the input or the output we're going to call a hidden layer.
+some neural networks are going to have more hidden layers than others. And then we have our output layer here.
+You'll see the fees that are all our activation functions here.
+You're going to see weights that are going to connect these.
+And here you can see weight 112.
+We've got neuron one connected to neuron two in the second layer.
+two second layer first neuron first neuron.
+Remember zero indexed..
+And then here is what a representation of this would look., at this particular,, neuron. if we look at d sub one of two equals weights of 112 times x sub one.
+I get the picture here bringing all of those weights in some them to summing the weights multiplied by their inputs,
+and then adding a bias term which we haven't talked about in just a couple of minutes.
+Questions. I'll make sense.. All.
+we're to talk about the history of neural networks. A lot of people think that I happened only a few years ago.
+When you talk to the general public, they're,, that's amazing. New technology.
+Actually, 1943. We proposed the model of the neuron.
+We have early AI research here on 1958. Rosenblatt demonstrates a perceptron.
+And then we have what we call an AI winter. this is a period of time where people were not very interested in AI.
+And there was a drop in research funding, because, remember, until pretty recently, there wasn't a lot of industry interest in AI.
+It was mostly government and research that were interested in AI.
+I went to,, in 1982, Hopfield introduced the bidirectional neural network.
+And this revives research efforts in the early 1980s., and then in 1986, three independent research groups developed backpropagation,, for training neural networks.
+And,, we really have this nice period here in the 80s.
+And then in the late 90s, early 2000, we have another AI winter where people are not investing a lot of interest or money into AI research.
+This is revived in 2009 when Feifei Li, who's now at Stanford,, held the image net competition.
+And especially it's the history of neural networks is really interesting because there
+was this explosion around here where we're convolutional neural networks.
+They're cool., we can do many things with them, and then we don't really have much data, and we couldn't really actually do that much with CNN.
+But then, Feifei, we thought,, we just need more images that are labeled.
+And she collected a huge amount of data and then used Mechanical Turk,, on Amazon.
+Amazon has this platform where they will pay people $0.01 to label each image.
+And she used that platform and created this very large data set of images scraped from the internet,
+and then their labels that were labeled by human. She releases this in 2009 as a competition.
+she actually released it earlier, not as a competition, and nobody cared.
+And then she was,, we're going to I'm going to have a competition.
+And then people started caring in 2012, AlexNet, which we are going to talk about in this class that won the ImageNet competition.
+And then in 2015, the ResNet architecture won the competition.
+And that competition exploded the use of convolutional neural networks and starting to build bigger and bigger neural networks.
+In 2017, Attention is All You Need was published.
+Yes, exactly. transformer architecture introduced in 2017.
+Nobody cared in 2017., except for this one really tiny research group company.
+They were weird., OpenAI are the only ones who really cared that this stuff came out.
+And then a few years later, 2022 chapter 15.
+And then here is really where we get into that generative AI boom, where now we have advancements happening all the time,
+and all of us are racing to keep up with the next architecture or new pre-processing pipeline or new data set.
+And it is challenging to keep up with it because for long it was,,
+every few years, every ten years or, we're getting a new advancements.
+And now it feels it's every week. Now, one thing to note in this history, this history is created by young people.
+Walter Pitts. 18 Rosenblatt, graduate student.
+All of this work and backpropagation, all done by graduate students, including Yann LeCun.
+He was young, in his 20s at the time. All of the research that we see here was developed by people that were pretty young.
+And I can be part of this history now.
+I don't have to wait until I'm older to be a part of this, you are a part of that history, and this timeline is going to keep extending., the first is training data and labels. the amount of data available has just grown exponentially.
+And we have a bunch more access to data, all kinds of sensors and connected devices.
+There's camera recording our classroom now and recording every classroom going on now at do.
+These are sensors,. Collecting all of this data. There's temperature sensors in here.
+Humidity sensors. We all have dozens of sensors on this thing.
+And we have a lot of training data, and then we have platforms Mechanical Turk now where people are labeling this data.
+And now we have a lot of labeled data. A lot of efforts have been made to label these vast amounts of data.
+ImageNet, 1.2 million images or 2 million images, people went in and labeled 1.2 million images.
+It's crazy computational power.. That is increased tremendously, allowing for much deeper neural networks.
+GPUs obviously have been a big part of that. Algorithmic advancements have been made overcome a lot of the limitations of neural networks.. You had a whole class 520 on traditional machine learning.
+you're not going to use this if you only have a tiny bit of training data.. These models are really going to overfit on that.
+You need a lot of training data. If you have lots of training data, that's going to be really slow to do that with a decision tree.
+And you guys are going to get the opportunity to do this because you have to build a traditional model for each one of your projects.
+you're going to have to sit there for six hours for one of these things.
+Trains. you're going to experience why we use deep learning.
+If you have a very large number of features, especially features that are come from really unstructured data,
+this is a great opportunity to use your own networks.
+If you have really complex relationships between features and the target,
+once they are really hard for you to put into words, you don't immediately know how to extract features.
+Engineer features to be able to create a traditional machine learning model that might be a place that you can explore neural networks.
+And if you have lower concern for explainability.
+if you're not as worried about how interpretable explainable your neural network can or your model is, then you might use a neural network.
+A lot of things are a lot easier to do with neural networks.
+Things object detection. Machine translation.
+Recommendation systems. We're going to talk about traditional approaches to these.
+But a lot of the time neural networks are going to be better.
+But they come with their limitations. They're really computationally expensive.
+You got your guys's pocketbooks are going to feel that this semester when you were running up,, those,, the usage on those GPUs., which reminds me, should not has a GPU, apparently that he's willing to let you guys use.
+message him., he posted about it on the API discord and then emailed me about it.
+if you guys want to use a GPU, reach out to him.. Habitation. Expensive. for a small 28 by 28 image.
+this is 28 pixels by 28 pixels. This is tiny.
+And a three layer network the one we just saw. We actually have 28 times, 28 times, 100 times ten, 784,000 weights to try to learn.
+very small,, networks, very computationally expensive.
+They can be very power hungry. computational resources of our best in class neural networks have doubled every 3 to 4 months since 2012.
+Crazy neural networks can be pretty difficult to train.
+you're going to experience some of that frustration while you're training them in this class., we use usually nonlinear activation functions.
+remember I talked about the threshold. We're going to talk about activation functions today that are nonlinear.
+This means that our IR optimization is non-convex and can make these a little bit trickier to then train., it's difficult to interpret the outputs of these, and they're easy to overfit, especially on small data.
+And that's going to continue with neural networks. Somebody is going to come to you.
+How generalizable you want it to be. There's a lot of factors at play to say how much is enough data.
+when we say deep learning, deep just refers to the number of layers in which the data is transformed.
+we do have,, very simple neural networks. You might have built one in Jon's class last semester., and these are not necessarily considered deep learning, although they are considered neural networks., with deep learning we have more layers and more layers allow our network to just learn more complex features at various levels of abstraction,
+such that the neural networks of today have trillions of parameters, which is just mind boggling., it automatically discovers and learns the features from the data you don't have to.
+And the ability to learn this makes it really powerful for tasks image recognition where it's really hard to feature engineer an image.
+And then of course, any type of complex decision making,
+it's really hard whenever it's hard for us to describe, then it's harder for us to engineer features.
+And that's usually a place where deep learning might come in handy.. Let's come back to these guys activation functions.
+we talked about this. The perceptron. Introduce our threshold here.
+And let's talk a little bit more about this activation function. You can think of an activation function as a decision maker.
+These are the decision making points in your neural network.
+here is where these,, the, the activation functions are., and it's deciding how much of all of these inputs and their weights come into the, of two and two.
+And how much of that information should be password in my neural network.
+Does it matter for that output. Maybe it does and maybe it doesn't.
+Maybe it matters a little bit. Maybe it doesn't matter much at all.
+And these activation functions are going to allow us to make those decisions and pass it through the neural network.
+Why do we have these. several reasons. One, it adds non-linearity.
+And adding non-linearity allows us to,, compute more complex decision boundaries and allows us to compute more complex problems., and also controls are output range. it makes the model easier to understand and helps us learn those more complex patterns in the data.
+And what it is other than just a simple threshold. It's a function that maps our input.
+Remember that input is a weighted sum into that neuron and it maps it into an output, typically within some predefined range.
+for example, one activation function is our sigmoid which maps the z that output between 0 and 1.
+we put whatever output we get here. And for z it's going to map that between 0 and 1.
+Here's a table of a bunch of different activation functions. We've got sigmoid up top.
+The one I just showed or just showed you guys., this is a smooth, gradual transition from 0 to 1., really popular for our binary classification tasks., it does suffer from the vanishing gradient problem, which we are going to talk about later today., and it's often used in output layers for binary tasks,
+but it's not used inside of the neural network because of that vanishing gradient problem.
+We also have the hyperbolic tangent for other bounded tasks, because its range is going to map things between -1 and 1., and in some cases it's more efficient than the sigmoid.
+And you might use it then, but it does still suffer from that vanishing gradient problem.
+again we're only going to use this at those output layers for bounded tasks.
+Now ReLU is everyone's favorite. it's everyone's favorite because it's just super efficient and easy to use.
+It's going to output zero for any type of negative input. And then it's going to have a linear relationship for positive inputs.
+Very computationally efficient., this is the default choice for hidden layers because of its simplicity.
+Now there's a lot of variations of ReLU, including leaky ReLU, because sometimes for our ReLU, it can cause neurons to die., which means they stop activating for any input due to our zero slope for negative values., this is called the dying railway problem. we introduced leaky ReLU, which is just negative infinity to infinity.
+And it allows a very small positive slope for negative values addressing that dying Reagan problem.
+If dead neurons become an issue you can try that. Usually it's not too much of a problem.
+And then the last activation function that we're going to talk about today is our softmax function.
+This is going to map our outputs between 0 and 1 for each class.
+And then the sum across all of those classes is going to be equal to one.
+this is often used in our final layer of our neural network when we have multi-class
+classification because it assigns those decimal probabilities to each class.
+it's the output of our multi-class classification task.
+Print out this table because this table is a really helpful and handy,,
+gives you a helpful and handy understanding of some of these activation functions which are ripe for interview questions.
+And then here are the equations for our sigmoid hyperbolic tangent.
+Really picky Rayleigh and softmax. And here you can see a visualization of them.
+between 0 and 1 for our sigmoid three negative one and one for a hyperbolic tangent.
+And then you can see really where we here zero for negative outputs below zero.
+And now we have this positive linear slope. Harder to see leaky ReLU which is a tiny positive slope here.
+If you're negative and then you have a linear.
+it looks the same as ReLU for positive inputs., I have this fun little app.
+You can go to canvas or you can use the QR code here.
+All. this is fun because you can try different input values and you can try different activation functions.
+we have our sigmoid that's shown there now. And now you can see what that same input would look.
+let's say we have an input of negative three.
+What that input looks whether we have a hyperbolic tangent or a sigmoid for that input is mapped to we're going to remove.
+And ReLU of course gets mapped to zero. And then leaky ReLU gets mapped to -0.0300.
+And this little app is just fun for getting a little bit of intuition on the differences between these different activation functions,
+because you can adjust the input value, and then you can see how your output is mapped based on which activation function you choose.
+All. Let's talk about another component of our neural network that you may have been wondering about.
+this is our neural network.
+And you might have noticed that we had some neurons up here and we had some values that said, be anybody wonder about these.
+You guys were, no, I just trust Doctor Bench. There are just ones in a neural network.
+I'm just going to believe that there's a ones there..
+let's talk about,, this value here that gets stuck in our neural network.
+And this is bias, the good bias.
+we usually don't want bias in our models. However in neural networks we do add in some bias here.
+And the rationale for adding this bias is because when you update your weight,
+your weights can change the shape of your function, of your,, of your activation function here.
+And that can change with the weights. However, weights cannot shift.
+You plot back and forth. And we add a bias term, which is another learnable parameter that we learn when we train the neural network.
+And now we can actually shift our activation function back and forth.
+And it allows us to be able to do that. And I've got another one here for you., you can look at changing weight versus changing bias.
+And here you can play around with,,
+what if we are changing the weights and you can see what happens to our activation function and outputs here., our outputs from the activation function here. increasing the rate weight is making it tighter.
+Reducing the weight is making it more linear.
+All. Now let's look at the bias term. now the bias term allows us to shift.
+It was just allows us to have more flexibility when we're modeling things.
+Questions about bias. All.
+now that we have a general understanding of some of the terminology of neurons.
+Now we're going to talk about training a neural network. we're going to do the most important training task.
+And I just determined the difference between blueberry muffins and chihuahuas.
+Blueberry muffins. And we get some poor food to sit there and label blueberry muffin.
+And then we do the same thing with dogs. And I source this data from Reddit, but you would get a lot more data from various locations.
+A blueberry muffins and three dogs.
+And if you were training a very large model, would you probably have to do is just rely on captions that somebody else put,, that say either Chihuahua or blueberry muffin.
+And somebody posts on Instagram a picture of a blueberry muffin.
+They capture it,, blueberry muffin. Yum. And then you use that caption as a label.
+And that's what will happen usually at scale.
+what we're going to do is we're going to put one image or a batch of images through our model at one time.
+we're going to put this image through our model. And we're going to forward propagate it.
+Now to start out. All of these weights are randomly initialized because we don't know what they are.
+We don't know what our weights and biases should be. we just say they're just random values.
+We're to set them to be completely random values here. all these lines represented by weights and biases are just set to random numbers.
+Makes sense.. then we start our training process.
+We put in our image through and we propagate it through our network.
+Now our network is random. It doesn't know what this is an image of a blueberry muffin.
+And its prediction is going to be completely random. My guess McGarry muffins or might give us dog.
+And here it gives us dog even though our label is blueberry muffin.
+And now what we do is we update our weights and biases with the knowledge of this
+mis prediction to try to get it closer to labeling this image as a blueberry muffin,
+to try to push those weights and biases closer that when this image is pushed through again, the prediction becomes blueberry muffin.
+let's talk about how this works.
+first we initialize the ways to be small random values for each observation or batch or mini batch in our training set.
+We are going to start at that input layer forward. Propagate that training data through our network layers.
+We're going to generate an output. We're going to calculate the error of our output using our selected cost function which we're going to talk about.
+And then we calculate the gradient or derivative of the error with respect to every weight in our network.
+Now we're going to use gradient descent to update each weight in the direction that minimize error.
+And we're going to repeat this until convergence. Make perfect sense.
+Stretch. Yes, it makes perfect sense.
+No, in the first class. First class.,.
+for some of you, it's your first class.,, we're gonna get back into the swing of things first class.. Dominic., maybe a I help. It makes sense., for. I remember at the end of last,, semester, we discussed a little bit of,, assessments in this class and mostly conceptual here.
+That's how we would think about structuring our learning for an exam.
+Yes, exactly. All of my questions come directly from the slides, the in-class content.
+Yes. The in-class assessments that we're going to do. First one will be an exam.
+All going to come from the slides. You guys can sit down. Was and you will usually know from my slides what things are important.
+not underline them or told them I put emojis around them.
+Then we're going to talk a lot more in depth about all of this., because I would be surprised if you've got all of what neural network training is from this slide.
+This is our overview. Now let's talk about each of these. All. We're going to do a different problem now.
+Now we're going to say how many blueberries are in this image.
+And we're going to of course remember randomly initialize going to pass it through it doesn't know.
+it's going to say to my label is four. I went through and label four here.
+Debate with me about whether it's four or not. but regardless the error here is two.
+the feedback now that we have for training is that we want to minimize this error.
+Does that make sense. Minimize the error between our prediction and label.. This is our loss function. This is what we call a loss function.
+Loss functions can be anything. You can create your own loss function.
+Can be whatever you,, whatever you want it to be., a couple of the common ones are mean, absolute error in this case.
+for minus two we take the absolute value of that is two. We can also do mean squared error.
+We don't want really large errors. we're going to square that four minus two squared equals four.
+Either of these work just fine in this particular situation.
+We'll get there before we get there. Just a terminology thing.
+You're going to hear the terms loss function and cost function thrown around.
+They're usually used interchangeably. This is the appropriate definitions of each loss function is the error of one training example.
+One cost function is the average error across the entire training set.
+Yes, I will, and I am not going to expect you guys to know perfectly the difference between a loss and cost function.
+However, this is just that slide that tells you what the appropriate, definitions of each of these are.., just a couple of loss functions and when to use them.
+We got mean squared error and mean absolute error, which we've already seen.
+We're going to use these in regression cases where the output is that number.
+And we're going to use mean squared error when we want to penalize significantly the presence of outliers.
+for example here house price predictions,, based on some normal distribution,,
+we want to predict house price predictions and we want to penalize the presence of outliers here.
+Mean absolute error. You use when you don't want to penalize outliers considerably or at all.
+You might not care as much about the outliers here. And mean absolute error may be more appropriate.
+We also have Huber loss here., and, the quadratic component of our Huber loss characterizes the advantages of MSE that penalize outliers,, and has linear components that mimic,, the mean absolute error.
+it has less sensitivity to the error size and ensures the train model isn't over penalizing those large errors.
+Typically, what you're going to see is one of these two is going to be used for regression.
+But occasionally you'll see Huber loss being used as.
+Now for tasks classification, a couple of them that are very common are binary cross entropy,
+Hi everyone. Let's try to get binary cross entropy multiclass thanks in binary classification.
+And then we have categorical cross entropy here that we're going to use for multi-class classification.
+A practical note is that loss functions can be anything.
+And custom loss functions can really help improve your model outcomes and align better with the problem that you are trying to solve., when I was working at Nike and a specific time series based problem, we actually came up with our own custom loss function., and our models,, tended to work a lot better.
+The ones that were trained up using our custom loss functions,
+because we can customize the loss function for exactly what we cared about for that particular application.
+And this is pretty easy to do in PyTorch. It's only a few lines of code to create your own custom loss function.
+a really fun thing to play around with. Although oftentimes you'll find that it'll work about the same as one of the commonly used loss functions.
+They're commonly used for a reason. All.
+when you're choosing your loss function, you have to make a choice of why you are using this loss function.
+Here's what you want to think about. What type of learning problem classification or regression.
+You're not going to use binary cross entropy for a regression problem.
+And then you want to think binary versus multi-class classification, because that's going to tell you what type of cross entropy you're going to use.
+Are you going to think about model sensitivity to outliers. some loss functions are more sensitive to outliers mean squared error.
+And you might use that if that is something you're keen on computational efficiency.
+some of our loss functions are more computationally expensive.
+Huber loss much more computationally expensive. Works slightly better.
+might be worth the trade off, but it's something to be considered.,, when you are choosing what loss function, the convergence properties.
+the smoothness and convexity of a loss function can affect the ease and speed of training.
+And this goes along with that computational efficiency.. And then scale. for very large scale task the loss function has to be scalable.
+You have to have something that scales., if you're going to be doing a lot of training.
+I to think about a loss function is defining the model's goals.
+These are the goals that you're giving to the model.
+And the loss function is incredibly important because it's that opportunity that you have to give the model a goal.
+And when we get to think about half the class or more is in reinforcement learning, we're going gonna talk a lot about this., and reinforcement learning. the other thing about the loss function is it tells us how wrong your model is.
+when we said how many blueberries we had a prediction of two, there is two.
+our weights and biases that we randomly initialized are actually pretty close.
+We got pretty close.
+However, if our prediction is 400 and our error is 396 are, which are a lot farther apart, and those are going to need to be changed more.
+the loss function also is going to tell us how wrong our model is.
+Randomly initialized. It should be pretty bad.
+we need to figure out how much we need to change the parameters.
+Think weights and biases.. How much I need to change those in order to improve my prediction.
+And we use something called backpropagation, which goes backward through our network to calculate how much each parameter impacts the.
+how much each weight and each bias is impacting that loss and tells us whether we should
+increase or decrease that parameter to make the model's prediction closer to our correct weight.
+Then we make those changes using something called gradient descent.
+Using that info for backpropagation, and it updates each parameter slightly in the direction that's going to reduce the loss.
+Helping make the model make better predictions over time.
+All. Some people have seen this example before. this is the example for view using race.
+Anybody watch The Amazing Race. Wow.
+That's it. Wow crazy amazing race.
+It's such a good show..
+the premise is,, is that these groups of people are put together and they have to race all over the world doing all kinds of different tasks.
+And it used to be that they had to,, catch an airplane and, and they'd miss their plane and be stuck somewhere in the middle of the world.
+That doesn't happen as much anymore, but it's really fun.. they basically they have a game.
+And let's say that this is The Amazing Race and we have our flag here. this is the low point here.
+And we want to find where this low point is. And we are going to randomly put somebody on this mountain.
+you are an amazing race Mike. And I'm putting you here on the mountain.
+You're randomly initialized. And your goal before time is up is to get here and win The Amazing Race.
+That's what's driving me forward. That's my goal is I want to get as close to here as possible by the time runs out.
+minimize distance from this goal. That's my loss.
+Now backpropagation is going to say which direction do I need to move to reduce the loss.
+Because remember Mike is just randomly put on this mountain and he doesn't know where he is relative to the flag.
+You got it in place over here or over here or over here.
+backpropagation is going to tell us which direction we're going to move to reduce our loss.
+Now, gradient descent is where we actually take a step in that direction.
+Mike, you take very big steps. You're going to basically take a running leave off this mountain.
+It's a gradient descent. We're going to take a step in that direction. Now how large this step is.
+how big of a step the Mike's going to take is going to tell us. That's called the learning rate.
+That's going to tell us how big of that stuff that we're going to take. We've got our learning rate here.
+Now learning rate is really important as you can imagine.
+Because if you're learning rate is really small, it's going to take really, really long time to get here.
+And Mike's not going to win The Amazing Race.
+And if it's too large then you're going to end up all the way over here and you're going to totally miss your goal.
+we need learning rate to be small enough that you don't go past your goal, but large enough that you meet your goal in time.. let's go over that a little bit more mathematically.
+gradient descent first order iterative algorithm tries to find a local minimum of a differentiable multivariate function.
+And the main idea here is to take repeated steps in the opposite direction of the gradient or approximate gradient of our function at a current point,
+because this is the direction of steepest descent. we take the gradient the derivative, and then we go basically down the slope.
+We go in the direction of the steepest descent. This is what it looks mathematically.
+Rates of J at our next time step or our next iteration T plus one is going to be equal to our current weight AJ at current time step or iteration T.
+We have a minus sign here. Remember we're going opposite of the direction of the gradient because we want to minimize loss.
+Sometimes you want to maximize loss on rare occasion.
+And then this would be a plus. But for most of the things in this class you're trying to minimize loss.
+If you're in xij you remember cases where we had to we wanted to maximize the loss here.
+In this class we're minimizing the loss. we're minimizing the loss with a minus sign here.
+This is our learning rate. This tells us how big of a step we're going to take.
+That's ETA. And then here we have the partial derivative of the loss function j with respect to waiting., I have a fun app. I say fun app.
+You guys are, it's not that fun.., this one's really fun., because you can do gradient descent.
+You can do,, change up your learning rate. And here let's go ahead and start it.
+Our learning rate is 0.3 a pretty good level., you can see it takes us eight steps to converge or get close enough to zero that we call it good.
+Close enough to that minimum., let's make the learning rate really tiny.. Reset it. now it takes longer.
+Still going. going steps. It's taking.
+going, going.
+I'm not patient enough to wait. But we're at 30 steps and still counting.
+Oh 32. All. we converge after 32 steps.
+It's just inefficient.
+Because if you're doing this for all of your training sample observations or batches or mini batches, this is going to take a really long time.
+And then if we make the learning rate really large let's try that. Now it's going to happen.
+Oh, we're just going to bounce back and forth.
+And we're never going to reach convergence because we're just pinging back and forth, and we're never actually going to reach the minimum here.
+It is 0.5. You get it in one shot. Three.
+All. Learning rate. All. You talked about this.
+Small learning rate takes a long time. Marginal learning rate. But we might never converge.
+We want to find the optimal learning rate. And this is going to become more important later in this class in this particular class.
+All. learning rate there's no one size fits all. It's going to vary based on data set architecture problem domain.
+It's often in the range of 0.0012.01.
+It's a pretty big range. Order of magnitude. But it's often in that range.
+This is the most significant hyperparameter for you to. All.
+let's talk about actually how we do it. we're going to start by training just a neuron.
+We're stochastic gradient descent. remember we've got our inputs and our reads.
+We're going to sum them here. Put them through an activation function here.
+And then our output here is y hat. we get an image of a blueberry muffin.
+We're going to forward propagate it. And we're going to get y hat our output here.
+Now we're going to calculate the gradient of the cost function with respect to each of our weights.
+we're going to go through each of these weights. And we are going to calculate the gradient of the cost function there.
+Remember the partial derivative of our cost function with respect to weight subject.
+for each of those. Or to do this using.
+And then we're gonna update it using a gradient descent calculation where we have our new weight that we want to change.
+We want it to be updated to. We have our old weight.
+And then we're going to subtract out that learning rate times,, the partial derivative of our cost function with respect to aging.
+we're going to update each weight using gradient descent. And we're going to repeat this.
+that's training a single neuron. Backpropagation comes in because we usually pretty much never train only a single neuron.
+And we actually need to be able to compute,, the.
+This function, but with respect to weights in a multilayer network.
+how do we actually do this. And let's say that we have a weight one 1 or 2 over here.
+And we want to compute the impact of this weight.
+And we want to update this particular weight in our neural network. And remember we're doing this for all of our parameters.
+But let's do it for just this one. we're going to calculate the partial derivative of our cost function with respect to weight 112.
+Remember y hat is our output here. And y hat is the activation function here in layer three., with the, output of our, previous layer.
+output of layer three here, which is Z three. And again we have that cost function j w.
+Remember our cost function something mean squared error absolute error etc.. how we're actually going to compute this because we have to go through multiple layers of our network is we're going to use the chain rule.
+We got at least one person who remembers chain rule.. Chain rule isn't too bad.
+It's just taking partial derivatives in a chain. It's easy to remember because it's called the chain rule., I'm trying to find partial derivative of g,, or cost function g, with respect to d to our,, weight 112.. let's take a look. we're going to take the partial derivative of our cost function J with respect to our activation
+function feed three multiplied by v three the partial derivative of c three with respect to z3.
+By the partial derivative of Z3 with respect to activation function one two.
+here. By the partial derivative of v1 two.
+With respect to z one, two by the partial derivative of z1 two with respect to weight 112.
+That's the chain rule. Now to make things a little bit simpler for ourselves.
+What we do here is we say,,, we are going to take all of this.
+all of that first bit here. we're going all the way back through our network.
+And we're just going to call this Delta IJ.
+this is the what we're going to call this the error term. the node I of May or J.
+we're going to say that's just the error up until here..
+And then we're going to. Define that.
+And then now our equation is simplified to.
+Now our partial derivative of the cost function with respect to the weight is now equal
+to delta one two of this error node by the partial derivative of z1 two over 112.
+Because this is just a linear sum. And if we look at the partial derivative of this with this with respect to this it's just x one.
+then that just becomes x one. You can simplify it further. And now we have that error term.
+One two multiplied by x one. And that is the derivative of our cost function with respect to weight 112.
+We can generalize this a little bit., and basically what this does is just allows us to be able to compute any of these weights.
+And now we have weight,, I j l and that you can see here in our equation we have that same node.
+all the way up until that weight., and then a of I l minus one is just going to be this node here.
+now we can then update way sub ijl as we did before using gradient descent.
+And now this node or this part gets replaced with that previous partial derivative of the cost function with respect to that weight.
+With this part. And we still have our learning rate theta and then the previous weight.
+And this should say. Oh. Plus one. All., there's a few different ways that we can go about doing gradient descent.
+We can do static gradient descent where we loop through observations one at a time.
+Iteratively we calculate the gradients. We update the weights. this is really good for online learning.
+Where you have a inference that you have some data point that's coming in and you want to continually be updating your model,, has more stable convergence due to reduce weight., this does not use vectorized linear algebra operations, is pretty slow, which is why it might work for online training.
+But if you have a massive data set, you're trying to do these computations.
+SGD might not be the approach. Typically what we'll do is either batch or mini batch,
+where we calculate the gradient and weights update based on all the observations from the training set,
+some together for each iteration, or we divide the training data into subsets of N observations and perform batch gradient descent.
+And each subset is a time that's mini batch. Oftentimes in the defaults when you're in PyTorch or TensorFlow are going to be mini batch.
+And then you set a particular end of 8 or 30 to., nicely here. It's gonna use vectorized operation.
+this convergence is going to be more stable. It's going to be a lot faster., and that but it's not quite as ideal for online learning because you are doing it as a batch.
+And if you're doing online learning and you need to wait until you get enough
+data to fill a batch and then do it rather than one observation at a time.
+And then something else that we do in order to speed up learning is we add a term called momentum.
+And what can happen is,, when you are computing over the cost function, you can get stuck in a local minima.,., and you can bounce around a lot,, especially if you especially if you don't quite choose the learning rate., and what we do here then, is we can add a term called momentum.
+And this,, just adds a factor of our previous weight change.
+And it just reduces the influence of our current iteration and just smooths the training process a little bit., and,, we just add this little term here that allows us to be able to control a little bit more,, that,,, that to descent.
+And you can see here this is just the change in the previous weight., by a parameter that we get to set.. All. Let's talk about some optimization algorithms.
+stable or stochastic gradient descent has a few issues., one is that your learning rate has to be set in advance.
+I'm going to train this model and see what happens. you have to set it up front., and then you go back and you're, oh, this didn't really work.
+Now I need to change my learning rate. And you have to go through that process.
+You might not know which works best.
+We also assume, then, that the same learning rate is going to apply to all of our rate updates across each epoch, which may not be the case.
+And if our data is very sparse, we may want to update frequently occurring features less and rarely occurring features more.
+we've got some issues with our stochastic gradient descent.
+And an alternative here is we could adapt our learning rate to the weights themselves.
+And that's exactly what we do. And we use something called an adaptive optimizer of our learning rate.
+instead of us setting the learning rate for which remember I said it's the most important hyperparameter you have to tune.
+Now we let the model itself update the learning rate.
+ETA Grad adapts the learning rate to each weight at each time step.
+it uses lower learning rate, smaller updates for weight to frequently occurring features in the data set,
+and then a higher learning rate for larger updates for weights that have more rare features.
+thank you. Know, you have a data set with a bunch of horses and there's some feature on a horse,, that is not super rare.
+And you're going to use our,, us smaller updates, but then you have higher learning rate.,,, you have a couple of unicorns in your data set, and then you have a feature that is the horn of the unicorn.
+And you might set a higher learning rate for those features. This is very -suited for sparse data sets text.
+It eliminates the need to manually tune our learning rate., and then there is a weakness here with the cumulative gradient.
+And the denominator eventually makes a step size too small to change the weights.
+eventually it does have problems., here you can see what we do here.
+remember this is the gradient of course with respect to weight J.
+We're just going to simplify it a little bit here. this is what we add.
+in the denominator of our learning rate, we're going to add,
+a diagonal matrix containing a sum of squares of pass gradients up to time step T.
+that's in the grad. We also have our rmsprop.
+This is an alternative proposed by Geoffrey Hinton in his Coursera course of all places.
+we didn't publish a paper. He just built the Coursera course and then proposed this type of adaptive optimizer.
+And then it was used widely, which is pretty hilarious. this attempts to resolve that radically diminishing learning rate in Adagrad by
+now having an exponentially decaying average of the squared gradient up to time t.
+And this is it pulled out. And now you can see here and just add that exponential decaying average in step.
+Now those aren't used quite as much anymore because it brings me to the atom optimizer.
+if you've built neural networks before and your.
+And when I talked about learning rate, you're, I never really thought about the learning rate before.
+It's probably because all of the defaults use the atom optimizer.
+you've never had to really think about learning rate before. And for a lot of this class,
+you're probably not going to think too much about the learning rate because you're going to be using an adaptive optimizer Adam,
+or one of the variations of Adam. Adam is adaptive moment estimation.
+That's a combination of those ideas in Rmsprop and from momentum that we talked about.
+uses and moving average of squared gradient from Rmsprop and a moving average of the gradient from momentum.
+we have the exponentially decaying average of the past gradients up to time t and
+then exponentially decaying average of the past squared gradients up to time t.
+And we use both of these. Then in order to modify that learning rate over time as we are training our model.
+Adam is currently regarded as the best optimizer.
+you can see this is iterations over our entire data set and then our training cost here.
+And we can see that,, our Adam optimizer,, far exceeds our other adaptive optimizers.
+Other optimizers may work better for certain situations. For example, if you have very sparse data, you might want to use Ada grad.
+And then of course, there's been a ton of recent improvements, especially in the last year or two years around the Adam optimizer.
+There's all kinds of different variations of it. For most applications, Adam still works fine, but if you have a little bit of trouble,,
+and your loss curves look a little bit strange, you might have some challenges with your learning rate.
+An adaptive optimizer,, would you might choose. You might try one of these,, other Adam options.
+You can see the popularity of it. And here.
+That's just 2012 to 2017 here. And you can see what happened when it was released.
+It's just filled with an exponential usage of atom versus the other.. Types of adaptive optimizers.
+And then we won't go through this. But this is really, really fun.
+If you want to go and play with this., you actually have to download it onto your computer.
+But it's this visualization tool that allows you to play around with,,
+gradient descent with different learning rates and add momentum and add different adaptive optimizers,
+and then look at different,, loss curves and see, how quickly,, it,, converges or gets to the minimum point of a massacre.. fun way to visualize it. Questions.
+It's more about the data set that works better or worse with different optimizers.
+Thank you.. Question. Russians.
+All. Training challenges. Let's talk about some challenges that we have with training neural networks and how we're going to overcome them.
+We've got vanishing and exploding gradients. We have getting stuck at local minima.
+We have overfitting to our training data. And then we just have really long training cycles where you start training a model,
+and then you go to sleep and you wake up and your model still training,
+and then you go about your day, your model still training, and you go to sleep again, your model still training.
+We don't want to get into those really long training cycles. how do we avoid some of that.
+first up is vanishing gradient. you probably heard a lot about vanishing gradients.
+If you've ever taken a neural networks course before I was found vanishing greedy is really confusing.
+and I'm attempting to explain that better than how it was explained to me.. when you use activation functions sigmoid or hyperbolic tangent, these functions squish values into a range.
+think 0 to 1. For sigmoid it was 1 to 1 for our hyperbolic tangent.
+then when we take their derivatives, the derivatives are always less than one.
+And for sigmoid, the derivative is going to be a maximum of 0.25.. Because we have our sigmoid function here. If we take the derivative of that we're going to have a maximum of 0.25.
+Because in chain rule here we have to care about the derivative of our activation function.
+for the derivative of our activation function it's too small.
+Then it's going to transform all of this to be really tiny vanishing gradient.
+When we multiply many small numbers together using backpropagation, the result is going to get exponentially smaller.
+Small number times small number equals smaller number. Smaller number of times smaller.
+Smaller number equals even smaller number. in the best case scenario, each layer back reduces the gradient by roughly 75%.
+Multiply it by 0.25 that by the time we reached the early layers, the gradient is going to be practically zero.. let's look at a simplified example to understand the theory here.
+we start of a last layer and we have a gradient of one.
+We move back to the previous layer. We're going to multiply by the sigmoid derivative the derivative of that activation function.
+We have to do that back for chain rule. we're going to assume the maximum derivative of 0.25.
+We're going to multiply it by a weight. We're going to assume our weights here are just one.
+our new gradient here is 0.25. Move back another layer.
+We're going to multiply our sigmoid derivative again by something less than 0.25.
+And our new gradient now is let's say 0.258.25 is going to be 0.0625.
+We're going to move back another layer. I'm going to do that again. And now.0625 time Sep 1425.01 5625I want to repeat that again and again.
+And suddenly our gradients had vanished and there were no longer to actually utilize or change those weights earlier in the layers.
+then they become rather useless and training goes kaput.
+solution here. Use the random activation function.
+use sigmoid and hyperbolic tangent at your output.
+But then in your hidden layers use that ReLU activation function especially for your earlier layers.
+This most commonly happens with large weight initializations.
+Activation functions with derivatives that are greater than or equal to one, ReLU, or effects that compound in deeper networks.
+training cycle one, your loss is going to be one thing. And it's very, very different for your next training cycle.
+If it's fluctuating a lot, especially as training goes on, it might be that you have an exploding gradient.
+If your model weights, if you look at your model weights and they become very large or go to Nan,
+then that's also an indication that you might have an exploding gradient. what you want to do here is you want to reduce your mini batch size.
+if you're using n equals 32 you might want to drop that down to 16 or 8.
+You can use something called gradient clipping where you limit the size of the gradients.
+Or you can use batch normalization. Questions on exploiting gradients... far we've talked about these different training considerations.
+We've talked about activation functions. We've talked about loss functions.
+Somebody always gets confused between the difference between activation and loss functions.
+make sure to review those because those do become important. choice of optimization algorithm.
+We talked about that or adaptive optimizers. We have a couple more things to talk about., today,, to kick off your neural networks, you have to talk about data splitting.
+All. You guys have seen this before. You're probably gonna see it again.
+Until I have a classroom where nobody makes this mistake and project.
+But keep putting these signs up there. All, you've got your data from Davis and Green.
+We've got our training data here. That's going to be our largest bucket. Then we've got our validation here.
+Slightly smaller bucket. And we've got our test data over here.
+Even smaller bucket. The test data goes away.
+After you have your data. You're going to put this test data somewhere that you can't find it.
+If you have it, you may have them put this somewhere and lock it away.
+Don't look at it until the very end when you're evaluating all of your different approaches.
+You're building a naive approach, a traditional AML approach, and a deep learning approach.. As if you're building those three approaches, this test data should be the same for every one of them.
+You should move this test data somewhere and test all three of your models and that same test data.
+Yes.. Good. All., it's not really quickly about regularization. neural networks are, as we all know, prone to overfitting.
+One of the weaknesses of neural networks that we've talked about. we often use regularization techniques to try to reduce that risk of overfitting,
+try to improve our convergence, make our models train a little bit faster.
+we're going to talk through a few different ones. one of those is early stopping.
+the model will overfit at some point during training. Absolutely.
+If you keep training a model it will overfit at some point., and what you usually see in textbooks is something beautiful this., would you see in reality something this, would you look at a loss curve is just all over the place.
+we ideally want to stop training when the validation error is at its global minimum.
+here they have all these fun equations where it's oh the elbow.
+you just cut it off there. But usually you don't really have an elbow. You have a weird robot thing that's broken in workplaces.
+To cut it off and. Often what we want to do good we stop when the validation error begins to increase better.
+We want to stop at a global minimum of our validation error. But the best.
+And this is what I want you guys to think about. We want to stop at a point that gives the best price performance ratio.
+the optimal ratio of training time to validation error. It might get a little bit better later on here, but you're going to train for a lot longer.
+You're going to increase the risk of overfitting. think about that early stopping.
+And how are you going to mitigate the risk of overfitting.
+when we have a large learning rate, this can help us avoid getting stuck in local minima, but it creates the risk of not converging.
+And it's been shown that large initial learning rates do reduce overfitting.
+this is again where those adaptive optimizers really come into play.
+Or we can do something called the learning rate scheduler. this is another thing that we could do instead of an adaptive optimizer.
+And if you're curious about it you can try it for one of your projects.
+what we do is we start with a higher learning rate and we reduce it as training progresses.
+And then the weights approach the optimum. And there are a lot of different methods that we can do here.
+We can do a step for you where we create every step size, as you can see here.
+But some factor data. And then you can do, you can see it's just a couple of lines of code in PyTorch here.
+You can also do something called the one cycle learning rate policy. Where are you going to cycle the learning rate over the training.
+Changing it after every batch. And you're going have a small initial learning rate.
+It's going to increase to a set max value to k back down to a small value.
+And then you're going to use momentum at the same time and cycle inversely to your learning rate.. Usually not. usually you're going to choose either a learning rate schedule or you're going to choose an adaptive optimizer Adam.
+I recommend trying both., just you can get some experience doing both., you can use a one cycle policy with stochastic gradient descent.
+For example, you can use Adam with no learning rate scheduler.
+And you can try,, all kinds of different things. No other forms of virtualization can be used with adaptive optimizers.
+don't think, oh, we can't use regularization with Adam or with an adaptive optimizer.
+That's not true. It's just learning rate schedulers. Questions on that.. We can add regularization via our loss function.
+this is one place where can you do L1 regularization, also called lasso.
+This is going to add a penalty equal to the absolute value of the magnitude of the coefficients.
+And this is going to encourage sparsity in our model. many coefficients are going to become exactly zero.
+we got our typical error here. Let's say our mean squared error.
+And then we're going to add in a component of regularization there L2 regularization where
+ridge is going to add a penalty equal to the square of the magnitude of the coefficients.
+And then this is going to encourage a small but non-zero coefficients here.
+these are a couple of different types of regularization you can do just using for a loss function.
+Another thing is batch normalization.
+And if you built a neural network before, you probably use some batch normalization since it's in every tutorial online.
+The weights of a layer are updated under the expectation that a prior layer outputs has a particular given distribution.
+However, the distribution is actually going to shift due to variation across our batch.
+It's that every batch is going to have the same distribution.
+if we're assuming that every batch has the same distribution and it's not, that is going to cause some problems.
+And what we can do is we can use batch normalization.. To standardize the inputs of each layer for each mini batch.
+each layer then sees a consistent distribution of inputs.
+we just standardize it., usually we're going to standardize as some inputs before our activation functions that take before the activation function.
+And what this does is it really helps speed up and smooth our training process.
+here is just an example. we've got our input values here.
+We're going to normalize to zero mean and variance.
+now we have our normalized values. And now here what's really interesting is we actually have learnable parameters in batch normalization.
+these are learned just your weights and biases. We're gonna apply learnable parameters that produce a scale and shift.
+And our final output actually is scaled based on portable parameters.
+batch normalization does add a training component when you add this layer into your network in PyTorch or TensorFlow it looks a layer.
+It's not really a layer., much as almost a pre a processing step.
+However, it does,, have learnable parameters in there.
+you are introducing more training aspects.
+Now the impact of batch normalization is going to be largest when you combine it with other changes that it enables.
+increasing the initial learning rate, accelerating learning rate decay, reducing the rate decay recognization or removing dropout.
+And when you combine batch normalization with other changes,, that makes the impact a little bit better.. And then last but not least, drop out.
+this is just a fun visualization. Better original network and network with dropout.
+We just in dropout we just randomly drop neurons during training.
+That's it. Pretty simple. during each training step, each neuron has a probability of being ignored and sometimes they're just ignored.
+what this does is it forces the network to not rely much on a single neuron or a single specific set of neurons., and it promotes redundancy in your network. And I just really this visualization.
+there's,, a website called Lost landscape.com where they've created visualizations,, for different neural networks.
+And you can see here this is, with dropout.
+And I just love this because you can see all these places where the neurons were just removed.
+I think that's just a really fun visualization. There's actually no purpose to it other than just.
+It looks cool. All.
+code resources., this week,, if you're,, feeling, oh, it's a story this semester, I really want to do some interesting stuff., you can go in and code your own neural network from scratch, and they're perfect.
+You already did. you're already ahead of the game. That's great. you can go and augment that if you want.
+There's GitHub resources and PyTorch and TensorFlow for creating your own neural network as,, videos by yours truly.
+And then John,, talking through the PyTorch and TensorFlow implementations,,
+basic neural networks and all of the different things that we talked about in the class.
+all of these links are available to you before you leave today.
+I want you to find a group of 2 to 3 people for your module project one computer Vision.
+Remember, these module projects are those big pieces for your portfolio.
+make sure you're choosing somebody that has similar goals to you and you want to work on similar things or do something really interesting.
+Talk to people. Come up with a name for your team. Something fun.
+If you want to brainstorm ideas and ask me questions in class, I will be here.
+feel free to do. But before you leave today, make sure to tell me your team name and your team members.
+My network again. There's videos online for you to watch.
+Don't worry. You. I get that question.
+In two weeks, I'm gonna get the opportunity to win one of these trophies.
+I want to be one of your teams. Or just by bookmakers.
+It doesn't have the same name, Sam.,, I think on purpose.
+Not talking about. I think it's. A few people know exactly.. 0100000.
+000.
+Oh. how you want to be on the job.
+Or the guy gonna be one of the things that I'll say.
+I don't think you can just carry on that., there's something about that. I don't know what it is.
+it's. As long as we meet other words.
+You on the record day, you're., I was just joking. I was.
+I absolutely know it's not only fair, but there's a lot of things, just that you can't do something that's already done there once.
+That's not going to be because I want this to be getting anywhere..
+Yes... I would love to hear from the quality.
+I know,, that was the deadline.
+Oh..
+we need to make this. Work.
+This is what we need. Oh,., no need to stress anything.., yes, I do, but.. It's not.
+Because people are, hey, look out for us to publish on computer vision.
+I don't know. I'm not sure. I'm not the same thing. Come on.
+Oh, boy. I'm, oh,.
+I hear you..., now I just want to know that. I want you to see that.
+Oh, that was a joke. I just don't know.,,,, I got you here by yourself.
+I know, I know, I know, I know that are part of.
+This is awesome., I, I think I was in.
+Your. Bed early in the morning..., I have no idea what she was.
+I'm going into the garage., I'll probably stay out because there was no.
+You're not. I know what you're doing..., good...,.
+I think it's I think I,, I don't know if you have, you have a good day.. That's not bad. It's just that., you're about that.
+You will not agree with a guy who.
+Has no idea. Oh,. I know.
+to think., I think.
+I have a bad. Idea.
+I'm sorry.. I need you now.
+Oh, that sounds fun..
+Anyway, you guys were never seen. Oh, I was,, with you.
+I love you much. I know, it's not scary.
+I'm not ready yet.. I'm sorry. I hate for Sunday.
+you said, no to your show.
+Or. Oh, my God, I love you.
+Wait, wait. I. Agree.
+Oh. That's fine. I thought that's why I said no.
+That is my job., that is, oh.
+This is only because we can actually make it.,, I can select the options.
+You want to. Do.. You see that perfectly. Years from now, you are, you just be rejected as a.
+you can actually,, talk to the.. You recognize that a little. Oh,.
+I'm still a girl.. I can go play music.
+Or,.... That's a friend of hers.
+This other one. I'm actually really smart, I.
+Love,,, I, I said, these are modules that I'm not really sure.
+Oh, there's some other models that I can actually. My heart.
+I don't mind your own business. Hi.. I have never heard.
+This one is anyone else. A lot of people that are amazing, I can't you.
+Know I'm not gonna know. Anything about it.
+And she. Literally.. It's going to be minimal because much more than any other,, I was trying it over the world.,, when.
+You go in and start the ones that I just I can't talk about it because.
+Because,, some even all of you.
+Can make it can probably be very hard for me.
+To, I haven't seen it.
+that's why you can say..
+Oh, you. Never fail... Oh,.
+it's,, it's there's a lot of quality layering.
+it's it's going to be more of your.
+I really it. I your own business.
+Oh I don't know. I didn't see this go on you just you, what a great deal that is.
+Essentially we didn't. Know about that.
+I don't know if you can get some show about.
+I don't know what's crazy. About,, I went to their five minutes.
+I guess I was going to have to just wait.. Oh, great. Without you,. And I know, I know, I'm already surviving on, but I did.
+You can go check on my about,, my chickens.
+All my life. I feel this.
+I wouldn't take this seriously..,, we can.
+We're going to go because I don't I don't feel., it's not I.
+Because I wanted to show that's an ensemble method.
+Do what your team members., We need to come up with the outcome., I think that I should just fill this out for you.
+All, this is a smaller model. I don't get the joke, but I know it's one of the model.
+I didn't even want you to do anything related to me.
+I decided we should., I can do that as.
+me. I can't even keep this reasonable.
+I was forced. I guess you could say that's the random people.
+It. Or is there a space if you're good at it,. That's good., we could make our own even. I guess we have., we're actually going to go, but I'm not., she was here yesterday at,.
+This is a guy who. He went to an image class. I think it's hot.,.,,.
+I don't think you just gotta do random.,., just.
+or. No. He was,, closer. And he has to do,, I know there would be some extra work.
+Those are the topics. I have an idea. I think you guys are going to go anywhere to do.
+I don't want to get stole the data. you absolutely have.
+Nobody wants to kill., I'm going to be, it's perfect.
+Both you and Ryan's, this is,, there's some of these kids really about quitting my class.
+You don't get the project, see what he's. But I put the hammer down.., I was, have you ever considered that we should.
+I don't know, I feel if I was a professor, I would see the amount of work every single day.
+I would assign a day's work for that. Oh,, I would have a lot I want to learn.
+Which I to ask because I know based on what I think, it's hard to get other.. You're,,, I'm giving up here, bro.
+It was. It is Christmas for me.
+Pretty pricey. There. I will tell the difference. I was I imagine you are just curiosity.
+But I thought it would make more sense if you're up there.
+I usually the socio economic general area.
+It's in the heart of what I'm typing, there's actually not too bad. There we go.. The Bidens, for all the guys that we love. The problem... I think,. Cuz the other classes.,. I read an audience last time and that was nice.
+Nobody was, oh, I see, this time to go off that.
+There's a quick question about the.., this is about this.. I remember we were talking about,, I got to find the perfect.
+I, I think she's gonna do the best, but., but it's,, it's opens up. It's validation when,, you've had this one stop here and then let's go up with this one.
+No, no, no, I think that, I said, that was the one moment this is typically what.
+Oh,. This is the one model where student training you have your validation activity.
+Now before I do that, I'm going to stop you going out because you're overfitting to.
+What do you what do you want to do. Any losses run down your training data for worse.
+Oh, I, I just telling you this on how it works on,, you guys,, you in the paper.
+It is. I guess I was doing badly.
+If they can tell you. Because.
+I guess I was in a class. you guys.
+Actually didn't get me really good results. I wasn't guessing anymore.
+But then I went on, and it did. Oh, you did find better parameters,.,, what happened was,, you can go,, got here and you go into it a little bit.
+Then it got down this was. And then I let it go. You don't got it.
+Oh my God. One more quote unquote.
+I guess that means we were able to, even though,, we of course, I just.
+I, I just I don't think. I was, I think they did.
+what I. Thought you said it went over 100.
+Oh,, I. I think it's good., I, I think it's a good idea., I know, but I'm sure you can do it together.
+You need the people who. Are much competition.., about me. It's Christian and I usually chat, and that's also what I you're doing., I read what God has done, and then it's very,, cohesive.
+All, that's good, because I never.
+I had no idea that the last time,, that, you spend much time understanding theory and everything, but then it.
+Maybe I had no idea that. The data that I got.
+I just it doesn't have to be. Hard because.
+It's just because you have,, everything that I think I know.
+I ask you a question. I know I'm definitely, oh, that's there's no way.. my x r squared.
+And I was, although what because I have an understanding of reality for lost.
+I didn't even know that they were. you need to the longest actually still it, but at least,, it was the loss for the first., technically you can use those as a loss function. They're not,, experiments towards function.
+They're, oh., exactly. And sometimes but it seems there are some ways you can modify the mostly.
+The agents of the. Kind around loss function is supposed to be as we go far.
+your data set. your mind with regards to each other.. That's a. But also,, I was I started with a zero machine learning experience,
+as I'm sure,,, saying you can't get everything., I want to I know you're R-Ohio.,, to me. And you'll learn a lot.
+Of course., but,, I have no idea what I did.. You're. Very efficient., you just go. Yes. No. I'm just asking you., I'm not sure. Oh, I understand.
+You're gonna fall. Oh,. And there's only reason for using this one... I'm guessing. And we'll start all over again., I think,, I'm. Not sure if this works for.. I how electrical you are there.
+And there's pros and cons. Oh,.
+That means interacting. It's just.. Oh,...
+I see, I got it. I did it. Did you.
+You're probably the only reason I did that.
+Oh,. I didn't know what else I can say because you only have much.
+If you get to,, make three and you're, plenty of times you can always add on to it.
+I think that's a,, I don't know. I don't know.,. Later today I'm writing., let me add you.
+Oh,.,, that's probably what I open to.
+I think that we probably will.. You saw the over the last five years.., this is this is what I was doing Christmas over.. It's wonderful. are you ready to thank you much.
+For joining us. I think it's fair to say that what I'm talking about here.
+This isn't just. You should be able to see that.., I wasn't really crazy because,,, I was,, I was,.
+But. Or Orlando, I remember from last week I was,, my grandpa lives near Disney.
+I would always go when I was little. That was fun.., that's that's part of it., I wanted to ask you about that., that was different.. typical. In an independent study, I just asked you what you want to do that we have something documented., we have a label data set. And just let me know when you want to tell me a little bit more, but I've done every before,
+and then I guess in the morning and again, I feel every week is just too much.. every other week, if you want to more classes, if you want to come up at the end of classes,
+and I have this chat about what's going on in my calendar.
+Perfect.. And I feel first we have a first quarter,, official meeting to flesh it out because I have a proposal for it.
+Oh, perfect. just to,, see how I was, oh, my God, this is a look at all my stuff.
+I wish I could write, but,, just it's,,.
+you have class tomorrow on Thursday night at that and on Thursday.. 430 and will veto you between but enforcement.
+No it's midnight. Why are you saying I don't have anything...,.
+It's it's down here because there's no,. I'm going to take a moment to answer your.. No, actually, you go somewhere else, but I think,.
+Oh,, I'm sure I would love that.,, almost everyone this week is going to have to do this or.
+We'll we'll hear what you mean., three different one way.. She wants her to be perfect., perfect.
+This is how teachers are. And can I just say to you, it's.
+I feel when you are reading, I'm not sure what I do.
+Oh, my word for it is you get another one. And a lot of, it also points to how it was helpful.
+most of you have. Oh.. Because it's been a while.. It's just I to do this lecture because I wish to build upon.
+Oh,. Actually, this semester I get a little bit more new stuff, but today is usually a good start., these big. And here's our program., and then we go, I've been in our projects for more coding.
+Exactly. And then the hackathons, music doing it interest free time for questions to.
+that gives you guys your time to work on your projects, have some structure around it.
+But then also because you are just myself and or Stuart..
+one advice or big question, be here for each of the hackathons.
+And I ask this question. it's the idea to picture before the happy on and work on it if you want to start leading on it.
+And either way the hackathons are structured. I'm assuming most people.. And that's be a good starting point.
+what I was finding too is people to go in projects together a few days before.
+I thought if we do a happy hour, please don't hurt me.
+I said, oh, nice. Nice., exactly. You got to work through some of the challenges that are important for that particular.. And then I got another idea., you said you'd me to do that. how is that usually the problem, is or has a great function,
+it really is dependent on how to say,,, but he I can probably give you more information.
+I think he has a five or that you can run it through.
+Yes, I guess,. He's I mentioned that before. I say time you need a I just don't really understand how that actually is.
+Just walking into somebody else's computer.. Computer. Oh... And then you use it on certain days you mess up on your training, your model on that other computer that you can just log into and access... Thank you. Oh, weird. But I see that I've got to use.. I think you guys. That's going to go.. Sorry.
+I'll see you later. I don't I think that your sister's advice. How is it that., I feel. Thing is, I know when I was nice, but because I more power generators.
+There's not much history where you go to Europe. There's much history that.
+You guys a very much more skyscraper existence.
+And then there's a know sandstorm, someone nearby.
+Those guys are interesting., the airport, you guys would have been,, in our class., I know that too. Also, Dubai's is very expensive.,. It's crazy., it's.., I guess that's..,, and then the quality wise is really good, but they taking your Emirates.
+Maybe you're not. Really.. you certainly think it's over for some there.
+It's our computer vision thing..
+Posture is cool. But you have to turn off there on the internet.
+Thank you. To the internet.
+You see, I checked in Boulder. Oh., maybe I start. Oh,.
+This is ambitious. That's just not you. It's. I think,., I've been working on it on the side..
+And,, I'm trying to,, challenge, in my research, the self supervising school part,.
+Oh, my. This is good., for images at least.
+is that,,, the convention is that you're trying to learn features within a greater package,,
+it's fine for people when they touch an elephant and they touch the tail in the truck, they think it's different things., you have these different crops for one image, which I is trying to emulate image.
+And I was, oh, that was bad. Context. Yes.
+And then you bring. Oh my God. Those are things I thought I was teaching.
+Oh.. But I'm trying to. I'm trying to think of a name for,, a labeling task or a prediction task.
+Oh,. He asked for an image from the same label, but now I'm trying to bring a view from that label to I really.
+I really think,, I need to go eat my lunch and minimize that from eating and treating it, immediately this moment.
+That's cool., the same with Buddha...
+
+neuron (McCulloch & Pitts, 1943)
+weighted sum, linear separator, manual weights
+perceptron (Rosenblatt, 1958)
+threshold / activation concept
+still linear decision boundary
+perceptron limitation
+XOR / non-linear separability vibe
+linear hyperplane only with single unit
+multilayer perceptron
+hidden layers → nonlinearity
+universal approximation (enough units)
+“why now” deep learning
+data + labels (ImageNet)
+compute growth
+algorithmic advances
+when to use NNs
+lots of data, unstructured, complex relationships, low explainability needs
+limitations
+expensive compute/energy
+non-convex optimization
+interpretability hard
+overfitting risk
+activation functions
+role: gate signal, add nonlinearity, output range control
+examples: sigmoid, ReLU, softmax
+training loop overview
+init weights small random
+forward pass → prediction
+loss function
+backprop gradients
+gradient descent update
+repeat epochs / batches
+loss vs cost
+loss: per example
+cost: averaged over dataset
+gradient descent
+learning rate sensitivity (too small slow / too big diverge)
+optimizers
+SGD issues
+momentum, Adagrad, RMSprop, Adam (+ variants)
+what loss makes sense for “blueberries count” vs classification? when would you pick SGD+one-cycle over Adam?
+how do you detect vanishing vs exploding gradients early?
+training challenges
+vanishing gradients (sigmoid/tanh)
+exploding gradients (large weights, deep nets)
+local minima / long cycles / overfit
+regularization + training tricks
+early stopping
+LR schedules (StepLR, one-cycle)
+L1/L2 penalties
+batch norm
+dropout
+create a 5-min exercise: tune LR (too small vs too large) + observe curves

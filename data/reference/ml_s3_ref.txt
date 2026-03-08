@@ -1,0 +1,13 @@
+Linear Regression
+
+• When to use: Linear relationship between features and target; interpretable coefficients; good baseline. Model is linear in parameters w (can still include non-linear terms in x, e.g. x²). y = w0 + w1x1 + … + wpxp (+ ε).
+
+• Interpretation: w0 = intercept (E[y] when all x = 0). wi = average change in y when xi increases by 1 and other x’s held constant.
+
+• Estimation: Minimize sum of squared errors (SSE). Closed-form: normal equation w = (X'X)^{-1} X'y. Or gradient descent. Vectorized: predictions = Xw (X = design matrix, w = coefficient vector).
+
+• Assumptions: (1) E[y|x] is linear in x. (2) Errors uncorrelated, mean 0, constant variance σ² (homoscedasticity). (3) Features not perfectly collinear. Violations → biased or inefficient estimates.
+
+• Diagnostics: Residuals = actual − predicted. Plot residuals vs. predictions or vs. each feature. Look for: non-linear pattern (linearity violation), funnel shape (heteroscedasticity), outliers. Residuals should scatter randomly around 0.
+
+• Simple vs multiple: Simple = one feature; multiple = many features. Same formulation; multiple allows controlling for other variables when interpreting wi.

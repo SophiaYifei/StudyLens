@@ -1,0 +1,3581 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+I know I, I was, guys.
+
+I know you, I think I can't possibly.
+
+Be honest. I think.
+
+That's true. I appreciate.
+
+That. Thank you.
+
+So much for being here.
+
+So. And.
+
+He knows. I want us to.
+
+I can. So for the second part of my.
+
+Okay. Good morning everybody. I didn't know that.
+
+This is week one of classes, right?
+
+That's a bad grade. I mean. It's again.
+
+It's over. Uh, always. We always start off easy, I would say.
+
+Um, please, uh, put your name tents out.
+
+We have a few people out. If you lost years or you you didn't get one.
+
+I forgot to bring them this morning, but I'll bring them home again next week, so.
+
+But please hold on and take them out to start the class. Okay, before we, um, start the class today, a few, uh, logistics announcements.
+
+So just a reminder, we got our, uh, pizza party tonight.
+
+Uh, I think everybody should have gotten an email from Amanda. So that's going to be held starting at the 5:00 o'clock, 5:00, 5:00.
+
+And that's it. The collabs are in there where the co-lab is, right?
+
+Right next to us here. Um, so just across the little street right here.
+
+Uh, I think pizza's arriving at six, so show up any time, 5 to 6 or so.
+
+Um, we'll have some pizza. Uh, I think there might be an opportunity to explore some of the, um,
+
+some of the things in the co-lab maybe, maybe even try, try some kind of a Hands-On activity, I think.
+
+I think we might have, uh, a little activity for those of you that, um, uh, want to give, uh, give the equipment, their a try.
+
+Uh, so that's tonight. Uh, Friday morning is our first seminar, so, um.
+
+Uh, we've talked about this in orientation. Uh, as a reminder, each week we'll bring in, uh, somebody from industry to talk with us.
+
+Uh, those talks last an hour. They started at 1005.
+
+So please make sure you're there and see at 10:00, ready to go.
+
+Uh, we do take attendance and latencies, not not being there, so please be there.
+
+Seated at 1005. Um, our first speaker this year is, uh, a, um, venture capital investor that, uh,
+
+also runs a sort of an accelerator or an incubator program for very early stage AI startups.
+
+And in fact, some of our students have been through their incubator.
+
+I think we had to obviously, we we had one adjunct faculty go through it last year,
+
+and then we had a group, uh, as a group with some of our students go through last year as well.
+
+So, uh, uh, that's a great program for anybody thinking about starting a business might be a good opportunity to, um, um, to get some support.
+
+Um, and, uh, Mandy, our speaker will, um, I think give you a really nice, um, feel for what venture capital investing is, like,
+
+what it's like to start a startup, particularly in the AI space, what VC investors look for when they consider making investments in in startups.
+
+And there'll be lots of time for questions. Questions. So, um, please come prepared with any any questions you have.
+
+And don't be shy about, uh, about asking questions. All right.
+
+While we're on questions, any any questions about Friday or what to expect for the seminars?
+
+Yeah. What did you say the speaker's name was? Uh, his name is, uh.
+
+Well, he, uh, he goes by the name is, uh, Pedro Mendoza.
+
+This is, uh, full name. Yeah. I think it's also in the, uh, if you go to the canvas site,
+
+we don't have the full list of speakers up yet, but I think we have the first, maybe 4 or 5.
+
+So you can you can see the upcoming ones on the canvas site in the schedule.
+
+And he's with, uh, can we go? Uh, 1616 enters.
+
+Any other questions? Okay, um, and just a reminder, uh, about etiquette for the talks on Friday.
+
+So, um, number one, be be on time. Be there at 10 a.m. in your seat, ready to go at 1005.
+
+Uh, for the start.
+
+Um, if you take attendance and that is required, if you don't show up, you're not going to pass, and you're gonna have to redo it next fall.
+
+Uh, number two, um, no laptops out during the presentation.
+
+Uh, it's kind of disrespectful if somebody is out there talking and they're just looking at like a sea of,
+
+like, laptops and people staring at screens.
+
+So I know some of you like to take notes, um, on laptops, and I'm sorry about that, but, um, uh, you have to figure out a different way.
+
+We do record these. So, um, you have lots of options for taking notes.
+
+You can you can go back through the recording and you can get the transcription.
+
+You can use whisper it and you know what I am or something to summarize it or extract the key points for you or whatever you want to do.
+
+Uh, if you really need to, like, note something down like the speaker mentioned, something like in particular like a name or something.
+
+Just just put it on your phone. Just put a call at your phone and just take a quick note and put your phone back.
+
+But, um, you should be focused on the speaker. That's what that's the point of what we're there for.
+
+Um, and also again, please, please ask questions.
+
+Uh, the speakers will love it when there's questions. If, uh, they go through a talk and then there's like, no questions.
+
+It's really kind of, um, uh, it's kind of depressing for the speaker.
+
+It feels like maybe you don't care or you're not interested in what they're saying, if there's no question.
+
+So, uh, so please, um, uh uh, ask lots of questions.
+
+And as we discussed in the orientation that the best way to kind of impress somebody or get somebody to know who you are is to just ask questions.
+
+Uh, uh, yeah. So if there's a particular speaker, you want to start to build a relationship with,
+
+the easiest way to do that is just start asking, asking good questions and they'll remember you.
+
+Okay. Anything else on Friday? Cool.
+
+Okay, so plan for it today. Uh, we got a couple of, uh, visitors with us in the class today.
+
+Um, we got, uh, uh, Trenton, uh, our returning student is going to kick us off this morning.
+
+Uh, and he's going to give them a demo of, uh, qubit.
+
+Um, so I'll come back to that in just a minute. Um, and then we're going to go through our lecture.
+
+We're going to pick up where we left off last week. We're going to try to get through, uh, model evaluation and hopefully get through,
+
+um, uh, data preparation and, um, sort of basic feature engineering stuff.
+
+And then at 11:00, we'll take a break and an 11:00, uh, doctor saying, uh,
+
+pronouncing is going to join us for 15 minutes and he's going to talk about our new mentorship, uh, program.
+
+So he's going to give you all the details. Have you gotten an email about that yet?
+
+No, no. Okay. I think the mentors maybe have gotten the email, but I think you all probably will get one later today.
+
+Uh, we, uh, have, uh, completed the pairing, so everybody's been assigned to a mentor.
+
+Uh, before we let you loose to engage with your mentors, we're going to talk a little bit about, uh, our expectations of the program.
+
+Um, you know, things that you should do, things your mentors should be doing, answering any questions you have about the program,
+
+and then we'll, uh, we'll pair you up with your mentor, and we'll let you guys, uh, take it from there.
+
+So, uh, how do you on this at 11:00 to, um, to introduce that?
+
+Okay. Uh, so I'm going to bring us, uh, uh, come up.
+
+Um, uh, so during is, uh, been taking a lead on our qubit project in my, um, great lab.
+
+And so I think you all have seen, uh, uh, probably a video from Judger and, uh, and maybe read the instructions put together.
+
+Uh, I'll give you a little bit more context on this project.
+
+So qubit is a it's an AI powered coding assistant that, um, sits within your sidebar on your VS code.
+
+So it's a little bit like cursor for those that have used it.
+
+Or maybe a GitHub copilot, the agent.
+
+Um, but it differs from all of these things and sort of all other coding assistants that are out there and that it's really built to help,
+
+help you learn, not to help you be more productive in your coding.
+
+So, um, pretty much all coding assistants that we know of anyway are designed for productivity.
+
+That's kind of the point of them right there. Make you more productive as a software engineer.
+
+Yeah. The problem is that when you're when you're a student and you're trying to learn to code for the first time,
+
+or you're kind of doing some new things with coding,
+
+maybe you're new learning new language, maybe you're, uh, starting to do more like data science or machine learning stuff.
+
+Um, just using coding assistants that are designed to optimize your productivity
+
+can actually hurt your learning because they're just really doing it for you. Yeah, not helping you to learn how to do it.
+
+And so we starting, um. A year, maybe, uh, a year and a half ago.
+
+Probably a year and a half ago or so. Um, we kicked off a project to build ecosystem that was designed to optimize for learning, not not productivity.
+
+And so, um, it works.
+
+You know, the similar way to other assistance you may work with, uh, with one big difference, which is it won't actually write code for you.
+
+Uh, or at least it's designed, uh, not to do that. So, um, you'll see in your sidebar it has access to your code.
+
+So as you're working on an assignment or something or a project or whatever, um, it'll see what you're doing,
+
+and then you can go over to and you can ask questions and they'll give you responses and,
+
+um, you can get help on things like syntax or if you're stuck and not sure how that sort of get going,
+
+you know, try to point you in the right direction. Um, but it's really designed to try to help, uh,
+
+you learn how to do it yourself and how to think through it yourself rather than just kind of doing it for you.
+
+So, um, we, uh, piloted this with a, um, actually a group of high school students at a summer camp we ran last summer.
+
+Um, and we did a, uh, we did kind of a, um, interesting.
+
+So the randomized controlled trial with it where we, we split all the high school kids in a camp into two groups,
+
+and we had one half of the high school kids go through the camp without using any, any kind of AI tool like qubit.
+
+And then the other half, we brought qubit, and then we had them working with qubit through the summer to see what the what the differences were.
+
+Uh, and, um, we found some really interesting things in particular that have a strong impact on their,
+
+um, their motivation level, um, and their perception of coding.
+
+So as you all know, having done learning coding before, it's it's really frustrating, uh,
+
+and can be very challenging and also causes a lot of people to just say, uh, this is just too hard.
+
+I can't figure this out. I'm just going to give up on this or this is not for me.
+
+I don't think that, uh, that I could be a software engineer because it's just too challenging.
+
+Um, and, um, and so probably the biggest impact we saw was actually the,
+
+the improved perception of the students on coding and their ability to learn how to code and maybe even pursue coding as a career.
+
+Uh, so that's really, uh, that was really exciting.
+
+Um, we've run it now. We ran it last fall in two different classes where it used it in this class, and we used it in a large, um, fintech,
+
+um, program, their intro, the programing class, and, um, and so now we're offering it again, uh, this fall.
+
+So, um, I think maybe some of you have used it in the bootcamp.
+
+Um, we are um, I introduce our AI policy in this class last, uh, last session.
+
+So as a reminder, um, it's fine to use assistance on your Kaggle.
+
+It's fine to use it on your projects. Uh, you cannot use assistance on your homework assignments.
+
+Uh, and obviously not on the exams. Uh, so the one exception to that rule is that we will allow you to use qubit for your homework assignments.
+
+Uh, that's the only AI assistant that you can use. Uh, and so, yeah, you don't have to you can just write them yourself if you want.
+
+But if you want to use something or you want to get some experience, um, working with cube, either try it out.
+
+Uh, you are allowed to use qubit. Um, uh, in your, uh, your assignments.
+
+I just care of show of hands. How many people use VS code is kind of their default ID.
+
+Almost. Everybody okay? Yeah. What else is anybody use?
+
+Whoever, then raise their hand. By charm.
+
+By charm by charm. Also by charm.
+
+Also by charm. Okay, then we try and then.
+
+Okay. Anybody using cursor is there and there may need.
+
+Basically the same as that is basically, uh. Okay, good. Uh, so so that's, um, why don't you come on up and, uh, you know, take it from there.
+
+I shall try and kind of walk through a bit more explanation of qubit.
+
+Um, maybe a demo kind of to show you how to use it and, uh, uh, yeah.
+
+Feel free to talk a little bit about how it's built, or we can answer any, any questions that anybody has on it.
+
+Anyway. It's true.
+
+Yes. Yep. Okay. Sure. Uh, uh, thank you for joining me.
+
+My. You here to introduce qubits? I work on qubits.
+
+Almost here. I see you there. How are you?
+
+Yeah, I was, uh, I, uh, and or, uh, about qubit.
+
+Is Georgia introduced to some effect and it will introduce more details about the qubits.
+
+Uh, so I'll let you two because our demo, uh, qubits is, uh, copilot agents now mainly focus and,
+
+uh, this code, because I know that most of people use the best coder.
+
+So we put our priority, you know, to work out that, uh, qubits, um, work out the best code extension and,
+
+uh, it, however, uh, actually have three components have is, uh, yeah.
+
+First is uh, vs code extension is kind of that where you store your, you know,
+
+PC and we have our backend that it will store all the informations for that analysis because cubits is how can you and the teacher also help you too.
+
+So we try to help the teacher to better understand you, to try to understand what's the most topic you are struggle with.
+
+You know how you are use so they can reach out to you.
+
+Maybe oh, I think you know happened maybe can encounter some problem.
+
+So the goal is to help you also that can't help uh, you know the professor to.
+
+Provide more? No, uh, good old reversions under, uh, costs for the next year.
+
+So that can, however, improve the cost. Uh, this is, uh, back end.
+
+And we also we have, uh uh uh uh uh uh uh, real time chart, uh, assistant for the professors so they can,
+
+you know, ask, uh, different questions like here, which students shrug.
+
+Well, there is no pass in other, uh, and such, like, if you know the seat, you know, crew, you know, familiar with C points.
+
+Uh, uh, C is such a thing. So this, uh, three points, client server.
+
+And then we have agents and you will learn that in, uh, more.
+
+Uh, I think it is, uh, next year, bring about a larger model so that you will understand how it works.
+
+So this, uh, faxing of, uh, uh, of the, uh, qubits and, uh, uh uh.
+
+That's it. And I will try to start demo and how to install it.
+
+How to use the. And.
+
+So this is my VS code. It will use more than one word.
+
+So qubit is already in the marketplace.
+
+So just click here to extension. Image and.
+
+Uh, you will find qubit under. If you search for qubits, you will find it is, uh,
+
+not related to ours to quantum computing competition in the UK, but less than half of them name qubits.
+
+So you can't get it here and it just installed.
+
+It's very quick and you can find its way in store. You will find a very cute, you know, beer.
+
+It's all right. Oh, what a clock it is.
+
+Heard of. So they have the original developer of the first developer on this project was an Australian, uh, undergrad.
+
+Walker is currently an Australian. Um, well, you can look it up.
+
+It's supposed to be a cute little, uh, airline thing of all the time.
+
+I think it's, uh, you know, cute bear. And I'm like, okay, so.
+
+Well, um, that's, you know, uh, this is a no more is there's only when you, you know, lobbying.
+
+So at least the no means high show trend. But for first time, you will not see it.
+
+So let's answer. Um.
+
+Again? Yeah. First time you will be here.
+
+Sometimes they will ask you a secret code.
+
+A code, a way that means that you need to you to log in.
+
+So we know who you are and what cars you belong to. So you click here.
+
+Open. Uh, because I already log in.
+
+So it will give me the code if they don't log in.
+
+Let's go. So here if if you don't have a card so I can sign up for now.
+
+We only support Duke students who must use, you know Duke, you know email.
+
+Yeah. Make sure that's. And you will get the email from your, uh, inbox.
+
+And, uh, activity should be fine. It's.
+
+This is my email. If you if I do some drag or something on the comments or you finally do some security issues jailbreak, just let me know, okay?
+
+Yeah. Uh, when you log in, you will get this code. Uh, my code is kind of special because I use the debugger, so.
+
+Yeah. Normally you will see some random string. This.
+
+I'm here. Uh, nothing to do. Because if we detect the latency, it's cracked.
+
+We're trying to lobby. Yeah, and if by now you have a say that you have some have message and you have your name.
+
+So let's say we have, uh, this project is in for demo.
+
+We have all assignments. We have, uh, hello world Pi.
+
+Let's see how the world of pi. Okay. Our Pi's very simple to say hello to some name.
+
+And we have, uh, also have some very basic, uh, surface.
+
+Hello, world. We expect to have, you know, outpost.
+
+Hello. For all the, uh, testing.
+
+Um, maybe you can. Um, yeah.
+
+You can see right here at field.
+
+Uh, if you are familiar with Pasadena, you will find out why.
+
+But if you are new one or you are of courteous program and time, you missing one character, I think is an easy, uh, not easy to find.
+
+You know, some time. You missing one character in a big program.
+
+You take about half a day to find. Oh, damn it, I make a stupid mistake.
+
+I missed someone for some time. That's bagger that away.
+
+Is not that help inform. Especially when it comes into the syntax error.
+
+So in such a such a situation, what should I do?
+
+Okay, back to our qubits. While we open our file we can see here they will tell you could be already know that your viewing.
+
+Hello. What uh should. Yeah. Sorry. Should be is well kind of right.
+
+So whatever you looking at it qubit again.
+
+No it it. So let's see why.
+
+Like why? Um. I hope you know.
+
+So just like, you know, ask a friend so we can ask you to come.
+
+It's like, why am I going to ask? Well, I will try to.
+
+Okay. In college, try to answer your question. Uh, give me a second guess now or sometime.
+
+Okay. That would give you something. Uh, understand that you try to know the things that understand your code.
+
+What's your intent? Do you are trying to write a function in message and under.
+
+And we will ask you, do you want two hands or something? I actually do.
+
+Uh, they gave you. So you expected a lot.
+
+And it was, you know, don't get into a wide field.
+
+Um. Help we. So.
+
+So we can talk with them, just like, you know. Just like two friends to try to, uh.
+
+To talk to them to how to how to solve it. And I gave you a hand to try to counter to bargains.
+
+Not as you know. If you use cursor or another, choose it for productivity.
+
+That would tell you, hey, put it on. You know,
+
+I counter before down to something or they just directly modify that to five for you for this cubits and it will not give you an agenda answer.
+
+So, uh, this is uh, uh um, you know, is design a future?
+
+So maybe you can, you can, you can say, hey, I don't I don't want to sing at all.
+
+Just give me the solution. I want to know and or.
+
+Yeah, you can try. You know, you would use it if you successfully jailbreak this, just let me know.
+
+So listen. No, this is. You are a good enough security engineer, and we need your talents.
+
+No, uh, no, uh, I already tested, uh, I got another question.
+
+Uh oh. Reminder. Going back to the code.
+
+Uh, which the code? Uh. Oh, yeah. Numerical button.
+
+I just want to type them. Uh oh. The code.
+
+Uh, code to type in attribute to activated to go back to that screen.
+
+You probably you should get your own code. Oh, oh I see.
+
+Oh, yeah. You know where you are. Yeah.
+
+It's a like. Uh oh. Yeah.
+
+The code doesn't show on the screen. Yeah. Yeah.
+
+Looks like when there's a little, uh, issue, it just says, please copy and paste this code into the extension.
+
+Assign it. You may close tab once you assign it to the extension, but there's no code showing on the, uh, thank you page.
+
+What is the actual website? Why don't we. We'll check that later today and we'll send an email or, uh, it looks like.
+
+Yeah, we was this. There we go. And because of that.
+
+As you can see. So. So looks like everybody's just getting used to it.
+
+Oh, my God, it was fine. I didn't get the actual coaching because the reason why I, you know, so people can help.
+
+Yeah. Well, we'll work on that today and we'll send another round once it's available.
+
+So do you think you can access it? No.
+
+You know, if you know someone, look at the log.
+
+That's a yeah. You know, I tested my program in my my computer for difference, but I never.
+
+Well, it's a good idea to. It's good to know that it's another question about jailbreak.
+
+Yeah. What's the back end model? Uh, for now, it's, uh.
+
+Give it he 4.1. Yeah. Uh, yeah.
+
+Good. Isn't it? Yeah. If you can, you know, some kind of. Use the prompt geo brake to know the modal name.
+
+It's great. Know if you know the model name you have or model successful or to hack it.
+
+Is there any chance that either of you could make a PyCharm extension, or like the JetBrains Ides,
+
+or like a web based version that kind of like you can paste the file you're working in and it can kind of like be a web,
+
+like exactly that word teaches you, but it's not required to use VS code because I.
+
+And is there any like plans maybe never support anything beyond like VS code?
+
+Uh, maybe is uh, good question for you on that way, asking for that end of additional support to accept uh,
+
+best code extension about, uh, PyCharm or just so that kind of people can pass their own code to the to the chat box?
+
+Yeah, it's a question about better.
+
+What was the question if it'll ever be potentially supported or just a web based version that doesn't hook up to the API?
+
+Um, maybe. So we we originally started with a web version of it and, um, decided that, uh, since a majority of students use uh vs code,
+
+it actually made more sense just to put it right in your VS code rather than making you go to a website to use it.
+
+Um, but we might we might also add a web version at some point to.
+
+Uh um uh. Uh.
+
+Again. Uh oh. No. I should have one under.
+
+Uh, okay. So beside, you know, to have your carry until we already know is, um, camel carry.
+
+You know, syntax kind of check code hands or something.
+
+So when you react, they will have, um, you know, uh, presenting carries.
+
+So I gave you some syntax guide, and there will be kind of for more speech if you just watch.
+
+Hey, you know, I don't want to tab I want to click to one thing.
+
+If you read it, guide and give something like, you know, uh.
+
+Even know that you, uh, know this code is, uh, related to the, uh, stream information.
+
+So they gave you different options than to try to let you think.
+
+Which ones do you use and what kind of mistake you're made actually missing out here.
+
+So if, you know, uh, that's a kind of a new, uh, peson, uh, stream, uh, format that I have.
+
+And I have different. Even a way to commentary on that.
+
+See the. You know about the Academy pretty quick and get different things like Checotah and even Burns.
+
+You can read multiple files upwards.
+
+Uh, so far, not yet.
+
+Uh, because we don't have the ability to execute to, um, customer function yet.
+
+Uh, and generally people as well, lenders.
+
+You know, the code is just a web file.
+
+If you have big ones, really big ones, like or maybe a Linux kernel or, you know, brother as those things you are still we know not support yet.
+
+We focus on other more high priority things.
+
+But maybe if we find is is, uh, become true and we will make it become.
+
+Um, yeah. I notice that there's, uh, a folder, uh, dot Cupid.
+
+I was wondering if, uh, does that allow adding context or rules, this kind of stuff?
+
+Uh, this question is for next generation.
+
+Uh, because for now, we are, uh. We don't support such like.
+
+You can funding this project. To what? You know uh, course in the future you can funding this project to work horse so we can get a cost I.D.
+
+When you go to court it, we can know your, you know, canvas.
+
+We know your assignments. You know your slides, folder structure.
+
+So when you ask a question such, like, uh, how do we how can I solve this problem?
+
+So I can. It's cubits. No yarn, no slides.
+
+No. You are horseman. You are, I think I say, okay, go look at the slide to three and to the, you know, in the page at eight.
+
+Maybe they are introduce the instructor, you know, introduce this concept and they, you know, introduce you you can know that how to fix it.
+
+So this is for the next generation. Uh, Cupid.
+
+Uh, this is the my demo system that I use. It's for cats and, uh, next generation commits.
+
+So next generation you will. What do I know?
+
+What of what concept you are learning when? No, you know all the materials?
+
+I know also we can touch like notify you. Hey, your assignment deadline is approaching.
+
+You should not work according to our estimates or your program.
+
+You may be take two days to finish this assignment. Yeah, so tell me.
+
+So the kind of a thing and, uh, also can, um, because from uh,
+
+instructor that say also people ask about deadline for uh, specific assignments so we can ask should be here.
+
+So like for assignment to do you know was a due date or something.
+
+What's the requirements. So they will get all the information for you is a for the next generation for that or uh cubits.
+
+How for some settings. And a good point. It was introduce it.
+
+But and now it's not still here. The story in the, in uh it's code and it becomes vs code.
+
+They have some, uh, ability to store things. And I will show you a good point.
+
+Um, I'll also go to observe. Uh. Okay, I will, uh.
+
+Uh, that's a quick I'm a quick, uh, passing for you.
+
+And you can click here. Uh, top.
+
+So you can say tracker is, uh, like, uh, little code or, you know.
+
+He can have style. And we're trying to track your activity out recently.
+
+I don't have a, uh, an activity. Uh, and, uh, I don't use the escort.
+
+I use of my, uh, my other, uh, cons and, uh, this one settings said he is, uh,
+
+interested in one, uh, first, you know, different people have a different style to learning.
+
+You know, some people say, okay, some people are more familiar with, uh, languages.
+
+Um, we are, uh, very new. So they have different, you know, different level of how computer can help you.
+
+First is, uh, on my keyboard is that means I'm totally new.
+
+I don't know what is true. And what is, uh, no.
+
+Uh, CS so on board, I mean, they provide a very detailed help.
+
+It's very good for new starters or for someone who already know the fall.
+
+Familiar with, uh, concept Excel. Oh, my God, Justin, you so tell me.
+
+Um, so simple concept, which I already know that. So what?
+
+Don't know what I want. So what's the rules that like, uh, uh, a people, uh, friend?
+
+You're just just sitting on the other room. You have a question and ask them.
+
+They just say, okay, that gave you some keywords.
+
+So have you, you know, kind of, uh.
+
+Give you some hints. Just very basic hints and try to help you to figure it out.
+
+I figured it's by yourself not to, you know, not to help. So they have different levels.
+
+So on my desk job of my shooter was to have a walk around the room.
+
+Of course room is more. Talk less.
+
+More. No. Keywords give you some keywords. Hamster.
+
+You can't do it yourself. A minority is more obviously more detailed, and I would take it all differently.
+
+That's some kind of room to detox, uh, for, you know, or some, uh, experienced programmer also begins to call me.
+
+You can, you know, give you your nickname. Whatever you want.
+
+Uh, for me is shorter and will have a very useful, uh, actual and obscure structures.
+
+Like, you can say things, different things. Uh, personally, I use such a like, uh, I prefer they they say the problem or tell me or talk with me.
+
+Use Chinese. So maybe I can change here.
+
+That's like, uh, visual response in Chinese.
+
+Uh, I know, not, uh, most of you don't know Chinese, but, you see, the, uh, strangest character, you know, that is a success.
+
+No, that's that's done, you know. Oh.
+
+Just like it. Oh, yeah.
+
+Should work. It was a question.
+
+Um, do you, um. Is it possible?
+
+Does this have, like, a link to copy? Uh, the conversations I would have with you been proven beside it.
+
+As a way to copy. Yeah. Because you don't have it. Like, you can copy the link to some of those conversations that you can use when you're signing it.
+
+Does this have that? So far we don't have such a feature.
+
+Uh, yeah. Uh, sir.
+
+Is it. Well, I want this. I'll try to understand why you are trying to share yours to your classmates or something to which you are not people.
+
+No, I was just talking about, like, if we're setting it, then being able to sign it and, like, have that conversation so that,
+
+like, you know, how if you're citing it when you submit your assignments or something like that.
+
+Yeah. Um, now we don't keep it. There is no is there a log of past past chats accessible through Cuban or not?
+
+I don't think so. Right. You know.
+
+You know, you know, the, um. Like, after we have a chat, it doesn't show you the log of the past chats you've had.
+
+Um, so far, no UI for here and there.
+
+Um, yeah. You're right. Maybe we should. And. Yeah, it's it's a good thing we can add.
+
+Um, yeah. Not right now. It's not right. Yeah. It's just for kind of, you know, for the infrastructure we have, uh.
+
+Very like chickpea. We have a history. So we can, uh, continue that.
+
+Any previous conversation? Yeah, I don't know. We don't have it, but, you know, we should.
+
+Maybe we should implement. Um.
+
+Right, right. Yeah, you can see that in a camera.
+
+Some Chinese? Uh, yeah. So just one thing you just saw, and you, if you have or, you know, another preference over seconds, just tell.
+
+Just like, you know, you know, for example, I don't know, I don't familiar with Python, but I familiar with Java,
+
+so maybe I can ask a quick use of the job or a concept to explain some passing concepts so I can know it because I can compare with it as I know,
+
+okay, this has a string is equal is true though some, uh, Java or some Java or string, you know, concept.
+
+That's the thing. It's, uh. You can add as much as you want and it just needs more as a global.
+
+So when you're sitting and when you start another project or another, yeah, charge everything will still.
+
+Um. Yeah. So to do after you finish of the student view, do you want to just briefly show them the instructor view.
+
+Is it possible to show them? Okay, sure. Uh, I think it'll be interesting, uh, you know.
+
+Uh, okay. Uh, I have tried to the last time.
+
+I try to know. Uh, I try to, uh, jailbreak heads.
+
+I was like, uh, I don't want to, you know, uh, just I don't care.
+
+Just, like, give me that. Don't.
+
+You. To.
+
+Know how to fix. I just want.
+
+Yeah, that's the notion. Yeah.
+
+Um. Oh. Okay.
+
+So I will try to treat it like just in this version.
+
+I don't want it lower to zero. I have Simon's fix in his do in five or no seconds as a means to just let me know the solution.
+
+Uh, we have or, you know, uh, a wage bandit.
+
+I hopefully this work can work because my every time I use difference.
+
+Take a break. You know, uh, prompts.
+
+Try to hack it. Oh. I should change my name back to English.
+
+I can okay. You know, I can translate. I mean, it take longer because you never do.
+
+You have a lot of competition. Yeah, yeah.
+
+In the comics, it's very kind of the time square that you are allowed to contest.
+
+So it would take a longer. Question.
+
+Yeah, just like in the settings, like, oh, I'm not really good at this language, but I'm better at this language.
+
+So that explains less for something you already know versus something you need for help on or like concept wise as well.
+
+Yeah, you can tell that in the settings or, you know, in the settings and you see you want to you specifically,
+
+you know, preference, what do you want where you want to use it.
+
+Maybe sometime in the talkative I'll give you lots of things. Maybe you can ask them, give you a reference website, or sometime be like, you know,
+
+the Latin American model don't give you a right away, but you can ask them, just give me the keywords.
+
+I can Google something. Yeah. Uh, okay.
+
+It's in Chinese style. Just to give you something as a means is, uh.
+
+I know you want a solution, but unfortunately, I can't give you a complete solution.
+
+But I did give you some hints, you know? And the hint is you.
+
+You use this when you. But how you can, you know, instead of the the value of the name instead of, uh, no, uh, literally name means yes.
+
+For now it's works. And if you find some job range or something, just let me know.
+
+Another security and truth or no performance or anything.
+
+Yeah. I think it is, uh, for the Cuban kind side.
+
+It's, uh, here. And, uh, you mentioned that we ensure that dashboards and dashboards.
+
+Go here. Let me, uh, and while we're here, point that out to me.
+
+Introduce real quickly. Um, yeah. This is a part of the, um, part of the goal with the Cuban project.
+
+One was to provide, uh, you all, uh, students, uh, uh, learning tool, uh, to help you learn.
+
+And the other part of that bit was also to try to provide some value to the instructors as well.
+
+So, uh, the way we see this tool is something that gets kind of integrated into the class experience that the instructor has access to,
+
+the students have access to. Uh, so why would the instructor care about it or want to have access to anything with qubit?
+
+Uh, because it's for us, it's actually helpful to know what your what your questions are, what you're struggling with.
+
+Um, if we don't ever see sort of what you're doing with AI assistance, we'll never know if you're struggling with something or,
+
+uh, or if the whole class is struggling with something because we don't explain it very well.
+
+So it's useful information to us. Um, so we, um, we've also so we log all of the interactions in a database.
+
+Uh, we don't share anybody's individual interactions.
+
+Um, you know, with an instructor or anybody else for privacy reasons.
+
+But, um, we do try to do some, some mining of the data from the logs to, uh, identify things like,
+
+um, commonly asked questions, for example, like if all of you are using Cuban,
+
+working on assignment one is like everybody's asking the same kind of question that would be useful for me to know,
+
+because maybe the instructions weren't very clear, or maybe I didn't explain it in class very well.
+
+So, uh, we try to identify things like that, or if there's a, maybe a particular, you know, situation where a student is,
+
+um, just as, uh, a lot of questions about the same kind of topic, we might flag that and say maybe, um, uh, yeah.
+
+Sam is just not really kind of understanding how the logistic regression works, because it's just also a lot of questions.
+
+You might want to just chat with them and just, uh, see if, you know, see if he's got it or need some more help with it or something.
+
+So, um, so we're trying to, um,
+
+we're experimenting with the right way to surface things like that and present them to the instructor so that they can,
+
+uh, provide extra help, uh, to you, um, you know, when, uh.
+
+You know when needed, and make the kind of experience much more adaptive to your questions and needs.
+
+Uh, this today. So this is so I shall try to show you is not something that you have access to.
+
+It's something built for the instructors.
+
+But I thought you would find it interesting to see that what we're thinking about doing with the website, uh, is, uh, designed to be, you know, uh,
+
+many services for the, uh, uh, structure and or in the future,
+
+you can get some links to join them, cause I actually, they already exist in another future.
+
+And, uh, you can have a such a course dashboard for students.
+
+You can just see who we were considering. Who is your professor with a Ta and then email.
+
+Just like just such a thing. Uh, yeah. For me, um, the, uh, instructor, both the students of this test course.
+
+Yeah. Yeah.
+
+Uh, this is our information. Uh, yeah.
+
+You can see different things. Uh, with the G8, you can also count access to it.
+
+Also, they have statistics of how many students, how many, you know.
+
+Yeah. Uh, so.
+
+And of course, you know, for you know context manager you know can't or thing manager member.
+
+You know you can just give it a shot completely. So we can add a different cost.
+
+Member. Uh, um, um, uh, which person is a student or instructor?
+
+Okay. Or in a different sense. That's a. And we have to usage dashboards.
+
+Uh, how used by the students, uh, to make, uh.
+
+You know, instructor familiar with, uh, most people watching.
+
+Yeah. Analyze these charts in seconds.
+
+Yeah. Uh, we have some bob down there.
+
+So sometimes you don't refresh. So we can see here the history of their, you know, uh, competition.
+
+Yeah. And you can see that under, uh.
+
+Such a like you can talk to the if you talk to the cubits.
+
+I was like, uh. What is Sharon calm struggle most with?
+
+And we'll analyze this oil into act such because I always should uh.
+
+Hello one so they say, um, struggle we as a passive stream for maintaining not.
+
+Uh, yeah. So that gives someone different things. So you can ask her specific questions about, you know, specific students,
+
+or you can ask over a question such, like, what's the most pinpoint of the most students?
+
+You know, they have to give us some things to and strive to to help them and maybe say, uh, who have or the, you know,
+
+who maybe struggle with the assignments that give you such a thing, like it's got maybe some time as I have some have management issues.
+
+So always submit a. A, uh, assignments just before the deadline.
+
+So that is, uh, some signal to help the instructor to try to have you zoom.
+
+Yeah. You mentioned the different things. Uh.
+
+Oh, nothing. Just a test. And, uh, we also we have, um.
+
+Graph. You can ask such like can't give me all statistical, you know,
+
+information about this cause that was the topic they are talking about that give you all information about you that I'm not sure is who does it.
+
+No one's not very yet. How do we attempt to change it if they are logged?
+
+How do we attempt to jailbreak? Uh, this. I, um, if charts are log linked, the instructor always has access to the charts.
+
+So the question is how do you attempt? How do you attempt to jailbreak the chat if the instructor always has access to it?
+
+That's the question. Uh, so a couple of things.
+
+Uh, uh, one, we, um, generally don't um, we're trying to figure out kind of where the right line is, you know,
+
+between sort of usefulness to an instructor to teach a course versus protecting the privacy of, uh, of any individual student using it.
+
+But, um, in the instructor won't have direct access to sort of a specific log of a specific chat you have.
+
+So what we do for the instructor view is things like this, where we sort of, uh,
+
+perform an analysis of your chat logs and we try to extract sort of insights from that to present to the instructor.
+
+But we want sort of show the instructor line by line, like, here's what you Typekit here's what Cupid said,
+
+and here's how you, you know, responded for for privacy reasons.
+
+Uh, um, that being said, if you're if kind of all you're doing in Cuba is trying to jailbreak Cuban and, uh, we go in here and say,
+
+you know, um, it was evolved doing, you know, this week with Cuba that says he's been trying to jailbreak you, but all week.
+
+Uh, well, uh, we'll probably know that, uh, but, uh, so, so that that's okay.
+
+Uh, I mean, you're allowed to do that.
+
+Uh, uh, just be aware that it might surface that an instructor if if you're trying to if you're trying to do that,
+
+uh, you know, whether or not you can jailbreak you, but that's, uh.
+
+Yeah, that's, uh, that's up to you.
+
+You're welcome to play. I mean, we don't use this for grading. You know, there's it's not like we subtract points if we see you like.
+
+Yeah. This is not a grading tool. This is really a kind of a help tool to help with your learning.
+
+So if you just want to use it for, like, trying to jailbreak it, then that's fine.
+
+You can do that. And maybe you'll learn something about jailbreaking, but, uh, you might not learn a lot about the class from that.
+
+So. Yeah. So that's that's up to you. Any other questions for Sarah?
+
+And this is, by the way, this is, um. What? For those taking the large Irish model course next spring,
+
+we'll probably maybe even use this example in that course and kind of go deeper in it, but, um.
+
+I really like the way that Cha Cha has been thinking about.
+
+This dashboard. So typically with like edtech tools.
+
+Um. Uh, as you probably seen, canvas, like, they're very, um, sort of prepackaged in the sense that, like, they'll give you some instructor,
+
+like, if you're an instructor using canvas, I can log in and I can see like kind of certain tables or charts.
+
+So I can see, like your activity and I can see sort of, you know, submissions and average grades and they give you a free,
+
+if you like, kind of prepackaged charts that you can, that you can look at.
+
+Um, but what does this have to do with this interface is rather than just giving you like kind of some prepackaged, uh, you know,
+
+charts of different things to try to make it really flexible so that you can essentially ask whatever you want to know.
+
+So you can just type in a plain language question, um, and it will then attempt to go perform an analysis and give you an answer to that question.
+
+So, uh, behind the scenes, it's, it's using should have an agent like system that looks at your question,
+
+looks at the schema of the database to see what information is available.
+
+And then, um, writes the code to perform the database query and the analysis and then runs the analysis,
+
+executes that and then translates that back into, uh, kind of a text response to you.
+
+Um, so it's a really good use of an LM to enable, uh, uh,
+
+is sort of very flexible querying and analysis capability that you can go in and ask sort of any.
+
+Any kind of quiet type of question that you'd want to know that we reasonably can answer, and it will go right.
+
+The code do the, you know, execute the query, do the analysis, give you an answer back.
+
+So very cool. And I think very different than normal normal attack tools at least.
+
+Or you know any kind of like business intelligence dashboards usually they're like prepackaged, you know, charts and you can't really change them.
+
+You get what you get.
+
+Um, so his whole philosophy with this is rather than doing that, let's just give you the power to go, go run whatever analysis you want to run on it.
+
+Uh, which I think is very, very cool and powerful.
+
+So I sure would be happy to kind of talk more details if anybody wants to understand the details.
+
+Uh, he's done a lot of hard work this summer on this, um, and I'm sure he'd be happy to share with you nothing.
+
+Nothing is secret or proprietary. Uh, uh, about this.
+
+In fact, we're probably going to open source the entire project, um, as soon as we can, kind of, you know,
+
+figure all that out so that other universities can set it up and run it, uh, as well, if they want.
+
+So feel free to reach out to chat Tran with any questions. Uh, if anybody wants to get involved in this or any of our other, uh, creative projects,
+
+we're probably going to do a round of, um, some, uh, all right, hiring for the this semester at some point.
+
+So you get an email that there will be an email that goes out when we do. If we do that and when we do that, uh, and application process.
+
+But these are the types of things that we work on in the labs.
+
+Any questions on Q so we'll get the, um, technical issues straightened out with the code to access it.
+
+Um, so we'll we'll figure that out, uh, hopefully today.
+
+But whatever it is, we'll, we'll send another out to everybody once that's fixed up so that you can, you can go in and you can start using it.
+
+Anything else you want to share with everybody? Uh, well, I think a good 5:05 p.m. to the collab for the PS.
+
+Are you gonna be there? Just, you know, in person that you.
+
+We already know any details you want to discuss, so. Well, I need to find it sometime with a packet come and go.
+
+And as this one, I know it's it because, uh, previously, I just didn't try it and works, and I don't know in which version.
+
+You know, I should use a new board. Uh, sorry.
+
+So, uh, it's it's a it's a managing systems like this that are in production and, like, real people using it as a whole.
+
+Different experience than just, uh, you know, running things on the laptop.
+
+So these are normal, normal issues that show up, I think when you do that.
+
+So it's a good experience. Yeah. This is why I, you know, I like you guys to evolve.
+
+It's try to think from different ways too.
+
+So you from the technical part or their product you know any you can provide some good
+
+ideas uh sometime for the for technical person ideas is more hard in in the technical side.
+
+Uh, yeah. There are a couple others. So as you kind of use Cuban more and kind of challenges.
+
+So we showed you a kind of a very simple example, you know, today and how to use it.
+
+But uh, it works well across languages. So it's not exclusive to Python.
+
+If you're taking courses in other languages, uh, you can use it for those, uh, it works well with complex kind of, um, you know, assignments.
+
+So if you're like, if you're doing like an algorithms or doing some algorithms practice or something, uh, it can work very well for those.
+
+Uh, we've also been adding in I think it's still there's some, some capabilities to do create visuals.
+
+So for example, if you're working on like a sorting algorithm or something like that,
+
+and you want to sort of visualize like what's actually happening when your algorithm is running,
+
+it will sometimes will spit out sort of visuals, even animated visuals of sort of how things are,
+
+what's going on when you run your code in the sidebar.
+
+So try playing around with it on different types of, uh, projects like that and see how it does.
+
+And yeah, please share any, any feedback that you have as you're using it with us.
+
+All right. Any questions on. All right.
+
+Well, thanks very much for joining us this morning. It's been a rough. All right.
+
+And that is. Gentlemen, thanks a lot.
+
+Have a good night. See you tonight. Um, that is, uh, available for you to use on assignment one.
+
+Um. Speaking of assignment, one is due, uh, before class next week, so be sure to make sure you get that submitted before start class.
+
+All right, Commission, uh, for assignment one, are we really always supposed to modify the, uh, the code where it says, you know, like your code here?
+
+Because there's some other places where, like, random formatting simplifies stuff.
+
+And some of the other sections, you know, we're not supposed to edit. Yeah.
+
+You should really just be editing in, uh, in the insert code here in sections.
+
+Yeah, yeah. And speaking of that, do not know that I mentioned this last class.
+
+Um, the other, uh. Uh, the other thing to be careful of is, uh, you should only be using libraries that are important for you.
+
+Uh, so you shouldn't be importing anything additional unless. Unless for some reason, the instructions specifically say that.
+
+Add something in. But in general, any any, uh, packages that you need should be already imported for you.
+
+And if, um. If something's not important for you, that probably means you can't use it.
+
+So. So there are some cases where, uh.
+
+Uh, I want you to, like, do things just using Python, not use like numpy or pandas or scikit learn or something like that.
+
+And so, um, if you like, if it's asking you to like do a, use a, um, some kind of algorithm or whatever,
+
+or a logistic regression or something like that, and it's not importing scikit learn for you.
+
+That means you can use scikit learn to use to do that algorithm.
+
+So you need to write that algorithm yourself.
+
+Uh, so just be just be careful about, um, only using what's provided to you and not adding your own, uh, packages into it.
+
+Really question about someone. I, uh.
+
+I, uh. We have given you some, you'll see some simple tests.
+
+Um. Uh, I think after pretty much every coding question, there's at least one assert statement.
+
+Uh, that that is useful to just check your work.
+
+Uh, uh, it's not exhaustive. So just because it passes the asserts doesn't doesn't necessarily mean it's correct,
+
+but hopefully it's a good sanity check to make sure you're not, like, way off base with them, with your answers.
+
+Uh, and again, a reminder on the assignment policy. So you you need to submit, um, I start the class next week.
+
+Assignment one. Uh, you're going to have a second chance on assignment one to resubmit it, um, the following week before starting the class.
+
+Um, after you submit next week, I'll post the solutions.
+
+You'll be able to look at the solutions. You'll be able to go back and correct anything you got wrong.
+
+And then you can resubmit with the corrections.
+
+Uh, however, uh, for full credit, you need to have, um, at least attempted everything in the first pass all the way to the point of an answer.
+
+Um, so you can't just, like, submit a blank assignment one week one and and think you're just going to, like, resubmit it with all the answers.
+
+After looking at the answer key, you need to provide, you know, work all the way to a solution.
+
+Um, for every question and assignment, only answer like half the questions in the first submission.
+
+Even if you corrections on the second submission, you're still going to get 50% marks wrong because you didn't you didn't put in the work.
+
+The truth of this trial. Okay. So that's a hopefully simple, simple policy.
+
+And I expect we'll have generally one hundreds on all the assignments.
+
+But you do need to put the work in the first first round. Okay.
+
+So we're going to do a row. We're going to do a kind of a lightning um lecture today here.
+
+Uh, given the time. Um, if we don't make it through all this today,
+
+I might just record the pieces that we don't get to and have you watch them before in the next class so we can keep you on track.
+
+Uh, today we're gonna talk about model evaluation.
+
+Um. So, um. Um.
+
+When we evaluate models, we typically, um, create what we call a test set.
+
+Most people that learn class before are very familiar with this idea.
+
+So we take that sort of set of data that we have access to, whatever that is, and we'll split the data and we'll use most of it for training a model,
+
+and then we'll take some portion of it, some small portion of it, and we'll hold it back.
+
+And we'll once we've trained our model, um, we'll pass our, our test set or the portion of code back, we'll pass that through our model.
+
+We'll get our get his predictions will calculate its performance.
+
+Why do we do that instead of just using everything for training purposes?
+
+That's. So we know the model can generalize.
+
+Yeah. Exactly. So so we know that the model doesn't work only for things that's seen in its training,
+
+but it also can work well for things it hasn't seen and is trained.
+
+Yeah.
+
+So what happens if we don't do that and we just use all the data for training, and then we just calculate the performance based on the training data.
+
+How can over determine the solution. So it's really good on just this data but it's not generalizable.
+
+Exactly. Yeah. So it may be performing really well on that that set of data.
+
+But if we then try to feed it some new data it's not it might not, might not perform very well.
+
+Right. So whatever metrics that we calculate to report the performance of it, um, are very likely to be overly optimistic, right.
+
+Whatever we choose, you know, whatever metric would use accuracy, mean square error, whatever it is.
+
+Uh, uh, if we calculate that, uh, if we train our data, sorry, if we train our model on all of the data that we have available,
+
+and then we use all of that again, or some subset of that to calculate its performance.
+
+Whatever we report is likely to be overly optimistic.
+
+Um, and when we feed it that brand new data, the model is never seen before.
+
+It's likely we're going to have a, uh, uh, a lower, uh, performance.
+
+So this is kind of typical if you have a set of data, um, there are no sort of firm rules about how they create a test set.
+
+Um, other than you, you should create one.
+
+Uh, most often you'll see some split like this where you take the majority of your data and you use it for training,
+
+and then you hold back some portion commonly kind of 10 to 20%.
+
+But it depends on the size of your data. Um, and you'll use that for, uh uh uh.
+
+For, uh, evaluating your model.
+
+Okay. Um. That leads to, uh, a discussion about what we call, uh, sampling.
+
+So when we build a model, um, we're using sampling at multiple points and building that model.
+
+Right. Why are we using sampling? Because we, um, don't have access to the entire population of data that's available to to run the model.
+
+Right. Um, when we're building some model, we have some finite set of data that we've gained, you know, from somewhere.
+
+Um, right. So think back to our example of the power outage prediction.
+
+Right. We built a model and we trained that on some set of data, uh, in on, you know,
+
+historical weather data and past power outages that we had obtained from different utilities.
+
+But that was not exhaustive,
+
+meaning we didn't have reports of every single power outage that ever occurred across the entire the of the United States.
+
+Right. We had some you know, we had sample and from that we had maybe a handful of utilities that had given us their data.
+
+Um, so we've used sampling to compile our, uh, training data.
+
+Um, we then we then use sampling again, um, when we build the test set.
+
+Right. So we're sampling from our set of data, we have access to, uh, to create some small test set.
+
+So we're sampling, uh, once again, uh, and then sometimes you sample a third time.
+
+So if the, if your data is very large, you'll often when you first start building models,
+
+you may not build a model and train it on your full data set.
+
+You may uh, so like some subset of your data and build a quick model model for prototypes to train training.
+
+So, uh, each of these times we sample, we run the risk of introducing bias, uh, into our, uh, activity.
+
+Right. Um, and so that can lead to models that, um, retain that bias or learn that bias from the data they've been trained on,
+
+uh, and then provide biased, uh, outcomes as well.
+
+So probably the most egregious, um.
+
+You know, ways to introduce bias into the system is actually in the creation of the training set, which, um, a lot of times as students,
+
+we don't really spend time thinking about because we just go and download some data set from the internet or something,
+
+or like your instructor gives you some dataset and says, here's, here's the data, uh, go, go build your model.
+
+And we just assume that the data is the data. And we don't kind of think about where it came from or how we got it.
+
+Or is it, you know, what kind of bias does it contain? Or how representative is that data actually, of the broader population?
+
+Uh, so, uh, you know, as students, this is not something you probably commonly think much about.
+
+But in the real world, this is a big issue.
+
+Um, because if we just kind of well, number one, it's not common that somebody is just going to hand you the data.
+
+Right. You have to go kind of figure out, where are you going to get the data from.
+
+Uh, right. And so you're the one that ends up having to think through all of the sampling and bias issues when you compile the data.
+
+Um, in the first place. Uh, so, uh, this is probably the main way that bias gets introduced into models is,
+
+is through our sampling strategy or how we're, how are choosing the data that we select to do our model train.
+
+Um, there are two different kind of main buckets or categories of sampling that we do what's called non probability sampling.
+
+Um, and then what we, we call uh uh, random sampling.
+
+Um uh does anybody know what non probability sampling is or what an example of that would be.
+
+I think if you can take the first 80% and just say the second 20.
+
+The rest 20% is just. Our our validation set.
+
+Yeah. That could be an example. So you're just kind of sampling based on sort of or they're kind of right or they're something like that.
+
+We're just saying I'm going to just take that, you know, the, the first kind of x percent of sort of all the data that's available.
+
+That would be an example of non probability sampling.
+
+Yeah. So now progressively broadly is is um when your selection data is not based on any type of um probability uh criteria.
+
+So uh examples of that. So, so this happens all the time.
+
+And these are some examples of that things like convenient sampling.
+
+So let's say we're going to build a uh, um, a uh, a mobile app that um, like uh, for, for people that are really into, like, uh,
+
+flowers and trees that you can just pull it out and you can kind of code it up to it, a flower, and it'll tell you what kind of flower that is.
+
+Uh, and so it's a train, this app we go and we go to and we run, write a script to scrape,
+
+uh, images from Google images of, like, all kinds of different flowers.
+
+And we, um, use that to train a model that can, uh, classify types of flowers.
+
+Right. Uh, so that that would be what we consider a convenient sampling.
+
+Right? It's not based on, uh, you know, any type of probabilities.
+
+It's just based on pure convenience. Because Google Image Search is a convenient tool to get images.
+
+And we're using that. So we're we're just going to, uh, um, use for training.
+
+So whatever Google image search gave us, uh,
+
+and we're going to take like the top 200 pictures or whatever the returns for each type of flower or something like that.
+
+Uh uh. Does anybody think of how this might apply in the context of large language models?
+
+Training? Yep. Right. Um. When we train them like this with, like, GPT three and earlier, we tried it on, like, the entire internet.
+
+And so there is a ton of things on the internet that already existed that didn't really help with the training of it.
+
+Um, so, like you talked about, showed us an example of class where she used she trained it on Reddit, and that was pretty terrible way to train model.
+
+Yeah. Yeah. Convenient sampling is the primary method used for training large language models, right.
+
+Because we're training on either on subset, some subset of the internet that's easily accessible, like the very early, um,
+
+large language models like GPT one and two were trained on, um, kind of curated sets of,
+
+uh, books and Wikipedia, uh, and a couple other things that were sort of easily available.
+
+Um, and then, you know, with, with GPT three and beyond, now we're training on just sort of large dumps.
+
+So gathering that data. Uh, but but still, the reason we're training on that is because it's available.
+
+Right? It's relatively straightforward to go get sort of an archive of the internet and train a model on it.
+
+But does the content on the internet?
+
+Is that is that, uh, a true reflection of sort of the broader population of all sort of bring our spoken content?
+
+Probably not. Right. Because there's also a lot of stuff that's not on the internet that, uh, uh, that you would find.
+
+So, uh, you could argue that, uh, large sandwich models will include some bias because they've been trained on,
+
+you know, using convenient sampling just on what's sort of available, uh, on the internet to train on.
+
+Um, snowball sampling is another kind of common thing that can show up depending on what you're doing.
+
+So this is where the future samples you select are based on existing examples.
+
+So if you write like a, um. Yes, some kind of scraper for like Twitter data or something like that.
+
+And you, you have a kind of start with, like, you know, your account and then you scrape kind of the,
+
+the people you follow and then you have it scrape the people they follow and kind of propagate out like that.
+
+Right. That's a good example of snowball sampling, um, what we call judgment sampling.
+
+Um, this is sort of relying on domain experts, um, to decide what samples to use.
+
+So we'll consult with somebody who's an expert in that area.
+
+And I'll sort of, you know, provide us some data or suggest, you know, that we use or that, you know, certain parts of data.
+
+Um, and I cool. The sampling is another example. So where, you know, we might have quotas for different, um, subgroups.
+
+So if we're doing some kind of a, a survey, you know, things like gather data to train a model on and we say that,
+
+okay, we think, uh, you know, we want to try to get, you know, age might be a factor in people's responses.
+
+So let's go get a hundred know responses from users of every different age age group there are that make sure we have, you know.
+
+Uh, data from from each different age group. Um, so these are, these are themselves.
+
+Um, none of these are necessarily bad, as in, like, if you do this, it's it's it's invalidates your model or it's bad.
+
+Um, and these are very, very common in training models.
+
+In fact, probably almost all models, if not all models will use some form of one of these, um, things, uh, in, in compiling their training data.
+
+So they're not bad,
+
+but it's just important to kind of be aware of what the limitations might be or the bias that you might introduce through the type of sampling.
+
+You've got to collect your training data in the first place. Um, yeah, I think we we've kind of talked about all this.
+
+So a few other interesting examples, things like, um, you know, sentiment analysis models or, you know,
+
+there's a common bias in those because they're trained on the kind of reviews that people leave online.
+
+Most people only leave reviews of things when they're like,
+
+really happy or really upset about something like your kind of average user doesn't leave a review if it's something,
+
+if it's like, okay, or it meets their expectations. So you're going to get kind of polarized about, you know, views on things.
+
+Um, self-driving cars is another good example of a bias.
+
+Um, initially there were only trains in a couple of locations that did not include things like very rainy weather, very snowy or icy weather.
+
+Um, that's kind of since been fixed, obviously, but the early versions had a strong bias for kind of dry, drier weather conditions.
+
+Um. Yeah. And then there's different types of. Um, even when we do random sampling.
+
+So we're randomly choosing samples from our population to include in our training data.
+
+There are different types of, uh, you know, random sampling.
+
+Um, the simplest type is simple random sampling.
+
+All samples have an equal probability of being selected. Right.
+
+And so we just kind of pick, you know, truly at random.
+
+Um, the big downside to, you know, the big so the upside to this is, you know, minimizing bias.
+
+The downside is, uh, if you have, you know, very rare categories or conditions, um, and you're just sampling at random,
+
+you you may not, um, you may not select, uh, uh, data points from those rare categories, and you may miss them entirely.
+
+Uh, an alternative to that would be to call stratified sampling, where we divide the population in the groups that we care about,
+
+and we sample a percentage randomly from, uh, from each, each group.
+
+Um, and so if we have kind of a case where we have, um, uh, you know, some very rare categories,
+
+this is a way to ensure that we don't accidentally exclude those rare categories from our data,
+
+uh, because we, uh, we treat, uh, each rare category as a separate group, and we sample some percentage randomly from from that group as well.
+
+Uh, and then weighted sampling. So, um, this is kind of an interesting thing that maybe it's under utilized.
+
+Um, but this is where we actually give samples of weight, uh, we, uh, that determines the probability of it being selected.
+
+Um, so why would we do this, for example, if we were building a model to model some phenomenon that had, uh.
+
+That we, you know, believe changes over changes or evolves over time.
+
+Uh, we might want to consider more recent data points in time, more strongly than than other data points in time.
+
+Right. So we may weigh recent data points heavier than older data points in terms of the probability of being selected for our training data set.
+
+So there are lots of other examples.
+
+But this this is an interesting way to still apply some domain expertise to your choice of training data without having an expert kind of dictating,
+
+you know, these are the the points you should use, which again, you know, runs the risk of introducing bias, uh, into it.
+
+Okay. Um. Yeah. So, um, there is a weather.
+
+Uh, can I go over that? Does, uh, scikit learn has a train test split method which is commonly used to split.
+
+You can also stratify your splitting, um, using that.
+
+Um, of course you can write that yourself in Python very easily as well if you want.
+
+I think for your homework, I think I have you write it right. Um, um.
+
+What to say about, uh, about that. Uh, uh, it's a good opportunity mention.
+
+There are. I did go through the the class repo. I updated everything for the latest package versions.
+
+Uh, in the requirements file, if you haven't already. Um, make sure you check out the class repo each week, including this week.
+
+There are some exercises in there for you, as well as some demo notebooks.
+
+So the the and they're kind of clearly marked either exercise or demo.
+
+Uh, the ones that say demo are sort of fully done notebooks for you.
+
+I'm not going to go through those in class. I'll let you go through them on your own time, so you can go as fast or slow as you want.
+
+But I would suggest, um, going through those demo notebooks, um, and just read through and check out the simple examples.
+
+Um, the exercise, the one smart exercises are, uh, incomplete and intended for you to kind of fill in the blanks.
+
+So they're a little bit like your homework where, oh, I've done maybe a good chunk of the code, but then I'll leave, uh, a spot for you to work on.
+
+So those are just good to kind of quickly practice. I put the solutions in there as well.
+
+So I would suggest spending a few minutes just doing it yourself if you're getting stuck or something like that.
+
+Um, or you can't figure out how to do something, then you can consult the consult.
+
+The solution? Uh, those are not graded. You don't have to submit those.
+
+They're there for your own benefit. But, um, they probably will be helpful.
+
+Uh, preparation for, uh, doing the homeworks. Okay.
+
+Um. Data data leakage.
+
+So they may be familiar with the idea of that. Yeah.
+
+I just wanted to ask if it's possible for you to specify in the requirements of the Python version you're using.
+
+Um, I have ran some issues and so I evacuated a few times, but I'm not sure about.
+
+Did you have some issues with a later version of Python? Yeah, I will check on that.
+
+It's three nine. Yeah, yeah yeah, I can check.
+
+I can check these are three, nine, three or something. Yeah. Thank you.
+
+Sure. Um. Anybody want to explain what data leakage means?
+
+Oh, yeah. It's like when your training data is leaking to the data.
+
+Uh, like when you're in the process of, I guess, like, pre-processing.
+
+Um. So your model is getting confused.
+
+Um, with the output. Yeah. When you kind of separate the test set out,
+
+but then somehow you're kind of information from your test set is kind of coming into your training process.
+
+Yeah. How does that happen? Any ideas? Um, I guess data cleaning.
+
+Um, maybe if you're. For some reason using like a billion missing data during, uh, training part.
+
+Um, I guess an example would be if you prematurely, um, split the data and then fill in missing values.
+
+Um, if you if you split the and then fill in missing values, are you filling missing values and then split?
+
+Yes, that's one of my questions. I've been told both. Um, so I guess which way would be the correct way to, uh, preprocess data?
+
+Yeah, yeah. Good, good. Good question. So, um.
+
+Uh, so, um, as I said, that, uh, data leakage is sort of the problem that occurs when somehow information from your test set leaks or, you know,
+
+or kind of comes into your training process, you somehow include some information from the test set as part of your training process.
+
+And training, um, doesn't mean just kind of the actual sort of training or fitting of the model.
+
+It means the entire pipeline, um, including your data cleaning, your feature selection,
+
+your feature engineering, um, as well as the actual kind of fitting of the model itself.
+
+Right. And so there are a lot of ways that this can happen.
+
+One of the ways, yes, it's mentioned is if you, uh, you have like some missing data right in the data set you've got.
+
+And so you, you want to you decide you want to fill that missing data.
+
+And so there are different ways to fill that you can you can like depending on whether it's got numeric or categorical.
+
+But you can fill it with kind of the, you know, the mode, uh, you can fill with that kind of mean or median value.
+
+You could build a simple model to try to infer the missing values and fill them in.
+
+There are lots of strategies. Um, but if you, uh, most commonly the way that data leakage can occur, there is whichever of those strategies you use,
+
+if you do it before you separate your train, your test set, um, uh, you know why?
+
+Why does that create data leakage?
+
+Use it for feature selection and that kind of thing.
+
+Or not use it when if you're doing scaling or, you know, standardizing your data.
+
+Uh, that is technically correct. Um, and that technically is a situation of data leakage if you don't separate it first.
+
+Um, but if you, um, you know, if you make that mistake, it's usually not.
+
+It usually has a very minor impact in reality on, on your model anyway.
+
+So it's not a, uh, you know, a huge issue, uh, just to make sure everybody kind of understands the process.
+
+I have not seen this before. So we talked about the importance of creating a test set.
+
+A test set is supposed to be an unbiased indicator of your model's performance on new data.
+
+It's never seen before. Right? Uh, the key is it's, you know, it should be unbiased.
+
+So it should be kind of the closest proxy we have to what we can expect when your model starts running in production on new data.
+
+Right.
+
+Um, in order to keep it on bias, we can't use it in any part of our model train all the way from data cleaning all the way to fitting the model.
+
+Right? So really what we should do is we should first, you know, when we first gather data, we should carve out our test.
+
+So we should put this side somewhere and not touch it again until we finished our model.
+
+Okay. That's really what you should do.
+
+So that means that all of those other steps, um, filling missing values, um, detecting anomalies, uh, uh, and outliers, you know,
+
+figuring out how that how you're gonna handle outliers, um, uh, creating your features, doing your feature selection, doing any feature engineering.
+
+All those things should really just be done with your training data, standardizing or scaling your data.
+
+That should all be done really just on the training set and not involve the test set.
+
+But whatever we decide to do in those things.
+
+So whatever method we're used for filling, missing data, whether or not we're sort of, you know,
+
+adjusting any outliers or anomalies, what features we're using, we should kind of make all those decisions using the training set.
+
+But then we also have to apply those decisions on the test set once we finalized our model and we're ready to generate predictions okay.
+
+So we make the decision on the training set.
+
+We then apply the decisions on the test set, just like we apply those decisions when we're in production as well on new data.
+
+Um, kind of simple and very common ways of having data leakage are if we, if we, you know,
+
+don't separate the test set out first and we kind of use the entire set of data,
+
+we have to select our features to fill missing values to, uh, you know, do any scaling.
+
+Uh, um. Uh, yeah.
+
+We tried to make a duplicate, a grouped observation, maybe.
+
+So it's not only kind of direct duplicates, but, you know, maybe, um, you know, kind of, uh, you know, near duplicates.
+
+Um, then we might have, um, those are, those are all, like, not great,
+
+but they have, in the big scheme of things, kind of a minor impact on your overall,
+
+you know, you know, performance or bias of your not the things that can be kind of bigger problems are the things in the bad column,
+
+which is if we, uh, like if we're doing a time series data and we for some reason decide to just randomly split our time series instead of,
+
+you know, chronologically in time, uh, if we don't take out duplicate observations.
+
+Uh, and this was, by the way, it's there's been papers about this during, um, a lot of, during the early days of Covid.
+
+Um, there are a lot of, uh, uh, studies around Covid detection.
+
+And it was a very common issue in those studies.
+
+If there are a lot of there's a lot of duplicate data, uh, being included, um, you know, so so that is a very common thing that happens.
+
+This one is a little less obvious.
+
+So, uh, this one can show up, um, if we have different data processes, uh, or different generation processes for different classes.
+
+So, um. This is kind of why one place where you might see this, uh, where, uh, things like in medical imaging or other types of,
+
+you know, image data that you might deal with, um, if you're kind of compiling,
+
+um, data from different sources, um, you know, different, uh,
+
+locations or different types of equipment may include sort of slightly different signatures or variants on, on the image.
+
+Right. Um, and so, uh, if you train a model on that,
+
+the model can actually pick up those sort of signatures or variations in the
+
+images and make predictions based not on anything related to the actual image,
+
+but just purely kind of the signature that indicates sort of what equipment produce that image or you know,
+
+what location produce that image and so on.
+
+And so you may find that your model ends up, um, you know, and so it may be that certain locations, for example, let's say with like x rays,
+
+maybe, you know, certain equipment or, or locations deal with, you know, um, patients with a certain condition.
+
+And so you may find that your model ends up working really,
+
+really well in the training data because it just purely because it's detected kind of the signature of the equipment used.
+
+And so it's making your prediction off of that. And not everything related to what's going on in the actual image that you're.
+
+It's your processing. So that's kind of a less, uh.
+
+Less obvious source of, um, of data leakage.
+
+All right, uh, let's take our, I think, break real quick before we get into this, then it's, uh, not 10:00.
+
+So, um, take a ten minute break. 1010. We'll restart. Talk about, um, comparing models.
+
+It's. I'm ready.
+
+For any possibility that I can do for you.
+
+It's not like, you know. I mean, like, if it's all I know is having people on the streets up in the cloud and everyone's like,
+
+yeah, you know, all this all summer city, all the code is doing is just communicating with the server.
+
+This. Yeah. Exactly. Yeah, yeah, yeah. That's, uh, you know what I mean?
+
+I do think that reading out that reading, I don't really speak of files is that I don't know.
+
+Yeah. Yeah. I should just try to, um, have like a similar kind of extension sake.
+
+So I guess I'm not sure I have any other ones either.
+
+Yeah. I mean, if you check it out, I've never used my job, so I don't know if it has some kind of, like, extensions capability.
+
+Yeah, it definitely has. Yeah. I think I'm pretty sure extensions and extensions are actually built in the cloud.
+
+Yeah. Okay. So yeah. So it's like would be if it's something you're interested in tackling every week and I think yeah yeah yeah yeah.
+
+No reason I should be able to work. And I just figure out how they interact with the projects.
+
+And you do this. The thing about my channel is dead brains.
+
+I, I do overarching okay.
+
+Between them all. Okay. Yeah. All the different ones in the sense that you have one idea for job one.
+
+I've heard some. Yeah. Like, let me tell this particular Python what your goal is to.
+
+Yeah, distinctly different, which is what I appreciate.
+
+And obviously I'm not a fan of having everything say in the same.
+
+Like your your C plus plus your C sharp, your files, everything at once.
+
+Yeah. Yeah it's interesting. Yeah I have um I not use PyCharm specifically.
+
+Yeah I know it's from JetBrains. Uh, the, uh, if it's something you like to do, uh, you kind of have to give it a shot.
+
+Uh, the, uh, I think as far as kind of practicality,
+
+a key thing is figure out like how many students are actually using PyCharm and then is it worth of effort to, you know, support the PyCharm or not?
+
+Um, yeah, depending on how many you're actually using.
+
+And so it's good when you start to like go beyond just kind of art class because I'm not sure our class is representative samples.
+
+Do you like if the other dudes population is maybe doing anything in programing?
+
+How many of those are you? I think maybe collecting some data.
+
+Yeah, yeah. Good. Good place to start. Maybe they figure that's even worth the time to do it with students coming in.
+
+Because I, I'm in a city where the. Yeah.
+
+So so if you even if you want to build it like even for no other reason but other than that you could use it and anybody else is using it for then,
+
+I mean, sure. Yeah. Yeah, sure.
+
+Welcome, welcome to if It's Only you at the same time.
+
+Yeah. You can talk to about that even you can kind of show. Yeah. It's like that was just amazing.
+
+Yeah yeah yeah yeah I'll go.
+
+Yeah. I was waiting because I thought that it was um.
+
+That's why I don't like, I usually get attacked like a direct line for other than probably the evaluation instead of doing.
+
+It during the process because like, um training are hard sometimes it concerns.
+
+Yeah. And how important is it? Something like that.
+
+Yeah. Um, it's it's very difficult to detect until you start that feeding kind of new data into the system.
+
+Uh, so what, you and I, you know, what can happen, what's typically happened.
+
+So the reason that leakage is a problem is really just because it it means that your test set is no longer on bias,
+
+meaning that if you're reporting on the test set like you report,
+
+you train your boss as you train a model and you train it and you kind of respect your boss.
+
+And 93% accuracy of the test set of the test data.
+
+And then you say, oh, that's great. That's, uh, production.
+
+And now you start ordering what's happening in production. And now you're seeing that actually the accuracy is more like 87% or something like that.
+
+That's that's when, you know, that's kind of the most obvious indicators that there is probably data being used in your in your test set up.
+
+There are kind of two things that can cause that problem. One is your test leakage.
+
+So it was not unbiased. It was actually biased. And so it was overly optimistic.
+
+Uh, and so when you put it in production that you saw kind of the real, the real ability to generalize just one thing,
+
+you can the other thing that can happen is, you know, your, um, initial sampling.
+
+The kind of the overall that we're working with, which I think bipartisan and not representative of the actual person that is.
+
+So this this can also be a con, and we'll probably talk about this more later on.
+
+But, um, yeah, this um, is also a cop.
+
+So a good example of this is uh, to several years ago,
+
+Google rolled out like a mobile app that you could kind of take pictures of, you know, spots on your scan.
+
+And so, like a site there. Might be a problem.
+
+And I had to go visit a dermatologist or or maybe not.
+
+And they trained their model on sort of a curated set of people and taking pictures of spots and their skin.
+
+But it was all kind of, you know, in good lighting, kind of with the right angles on the spots.
+
+And then when they released the app and they found that people like, oh,
+
+there are like this and picture over here like an angle where like the lighting was bad.
+
+And they found that the performance of their model was a lot worse in production than what they were testing.
+
+And so that wasn't actually a case of, of, of data leakage.
+
+That was actually just the case. It really important for sampling to begin with throughout the that you basically train.
+
+So those are kind of like the two problems that can lead to a big difference between what you're reporting is, as expected, performance and an actual.
+
+Is that? Okay. Okay. Right.
+
+Question. Yes. Um, I said, I think I do that.
+
+Okay. I was struggling to find someone because I couldn't find them.
+
+Thomas. That's interesting.
+
+It's not that there's not shiny assignments, Tab is there?
+
+And then there was a link, right? Yeah, he showed me something like that.
+
+Okay, good. Well, thanks for that. Me know, making announcements, I think.
+
+Usually there's, uh, there's assignments like.
+
+You can also go. To the library.
+
+One second. Let me just try something here. You refresh and see.
+
+Uh. Uh, yeah.
+
+Okay. There we go. Oh, no. It's, uh, I think.
+
+Yeah, yeah. Thanks. Hey, uh. Uh.
+
+This is. The inactive circuit.
+
+Seismically active activity. You notice that you have some integrity issue.
+
+That's exactly. That's exactly it. Yeah. In fact, that's a good.
+
+Um, I'll answer your question more when we get back to gray, because that's what we're gonna talk about next is the validation set and why we do that.
+
+That's the primary reason. Yeah. So we asked for access to the box folder and that, um, really happened I guess.
+
+So they didn't know. Right? Say no, they're not right now.
+
+Are you okay?
+
+Keep your fingers crossed. I was allowed to use.
+
+She won the 1990. Three Salt Lake Virtual Machine match.
+
+Oh, yeah. Like you said. We would settle for that one.
+
+What? Do you want?
+
+Mr. Right. Yeah. Just got a job. Yeah. Yeah.
+
+Um, I like to work. So I'm interested in, like, some compute, some serious work.
+
+I probably do on do. Yeah. And so where where would I go?
+
+Yeah, I just, um, those are the. So I think that.
+
+Sure. You have as a student have access to any you're using looking for GPUs specifically.
+
+Yeah. Yeah. Not sure if you guys have access to any GPU capacity in your normal student.
+
+Uh, I it's in the role the, um, they have a program where students can request, um, GPU access.
+
+And so we commonly so we do that it the spring class.
+
+Um, um, although that is really supposed to be limited just to kind of class related use obviously in my personal side projects.
+
+Um, yeah. They say they want to make sure people are using, um, just working class.
+
+Yeah. Um, so, um, yeah. So those are really just classes.
+
+I'm not sure if there is, um, I'm not aware of anything that's available to do for about kind of just personal use.
+
+Um, uh, so you're probably better off, um, using some of the resources on.
+
+Like, like Google Cloud Kernel Course offers free GPU access.
+
+Uh, those are usually usually the students like, find Kaggle kernels.
+
+It actually offers a lot more, um, like the GPU access.
+
+So that might be, uh, sort of. Yeah.
+
+Otherwise maybe doing some digging. I don't think that's like a program for students who just got used.
+
+You know, it's for side projects you'll get if you take the O&M class next spring, you'll get access.
+
+But it is that the deep learning class for the whole let's see all in class.
+
+I think you'll probably I think we will probably get it for the zoom class as well.
+
+But to be honest, my roommate's actually in Viacom.
+
+Yeah. So so that's been nice. Yeah. Yeah you can get it for research access.
+
+Yeah. You know courses is research faculty is paying for that access.
+
+Right. So and you can do it. And that's the primary purpose of GPUs here to do that.
+
+So yeah that's if you work something out then that's you know.
+
+Yeah. Otherwise I don't think there's a okay kind of customer service actually call.
+
+Yeah. Okay.
+
+So I guess. Do it.
+
+Yeah. Exactly. So like I think in like a year. So what is it.
+
+You see all the calls. Okay, let's get started.
+
+Um. Uh, yeah, I think that's actually going to be a lot that I can mention during the break that, um, apparently it's you need your canvas.
+
+The assignments tab was not showing for you, so it sounds like at least some of you found assignment one.
+
+Anyway, I guess it was. It was there was a way to get to it, but it maybe it wasn't obvious.
+
+So in case you were, um, uh.
+
+Or either that or you haven't worked yet, but, uh, either way, uh, now when you log in to canvas, you should see an assignment.
+
+Yours does not look like this, but you should see an assignments tab on the left side.
+
+And you'll you'll see the link there to assignment. If you click on that.
+
+Okay. So let's, uh, keep going up and 45 minutes here and see how far we can get here.
+
+Uh. So far we talked about, um, model evaluation and the importance of creating a test set.
+
+Right. Most of you that have taken machine learning classes before are aware that, um.
+
+In reality, we often create not just kind of two sets training and test, but actually three sets a training, validation and test set.
+
+So what's the validation set and why is that any different than the test set?
+
+Uh, this is kind of what the split looks like in practice when you're when you're up building models rather than just training and test,
+
+you have the validation set. The reason the validation set and the test set are not one.
+
+And the same thing is because the validation set is used for comparing models.
+
+So usually when we're doing modeling we're building a number of different models.
+
+Each one might use a different set of features or maybe a different algorithm or, you know, maybe in a slightly different set of data.
+
+Um, and uh, if we were to build all these models and then run them all on the test set and then use the performance on
+
+the test set to determine which model we're going to go with out of the candidate options that we built.
+
+Um, that would be a form of data leakage from the test set, because we're using the test set to make decisions about our modeling.
+
+Right. As in, maybe we built five models and we're using the test set then to decide which of the five,
+
+we're just going to pick whichever of the five performs best on the test set. Right.
+
+So again, this is like one of those things where it's not the end of the world.
+
+If you do that, it's not a complete disaster, but it's not a good practice.
+
+Um, if you kind of do that in your job, somebody is going to say that that's not that's not a best practice for modeling.
+
+You really should not be using your test set until you've finalized your model.
+
+And if you still have five models and you're picking just one, you haven't finalized your model yet.
+
+You're still building your model.
+
+So to do to handle kind of this selection of your model from the kind of candidate options, we'll use what we call a validation set.
+
+So we'll take our training data. We'll build, you know, several different models looking at different sets of features, different algorithms, etc.
+
+Well then, um, take our however many models we built.
+
+We'll pass the validation set through them. We'll calculate performance on the metric we selected.
+
+And then we will typically go with whichever of our models performs best on the validation set.
+
+Once we've then down selected to a single model as our final model will then pass the test set through it and we'll get a new,
+
+uh, benchmark of performance. And then that can still be an unbiased indicator of the model's expected performance on new data.
+
+It's never seen. Okay, so, um, what are the, um, potential problems that show up if we, uh, do this?
+
+So if they see any issues with this approach. There's kind of two, two issues.
+
+So one is, uh. We're cutting down our training or data available for training further, right.
+
+So as we kind of decrease the size of our training data right now, we've taken as much as kind of 40% maybe of the training data away.
+
+So we only have 60% of our original data left for training. That's going to hurt the expected performance, right?
+
+Generally speaking, the less data we have available for training, you know, the lower the performance we can expect.
+
+So if your data is, um, not large and data size is a concern, um,
+
+this might pose a problem for taking taking another chunk of your data away from the training process.
+
+Um, secondly, uh. That sort of selection of points that go into this validation set now are having a huge impact on your model, right?
+
+Because if we train kind of five models and now we're going to run all five through and through this and take the best one.
+
+This is this. You know, the points that go into this have a massive impact on which of the models we end up going.
+
+Right. So if we have bias that gets introduced in the creation of the validation set,
+
+then that's going to lead us to potentially selecting the wrong model as our as our final model.
+
+Uh, we may end up selecting a model that just happens to perform very well on on that end to the bias subset of data.
+
+Right. So that's a that's a concern as well.
+
+So uh, in practice, rather than creating kind of a single kind of fixed validation set like this, if we're working with kind of,
+
+you know, smaller models, as in not like large scale neural networks, um, but kind of smaller models.
+
+We usually use a strategy that we call cross validation instead of a fixed validation set.
+
+And so this is what cross-validation looks like. The most common form of it is what we call k fold cross-validation.
+
+And so the way that works is um, we actually run, uh, our models kind of through, um, five iterations, right where we,
+
+um, let's say we have kind of three different models and we're trying to decide between three different models.
+
+Each one has like a different algorithm or something.
+
+Um, what we'll do is we'll run in this case, uh, we're running a little call, a five fold cross-validation.
+
+Right. And so, uh, we'll run five iterations of training, right.
+
+And train. And during each iteration of training, we'll use a separate portion of the data as our validation set.
+
+So the first iteration of training we run, let's say we take the we're going to take the first, you know 20% of points as our validation set.
+
+We're going to use the next 80% as our training data. So we're going to train our model on this 80%.
+
+We're then going to run our three models through the validation set, calculate the performance.
+
+And we're going to store that performance associated with iteration one.
+
+Then we're going to do it again in iteration two. Except this time we're going to use this as our validation set.
+
+The rest of it is training. Again we'll retrain our models from scratch using the training data to get performance on the validation set.
+
+Store that performance for each of our three models associated with iteration two, and then we'll go through it again for three, four, five.
+
+So by the end of this process, uh, we'll have uh, five different, um,
+
+scores for the performance of the performance on validation set for each of our three models.
+
+Okay. And then typically what we will do, uh, is we'll just take the, uh, the mean performance, uh, across each of those five different iterations,
+
+and we'll take whichever of the three models has the highest mean performance across the five iterations.
+
+And we'll use that as our, uh, as our final model.
+
+Okay. Uh, why is this better than using a fixed validation set?
+
+Uh, two reasons. One, uh.
+
+We kind of won primaries, which is that we reduce the risk of bias in choosing our validation set.
+
+Right. So during this process, every single point in our, you know, data available, um, is used in the validation set.
+
+You know, during the process at some point. Okay. Um, so we're not introducing bias, for example, by just taking, let's say, the first, you know, 20%.
+
+Um, and using that as a validation set. Okay. Um, that's the, uh, that's the primary reason.
+
+Um, the other reason is that it also kind of, um.
+
+You know, because we're also using all the data at some point in the training set, four out of five times it's used in the training set.
+
+Um, it, uh, we reduced kind of that problem of having, you know, cutting down the data size further.
+
+Uh, so this tends to give you a much more robust evaluation of, of the, uh, performance, uh,
+
+than just kind of doing this one time and picking some subset to be the validation set.
+
+So almost always, we're the only, you know, when we're comparing models we use, uh, cross-validation.
+
+Um, is there a specific way to determine what k should be.
+
+That's a good question. Um. There's no kind of like, hard and fast rule around what case should be.
+
+Um. It's, um. Really a factor of, um, well, primarily how much data you have and how large the model files are that you're dealing with.
+
+So if you're dealing with kind of relatively smaller data and not like super complex models, you can it's common to use either 5 or 10 for k.
+
+Um, um, you'll often see like either 5 or 10 if you're dealing with large data sets where it takes a while to kind of train each model.
+
+You wouldn't want to use like ten, you know, why is that?
+
+Because you're going to you're going to be waiting a long time for this process to run if it.
+
+Yeah. Because you've got to train, you know, each of your models you're comparing ten times.
+
+Uh, uh, and related to that, um, one particular area where you will find that this approach isn't really used at all is, is in deep learning.
+
+So when we're working with neural networks, um, it's actually much more common than just to have a fixed single validation set.
+
+Why is that? Just because a shared time that it can take to train and they're all networks, it just doesn't make sense to, you know,
+
+if it takes two hours to train your network,
+
+you don't necessarily want to be sitting there for 6 or 10 hours trying to do your cross-validation right.
+
+So more commonly with neural networks, uh, because because of the training time, you'll see use of just a single.
+
+If so, if the validation set was the same set of data across all iterations as it assumed that they would converge on the same,
+
+um, like model every time.
+
+And so we're selecting different sets of validation to see if we get slightly different.
+
+Okay. Exactly. Yeah. Yeah.
+
+If we just kind of like, you know, ran this five times with this one, you know, the first 20% was always the validation set up.
+
+It would generally, you know, converge to the same place on some of the algorithms have some amount of randomness.
+
+So even if you train the same algorithm five times on the same data, you may have a very slight difference.
+
+But for the most part, yeah, you know, it would be.
+
+It would still be biased by your choice of the validation set.
+
+Um, yeah. Yeah.
+
+So this gives kind of a much more robust answer because you may find that, you know, if you have models A, B and C, you might find that model A,
+
+you know, performs a best on, uh, you know, on this particular set because it just happens to contain some bias and model just does really well there.
+
+But then you may find that on the other for your model B performs much better in every single.
+
+Okay, so there are a couple other, um, variants of, uh, so that that's what we call k fold cross validation.
+
+There are a couple of other variants to be aware of. One is what we call, um, shuffle split.
+
+Um. Um. Uh, cross-validation.
+
+So, um, this works a little bit differently.
+
+So one of the limiting factors is, uh, um, you know, here with k folds,
+
+the number of iterations and the percent that you use for the validation set are kind of tied together, right?
+
+So if your K is five, then you'll use each time you use 20% for your validation set.
+
+And you kind of go in whether, if, if you're, you know, K is ten, you'll use 10% each time, you know, and so on.
+
+So the number of iterations and percent of data used are always split with shuffle split it kind of dis aggregates that.
+
+So you can actually set. So a shuffle split we randomly select some percentage of observations each time.
+
+So you can you can kind of separate the the value for k or number of iterations from the percent you use for validation.
+
+So you could do something like set um k is equal to four.
+
+So that means we're going to run for the regions. But each time we're going to use just 10% uh, of the data for our validation set.
+
+Okay.
+
+And so in particular you might use this if, um, you're concerned about like, uh, um, you know, compute time or data size or something like that, uh,
+
+where you have a particular reason to, you know, want to you want to maybe go with a smaller validation,
+
+uh, you know, or a smaller number for K or something like that.
+
+Right. Um, so let's say you like with k fold cross validation, if your validation percentage was ten,
+
+that means by default you're running ten iterations on it. And if each iteration takes a long time to run, maybe that's not ideal.
+
+So you might go a shuffle split where you you'd still use 10% for validation.
+
+Keep the validation, you know, fairly small so you have enough data for training.
+
+But instead of running ten iterations, you're just going to run four iterations and randomly pick, uh, 10% each time.
+
+Okay. And then there's another one called leave one out cross-validation.
+
+This is essentially k fold cross-validation where k is equal to your number of data points.
+
+Uh and so uh and so each individual observation becomes a single validation set at some point in time.
+
+And then just like K folds you take your average across some. Uh, across.
+
+Uh uh. I can't think of really many great reasons to use this.
+
+Um, I used at one point in my life, which is, um, actually that power outage prediction model, because we have a very, um, there actually,
+
+even though the data size is very large because of the geospatial nature,
+
+the number of actual storms that cause power outages for a given utility is not very high.
+
+So across, you know, five years, you may only have.
+
+25 storms or so that actually cause any kind of significant power outages or so.
+
+So you if you really essentially only have kind of 25 independent observations.
+
+And so, um, in that case, we actually usually one we call it one storm out validation where, you know, you take 24 of the storms,
+
+you run it on, and then you look do you look at the reports on 25th and then you then you take another storm out and you run it again, etc.
+
+Um, okay. So we talked about why use cross-validation.
+
+Um, again, the thing to remember with cross-validation is that, um, this is the validation set is used for comparing models.
+
+So it's used as part of the modeling process after we finish comparing our models.
+
+Um, it's important that we then then we can retrain our, our final model on the entire, uh, training set.
+
+Okay. So it's kind of a common mistake, um, to kind of, you know, do your cross-validation and then for your final model,
+
+just kind of pick whichever model performs best on the, on the, uh,
+
+cross-validation and then use that, you know, those model parameters as your final model, right?
+
+But, uh, if you do that, you're, uh, kind of hurting yourself a little bit because that model was actually only trained on,
+
+you know, in this case, 80% of the data available for training.
+
+So you're kind of missing out on the the opportunity to train on that extra 20%.
+
+So usually what we'll do is we'll take our final model in terms of like the features, you know, the algorithm,
+
+etc. and then we'll retrain that model on the entire, you know, 100% of our training and cross-validation data.
+
+Okay. So we can take advantage of that extra 20% that's now available to us as training data.
+
+And so we train on the full thing. And then we use our test set to calculate the, uh, the on bias performance.
+
+All right. Um, I'm not going to go through this. You can, um, you can look through that on the slide or in the example notebooks in,
+
+uh, in the repo for how that, how they do, uh, uh, cross-validation.
+
+All right. We're going to switch, uh, over a little bit now and talk, uh, about model selection.
+
+So this is the primary thing that we use cross-validation for, right?
+
+This idea that when we first start modeling, we don't know which set of features is going to perform best.
+
+We don't know which algorithm is going to perform best. And there's no there's no real good way to tell.
+
+And until we actually, um, until we actually try it.
+
+Uh, so modeling is in large part still very much like a process of trial and error.
+
+We have some kind of general rules that might indicate that one model, you know,
+
+one algorithm or other, um, might be better, but we don't actually know that.
+
+And until we until we just try it.
+
+Um, so in some sense, modeling is kind of like a giant search problem where you have sort of a search space of different possible feature sets.
+
+Um, you have different ways of cleaning or preparing your data, different algorithms,
+
+and you're trying to search across that entire space to kind of find the optimal, um.
+
+The key thing that drives kind of performance of the, of your model is the, uh, degree of complexity, uh, of your model.
+
+Um, you know, some, uh, some kind of algorithms come with an inherent degree of complexity that will differ from other algorithms,
+
+like, uh, obviously a neural network has quite a bit more complexity than a simple linear regression.
+
+Right. So the algorithm is probably the most obvious source of complexity, you know,
+
+adding more or less, uh, but there are other other things that drive complexity.
+
+So another big one is number of features that you have, right.
+
+Um, if you have, uh, you know, 625 features, you're going to have a more complex model than if you have three features in your model.
+
+And then also what we call the hyperparameter values. So, you know, those little kind of knobs that you can turn on each of the algorithms.
+
+Um, you know, those can dial that complexity up or down depending on how you, how you adjust them.
+
+Okay. Um, so why does complexity matter?
+
+The process of modeling, actually, if you kind of break it down to the simplest form,
+
+it's all about finding the right amount of complexity, um, for your particular problem.
+
+Um, complexity can be good up to a point, right?
+
+Because, um, phenomena that the, uh, phenomenon you're trying to model can be kind of geographically very complex.
+
+So in real life, things are usually not as simple, like linear relationships.
+
+Um, they're very complex patterns that you have to learn.
+
+And so, um, you need some amount of complexity to try to identify those patterns.
+
+Uh, you know, but too much complexity can hurt you because it can make your model very expensive.
+
+It can take a long time to run.
+
+And if it's too complex, uh, it may actually not be able to generalize well or perform very well to data that it's never seen.
+
+Uh, so, uh, to be a little more precise about sort of our, our thinking about this, uh,
+
+we can break down the error from a model into kind of two key, uh, uh, components that make up the the overall error of your model.
+
+One is what we call bias. And so the bias term of, uh, uh, modeling is heard that results from making incorrect assumptions within the model.
+
+So the most common, you know, way that this that bias occurs is if we use, um, simplifying assumptions that oversimplify the relationship.
+
+So we have some relationship that looks like this.
+
+And we decide the model with us. Uh, linear regression. Right.
+
+We've made a simplifying assumption, which is that the relationship is linear.
+
+And so we've built a model based on that assumption. And um, that model has a high degree of bias because it's oversimplified.
+
+Uh, uh, you know, the actual relationship. Okay.
+
+So that's what, uh, that's what bias is.
+
+And up bias, you know, means that you're kind of you can be kind of consistently off target with your predictions, right?
+
+If you think about it sort of in the frame for target.
+
+Um, that because you've made this like simplifying assumption of this thing as a linear regression,
+
+it's actually like this, you're sort of almost always kind of going to be off off target with your model.
+
+Um, the other problem, that or the other source of error, uh, in modeling is what we call variance,
+
+which refers to the sensitivity of the model, uh, as you make slight changes or fluctuations in your training data.
+
+You have this kind of scattershot effect where it may kind of, uh, you know, spread out.
+
+So, uh, the ideal situation is this, right?
+
+Our bias is low. You know, we've done a good job kind of fitting the actual patterns, and our variance is low.
+
+Uh, meaning that, you know, little making little changes in our training data don't cause big changes in our predictions.
+
+Uh, if we have a low bias, but we have high variance,
+
+we have this sort of scattershot effect where all of a sudden we have little we make little changes to the inputs and the outputs, kind of.
+
+I go kind of all over the place, right?
+
+Uh, so if we put this in some mathematical terms, um, we often we'll look at what we call the expected squared error, right, of our model.
+
+Um, and we'll see this again. We talk about error metrics in a moment, but we can break down the expected square there into two components.
+
+Uh, the first one, this is the bias squared.
+
+And then the second one is the variance term. Okay.
+
+Uh, or we can rewrite it as this. So, uh, the expected squared error of our model is the sum of the is squared plus the
+
+variance plus a little component here that we call the irreducible error.
+
+So this is just recognition of the fact that um uh, everything has some amount of pure randomness in it.
+
+And we're never able to, to completely or fully model any, any type of natural phenomenon.
+
+Uh, so we're always going to have some little additional kind of irreducible error term that no matter what we do in our following,
+
+we're, we're not going to get rid of, uh, and this is actually, by the way,
+
+one of the really hard things about modeling is that we don't know what this is or how big this is going into it.
+
+So for some problems we're trying to model, this can be really big.
+
+And no matter what we do with our modeling or how good our modeling is, we're just not going to get great performance.
+
+And then for other problems, this could be very small. Um, and we're actually it's actually very easy to get.
+
+Uh. So if you want to think about it, kind of, you know, if you're sort of a visual thinker,
+
+this is maybe another way to kind of think about how those how those components, um, uh, what add up or,
+
+you know, one way to think about it, but, uh, uh, you know,
+
+that if we've got sort of a set of predictions and we got a target over here, there's kind of two contributions to the error.
+
+One is, you know, the bias, right?
+
+The kind of expected value of our predictions and the distance from the target to that and the others kind of the deviation component.
+
+Right. Which is how sort of scattering are the predictions where we're making.
+
+Um. So if our total error, um, is the the bias and the variance combined, uh, that kind of makes sense.
+
+The thing that makes it hard is that the bias and variance are kind of in tension with each other, right?
+
+They tend to move in opposite directions, and they're both a function of the complexity of the model.
+
+So as our model becomes more complex, let's look at a bias term first.
+
+Um generally the bias comes down right. So again if our our data looks like this and we model with a simple linear regression.
+
+Hi bias right. If we now, you know, model it with like let's say a neural network or something like that,
+
+maybe we're doing a much better job kind of fitting, you know, the actual patterns in their data.
+
+Right? So we've cranked up the model complexity quite a bit and we've been able to reduce the bias.
+
+And the problem is that, uh, uh, our variance uh, tends to increase.
+
+Okay. Um, why is that? Because more complex models tend to fit themselves very, very well to the training data that they've been given.
+
+Okay, but the training data, as we discussed earlier with sampling, is not always representative of actual data, right?
+
+So you may find that when you start feeding it actual data, your predictions are kind of all over the place, right?
+
+Because your model has fit itself really well to the training data.
+
+Um, but then it's sort of, uh, it has a lot of error in the actual data.
+
+Uh, uh, because of the high variance. So the total error is the sum of those two components.
+
+The bias and the variance of your total error ends up looking something like this.
+
+And the whole point of modeling is to try to find this here.
+
+Right. To try to find that sweet spot where you where you have kind of as low total error as possible, right.
+
+So what the degree of complexity of your model is going to get you here.
+
+Right. And the problem is complexity is a is is a result of a number of factors.
+
+Right. Algorithm is a big one. But it's not the only one. Right.
+
+It's also the, you know, the choice of features, your approach independently and you're preparing your data, uh, uh, etc.
+
+So there's a lot of aspects that go into complexity.
+
+So so we could break down the whole process of modeling kind of into, um, how do we find, you know, this this point right here.
+
+Right. And that's that's kind of really what we're doing.
+
+You know, when we go through a modeling process. Um, usually.
+
+And, you know. So when you're working in industry, it's, it's not that common to be talking about like, uh, you know, bias and variance.
+
+Uh, usually you use different terms for it.
+
+And, uh, the typical terms that I use are what's called underfitting or overfitting.
+
+So underfitting is when you're here, uh, it's kind of the overall error curve where your model is too simple.
+
+Uh, right. And you've got kind of, uh, low variance, maybe, but you got kind of high, high bias because you've, you've made simplifying assumptions.
+
+So that's underfitting. Um, and then overtraining is the opposite problem where you're over here where you've got a model that's too complex,
+
+you, as we say, overfit, uh, to the training dataset.
+
+And this is what you know, this is what it would look like, right?
+
+So if this is kind of our, you know, if the orange is the true function, um, and we,
+
+you know, use a linear regression here, this is what underfitting looks like.
+
+You know, this would be probably a pretty good fit. And you know, this here, we've used some kind of really, you know, sophisticated, uh, uh,
+
+algorithm here that is actually doing a pretty good job, like fitting itself to kind of the data points that we've been given in our training.
+
+But it's not actually, you know, representing the kind of true function of the distribution very well.
+
+Right. So that's overfitting. Uh, so how do we know, uh, if we're where we are on this, if we're underfitting or are we overfitting?
+
+Or are we just about. Right. How do we determine that? Uh.
+
+Typically we look at what's happening with our, um, training error and our validation error.
+
+Okay. And so we we apply what we call validation curves.
+
+And, uh, you'll, you'll see that, um, they looks something like this.
+
+This is a, like, an idealized view.
+
+So if you plot these and you're like, it doesn't really kind of look very much like this at all, that's pretty normal.
+
+Like, it's not going to be they're not perfect curves like this.
+
+But you should generally kind of see this type of a pattern.
+
+Right? If you were to, uh, you know, adjust your model complexity.
+
+Right. And uh, a common and relatively easy way to do that is to change the hyperparameters so to, you know,
+
+given one algorithm that you're working with, let's make adjustments to the hyperparameters of it to make it more complex or less complex.
+
+And as we do that, let's track what our resulting score is or error is on the training set and the validation set.
+
+Right. And um, we will see. So like let's say this we're, let's just say it's, it's let's say it's accuracy or something.
+
+We'll see that our, um, as we make the model more complex,
+
+typically what happens is your training score or your training performance will get
+
+better and better because it's fitting itself better and better into your training data.
+
+Right? But what happens with the validation score is it gets better to a point and then it starts to degrade, okay.
+
+Because as you're fitting yourself better and better to the training data, your ability to generalize is actually, uh, decreasing okay.
+
+And so if we plot these, then it becomes much easier to identify where sort of that optimal point is.
+
+Once we see that validation score start to go back down, that's a good indicator that we've kind of reached the right area of um, of complexity.
+
+All right. Uh, I think we talked about, um, this.
+
+And so, again, you know, we want during the modeling process, we want to adjust the algorithms and adjust the feature sets.
+
+We want to adjust the hyper parameters and try to figure out where that optimal, um, point of complexity is.
+
+There's a demo notebook that I'll let you go through, um, on your own time this week in the,
+
+um, in the repo that shows you how to create those validation curves.
+
+It shows you what a few different validation curves look like.
+
+That maybe doesn't look quite as ideal. Is that, um, that's what I just showed there.
+
+All right, uh, before I move on to talk about metrics, any questions on any of that?
+
+Three. What makes you decide to experiment with different models, especially if it's intensive?
+
+Is it like thresholds? That you're using to try to change course if you're having a good school reading.
+
+Why would you want to experiment, even if it does give you a little bit?
+
+Yes. So the question is like if you if you if you're already getting a good score, why would you want to like experiments or run more experiments?
+
+Yeah. Um. That's a good question.
+
+So so I think that the practical answer to that is that, um, you need to consider kind of like what what what is what is a satisfactory outcome.
+
+Right. And actually this kind of ties into our discussion on metrics. But what level of performance are you trying to get to.
+
+You know, where you could say it's good enough. Right. Um, so that's one thing because the reality is there's an almost infinite number of
+
+kind of different possible configurations between the algorithms and the data,
+
+uh, you know, cleaning strategies and the features and the hyperparameters.
+
+Then you could spend a really long time running experiments, right, to, to try to optimize it.
+
+So that part of the trick is knowing, like when to stop, um, like when it's good enough.
+
+So the first thing is being really clear about like what level of performance do you need to get to,
+
+to, to be good enough for the whatever business problem that you're trying to solve?
+
+What's what's a good enough, um, you know, level of performance?
+
+Um, so that, you know, like when you hit that, then maybe it's time to stop and just put in production.
+
+Uh, that's, uh, that's probably the first and the biggest thing to think about.
+
+Um, the second is like, just practical constraints.
+
+Like, how much time do you have? Like, is it the only project you're working on for the next three months,
+
+or do you have like five projects and you need to finish them all by next week?
+
+Right. So practically, how much time you have available to run experiments.
+
+Right. And likewise, how much budget do you have available? You have to run experiments.
+
+So those those would drive things too. So, um, I think you need to find kind of a balance between the practical constraints.
+
+Um, I just mentioned and, and like getting good enough performance.
+
+Uh, your reach, like, like in everything, there's kind of, like diminishing returns.
+
+So as you kind of work on something. Um, and we showed that kind of last class, you know, you're kind of like a strange score,
+
+but as you kind of work on something, you'll get better and better and better performance and better and better.
+
+But the curve starts to flatten out.
+
+And like, the more you work on it, you're just like getting just kind of very, you know, incremental returns on your time at that point.
+
+So I think part of the trick of being like a good, a good model or a good data science,
+
+this is knowing like when are you kind of hitting that point of diminishing returns where you could keep working on it and keep getting like,
+
+you know, small incremental improvements, but it's probably not worth the best use of your time anymore to kind of go.
+
+Is that? How so? So it's right. There's there's a lot of art to modeling.
+
+I mean, it's, it's a, there's a science to it, but there's also kind of a lot of art to, to finding the right balance of these things.
+
+Yep. Um, my impression is that validation can also be used for like a large training set for a complex model to feel like hyperparameter tuning,
+
+to edit the model itself while you're training.
+
+Um, in what situations would you use validation for that sort of continuous purpose?
+
+Yeah, yeah. Good question. So, uh, so what about hyperparameter tuning?
+
+Um, and how's that, you know, as validation set work there?
+
+Um, that's a good use of the validation set. So the reality is when you're tuning a hyperparameter and you're changing values,
+
+it's essentially the same thing as kind of comparing different versions of a model.
+
+You know, each one having a different, you know, a different value for that hyperparameter.
+
+So it's kind of like, you know, as if you were comparing models with different algorithms or different feature sets.
+
+Uh, so it's definitely a good use of the validation set.
+
+Um, uh, to do that. That's in fact exactly why we would use the validation set.
+
+Yeah. So, uh, and we'll talk more about this over the course of the class.
+
+But when you are, um, when you're, when you're building a model, when you start with a problem and all you have is the data and you have kind of,
+
+like, nothing else, um, and you need there's a lot of decisions you have to make.
+
+Um, how do you, how are you going to kind of clean and prepare this data?
+
+How are you going to deal with anomalies? Uh, what features are important that you're going to use?
+
+What algorithm are you going to use? What what hyperparameter values are going to use for that algorithm?
+
+Um, I guess like a practical approach would be to think about I have limited amount of time.
+
+I don't have like forever to do this. I want to put my effort into where I can make the biggest improvement, the quickest,
+
+and the are, generally speaking, the area where you can make the biggest improvement.
+
+The quickest is going to be on your data and your features.
+
+So how you're kind of cleaning and preparing your data and what features you're using are, generally speaking,
+
+going to make a much bigger difference than like whatever you're doing with the hyperparameters or even the algorithm for that matter.
+
+Uh, so that's kind of like number one area to focus on is getting the right data and the right feature set.
+
+Once you feel like you've got that pretty decently, the next kind of biggest bang for your buck is the is the algorithm, right?
+
+Um, you know, choosing which algorithm to use.
+
+Uh, and then once you've kind of got that set, um, then it's really just kind of making tweaks to the hyperparameters.
+
+But by the time you get to like, changing hyperparameters, you're kind of going up this curve where you're,
+
+you know, getting your you're probably somewhere like up here, right?
+
+Um, where you, uh, you're just making kind of.
+
+Yeah, somewhat minor, uh, improvements to your performance at that point.
+
+But for all of those things, you'll use the validation set along the way, or cross-validation.
+
+Okay. All right, let's get into, um, let's see how far we get with metrics, and then we'll, um, we'll break here for the rest.
+
+Uh, okay. So first thing to note, um, when we think about metrics, when I say the word metric, you,
+
+you probably immediately think about accuracy or precision recall or mean square error or something like that.
+
+Um, as engineers, that's like naturally where our brain goes when we think about metrics.
+
+But the first thing to realize is that they're kind of two different kinds of metrics.
+
+Um, the first one is what we would call outcome metrics.
+
+And the second is output metrics.
+
+So the outcome metric is not a, um, it refers to the the expected business impact of whatever, not to the actual performance of the model itself.
+
+So the reason we build a model generally in industry is because we expect some kind of business impact.
+
+We're building like a churn prediction model to try to minimize, you know, customer losses.
+
+We're building a model for marketing and sales to try to figure out how to target the right customer so we can increase our revenue.
+
+We're building a model, you know, a recommendation system for our our product to try to, you know, get more users or retain their users.
+
+We have for better customer satisfaction, whatever it is. Um, almost always we can state the outcome metric in terms of dollars.
+
+Uh, arguably you could maybe do something like time savings or something like that, but almost always it can be, it can be.
+
+It can come back to, to quantify it kind of dollar value, whatever.
+
+Um, again, these are not things like mean squared error or accuracy or anything like that.
+
+So this is the first and most important metric to keep in mind when we're doing any kind of modeling.
+
+The second kind is the more common ones, the output metrics, which is how good is your model at these.
+
+You know, these this is where like mean square they're, you know, whatever comes into play, uh,
+
+initial time, we'll just kind of go through these examples quickly to show you the difference here.
+
+So, uh, these are two, uh, two of the products I've worked on in the past.
+
+One is a tool to predict the turbulence, predict turbulence for an airline.
+
+Um, in this case, the outcome matrix metric, we might say that, um, in one of these things.
+
+So it could be, um, uh, a lower number of, uh, safety incidents per year on average by avoiding turbulence instead of flying through it by accident,
+
+we can reduce our, uh, number of safety incidents. Or maybe, um, a lower dollar value of safety related legal claims against our airline.
+
+Uh, would be another one. And then our output, you know, might be might have something like this.
+
+Um, uh, second one is a power demand forecasting tool.
+
+So predicting the expected power demand, uh, the outcome metric might be a, uh, lower cost, uh, per megawatt hour of the power produced,
+
+because when you forecast demand wrong and all of a sudden you're in a bind and you need to produce more power,
+
+you have to, um, start up kind of really expensive extra money called peaker plants or extra kind of power plants that produce energy,
+
+that kind of a high, you know, cost.
+
+Um, so that gets expensive or, and there also tend to be kind of dirty, you know, so higher, higher pollution as well.
+
+So if we can do a better job predicting, uh, demand, we can lower that the generation cost for the utility and also lower the emissions rates.
+
+Um, and then the output metric of our demand prediction with, um, something like this.
+
+Right. So it's important to think about kind of both of those for your. Uh, we talked about baselines last week.
+
+So again, how do you know? Like when you have good performance, you don't know until you have a baseline.
+
+Um, and so you might think about things like creating a zero roll baseline.
+
+So just using a heuristic, uh, or kind of a single heuristic and maybe a set of heuristics,
+
+and then maybe looking at what's the expected human performance as a baseline.
+
+Um, or if you're kind of trying to replace some existing, you know, solution they use today for it.
+
+What's the performance of the existing solution, and how does your model compare it to the existing solutions performance.
+
+These are all good ways to get a baseline you to compare your model.
+
+Okay, now let's dive into our output metrics. Um, they're more familiar to us.
+
+Um. So let's talk about regression.
+
+Regression first and then we'll switch to uh, to classification. Um, these are probably the three most commonly used metrics for regression.
+
+Mean squared error. Mean absolute error uh and major mean absolute percent error.
+
+Uh, most folks have probably seen mean square there before. And that's probably the most common, um, metric for regression.
+
+Um. Uh, one of the challenges with Mean Square there is and it's it's heavily influenced by outliers.
+
+So if you have a particular outlier, uh, or a particularly bad, um, uh, prediction for some reason,
+
+maybe there's just, uh, yeah, uh, some sort of anomalies or outliers in the data.
+
+And your, your model does not capture them well at all. And if so, you have one, you know, one or a couple of like really big errors.
+
+But you know, the rest of your points are pretty much straight on, uh, that can,
+
+that can really, uh, impact you really results in high mean square there.
+
+Um, the other thing with mean square error is it can be kind of hard to interpret because of that square term.
+
+Um, you know, it's it's kind of hard to tie that back to like, what does it actually mean, you know, in terms of a prediction.
+
+So like, if I, um. Uh, you know, predicting, uh, uh, you know, a number, you know, 0 to 100.
+
+That's a, you know, somebody's grade on a test. And I'm trying to predict that.
+
+And I measure my MSE, and my MSE is like in the thousands.
+
+I it's hard to kind of relate that back to the scale of what we're actually trying to predict.
+
+Uh, so, um, mean absolute error kind of solves that problem.
+
+Meaning it's kind of it's on it doesn't have that squared term. So it's on the same scale as whatever we're trying to predict.
+
+So it can be a little more intuitive for people to understand.
+
+Um, it's more robust to outliers.
+
+So it's not kind of penalizing those like very high outlier errors as high, you know, as much because it doesn't have that squared term.
+
+Uh,
+
+and then May is a very commonly used metric that's particularly popular for folks who are not non-technical because it's expressed as a percentage.
+
+It's just a more intuitive for somebody who's not as familiar with it.
+
+Like you can say, you know, 5% or 8% error and immediately people kind of have some sort of feel for like, what, what you're talking about.
+
+Whereas if you say, well, my, my MSE was 125,360, it's like, well what does that mean?
+
+I don't have any concept of what how to think about that.
+
+Uh. So those are probably the three most.
+
+So to understand kind of the behavior of these and how they kind of differ, let's take a little example here.
+
+Um, in this case we're going to compare um, uh, me with uh, Rmse.
+
+So it's a root mean square error, right. Um, instead of uh, and so the mean square error, uh, so, uh, if we look at three different cases.
+
+So let's have a case one, we've got ten different points. We predicted, uh, we've got kind of consistent error.
+
+So we're kind of consistently off with our predictions just a little bit.
+
+And we calculate our Ma and our Rmse. And you know, both of them end up being, uh, two, um, case number two, we we also make ten predictions.
+
+But are we our errors are not consistent. They're not always two, but they're they're very low level make they're still small, right.
+
+They're one, two, three. So if we calculate our Ma RMB actually ends up being the same for these two.
+
+And our Rmse is almost the same. Right. Just slightly different.
+
+Right. And now let's take another case where we have for nine of the ten points we made perfect predictions on them.
+
+And then we had one point where we had a father.
+
+Right? So the total error across all of these ends up being the same thing, right?
+
+Yeah. So in this case, if we add up the total for, you know, two times 1020, this is 20, this is 20.
+
+So our total. So quantify there is 20 in all three situations.
+
+But in this third situation our meat is still two right.
+
+Because our MSE shot up to six. Right.
+
+So if we were kind of making some sort of decision off of our messy here, uh, we might say that, uh, yeah.
+
+This is a really bad area. This is really bad, you know, model.
+
+Look at how high the risk is there.
+
+Uh, but if we were making decisions off of, maybe we might look at these and say, well, all three of these are kind of a.
+
+So your choice of metric can make a big difference in how you think about the performance of things, particularly when there's outliers involved.
+
+All right. And then, uh, there's one other, um, uh, one that you'll see show, uh,
+
+how many people are familiar with the concept of r squared, and most people have seen it.
+
+So if you take in like statistics classes or a lot of other types of classes work through that.
+
+Uh, so r square, there's one that's very common in and a classic course is very common in research people for the R squared very uncommon in industry.
+
+Uh to talk about r squared. Um, uh, much more common to talk about like MSI particularly or maybe any uh.
+
+Uh, why is that?
+
+Because R-squared typically is is calculated what we call in-sample medians calculated on the training data, not on, uh, separate test set usually.
+
+Um, I think most people probably see an R squared, so I'm not gonna spend a lot of time on it,
+
+but uh, uh, r squared kind of relates back to the concept of um.
+
+Explain deviation versus unexplained deviation.
+
+So if we have, um, you know, we've got, uh.
+
+Some, you know, input X and some output y that we're trying to predict.
+
+Right. And we have uh, so wherever we have our kind of our average y value, which is this line,
+
+and then we have kind of some actual, you know, points which are these points here.
+
+Right. Um, if we were to take any kind of point, any x, z, I point here, um,
+
+and then we have a model that we built in this case, just a linear regression model.
+
+Right. So for any of these excite points, um, the deviation from,
+
+from the mean or from the expected value can be decomposed into what we call the explain deviation and the unexplained deviation.
+
+So the explained deviation is like what portion of this um does the model account for.
+
+So the model our linear regression model says uh I predict that the y value for this show is here.
+
+Okay. So it's kind of been able to explain why is it here and not here at the mean.
+
+Right. And you can look at the equation for this, uh, you know, for this model and say, well, it's here and not here because of this.
+
+But if the model also has error because the actual value is down here.
+
+So this part is what we call the unexplained deviation.
+
+The model has not been able to account for that. It's error in the model.
+
+Okay. Um, and so we can, uh. We can.
+
+We have this concept of total deviation from the mean, which is the sum of p uh explained error,
+
+uh, or what you see called sum of squares regression or SSR plus the unexplained error.
+
+Right. Which is the uh, uh, the actual value minus the predicted value.
+
+Okay. And r squared is, uh, quantify the, uh, portion of the error that is explained by the model, uh, over the total error.
+
+So out of the total error, uh, what portion of it did the model actually explain?
+
+So a better fitting model you can imagine should be able to explain more of the total error or total deviation from the mean.
+
+Right. So generally it's kind of intuitive to think that a better model, you know, would result in a lower a lower R-squared.
+
+So that's that's kind of the logic behind the. The r squared value.
+
+Um, as I mentioned earlier, often, uh, there are a couple issues with r squared.
+
+Actually, if anybody. This is an interesting read. Um, is r squared useless.
+
+So this is from somebody at University of Virginia that, uh,
+
+basically makes the case for why why you should not even pay any attention r squared at all.
+
+And it's kind of worthless as a metric.
+
+And it's curious that has learned the r squared in the past or used it and wants to see why why maybe they should rethink that.
+
+That's a good or a good read. Uh, one of the main reasons not going to industry again is because it's, uh,
+
+it's often typically computed in sample mean is computed on the training data because it's considered a goodness of fit measure.
+
+Uh, like how good, how good,
+
+or how well is your model fitting the data versus a measure of true predictive ability or generalization ability on new data?
+
+And in industry, in research, we often care about goodness of fit because we're we're you know, we're looking to kind of explain phenomena that occur.
+
+And then we measure, um, in research. But in industry we kind of care less about explaining things and more about predicting things.
+
+Right. And so we typically will use metrics more related to predictive ability or gener general generalization ability.
+
+And then you know that that kind of thinking is.
+
+And there's also a concept, kind of an adjusted R square, which tries to account for one of the problems with r squared,
+
+which is the that as you add more features, you have more complexity.
+
+Typically r squared will continue to go up because the model is able to calculate itself.
+
+You know that. All right.
+
+I think we're going to stop there. Um. Let me take a look at this schedule.
+
+You. We got enough for you to finish up the homework. Uh, I think, um, I might record a video on the classification error metrics.
+
+Uh, have you guys watch that before next class? But I'll let you know by, uh, you know, if I do that, uh, otherwise, um, uh, just a reminder.
+
+Assignment one do next week. Make sure it's submitted in canvas before, uh, 8:30 a.m. next Wednesday.
+
+Uh, before you switch over to talk about our mentoring program. Any questions for today?
+
+Yeah. Um, I didn't know about the regression. Parametric.
+
+So you said that, like, the maybe is more commonly used in industry.
+
+So do you recommend like for classwork assignments you should also use I mean, is that one not as accurate.
+
+Which is more commonly understood. Yeah. Um, that's a good question.
+
+So, um. Um, there are, there are, um, good and bad things about all of all three of those.
+
+Um, um, and it kind of depends on like, it's really depends on your data and what you're kind of looking to measure as well.
+
+So the naive way would be to think of them as kind of interchangeable.
+
+Um, but the reality is, like as we showed that one example where the Rmse was so high, um,
+
+your choice of which one to measure has an impact on the decisions that you're making.
+
+And so, um, a first thing to think about would be, uh, uh, how how bad or outlier, um, you know, points how bad or kind of like large errors.
+
+So in some situations that were modeling large errors might be a really big deal.
+
+So, um, like the the outage prediction model I mentioned before, um,
+
+a large error is a really big deal because a large error is what will get you fired, right?
+
+A single large error, you know, probably can get you fire there, get you you utility find a lot.
+
+So like when we're training our model, we want to try to do everything we can to try to minimize the risk of large errors.
+
+Um, whereas other in other situations maybe, you know,
+
+every once in a while can have a large error due to some anomaly is kind of an acceptable
+
+thing as long as our kind of overall performance is kind of consistently low.
+
+And if that's the case, then maybe it can make more sense to go with, uh, with me instead.
+
+Uh, um, uh, you know, so like depending on this may be a bad example, but if you're going to build a model for, like, uh.
+
+You know, predicting like stock prices for trading or something like that.
+
+Um, maybe you're willing to say like, okay, I'm okay with like a really bad miss every once in a while,
+
+as long as kind of consistently across the board. My performance is really good because I know that I'm every now and then I'm gonna have a bad,
+
+you know, a better I'm going to lose a bunch of money or something. But I mean, more than make up for it.
+
+If I'm kind of consistently good and, you know, across everything else.
+
+Um, and then May is, um, the problem with Mape is because of that percentage, it can be very deceiving.
+
+Uh, so in particular, like if you're, um, working with very small values, right.
+
+And you're expressing them as a percentage. So like if you have so like the let's take the prediction example, you know, so if you have,
+
+um, if your prediction is um, two and there is actually like one outage, right.
+
+Your map is going to be really high. Right. But does it really matter if I predicted two and there was one?
+
+No, I don't really care. Like it's small numbers, it doesn't really matter.
+
+Right. What I'm trying to avoid is there were like 500,000 and I predicted zero.
+
+Right. Uh, so that's where Mape can be deceiving is where it went.
+
+Like, you know, it can be skewed by the small numbers that I can look like.
+
+It's really large. Uh, um, you know, when it actually, the reality is it doesn't really matter.
+
+So that's why I, um, part of what I'll have you do, uh, in some of your work and also on some of the homework and, um, exams as well,
+
+is to kind of think about what the right metrics should be given different types of problems,
+
+because it's it's something that a lot of students usually like.
+
+We give you the metric, we say, I want you to use MSE or I want you to use precision or whatever for a classification.
+
+But, um, in the real world, nobody's going to give you those. You have to decide which ones make sense.
+
+So it's it's actually a skill to be able to kind of think about the different possibilities and make the trade off decision and decide for yourself,
+
+which makes sense. Yeah. So it does require some thought.
+
+And it's really based on the problem that you're working. Any other questions?
+
+All right, everybody, wake up and, uh, talk a little bit about the mentoring program.
+
+I will give you an alternative detector for you. Maybe. You can plug in.
+
+Perfect. So I wouldn't take too long of time. But, uh, excited to kind of formally launch our mentoring program today, right.
+
+So we talked about that briefly during the orientation.
+
+This is something John and I have been talking about for a while. Uh, well, by the way, before I start, how many of you know what what a mentoring is?
+
+Everybody knows that. Okay. Okay.
+
+Um, and, uh, so what we thought was that as students come from different parts of the world, right, you know, and navigate, you know,
+
+everything from the classes to pick the electives to choose, manage your time, uh, start preparing and start applying for your internships and co-ops.
+
+Right. You know, working with other teams in the capstone classes, there's a lot going on, right?
+
+You know, and if there is some person, uh, who can guide you in that journey, uh, that would be very helpful for students.
+
+Right. And as we brainstormed, uh, we figured the, the,
+
+the best group that can help our students would be the ones who have gone through a similar journey not too far back.
+
+And that kind of got us to, uh, going out, reaching out to our alums, you know, uh, for the program and asking for volunteers.
+
+I'm very happy to announce that, you know, we had a big, big part of, uh,
+
+our more than a third of that volunteered to go, uh, do this mentoring program and help you guys out.
+
+Right. So we've gone back and forth.
+
+Um, um, Amanda has worked really hard, kind of, you know, helping map, uh, um, um, uh, our student with alumni, and I'll talk about that.
+
+So as of today, each one of you have a minute and I'll go through the, uh, program a little bit.
+
+If you have any questions, you know, ask those. But I must say that before I get formally into it, um, this is something that is, uh.
+
+I mean, take it seriously. Whatever you will put into it, you will get back, right?
+
+You know, it's completely in your hands, right at home. And our expectation is that you will try the program.
+
+We have set it up. We will provide the Delgado's.
+
+But it's completely up to you what you want to get out of the program?
+
+So today is the formal kickoff. You know, we we are in touch with our the mentors who have volunteered.
+
+They expecting this to be kickoff today and the communication starting this week.
+
+But talk about the overview. Talk about why it matters how what can how can you get the most out of it and some do's and don'ts about it.
+
+So just formally, uh, managing the logistics is a one year program starting today.
+
+It will go through the end of August next to, you know.
+
+Um, and that gives us an opportunity as that next batch of students come, and it frees up the mental so that they can formulate real ones.
+
+But I must say upfront here, that does not mean that that's the end of your relationship.
+
+But if you have developed a good relationship with your mentor by that point of time, please do continue that.
+
+Right. You know, it's completely between you and the mentor at that point of time.
+
+But as a formal program,
+
+we will we keep it a one year kind of an academic program so that every new class coming in have somebody to go work with right now.
+
+Um, so you are paired with, uh, with a, with a mentor.
+
+Uh, goals are up in pretty much any aspect of, you know, your, your, your professional life, even personally if you want to talk about that.
+
+Right, you know, for your academic growth, your professional growth, you know, uh, your sort of personal growth.
+
+Um, and the key focus areas we, we are thinking about in your career guidance, a lot of you, uh, I mean,
+
+we'll be starting to look for your internship for someone in in few months and getting guidance around that, you know,
+
+guidance on position and goals and for the job or if somebody is interested more in looking for research areas, uh, technical skills,
+
+networking and and in general, some of these are pretty accomplished, uh, um, professionals in very short span of time.
+
+They have made a name for themselves. So if you are looking to lots of new things happening in AI, please feel free to go to that.
+
+Uh, I mean, it's probably obvious, but I the way I look at it, you know, I mean,
+
+the four things you want to get out of participating in a mentoring, if it accelerates your learning,
+
+you know, uh,
+
+you can get real first hand experience of from somebody who has very recently gone through the program and now established in their career.
+
+It helps expand network. That's something you will hear over and over from us in multiple classes.
+
+We talk about that in capstone as well that, you know, grow your network.
+
+One of the best ways to get your job for yourself is for the network.
+
+We are seeding that with a mentor for you. Obviously don't limit yourself to that.
+
+But you know, you you probably should, you know, should go beyond that and career advancement.
+
+So I don't know, very, very quick. Um. In terms of, you know, the match part of it.
+
+So as I said, just to give you a bit of the logistics, we had 20, uh,
+
+alarms volunteered and we have 31 students and some of them had volunteered to mentor.
+
+More than one died. So there's some wonderful ones left over to do so.
+
+What we have done best job. And I must say, uh, Amanda did a great job, you know, kind of matching that.
+
+John, we provide a lot of help, you know, in terms of finding the best fit there, right?
+
+You know, so, uh, based on what we have learned about you so far, you know, in the orientation and all and what we know about alarms, you know,
+
+we have made the match there that all um, our alumni I talked about that I for the introductory email,
+
+uh, connect the pairs will go out hopefully today.
+
+Uh, I my goal is to finish all of that before midnight tonight. So all of you will get an email with your metal copy introducing each other.
+
+Um, I mean, I'll talk about next step, but my, my hope is that you guys, you know,
+
+take the lead from there, you know, like reply back, you know, reply back.
+
+And then you'll start setting up times and things like, you know, um, and obviously you can feel free to continue relationship after August 26th,
+
+you know, depending on, you know, what kind of relationship feel that.
+
+Any questions so far? Oh. What will you gain as mate?
+
+Again, I'm just getting a little bit more details. Academic excellence.
+
+Uh, we talked about, you know, I mean, especially with not a lot of electives coming in,
+
+they can probably provide you, uh, a good, uh uh uh, uh, good guidance on what to choose based on your interest.
+
+You know, if you have if you have some project you want to get a feedback on, and I mean, on the research side, career progression.
+
+Um, I mean, um, I mean, if you want to have them look at your resume, as, you know, help on the interview process,
+
+personal support, life work balance, all of you come from different stages in life, confidence building,
+
+industry insights as, um, they were important because if, uh, a lot of these are in general,
+
+I am a spaceflight and working in the industry right now, but that can be some interesting discussions that you can have.
+
+How can you maximize, uh, the best out of the mentorship?
+
+Right. You know. Uh, again, I do not want to very thoroughly I mean, uh, kind of, you know,
+
+make it extremely rigid or professional, but some things to keep in mind, right.
+
+You know, this is your opportunity with, uh, with a professional who has volunteered to do that.
+
+Set some goals for yourself. Right.
+
+And if you have heard about the Smart goals around, you know, being specific, measurable, uh, achievable, relevant and time bound.
+
+So just think about it, okay. Out of this relationship, I want to I want to go figure out how best to position myself for internships.
+
+Right. And kind of, you know, when you know, when you have the conversation work around that.
+
+I would say prepare well, you know, so if you are going to conversation, just don't go back, have topics to discuss.
+
+You know, even a good practice I have seen.
+
+Just send a quick email right before the call saying, hey, I want to discuss these two things, I don't think.
+
+Be receptive. Very, very important. You know, be humble.
+
+Uh, be open to feedback. If you are getting that and if you're lucky to get get actionable feedback, take that and please follow.
+
+If your mentor has told you to do something, follow through. If you are not able to do that, reply back.
+
+It's basically 100 tons of, you know, professional relationship, but please do that.
+
+Effective cadence. Uh, for communication. Meeting cadence.
+
+So my expectation is you are the ones taking lead in setting up meetings.
+
+They should not be choosing you. You should be the one giving you.
+
+Once you get that set up a little meeting, I'm assuming you have set up your zoom account on,
+
+on on geography or any other metric that you want to go use,
+
+that you take the lead in setting it up, you know, not not leave it on the, you know, um, communication channels, emails are best.
+
+But I mean, I don't want to script in there. If you want to just pick up the phone and call or whatever you want to do that.
+
+But what we have seen that in a good for LinkedIn for good sometime, you know,
+
+if I would articulate just, you know, I mean, just come to get there, uh, be be proactive.
+
+Right. You know, rather than be reactive, you know, because this is your area that we are trying to help, right?
+
+You know, but also very important that that be professional respect boundaries.
+
+Right. Uh, they're not going to go find the job for you.
+
+You can ask about help. If you ask something 2 or 3 times and that have not happened.
+
+Maybe it's time to move on. Very important. We are not paying them.
+
+They are volunteering for a professional life. But be very professional, mindful of their time, their work environment.
+
+There could be things they may not be able to talk about right now,
+
+but very important that, you know, leave a very good impression and be professional.
+
+And some quick do's and don'ts, right? You know, be punctual.
+
+I'm prepared. Shop to be meeting on time. Don't don't have the person you know waiting on your phone for three minutes maybe.
+
+Good idea to be there one minute earlier. So, you know, listen actively even I would say over and over again, if nothing else, I think you should.
+
+You should do that. Uh, express gratitude, right?
+
+I mean, please do that, right? I mean, I mean, we all like to do that, um, and, and every meeting, thank them for their time would be very good.
+
+Uh, uh, we have offered them if they are on campus, that we.
+
+I do want to buy them a coffee. I think that's something that we really want to do that, um, and share your success.
+
+Right. You know, we we are planning a sort of a kickoff after a month or so, just as a meeting with all mentors and mentees.
+
+It's an open dialog of whatever you have learned, you know, to do for each other.
+
+I think very formal, but I think, uh,
+
+what we want to do is kind of give some momentum and you guys can see other mentor I'd meet other mentors as well.
+
+I mean, we don't expect everybody to show up because during daytime they are working professional.
+
+But the idea is after the first round of, you know, things that happen somewhere in mid, mid October will do that.
+
+And don't please don't cancel the last minute. I show up late to the meetings.
+
+Um, don't expect the, um, your mentors to solve all your problems tonight, you know, log in and of course do your homework.
+
+You know, like that's that's not what the relationship is about. Don't be passive.
+
+You take ownership and. And, you know, the discussion doesn't have to be technical in nature.
+
+I mean, you're completely open to do it. And as I said, we don't want to be very prescriptive about it.
+
+Uh, you can run the relationship the way you want. Uh, if you have a local, uh, I would strongly advise trying to meet in person.
+
+Uh, somebody maybe from Durham area because they have a coffee or lunch or dinner together, if possible.
+
+Or somebody is visiting. Maximize your time. Right. You.
+
+Uh, I've, uh, I tell you, I was at, uh, 20, 25 years ago was part of a formal program like this at at my organization at HP.
+
+Um, and that really helped me.
+
+I had somebody who was the head of supply chain, uh, was assigned to me at a similar one year program, and I still a lot of learning still,
+
+you know, how we would even moderate and also sometimes go to the next steps of, uh, maybe next few hours, we will have the emails.
+
+Uh, and you basically can take that email and start setting up your meetings,
+
+uh, confirm your connection by September 15th, or maybe let me change it.
+
+Right. If you are not able to connect for any reason, let me know.
+
+I mean, other than you are getting 31 emails, I wouldn't forget that if I'm not able to for any reason you're not able to connect with your mentor,
+
+please let me know and we will have a kickoff meeting. We'll try and mid-semester maybe.
+
+And and. Uh, probably February.
+
+Right? You know. Uh, again, a full meeting and we'll do a sort of a graduation, um, right before the semester starts.
+
+I do know that that the fall semester starts. Any questions?
+
+Forget about, uh, the mental. So we have 25 in California.
+
+Five in North Carolina, two each in Washington and New York, and one each in Texas, Pennsylvania, Indiana and Kansas.
+
+You know, and this is our assignment. Uh, you will all of you will get a formal email, right?
+
+So, I mean, for the, uh, as you can see, some of the vendors have more than more than a few of them have too many.
+
+Um, and yet I would feel like nobody of these. Of you. This is our assignment here.
+
+Uh, these are our mentors and their current organization. So you will see everything from a back to target to some health.
+
+Uh, uh, some some at at at Duke.
+
+You know, meta, Google, Amazon, ticktock, Eli Lilly and, um, OpenAI and multiple others like.
+
+Okay. Questions and comments. All good.
+
+Any questions in the mentorship program? I just.
+
+Yeah. Just stress it. This is not about them. You know, find finding you a job.
+
+So. So please, you know, please don't, you know, ask your mentor for a job or an internship.
+
+Uh, if that ends up happening. That's fantastic.
+
+But that's, um, that's kind of not really the main point.
+
+Uh, it's an opportunity for you all to build your own networking industry to get to know,
+
+you know, um, our alumni, you know, learn more about their company, you know, job roles.
+
+Um, feel free to ask questions about the interview process, kind of what what their experience was,
+
+how they how they applied, how they prepared, what types of questions they, you know, encountered in the interviewing.
+
+Uh, that's a great way to engage with the matter to learn more about that.
+
+Um, any suggestions they'll have for for you in terms of, um, job search in your, in terms of searching,
+
+um, you know, you can ask them about classes, elective classes, other classes, uh, anything here at Duke.
+
+I think all but one of our I think there's one mentor who is not a I am a student.
+
+Um, was is a Duke alum. Uh, is a good friend. I close connection with us, but, uh, the rest have been have all been through our program.
+
+So you're rocking to those asking questions. All right then, five questions.
+
+All right. Have a good rest. So we get everybody. See you Friday. Remind there tend to be there and see the 10 a.m. ready to go.
+
+Thank you guys. Thank you. Thank.
+
+You. Are you sure that we are doing good?
+
+Okay. Yeah yeah yeah yeah yeah.
+
+Okay. Maybe they just need to make it.
+
+That I sound like. Yeah, like, I don't. I don't feel good.
+
+I was laughing, so I know I'm not.
+
+I hope you might be. So it was kind of like I ask if I could make with my truck extension for like.
+
+Yeah, I know, I know. Yeah. It's crazy.
+
+I mean, there I was like, I, I, I like, I, I think I've written incognito in academia, like, so I mean, I haven't done an extension before,
+
+but I am familiar with college and, you know, it's, you know, all that stuff that's happening, you know, like the Alabama stuff that's not inside.
+
+Yes. Cone. Right. That's because that's what I would want to the server model.
+
+Right. The VS code is more so just reading our file and passing it a lot to write your model.
+
+Right. So and I think I should be able to pay for that because all that's doing is creating a file right and giving.
+
+It's not actually doing a little effort inside actually, you know.
+
+Right, right. So maybe if it's like with an API or something, you know, maybe, yeah, it could be done very easily for pie charts on a package, right.
+
+So if I didn't have anything in my previous, uh, API that.
+
+I mean, my my Bible. Right. Oh, my God, I was doing this.
+
+Yeah, yeah. Uh, maybe very.
+
+I want to go ahead and I think.
+
+I can yeah, I can send you an email and, uh.
+
+Yeah. I mean, if you want, I can give you my number on a project right now that I.
+
+Oh, that medicine plus.
+
+Number or something. You can change your business.
+
+Yeah. So now so you can. Yeah, I can also. Thank you.
+
+Yeah, I. Just I can also I my email.
+
+So that's that's yeah that's. I mean if you on my email for you so at least you can recognize.
+
+Oh yeah. Yeah. So like you can you can at least recognize who I am especially for me.
+
+Okay. And then I know I always have airdrop turned on then.
+
+Yeah. Yeah. So. No ice cream.
+
+Yes. We'd like to join you.
+
+Order. I just joined in yesterday. I just wanted to let you know that I.
+
+I know that there's no like tomorrow, but. Yeah.
+
+Uh, I mean, if possible, if you can watch. The last time I was with you.
+
+That was. That's okay. Yeah. That's. What about you? I mean, I was yeah, I mean, I really, I was inspired by.
+
+The different kind of, uh, I guess, sort of like a perfect person, I mean, but I would advise, if possible, before the path begins like that.
+
+Them. I mean, you know, by the time I've, uh, I in medicine, like, uh, I got that.
+
+Okay. Yeah. Yeah, it's, uh, ideas are generally my free day, so talk about stuff that's not right or not, but if if that works, I think about.
+
+Just let me know. Yes. Typically, I think I mean the best method you can see that we discussed, you know, mapping 31 to 24.
+
+But that's kind of a judgment that I think that. Yes.
+
+Yes. Yes, yes.
+
+Just that I should. So like auditing and not taking those.
+
+So I think also you got limited number of categories of how many are you.
+
+Well uh, yeah I know that time. Uh.
+
+I don't know. Um, I think the 50 of me I don't know anything about, um, and, uh,
+
+I think a lot of information on this think that I read it all, and I said, this is very important, district.
+
+And so I'm just trying to, you know, not use of what I've already given.
+
+Um. It's okay.
+
+At this time what I would expect, right?
+
+What I don't want is that the student soccer team will look like a Nazi, as it respects the dynamics of the class.
+
+I want them to be part of a class. You don't have to do that.
+
+But that's one one element that will be moderating.
+
+And then they go off the package, which will open up more like just the dynamics of the class and the energy level of math goes down.
+
+I think you don't want that. And so many.
+
+Things. I mean, it would be just I mean, the kick off happened just right now, you know,
+
+what we're trying to do is get back on the kids and just, you know, kind of go talk about the program and what they have.
+
+Not like, there's just more of, you know, in the name of the faith.
+
+But everybody, you know, you know, these people are not out of the country.
+
+So it will be a phone call. And I don't have any questions.
+
+But I mean, this is more to just, you know, put people together.
+
+To. Reasonable.
+
+I might have happened already this summer, but it's not what I think of.
+
+And that's something that Adam does add for one of the best.
+
+Wow. I understand that you guys were going to go with the this.
+
+So think that. You should.
+
+Yeah. That's cool. Okay. Yeah.
+
+So some of them had volunteered for anyone, and some said they can be useful.
+
+And. Some of them just. I.
+
+No. We.
+
+Are. Here.
+
+I know. You know.
+

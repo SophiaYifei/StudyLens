@@ -1,6 +1,9 @@
 """
 scripts/build_features.py
-Chunking, embedding, topic concatenation, and output saving in data/processed folder.
+Fetch content from loaded raw data (PPT, notes, transcripts), create one combined
+source file per topic in data/processed
+Raw files are loaded by scripts.make_dataset.load_all_documents(data/raw); this
+module consumes that document list.
 """
 
 import re, json
@@ -258,6 +261,71 @@ def retrieve(query, embed_model, embeddings, all_chunks, top_k=3):
     } for r, i in enumerate(top_idx)])
 
 
+# ── Per-slide-set _ori.txt (slides + transcript + notes per index) ────
+
+_SLIDES_RE   = re.compile(r"^(\w+)_s(\d+)\.pptx$", re.IGNORECASE)
+_TRANSCRIPT_RE = re.compile(r"^(\w+)_t(\d+)_cleaned\.txt$", re.IGNORECASE)
+_NOTES_RE    = re.compile(r"^(\w+)_n(\d+)\.txt$", re.IGNORECASE)
+
+# Remove decorative/placeholder symbols (slide ‹#›, bullet ▲, etc.) so output is plain text only
+_SYMBOL_PLACEHOLDER_RE = re.compile(r"‹#›|[\u25B2\u25BC\u25C6\u2605\u2666\u2022]\s*")
+def _strip_symbols(text: str) -> str:
+    if not text:
+        return text
+    t = _SYMBOL_PLACEHOLDER_RE.sub("", text)
+    lines = [ln.strip() for ln in t.splitlines() if ln.strip()]
+    return "\n".join(lines)
+
+
+def write_per_slide_set_ori_files(documents: List[Dict], output_dir) -> Dict[str, Path]:
+    """
+    For each (prefix, num): combine dl_s{i}.pptx + dl_t{i}_cleaned.txt + dl_n{i}.txt
+    into one file {prefix}_s{num}_ori.txt. Same for ml_*. Produces 10 files (e.g. dl_s1..dl_s5, ml_s1..ml_s5).
+    """
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    # (prefix, num) -> {"slides": text, "transcript": text, "notes": text}
+    groups: Dict[tuple, Dict[str, str]] = {}
+
+    for doc in documents:
+        name = doc.get("source", "")
+        text = (doc.get("text") or "").strip()
+        if not text:
+            continue
+        m = _SLIDES_RE.match(name)
+        if m:
+            key = (m.group(1).lower(), int(m.group(2)))
+            groups.setdefault(key, {})["slides"] = text
+            continue
+        m = _TRANSCRIPT_RE.match(name)
+        if m:
+            key = (m.group(1).lower(), int(m.group(2)))
+            groups.setdefault(key, {})["transcript"] = text
+            continue
+        m = _NOTES_RE.match(name)
+        if m:
+            key = (m.group(1).lower(), int(m.group(2)))
+            groups.setdefault(key, {})["notes"] = text
+
+    saved = {}
+    for (prefix, num) in sorted(groups.keys()):
+        g = groups[(prefix, num)]
+        if "slides" not in g or "transcript" not in g or "notes" not in g:
+            missing = [k for k in ("slides", "transcript", "notes") if k not in g]
+            print(f"  Skip {prefix}_s{num}: missing {missing}")
+            continue
+        # Only content from data/raw; no extra labels; strip decorative symbols (‹#›, ▲, etc.)
+        parts = [_strip_symbols(g["slides"]), _strip_symbols(g["transcript"]), _strip_symbols(g["notes"])]
+        combined = "\n\n".join(p for p in parts if p)
+        out_name = f"{prefix}_s{num}_ori.txt"
+        out_path = output_dir / out_name
+        out_path.write_text(combined, encoding="utf-8")
+        saved[out_name] = out_path
+        print(f"  {out_name}: {len(combined):,} chars (slides + transcript + notes)")
+    return saved
+
+
 # ── Topic concatenation ──────────────────────────────────────────────
 
 def concatenate_by_topic(
@@ -378,23 +446,3 @@ def plot_distribution(df: pd.DataFrame, output_dir, chunk_size: int = CHUNK_SIZE
     print(f"  Saved {out_path}")
 
 
-# ── Save outputs ──────────────────────────────────────────────────────
-
-def save_outputs(all_chunks: List[Dict], embeddings: np.ndarray,
-                 df: pd.DataFrame, output_dir):
-    output_dir = Path(output_dir)
-    output_dir.mkdir(exist_ok=True)
-
-    chunks_path = output_dir / "chunks.json"
-    with open(chunks_path, "w", encoding="utf-8") as f:
-        json.dump(all_chunks, f, indent=2, ensure_ascii=False)
-
-    embed_path = output_dir / "embeddings.npy"
-    np.save(embed_path, embeddings)
-
-    csv_path = output_dir / "chunk_metadata.csv"
-    df.to_csv(csv_path, index=False)
-
-    print(f"  chunks.json        : {len(all_chunks)} chunks")
-    print(f"  embeddings.npy     : {embeddings.shape}")
-    print(f"  chunk_metadata.csv : saved")

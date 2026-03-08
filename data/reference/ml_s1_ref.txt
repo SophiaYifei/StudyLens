@@ -1,0 +1,13 @@
+Introduction to Machine Learning – Modeling Process & Algorithms
+
+• What is ML: Computers learning from data without being explicitly programmed (Arthur Samuel). Learning = task-based (get good at a task) and generalization (transfer to new situations). Use ML when automation helps, rules are complex or unknown, or manual solution is infeasible.
+
+• Model: Useful approximation of a non-random phenomenon. y = f(x) + ε. Parameters compress knowledge into a finite set of numbers. Terms: instances/examples (rows), features/predictors/X, targets/labels/y.
+
+• Supervised vs unsupervised: Supervised = we have (X, y) and learn f. Unsupervised = only X; we infer structure or latent targets (e.g. clustering).
+
+• Regression vs classification: Regression = predict numerical y (e.g. price, demand). Classification = predict category (binary or multi-class, e.g. spam, disease type). Practice: “fake news” → classification; stock price → regression; insurance risk → regression or classification depending on formulation.
+
+• Heuristics vs ML: Heuristics = simple rules, easy to build and maintain (e.g. predict mean, recommend highest-rated). ML = learn from data, can capture complex patterns, adapts. Choose heuristics when rules are clear and stable; ML when patterns are complex or changing.
+
+• Syllabus takeaway: Modeling process (problem → data → features → model → evaluation → interpretation), key algorithms, how to apply them to real-world structured data.

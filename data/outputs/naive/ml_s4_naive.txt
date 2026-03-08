@@ -1,0 +1,15 @@
+Time SeriesWeek 4
+http://classwise.org/student/quiz/4a03f4d9-0b33-4ba2-b399-f00e94f41b20
+Time Series
+A time series is a sequence of data points taken at successive equally spaced points in time
+Has a natural temporal ordering to the observations
+Time ordered data is not necessarily time series (e.g.
+Trend and Seasonality
+We can break time series down into two main components:
+Trend: the long-term trend of the data
+Seasonality: the cyclical fluctuations in the data
+Seasonality
+Data can have seasonality (periodicity) on multiple scales: hourly, daily, weekly, annually etc.
+Temperature
+Power Demand
+Bookstore Sales

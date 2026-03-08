@@ -1,0 +1,15 @@
+Natural Language Processing I (Week 6)
+
+• NLP tasks: Search, machine translation, text classification (e.g. spam, sentiment), summarization, generation (e.g. chatbots), topic modeling, Q&A. Text can be combined with other modalities (e.g. images) in multimodal models.
+
+• Challenges: Homonyms (same word, different meaning: “bank”); synonyms (different words, same meaning); word order and history matter (“The dog ate the bone. It tasted good.”); semantic ambiguity; slang, acronyms; variable-length sequences; sarcasm. We need representations that capture meaning and context.
+
+• Text preprocessing pipeline: Raw text → tokenize → remove stop words & punctuation → lemmatize or stem → model. Tokenization: by word, sentence, subword, or character; use the tokenizer that matches your pre-trained model (e.g. BERT, GPT). Stop words: remove common low-information words. Stemming: crude root (may not be a word); lemmatization: dictionary-based, gives valid word; lemmatization usually better but slower.
+
+• Traditional representations: Bag of Words (BoW): count word frequencies, ignore order. TF-IDF: weight by term frequency and inverse document frequency to downweight common terms. Both lose order and context.
+
+• Word embeddings (e.g. Word2Vec): Dense vectors for each word learned from co-occurrence or prediction. Similar words have similar vectors. Solves synonym and some semantic issues but still one vector per word type (no context).
+
+• RNNs: Process text sequentially; hidden state carries history. Used for sequences where order matters. Limitation: vanishing/exploding gradients for long sequences.
+
+• LSTM / GRU: Gated units that learn what to remember and forget. Address vanishing gradient; better at long-range dependencies. Use when you need sequence modeling before transformers.

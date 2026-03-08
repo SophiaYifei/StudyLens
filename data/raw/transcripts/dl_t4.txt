@@ -1,0 +1,3423 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+Like there's always me. And the grades are terrible. Are you.
+
+Are you serious? You can be great.
+
+Oh, they are, and I'm scared.
+
+I'm trying. How are you? I'm trying to.
+
+I have to be pretty. I put them in canvas as close to this fast as possibly possible.
+
+Okay. Did it work? So they were just uploading.
+
+But I was having some weird canvases. They are not exactly, you know, someone.
+
+Oh my God. It's where they go on the same boat.
+
+I was almost the highest spawn. That's crazy. No, well they're not.
+
+I don't. Oh, wait. Yeah, we did terrible on the project, by the way.
+
+Get back! Here.
+
+Do we have feedback on the module one project? Yeah. Where is it?
+
+Right here. So not on canvas?
+
+No. Okay. Handwritten. Any better? I know it's otherwise I'll have it.
+
+It. I did. Oh, look it up. Oh, wait.
+
+Oh, you already know. I'm going to call you guys up here by group to get your tests and your module project rubric.
+
+Um. It's only. Right team.
+
+Ensemble. Method. Let me do that.
+
+I. Think I would kill for the next one.
+
+Like. All right. Okay.
+
+Do you know if this is working for you, Beamer?
+
+No. No, no.
+
+Well, what it is that it's before the before or after. Uh, after.
+
+Oh my God. Please. Thank you.
+
+I guess I'm glad I did the hackathon. Oh, right, I forgot, I remember.
+
+Oh, yeah. Plus, I'm so low key. The median is lower than.
+
+Oh, I started out on, like, 30 hours of study.
+
+I spent like, ten hours studying. I was at worth an 82. Oh, no.
+
+No, it's it's inception. Wait.
+
+That's us. No, we're in the kitchen. I, I think actually, I just want to study like these.
+
+Dudes might be in there. Here.
+
+Oh, no. This right here. Oh, no. Thank you.
+
+All right. Oh, is that on the top 42 of the reviews?
+
+We mostly work. Is that this guy hackathon we can participate in?
+
+Oh, no, not this semester. Oh, Sam practiced as long as I can.
+
+Alex. Oh.
+
+Looks good. Sorry. He's awesome.
+
+28. Yes. Uh.
+
+I mean, I know. And think, you know, I can tell you, you know, I'll go to next few.
+
+Days and you know. Oh, right.
+
+Invasion. Oh, boy. Oh.
+
+You want to look at a computer mutation? Oh, yeah. I mean, they didn't just push.
+
+So. Kevin, do you want to come up and grab your team up?
+
+Every year and say, do you want to come up and grab your team? Yeah. No, it's not about that actually.
+
+Yeah. It's crazy that. I don't know you don't know where that was dropped.
+
+Okay. Two problems. Uh, one after the.
+
+In here. Get a test back. Okay. That's the reason you did so well.
+
+Because. So you. So. I think it's very safe to say.
+
+One. All right, all right, let's talk about assessments.
+
+We're gonna talk about both of them today. Let's first talk about the project.
+
+So the median score of the project was an 84.5%.
+
+Last year was a 77%. So you guys really improved on the project even though your project was significantly harder than last year.
+
+So good job. I was really impressed with the projects. Overall.
+
+Your pitches were awesome. I think pretty much always everybody got full credit on the pitches.
+
+They were very well done.
+
+You did a really good job splitting into train validation and test splits, and then using those same splits across all models for accurate comparison.
+
+Previous years, we had a really hard time with that, but you guys got it on the first try.
+
+So really nice job there. Everyone was participating and peers and peer reviews participating.
+
+Um, but that was good that everybody was participating.
+
+Code documentation is so much better now. I know that's thanks to Claude and not you guys, but really happy with the code documentation.
+
+Your reports were very well done and thoughtful, so very nice job on those.
+
+Your experiments were well thought out. A lot of you included discussion of limitations, even though that wasn't in the rubric.
+
+And I really appreciated that because it showed that you were really thinking about it at a deeper level, and then you had mostly awesome front ends.
+
+Um, I think this year the front ends were so much better than previous years.
+
+Like, these are actual pieces to go in your portfolio. Those are really nicely done.
+
+So really great job. A few things we need to work on for next time.
+
+Um, every feature needs a review to be merged. Okay.
+
+I think every team had that issue. Um, where are we?
+
+We need to make sure that if you put up a PR, you have a review on that before that gets merged.
+
+That's software engineering best practices. Often, uh, when you're in industry, there will be 1 or 2 PR reviews required before it can be merged.
+
+So the GitHub settings are set up such that you are not even allowed to merge before you have 1 or 2 reviews.
+
+And for some of you might, you know, have a challenge. More challenging time remembering that you can set those settings up in GitHub
+
+so that it requires you to do her or her review before it can be merged.
+
+A lot of you were Lgtm, right? We talked about that in 510.
+
+Looks good to me. PR is let's try to be a little bit more constructive than just Lgtm.
+
+Um, a lot of you would, you know, we would basically say Lgtm, but in a little bit more depth.
+
+And like you actually did read, um, the PR um, so that's great.
+
+Um, there was a team in here where it was clearly the bots going back and forth.
+
+So what was the PR and about poster review?
+
+That was really interesting. Um, to, to see most of you did not do that.
+
+So thank you for that. That often it is better than Lgtm.
+
+Uh, it does count as better than Lgtm, but it's, um, I don't know if that's, uh.
+
+Good morning practice. Uh, all right.
+
+Elephants are doing the whole thing, you know, hyperparameter tuning.
+
+Instead of picking default hyperparameters, a lot of you pick default hyperparameters.
+
+Let's do some hyperparameter or some grid search in there,
+
+or some other kind of search in order to find what are the best hyperparameters, rather than just choosing the defaults.
+
+Uh, and then, uh, including citations for related work and data sets.
+
+There were several teams that missed just citing the citations, so make sure to do that.
+
+Um, a lot of things, uh, a lot of other things that you'll see in there just got a minus one,
+
+and minus one is basically just a note that like, don't do this again.
+
+Um, and so it's feedback for you to know, hey, this is kind of what I want and what I don't want on a report, but only take it off one point.
+
+Note that this point will go off in future in future projects.
+
+So if you got one point off now, that does not mean the next project.
+
+You only get one point to offer that. This point is just a note to you all now will note that typically the median scores on the project start here.
+
+And they just go up like this. And so this is like a really good like learning.
+
+And I'm really happy with where the median scores are for the projects.
+
+You guys did a really great job. Questions about the projects.
+
+Okay. Let's talk about the assessment. All right.
+
+So our median score was a 77 for the assessment.
+
+The high score was a 98 and the low score was an eight.
+
+And you can see the breakdown of scores on this asset one where most people are sitting over here.
+
+Um, and we had some lower scores which pulled down the mean, which is why I didn't even show the mean because it's not representative of our data.
+
+Um, this is trending a tiny bit worse. And last year, last year's median was at 81.
+
+So we're a little bit worse than last year. Um, but overall, I would say pretty similar to last year.
+
+Now, I always like to do some interesting questions with this because we are in a I data program.
+
+So I had some questions. If you read emails,
+
+are you more likely to do well on the exam knowing that we do not have a statistically significant sample size in this classroom to actually test us?
+
+But out of curiosity, I wanted to do this. So prior to the exam, you saw that some of you saw that I sent out an announcement.
+
+This announcement was very long, and the whole idea was, did you read it to get to this part?
+
+So you will get a version that is an animal. And so the animal draw lemur.
+
+A lemur will receive five additional points of drawing the second page of the test drawn.
+
+Anywhere else it will receive zero points. If the animal that is on your assessment is drawn instead, five points will be taken off your score.
+
+Um, so let's take a look. 77% of you either read emails or have friends who are reading those.
+
+Um, so that's pretty good. 1722 of you got five bonus points on your exam.
+
+So let's look at the median score with drawing versus without the draw.
+
+So our median score with the drawing was 79%.
+
+74%. If we uh we basically subtract five bonus points from all of those scores.
+
+And then without the drawing it is 53.5%. So not statistically significant.
+
+Those who read emails in this class tend to do better on the exams.
+
+The next thing was does order matter? Or does the time you spend on the exam correlate with grade outcomes?
+
+It's always very curious to me because some people come up here and they're done immediately, and then other people take their time.
+
+It's been a long time working on the exam, so I'm always curious, does that amount of time that you spend correlate with grade those?
+
+And not really. So the first 50% turned in median was 77.55, 50% joined in with 70%.
+
+You can see the best fit line where this is turned in over time, and you can see it's pretty much flat.
+
+So not too big of a difference here. And I have two versions of the test.
+
+Uh, the two versions of the test, uh, allow us to be able to sit next to each other without having to worry about wandering eyes.
+
+Um, and we had the the jellyfish version and the squid version.
+
+Um, in the squid version, I put the harder questions first, so I just flipped the order of the questions.
+
+It it really depends how you study, right? Those could have been the easiest questions for you, but they were the higher points questions on the exam.
+
+And so I put those first. At the beginning of class, I reminded people they could go in any order that they chose.
+
+And jellyfish version. Median square was a 68%.
+
+Squid version was a 79%, which is but totally confusing to me.
+
+And opposite of last year.
+
+Uh, because typically, if we put harder questions first, people did much poorly on the exam last year, but this year you guys did better.
+
+You got the harder questions first. So I don't know what to make of those.
+
+I thought this was really interesting. Remember these are the exact same questions on both of these versions.
+
+So jellyfish versus squid version had the exact same questions.
+
+Just the order is different and the order isn't even scrambled up.
+
+The order is just like the first page and the third page are flipped around.
+
+So I don't know. Does anybody have any hypotheses as to why this is?
+
+Yeah. When do I have the squid version? When I feel like doing the harder, like the harder questions first.
+
+Kind of made my brain, like, fun. And do you like, think think think.
+
+And then by the end of the exam, I was more like, okay, I'm like, I'm in the groove.
+
+Okay. Yeah, Sam, I had the squid version as well and I did it the opposite.
+
+Like, I read through every single question first and started on the third page.
+
+So I mean, I did and see, this is exactly why you need a larger sample size to make any conclusions, because we've got totally different.
+
+Okay. So, uh, question for you guys then what are grades for?
+
+Painting stuff. Okay. What else are grades for?
+
+Am I reinforcement learning folks? You guys should know this one.
+
+Look up reinforcement learning. Reinforcement learning specifically work.
+
+Okay, so a reward state environment and the actions you take.
+
+Yeah. You don't have to throw out every terminology for every salary.
+
+Yeah. Right. Feedback. Um, in reinforcement learning we may call this reward.
+
+Um, but feedback grades are for feedback.
+
+And so if you are not happy with your grade, that usually means that you need to adjust your learning style over this next module,
+
+whether that's more engagement in class or more engagement outside of class,
+
+or that's studying more for the exam, whatever it is, if you're not happy with the score that you got,
+
+then this feedback can be very beneficial for you moving forward.
+
+This is also the first assessment you guys got to get a feeling for the kinds of test questions that I get.
+
+So you guys will be more prepared next time going into it. Similarly, with the module project, now you have the rubrics in front of you.
+
+And so you can go through that checklist yourself before you turn to the next
+
+module project to make grading the module project very easy for me next time,
+
+because I really like it when you guys get everything right, because that makes my job a lot easier,
+
+because it takes me a lot more time to go through if things are wrong and if things are right.
+
+So it's saving me time to to obviously. Okay so feedback now I will note.
+
+Okay. So graduate school right. This is graduate school. This is different than undergraduate classes in that your goals are different right.
+
+Your goals are to get a job usually a job at the end of this program.
+
+And so the learning is very important here. Much more important than the number that is on the test itself.
+
+And it's really important to optimize your time while you're here.
+
+Um I did not put this on the slides because there are so few people in this class.
+
+I didn't want to out people, but the people who participated in the Society Center de hackathon in some way, they're volunteering or competing.
+
+Those people did better on the assessment, even if you didn't count those ten points.
+
+So that involvement, you know, it makes you more well-rounded and better able to think about some of these questions.
+
+Also, one note here is that if you get 100 on this exam, you're not optimizing your time here.
+
+Frankly, you're spending too much time studying okay.
+
+So if you're one of those people who got close to 100%,
+
+you can spend less time studying and more time doing something else that would be beneficial to your career.
+
+I would say that if you got around somewhere around like an 82 to an 88, that is like the perfect grade on this first exam.
+
+So E2 to 88, if you're in that range, you got a really, really good grade on this first exam.
+
+You knew the material well enough, but you didn't over study.
+
+So you optimize your time very well. Okay.
+
+So in light of grades being for feedback,
+
+if you go back through your module assessment and rewrite your incorrect answers, I will give you half credit for that.
+
+So you'll get half credit back for every missed question. Must be handwritten.
+
+Don't use heirlooms or small ones, and I need you to cite the slides on which you found the answer.
+
+So go through the slides. Find the slide in which you found the answer.
+
+All the answers can be found in the slides and then turn in next class.
+
+So there's no exceptions here. Um, if it's not handed in during the next class, you're not going to, um, make up points.
+
+One other small caveat. If you want to argue about points on your exam or project, you will forfeit the opportunity to get half credit back.
+
+Not going to, because I'm going to be spending a lot of time going back through and checking all of these,
+
+and so I don't want to spend that time then also argue with you about a few points.
+
+So I'm giving you this opportunity. But if you want to argue that it's really fine, you're going to forfeit your points.
+
+All right? Yes. Do you care if it's written on the test, or do you want it on a separate paper?
+
+Doesn't matter. Outside. This half points me.
+
+Say hypothetically. If you hear it.
+
+Hypothetically, you have that phone, you have that 13 points, and then you gain back the original points, your original score plus half.
+
+So you can get more than. No, I go question by question.
+
+So if the question is worth eight points and you didn't answer that question or you missed that question,
+
+you will get four points back for answering incorrectly and citing it.
+
+Okay. Yeah. Question. Sneaky question.
+
+Other questions. Yeah.
+
+When we say the slides like. Would that just be like slide X page like.
+
+Yeah, exactly. Anyway, yeah I think there's three slide deck.
+
+So neural intro to neural networks would be slide deck one.
+
+And then slide 50. Yeah. And then the slides are a little different if you use the PDF or like the more updated version right.
+
+Um they shouldn't be that different. Yeah.
+
+Other questions. Great.
+
+Oh, yes. Um, and to Lindsay's question earlier, we will have an exam like assessment again.
+
+You can expect a similar assessment format to this one.
+
+And if we do really well on that one, then we can have a non exam like assessment for the third one.
+
+Any questions about that? Yeah. What is a non exam like assessment.
+
+Um let's see. In years past we've done a variety of different things for a non exam.
+
+Um we've done interviews similar to you did in 510 where you interview each other and ask questions.
+
+Um, as an assessment. Uh, I've done an escape room assessment before.
+
+Um, you've also done that in cybersecurity, where you get some kind of, um, packet of things that you have to answer.
+
+And as a team, you answer those and then that is your assessment.
+
+Um, we've also done some like case studies where we get into teams and do case
+
+studies together and work through some case studies and then present on those.
+
+So those are some examples of non exam like assessments still involve knowing the material and thinking deeply about the material.
+
+But maybe not the. Intensity that is required to do the assessment plus.
+
+Yeah. Um, you also mentioned before the tests that you like pull questions from the question and um, after like this class is done.
+
+Um, would you be willing to, like, share that question and stuff for us to, like, have a better understanding of that?
+
+Like. If we go to concert, uh, you have your test, and that's it.
+
+You don't have to question bank just because of future cohorts are very connected to previous cohorts.
+
+And so that is. Basically to make sure that you guys are passing on all the questions just to the next generation of scholars,
+
+and then they come in am I can swear as 100 next year. All right.
+
+So let's actually talk about this module first.
+
+Okay. So this module we've got a lecture today we're going to go through an overview of NLP applications representations and architectures.
+
+Get into some um RNN type stuff today.
+
+Next week we'll talk about Transformers. Uh we'll do uh, a deeper dive into Transformers and similar architectures.
+
+On March 3rd, we're going to have our NLP in-class hackathon where I'm bringing bagels and donuts and coffee.
+
+Um, so we'll be doing that on March 3rd. Uh, the week of March 10th, you guys have spring break.
+
+There is no class that week. So my recommendation would be by Friday of this week or Friday of this week.
+
+You get your project done so you can just go and have fun on spring break.
+
+Um, and you're going to get the in-class hackathon in order to be able to make a lot of progress,
+
+which then you can finish up that week and then go on spring break and then come back
+
+and you'll do your project presentation and module assessment right after spring break.
+
+And so that's what our module looks like two lectures hackathon. And then our assessment day after spring break.
+
+Questions there. Right.
+
+All right, so let's jump into some natural language processing. This is our first lecture of two.
+
+So this week we're going to do an introduction to NLP.
+
+We're going to talk about neural networks in a loop. We're going to talk about some implementation next week.
+
+We're going to talk about applications similar to what we did for computer vision.
+
+We're going to talk about transformer architecture. And then we're going to talk about some advanced topics.
+
+This is what we're going to get into things like large language models.
+
+All right so for today we're going to talk about tasks challenges and applications and NLP.
+
+We're going to talk about text pre-processing and then those traditional approaches.
+
+Um so keeping in mind you will have to do a traditional approach as part of your module project.
+
+Um, so this will be a good thing to take note of. Then we're going to talk about neural networks for NLP.
+
+We're going to talk about word embeddings.
+
+Uh, starting with word to back then we're going to talk about recurrent neural networks and Lstm and share you architectures.
+
+And then finally we're going to talk about an NLP implementation.
+
+For those of you who want to get a head start on your model project, any questions here on the topics we're going to be covering today?
+
+Okay. Amazing. All right. So here we have an overview of all of the different applications of NLP.
+
+Uh there are many of them. So we actually have two pages of this.
+
+Um so search um, so you may not think about search, but uh, search engines like Google and Bing, um, use NLP, uh, any type of machine translation.
+
+So like Google Translate here are translation apps you might use.
+
+Those are using NLP in language processing uh, spam tagging or sorting articles, which we call text classification.
+
+These are going to be in NLP, sentiment analysis, market research, behavioral studies, social media analysis all fall under NLP.
+
+Um, this is actually a screenshot from a fun project that I did way back in the day,
+
+where we did market research for a, um, company that did, uh, clinical marketing.
+
+So marketing of like pharmaceutical and medical type products.
+
+Um, and they were looking at like customer reviews and wanting a sentiment analysis.
+
+And we use GPT two for this file.
+
+Right. So retro okay. And then text similarity.
+
+So we've used a plagiarism checker uh like this one by Grammarly.
+
+Uh then you've also used NLP. Topic modeling is where we auto tag web articles or we tag attributes and product reviews.
+
+That's considered topic modeling, NLP, uh, Q&A, uh, chat bots.
+
+Uh, this is a chat bot I created for a company uh, back like pre pre rag being a thing.
+
+But like we did a RAC implementation here which was very fun text summarization.
+
+Um, so if you've been on Amazon and seen these like Amazon review summaries, um, this is an example of text summarization text generation.
+
+So think ChatGPT Gemini. We're pretty familiar with text generation at this point.
+
+That's all NLP. And then finally, um, and we'll talk a little bit about this next week but multimodal.
+
+So when we have applications that combine text and images or other modalities, things like multimodal limbs, um, this is considered multimodal.
+
+So I call it like NLP plus. So it uses a lot of the um, architectures that we're going to talk about for NLP.
+
+But then it also applies it to other types of data. Okay.
+
+So let's talk about representing text. So I have Bank of the River.
+
+And I want to represent the word bank in bank of the river.
+
+How am I going to do this. I need to convert this into a number.
+
+Right. And in images this was pretty easy because we just took every pixel and we said, okay, well we know what red, green and blue is in this pixel.
+
+And so we're just going to have this very large matrix where each pixel is given a red, green and blue value.
+
+And that is the number that represents our image. But how are we actually going to represent text.
+
+X is a little tricky. Because bank of the river here means something entirely different that deposited money in the bank.
+
+So we have words with different meanings or what we call covenants.
+
+We also have words with the same synonyms.
+
+Right? Right. Sneakers. Running shoes. Tennis shoes. These are words that are all different but have the same meaning.
+
+This is a fun shoe I got to work on at Nike. It's a, uh.
+
+It's a shoe that. I don't know if you can see the wires here, but it actually, um, like self laces.
+
+So you put your foot into that self laces. Um, and there's sensors in this shoe.
+
+Basically you like tap your foot and then it, um, will self wait for you.
+
+And so we built the tapping algorithm. So the algorithm that when you tap your foot twice it's going to solve place for you.
+
+It's pretty fun. Yeah. Did you work with, um, like the project?
+
+What's it called? Project runway or like the club that do that creates clothes for people with, um, physical disabilities?
+
+No. We did. Oh, yes. That would be really interesting. Yeah, that would be really neat.
+
+We we actually built this as our is a running shoe. Um, but, uh, this was during the, like, crypto craze.
+
+And so they took the shoe, like, because it was from innovation meant to be like this cool, like running shoe that could expand and contract.
+
+And, um, what they did was they turned it into like, a crypto shoe.
+
+So they have like a you can buy an NFT of the shoe, and then you got the real shoes in person, too.
+
+Oh, really stupid. But, um, uh, it's fun to work on.
+
+We also have observations that are not independent in text.
+
+Right. Our history really matters. So the dog ate the bone.
+
+It tasted good. So when we look at it here, if all we have is this sentence, it tasted good.
+
+We don't know what it refers to. We also have semantic ambiguity.
+
+I saw the boy on the beach with my binoculars.
+
+Just a little boy. Have my binoculars. Did you steal them from me? Or am I looking through my binoculars at a little boy in the beach?
+
+So lots of ambiguity in text. There's also slang and colloquialisms.
+
+That's no word to a sick joke. Is this, like, still a thing?
+
+Is like stick jump. Still like something that you guys use. But you not not you don't on your head.
+
+Everyone else. You guys still use this okay. And then acronyms.
+
+So master of engineering and AI which I guess is not API.
+
+So I'm gonna adjust this. Um, but acronyms right.
+
+Another challenge with text. My reinforcement learning folks know this.
+
+Right. Or acronyms are extremely challenging. And then we have variable length sequences for text.
+
+So sentences have different numbers of words. So do documents.
+
+Do they. Yes. And then sarcasm and humor.
+
+So how do we think about encoding sarcasm and humor in text?
+
+It's like you crack me up, right? Like there is, there's so many interesting, like,
+
+sarcastic elements and humor elements in text that make it very challenging when we're thinking about representing it.
+
+So how are we possibly going to take a word and represent it in its totality as a number?
+
+So let's start with doing some text pre-processing. And so this is our pre-processing pipeline.
+
+We're going to start with raw text over here in pink. We're going to do something that we call tokenize the text.
+
+Then we're going to remove stop words and punctuation. We're going to do something called lemmatization or stemming words.
+
+And then we're going to put that into our model. So we're going to talk about this pre-processing pipeline okay.
+
+So first is tokenization. And you all that probably through ChatGPT lingo heard about tokens.
+
+I've heard that tokens are basically words or subwords, uh, tokenization.
+
+Uh, what it does is it's going to divide text strings in terms of substrings, and it's primarily going to split text on white spaces and punctuation.
+
+So for example here, which class is the best class that do deep learning applications.
+
+The tokenizer model comes here and we see each of these individually is then uh
+
+given a token uh because we're splitting based on whitespace and punctuation.
+
+Or we could do tokenization in a lot of different ways so we can tokenize by word.
+
+So you can see here where each word is a token.
+
+We can tokenize by sentence. So each sentence can be considered a token which is where we have here we can tokenize by words.
+
+So like token and ization here. Or we can even tokenize by character.
+
+I don't know why you would do that. Maybe something that has a lot about pronouns.
+
+Um, but it is possible to tokenize by character.
+
+So for you all, you're probably going to be working with some kind of pre-trained model.
+
+And so you're going to want to use their tokenizer.
+
+You're probably not going to have to create your own tokenizer from scratch if you're using a pre-trained approach.
+
+Um, you're going to use uh, one of their tokenizer.
+
+So for example, if you're using Bert, you're going to use the Bert tokenizer because that's what was used to train the model to retrain the model.
+
+And if you use a GPT model you're going to use a GPT tokenizer.
+
+Okay, so now you've got these tokens. So now what we're going to do is stop with removal.
+
+So a lot of common words are going to add little value to our understanding of a sentence or document.
+
+So we're usually going to remove these. So our model can focus on words that matter.
+
+And if you look in the undoubted corpus um these are all of the English stopwords.
+
+So you can see words like when we're into just don't show.
+
+Now these are all stopwords.
+
+Um, for the Nltk corpus. And then we can add our own stopwords to a list to remove them, depending on our task.
+
+So we can create our own stopwords if we don't want to focus on them.
+
+So here, for example, we've got um, the tokens that we saw before, which allows us to do different applications.
+
+We're going to remove Stopwords so that it becomes which class, best class due to deep learning applications.
+
+So we're gonna remove all of those stopwords. And then we're going to do something called lemmatization or stemming.
+
+So when we think about, um, uh, words, oftentimes we're going to have a word that has a similar meaning.
+
+Um, but we have all of these different versions of that word.
+
+So a common challenge is identifying the different forms of a word refer to the same thing.
+
+So things like words. So we're going to replace the words with that root to reduce complexity.
+
+So we've got branch branches branching branch. We're going to replace all of those just with branch because they have the same meaning.
+
+Now there's two ways to do this. So we've got study. This is going to reduce fruits to their stem.
+
+This is the part to which we add a suffix even if the stem is not an actual work.
+
+So important note for study. It's crude. Um, and it is fast.
+
+And then we have lemmatization. This is slower, but it's usually better.
+
+We're going to reduce the words to a normalized form through a mapping dictionary.
+
+So we actually create a dictionary that we mapped words to.
+
+And um we are going to map a word to that dictionary.
+
+And then the normalized form I'm like stemming where it's not doesn't have to be an actual word.
+
+It's actually a word. So let's take a look at what this could look like.
+
+So we've got our original words up here. Change change. And changing Stem would be like changing which isn't an actual word.
+
+And my nose would all be change because those would all get mapped to change in our mapping dictionary.
+
+Similar. Here we have original words is, am, were are lemmas.
+
+They're all going to get back to be our stems are going to stay the same is Am and work.
+
+Okay. So let's talk about a couple of ways to do traditional natural language processing without using neural networks.
+
+So the simplest approach is back and forth.
+
+And this is where we represent text by the frequency of each word.
+
+And we disregard order and context entirely.
+
+So we convert our text into a fixed length numerical vector.
+
+We're going to count those word frequencies disregard grammar and word order.
+
+And this is going to allow us to create a vocabulary from all of our unique words in our corpus.
+
+So let's take a look at an example. So here is our corpus of data.
+
+We have positive reviews and negative reviews.
+
+Positive reviews are like wonderful fantastic acting, negative reviews, bad acting, horrible plot.
+
+All right. So we've got positive reviews and negative reviews. And then we have a vocabulary.
+
+So we take the vocabulary. So obviously after removing Stopwords we take our vocabulary.
+
+Um, and uh create. And you can see here it's in alphabetical order.
+
+So we start with acting. And right here these are all the unique words in our corpus of data.
+
+So in all of these positive and negative reviews and then what we're going to
+
+do is we're going to count the frequency of each word in each of our reviews.
+
+So for example, great movie, amazing, amazing plot, amazing shows up twice here.
+
+So we're going to put a two for a meeting here. And then we can see that we have great is one.
+
+Got movie is one and we got plot is one. So why are we here?
+
+We have worst ever movie ever made. And here in ever, we're going to put a two and we'll have one for me movie and then one for worst.
+
+It's going to give me the frequency. Um, those unique words in our review.
+
+And then of course we have our labels. Right. One being positive sentiment.
+
+Zero being negative sentiment.
+
+And now what we do is we just train our traditional model, something like Naive Bayes, as a sentiment classifier on our review vectors and labels.
+
+Right? Because now we have vectors. These are inputs.
+
+And then we've got our outputs which are those labels. So we've converted text reviews into numbers.
+
+There's a little bit of an issue here in that bag of words over emphasizes common words.
+
+So, for example, in all of these movie reviews, almost a bunch of them talk about movie, right?
+
+Like they have the word movie in them. And so these common words that don't really matter to the overall sentiment can get overemphasized.
+
+And so we introduced Tf-Idf which is term frequency, inverse document frequency, which is quite a mouthful.
+
+And what it does is it's going to capture how important an award is to that specific document, where more occurrences mean that it's more important.
+
+And this allows us to reduce the weight of common words that appear in many documents, like movie and words that appear frequently in one document,
+
+but are rare across all of our documents, are going to get our highest tf IDF scores.
+
+So let's take a look at this. Okay, so we've got our bag of words up here.
+
+Remember that great movie amazing amazing plot where we got two for amazing.
+
+Uh, we've got one for, um, movie.
+
+We've got one. Ah great movie. And then plot. Okay.
+
+So for tf IDF here's an example. So my TF term frequency.
+
+This is our bag of words right. It appears two times. And then I'm going to do my IDF part.
+
+So I'm going to take the log of how often it appears out of document.
+
+So it's a log of six out of one because it's appears in one out of six documents.
+
+So two times log of six is approximately 1.56.
+
+And so that's what I'm going to put here instead of 21.56 movie.
+
+Remember I had a TF of one with that one here.
+
+Um, and so I'm going to have my IDF and it appears, uh, in two of my six documents.
+
+So I'm going to have a log of six out of two. So my tf IDF equals one times log of three, which is now approximately 4.48.
+
+So you can see here that we are de-emphasizing those words where it shows up common way across our
+
+different documents and trying to emphasize more those words where it appears in that document more often.
+
+So we still have some issues here, right? Um, so Tf-Idf is great.
+
+It's used in a lot of different applications. However, we've still got problems.
+
+So we lose negation, right? Not good. Well not good, not in good.
+
+Our two separate words. So they're going to count differently in our um in our vector.
+
+Right. So not good counts. Good as positive which is can make training kind of challenging.
+
+And then we also lose word order like terrible acting. But great plot could be misclassified.
+
+Because we're losing the order of our words here.
+
+So we introduced n grams and n grams.
+
+We used to capture sequences of words. So we can do unigram.
+
+These are regular bag of words where we have one word. But then we have bigrams.
+
+And these can be two word sequences like great movie or movie, amazing or amazing plot.
+
+And then we can also do trigrams through word sequences. Great movie amazing or movie amazing plot.
+
+And so you can actually basically group these words together and use the same approaches that we did in Tf-Idf.
+
+So here is an example. This is a sentence. This is a sentence.
+
+These are unigram. Um if we have n equals two this is is a sentence are going to be are bigrams.
+
+And then if we have our trigrams this is a and is a sentence or our trigrams.
+
+Questions about engrams. Does this make sense?
+
+Why we try to capture sequences of words rather than a single word at a time?
+
+All right. Let's let's talk about Hidden Markov models.
+
+Another traditional non neural network based approach um hidden Markov model is to do is learn about these in John's class.
+
+Yes. Cool. Amazing. So I don't have to go through these super in-depth.
+
+But just to give you guys a quick review, um, this is based on Markov chains.
+
+So hidden Markov models based on Markov chains. Here is an example of a Markov chain where depending on the day.
+
+So this is a cloudy day rainy day or sunny day.
+
+What's the probability of what the weather is going to be that next day.
+
+So if it's sunny today there's a 50% chance it'll be sunny tomorrow.
+
+A 10% chance that it'll be rainy tomorrow, and a 40% chance that it'll be cloudy tomorrow and then cloudy.
+
+Right? 10% chance that it'll be cloudy tomorrow. If it's partly cloudy today, a 50% chance it'll rain and a 40% chance that it'll be sunny.
+
+So to predict tomorrow's weather, we need to know the probability of each possible sequence.
+
+Right? Um, so let's simplify it and just do ratings done here.
+
+So we have these transitions where you are going from rain to sun.
+
+But if you are raining today and it's sunny tomorrow or it's raining today and leaving
+
+tomorrow or sunny today and rainy tomorrow or sunny today and sunny tomorrow.
+
+So then we have our data. So we're going to collect data and look at sunny days and rainy days and these transition states.
+
+And now we can look at our transitions. So if we look at the amount of time to go from sun to sun this is seven.
+
+We look at the amount of time to go from sun to rain to room to rain.
+
+So to rain that is three. We look at how many times we go from rain to sun, rain to some sun.
+
+That's two. And how many times you go from rain to rain?
+
+That's three. So two out of five is point four. 4 to 5 is point six, seven out of 10.7 and 3.3.
+
+So then from that we can construct this Markov chain where sunny.
+
+If it's sunny today, it's going to be sunny tomorrow. That is 8.7 probability and 0.3 probability that it will be rain.
+
+And if you look over here in the rainy category, it is 8.4 chance it will be sunny to that and 2.6 chance that it is going to be rainy again tomorrow.
+
+So this is how we construct Markov chains. But we can't always directly measure our observations.
+
+Sometimes we have to infer them from other variables.
+
+This happens a lot in real life, but we can't just make the observations or cells.
+
+And so what we end up doing is we have our observations.
+
+And then we have our Markov chain which is going to be unobserved. So for example, what if we don't know the weather.
+
+So we don't know the weather over in BigQuery now.
+
+I've no idea what it is. And for some reason we can't open up our app and look at it.
+
+So we don't know what the weather is there, but we're trying to model it. But we can't observe our friend's emotional state.
+
+So our friend calls us and we can observe their emotional state to see what the weather is.
+
+So we don't know the weather, but we can observe our friend's emotional state. So we can combine both transition probabilities.
+
+So the likelihood of a given state continuing or changing, and the what we call the emission probabilities,
+
+or the proximate data sources that can help us determine the hidden state.
+
+And then we can estimate the most likely hidden state and state secrets, as if we know what our friend's emotions is.
+
+And the probability of our friend being sad.
+
+And then therefore it being sunny, or being rainy or being cloudy.
+
+Then we can make inferences and we know what the transition states are here.
+
+We can model that hidden state in state secrets.
+
+And what we can do this uses for is text generation.
+
+So if you're going to be doing any type of text generation, you're probably going to want to use a hidden Markov model as your traditional approach.
+
+Hidden Markov Model predicts the next word because it's just a sequence of predicting that next word.
+
+And this is in German text generation trained in the novel Pride and Prejudice.
+
+Anybody read Pride and Prejudice seeing the movie?
+
+Well, okay, it's like Bridgerton, but for old people. Okay. Um, so Pride and Prejudice, uh, if you start to read this, you get a little bit confused.
+
+Right? There is. So we start with what we give it one word for one token, and we say love.
+
+And that's where we start. Right. And so I give it love. And then it's conveyed him and his five cousins at a suitable hour to marry.
+
+Ten. And the girls may go or you may send them by themselves.
+
+You know, uh, Elizabeth was distressed. She felt that Jenny is feeling she is not half so handsome as Jane, nor half so good humored as Lydia.
+
+Okay, so we kind of go on and on, and you can see there's no punctuation here.
+
+We've got some random tokens thrown in here. We've got like 80 hats throughout here.
+
+Um, and so it's not great.
+
+And just for, for fun, um, I used, uh, the Google video model, um, in order to create a video based off of, um, just a few lines from this.
+
+Customer contact does not suit my feelings. Why was he to be the judge?
+
+You are then resolved to have you. I have two small famous to request improvements or thoughtlessness in money.
+
+Matters would be unpardonable in me. But I knew not. I was afraid of doing too much.
+
+Wretched, wretched mistake. I don't know, you know.
+
+We got the hidden Markov model. This provided the script. We've got video that's providing the video is a wild time.
+
+Are people who think that the movie industry is going to be disrupted by this stuff anytime soon?
+
+I don't know, uh, not with Hidden Markov models, anyway.
+
+Um, okay, so we've got some issues here with our traditional approaches.
+
+Our traditional approaches don't take into account any contextual information, right?
+
+No contextual information. And they don't address many of our challenges like homonyms and synonyms.
+
+You might still use traditional methods, right? They're computationally inexpensive and easy to implement.
+
+So you might use it if you're in a resource constrained environment. Uh, the context may not be necessary for text classification or text clustering.
+
+So you might use a traditional approach if you're just trying to do some kind of like spam, not spam classification.
+
+You can do that pretty robustly using traditional approaches.
+
+And you don't have to jump into deep learning approaches to do that. Questions here.
+
+All right. Let's see what we got. Okay.
+
+So we're going to talk a bit about then some neural networks for natural language processing,
+
+starting with word embeddings and starting with the simplest word embedding word to back.
+
+All right. So let's talk about representing text.
+
+And let's talk about like a naive approach to doing this. So um, you know we have our naive hats on for our module projects.
+
+Right. Like something really, really simple. So if we were to do something really, really simple, let's go ahead and do this approach.
+
+And so we've got a corpus I like cats. That's my whole vocabulary.
+
+Okay. So um, we have three numbers that represent our vocabulary here.
+
+And do we have three dimensions I'm liking cats. In a larger corpus,
+
+we're going to have hundreds or thousands of dimensions where each dimension
+
+is going to correspond to a single word or phrase from my training corpus.
+
+So this is going to get massive, right? There are 470,000 words in the Standard English dictionary.
+
+So if you're going to naively encode this for a bag of words approach, right, you would have 470,000 well on vector.
+
+Well what would that do to your computational load resources.
+
+470,000 turn vector when most of them are zero and only a few are ones.
+
+Probably wouldn't do so great. There's the answer.
+
+So what we want to do is actually encode something about the meaning of the text, rather than each word itself.
+
+So when we put Bank of the river and we're trying to encode the word bank,
+
+this number must represent some kind of meaning and provide meaning, including context.
+
+So what we want to do is map it into a multidimensional space of textual meaning,
+
+where each dimension is going to correspond to some aspect of meaning.
+
+And that's where neural networks come in. So this is word embeddings.
+
+And word embeddings are we learn a compact representation of the original data capturing the essential aspects, capturing that meaning of the words.
+
+So here we capture semantic relationships make it possible for word with similar meanings to have similar representations.
+
+This allows us to do dimensionality reduction. So instead of 470,000 terms in our vector, uh, we can have something like 512.
+
+But reduce the complexity of our text data allows us to capture those semantics encoding meaning based on word usage and context.
+
+And then we can use distance measure.
+
+So we can use math to query our embedding space, which is really fun because similarity and meaning often correlates with proximity in vector space.
+
+Not always, but often. This is a really cool visualization.
+
+And so then these are all of the captions from the Lion Esthetics data set.
+
+So that's where they went. And I scraped a bunch of images from all across the web.
+
+And then they have captions associated with all of those images.
+
+So we take that. And so we take all the captions from that with a um, some kind of threshold score of quality.
+
+Um, so it turns out it to be 12 million captions.
+
+Uh, and then we embed them using, um, an embedding model called clip.
+
+Uh, and then what we did was we did a dimensionality reduction technique because clip.
+
+Well, depending on the version of clip is like 512 dimensions.
+
+So have a vector that's 512 dimensions. And then we are representing it in 2D here.
+
+So we do a dimensionality reduction technique called you map,
+
+which I think we talked about in 510, or at least for the two of you who watch the videos.
+
+You learn more about you map. Okay. So here we have all of these different clusters.
+
+And what's really interesting here is that even in this 2D representation, we get this 2D compressed representation of our original 512 dimension.
+
+We still see that things that are similar are close together in in space.
+
+So here we have places, right? We have Europe and China and Himalayas that are all clustered here.
+
+Here is houses that we've got kitchens that are close to dining rooms.
+
+And so for us over here we've got people in clothes, we've got men's clothing, clothing and women's clothing and K-pop.
+
+Um, I like food up there. You see that little tiny cluster up there for food?
+
+Um, I think that's really fun.
+
+But this is really fascinating because you can see we are these spatial dimensions allow us to actually map spatially the many,
+
+uh, different concepts emerging.
+
+Um, in the Stopwords list.
+
+Previously I saw that words like, I mean, people who look like what happens if they, like, don't exist in the embedding space.
+
+It's a great question. Um, and so. Stopwords are used a lot for traditional approaches.
+
+Occasionally you will use stopwords for some of these more neural network based approaches, but a lot of the time we just like encode all of the crap.
+
+Yeah. Good question. Yeah. Was this images and text because it's clear this was just text.
+
+Okay. Yeah. And like it seems like there's more like detail and more like meaning in signal in text than images.
+
+So is this easier to do with text or with images?
+
+It's actually the same if you're using clip because you have the same embedding space, right?
+
+So you take a picture of a dog and you take the word dog.
+
+And essentially those should be mapped to the exact same number in embedding space.
+
+Okay. But like in general, is it easier to like embed meaning in from words or from like images?
+
+It's really just a shame. I think it's not even necessarily that it's different, right?
+
+It really it doesn't. To a machine it's just numbers.
+
+So we can say, oh, well, you know,
+
+it's it's more challenging in some ways to do text because of all these hidden meanings and these colloquialisms and slang.
+
+And you have to constantly be updating your embedding model. But then in images there's a lot of new words and images.
+
+Right? And so that makes things challenging because, you know, you might have most of the picture is a cat,
+
+but then there's a tiny little dog in the background, right. So where does that get embedded.
+
+It gets embedded closer to Cat, but still with some dog meaning.
+
+So that's where things get a little bit funky. So practical limitations.
+
+But in terms of the machine from a numbers perspective, it should be the exact same.
+
+Have you got a clean picture of a dog and the text word of a dog?
+
+Those should map exactly the same. And that's the whole idea.
+
+Thank God and we will talk more about that.
+
+I think next week. So to create all of this, like what does our data set actually look like?
+
+Okay. So this is a very simplified version of what what we do.
+
+But we we have our a sentence. Let's say deep learning is very hard and fun.
+
+We've got a target word. So we're going to basically slide this target word throughout our sentence.
+
+And then what we have are these blue context words around it.
+
+And so here we have two context words on either side. And so we're going to grab those context words.
+
+So we pass an end context window through a corpus of text data.
+
+And we find all pairs of targeted context words to form the data set in the format of target word and context words.
+
+So our data set becomes we've got target words. And then we have their associated context words.
+
+And we don't just do this on one sentence, obviously. Usually these are corpuses of books or the entire internet.
+
+Um, but all of this information, we just passed the context window over.
+
+So word to back came out in 2013. So a while ago this was a shallow neural network architecture.
+
+And our vectors encoded semantic and syntactic word relationships.
+
+And what this allows us to be able to do is really cool arithmetic operations on words.
+
+So things like queen and king and woman and man we take queen, uh, we subtract woman and we get king or king subtract man and get queen.
+
+As you can do all of these, like really interesting, um, things you can look at,
+
+like the distance between queen and king here should be the exact same distance as between woman and man.
+
+So how do we do this? Well, it's a single hidden layer neural network.
+
+So extremely simple. Much simpler than a lot of the models that we talked about in computer vision.
+
+We have one hidden layer. So you got your input. You got your output at one hidden layer, the input layer V one hot encode vectors.
+
+So basically we are just taking a one hot encoding right.
+
+We're not encoding meaning that if you have, you know, 20 words in your dictionary and then your vector, uh, is 20, uh, words long.
+
+And for each time a unique word is, it's going to be a one in there.
+
+And so what I encode our vector is to our vocabulary size.
+
+Then we have our hidden layer. This is our dense linear projection.
+
+We call this AR embedding dimension. So we are taking those one hot encoding vectors.
+
+And we are compressing them into a dense linear projection or embedding dimension.
+
+Our output layer is just a softmax over our vocabulary.
+
+And uh we use this is important no nonlinear activations between layers.
+
+So unlike a lot of the neural networks we've talked about so far, we're actually not going to be using non-linear activations between our layers.
+
+So then the weights between our input and our hidden layer, those become our final word embeddings.
+
+So those weights themselves. There's two different training methods forward to back.
+
+We have skip gram and we have continuous bag of words in skip gram.
+
+We're going to predicts context words given the center or target words.
+
+So we've got our target word here. And then we are predicting our context words for our output.
+
+This is better for very rare words. And it works better with a small training data set.
+
+And then moves word to back. Implementations use continuous bag of words or cbow.
+
+This predicts the center or target word from the context.
+
+So you put this input the context words and then as an output you want to have that target word.
+
+So cbow predict current word based on the context words.
+
+Skip gram predicts around two words given feed current word.
+
+So here our input. Our words are one. Hot encoded vectors right.
+
+They're sparse and very high dimensional. Um, right. We talked about 470,000 words in the Standard English dictionary.
+
+So they are extremely large high dimensional sparse vectors.
+
+And then we have our embedding layer which is going to transform these into dense lower dimensional vectors.
+
+This is the architecture, right? I told you. Super, super simple here, right?
+
+Input is. Our words are one hot encoding vectors.
+
+Um, and our embedding layer is going to transform these into dense lower dimensional vectors which you can see here.
+
+And what we're trying to do here is predicting the probabilities over our vocabulary.
+
+So we have uh, 7834 tokens in our vocabulary.
+
+We're basically doing a softmax. Right. We're saying what's the probability of each of these vocabulary words being the next word?
+
+Okay, so we've got a lambda layer here which is going to average our context word embeddings.
+
+Right. Because we have all of these context words. They're going to come in. They're going to have their own embeddings.
+
+And then from those we need to average those in order to provide it to our dense layer.
+
+And our continuous bag of words is going to assume that all of our context words contribute equally to predicting the target.
+
+This isn't if you're like, that doesn't seem exactly right.
+
+Well, stay tuned for next week because enter transformer architecture.
+
+We average the averaging then creates a fixed size representation that regardless of our window size because we're averaging it.
+
+And then it helps us capture that general context rather than those specific word positions.
+
+It makes the model more robust to word order variations.
+
+So that's why we have this lambda layer here. Our dense layer just acts as a classifier right.
+
+This is just a classifier. Over our entire vocabulary we're using softmax here.
+
+Our each output is going to represent the probability of that word being the target word.
+
+And then we're going to do training via back propagation, just like we did with our neural networks.
+
+Back in our interest in neural networks. Um lecture the model is going to learn our optimized embeddings for all of the words in the vocabulary.
+
+And then for laws were typically going to use a categorical cross entropy loss for this one.
+
+Okay, so how do we actually get the embeddings then? How do we get them out of here?
+
+Um, well, we actually just directly extract the weights of our embedding layer.
+
+So those weights become our word embeddings. And the only reason we can do this is because we are not using non-linear activations.
+
+So this is an entirely linear process. No non-linear activations at all.
+
+Um, and so we can just pull out those word embeddings, um, as our weights.
+
+Now, Doctor Beck is very similar to word to back continuous bag of words.
+
+We're just going to add a paragraph vector to the inputs to capture the topic of the paragraph or document.
+
+So in addition to a normal bag of words, we add a paragraph id.
+
+So then we start to learn where it's kind of located in that document as well,
+
+and helps us capture the topic of the paragraph or document in our main.
+
+So a year later, blow you out. I'm not going to talk a lot about blow because it's not actually a neural network based approach.
+
+Um, however, some of you may use this. Uh, it's often used as input into a neural network.
+
+So some of you might use this. And I just wanted you to be aware of it.
+
+That flow is a matrix factorization based method for learning word embeddings by analyzing word co-occurrence statistics.
+
+And it uses a log by linear regression model. Um, so traditional approach um, doesn't use a neural network.
+
+However, this might be something that you provide as input to your neural network.
+
+All right. And we are going to take a quick ten minute break here and come back to talk about recurrent neural networks after.
+
+To arrive. Early in the season, show up for some food, art and if you can come up with negatives.
+
+Right off the. But thank you for uh, and, uh, um, um, nice.
+
+Well, well, no to another.
+
+Graphic saying oh, I'm sorry. Yeah. I'm sorry.
+
+Oh, no. We to say we I mean, why not just because we have.
+
+Did you see the show on the project? We did. Okay, so it's easier.
+
+Uh, yeah. A little bit of worry about this.
+
+I have no idea about that. So we're, you know, we like to talk about, you know.
+
+Yeah. I don't even remember what I've done, so, you know. Yeah.
+
+Stuart's not going to know about it because I did all this video, so I'm happy to chat with you.
+
+Maybe after this entire team is hearing know this kind of work thing.
+
+Oh, you tried okay, but nothing's changing except, oh, you have to log in to the website and, you know, whatever.
+
+And then there'll be another time. And there's no argument there.
+
+Absolutely no argument. It's it's fine. Yeah. It's just we are seeing like 4.6 to something and we still do so much higher now.
+
+So don't skills for some reason we're like or uh, it's not important to me.
+
+Like I was asking us like it just came up. So much so that it's not even on the side of money back.
+
+I feel like you can literally just kick out of okay, because I, like you said that you, uh,
+
+she's not optimizing her time, but, um, um, yeah, it really does show the skills are different.
+
+Yeah. So don't even bother. I actually paid the entire time.
+
+So the question for like, oh, I'm glad about it, yeah, I remember, let's go.
+
+Yeah. You're right on the box. Well, yeah.
+
+How the help you? I just don't know. I didn't know I was so excited to work with the first time ever.
+
+Because. Because I already did that. That's seven years. I, uh, I already I have the skill, right?
+
+No worries. I'm just after all, that's on our project. So it's like, oh, I like you stuff on this.
+
+I didn't think I like this. And it's something that I've been working on.
+
+Yeah. Um, yeah, yeah. This is why I don't understand about this.
+
+Another. Oh, I they had my back. You messed up in some way.
+
+No, I didn't do anything. That's all I'm saying here. Like, why do you think this attitude project is 84.50?
+
+And this is I also I think I mean that's like the median wasn't 70.
+
+I think what you mean was because you have people there, you can always watch the recording.
+
+That was this was a thank you. See I think oh thank you so much.
+
+You know I on how is that possible going to get a point that I mean yeah you're good.
+
+You're going to get more points back than that. I mean what do you have next to make no sense.
+
+And but it's here. But I don't think it's it also, you know, it's just a question mark by the way.
+
+It's a question mark. Okay? I [INAUDIBLE] up a lot of people.
+
+I thought I was going to get like three people. So I can help you set it up.
+
+But you do want to make, uh, an account so you can see this has like a mean average position of zero points.
+
+On that question, I could I going to do is go some way.
+
+What else? I got zero points on the contribution of uh mathematician.
+
+Which one you ask about the euro I said I got the zero and now, you know, start with.
+
+Zero points. That's crazy. No. Uh, yeah.
+
+What? The phone number. Where we can actually do 81 plus ten.
+
+Another one. Uh, not going to. Didn't work. Why would you do that?
+
+Oh, it's so funny. I'm like, the stupid lot of people are.
+
+All of us. People are kind of [INAUDIBLE]. I still go look at this for everyone.
+
+Oh, except for that one. I just realized, oh, yeah, I realize I realized that later.
+
+Uh, that's all I got. I got money, I have a house, so.
+
+Well, I'm the first to, uh, actually look like a plus or minus.
+
+You know, uh, I was about, like, one, but I had.
+
+I thought about this is. Well, I guess a lot is done right now because they're watching summit 4.6.
+
+So I mean, you've got to run a few lines each day, but, um, I'm, I work quite well.
+
+So how do I. Oh, oh, I need to see I didn't stop I didn't say yeah, but even I do.
+
+So if you want, you can want to change something. Oh I, you like not.
+
+Um, I was saying in the morning when I woke up and I thought it was right.
+
+Yeah. Oh, my God is the opposite. I've never passed an exam.
+
+Ever. I was not a good teacher. Yes.
+
+I'm going to look at this now using the API one. It means I just don't even bother.
+
+I didn't even try. Yeah, yeah, that's what I, uh, I don't, I don't bother anymore.
+
+Like, I could study, like ten hours. I'm so annoying at the same grade. That's impossible.
+
+But I promise you, I. This exam was not. I guess he's I don't remember, like this node stuff.
+
+There's no, like, application. You know what this thing is? And you write it, right?
+
+Um, no, uh, it's going to allow them to, but you can't say, like, if you study for ten hours, that's impossible.
+
+No, I can't, it's I oh, how do you think my undergrad. I'm going to say I don't want it.
+
+I think you go. Yeah. If you just leave it I said yeah, yeah.
+
+Oh ten A lot of study here. I'm telling you that we faster might not get on YouTube.
+
+Yeah. Interacting with a special Tesla. I always just like doing cheap stuff.
+
+Like noise. Yeah. Like almost just us. Um, we'll see you for the next half hour, and then we see the difference.
+
+If I'm worried about it, I would probably just.
+
+I mean, yeah, every single thing you're talking about is, uh.
+
+This. Yeah, I know what you're talking about. It. It's literally fine.
+
+Right? That's what I was going. Yeah. Sam, I don't want to over study.
+
+That's why I was so nervous. Because, uh, it's not important to find out this is a basketball game and science drive.
+
+I guess I'm like, oh, I'm the one point guard I can.
+
+Actually, I'm actually way below. Yeah, there I was like, freaking out.
+
+But then like, we just like, wait, it turns out somehow, I guess.
+
+Yeah, that's my office, I guess.
+
+Oh. Right there. Oh, yeah.
+
+Did you fly somewhere? No, no, no, that seems like something you would do is go off to, like, I don't know, London or something.
+
+But, um, one of your, um, gets lost at Chapel Hill with a dagger, I see.
+
+Yeah. That's something it's going to be, um, like a really weird, like a picture of this right now.
+
+Yeah. It's, like super awesome. How has the weekend?
+
+Because it was Saturday. It ended Saturday. Yeah. So, yeah.
+
+Kind of. My mom went home on Sunday. Uh, yeah.
+
+So that was. You should be the thing. But she's here now.
+
+So there's two. So there's two types of notes.
+
+There's two types of text you create. So I'll just look for example. So there's I mean it's just like the idea you know she she's up.
+
+And now then you create subtext which you probably want to do like possible.
+
+Um, um, and you do it with two quotes to get more. And then you can put stuff like in categories and so like computer vision and it's okay.
+
+And you can like the sentence generation. I have this obviously because I have, you know like mixed up for five.
+
+So yeah. Yeah. No parameters for the um either way though you probably if you like, I like, you know, if you don't like her then don't.
+
+But, uh, it's really funny because, um, just like asking.
+
+But the first question of this question is like, what have you written that you can.
+
+I didn't even know what I wrote like here. So you click add.
+
+All right. Here. It's like kind of the basic browse like this is where the bottom line.
+
+Is like all the parts. So yeah it was just one other thing that no wonder she didn't want to do it.
+
+Probably just leave it in vaults. Mr. Claffey, before this.
+
+So I counted. I'm 35, I.
+
+Oh, you have to create a. I mean. This is a really good place.
+
+To go. My mom and I used to always, I don't know, I always I was supposed to be.
+
+On there and thought that, like, we were, like, together. And so that's the cards.
+
+And you see my mom just like she's on that road. And so like, yeah, this is we did look like that.
+
+So then there's a lot of moving.
+
+And so personally I have my team all set up here.
+
+This is oh oh so it like that's not accessible.
+
+Yeah yeah yeah. She was like she was. So I have my family which is great.
+
+Oh that's amazing. No.
+
+Like what is not making the move. Oh yeah.
+
+So we can't say oh that's fire prevention.
+
+I actually have no principles. Oh, I didn't know they all.
+
+Well, that's great bro. I don't even know why you're doing what it.
+
+Yeah I don't remember anything. It though the you know what is that I would have actually done.
+
+This is what they take a leader or anything else.
+
+Yeah. Thank you I do. Yeah. My other sister, she still lives in. This is not.
+
+Huh. I don't I get I did a couple weeks ago.
+
+Oh yeah I was like this is crazy. Like like just one more for two more people.
+
+Like yeah, I just remember it like, we are in the North.
+
+Like there's like a like. Well. I'm like this choir.
+
+We're just like people up to me like, oh, yeah, it's up to the.
+
+It was like I just came and I was like, pretty well.
+
+And then five steps and it was six.
+
+I've no idea what I was. I guess because you're in like, oh yeah, yeah.
+
+How are you guys? It's cool. It kind of reminds me of the think the very similar about we got like you might have just like the Tasiast.
+
+Right. So what are you making up? I don't like it.
+
+Oh, the psychic says that I was also a chain link. No, no, no, you have my colleague.
+
+Yeah. So that's what I do is I was like, I know I was like, all right.
+
+Yeah. Yeah. I was like, all right.
+
+I guess I got to push aside all the other stuff in addition to all of the things that you do and give up and not of us,
+
+unfortunately, because we did stuff like using the directory feature extraction, which is what you get with, uh oh, it's just 1.6.
+
+So, uh, the problem, the system problem thing. Magnolia. Yeah, yeah, yeah.
+
+It's like I was like, I don't we all but also I think like that.
+
+Yeah, I yeah, we did like a 15 minute vague.
+
+And for him she was like, you have to how you to um your role in order to do things on the horizon with me as well.
+
+I think the most points for you would be like like, yeah, it's just like, wow, this is this for me.
+
+You grow to become a psychic, you know? Yeah.
+
+Oh, I was like, I don't go to sleep, okay?
+
+Like dead or something, like stupid, bro.
+
+Like, there's not always having someone I don't know.
+
+If it is worth paying more for the like. Yeah. Yeah.
+
+You know. Yeah. I was like, hey, how did we get here?
+
+So the way you actually do it easy. Go to settings for like okay.
+
+And then capabilities and then you can add a lot of skill.
+
+Unfortunately it's just broken right now. You know I might actually do it because I feel like I'm like yeah.
+
+Hey. Oh. Oh okay. I'll work for you. I always wanted there you go for lunches.
+
+Yeah, it's working, at least for you. So actually now you can do things like go ahead and just say welcome to chat.
+
+I know I've been awake at night. Uh, actually, I skipped all my classes.
+
+I didn't want to go for the games. Um, I didn't bed, so, honestly, I didn't want to go to class.
+
+Yeah, that's what I like to do. The point? I miss my accent.
+
+11 days about nothing on my phone is not wanting to go right.
+
+Everybody and just saying what part of fiction, nonfiction, fiction is letting my family down?
+
+Yeah, I mean, I like I like reading about them.
+
+I don't even know if it's probiotics and something that is on my to do list recommended, but to get in that for the reinforcement learning class,
+
+like somebody would be like really into robotics, I would do something like by proxy, I would have to learn a lot about it.
+
+I'm so hoping for that. But yeah, and you know, I go on these like little tangents and I'm like, I want to learn everything about this.
+
+Yeah, but I don't have time. And it's very upsetting. Yeah.
+
+So what, your graduate student take advantage of the time to like, just learn about all this random stuff.
+
+But yeah, just walking to the Colab jewelry shed, you should chat with Jared or chat with him.
+
+Sure, sure. Yeah, yeah, yeah, I know you.
+
+He could probably point you in the right direction if I see things.
+
+Yeah. When I came here, I was like, I should do a masters in robotics.
+
+And I was like, I should do a masters in Computational Arts.
+
+And it's like, I want to get an MBA. So you can see why I'm here as a faculty member, because I just have so many range of interests.
+
+All right, I'll talk about recurrent neural nets. So, so far, we have only looked at feedforward neural networks,
+
+where signals flow in one direction from input through our hidden layers to the output.
+
+So flows in one direction. In sequence models.
+
+So we're in talk about RNNs today. Subclasses of which are LSTMs and Grus.
+
+The output of a layer is going to be added to the next input and fed back into the state, where it's kind of weird, but it kind of looks like this.
+
+So we've got our input. We're going to spit the output out, but we're also going to, uh, put the, uh,
+
+output back into the input of our next part of the model, which is all the same layer.
+
+Which is kind of crazy. So this is how we typically drive. It's all rolled up here where we got our input and or output.
+
+And it's recursive like recurrent. All right.
+
+So feed forward what we talked about so far in the class input observations are independent of one another.
+
+So in sequences observations are closely related to their neighbors in time space.
+
+And by treating them as independent we're going to lose valuable information.
+
+So our ends allow us to retain information about history.
+
+So they allow us to start modeling some of these sequences, sequences which are very important to understanding in text.
+
+And so here we've got our recurrent neural network.
+
+We're going to put an input in here. Get an output.
+
+The output is going to go here and here back in to our neural network where we have our next input output.
+
+So on and so forth. And sometimes you'll see it drawn up.
+
+Okay. So what's happening inside. Okay. So inside it's pretty interesting.
+
+And this is a layer of a neural network even though it looks a little bit funny.
+
+So you kind of think of it as better one for to on its side. All right.
+
+So here you can see this is the output from our previous timestep.
+
+So from our previous timestep. So from here you can see y sub t minus one.
+
+And then we have x of t. That is our input at this particular time step.
+
+So x sub t is going to be multiplied by a weight. And the output of our previous y is a t minus one is going to be multiplied by the weight of y.
+
+And then we're going to add a bias here.
+
+And we're going to put that through an activation function of which in a typical RNN we have an hyperbolic tangent.
+
+And then the output of this hyperbolic tangent is then y sub t which then just gets added in here.
+
+Uh for our x of t plus one. And then we have y sub two here.
+
+And so this is the exact same thing that we've done previously,
+
+except now we've put the output in two places of our neural network so that we can add it in to the next stage of our net.
+
+And so there's the equation. So we've got the activation function right. That's our hyperbolic tangent.
+
+And then we've got weights of x times x sub t of our input plus weights of y wait times y sub t minus one which is the previous output.
+
+And then plus a bias of course. Now there are some variations of this.
+
+Oftentimes instead of wise here, if it's continuing in the neural net, you're going to see H's instead of Y's.
+
+So you'll see why is that T if it's been spit out. Back to the user and you'll see each city.
+
+But here each sub T and y city are the same thing.
+
+And why isn't teeth if we're going to outfit it? We usually put it through a softmax.
+
+That softmax then allows us to be able to do something with that information that is in this hidden state.
+
+Okay. There are many different types. So we've got our sequence to sequence.
+
+And this is what I just showed you. That's for example price forecasting.
+
+And so here you are trying to forecast a price.
+
+So you have a price here. And you're going to spit out a prediction for that price which is going to be added into uh as part of your next input.
+
+Spit out the price. And we go on and on.
+
+We also have sequence to vector. This is where we might want to classify something as spam or not.
+
+So we've got uh, let's say an email here. Um, and so we put in, uh, sentences from the email.
+
+And so a sentence from email here, we're going to get an output sentence from email here.
+
+No we're not showing the user the output until all of the information is, um, plugged into our neural network.
+
+And then we're going to get our output as spam or not. So that's we're making a single classification.
+
+Here you can see image captioning. So if we want to caption an image we might put a representation of an embedding of that image here.
+
+And then we are outputting a caption word by word.
+
+So the and then now God is put in this part of the input here.
+
+Dog is walking by something like that.
+
+And so you're going to get each. Token in that caption is going to be done sequentially based on the previous ones.
+
+Here is an encoder decoder structure. This is something like machine translation where you might want to translate your input here.
+
+So maybe good bye. And you are going to try to translate that.
+
+And here is the translation then. We don't have inputs here.
+
+You just have outputs in that particular sequence. Remembering that when we say inputs here these are going to be uh an embedding of our tokenization.
+
+Right. So these are specific tokens that we can tokenize by word or we can tokenize by sentence.
+
+And so depending on your application you might tokenize things a little bit differently.
+
+I'll pause here and see if there's questions because this is a lot of information on one slide.
+
+You have the vector to sequence in, uh, embedding.
+
+This is, uh, taking a single like once the image is like fully decomposing, uh, you know, like decompose and then upload it and then it's,
+
+uh, no longer requiring, I guess, further inputs or because I'm just trying to understand the extra, uh, exactly.
+
+Because that information is all already encoded. And so you're just going off of the, uh, the previous sequence there.
+
+Okay. Yeah. Great question. Um.
+
+All right. So in training in in this is going to look very similar to what we did previously.
+
+We do something called backpropagation through time or BPT where we compute the gradient of the loss
+
+across all time steps of the sequence contributing to the correct prediction using the chain rule.
+
+So again, using chain rule, doing all of the things that we did in backpropagation.
+
+But now we're computing the loss across all of the time steps of our particular sequence.
+
+Now there's a little bit of a challenge with recurrent neural networks, and that is that for longer sequences,
+
+the chain can get very long and the gradient can get very close to zero.
+
+We've seen this problem before. This is the vanishing gradient.
+
+Because of those, RNNs have difficulty remembering information far back in history because of this vanishing gradient.
+
+So we made architecture, variations of the traditional art and then leading LSTMs into your use.
+
+So let's first talk about our long short term memory, or at least.
+
+Yeah, with the caveat here that I have a very much love hate, mostly hate relationship with LSTMs because I use them for my doctoral work,
+
+and I wasted probably four months trying to get an Lstm to work before I just ended up going with an XGBoost model.
+
+So love hate relationship here. All right.
+
+So up here you can see this is our standard RNN that we just talked about right.
+
+We've got our input here. The output from our previous um previous part of the recurrent neural network.
+
+We are going to have weights multiply these together, put them through a hyperbolic tangent and then move on.
+
+Uh, so that's a repeating module in our standard or. And then this is what it looks like an Lstm.
+
+So instead of just that single layer that we have in our traditional recurrent neural network with a single activation,
+
+now we're actually going to have four different interacting layers.
+
+And so those four interacting layers are represented here. And you can see four activation functions here.
+
+And even remind you what this activation function is. Sigmoid.
+
+Yes. So we have three sigmoid activation functions and the hyperbolic tangent activation function.
+
+And these are all interacting with one another. So let's take a look at how this works.
+
+Okay so first we have what we call our forgive gate. And so our forget gate is here.
+
+So we bring in information to that output of our previous part of our module.
+
+And then we have our input here.
+
+Um, and we are going to um multiply those by the weight out of bias and put those through a sigmoid activation function which is shown here.
+
+Uh, so what we do with the forget gate is basically we're trying to decide what information to remove from the cell's memory.
+
+So we use that sigmoid layer to look at the previous output. And then the current input.
+
+And we output values between zero forget and one keep.
+
+All right. Next up we have our input gate. And so still relying on that input and the output from our previous um part of our input.
+
+Um, and now there's two components here. So make two activation functions or hyperbolic tangent as well as our sigmoid.
+
+Um and so here you can see I sub t which is uh, the results from our sigmoid activation function where we put our inputs.
+
+We multiply by a weight, add a bias and we have it through a sigmoid activation.
+
+Um, see today, uh, so t we're going to um which is located here, we have our input and output from our previous part of the RNA or Lstm.
+
+Multiply that by weights of C, add or bias component and put all of that through our hyperbolic tangent activation function.
+
+Now, what it does is it decides what new information to add to our cells memory.
+
+So our sigmoid layer is going to choose which values to update.
+
+And our hyperbolic tangent layer generates new candidate values to be possibly added to the memory.
+
+So which values do we update? And what are the new candidate values.
+
+C tilde a sub t. Okay.
+
+So step three of our Lstm all happens up here.
+
+And so here we are trying to get to see some key. And this is our cell state.
+
+And so in addition to the output from our previous uh part of the Vista we are
+
+also bringing this cell state that is continued throughout the entire sequence.
+
+And so the cell state here, um, c sub t, we're trying to update that given this information.
+
+So we have um f sub t which was the output from step one.
+
+And then multiplying by c sub t minus one which is the cell state from the previous state.
+
+Plus Isaac t times or candidate T.
+
+Which we got in step two from here. So we combine these together.
+
+And this allows us to do is update ourselves memory with new information and remove unnecessary information.
+
+So we multiply all the information by R for Kincaid's output to remove unwanted data.
+
+We add new candidate value steal by the input for its output to update the memory.
+
+And the state is really what allows us to not have to worry as much about the vanishing gradient like we do in recurrent neural nets.
+
+Okay. I think I've got our output gate here. So finally we're going to get what our output is here.
+
+Um, so here we're going to pass our input, uh, points to a through a sigmoid activation function which you can see here we have our weights of zero.
+
+We had our bias sigmoid activation. Um this is going to be used uh, and pass through a hyperbolic tangent.
+
+And this hyperbolic tangent is bringing in that cell state from still so from step three.
+
+And what this does is it's going to decide and what to filter and what output to generate from the cell state.
+
+So we use a sigmoid layer to select part of the cell state for our output.
+
+Our cell state is normalized between -1 and 1 using the hyperbolic tangent layer.
+
+And this normalized state is then multiplied by the sigmoid layer's output to create our final output step setting.
+
+So applying gradient descent to these gates, um, over the gradient descent can be applied to these gates, or it can be applied to the gates.
+
+Gradient descent for optimization. Um, okay.
+
+I guess we're not worried about, um, vanishing gradient because you have, you know, sums of different, um, uh, sigmoid and hyperbolic tangent.
+
+Are we ever worried about exploding gradients over these? If you have enough building up that you're actually increasing significantly?
+
+Not really. Not really. Because we're bounding everything using sigmoid and hyperbolic tangent.
+
+So we're not using great here. So we're not super worried about exploding gradients.
+
+Good question. And speaking of various ingredients, what happened to it?
+
+And that's it. So update equation in step three. So using operations that are additive right.
+
+We're adding c sub t c out by I sub t I by having it be additive rather than multiplicative.
+
+LSTMs allow our gradient to flow across many times without diminishing.
+
+So the additive nature of the cell state updates combined with the gating mechanisms that control the flow of information here,
+
+this is what helps mitigate the vanishing gradient problem and preserve that gradient magnitude over long sequences.
+
+So next up we're going to talk about gated recurrent units or Grus.
+
+And I see Tiffany smiling. And yes at least one person did.
+
+All right. So uh, Grus are basically just smaller versions of Lstm simplified versions.
+
+Um, so the changes from our Lstm GRU model is going to combine our forget it input gates into a single update gate.
+
+Uh, it's going to merge the cell state and our hidden state together here.
+
+And we only have three layers. And so it's simpler than our standard Lstm models.
+
+So let's talk about each of these components. Um, so here we've got our update gate.
+
+Um, so you can see uh, now we can bind ourself state and our hidden state here.
+
+Um, and so we pull that in and pull in our input, um, and pass that through a sigmoid function here.
+
+Uh, this, uh, gate decides how much of the passed information should be passed a one.
+
+The sigmoid layer takes as input a concatenated h sub t minus one index of t multiplies that by weight matrix w sub z I,
+
+where z sub t is going to act as a mixing ratio between the previous hidden state and the new candidate state.
+
+So z sub t here is going to be important in just a minute.
+
+All right. So we also had this reset gate. And so this gate is going to decide how much of the past it should be forgotten.
+
+Um, and so of takes the place of that forbidden gate. So we've got of course our inputs, um, output from our previous.
+
+So, um, and we're going to pass that through a sigmoid function, of course, uh, multiplied by a weight matrix w sub bar.
+
+And so that's our section here or reset gate.
+
+All right. Now we're going to combine all this stuff together. We've got our candidate hidden state.
+
+So h the h till they sub t uh, and h till they sub t brings in, um, both our x of t our input there as well as our, our city.
+
+So our city. Multiplied by h sub t minus one.
+
+So that cell set up there. So you can see some of those operations happening up there.
+
+We're going to pass that through a hyperbolic tangent here.
+
+Um and this is our candidate for that new hidden state.
+
+So our sub t times each sub t minus one represents the element wise multiplication that we get with our reset bit.
+
+So that's what's represented here. And then we've got our final hidden state.
+
+And so our final output hit here h sub t is equal to.
+
+This is going to combine our previous hidden state and then our candidate state here.
+
+And so we've got our um z sub t times or h t tilde which is right here.
+
+So those are multiplied together. Um and then we are going to be multiplying one minus our z sub t.
+
+And you can see that here. And then we're multiply that by h sub t minus one.
+
+Which of course is that previous hidden state self state combination.
+
+So how this works is the sub t controls the balance between each sub t minus one and our candidate H till they have t states.
+
+If z sub t is close to one it's going to favor our new candidate state.
+
+And if z sub t is close to zero it's going to keep more information from our previous state.
+
+And remember z sub t was in our first step here.
+
+Okay. I hinted at this earlier, but our recurrent neural nets have a lot of challenges.
+
+We have issues with sequences of different lengths, so the size of the network is going to depend on the length of the sequence.
+
+So optimization requires a longer time to train and lots and lots of steps.
+
+They don't work very well with on text documents. They have some issues with long range dependencies.
+
+Um, primarily because of the first bullet point.
+
+And they are hard to train, which I have firsthand experience with the suffering involved in training and Lstm in particular.
+
+They're slow because they don't allow for parallel computation.
+
+So all computation has to occur sequentially, right.
+
+So it has to occur sequentially. So you can't parallelize anything.
+
+And then the hyperparameter tuning is really challenging for these.
+
+So there's lots of parameters that are interlinked with one another.
+
+Yeah. Don't as a sequence is referred to in this sense like length of sentences, paragraphs like this.
+
+What would that refer to in the. That would be bad. Okay. Yeah.
+
+So depending on how you tokenize, right, it can be, um, you know, how long the sentences, uh,
+
+it depends on your task or how long the sentences or for example, the spam know spam how long your email is.
+
+Right? So maybe how long your email is or the amount that the subject of your email or what have you.
+
+All right. Let's talk about some implementation of NLP then.
+
+Um, so lots of challenges. Um, with NLP, let's talk about a few of them.
+
+Today we're going to talk about handling variables like sequences.
+
+Do you know augmentation for text. How do we handle imbalanced text data.
+
+Uh, a lot of you had to do that for your computer vision projects. You probably have to do for NLP as well.
+
+We're gonna talk about data splitting, best practices, transfer learning and fine tuning.
+
+And then we're I'll just touch on a couple of popular NLP libraries questions before we jump into implementation.
+
+All righty then. So we got variable length sequences right.
+
+So this is really tricky. And Dominic you were alluding to this a little bit um, as well in your previous question.
+
+So natural text has very light and neural networks.
+
+Of course we know they need fixed size inputs. Right. That's why we always had images that were the same size.
+
+Uh, batching requires consistent dimensions.
+
+This makes it very challenging to work with these variable length sequences.
+
+So what do we do? Well, we do something called patty.
+
+So we're going to add special tokens zeros or uh pad tokens to shorter sequences
+
+so that all of our sequences are padded to the length of the longest sequence.
+
+So depending on, you know, your spam classification email rate,
+
+you're going to have a set maximum length that your email can be that you can put in to your spam classifier.
+
+Otherwise it will get cut off. And anything less than that is going to have padding.
+
+So a bunch of zeros at the end of the sequence.
+
+And then we use something called padding mats to ignore padding values.
+
+So padding masks are used in our last calculation in or in in hidden state and or in attention scores for transformers.
+
+And so here you can see a sequence where we have a length for length two like one.
+
+And so our participants here is 5200. Um this one doesn't have any padding padding messages or one.
+
+And then transformers here we just have one word. And so we have three zeros and their padding.
+
+Math shows three zeros and one one to show us which words to, um, focus on and which ones to ignore.
+
+So we can also do something called pact sequences. Um, so this is a PyTorch optimization for RNNs.
+
+Uh, only process actual sequence elements and allow us to reduce a lot of that unnecessary computation and padding.
+
+So for example, these same three sequences that we had.
+
+What we might do is do time steps. And so uh, we have a batch size of three here where we have hello.
+
+Deep in Transformers, the first word in each of our sequences in time steps two we might do world and learning and time.
+
+Step three we might just do is and in time.
+
+Step four we just do fun. Um, so this is a way that we might not need to do padding.
+
+And instead we could actually pack our sequences using PyTorch.
+
+And then we have our data here where you just determine what the lengths of our data is.
+
+And then we have our batch. Okay.
+
+In terms of data augmentation. So we talked a lot about data augmentation in our computer vision module.
+
+And so how do you think about data augmentation for text. Well uh we can do back translation.
+
+So this is a pretty common use of data of, uh, machine translation for data augmentation, where we translate text to another language and then back.
+
+And if you have translated text or another language back, you realize that there's a lot of challenges with that.
+
+Um, and so that can often help provide some augmentation to our data.
+
+I've seen things a little bit differently or not in quite the right, uh, order.
+
+Uh, we can do synonym replacement so you can replace words with their synonyms and nltk uh, package actually has uh, since that's in WordNet.
+
+So they actually have a dictionary, um, different synonyms for words that you can use.
+
+You can also do random insertion, random deletion, random swaps of words and random substitution.
+
+Some best practices for data augmentation. You really want to ensure your augmentations don't change the meaning or label, right?
+
+So if you're doing a sentiment classification task, for example,
+
+you want to go through and make sure that you're not changing the actual sentiment, right?
+
+That when you delete some words that it doesn't turn out. Maybe it's like, this is a terribly awesome movie, right?
+
+And then you remove awesome. And then this is a terribly movie, and then you completely change the sentiment.
+
+So that can be a little bit tricky. You want to apply augmentation equally across your classes.
+
+So in that sentiment classification, apply augmentation equally to negative and positive sentiment.
+
+You're going to manually check samples of your augmented data,
+
+which you should do in computer vision anyway, um, or any type of data that you're augmenting.
+
+But doing manual checks, um, can be really helpful here.
+
+And then you want to combine different methods for better diversity, similar to what you did in data augmentation for computer vision.
+
+So pause and see if you have any questions. Questions.
+
+All right. Let's talk about handling imbalanced data.
+
+So in the real world, text data sets often have a very severe class imbalance.
+
+Think spam detection where most of the mail you get.
+
+Hopefully most of the mail you get, um, is normal mail and only 1% of that is spam.
+
+Unless it's coming to my mailbox at my house in which almost everything is spam,
+
+and there's like one random mail piece that is, like, super important, uh, amidst all of this spam.
+
+So spam detection. I hate speech teach hate speech detection.
+
+So depending on the social media platform of choice that you're pulling data from, um,
+
+hopefully the majority of hate speech, uh, or, um, the speech on the platform is nontoxic and then intent classification.
+
+So some intents are very rare. So whenever you're dealing with something that is rare, you know, we tend to have this class imbalance.
+
+So we can use our traditional sampling techniques. So under sampling majority class or over sampling our minority class right.
+
+We can use a random oversampling approach or a Smote for text with word embeddings.
+
+We can also do loss function modifications. Um and so this is an approach that I really like.
+
+Is you can actually put class weights in your cross-entropy loss.
+
+Um, and so you can do weighting in your loss function itself.
+
+So uh, you can do inverse frequency weighting or square root inverse frequency weighting, um, in your loss function itself.
+
+You can also do architectural approaches.
+
+So you could do two stage training where you first train on a balanced subset of your data, and then you fine tune on your full data set.
+
+So that's possible. And then ensemble methods.
+
+So you could train multiple models and balanced subsets and then combine predictions with some kind of weighted voting.
+
+Um so you could also do something like that. So data splitting is about to get a little bit more challenging than it was with computer vision.
+
+Um, especially because we have a lot of temporal dependencies in text data.
+
+Um, so think like if you're doing something with news articles,
+
+it should be split on date because there you have that temporal dependency or social media conversations are going to need chronological splits.
+
+Right. Um, that's going to be really important to maintain that temporal aspect of your data, because that's an important part of your data.
+
+And one thing that's going to be really important for you to be careful about,
+
+it's something I'll be looking for in the module project is avoiding cross-contamination between your splits,
+
+where similar documents appear across splits, or you have duplicate or you duplicate near duplicate content.
+
+And we're really going to want to be very conscientious about cross contamination between splits.
+
+So some best practices include splitting by document, source and author whenever possible to prevent data leakage from writing style.
+
+A very important, especially for authorship attribution tasks,
+
+you want to maintain similar topic distributions across your splits account for a domain shift between your training, validation, and test sets.
+
+If you're dealing with conversation data, what you're going to want to do here is split by conversation thread, not individual messages.
+
+So a text message chain or the WhatsApp chain you've got going back and forth with someone you want to use that for chain,
+
+um, as in one split rather than individual messages.
+
+And then you want to keep context and reply pairs together.
+
+For sequential data, you want to do time based splits if you're doing any kind of forecasting tasks.
+
+So having those be time based is important. Okay.
+
+Questions on any of our data splitting best practices.
+
+Okay. Great. So similar to computer vision, you all are probably going to be doing a lot of transfer learning or fine tuning.
+
+Of course, we've got our full fine tuning. Where we update all model parameters requires more compute data.
+
+We've got what we call our frozen backbone, where we only train test specific layers preserving that pre-trained knowledge.
+
+And then we have partial freezing where we update only the top end layers.
+
+And a common strategy here is that we freeze are embeddings and the first few layers.
+
+And then we train the rest of it. And so very similar to computer vision.
+
+Will likely be doing one of these. And one of you were doing some really interesting things for your module projects around,
+
+um, you are freezing and, um, freezing in which layers you chose to freeze or unfreeze.
+
+Um, I thought the rationale you gave was really interesting, and a lot of it was,
+
+um, I think really, really cool to see what you are thinking about it.
+
+Very thoughtful already about a lot of those, um, topics.
+
+So here can keep that going for transfer learning with our NLP module.
+
+Um, just a reminder on gradual unfreezing. Um, I don't know if we talked about this in computer vision,
+
+but the process for gradual unfreezing is that we start with all of our layers frozen except for our final layer,
+
+and then we train for some number of epochs. We unfreeze the next layers of that previous layer, and then we repeat.
+
+We train, and then we unfreeze the next layer and then repeat until we have a desired depth.
+
+And what this can do is prevent some of those sudden changes to our pre-trained weights of our model to adapt more gradually,
+
+and then reduces our risk of overfitting, which we're always trying to do.
+
+Okay. And last but not least are our NLP libraries.
+
+We've got Nltk Natural Language Toolkit, which gives you a ton of resources.
+
+So I mentioned it a couple times already in the slide deck, gives you stopwords, gives you synonym dictionaries,
+
+also gives you, uh, different types of tokenizers, uh, parts of speech tagging, um, can help with sentiment analysis.
+
+So a lot of tools already exist for you within Nltk.
+
+Uh, similar we have Spacy, um, which is a Python library for very fast and efficient tokenization.
+
+It has a lot of pre-trained statistical models and word vectors.
+
+So great place to go for your traditional MLA approach, a more statistical based approach.
+
+Um, and then of course we've got our Transformers library from Huggingface, which I'm sure you all are pretty familiar with at this point.
+
+It provides, um, state of the art machine learning models for NLP, like Bert Gpt2 T5, and you're like, we're in Gpt2.
+
+Those aren't state of the art.
+
+But yeah, those are going to be the models you're probably using because you're not going to be training a full GPT six or whatever model.
+
+Um, you can use their APIs to fine tune models and custom tasks.
+
+Supports both PyTorch and TensorFlow backends. Also, Also, if you want to do anything multi-modal,
+
+Transformers is great because it has a lot of computer vision, um, and other data, um, integration.
+
+In canvas you will find a code tutorial. So I have a notebook there for applications and some of these main libraries.
+
+So if you're planning to do any of these or if you just want to get more familiar with these libraries,
+
+there's a tutorial notebook in the canvas for you all.
+
+Okay. And then next week we've got attention and Transformers.
+
+We're going to spend a lot of time next week talking about the fundamentals of attention,
+
+the transformer architecture, and then popular implementations like Bert and GPT.
+
+We're going to talk about some applications of LP like text similarity summarization and topic modeling.
+
+And then we'll jump into LMS. And yes Alex, it looks like we do have a discussion to put in the next, uh, next class.
+
+So next class will be really fun. Um, it'll be we'll cover a lot of stuff in the next class.
+
+Um, in terms of module projects, you, uh, are welcome to work in the same teams as previous.
+
+If you are not going to be in the same teams as previously, please let me know so I can make those modifications.
+
+But if you're cool, stay in the same team. Um, feel free to.
+
+I think it's nice sometimes to have that continuity. Uh, in the third module project, you will be switching it up so you won't be in the same team.
+
+But I think for this one, you're welcome to stay in the same team if you desire.
+
+Questions. All right.
+
+Well, you have about, I guess, like 40 minutes.
+
+Um, right now, if you wanted to, uh, spend some time brainstorming for your NLP module project.
+
+You doing about 40 minutes of your time in order to do that?
+
+Questions? You know the question just from earlier, um, for understanding the GRU versus Lstm.
+
+Yeah. What is the right level of specificity of understanding what these, uh, functions.
+
+Would you recommend, like understanding all the inputs, all the outputs or generally.
+
+For example, kind of a unique, um, uh, forgetting stage in Lstm.
+
+Yeah, it's a good question. I, I really understand like the gate, like the specific gates.
+
+Right. Those steps and like what specifically are doing. Because I think if you understand what each of these does like conceptually,
+
+then you can get the difference between Lstm and GRU and how those kind of fit together.
+
+Uh, doing sigmoid versus hyperbolic tangent. Where and when is that?
+
+Um, I would say from a practical perspective, probably not that important, but I do seem to remember there may be a question on the test about it.
+
+I haven't made the test yet, but I remember from last year's test that it definitely had something about that.
+
+Okay. All right.
+
+Now you all are free to hang up or to go ask questions.
+
+Go get coffee. Somebody feel sleepy? I'm sleepy.
+
+I need something for reinforcement learning tonight.
+
+And if you walked in late and didn't get your test, please come get it.
+
+You're gonna need coffee because you're worried about a presentation. Being worried?
+
+No, I know it won't be boring you guys. It's a great class.
+
+Reinforcement learning is super fun. You guys make it fun. It'll be fun.
+
+But I'm going to have you guys go first. That I don't fall asleep during my lecture.
+
+I do the lecture after the presentation. Yeah, I get to turn something in for challenge.
+
+One is just a presentation, so I need to understand if you met all the criteria.
+
+If you can do that just with the presentation. Awesome.
+
+But if you feel like you would like to submit code or something else to prove that you have done the challenge, that is fine to.
+
+Leaving a very open ended. But I if you feel like a presentation will give, it will tell me everything I need to know.
+
+Cool. Do you feel like I'm going to need the code to really get what you did?
+
+That's cool. Yep.
+
+Yes. And then for the following module, this assumes that you get a cheat sheet up for the next module assessment.
+
+Yes you will get a cheat sheet because you just asked for it. So yes.
+
+So everyone can dig out a. Slow unenthusiastic cloud.
+
+Okay. Maybe I'll just give our analogy. Oh, and I have a never cheat sheet also.
+
+I will give you guys specifications of what a cheat sheet entails next week.
+
+You better be very specific. I will be very specific.
+
+I need to actually take time to really think about it because you're in this class.
+
+So I need to think about all the potential caveats, all the loopholes.
+
+Yes. And you know, I'm not a hacker by nature.
+
+So there's like me some time to really figure it out. Like it would.
+
+LSTMs are going to be the final boss next year.
+
+Oh, yeah. I know.
+
+I try, I try to emphasize things that are like actually helped in the world.
+
+I already have ideas. I don't even know how to read. I'm good at adversarial writing for novels, and I have other things in there.
+
+So the Arab is and, you know,
+
+actually be the easiest way to make sure that I don't have to really think about it is to say everyone in the class gets a cheat sheet to read a book,
+
+read a book. I don't have to worry about it. I have to be outside.
+
+So that's, uh, that's in a lot. And reading is like, be modeling what you read.
+
+Oh, man, I just. Oh, God. Oh, I can pull it up. Yeah, it's like a gingerbread latte.
+
+Yeah. Feel free to snack. I think you should.
+
+Yes. Uh, do they like to? You came in late.
+
+Make sure you know this. Does anybody live with Shreya?
+
+Well, I'm going to call her. Okay. Yeah. Can I give you a test to talk to her?
+
+And then you can update her on this? Yeah. Does anyone live with Omkar or a senior with her?
+
+I think Yasha's gone to college. No, I don't see him till Thursday.
+
+For the next project. What's your best friend, or should I go on the job or just, you know.
+
+The problem is, this is one of those because you write the answers and you're like, oh,
+
+so this is like what I said, and that's why I just made like, oh, by the way, this is you.
+
+Know, even though I missed that soldier.
+
+I didn't even realize it. I feel like I didn't see one official, you know.
+
+I don't know how she sounded to me before that. This is like.
+
+Oh, wait, let me show you to me before that and then just say, you know, this time.
+
+This time, please. No. Please, no. So.
+
+I was like, let's just let me hear you say you wanted to do something that if you were athletic, was more like, definitely.
+
+And. Maybe we should have seen like some TikToks.
+
+Like, they will be really sore throats when I go for round trip.
+
+And she was like, well, yeah, you know, we continue working on it because that's already where yeah, I think this is sticking out to you, you know.
+
+He's like, yeah, I'm old enough. But. This is not a good reinforcement for the drone.
+
+So we're just like you know it's like Sky news.
+
+Are you all for shooting? It's like the same actually.
+
+You know, you come inside and people ask about it, but it's about so brilliant.
+
+You could argue that I was like, oh, and I'd actually like to do that.
+
+You do some other thing. Cross country.
+
+I can also do some people's.
+
+I can see your sentiment, like do a sampling in the middle of the cross country.
+
+What was the general idea of? What information is learned about some of the results?
+
+Different people. All right. Oh. Data set. Okay, I forgot there was a bunch of let's go from.
+
+Let's go. Yeah I definitely want to do like 20. I was like what would be the most helpful like if I want.
+
+But I have a lot. I have a skill in the cloud that makes it much harder, but a lot is being kind of like like, I mean, you know, ask about it.
+
+Oh, you didn't even ask. Was even there for the time.
+
+So I'm gonna want to build. Jarvis, wait. What the heck?
+
+Yeah. What did you do in the water?
+
+And you were supposed to make it so that you're hot. All right, I'm gonna see you both in the bathroom.
+
+What do you mean? Yeah. I wanted to keep this.
+
+We didn't even know it. Completely disobeyed the instructions.
+
+Like 39 issues that, like, so much was overwhelming that I don't know what I want to have.
+
+Right. Yeah. It's like something to make it a topic.
+
+And the thing is to, like, wow. Like, puts it on random words from the content they have on that site, right.
+
+Random word generator. Right. And realize this is your data set.
+
+So we're talking about what else is your data set. You just I summarize what is interesting is.
+
+There are times when people worry about actually that's not.
+
+And this is one of the ones that I found. So just kind of like I kind of go here for maybe it goes deeper, dive into it.
+
+But yeah, ideally it would be something that got influenced. And then I had another question that said it's for this episode that I'm doing it.
+
+You know, like tackle. You can like control that. I was thinking they kind of have a muse, like the technical person, which is like scary.
+
+Um, because that's like, uh, you're doing great, I'm afraid.
+
+Yeah. Let's do that. I know you're facing off, right. That's what you take on it.
+
+It's good non technical undergrads. It's good. You doing really well.
+
+What's the is there a model I was in because I was, I was also just stressed because I didn't really get to study as I wanted to.
+
+I liked it's the ones that are exposed. What are my fears.
+
+And then like prepping for like the hackathon. And yes, I guess your grade is like that perfectly okay that you want to have like, you know,
+
+on some after studying for this class through music and other things that you do that design and
+
+that is like the perfect grades in the first exam because it's going to get slightly easier.
+
+Yeah. Oh yeah. Some things get the, you know, so I wouldn't like to get into it.
+
+So that's kind of that first one. Yeah. If you get it right Sam.
+
+Yeah okay. Okay. That makes me feel good because I just try to use it like.
+
+Oh, yeah. And it's. I think it's really important to think about it.
+
+You tell it to your entire life experience and you tell it's computer vision.
+
+There's so many different. It's not an easy thing to do. Would not be right down the road if.
+
+You have enough, right? Yes it is be able to do this.
+
+You get it that like there is so much that this is so you just want to say give it like.
+
+Yeah I like the whole we don't even care computer vision thing doesn't actually even do stuff.
+
+I yeah I had to I had to downsample I had to downsample the images from 226.
+
+It's like I was trying to 226. You don't see any of that.
+
+So like it's only so we're just making hardware or bigger.
+
+Got a better way for you to get a comprehensive like yes like you can't I, I one want has do.
+
+And I know the general experiment rate and coding is becoming a little bit less you know stuff but not like to be able to do everything from scratch.
+
+I mean, we can't I mean, it's yeah, I can be sure that I like it's more about like,
+
+you just we'll just do a series well, but also like, you're not trying to reinforce, you know, you have to actually.
+
+Do you want to. I did training here, but. Well, yeah. What about you?
+
+Just like hosting. If you, uh, if you just need to train for something.
+
+Where are you? Good. All right, let's let's focus on what you're writing.
+
+Yeah. So we did really? Obviously. Do I think you should, um.
+
+Oh, yeah. So my question is I would buy it, but I'm setting up the graphics card.
+
+So I usually have I how much I generate I go out like this.
+
+Yeah. So it's like this project has been going on for like two years, which I also didn't realize, but they can do.
+
+Um, it's kind of been like, oh, from what I've heard about, like getting like for money, this would be the experience.
+
+I've heard of it. Okay. Yeah.
+
+So we're going to get at least four different computers and create like different profiles of the people, like what they're doing.
+
+And then my job is to of like from like what these fake profiles are listening to how I can actually like is into a space.
+
+So it's just you mean you need a text editor?
+
+This is how much music is generated. Not so much to say.
+
+Like who's wearing glasses? Yeah. You have two choices. So I was thinking, um, or mostly just to like.
+
+Yeah. So then so it's a, it's a, it's actually a retrieval platform.
+
+I know, but we give it each picture.
+
+Yeah I forget. Right. Exactly. Um, and it's a retrieval task.
+
+So it's just like. Which. Similarity has.
+
+This is kind of like what I was thinking. This whole, you know, question was.
+
+It's called Clinton's and. This is what I was reading.
+
+So I think it's. So let's move that we can leverage this.
+
+Like if you didn't have a need or you didn't know about it, how would you do this.
+
+What would you do? I would, I guess, but you have all the time.
+
+I would I don't even words. How would you go through it.
+
+I would probably say like God, that's bounding boxes around this thing and I know.
+
+I guess, like based on, like what it sounds like, like you could just kind of engineer,
+
+but I think there's different patterns that are similar to like diesel engine just and, um.
+
+Yeah, yeah, like a search on the web. We. I know that, you know, I'm in Berkeley.
+
+Okay. You do know how to program? Yeah. Okay. So I think that's what you should do back in.
+
+I said no. Yeah. Okay. Think about, like, what is your site and you want to see how you automate that if you wait until the last day.
+
+There's not a thing is still functioning. Correct? There's not a way to tell how fast I'd be able to type something to say I generated someone.
+
+Did you think I should like you? Didn't hear you go to action.
+
+Why? Who's this guy? And I had no idea who this artist was.
+
+Artist like. So you know about this works.
+
+Reviews are very important as well as if you wanted to do this on the technical perspective.
+
+What are the different like for your music? Would you want to do is just get a bunch of music?
+
+Well, I generated, but that is not the idea. Yeah. And outlook is in the audio right?
+
+How much repetition. What is your max pitch?
+
+The min pitch. The standard deviation. You make use of that measure.
+
+Because my guess is that songs this time we're not doing that right.
+
+Alex's differences in their autistics in between.
+
+The greatest thing to do on that as like the AI generated generation techniques are getting better and better, that that's not so.
+
+It's not as much with the most recent music.
+
+Most of the music you'll be looking at Spotify. Yeah. Yeah.
+
+So you'll be able to get at least a estimate of how much it is, and then you can get a lot faster.
+
+You could like this is you know, the minute ultimately comes back.
+
+And so, you know, it's 20% of music and Spotify. It is AI generated based uses a low estimate.
+
+This is the same in different points I can actually show.
+
+That's that's, uh, SoundCloud sounds.
+
+That's going to be a lot easier for you to learn. But then reality, even though captioning technically was popular, believe me, it can be so much.
+
+So I do have it has really uses like Alex, right?
+
+Like do you have friends rapper cross-references.
+
+Uh, just to hand over these patterns. Like I was reading that.
+
+Pretty good. I still have a lead or something like that, but these bot, I want to do the paper again, I want to do and like stuff like that.
+
+I would if I wrote, you know, you did it. I had cool it bro.
+
+I read, I wrote like that and then collaborate the other. Yeah, absolutely.
+
+And so I think there's definitely some ideas that can be done here if you go to work, I don't know if I would rely on like an AI.
+
+What do you think? Coding is hard because I don't do any of the coding at this point until you know more, right?
+
+I would start off here and try to like get like, uh,
+
+so I'm going to teach this classifier working and then I'll learn to get I
+
+started 20 requirements already and then can actually actually code because I,
+
+I just coded at all the last six months the AI generated.
+
+It is, I think, what you are in. Yeah.
+
+I don't know if you have other people working with you on the project.
+
+What they can do is they can serve that data sets and so they can start looking at like noon and generating music,
+
+you know, and generate music, right. Like it's have like a corpus of data that I generated from some data that I generated.
+
+So music from more like 21. Okay.
+
+That is completely. Yeah, it's interesting because I was working on it days was like the night before I was working separately as well.
+
+Didn't happen if you didn't do that. Honestly I was that's right.
+
+And so I had to write down what that's like.
+
+So that was I just didn't understand how I. Hey, you probably should have asked because I like to save you a lot of time.
+
+You didn't. Yeah, I think it's this is like my what a time where I'm like, the most typical kind of project.
+
+You would just say, oh, now, now you're getting better.
+
+I would have no idea. It was like, you're the one who does it most of the day.
+
+And like, I don't know anything about statistics, so this is really bad. Yeah, yeah, yeah, that's kind of what I feel like.
+
+But if you see the opportunity to learn a lot. Yeah, yeah. That's why I really like this project.
+
+That was because I felt like if I could. Much less money.
+
+I've just probably in the back. But this is like, let's say you say about five miles.
+
+Yes. That's already five years.
+
+Yeah, I think start there and then go from there. That would be my like the hoppers is already up here.
+
+Then I will go to ask you. Yeah that's too much further behind.
+
+Yeah I think so. And then I'll also be updated. I'm having um Epstein archive GPU.
+
+Yeah. This is your first of all. You do this in your interest, kids.
+
+Also interesting to think about. Like I know from.
+
+Experience perspective where you guys can do to him. I don't know how much harder like, um.
+
+Yeah. It's also like I don't Andrew is pretty good if I want these all. First of all, junior population oriented videos, 59 is $4,000.
+
+I just had a crazy idea to share files, but you can get a 5080 in the entry to come.
+
+The only difference I know, or you just want to meet.
+
+Yeah, he was chatting with me like in November. It's like, I want to go look for Chinese, okay.
+
+So I'm like, I don't know, I feel like throwing stuff together.
+
+I might look like. Yeah, I remember that.
+
+Yeah, that's. My writing, I think about it.
+
+I'm sure you probably have so much of it, but you know how it is that that was you know,
+
+I know we're mostly hosting today, um, via our photographers and recording myself.
+
+I don't know, you know, the whole like.
+
+Yeah. Yeah.
+
+Oh, that's why writing is not good. Because they don't like these opportunities.
+
+That doesn't. Work like.
+
+That, you know, I just go. Okay. Perfect. Thank you. Yeah. Well, it's still that time takes a long time.
+
+I think it's also going to be sent to every registrant like today.
+
+Oh, yeah. I haven't started writing. Yeah. There's no rush, I think.
+
+I think all your photos are. Oh I guess that we did Friday.
+
+Yeah, but I was using it. All right.
+
+Oh. Have you read the 2005? Uh, no.
+
+It was like, uh. Oh, and like, I mean, it was basically the government, like the,
+
+the simplest version of this language is going to I don't know if that will be the requirements for things because.
+
+I know so many times, but so does not explain why.
+
+And here to see which one. Yeah.
+
+Like the question I was reading that you're just subhanallah.
+
+Uh, and you see, we're sorting through regression.
+
+Um, I still feel like this is Memorial's Innovation center, because.
+
+Yeah. Uh, I was actually thinking about living with you.
+
+I was thinking you have to ask a lot of people.
+
+I was like, you know, what do you think? You know, it's like, yeah, but for the project I would think about.
+
+Doing with the module, I don't really good friend. How are you going to do.
+
+Yeah. Basically how you're going to spend more time making the computer vision for the channel.
+
+I mean, you want it to be you wanted to say, you know, so that's a really good care.
+
+I can't be done. But I put it out.
+
+Yeah. So I think it's like that's still our vision problem because you, you would need like you just you don't have to do a trash approach.
+
+You would need to know that. You know how people can observe it here on it.
+
+So you know we can. You.
+
+Know, I, I think it will happen. I don't know what you need to tell me.
+
+I guess it's. Kind of, uh, honestly, like an exploratory analysis I and traditional approaches will be doing, you know, how we do something with them?
+
+Uh, they're from my body. Like where? Yeah, I was thinking.
+
+I see you guys, I don't know, I would be pretty.
+
+I would do that. I already have a reason to do that.
+
+Because I think you are like.
+
+That's why you guys, if you can do fine tuning through, I have so many Twitter accounts like you have like very long time,
+
+3000 like minutes, which is actually really hard to replicate.
+
+But I it's like, oh, I know because you, you only have one Twitter account because you're like really annoying.
+
+The more like. You're the reason.
+
+No. Yeah. Actually I don't post about Baptist speeches.
+
+Like I don't know why people like, you know, like there would be a separate bit like social media.
+
+They're like, yeah, we need some of these, like, fine tuning outlets because like, like like like people.
+
+But you just so it's something interesting. But this is just like he's like he it's a different.
+
+But what I'm saying it was, it was great. Is that know I mean yeah super happy because I think I'm so yeah I was like I like them.
+
+Yes. Yeah. It's always interesting.
+
+Yeah. Yeah yeah. Exactly. It has to be like yeah that's cool.
+
+Yeah okay. I mean it's not it's like I've seen you say that, you know you have a five.
+
+You say it's like 5 to 10 minutes.
+
+But you're like oh it's like 20 minutes. Yeah. Just to kind of get close.
+
+Like in terms of analysis, I hear what people are saying about the country, other people stuff.
+
+You remember more than that because, you know, it's kind of like the top five emails.
+
+Um, like I'm wondering if you, like most anyone, has been talking about what's happening with Mexico Rancho, you know, put it narcissists.
+
+I think I career like I was like, I need to tell you very like.
+
+Uh, so when I was in my job at Space Lake to.
+
+With us. I feel like our focus should be actually like your world.
+
+I'm just like shoehorning drones in first. You already.
+
+You just want it makes you cry. Don't let him leave the building. I would if I had to.
+
+I want him to find that. Yeah, I think that means you have to go back to your home.
+
+But then, like, if we pushed. If I drove in, it's like that.
+
+That is like the friends of the kids. I'm usually very slow on the trip.
+
+And then it took us almost. Oh, wait wait, wait.
+
+Yeah. Why did you change roads?
+
+And it could be kind of because you had a crucial and like, like pass or like pass between what drove to another city where he's like.
+
+Uh, you know, it's insane.
+
+I have a greater degree greater only wish to enter.
+
+And he's like, no, I get sent in each other.
+
+Oh, yeah. And, uh, yeah, yeah. I mean, you're like.
+
+You're like, I want drugs. I'm over here. Something interesting.
+
+So the drug or anything, like insane. I mean, I'm trying to make sense of it.
+
+Yeah, we actually, we kind of let them know that actually, because, you know, it's it's talking to other people, is there?
+
+So, I mean, this year I feel like I can actually kind of feel like some rocks and.
+
+And, uh, I'm going to work tomorrow morning kind of check to see what happened.
+
+But hey, we have to buy for $10 at least, like, we need to, um, you know, like,
+
+that might be something to look at to get inspiration on visualization of transport, but it's gonna be part of the conversation.
+
+Have BRT like beer and conversation.
+
+What if we. Oh, because we just make it. Yeah. Yeah.
+
+Okay. Like I have to make it to work so that we could have interesting good ideas on how I just think about life and some of the intentions,
+
+like, okay, wait, but this is okay.
+
+No, this is too exciting because yeah, I will vote with the one I do slurring the word and you're up like right here with some language model.
+
+But yeah, I'm trying to kind of learn Transformers from just like, yeah.
+
+So sharing and hopefully make sense of people like you know.
+
+Yeah. Yeah. Why is that interesting to try to get to be more robots.
+
+She's always driven. Half is awesome. I like the idea to visualize it though.
+
+So. I'm not a survey bird I like.
+
+I'm tired. I drove to Ram Bradford.
+
+I don't know who actually uploaded the code of a data set which has not been used with this,
+
+I want this, I'm just confirming that I need some sort of pairing.
+
+Like that would, um. Yeah. Totally.
+
+Fine. Perfect. Okay. Yeah.
+
+I'm actually surprised that I can give, like, reports, like, effectively, it was like I actually did not realize that this is a vector to sequence.
+
+Now that I did this without skip connections, it's kind of, you know, library.
+
+Yeah. You feel like you really. So if we are, you know, like. If we decided, uh, or so I guess we have to do, I think two options.
+
+I'm sorry. Aspire to be in graphics card, but I think.
+
+This method can be like his father. I thought he was on Twitter.
+
+And so. You have to have.
+
+Um. You were Jared is.
+
+He was your own. Uh.
+
+Um. You know what we could do?
+
+So there's, like, the vision and the vision language.
+
+And then we can make do our work up to and help them.
+
+Um, like. Yeah, I think in our land I would like to find.
+
+But Mr. So we evaluated for the project. Yes, but we took it up to.
+
+Like it passes embeddings German from Puerto Rico kind of.
+
+So the project is a vision of a. Vision in which you see the explorer.
+
+And then we trained this program.
+
+Like that. And then the actual like etc. conference when we.
+
+Open it. Yes. Yes. Okay.
+
+Um, and they send us as like as a.
+
+Yeah. It's good. Right. And we basically don't um, I think we basically look at what they understand how it is like I.
+
+Was like, no, I, I like I wish it is kind of like approximately the name approximately.
+
+How would you. Yeah. That's the most Twitter post actually like to have a location.
+
+What are you talking about? Um, I think, like, look, I can speak in context, actually, of the location of the post team, but, um, how do you.
+
+You mean, like, send me something? Like, how would I know that even if I saw someone putting SSL decryption?
+
+Um, so what are you preparing them for? Because I heard you say for that, um, a kind of engineering inspiration, right?
+
+Yeah, we probably should. I wish I could use that.
+
+Oh, yeah. That's great. That.
+
+So, um, like, from Twitter, you know, so basically we're just using computer vision to,
+
+like, image through that meeting, you know, text and then Twitter and or text.
+
+Um, it's, uh, you know, just because we're using the droplets to, um, like, know what you're saying,
+
+that you can take pictures of it to like, uh oh, that's not what I was thinking.
+
+I was thinking like, do you like, you have a lot, like you said, Twitter presence.
+
+We couldn't use like, long. We have to like. I mean, we have to be popular every day.
+
+Yeah, but how about, uh, the closest or.
+
+I cannot be close to that due to abnormal or something for the script.
+
+Whatever you want. I mean, that would work as a fact.
+
+You have to convert latitude and longitude coordinates. Meetings like plain English meetings like reverse.
+
+Okay. Yes.
+
+Yeah. Well, I. So.
+
+Yeah, that's that's an option. I think that's that's part of it though.
+
+Part of the reason that my Twitter skipper says this because it's different.
+
+Right? I said of Thomas. And this is how you can try to do something with carbon alloys and what to accept.
+
+It uses space for doing things like making meetings. But I don't know, it's like, well, that's exactly my point is.
+
+So we have to basically. And then I mean, the problem with that is like the fuel element is so have to build and replace a lot of the elements.
+
+Yeah. My place actually I want to get it. That's the only NLP.
+
+My actual use case for the party is to an actual I.
+
+Exactly. Yeah. Honestly, if that's the case, we might as well just take the existing project that I've done and just replace
+
+all of the old I'm as a judge about people like that's like way easier.
+
+It's like, oh, we can't use existing projects. Really doesn't know.
+
+Well, that's coming out. I'm sorry. I mean, we.
+
+We are not using existing products. Okay. And like then because again, now there's two dimensions.
+
+No, I mean, we could we can say. We could take the idea because.
+
+No, because we could take, like a new data set.
+
+Make it something else. Or you know what I mean. Alternatively something.
+
+Because right now it can sit for sentiment analysis if you want to judge.
+
+What if we just like immediate right and replace with all of the elements and came up with, you know,
+
+because that is completely there because for the DUI, if it looks like that, like, you know, what do you prefer?
+
+But it's a new graph and you. Can.
+
+It's hard to do a tutorial. I mean, come on.
+
+Oh, yeah. Yeah. So I just like switching off between, like, writing in my notebook because I didn't have this.
+
+Yeah, we were in any other area here.
+
+Can I just. Yeah. It's like I was like, let's just say if I just describe what you're doing and what you're doing is better.
+
+Yeah. Yeah. Oh, yeah. Uh, I think you just have to create your own account with this other thing.
+
+Yeah, I, I think you, uh, started to go and read about your unfriending.
+
+What are you putting on? Yes. What's all this data? Yeah.
+
+Not, uh, the data. I'll be, um. This is a new data set.
+
+This? Yeah. There's a third reason, because this one here looks like a long line.
+
+Like an embedding. Could be. Could be the ones that took you to.
+
+Actually, this is what you might want. I mean, that's twice a day.
+
+Sure. Because then, you know, this is so I don't have to actually do it. Right.
+
+More than you said. Hi. And welcome back to The Benchmark.
+
+Howdy. What's performing for now? It would be cool if you could detect it, right?
+
+Okay. So you can actually and it does to tell us I guess I can literally just, uh,
+
+detect the bots rather than detect the humans, because you just do it right by the data.
+
+But if you like what? What? Tell them. Because they just do, like, repo pump and dump scheme.
+
+Uh, yeah. That's good. Um, yeah.
+
+Uh. So you're just so, you know, uh, I was just saying that two versions, generally speaking,
+
+is it's a, it's a you were with the new or finding model on new data sets or.
+
+Anything like that. So really novel I mean like whatever you like quickly.
+
+It's not scraping always on like really it's scraping based off of the top end model and using a pre-trained.
+
+So for example, instead of as in the economy, the alternative is that's what I put in it.
+
+Rather than just using words like it's a tool or using like a data set, was the math problem or augmenting old data with its scraping data.
+
+So the question is how do we want to go about it? How do you write that?
+
+You can make it as detailed or not final as you want, because there actually is a chance that like that.
+
+And then the harder that encourages transcript, which basically determines how deep do you want to go and how many tweets you want to hold per topic.
+
+You can go really deep or really small like, you know, 24 or 500.
+
+Is that. Yeah, I think it would just be very painful because if you want to, we're going to choose.
+
+No, not really I want it I mean like like let's reduce it to it.
+
+Yeah. No problem. Yeah. Okay. We have. Yes.
+
+Because we have I feel like rich people would be just like, you know, if you wanted to help.
+
+I mean, I can say if we. Want to go on.
+
+Put your data set. That is that.
+
+Sorry. My head is all over you. So which is more kind of distinction, right?
+
+Okay. Thank you, I guess so we're we're just.
+
+Thinking about. Like, what are we.
+
+What do you are we just ask a research interest I had just, like, kind of like makes.
+
+Like what? Take. Okay. How does this week work right now?
+
+Helps me copy in what I like. Uh. That's fine.
+
+Right. Uh, okay. Should I go to 2018? Yeah, we can work on it.
+
+Yes. Okay. Uh, tool that I have, monkeypox. I need an outlet.
+
+Where to bypass the rate limiting. Yes.
+
+Restrictions like this is a custom scraper, essentially.
+
+I mean, it's called T.W. scraper, but I find it quite a bit so that in the future it's really broken.
+
+And I've not heard that place like.
+
+Oh, I'm just thinking of how you just people who are we don't need to wait.
+
+Look at what? Because we like to say we want for relevance.
+
+Well, filtering because the whole point of this is that it's filtering by what's relevant and what people are talking about.
+
+Like, yeah, like it's like God only looks at something that lives like it doesn't like we don't everything historical information.
+
+Oh we what's what's our cool. Yeah. What is I can say you the scraper work.
+
+I have multiple versions. I think most of us is running on the desktop now rather than because a lot of, let's say let's figure out this.
+
+And so that's all. We haven't found that because the witness scraper, which gives you, uh, high quality signals,
+
+right, that are like super fancy, like super low signal, but it's like so high quality.
+
+And so now what I can do with this all is the idea is to transform that for whatever type that I'm running from.
+
+Can scrape that. I'm going to put this software to develop.
+
+So the project probably if you're running you know what not to do.
+
+So that's not by our running. That's not that that's very hard way.
+
+Because the thing is, is the configuration file is totally what seems so good.
+
+And then the only thing that is validated on the signal, like you're not saying what the actual like what this is doing.
+
+So it's not good at giving like waver because achieving based on signal,
+
+actual critical thinking is that we to fix this we're treating this on topic right.
+
+And then what we're doing is identify like important.
+
+Like stories according to information I don't know I don't know if it's like intelligence personal.
+
+Yeah I guess yeah. Whatever you like.
+
+So we have one more thing missing. Like they find the most important by important information or that point events.
+
+If you have one in the back. And then I'm going okay I can go after seat link.
+
+But see, the thing about the Twitter scraper is that it can find broad topic.
+
+But saying something like find current address is not really going to cut it because the problem,
+
+the problem is it doesn't know what current events this week doesn't know.
+
+Search for gold like new Fed chair RTX 2090 and throughout the announcement.
+
+Do you know what I think? Actually, yeah, cause I didn't want to scroll for Twitter related hours a day reading like those signals.
+
+I thought it was different. And I'm not saying that's not it, but I thought that was let's.
+
+Leave this. Yeah. Yeah.
+
+Take your time I guess. Yeah.
+
+And that's like, well, yeah.
+
+But the thing is. Yes. But the thing is doesn't, you know, it was very economical.
+
+Right. So they didn't derive some silver of what's going on.
+
+But it doesn't, but it doesn't drive that into rising because that's because they want to solve the reason.
+
+So like, like change or Twitter or current events,
+
+I actually I have no idea what I do because I think it's like another one would have been to the whole part of it is that I'm also relying on it,
+
+like very content. People are probably not talking about that.
+
+Yeah, I don't know if it was you.
+
+Like, I think that I'm sitting right now, I use Twitter, but yeah, like I don't think you have any idea how to it has the most.
+
+However, the noise ratio. Can you go in with a base pre-trained and have everything that you do to find that you don't even say?
+
+You say we give it a party or whatever he comes or like you get it for all you pay for this.
+
+We have a database or a data set.
+
+Okay, I'll make it open when we say, I mean, you know, um.
+
+Oh, you're already using it. Yeah. What's your line?
+
+Uh, that's not a good time. Would you say it's July is where?
+
+You have no idea. Yeah, yeah. Let me show you what the default this is.
+
+What? The default broad topic. Yeah. That's always good.
+
+Yeah. You know, on its price. Yeah. Well, I bet for sure.
+
+Yeah, that's that's what I can say. For example, what is the problem like focused system or not.
+
+Nice to this approach because what it's doing is it's all these topics and scraping a set amount of tweets per topic and aggregates.
+
+And I also have a source which is at the bottom.
+
+And, uh, yeah, there's a category like a skill, you know, cars, um, you can categorize very, very complex.
+
+Uh, there's a lot of and so it's already been already so there already.
+
+Maybe I'll start right now. Well, it's hard because I would never do that.
+
+Um, I mean, it's relevant because it only streams on the last day, right?
+
+I feel like there might be some problems. That might be a terminal.
+
+Yeah, if you do that. Oh, no. That's better.
+
+Do you think? I think we're venturing into, like, words like those game.
+
+Yeah. No, I mean, it almost feels like the one thing I've been doing and I feel like the NLP comes in, the NLP comes in, the analyzing the trees.
+
+You know, what has surfaced that if that makes sense.
+
+Yeah. Also knowing that I know I mean that's why that's why I mean, that's why I know that's why I made it.
+
+That's why I made it. So I don't have to replay like that's the whole reason.
+
+I mean, it's all part of it. Um, but I mean, it's like we have a pipeline.
+
+Super easy. Yeah, man. Good morning. Good morning.
+
+Good afternoon. You're early to class, so I've seen about you.
+
+I mean, you're like three hours early to RL to do, in fact.
+
+Um, so. Yeah. Uh, so even something that you can literally just think that maybe it's time to go back to the whiteboard.
+
+Easy. Go to the colon for a while, but I'm fine.
+
+I didn't want it this short. Like, it's just annoying because I showed so many photos of what I wanted.
+
+Did you get sick? Did you get sick after last week? I, you know, I, I, I eat meat like 30g, like.
+
+No, I want to know what I heard of coconut little boy over here.
+
+Oh every day it's so sick. Like this is really sick if ever you as you're just too nice, I wouldn't say.
+
+Oh, you look. All good.
+
+But I took that exam when I was sick for that. You know, I deserve.
+
+I deserve like, an extra I. Always did better with Diana, no, I promise.
+
+No, no, no, I mean, that's a good.
+
+I know you look like a princess. Yes, a very small say.
+
+No, I didn't really know. Uh, yeah, but that was because I got 15 extra points to timeout.
+
+But, uh. Okay, I wasn't sure. I'll show you guys.
+
+I actually, I would not say so. Well, if I hadn't got it.
+
+You know what? I don't have any text requests like flashcards.
+
+That's what I mean. Yeah. You didn't really.
+
+Hi. Good evening. I think I should.
+
+Be able to code. Any coding is going to be. So I think it's going to ask so on code.
+
+So you don't. Yeah basically. Oh I just thought I said I did try.
+
+I know I need to ask you.
+
+I know, I know, I never know where that might go.
+
+That's what I'm saying. Because like you really funny. If it is not well, I.
+
+Hope you are in coffee. Don't Jose show up. Yeah I say I, I just I know I'm giving I'm giving you ideas of it.
+
+Yeah. Oh my God. I, I know, I'm thinking about you might have come Jose.
+
+Me. I'm new job with Jose.
+
+So Jose should be very good. Oh no.
+
+I'm good. You're not good. Um, no.
+
+He's required to actually tweet his tax spread versus the work amplification of.
+
+That's it. Do you have any how do you like meeting? Well, I mean,
+
+if I have to do our work for it and then we have a meeting and so but want to
+
+meet after that or honestly or even if they're doing shouldn't take too long.
+
+Yeah. So I can text you when I'm done. Okay.
+
+And then call me to give it to me. Okay.
+
+It's. Just as you.
+
+Okay. It's like we try to attacking all this, right?
+
+Uh, so, like this information that Jerry you just added?
+
+Yeah. Yeah. That was. That's true. And just like we just use the.
+
+Yeah. So actually, if I were you. 00000.
+
+I'm jealous. I want to go home and say sorry.
+
+Oh, yeah. Oh. Well.
+
+Dramatic. I have my money. Yes.
+
+Hey, I'll see you there. I'll see you here, I guess. Thanks for everything.
+
+Do you mind if I take it?
+
+I think you would. Really? Yes, I would. Okay.
+
+I got in a taxi, actually. You know I will.
+
+I actually don't. Oh, but you want to see our project once or twice in your photos?
+
+Yeah, yeah yeah yeah yeah, tomorrow I will.
+
+I shall go and see you. I'm going to go work on it.
+
+Feel free to come if you want. You want to work together and have the meeting.
+
+I mean, we're all right, all right, all right.
+
+Thank you. What's up? Once I finish with this? Okay, well, I need to talk anyway, so can you tell me your 20s?
+
+Wilkinson. Oh, yeah. Well, this is it. Oh.
+
+Are they okay? Yeah. They're up until tomorrow. Oh, you know, what time is it?
+
+Ready to go? Okay, let's just go.
+
+I want a coffee, too, so let's go. Give us a.
+
+Chance, uh, for that. Yeah.
+
+In that. So that's what it's all about.
+
+Oh, wait and see if there's any good. Yeah, I know what's so crucial.
+
+No big talker. Yes, yes.
+
+I mean, it's like if you took out the stick.
+
+Oh my God. Yeah. It's, uh. Is it like, there. Are people in your folders like.
+
+Um. Hum.
+
+I think that's very, very good. It's it's not very good.
+
+But I know that if we want to do that.
+
+I haven't and then I think I, I don't know.
+
+Yeah. Here's it. So here's what. When is the next time. Is it next week perhaps.
+
+Like. Okay, here's what I'll do.
+
+Like you and I. And you should all have taken a meeting sometime this week.
+
+And then we can get started and fleshed out. Okay. I will try to get into it.
+
+But, you know, it's like.
+
+And then this. Is not busy.
+
+So I'll start a new project. So yeah, at this time.
+
+So I, I think, you know, that's through that block.
+
+Yeah. Yeah. And. The real question is how are we going to take credit and not get.
+
+Because it takes 50 minutes to scrape Twitter video.
+
+Because so like we can't scrape it in real time unless, unless we say like try entering a couple of times and every time there's nothing.
+
+Yeah. What are you what are you. You're on Twitter. It's just me.
+
+And so there's this. Really good. Yeah, but I remember that, uh, you know, thinking about it.
+
+Okay. I think you're absolutely right.
+
+Yeah. Yeah. So let's go, let's go, let's go.
+
+See you guys later. Bye, guys. Bye bye. Where do you see myself?
+
+Um, I already. Oh. This is. Cool.
+
+What if we had.
+

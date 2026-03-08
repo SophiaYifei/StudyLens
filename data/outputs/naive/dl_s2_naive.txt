@@ -1,0 +1,56 @@
+1
+Week 2
+Computer Vision I
+Agenda
+Introduction to Computer Vision
+Traditional CV
+
+Convolutional Neural Networks
+Convolution
+Convolutional NN
+CNN Architectures
+
+Implementation of CNNs
+Transfer Learning
+Data Augmentation
+2
+3
+Introduction to Computer Vision
+3
+Overview
+4
+Image Recognition
+
+Facial Recognition
+
+Product Identification
+Object Detection
+
+Autonomous Driving
+
+Manufacturing
+
+Agriculture
+Image Segmentation
+
+Medical Imaging (ID regions of interest)
+Object Tracking/
+Motion Analysis
+
+Surveillance
+
+Sports tracking
+Scene Reconstruction
+
+Architecture
+
+VR/AR
+
+3D modeling
+5
+Classification
+Object Detection
+Bounding Boxes
+Object Masking
+Image Segmentation
+Keypoint Detection
