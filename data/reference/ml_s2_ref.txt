@@ -1,0 +1,15 @@
+Model Evaluation – Training, Test Sets, Sampling
+
+• Goal: Estimate how the model will perform on new, unseen data. We split data because we cannot evaluate on data we don’t have.
+
+• Train vs test: Training set (e.g. 80–90%): build and train the model. Test set (10–20%): evaluate final performance once. Never use test for model building or selection.
+
+• Sampling: We sample from a population (or from available data) to get train/test. Nonprobability sampling (convenience, snowball, judgment, quota): not random; common in practice but can cause bias (e.g. LLMs on Wikipedia/Reddit; sentiment on IMDB; self-driving data from one region). Random sampling: simple random (equal probability), stratified (sample from each subgroup), weighted (probabilities by domain knowledge). Stratified and weighted help match real-world distribution.
+
+• Data leakage: Test (or validation) information influences model building → overoptimistic and invalid performance. Causes: feature selection, scaling, or imputation before splitting; using test for model comparison; same patient/entity in both train and test; splitting time series randomly instead of by time; duplicates across splits. Always split first, then do any preprocessing separately on train (and apply the same transform to test).
+
+• Validation set: When comparing models or tuning hyperparameters, use a three-way split: train (e.g. 60–80%), validation (10–20%), test (10–20%). Use validation for model selection; report final performance on test only once.
+
+• Cross-validation (CV): K folds; each fold one part is validation, rest training; rotate so every observation is validation once. Average validation performance across folds. Use when data is limited or you want a stable estimate. After CV, still evaluate the chosen model on the held-out test set.
+
+• Bias–variance: Bias = error from overly simple model (underfitting). Variance = sensitivity to training data (overfitting). Tradeoff: more complexity often reduces bias but increases variance. Target: optimal model complexity where total error is minimized.

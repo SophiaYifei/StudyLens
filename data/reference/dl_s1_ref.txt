@@ -1,0 +1,17 @@
+Introduction to Neural Networks (Week 1)
+
+• Why neural networks: Used when you have lots of training data, many (especially unstructured) features, complex feature–target relationships, and can trade off explainability for performance. Avoid when data is small or you need interpretability.
+
+• Neuron (1943 McCulloch–Pitts): f(x,w) = x1w1 + … + xnwn — weighted sum of inputs; weights were set manually. Represents a linear hyperplane. Single neuron = linear decision boundary.
+
+• Perceptron (1958 Rosenblatt): Adds threshold T. Output y = 1 if Σᵢ wᵢxᵢ − T > 0, else 0. Activation function Φ decides how much signal passes forward. Still only linear decision boundaries (e.g. w₁x₁ + w₂x₂ = 0).
+
+• Limitation: Perceptron learns only linearly separable problems. Fails for XOR-like problems.
+
+• Multilayer perceptron (MLP): Multiple layers (input, hidden, output). With enough hidden units, an MLP can approximate any function. Each layer: weighted sum then activation Φ. Non-linear Φ (ReLU, sigmoid) is essential for learning non-linear boundaries.
+
+• Deep learning: “Deep” = many layers. More layers → more levels of abstraction. Features are learned from data automatically (no hand-crafted features). Cost: many parameters, hard to train (non-convex), easy to overfit on small data, power-hungry.
+
+• Activation functions: Introduce non-linearity so the network can learn beyond linear boundaries. Common: ReLU, sigmoid, tanh.
+
+• Why now: More training data (e.g. ImageNet), more compute, and algorithmic advances (e.g. backprop, ResNet, attention) made deep nets practical.

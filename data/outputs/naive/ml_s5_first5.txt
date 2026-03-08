@@ -1,14 +1,0 @@
-Modeling Process & AlgorithmsWeek 5
-https://classwise.org/student/quiz/89ef76e5-f054-4500-a4cc-1a4b5b5e67de
-Classification
-Classification models predict a categorical target:
-Handwritten characters
-Benign vs.
-Let’s Tackle a Classification Problem
-We now want to predict a class (e.g.
-Problems:
-How do we interpret predictions between 0 and 1?
-Solution: Predict the Probability y=1
-Rather than predicting y, let’s predict the probability P(y=1), which falls between 0 and 1
-We could use linear regression, but what do we do with predicted values <0 and >1?
-Source: Wikipedia

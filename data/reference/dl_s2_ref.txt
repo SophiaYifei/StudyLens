@@ -1,0 +1,15 @@
+Computer Vision I (Week 2)
+
+• Why CV: Applications include image classification, object detection, segmentation, facial recognition, medical imaging, autonomous driving. Challenges: occlusions, lighting, pose, perspective; need for large labeled data and fast inference.
+
+• Traditional CV (feature engineering): Hand-design features, then feed to an ML model. Color: histograms, color moments, dominant colors (e.g. k-means), color coherence vectors. Texture: GLCM, LBP, Gabor filters, Haralick. Shape: edge detection (Sobel, Canny), contours, Hu moments, SIFT, SURF, HOG. Problems: feature engineering is hard and domain-specific; spatial and hierarchical structure often lost; limited generalization; expensive at high resolution.
+
+• Why convolution: Fully connected layers on images have huge parameter counts (e.g. 228×228×3 → 155k+ inputs per neuron). Convolutional layers use small sliding filters (e.g. 3×3×3×10) so parameter count stays small (e.g. 280 vs. 1.5M) while still learning local patterns.
+
+• Convolution: Sliding kernel over the input; at each position compute weighted sum. 1D: signal; 2D: image; 3D: video or volumetric data. Filters learn to detect edges, textures, etc. Shared weights across positions → translation invariance and fewer parameters.
+
+• CNN building blocks: Convolutional layers (learn filters); pooling layers (reduce spatial size, add invariance). Each filter produces a feature map. Deeper layers learn more abstract features.
+
+• Transfer learning: Use a model pre-trained on a large dataset (e.g. ImageNet); freeze early layers, replace and train the head on your task. Reduces data and compute needed.
+
+• Data augmentation: Random crops, flips, color jitter, etc., to increase effective data size and improve generalization.

@@ -1,0 +1,29 @@
+‹#›
+Lecture 3
+Computer Vision II
+Agenda
+Applied Computer Vision
+Image Classification (DenseNet, SqueezeNet, pre-trained model use) 
+Bounding Boxes (YOLO, Faster R-CNN)
+Semantic segmentation (U-Net, Mask R-CNN)
+Model Evaluation 
+
+Advanced Topics
+SOTA Object Detection + Segmentation (Grounding DINO + SAM)
+Diffusion Models (Stable Diffusion)
+Vision Transformers
+‹#›
+‹#›
+Applied 
+Computer Vision
+‹#›
+‹#›
+Image Classification
+‹#›
+Dog: 0.82
+Cat: 0.11
+Bear: 0.06
+Bird: 0.01
+…
+Model
+‹#›

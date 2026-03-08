@@ -1,0 +1,25 @@
+Model Evaluation
+Training & Test Sets
+Goal of predictive modeling is to create a model that makes accurate predictions on new unseen data
+We cannot estimate performance on data we do not have, so instead we split our data into two sets
+Training set  - build and train the model
+Test set – Evaluate model performance performance
+Training  (~80-90%)
+Test
+(~10-20%)
+Use for model building & training
+Use to evaluate final model
+Sampling
+Why do we sample?
+Nonprobability sampling
+Nonprobability sampling is when the selection of data is not based on any probability criteria
+Types of nonprobability sampling:
+Convenience sampling – samples selected based on their availability
+E.g.
+Nonprobability sampling
+Samples are not representative of real-world data and thus are highly likely to cause bias in your model
+However, this is a very common approach in practice
+Examples:
+Large language models are trained on easily collected data – Wikipedia, Reddit, Common Crawl etc
+Sentiment analysis models often trained on IMDB movie reviews or Amazon reviews – biased towards people who leave reviews online
+Self-driving cars – initially trained only on Phoenix, AZ and Bay Area.

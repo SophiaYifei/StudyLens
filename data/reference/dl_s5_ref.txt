@@ -1,0 +1,15 @@
+Natural Language Processing II – Attention & Transformers (Week 7)
+
+• Limitation of Word2Vec-style embeddings: One vector per word type; “bank” in “river bank” vs “deposited at the bank” gets the same vector. We need context-dependent representations.
+
+• Self-attention: Goal: improve embeddings with context. For each word, use the whole sequence to compute a new representation (y1, y2, …). Each output position can attend to all positions → context-aware vectors. Multi-head attention: several attention “heads” in parallel, then combine. Cross-attention: one sequence attends to another (e.g. decoder to encoder).
+
+• Transformer: Architecture built on self-attention (and cross-attention in encoder–decoder). No recurrence; parallel over sequence; scales well. “Attention is all you need” (2017).
+
+• BERT: Pre-trained transformer (encoder); bidirectional context. Good for classification, NER, Q&A. GPT: Decoder-only; autoregressive (next-token prediction). Good for generation. Use BERT when you need context from both sides; GPT when you need generation.
+
+• Applied NLP with transformers: Text similarity, summarization, topic modeling—often by fine-tuning or prompting pre-trained models.
+
+• LLMs: Large language models (e.g. ChatGPT, Claude) are very large transformers, pre-trained on huge text and sometimes fine-tuned or aligned. Used for generation, Q&A, and many NLP tasks via prompting.
+
+• Multimodal: Models that combine text and other modalities (e.g. CLIP: text + images). Enables image captioning, visual Q&A, and foundation models that understand both text and vision.

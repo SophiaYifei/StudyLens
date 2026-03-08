@@ -1,0 +1,13 @@
+Computer Vision II – Applied CV
+
+• Image classification: Predict a single label per image. DenseNet: every layer connected to all previous via concatenation; L(L+1)/2 connections; reuses features, helps vanishing gradient; cost is memory. SqueezeNet: 1×1 “squeeze” and mixed 1×1/3×3 “expand”; fewer parameters and compute.
+
+• Pre-trained models: Trained on large datasets (e.g. ImageNet); use as foundation. Workflow: load model → freeze weights → replace final FC layer with one matching your number of classes → train (often only the new layer); optionally unfreeze and fine-tune. Available in PyTorch Model Zoo, TensorFlow Model Garden.
+
+• Object detection: Predict bounding boxes + class per object. YOLO: single-stage, fast. Faster R-CNN: region proposals then classify and refine boxes. Use when you need where + what.
+
+• Semantic segmentation: Pixel-wise labels (each pixel has a class). U-Net: encoder–decoder with skip connections; good for medical/biological images. Mask R-CNN: detection + pixel masks per instance. Use when you need precise boundaries.
+
+• Model evaluation: Use task-appropriate metrics (e.g. mAP for detection, IoU for segmentation) and hold-out test sets.
+
+• Advanced/SOTA: Grounding DINO + SAM for detection and segmentation; diffusion models (e.g. Stable Diffusion) for generation; vision transformers (ViT) treating patches as sequences. Know what each is used for (detection vs. segmentation vs. generation).

@@ -73,7 +73,7 @@ def load_pptx(path: Path) -> Dict:
         if full:
             slides_data.append({"slide_num": slide_num, "title": title_text, "text": full})
 
-    full_doc = "\n\n--- SLIDE BREAK ---\n\n".join(s["text"] for s in slides_data)
+    full_doc = "\n\n".join(s["text"] for s in slides_data)
     return {
         "source":   path.name,
         "doc_type": "slides",
@@ -150,13 +150,13 @@ def denoise_all_transcripts(directory: Path):
         # ---- Trim start/end ----
         start, end = 0, len(lines)
 
-        for i in range(min(MAX_TRIM, len(lines))):
+        for i in range(min(MAX_TRIM_START_LINES, len(lines))):
             if any(rx.match(lines[i].strip()) for rx in compiled_noise):
                 start = i + 1
             else:
                 break
 
-        for i in range(len(lines) - 1, max(-1, len(lines) - MAX_TRIM - 1), -1):
+        for i in range(len(lines) - 1, max(-1, len(lines) - MAX_TRIM_END_LINES - 1), -1):
             if any(rx.match(lines[i].strip()) for rx in compiled_noise):
                 end = i
             else:
@@ -197,9 +197,13 @@ def denoise_all_transcripts(directory: Path):
 
 
     # ---- Main Processing ----
+    # Only denoise transcript-like files; skip naive/first5 slide-extraction outputs
     target_files = [
         f for f in directory.glob("*.txt")
-        if "t" in f.stem.lower() and not f.stem.endswith("_cleaned")
+        if "t" in f.stem.lower()
+        and not f.stem.endswith("_cleaned")
+        and not f.stem.endswith("_first5")
+        and not f.stem.endswith("_naive")
     ]
 
     print(f"Found {len(target_files)} matching files.\n")

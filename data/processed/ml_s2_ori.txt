@@ -1,0 +1,1902 @@
+Model Evaluation
+Training & Test Sets
+Goal of predictive modeling is to create a model that makes accurate predictions on new unseen data
+We cannot estimate performance on data we do not have, so instead we split our data into two sets
+Training set  - build and train the model
+Test set – Evaluate model performance performance
+Training  (~80-90%)
+Test
+(~10-20%)
+Use for model building & training
+Use to evaluate final model
+Sampling
+Why do we sample?
+We don’t have access to all possible data
+It is infeasible to process all the data we have access to
+Sampling occurs at multiple points
+Sampling from the entire population to create training data
+Sampling from the training data to create a test set
+Sampling from the training data to do quick experiments
+Two main types of sampling: nonprobability sampling and random sampling
+Nonprobability sampling
+Nonprobability sampling is when the selection of data is not based on any probability criteria
+Types of nonprobability sampling:
+Convenience sampling – samples selected based on their availability
+E.g. Use Google Image Search for pictures of flowers to train on
+Snowball sampling – Future samples selected based on existing samples
+E.g. scraping Twitter accounts based on users you follow
+Judgment sampling – Domain experts decide what samples to use
+Quota sampling – Select samples based on quotas for sub-groups
+E.g. a survey where you collect 100 responses from users of each age group
+Nonprobability sampling
+Samples are not representative of real-world data and thus are highly likely to cause bias in your model
+However, this is a very common approach in practice
+Examples:
+Large language models are trained on easily collected data – Wikipedia, Reddit, Common Crawl etc
+Sentiment analysis models often trained on IMDB movie reviews or Amazon reviews – biased towards people who leave reviews online
+Self-driving cars – initially trained only on Phoenix, AZ and Bay Area.  Waymo later expanded to include Kirkland, WA for rainy weather
+Random sampling
+Random sampling involves randomly choosing samples from population
+Several types:
+Simple random sampling – all samples have equal probability of being selected
+Downside – certain rare categories may not appear in the sampled data
+Stratified sampling – divide population into groups you care about and sample a % randomly from each group
+One challenge is that some observations may fall into multiple groups
+Weighted sampling – each sample is given a weight which determines the probability of being selected
+Allows you to apply domain expertise in selection e.g. weight recent data higher
+Helps when your available data has a different distribution than the true data
+Sampling for test set
+Take a random sample of indices to use for test set, use remainder for training
+Use Scikit-learn’s train_test_split method
+If we want to do stratified sampling we use the ‘stratify’ parameter
+Data Leakage
+“Data leakage” occurs when some of our test set data “leaks” into model building and influences the development of the model
+For example, if we use all of our data to select our features, or compare algorithms
+This invalidates the estimated performance of the model and causes it to be overoptimistic
+In severe cases, it can cause our model to be worthless
+Data Leakage
+Data from the future is accidentally used within training data
+Data Leakage
+A variable within the training data is an indicator of the target
+Common causes of data leakage
+Selecting features before splitting
+Scaling before splitting
+Filling missing values before splitting
+Grouped observations are separated into different splits
+E.g. two CT scans from the same patient taken a week apart
+Not great
+Bad
+Splitting time series data randomly instead of by time
+Failure to remove duplicate observations
+Particularly dangerous when merging multiple datasets together
+Common issue in several studies using ML to detect COVID-19
+Different data generation processes for different classes
+Comparing Models
+Comparing models- validation sets
+Often we want to compare models to select the optimal model
+If we use the test set to compare model performance, it is not longer an unbiased indicator of performance
+Instead, we split the data 3 ways into training, validation and test sets
+We use the validation set for model selection, and report performance on the test set
+Training
+(~60-80%)
+Validation
+(~10-20%)
+Test
+(~10-20%)
+Use for model comparison/selection
+Use to evaluate final model
+Question
+What might be some potential problems with using a validation set to do your model selection?
+Training
+(~70-80%)
+Validation
+(~10-20%)
+Test
+(~10-20%)
+Use for model comparison/selection
+Use to evaluate final model
+Cross-Validation
+K-Folds Cross Validation
+Rather than using a fixed validation set, we train and run the model(s) multiple times, each time using a different subset (“fold”) as the validation set
+Training + cross-validation
+(~80-90%)
+Test
+(~10-20%)
+Use for model comparison/selection
+Use to evaluate final model
+Val set
+Val set
+Val set
+Val set
+Val set
+K=5 Folds
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+Iteration 5
+K
+Validation fold
+Training folds
+K-Folds Cross Validation
+We calculate the error on the validation fold for each iteration, and then average them together to get the average error
+K=5 Folds
+K
+Validation fold
+Training folds
+Other types of cross-validation
+ShuffleSplit cross-validation
+For each fold, we randomly select a % of observations to use for validation and use the rest for training
+E.g. we can set K=4 and validation % = 10%. Each fold, we randomly select 10% of observations for validation
+This can cut down on compute time, but the tradeoff is we may use observations multiple times, or not use some observations, introducing bias
+Leave-one-out cross-validation
+Set K = number of points
+Each observation becomes a validation set one time, and all other observations are used for training
+Average your performance over all K folds
+Why use cross-validation?
+Maximizes the data available for training the model – important for small datasets
+Provides a better evaluation of how well the model can generalize to new data – validation performance is not accidentally biased by choice of datapoints to use for validation
+Cross-validation is the typical approach used in industry for model selection and tuning, except in cases of very large datasets
+CV and Model Evaluation
+Remember, when you complete your cross-validation and do your model selection, you still need to evaluate your model on the test set for a fair approximation of performance
+Training + cross-validation
+(~80-90%)
+Test
+(~10-20%)
+Use for model comparison/selection
+Use to evaluate final model
+Val set
+Val set
+Val set
+Val set
+Val set
+Iteration
+Validation fold
+Training folds
+1
+2
+3
+4
+5
+CV using Scikit-learn
+Divide data into ”k” folds
+For each model you want to compare:
+For each of “k” iterations:
+Get the training folds and the validation fold for the iteration
+Fit the model on the training data
+Get predictions for the validation fold, calculate performance and store it
+Calculate mean validation performance across all iterations
+Compare CV average performance and select model
+Model Selection:
+The Bias-Variance Tradeoff
+Model Complexity
+Model Complexity
+Number of Features
+Algorithm
+Hyper-parameter Values
+Bias and Variance
+Bias is error from incorrect assumptions within the model
+Often introduced by modeling a real-life problem using a simpler model that is unable to fully capture the underlying patterns in data
+Variance refers to the sensitivity of the model to fluctuations in the training data
+Usually due to model fitting itself to fine patterns which may just be noise
+See: http://scott.fortmann-roe.com/docs/BiasVariance.html
+Bias – Variance Tradeoff
+Irreducible error
+Bias2
+Variance
+Bias
+Deviation
+Expected Error
+Bias – Variance Tradeoff
+Error
+Model complexity
+Total error
+Variance
+Bias2
+Optimal model complexity
+Underfitting vs. Overfitting
+Image source: http://scott.fortmann-roe.com/docs/BiasVariance.html
+Underfitting
+Model is too simple
+Overfitting
+Model is too complex
+Underfitting vs. Overfitting
+Underfitting
+Model is too simple
+Overfitting
+Model is too complex
+Image source: Scikit Learn documentation
+Good Fit
+Model fits well, with some error
+How do we recognize overfitting?
+As we increase complexity, training score continues to improve
+However, validation score improves to a point but then drops as model overfits the training data
+Eventually, training performance & validation performance diverge indicating model is overfit
+Image source: Python Data Science Handbook
+Finding the optimal model
+Our goal is to find the optimal model complexity to balance bias and variance, thereby minimizing error
+What influences complexity?
+Choice of algorithm
+Number of features
+Hyperparameter settings
+Optimal complexity varies with amount of data – the more data, the more complex model you can use
+We find this using the validation approaches we discussed last class
+Image source: Python Data Science Handbook
+DEMO Notebook:
+Validation Curves
+Metrics
+Outcomes vs. Outputs
+Refers to the desired business impact on your organization or for your customer
+Stated in terms of the expected impact (which is often $)
+Does NOT contain model performance metrics or other technical metrics
+Outcome
+Output
+Refers to the desired output from the model
+Measured in terms of a model performance metric
+Typically not communicated to the customer
+Set this AFTER setting the desired outcome
+Outcomes vs. Outputs
+A tool to predict turbulence for airlines
+Output
+Outcome
+Low # of safety incidents per year, or lower $ of safety-related claims
+AUROC or precision/recall of turbulence prediction (binary or 1-5 scale)
+A power demand forecasting tool for a utility
+Lower cost per MWh of power produced
+Lower emissions rate per MWh
+MSE (most likely) or MAE/MAPE
+Baselines
+Metrics are meaningless without a baseline for comparison
+There are a few important baselines to determine:
+Zero rule baseline (Most common class / mean value)
+Heuristic baseline
+Human baseline
+Existing solution baseline
+Regression Error Metrics
+MSE, MAE and MAPE
+Also influenced by scale
+More robust to outliers
+Can be easier to interpret in context of the problem
+Abs value is less desirable for calculations (squared terms are easier to minimize via differentiation)
+Mean Absolute Error
+Mean Squared Error
+Most popular regression error metric
+Heavily influenced by outliers - penalizes large errors much more than small ones
+Influenced by scale of data
+Sometimes used as RMSE
+Converts error to a percentage
+Popular among non-technical managers because it is easily understood
+Skewed by high % errors for low values of y
+Mean Absolute % Error
+Example: MAE vs. MSE/RMSE
+MSE/RMSE penalizes severe errors much more than MAE
+This can be desirable if being off by a lot one time is much worse than being off by a little every time
+Image source: https://medium.com/human-in-a-machine-world/mae-and-rmse-which-metric-is-better-e60ac3bde13d
+Coefficient of determination (R2)
+Deviation of points from mean can be broken down into two components:
+”Explained deviation” – portion of deviation predicted by your model
+“Unexplained deviation” – difference between prediction and actual point
+Coefficient of determination (R2)
+R2 ranges between 0 and 1
+Unexplained deviation (error)
+Deviation explained by model
+Total deviation from mean
+R-squared is typically used to communicate how well your feature variables (X) explain the variability in your target variable (y)
+Adjusted R2
+R-squared is often viewed as a measure of goodness of fit rather than prediction ability -> calculated “in-sample” on the training data itself
+As we add more features, the R-squared almost always goes up because the model finds additional patterns of correlation (which might be noise)
+However, this does not mean the model can generate better predictions on new data -> remember our discussion on overfitting
+To help with this problem, we often report ”adjusted R-squared”, which penalizes for more features (added complexity)
+“Is R-squared useless?”: https://data.library.virginia.edu/is-r-squared-useless/
+Classification Error Metrics
+Accuracy
+Accuracy is the most popular and easiest to understand error metric
+However, accuracy can be deceiving when there is a class imbalance
+Consider this situation:
+I am building a model to predict whether patients will have a certain rare disease
+I gather a dataset with thousands of patients and several features, along with a label of whether they were diagnosed with the rare disease (“1”) or not (“0”)
+Using this dataset, I create a classifier with 99.4% accuracy!
+What’s the problem?
+My dataset had very high class imbalance
+My model just predicted “0” for every patient
+And it was right 99.4% of the time!
+Confusion Matrix – Binary Classification
+True positives
+False negatives
+False positives
+True negatives
+0 (Negative)
+1
+(Positive)
+1
+(Positive)
+0
+(Negative)
+Confusion Matrix – Binary Classification
+True positives
+False negatives
+False positives
+True negatives
+0 (Negative)
+1
+(Positive)
+1
+(Positive)
+0
+(Negative)
+True Positive Rate (TPR)
+Recall
+Sensitivity
+How many of all positives did the model correctly classify as positives?
+True positives
+True positives
+False negatives
++
+All positives
+Confusion Matrix – Binary Classification
+True positives
+False negatives
+False positives
+True negatives
+0 (Negative)
+1
+(Positive)
+1
+(Positive)
+0
+(Negative)
+False Positive Rate (FPR)
+How many of all negatives did the model incorrectly classify as positives?
+False positives
+True negatives
+False positives
++
+All negatives
+Confusion Matrix – Binary Classification
+True positives
+False negatives
+False positives
+True negatives
+0 (Negative)
+1
+(Positive)
+1
+(Positive)
+0
+(Negative)
+Precision
+How many of the predicted positives are actually positives?
+True positives
+True positives
+False positives
++
+All predicted positives
+Confusion matrix cheat sheet
+Source: Wikipedia
+Question
+Our model predicts every observation as “positive”
+Is the recall / true positive rate high or low?
+What about the false positive rate?
+How about the precision?
+ROC Curves
+A Receiver Operating Characteristic (ROC) curve plots the True Positive Rate (TPR) and False Positive Rate (FPR) for different threshold values
+What is a threshold?
+Most classification models return the probability of the positive class
+The data scientist sets a threshold for the positive class – if the probability returned by the model is above threshold, the assigned label is positive
+Typically the threshold is set to 0.5 by default
+What happens to TPR if we increase the threshold to 0.9?
+What about FPR?
+What if we go the other way to 0.1?
+ROC Curves
+To build a ROC curve:
+Run the model and get the output probabilities
+For each value in range(0,1):
+Set value as threshold value
+Calculate predictions by comparing model output probabilities to threshold
+Compare the predictions to targets and calculate the TPR and FPR values
+Plot the values for all thresholds on a graph of TPR vs FPR
+ROC Curves
+To build a ROC curve:
+Run the model and get the output probabilities
+For each value in range(0,1):
+Set value as threshold value
+Generate predictions by comparing model output probabilities to threshold
+Compare the predictions to targets and calculate the TPR and FPR values
+Plot the values for all thresholds on a graph of TPR vs FPR
+Image source: https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc
+Area Under ROC (AUROC)
+A common error metric for classification models is AUROC
+This represents the area under the ROC curve
+A perfect classifier will have have AUROC=1
+A random classifier will have AUROC=0.5
+Why? See: https://datascience.stackexchange.com/questions/31872/auc-roc-of-a-random-classifier
+Therefore, a model should have an AUROC between 0.5 and 1 (higher is better)
+https://en.wikipedia.org/wiki/Receiver_operating_characteristic#/media/File:Roc-draft-xkcd-style.svg
+Precision-Recall Curve
+Another evaluation technique is the precision-recall (PR) curve
+This measures the tradeoff between recall and precision as the model threshold is varied (just like we did for the ROC)
+PR curves are especially useful if we have high class imbalance (e.g. a lot of 0’s and only a few 1’s)
+Unlike ROC curves, they do not factor in True Negatives
+Image source: https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html#sphx-glr-auto-examples-model-selection-plot-precision-recall-py
+Multiclass Confusion Matrix
+The multiclass confusion matrix shows us where the classifier model is struggling to differentiate between classes
+A perfect classifier would have values only on the diagonals
+To plot the confusion matrix we use scikit learn’s plot_confusion_matrix() method
+Multiclass Confusion Matrix
+We can calculate the same metrics as we did before, but now we do it for each class
+Scikit learn will do this for us using the classification_report() method
+We can also report  overall “macro-averaged” precision and recall using a simple average across all classes
+Image source: https://towardsdatascience.com/multi-class-classification-extracting-performance-metrics-from-the-confusion-matrix-b379b427a872
+F1 Score
+Preparing for Modeling
+Aspects of preparing data
+Splitting data - train/test sets
+Feature selection
+Creating new derivative features
+Encoding categorical features
+Scaling/standardizing features
+Adjusting for class imbalance
+Feature Selection
+Why do feature selection?
+Reduces model overfitting / improves generalization performance
+Reduces training time
+Reduces complexity / improves model interpretability
+Feature selection methods
+Univariate selection
+Generally performed during Data Preparation, before starting any modeling
+Focus at this point is simplifying the data – remove unnecessary features
+We are NOT trying to select the optimal combination for modeling
+Two objectives:
+Remove features which have very little to contribute in predicting the response (e.g. features with no/low correlation to the output)
+Identify features which are correlated with each other and determine how to resolve (this is called multicollinearity)
+Univariate selection methods
+Output Type
+Input Type
+Numeric
+Categorical
+Numeric (Regression)
+Categorical (Classification)
+ANOVA
+Mutual Information
+Pearson’s Correlation
+Spearman’s Correlation
+ANOVA
+Mutual Information
+Chi-Squared
+Mutual Information
+Univariate selection using scikit-learn
+Scikit-learn provides the SelectKBest class
+Select a user-specified number of features which score highest on a univariate statistical test
+Inputs: features (X), response (y), number to select (k), statistical test (score-func)
+Do not use this blindly – always look at the details and confirm the selection makes sense!
+Embedded Methods – Random Forest
+We can calculate the relative importance of each feature using the random forest’s model.feature_importances_ attribute
+“Feature importance” is calculated by looking at how much the nodes that use each feature reduce gini impurity on average (across each tree and then all trees in the forest), weighted by number of samples at node
+Feature selection strategy
+Remove any features with significant (>50%) null values
+Use filter method(s) to reduce feature set to a manageable number
+Use one or more embedded methods to perform final selection
+Different approaches may give different results.  Might combine multiple approaches
+Working with Categorical Features
+Continuous vs categorical features
+Continuous
+Numeric variable that has an infinite number of values between any two values
+E.g. length of a part, temperature, height, time
+Categorical
+Finite number of categories / distinct groups
+May or may not have a logical order
+E.g. gender, student major, material type, color
+Discrete
+Numeric variable that has a countable number of values between two values
+E.g. age, number of parts, year made
+Rule of thumb – if number of possible values small, treat as categorical
+Encoding categorical features
+Many machine learning models are algebraic and only know how to accept numerical inputs
+We need to convert our categorical (string) features into number codes
+Two ways to do this:
+Numerical (ordinal) encoding
+One-hot encoding
+Example – predicting health insurance claims
+Objective is to predict the total medical claims of customers of a health insurance company based on demographic data
+Features:
+Sex – categorical
+Age_group – categorical
+Body Mass Index (BMI) - continuous
+Children - continuous
+Smoker – categorical (binary)
+Region – categorical
+Response:
+Charges - continuous
+How should we handle the categorical variables?
+Method 1: Ordinal encoding
+For ordered data there is value in preserving the ordering (e.g. education level, class grade)
+Converts ordinal categories to numerical codes
+Can also use for non-ordered data (but creates risk that model will learn artificial relationships)
+Method 2: One-hot encoding
+Each categorical variable with n categories is split into n different binary features (0/1)
+Scaling/Standardizing
+Why scale/standardize your data?
+Some distance-based models (e.g. clustering or K Nearest Neighbors) will only work when features are on the same scale
+E.g. trying to compare two people using the dimensions “Age” and “Household Income” via a distance metric such as Euclidian distance will not be useful
+Other machine learning models may converge faster/better (e.g. logistic regression, neural networks)
+Improves interpretability of models results (e.g. can directly compare coefficients of a regression model and interpret intercept)
+Scaling vs. Standardizing
+Min-Max Scaling (Normalization)
+Change the values for each feature so they fall in a fixed range – usually 0 to 1
+Commonly used for computer vision applications (scaling pixel values to 0–255)
+Used when data distribution is not approximately normal
+May diminish the impact of outliers
+Standardization
+(Z-score normalization)
+Change the values for each feature so they have properties of a standard normal distribution with μ=0 and σ=1
+Important for clustering analysis and PCA, helps neural networks
+May distort differences between features if not approximately normally distributed
+Scikit learn: MinMaxScaler()
+Scikit learn: StandardScaler()
+Rules of Thumb
+Some algorithms require either scaling or standardizing
+Distance-based algorithms such as KNN, clustering
+Regression with L1/L2 penalty
+Some (e.g. PCA) require standardizing
+It never hurts to scale/standardize, and even if not required it often helps improve convergence
+Class Imbalance
+Bias from class imbalance
+“Class imbalance” means that one label class is significantly more common in the training dataset than others
+Class imbalance may be inherent in the phenomenon being modeled:
+Car insurance claims
+Financial fraud
+Side effects of new medicine
+It may also be introduced through sampling bias in building the training dataset:
+IBM’s facial recognition software
+Amazon’s AI-based resume screening system
+Why does class imbalance matter?
+The model learns that if it predicts the majority class more, it will perform better
+As a result, it’s ability to predict the minority class when it occurs is impaired
+Selection of metrics can make this worse
+E.g. if we use a simple metric like “accuracy”, we could convince ourselves we have a great model if it predicts a “0” 100% of the time!
+Dealing with class imbalance
+If the class imbalance is a result of bias in collecting training data, fix the root problem by collecting more data
+If the imbalance is inherent in the problem, two common techniques uses are undersampling the majority class, and oversampling the minority class
+https://www.kaggle.com/rafjaa/resampling-strategies-for-imbalanced-datasets
+Pipelines
+Pipelines
+We can think of the steps in preparing & modeling our data as a “pipeline”
+We “fit” the pipeline using the training data only, and then we can apply it to new data going forward (including the test set)
+Fill missing data
+Reduce feature set
+Encode
+categorical data
+Scale numerical data
+Model
+Data pipeline
+New data
+Predictions
+Pipelines in Scikit-learn
+Fill missing data using mode
+One-hot encode
+Standardize
+Model
+Input data
+Fill missing data using median
+Categorical data
+Numeric data
+Predictions
+Pipeline.fit(X_train, y_train)
+Pipeline.predict(new_data)
+ColumnTransformer
+Benefits of pipelines
+Fit once, then reuse for testing, production
+Less code to maintain
+Ease of adaptation to changing data
+Reproducibility / data lineage
+Questions?
+
+[Auto-generated transcript. Edits may have been applied for clarity.]
+I know I, I was, guys.
+I know you, I think I can't possibly.
+Be honest. I think.
+That's true. I appreciate.
+That. Thank you.
+much for being here.. And.
+He knows. I want us to.
+I can. for the second part of my.. Good morning everybody. I didn't know that.
+That's a bad grade.. It's again.
+It's over., always. We always start off easy, I would say., please,, put your name tents out.
+We have a few people out. If you lost years or you didn't get one.
+I forgot to bring them this morning, but I'll bring them home again next week,.
+But please hold on and take them out to start the class., before we,, start the class today, a few,, logistics announcements.
+just a reminder, we got our,, pizza party tonight., I think everybody should have gotten an email from Amanda. that's going to be held starting at the 5:00 o'clock, 5:00, 5:00.
+next to us here., just across the little street here., I think pizza's arriving at six, show up any time, 5 to 6 or., we'll have some pizza., I think there might be an opportunity to explore some of the,,
+some of the things in the co-lab maybe, maybe even try, try some a Hands-On activity, I think.
+I think we might have,, a little activity for those of you that,,, want to give,, give the equipment, their a try., that's tonight., Friday morning is our first seminar,,., we've talked about this in orientation., as a reminder, each week we'll bring in,, somebody from industry to talk with us., those talks last an hour. They started at 1005.
+please make sure you're there and see at 10:00, ready to go., we do take attendance and latencies, not being there, please be there.
+Seated at 1005., our first speaker this year is,, a,, venture capital investor that,,
+also runs a an accelerator or an incubator program for very early stage AI startups.
+And in fact, some of our students have been through their incubator.
+I think we had to obviously, we had one adjunct faculty go through it last year,
+and then we had a group,, as a group with some of our students go through last year as.,,, that's a great program for anybody thinking about starting a business might be a good opportunity to,,, to get some support., and,, Mandy, our speaker will,, I think give you a really nice,, feel for what venture capital investing is,,
+what it's to start a startup, particularly in the AI space, what VC investors look for when they consider making investments in startups.
+And there'll be lots of time for questions. Questions.,, please come prepared with any questions you have.
+And don't be shy about,, about asking questions. All., he,, he goes by the name is,, Pedro Mendoza.
+This is,, full name.. I think it's also in the,, if you go to the canvas site,
+we don't have the full list of speakers up yet, but I think we have the first, maybe 4 or 5.
+you can you can see the upcoming ones on the canvas site in the schedule.,, number one, be on time. Be there at 10 a.m. in your seat, ready to go at 1005., for the start., if you take attendance and that is required, if you don't show up, you're not going to pass, and you're gonna have to redo it next fall., number two,, no laptops out during the presentation., it's disrespectful if somebody is out there talking and they're just looking at a sea of,, laptops and people staring at screens.
+I know some of you to take notes,, on laptops, and I'm sorry about that, but,,, you have to figure out a different way.
+We do record these.,, you have lots of options for taking notes.
+You can you can go back through the recording and you can get the transcription.
+You can use whisper it and what I am or something to summarize it or extract the key points for you or whatever you want to do., if you really need to,, note something down the speaker mentioned, something in particular a name or something.
+Just put it on your phone. Just put a call at your phone and just take a quick note and put your phone back.
+But,, you should be focused on the speaker. That's what that's the point of what we're there for., and also again, please, please ask questions., the speakers will love it when there's questions. If,, they go through a talk and then there's, no questions.
+It's really,,, it's depressing for the speaker.
+It feels maybe you don't care or you're not interested in what they're saying, if there's no question.,, please,,, ask lots of questions.
+And as we discussed in the orientation that the best way to impress somebody or get somebody to know who you are is to just ask questions.,,. if there's a particular speaker, you want to start to build a relationship with,
+the easiest way to do that is just start asking, asking good questions and they'll remember you., plan for it today., we got a couple of,, visitors with us in the class today., we got,,, Trenton,, our returning student is going to kick us off this morning., and he's going to give them a demo of,, qubit., I'll come back to that in just a minute., and then we're going to go through our lecture.
+We're going to pick up where we left off last week. We're going to try to get through,, model evaluation and hopefully get through,,, data preparation and,, basic feature engineering stuff.
+And then at 11:00, we'll take a break and an 11:00,, doctor saying,,
+pronouncing is going to join us for 15 minutes and he's going to talk about our new mentorship,, program.
+No, no.. I think the mentors maybe have gotten the email, but I think you all probably will get one later today., we,, have,, completed the pairing, everybody's been assigned to a mentor., before we let you loose to engage with your mentors, we're going to talk a little bit about,, our expectations of the program.,, things that you should do, things your mentors should be doing, answering any questions you have about the program,
+and then we'll,, we'll pair you up with your mentor, and we'll let you guys,, take it from there.., I'm going to bring us,,, come up.,, during is,, been taking a lead on our qubit project in my,, great lab.
+And I think you all have seen,,, probably a video from Judger and,, and maybe read the instructions put together., I'll give you a little bit more context on this project.
+qubit is a it's an AI powered coding assistant that,, sits within your sidebar on your VS code.
+it's a little bit cursor for those that have used it.
+Or maybe a GitHub copilot, the agent., but it differs from all of these things and all other coding assistants that are out there and that it's really built to help,
+help you learn, not to help you be more productive in your coding.,, pretty much all coding assistants that we know of anyway are designed for productivity.
+That's the point of them there. Make you more productive as a software engineer.. The problem is that when you're when you're a student and you're trying to learn to code for the first time,
+or you're doing some new things with coding,
+maybe you're new learning new language, maybe you're,, starting to do more data science or machine learning stuff., just using coding assistants that are designed to optimize your productivity
+can actually hurt your learning because they're just really doing it for you., not helping you to learn how to do it.
+And we starting,. A year, maybe,, a year and a half ago.
+Probably a year and a half ago or., we kicked off a project to build ecosystem that was designed to optimize for learning, not productivity.
+And,, it works., the similar way to other assistance you may work with,, with one big difference, which is it won't actually write code for you., or at least it's designed,, not to do that.,, you'll see in your sidebar it has access to your code.
+as you're working on an assignment or something or a project or whatever,, it'll see what you're doing,
+and then you can go over to and you can ask questions and they'll give you responses and,, you can get help on things syntax or if you're stuck and not sure how that get going,, try to point you in the direction., but it's really designed to try to help,,
+you learn how to do it yourself and how to think through it yourself rather than just doing it for you.,, we,, piloted this with a,, actually a group of high school students at a summer camp we ran last summer., and we did a,, we did a,, interesting.
+the randomized controlled trial with it where we, we split all the high school kids in a camp into two groups,
+and we had one half of the high school kids go through the camp without using any, any AI tool qubit.
+And then the other half, we brought qubit, and then we had them working with qubit through the summer to see what the what the differences were., and,, we found some really interesting things in particular that have a strong impact on their,, their motivation level,, and their perception of coding.
+as you all know, having done learning coding before, it's it's really frustrating,,
+and can be very challenging and also causes a lot of people to just say,, this is just too hard.
+I can't figure this out. I'm just going to give up on this or this is not for me.
+I don't think that,, that I could be a software engineer because it's just too challenging., and,, and probably the biggest impact we saw was actually the,
+the improved perception of the students on coding and their ability to learn how to code and maybe even pursue coding as a career., that's really,, that was really exciting., we've run it now. We ran it last fall in two different classes where it used it in this class, and we used it in a large,, fintech,, program, their intro, the programing class, and,, and now we're offering it again,, this fall.,, I think maybe some of you have used it in the bootcamp., we are, I introduce our AI policy in this class last,, last session.
+as a reminder,, it's fine to use assistance on your Kaggle.
+It's fine to use it on your projects., you cannot use assistance on your homework assignments., and obviously not on the exams., the one exception to that rule is that we will allow you to use qubit for your homework assignments., that's the only AI assistant that you can use., and,, you don't have to you can just write them yourself if you want.
+But if you want to use something or you want to get some experience,, working with cube, either try it out., you are allowed to use qubit.,, in your,, your assignments.
+I just care of show of hands. How many people use VS code is their default ID.
+Whoever, then raise their hand. By charm.
+By charm by charm. Also by charm.
+Also by charm., then we try and then.. Anybody using cursor is there and there may need.
+Basically the same as that is basically,., good., that's,, why don't you come on up and,,, take it from there.
+I shall try and walk through a bit more explanation of qubit., maybe a demo to show you how to use it and,,,.
+Feel free to talk a little bit about how it's built, or we can answer any, any questions that anybody has on it.
+Anyway. It's true.
+Yes... Sure.,, thank you for joining me., I was,, I,, and or,, about qubit.
+Is Georgia introduced to some effect and it will introduce more details about the qubits., I'll let you two because our demo,, qubits is,, copilot agents now mainly focus and,, this code, because I know that most of people use the best coder.
+we put our priority,, to work out that,, qubits,, work out the best code extension and,, it, however,, actually have three components have is,,.
+First is, vs code extension is that where you store your,,
+PC and we have our backend that it will store all the informations for that analysis because cubits is how can you and the teacher also help you too.
+we try to help the teacher to better understand you, to try to understand what's the most topic you are struggle with.
+how you are use they can reach out to you.
+Maybe oh, I think happened maybe can encounter some problem.
+the goal is to help you also that can't help, the professor to.
+that can, however, improve the cost., this is,, back end.
+And we also we have,, real time chart,, assistant for the professors they can,, ask,, different questions here, which students shrug., there is no pass in other,, and such,, if the seat,, crew,, familiar with C points.,, C is such a thing. this,, three points, client server.
+And then we have agents and you will learn that in,, more., I think it is,, next year, bring about a larger model that you will understand how it works.
+this,, faxing of,,, of the,, qubits and,,.
+That's it. And I will try to start demo and how to install it.
+How to use the. And.
+this is my VS code. It will use more than one word.
+qubit is already in the marketplace.
+just click here to extension. Image and., you will find qubit under. If you search for qubits, you will find it is,,
+not related to ours to quantum computing competition in the UK, but less than half of them name qubits.
+you can't get it here and it just installed.
+It's very quick and you can find its way in store. You will find a very cute,, beer.
+It's all. Oh, what a clock it is.
+Heard of. they have the original developer of the first developer on this project was an Australian,, undergrad.
+Walker is currently an Australian.,, you can look it up.
+It's supposed to be a cute little,, airline thing of all the time.
+I think it's,,, cute bear. And I'm,,.,, that's,,, this is a no more is there's only when you,, lobbying.
+at least the no means high show trend. But for first time, you will not see it.
+let's answer..
+Sometimes they will ask you a secret code.
+A code, a way that means that you need to you to log in.
+we know who you are and what cars you belong to. you click here.
+Open., because I already log in.
+it will give me the code if they don't log in.
+Let's go. here if you don't have a card I can sign up for now.
+We only support Duke students who must use, Duke, email.. Make sure that's. And you will get the email from your,, inbox.
+And,, activity should be fine. It's.., when you log in, you will get this code., my code is special because I use the debugger,.. Normally you will see some random string. This.
+I'm here., nothing to do. Because if we detect the latency, it's cracked.
+We're trying to lobby., and if by now you have a say that you have some have message and you have your name.
+let's say we have,, this project is in for demo.
+We have all assignments. We have,, hello world Pi.
+Let's see how the world of pi.. Our Pi's very simple to say hello to some name.
+And we have,, also have some very basic,, surface.
+Hello, world. We expect to have,, outpost.
+Hello. For all the,, testing., maybe you can.,.
+You can see here at field., if you are familiar with Pasadena, you will find out why.
+But if you are new one or you are of courteous program and time, you missing one character, I think is an easy,, not easy to find., some time. You missing one character in a big program.
+You take about half a day to find. Oh, damn it, I make a stupid mistake.
+I missed someone for some time. That's bagger that away.
+Is not that help inform. Especially when it comes into the syntax error., back to our qubits. While we open our file we can see here they will tell you could be already know that your viewing.
+Hello. What should.. Sorry. Should be is.
+whatever you looking at it qubit again.
+No it. let's see why.
+just,, ask a friend we can ask you to come.. In college, try to answer your question., give me a second guess now or sometime.. That would give you something., understand that you try to know the things that understand your code., they gave you. you expected a lot.
+And it was,, don't get into a wide field.. Help we..
+we can talk with them, just,. Just two friends to try to,.
+To talk to them to how to how to solve it. And I gave you a hand to try to counter to bargains.
+Not as. If you use cursor or another, choose it for productivity.
+That would tell you, hey, put it on.,
+I counter before down to something or they just directly modify that to five for you for this cubits and it will not give you an agenda answer.
+maybe you can, you can, you can say, hey, I don't I don't want to sing at all.
+Just give me the solution. I want to know and or., you can try., you would use it if you successfully jailbreak this, just let me know.
+listen. No, this is. You are a good enough security engineer, and we need your talents.
+No,, no,, I already tested,, I got another question.
+oh. Reminder. Going back to the code.
+I just want to type them. oh. The code., code to type in attribute to activated to go back to that screen.
+You probably you should get your own code. Oh, oh I see.
+Oh,. where you are..
+It's a. oh..
+The code doesn't show on the screen...
+Looks when there's a little,, issue, it just says, please copy and paste this code into the extension.
+Assign it. You may close tab once you assign it to the extension, but there's no code showing on the,, thank you page., we was this. There we go. And because of that.
+As you can see.. looks everybody's just getting used to it.
+Oh, my God, it was fine. I didn't get the actual coaching because the reason why I,, people can help.., we'll work on that today and we'll send another round once it's available., if someone, look at the log.
+That's a., I tested my program in my computer for difference, but I never., it's a good idea to. It's good to know that it's another question about jailbreak.
+Give it he 4.1..,.
+It's great. Know if the model name you have or model successful or to hack it.
+Is there any chance that either of you could make a PyCharm extension, or the JetBrains Ides,
+or a web based version that you can paste the file you're working in and it can be a web,
+exactly that word teaches you, but it's not required to use VS code because I., maybe is, good question for you on that way, asking for that end of additional support to accept,, it's a question about better., maybe. we originally started with a web version of it and,, decided that,, since a majority of students use vs code,
+it actually made more sense just to put it in your VS code rather than making you go to a website to use it., but we might we might also add a web version at some point to...
+Again. oh. No. I should have one under.,. beside,, to have your carry until we already know is,, camel carry., syntax check code hands or something.
+when you react, they will have,,,, presenting carries.
+I gave you some syntax guide, and there will be for more speech if you just watch.
+Hey,, I don't want to tab I want to click to one thing.
+If you read it, guide and give something,,.
+Even know that you,, know this code is,, related to the,, stream information.
+they gave you different options than to try to let you think.
+Which ones do you use and what mistake you're made actually missing out here.
+if,,, that's a new,, peson,, stream,, format that I have.
+And I have different. Even a way to commentary on that.
+See the. about the Academy pretty quick and get different things Checotah and even Burns.
+You can read multiple files upwards., far, not yet., because we don't have the ability to execute to,, customer function yet., and generally people as, lenders., the code is just a web file.
+If you have big ones, really big ones, or maybe a Linux kernel or,, brother as those things you are still we know not support yet.
+We focus on other more high priority things.
+But maybe if we find is,, become true and we will make it become.,. I notice that there's,, a folder,, dot Cupid., this question is for next generation., because for now, we are,. We don't support such.
+When you go to court it, we can know your,, canvas.
+We know your assignments. your slides, folder structure.
+I can. It's cubits. No yarn, no slides.
+No. You are horseman. You are, I think I say,, go look at the slide to three and to the,, in the page at eight.
+Maybe they are introduce the instructor,, introduce this concept and they,, introduce you can know that how to fix it.
+this is for the next generation., Cupid., this is the my demo system that I use. It's for cats and,, next generation commits.
+I know also we can touch notify you. Hey, your assignment deadline is approaching.
+You should not work according to our estimates or your program.
+You may be take two days to finish this assignment., tell me.
+the a thing and,, also can,, because from,
+instructor that say also people ask about deadline for, specific assignments we can ask should be here.
+for assignment to do was a due date or something.
+What's the requirements. they will get all the information for you is a for the next generation for that or cubits.
+How for some settings. And a good point. It was introduce it.
+But and now it's not still here. The story in the, in it's code and it becomes vs code.
+They have some,, ability to store things. And I will show you a good point., I'll also go to observe.., I will,., that's a quick I'm a quick,, passing for you.
+And you can click here., top.
+you can say tracker is,,,, little code or,.
+He can have style. And we're trying to track your activity out recently.
+I don't have a,, an activity., and,, I don't use the escort.
+I use of my,, my other,, cons and,, this one settings said he is,,
+interested in one,, first,, different people have a different style to learning., some people say,, some people are more familiar with,, languages., we are,, very new. they have different,, different level of how computer can help you.
+First is,, on my keyboard is that means I'm totally new.
+I don't know what is true. And what is,, no., CS on board,, they provide a very detailed help.
+It's very good for new starters or for someone who already know the fall.
+Familiar with,, concept Excel. Oh, my God, Justin, you tell me.
+You're just sitting on the other room. You have a question and ask them.
+They just say,, that gave you some keywords.
+have you,,,.
+Give you some hints. Just very basic hints and try to help you to figure it out.
+I figured it's by yourself not to,, not to help. they have different levels.
+on my desk job of my shooter was to have a walk around the room.
+Of course room is more. Talk less.
+More. No. Keywords give you some keywords. Hamster.
+You can't do it yourself. A minority is more obviously more detailed, and I would take it all differently.
+That's some room to detox,, for,, or some,, experienced programmer also begins to call me.
+You can,, give you your nickname. Whatever you want., for me is shorter and will have a very useful,, actual and obscure structures., you can say things, different things., personally, I use such a,, I prefer they say the problem or tell me or talk with me.
+Use Chinese. maybe I can change here.
+That's,, visual response in Chinese., I know, not,, most of you don't know Chinese, but, you see, the,, strangest character,, that is a success.
+No, that's that's done,. Oh.
+Just it. Oh,.
+Should work. It was a question.
+As a way to copy.. Because you don't have it., you can copy the link to some of those conversations that you can use when you're signing it.,., sir.
+Is it., I want this. I'll try to understand why you are trying to share yours to your classmates or something to which you are not people.
+No, I was just talking about,, if we're setting it, then being able to sign it and,, have that conversation that,,, how if you're citing it when you submit your assignments or something that.
+I don't think...,, the,., after we have a chat, it doesn't show you the log of the past chats you've had., far, no UI for here and there.,. You're. Maybe we should. And., it's it's a good thing we can add.,. Not now. It's not.. It's just for,, for the infrastructure we have,.
+Very chickpea. We have a history. we can,, continue that.
+Maybe we should implement..,., you can see that in a camera.
+Just,,, for example, I don't know, I don't familiar with Python, but I familiar with Java,
+maybe I can ask a quick use of the job or a concept to explain some passing concepts I can know it because I can compare with it as I know,, this has a string is equal is true though some,, Java or some Java or string,, concept.
+That's the thing. It's,. You can add as much as you want and it just needs more as a global.
+when you're sitting and when you start another project or another,, charge everything will still... to do after you finish of the student view, do you want to just briefly show them the instructor view.,., I have tried to the last time.
+I try to know., I try to,, jailbreak heads.
+I was,, I don't want to,,, just I don't care.
+Just,, give me that. Don't.
+You. To.
+Know how to fix. I just want., that's the notion... Oh..
+I will try to treat it just in this version.
+I don't want it lower to zero. I have Simon's fix in his do in five or no seconds as a means to just let me know the solution., we have or,,, a wage bandit.
+I hopefully this work can work because my every time I use difference.
+Take a break.,, prompts.
+Try to hack it. Oh. I should change my name back to English.
+I can., I can translate., it take longer because you never do.
+You have a lot of competition.,.
+In the comics, it's very the time square that you are allowed to contest.
+it would take a longer. Question., just in the settings,, oh, I'm not really good at this language, but I'm better at this language.
+that explains less for something you already know versus something you need for help on or concept wise as., you can tell that in the settings or,, in the settings and you see you want to you specifically,, preference, what do you want where you want to use it.
+Maybe sometime in the talkative I'll give you lots of things. Maybe you can ask them, give you a reference website, or sometime be,,
+the Latin American model don't give you a away, but you can ask them, just give me the keywords.
+I can Google something..,.
+It's in Chinese style. Just to give you something as a means is,.
+I know you want a solution, but unfortunately, I can't give you a complete solution.
+You use this when you. But how you can,, instead of the value of the name instead of,, no,, literally name means yes.
+For now it's works. And if you find some job range or something, just let me know.
+Another security and truth or no performance or anything.. I think it is,, for the Cuban kind side.
+It's,, here. And,, you mentioned that we ensure that dashboards and dashboards.
+Go here. Let me,, and while we're here, point that out to me.
+Introduce real quickly.,. This is a part of the,, part of the goal with the Cuban project.
+One was to provide,, you all,, students,,, learning tool,, to help you learn.
+And the other part of that bit was also to try to provide some value to the instructors as.,, the way we see this tool is something that gets integrated into the class experience that the instructor has access to,, because it's for us, it's actually helpful to know what your what your questions are, what you're struggling with., if we don't ever see what you're doing with AI assistance, we'll never know if you're struggling with something or,, or if the whole class is struggling with something because we don't explain it very.
+it's useful information to us., we,, we've also we log all of the interactions in a database., we don't share anybody's individual interactions.,, with an instructor or anybody else for privacy reasons.
+But,, we do try to do some, some mining of the data from the logs to,, identify things,, commonly asked questions, for example, if all of you are using Cuban,
+working on assignment one is everybody's asking the same question that would be useful for me to know,
+because maybe the instructions weren't very clear, or maybe I didn't explain it in class very.,, we try to identify things that, or if there's a, maybe a particular,, situation where a student is,, just as,, a lot of questions about the same topic, we might flag that and say maybe,,,.
+Sam is just not really understanding how the logistic regression works, because it's just also a lot of questions.
+You might want to just chat with them and just,, see if,, see if he's got it or need some more help with it or something.,, we're trying to,,
+we're experimenting with the way to surface things that and present them to the instructor that they can,, provide extra help,, to you,,, when,.
+when needed, and make the experience much more adaptive to your questions and needs., this today. this is I shall try to show you is not something that you have access to.
+It's something built for the instructors.
+But I thought you would find it interesting to see that what we're thinking about doing with the website,, is,, designed to be,,,
+many services for the,,, structure and or in the future,
+you can get some links to join them, cause I actually, they already exist in another future.
+And,, you can have a such a course dashboard for students.
+You can just see who we were considering. Who is your professor with a Ta and then email.
+Just such a thing.,. For me,, the,, instructor, both the students of this test course..., this is our information.,.
+You can see different things., with the G8, you can also count access to it.
+Also, they have statistics of how many students, how many,..,.
+And of course,, for context manager can't or thing manager member.
+you can just give it a shot completely. we can add a different cost.. Or in a different sense. That's a. And we have to usage dashboards., how used by the students,, to make,., instructor familiar with,, most people watching.. Analyze these charts in seconds.., we have some bob down there.
+sometimes you don't refresh. we can see here the history of their,,, competition.. And you can see that under,.
+Such a you can talk to the if you talk to the cubits.
+And we'll analyze this oil into act such because I always should.
+Hello one they say,, struggle we as a passive stream for maintaining not.,. that gives someone different things. you can ask her specific questions about,, specific students,, they have to give us some things to and strive to help them and maybe say,, who have or the,,
+who maybe struggle with the assignments that give you such a thing, it's got maybe some time as I have some have management issues.
+always submit a. A,, assignments just before the deadline.
+that is,, some signal to help the instructor to try to have you zoom.. You mentioned the different things..
+Oh, nothing. Just a test. And,, we also we have,.
+Graph. You can ask such can't give me all statistical,,
+information about this cause that was the topic they are talking about that give you all information about you that I'm not sure is who does it.
+That's the question., a couple of things.,, one, we,, generally don't, we're trying to figure out where the line is,,
+between usefulness to an instructor to teach a course versus protecting the privacy of,, of any individual student using it.
+But,, in the instructor won't have direct access to a specific log of a specific chat you have.
+what we do for the instructor view is things this, where we,,
+perform an analysis of your chat logs and we try to extract insights from that to present to the instructor.
+But we want show the instructor line by line,, here's what you Typekit here's what Cupid said,
+and here's how you,, responded for privacy reasons.,, that being said, if you're if all you're doing in Cuba is trying to jailbreak Cuban and,, we go in here and say,,, it was evolved doing,, this week with Cuba that says he's been trying to jailbreak you, but all week.,,, we'll probably know that,, but,,, that's.,, you're allowed to do that.,, just be aware that it might surface that an instructor if you're trying to if you're trying to do that,,, whether or not you can jailbreak you, but that's,., that's,, that's up to you.
+You're welcome to play., we don't use this for grading., there's it's not we subtract points if we see you.. This is not a grading tool. This is really a help tool to help with your learning.
+if you just want to use it for,, trying to jailbreak it, then that's fine.
+You can do that. And maybe you'll learn something about jailbreaking, but,, you might not learn a lot about the class from that.
+we'll probably maybe even use this example in that course and go deeper in it, but,.
+I really the way that Cha has been thinking about.
+This dashboard. typically with edtech tools.., as you probably seen, canvas,, they're very,, prepackaged in the sense that,, they'll give you some instructor,, if you're an instructor using canvas, I can log in and I can see certain tables or charts.
+I can see, your activity and I can see,, submissions and average grades and they give you a free,
+if you, prepackaged charts that you can, that you can look at., but what does this have to do with this interface is rather than just giving you some prepackaged,,,
+charts of different things to try to make it really flexible that you can essentially ask whatever you want to know.
+you can just type in a plain language question,, and it will then attempt to go perform an analysis and give you an answer to that question.,, behind the scenes, it's, it's using should have an agent system that looks at your question,
+looks at the schema of the database to see what information is available.
+And then,, writes the code to perform the database query and the analysis and then runs the analysis,
+executes that and then translates that back into,, a text response to you., it's a really good use of an LM to enable,,,
+is very flexible querying and analysis capability that you can go in and ask any.
+Any quiet type of question that you'd want to know that we reasonably can answer, and it will go.
+The code do the,, execute the query, do the analysis, give you an answer back.
+very cool. And I think very different than normal attack tools at least.
+Or any business intelligence dashboards usually they're prepackaged,, charts and you can't really change them.
+You get what you get., his whole philosophy with this is rather than doing that, let's just give you the power to go, go run whatever analysis you want to run on it., which I think is very, very cool and powerful.
+I sure would be happy to talk more details if anybody wants to understand the details., he's done a lot of hard work this summer on this,, and I'm sure he'd be happy to share with you nothing.
+Nothing is secret or proprietary.,, about this.
+In fact, we're probably going to open source the entire project,, as soon as we can,,,
+figure all that out that other universities can set it up and run it,, as, if they want.
+feel free to reach out to chat Tran with any questions., if anybody wants to get involved in this or any of our other,, creative projects,
+we're probably going to do a round of,, some,, all, hiring for the this semester at some point.
+you get an email that there will be an email that goes out when we do. If we do that and when we do that,, and application process.
+But these are the types of things that we work on in the labs.
+Any questions on Q we'll get the,, technical issues straightened out with the code to access it., we'll we'll figure that out,, hopefully today.
+But whatever it is, we'll, we'll send another out to everybody once that's fixed up that you can, you can go in and you can start using it.
+We already know any details you want to discuss,., I need to find it sometime with a packet come and go.
+And as this one, I know it's it because,, previously, I just didn't try it and works, and I don't know in which version., I should use a new board., sorry.,, it's it's a it's a managing systems this that are in production and,, real people using it as a whole.
+Different experience than just,,, running things on the laptop.
+these are normal, normal issues that show up, I think when you do that.
+it's a good experience.. This is why I,, I you guys to evolve.
+It's try to think from different ways too.
+you from the technical part or their product any you can provide some good
+ideas sometime for the for technical person ideas is more hard in the technical side.,. There are a couple others. as you use Cuban more and challenges.
+we showed you a very simple example,, today and how to use it.
+But, it works across languages. it's not exclusive to Python.
+If you're taking courses in other languages,, you can use it for those,, it works with complex,,, assignments.
+if you're, if you're doing an algorithms or doing some algorithms practice or something,, it can work very for those., we've also been adding in I think it's still there's some, some capabilities to do create visuals.
+for example, if you're working on a sorting algorithm or something that,
+and you want to visualize what's actually happening when your algorithm is running,
+it will sometimes will spit out visuals, even animated visuals of how things are,
+what's going on when you run your code in the sidebar.
+try playing around with it on different types of,, projects that and see how it does.
+And, please share any, any feedback that you have as you're using it with us.
+All. Any questions on. All., thanks very much for joining us this morning. It's been a rough. All.
+And that is. Gentlemen, thanks a lot.
+Have a good night. See you tonight., that is,, available for you to use on assignment one.. Speaking of assignment, one is due,, before class next week, be sure to make sure you get that submitted before start class.
+Because there's some other places where,, random formatting simplifies stuff.
+And some of the other sections,, we're not supposed to edit..
+You should really just be editing in,, in the insert code here in sections.,. And speaking of that, do not know that I mentioned this last class., the other,., the other thing to be careful of is,, you should only be using libraries that are important for you., you shouldn't be importing anything additional unless. Unless for some reason, the instructions specifically say that.
+Add something in. But in general, any,, packages that you need should be already imported for you.
+And if,. If something's not important for you, that probably means you can't use it.. there are some cases where,., I want you to,, do things just using Python, not use numpy or pandas or scikit learn or something that.
+And,, if you, if it's asking you to do a, use a,, some algorithm or whatever,
+or a logistic regression or something that, and it's not importing scikit learn for you.
+That means you can use scikit learn to use to do that algorithm.
+you need to write that algorithm yourself., just be just be careful about,, only using what's provided to you and not adding your own,, packages into it.
+Really question about someone. I,.
+I,. We have given you some, you'll see some simple tests.., I think after pretty much every coding question, there's at least one assert statement., that is useful to just check your work.,, it's not exhaustive. just because it passes the asserts doesn't doesn't necessarily mean it's correct,
+but hopefully it's a good sanity check to make sure you're not,, way off base with them, with your answers., and again, a reminder on the assignment policy. you need to submit,, I start the class next week.
+Assignment one., you're going to have a second chance on assignment one to resubmit it,, the following week before starting the class., after you submit next week, I'll post the solutions.
+You'll be able to look at the solutions. You'll be able to go back and correct anything you got wrong.
+And then you can resubmit with the corrections., however,, for full credit, you need to have,, at least attempted everything in the first pass all the way to the point of an answer., you can't just,, submit a blank assignment one week one and think you're just going to,, resubmit it with all the answers.
+After looking at the answer key, you need to provide,, work all the way to a solution., for every question and assignment, only answer half the questions in the first submission.
+Even if you corrections on the second submission, you're still going to get 50% marks wrong because you didn't you didn't put in the work.
+The truth of this trial.. that's a hopefully simple, simple policy.
+And I expect we'll have generally one hundreds on all the assignments.
+But you do need to put the work in the first round..
+we're going to do a row. We're going to do a lightning lecture today here., given the time., if we don't make it through all this today,
+I might just record the pieces that we don't get to and have you watch them before in the next class we can keep you on track., today we're gonna talk about model evaluation..,..
+When we evaluate models, we typically,, create what we call a test set.
+Most people that learn class before are very familiar with this idea.
+we take that set of data that we have access to, whatever that is, and we'll split the data and we'll use most of it for training a model,
+and then we'll take some portion of it, some small portion of it, and we'll hold it back.
+And we'll once we've trained our model,, we'll pass our, our test set or the portion of code back, we'll pass that through our model.
+We'll get our get his predictions will calculate its performance.
+That's. we know the model can generalize.. Exactly. we know that the model doesn't work only for things that's seen in its training,
+but it also can work for things it hasn't seen and is trained..
+what happens if we don't do that and we just use all the data for training, and then we just calculate the performance based on the training data.
+How can over determine the solution. it's really good on just this data but it's not generalizable.
+Exactly.. it may be performing really on that set of data.
+But if we then try to feed it some new data it's not it might not, might not perform very.. whatever metrics that we calculate to report the performance of it,, are very likely to be overly optimistic,.
+Whatever we choose,, whatever metric would use accuracy, mean square error, whatever it is.,, if we calculate that,, if we train our data, sorry, if we train our model on all of the data that we have available,
+and then we use all of that again, or some subset of that to calculate its performance.
+Whatever we report is likely to be overly optimistic., and when we feed it that brand new data, the model is never seen before.
+It's likely we're going to have a,,, a lower,, performance.
+this is typical if you have a set of data,, there are no firm rules about how they create a test set., other than you, you should create one., most often you'll see some split this where you take the majority of your data and you use it for training,
+and then you hold back some portion commonly 10 to 20%.
+But it depends on the size of your data., and you'll use that for,.
+For,, evaluating your model... That leads to,, a discussion about what we call,, sampling.
+when we build a model,, we're using sampling at multiple points and building that model.., when we're building some model, we have some finite set of data that we've gained,, from somewhere.,. think back to our example of the power outage prediction.. We built a model and we trained that on some set of data,, in on,,
+historical weather data and past power outages that we had obtained from different utilities.
+But that was not exhaustive,
+meaning we didn't have reports of every single power outage that ever occurred across the entire the of the United States.. We had some, we had sample and from that we had maybe a handful of utilities that had given us their data., we've used sampling to compile our,, training data., we then we then use sampling again,, when we build the test set.. we're sampling from our set of data, we have access to,, to create some small test set.
+we're sampling,, once again,, and then sometimes you sample a third time.
+if the, if your data is very large, you'll often when you first start building models,
+you may not build a model and train it on your full data set.
+You may, some subset of your data and build a quick model for prototypes to train training.,, each of these times we sample, we run the risk of introducing bias,, into our,, activity.., and that can lead to models that,, retain that bias or learn that bias from the data they've been trained on,, and then provide biased,, outcomes as.
+probably the most egregious,., ways to introduce bias into the system is actually in the creation of the training set, which,, a lot of times as students,
+we don't really spend time thinking about because we just go and download some data set from the internet or something,
+or your instructor gives you some dataset and says, here's, here's the data,, go, go build your model.
+And we just assume that the data is the data. And we don't think about where it came from or how we got it.,,,, as students, this is not something you probably commonly think much about.
+But in the real world, this is a big issue., because if we just, number one, it's not common that somebody is just going to hand you the data.. You have to go figure out, where are you going to get the data from.,. And you're the one that ends up having to think through all of the sampling and bias issues when you compile the data., in the first place.,,, this is probably the main way that bias gets introduced into models is,
+is through our sampling strategy or how we're, how are choosing the data that we select to do our model train., there are two different main buckets or categories of sampling that we do what's called non probability sampling., and then what we, we call, random sampling.
+does anybody know what non probability sampling is or what an example of that would be.
+I think if you can take the first 80% and just say the second 20.
+The rest 20% is just. Our validation set.. That could be an example. you're just sampling based on or they're or they're something that.
+We're just saying I'm going to just take that,, the, the first x percent of all the data that's available.
+That would be an example of non probability sampling.. now progressively broadly is when your selection data is not based on any type of probability criteria.
+examples of that., this happens all the time.
+And these are some examples of that things convenient sampling.
+let's say we're going to build a,, a, a mobile app that,, for, for people that are really into,,,
+flowers and trees that you can just pull it out and you can code it up to it, a flower, and it'll tell you what flower that is., and it's a train, this app we go and we go to and we run, write a script to scrape,, images from Google images of,, all kinds of different flowers.
+And we,, use that to train a model that can,, classify types of flowers.., that would be what we consider a convenient sampling.
+It's just based on pure convenience. Because Google Image Search is a convenient tool to get images.
+And we're using that. we're we're just going to,,, use for training.
+whatever Google image search gave us,,
+and we're going to take the top 200 pictures or whatever the returns for each type of flower or something that.
+And there is a ton of things on the internet that already existed that didn't really help with the training of it.,, you talked about, showed us an example of class where she used she trained it on Reddit, and that was pretty terrible way to train model... Convenient sampling is the primary method used for training large language models,.
+Because we're training on either on subset, some subset of the internet that's easily accessible, the very early,,
+large language models GPT one and two were trained on,, curated sets of,, books and Wikipedia,, and a couple other things that were easily available., and then,, with, with GPT three and beyond, now we're training on just large dumps.
+gathering that data., but still, the reason we're training on that is because it's available.
+Probably not.. Because there's also a lot of stuff that's not on the internet that,,, that you would find.,, you could argue that,, large sandwich models will include some bias because they've been trained on,, using convenient sampling just on what's available,, on the internet to train on., snowball sampling is another common thing that can show up depending on what you're doing.
+this is where the future samples you select are based on existing examples.
+if you write a,. Yes, some scraper for Twitter data or something that.
+And you, you have a start with,,, your account and then you scrape the,
+the people you follow and then you have it scrape the people they follow and propagate out that.. That's a good example of snowball sampling,, what we call judgment sampling., this is relying on domain experts,, to decide what samples to use.
+we'll consult with somebody who's an expert in that area.
+And I'll,, provide us some data or suggest,, that we use or that,, certain parts of data., and I cool. The sampling is another example. where,, we might have quotas for different,, subgroups.
+if we're doing some a, a survey,, things gather data to train a model on and we say that,, we think,,, we want to try to get,, age might be a factor in people's responses.
+let's go get a hundred know responses from users of every different age group there are that make sure we have,., data from each different age group., these are, these are themselves., none of these are necessarily bad, as in,, if you do this, it's it's it's invalidates your model or it's bad., and these are very, very common in training models.
+In fact, probably almost all models, if not all models will use some form of one of these,, things,, in, in compiling their training data.
+they're not bad,
+but it's just important to be aware of what the limitations might be or the bias that you might introduce through the type of sampling.
+You've got to collect your training data in the first place.,, I think we've talked about all this.
+a few other interesting examples, things,,, sentiment analysis models or,,
+there's a common bias in those because they're trained on the reviews that people leave online.
+Most people only leave reviews of things when they're,
+really happy or really upset about something your average user doesn't leave a review if it's something,
+if it's,, or it meets their expectations. you're going to get polarized about,, views on things., self-driving cars is another good example of a bias., initially there were only trains in a couple of locations that did not include things very rainy weather, very snowy or icy weather., that's since been fixed, obviously, but the early versions had a strong bias for dry, drier weather conditions... And then there's different types of., even when we do random sampling.
+we're randomly choosing samples from our population to include in our training data.
+There are different types of,,, random sampling., the simplest type is simple random sampling.
+All samples have an equal probability of being selected..
+And we just pick,, truly at random., the big downside to,, the big the upside to this is,, minimizing bias.
+The downside is,, if you have,, very rare categories or conditions,, and you're just sampling at random,
+you may not,, you may not select,,, data points from those rare categories, and you may miss them entirely., an alternative to that would be to call stratified sampling, where we divide the population in the groups that we care about,
+and we sample a percentage randomly from,, from each, each group., and if we have a case where we have,,,, some very rare categories,
+this is a way to ensure that we don't accidentally exclude those rare categories from our data,, because we,, we treat,, each rare category as a separate group, and we sample some percentage randomly from that group as., and then weighted sampling.,, this is an interesting thing that maybe it's under utilized., but this is where we actually give samples of weight,, we,, that determines the probability of it being selected., why would we do this, for example, if we were building a model to model some phenomenon that had,.
+That we,, believe changes over changes or evolves over time., we might want to consider more recent data points in time, more strongly than other data points in time.. we may weigh recent data points heavier than older data points in terms of the probability of being selected for our training data set.
+there are lots of other examples.
+But this is an interesting way to still apply some domain expertise to your choice of training data without having an expert dictating,, these are the points you should use, which again,, runs the risk of introducing bias,, into it....,, there is a weather.
+You can also stratify your splitting,, using that., of course you can write that yourself in Python very easily as if you want.
+I think for your homework, I think I have you write it.,.
+What to say about,, about that.,, it's a good opportunity mention.
+There are. I did go through the class repo. I updated everything for the latest package versions., in the requirements file, if you haven't already., make sure you check out the class repo each week, including this week.
+There are some exercises in there for you, as some demo notebooks.
+the and they're clearly marked either exercise or demo., the ones that say demo are fully done notebooks for you.
+I'm not going to go through those in class. I'll let you go through them on your own time, you can go as fast or slow as you want.
+But I would suggest,, going through those demo notebooks,, and just read through and check out the simple examples., the exercise, the one smart exercises are,, incomplete and intended for you to fill in the blanks.
+they're a little bit your homework where, oh, I've done maybe a good chunk of the code, but then I'll leave,, a spot for you to work on.
+those are just good to quickly practice. I put the solutions in there as.
+I would suggest spending a few minutes just doing it yourself if you're getting stuck or something that., or you can't figure out how to do something, then you can consult the consult.
+They're there for your own benefit. But,, they probably will be helpful., preparation for,, doing the homeworks... Data leakage.
+they may be familiar with the idea of that..
+I just wanted to ask if it's possible for you to specify in the requirements of the Python version you're using., I have ran some issues and I evacuated a few times, but I'm not sure about.
+It's three nine.,, I can check.
+I can check these are three, nine, three or something.. Thank you.
+Oh,. It's when your training data is leaking to the data., when you're in the process of, I guess,, pre-processing.. your model is getting confused., with the output.. When you separate the test set out,
+but then somehow you're information from your test set is coming into your training process., maybe if you're. For some reason using a billion missing data during,, training part., I guess an example would be if you prematurely,, split the data and then fill in missing values.,. Good, good. Good question.,.,,, as I said, that,, data leakage is the problem that occurs when somehow information from your test set leaks or,,
+or comes into your training process, you somehow include some information from the test set as part of your training process.
+And training,, doesn't mean just the actual training or fitting of the model.
+It means the entire pipeline,, including your data cleaning, your feature selection,
+your feature engineering,, as the actual fitting of the model itself.. And there are a lot of ways that this can happen.
+One of the ways, yes, it's mentioned is if you,, you have some missing data in the data set you've got.
+And you, you want to you decide you want to fill that missing data.
+And there are different ways to fill that you can you can depending on whether it's got numeric or categorical.
+But you can fill it with the,, the mode,, you can fill with that mean or median value.
+You could build a simple model to try to infer the missing values and fill them in.
+There are lots of strategies., but if you,, most commonly the way that data leakage can occur, there is whichever of those strategies you use,
+Use it for feature selection and that thing.
+Or not use it when if you're doing scaling or,, standardizing your data., that is technically correct., and that technically is a situation of data leakage if you don't separate it first., but if you,,, if you make that mistake, it's usually not.
+It usually has a very minor impact in reality on, on your model anyway.
+it's not a,,, a huge issue,, just to make sure everybody understands the process.
+I have not seen this before. we talked about the importance of creating a test set.
+A test set is supposed to be an unbiased indicator of your model's performance on new data.
+it should be the closest proxy we have to what we can expect when your model starts running in production on new data.., in order to keep it on bias, we can't use it in any part of our model train all the way from data cleaning all the way to fitting the model.
+we should put this side somewhere and not touch it again until we finished our model.. That's really what you should do.
+that means that all of those other steps,, filling missing values,, detecting anomalies,,, and outliers,,
+figuring out how that how you're gonna handle outliers,,, creating your features, doing your feature selection, doing any feature engineering.
+All those things should really just be done with your training data, standardizing or scaling your data.
+That should all be done really just on the training set and not involve the test set.
+But whatever we decide to do in those things.
+whatever method we're used for filling, missing data, whether or not we're,,
+adjusting any outliers or anomalies, what features we're using, we should make all those decisions using the training set.
+But then we also have to apply those decisions on the test set once we finalized our model and we're ready to generate predictions.
+we make the decision on the training set.
+We then apply the decisions on the test set, just we apply those decisions when we're in production as on new data., simple and very common ways of having data leakage are if we, if we,,
+don't separate the test set out first and we use the entire set of data,
+we have to select our features to fill missing values to,,, do any scaling.,.,.
+We tried to make a duplicate, a grouped observation, maybe.
+it's not only direct duplicates, but,, maybe,,,,,, near duplicates., then we might have,, those are, those are all,, not great,
+but they have, in the big scheme of things, a minor impact on your overall,,, performance or bias of your not the things that can be bigger problems are the things in the bad column,
+which is if we,, if we're doing a time series data and we for some reason decide to just randomly split our time series instead of,, chronologically in time,, if we don't take out duplicate observations., and this was, by the way, it's there's been papers about this during,, a lot of, during the early days of Covid., there are a lot of,,, studies around Covid detection.
+And it was a very common issue in those studies.
+If there are a lot of there's a lot of duplicate data,, being included,,, that is a very common thing that happens.
+This one is a little less obvious.,, this one can show up,, if we have different data processes,, or different generation processes for different classes.,. This is why one place where you might see this,, where,, things in medical imaging or other types of,, image data that you might deal with,, if you're compiling,, data from different sources,,, different,,
+locations or different types of equipment may include slightly different signatures or variants on, on the image.., and,, if you train a model on that,
+the model can actually pick up those signatures or variations in the
+images and make predictions based not on anything related to the actual image,
+but just purely the signature that indicates what equipment produce that image or,
+what location produce that image and on.
+And you may find that your model ends up,,, and it may be that certain locations, for example, let's say with x rays,
+maybe,, certain equipment or, or locations deal with,,, patients with a certain condition.
+And you may find that your model ends up working really,
+really in the training data because it just purely because it's detected the signature of the equipment used.
+And it's making your prediction off of that. And not everything related to what's going on in the actual image that you're.
+It's your processing. that's a less,.
+Less obvious source of,, of data leakage.
+All,, let's take our, I think, break real quick before we get into this, then it's,, not 10:00.,, take a ten minute break. 1010. We'll restart. Talk about,, comparing models.
+It's. I'm ready.
+For any possibility that I can do for you.
+It's not,.,, if it's all I know is having people on the streets up in the cloud and everyone's,,, all this all summer city, all the code is doing is just communicating with the server.
+I do think that reading out that reading, I don't really speak of files is that I don't know... I should just try to,, have a similar extension sake.
+I guess I'm not sure I have any other ones either.., if you check it out, I've never used my job, I don't know if it has some,, extensions capability., it definitely has.. I think I'm pretty sure extensions and extensions are actually built in the cloud.... it's would be if it's something you're interested in tackling every week and I think.
+No reason I should be able to work. And I just figure out how they interact with the projects.
+And you do this. The thing about my channel is dead brains.
+I, I do overarching.
+Between them all... All the different ones in the sense that you have one idea for job one.
+I've heard some.., let me tell this particular Python what your goal is to., distinctly different, which is what I appreciate.
+And obviously I'm not a fan of having everything say in the same.
+your C plus your C sharp, your files, everything at once.. it's interesting. I have I not use PyCharm specifically.
+I know it's from JetBrains., the,, if it's something you to do,, you have to give it a shot., the,, I think as far as practicality,,, depending on how many you're actually using.
+And it's good when you start to go beyond just art class because I'm not sure our class is representative samples.,. Good. Good place to start. Maybe they figure that's even worth the time to do it with students coming in.
+Because I, I'm in a city where the..
+if you even if you want to build it even for no other reason but other than that you could use it and anybody else is using it for then,, sure.., sure.
+Welcome, welcome to if It's Only you at the same time.. You can talk to about that even you can show.. It's that was just amazing.
+I'll go.. I was waiting because I thought that it was.
+That's why I don't, I usually get attacked a direct line for other than probably the evaluation instead of doing.
+It during the process because, training are hard sometimes it concerns.., it's it's very difficult to detect until you start that feeding new data into the system., what, you and I,, what can happen, what's typically happened.
+the reason that leakage is a problem is really just because it means that your test set is no longer on bias,
+meaning that if you're reporting on the test set you report,
+you train your boss as you train a model and you train it and you respect your boss.
+And 93% accuracy of the test set of the test data.
+And then you say, oh, that's great. That's,, production.
+And now you start ordering what's happening in production. And now you're seeing that actually the accuracy is more 87% or something that.
+That's that's when,, that's the most obvious indicators that there is probably data being used in your in your test set up.
+There are two things that can cause that problem. One is your test leakage.
+it was not unbiased. It was actually biased. And it was overly optimistic., and when you put it in production that you saw the real, the real ability to generalize just one thing,
+you can the other thing that can happen is,, your,, initial sampling.
+The overall that we're working with, which I think bipartisan and not representative of the actual person that is.
+this can also be a con, and we'll probably talk about this more later on.
+But,,, this, is also a cop.
+a good example of this is, to several years ago,
+Google rolled out a mobile app that you could take pictures of,, spots on your scan.
+And, a site there. Might be a problem.
+And I had to go visit a dermatologist or maybe not.
+And they trained their model on a curated set of people and taking pictures of spots and their skin.
+But it was all,, in good lighting, with the angles on the spots.
+And then when they released the app and they found that people, oh,
+there are this and picture over here an angle where the lighting was bad.
+And they found that the performance of their model was a lot worse in production than what they were testing.
+And that wasn't actually a case of, of, of data leakage.
+That was actually just the case. It really important for sampling to begin with throughout the that you basically train.
+those are the two problems that can lead to a big difference between what you're reporting is, as expected, performance and an actual.
+Question. Yes., I said, I think I do that.. I was struggling to find someone because I couldn't find them.
+Thomas. That's interesting., good., thanks for that. Me know, making announcements, I think.
+Usually there's,, there's assignments.
+You can also go. To the library.
+One second. Let me just try something here. You refresh and see..,.. There we go. Oh, no. It's,, I think.,. Thanks. Hey,..
+This is. The inactive circuit.
+Seismically active activity. You notice that you have some integrity issue.
+That's exactly. That's exactly it.. In fact, that's a good., I'll answer your question more when we get back to gray, because that's what we're gonna talk about next is the validation set and why we do that.
+That's the primary reason.. we asked for access to the box folder and that,, really happened I guess.
+Keep your fingers crossed. I was allowed to use.
+She won the 1990. Three Salt Lake Virtual Machine match.
+Oh,. you said. We would settle for that one.
+Mr... Just got a job..., I to work. I'm interested in,, some compute, some serious work., I just,, those are the. I think that.
+Sure. You have as a student have access to any you're using looking for GPUs specifically... Not sure if you guys have access to any GPU capacity in your normal student., I it's in the role the,, they have a program where students can request,, GPU access.
+And we commonly we do that it the spring class.,, although that is really supposed to be limited just to class related use obviously in my personal side projects.,. They say they want to make sure people are using,, just working class..,,,. those are really just classes.
+I'm not sure if there is,, I'm not aware of anything that's available to do for about just personal use.,, you're probably better off,, using some of the resources on., Google Cloud Kernel Course offers free GPU access., those are usually the students, find Kaggle kernels.
+It actually offers a lot more,, the GPU access.
+that might be,,..
+Otherwise maybe doing some digging. I don't think that's a program for students who just got used., it's for side projects you'll get if you take the O&M class next spring, you'll get access.
+But it is that the deep learning class for the whole let's see all in class.
+I think you'll probably I think we will probably get it for the zoom class as.
+But to be honest, my roommate's actually in Viacom.. that's been nice.. you can get it for research access.. courses is research faculty is paying for that access.. and you can do it. And that's the primary purpose of GPUs here to do that.
+that's if you work something out then that's.. Otherwise I don't think there's a customer service actually call...
+I guess. Do it.. Exactly. I think in a year. what is it.
+You see all the calls., let's get started..,, I think that's actually going to be a lot that I can mention during the break that,, apparently it's you need your canvas.
+The assignments tab was not showing for you, it sounds at least some of you found assignment one.
+Anyway, I guess it was. It was there was a way to get to it, but it maybe it wasn't obvious.
+in case you were,,.
+Or either that or you haven't worked yet, but,, either way,, now when you log in to canvas, you should see an assignment.
+Yours does not look this, but you should see an assignments tab on the left side.
+And you'll you'll see the link there to assignment. If you click on that.. let's,, keep going up and 45 minutes here and see how far we can get here.. far we talked about,, model evaluation and the importance of creating a test set.. Most of you that have taken machine learning classes before are aware that,.
+In reality, we often create not just two sets training and test, but actually three sets a training, validation and test set., this is what the split looks in practice when you're when you're up building models rather than just training and test,
+you have the validation set. The reason the validation set and the test set are not one.
+And the same thing is because the validation set is used for comparing models.
+usually when we're doing modeling we're building a number of different models.
+Each one might use a different set of features or maybe a different algorithm or,, maybe in a slightly different set of data., and, if we were to build all these models and then run them all on the test set and then use the performance on
+the test set to determine which model we're going to go with out of the candidate options that we built., that would be a form of data leakage from the test set, because we're using the test set to make decisions about our modeling.. As in, maybe we built five models and we're using the test set then to decide which of the five,
+we're just going to pick whichever of the five performs best on the test set..
+again, this is one of those things where it's not the end of the world.
+If you do that, it's not a complete disaster, but it's not a good practice., if you do that in your job, somebody is going to say that's not that's not a best practice for modeling.
+You really should not be using your test set until you've finalized your model.
+And if you still have five models and you're picking just one, you haven't finalized your model yet.
+You're still building your model.
+to do to handle this selection of your model from the candidate options, we'll use what we call a validation set.
+we'll take our training data. We'll build,, several different models looking at different sets of features, different algorithms, etc.
+then,, take our however many models we built.
+We'll pass the validation set through them. We'll calculate performance on the metric we selected.
+And then we will typically go with whichever of our models performs best on the validation set.
+Once we've then down selected to a single model as our final model will then pass the test set through it and we'll get a new,, benchmark of performance. And then that can still be an unbiased indicator of the model's expected performance on new data.
+if they see any issues with this approach. There's two, two issues.
+one is,. We're cutting down our training or data available for training further,.
+as we decrease the size of our training data now, we've taken as much as 40% maybe of the training data away.
+Generally speaking, the less data we have available for training,, the lower the performance we can expect.
+if your data is,, not large and data size is a concern,,
+this might pose a problem for taking another chunk of your data away from the training process.
+Because if we train five models and now we're going to run all five through and through this and take the best one.
+This is this., the points that go into this have a massive impact on which of the models we end up going.. if we have bias that gets introduced in the creation of the validation set,
+then that's going to lead us to potentially selecting the wrong model as our as our final model., we may end up selecting a model that just happens to perform very on that end to the bias subset of data.. that's a that's a concern as., in practice, rather than creating a single fixed validation set this, if we're working with,, smaller models, as in not large scale neural networks,, but smaller models.
+We usually use a strategy that we call cross validation instead of a fixed validation set.
+And this is what cross-validation looks. The most common form of it is what we call k fold cross-validation.
+And the way that works is, we actually run,, our models through,, five iterations, where we,, let's say we have three different models and we're trying to decide between three different models.
+Each one has a different algorithm or something., what we'll do is we'll run in this case,, we're running a little call, a five fold cross-validation.. And,, we'll run five iterations of training,.
+And train. And during each iteration of training, we'll use a separate portion of the data as our validation set.
+the first iteration of training we run, let's say we take the we're going to take the first, 20% of points as our validation set.
+We're going to use the next 80% as our training data. we're going to train our model on this 80%.
+We're then going to run our three models through the validation set, calculate the performance.
+And we're going to store that performance associated with iteration one.
+Then we're going to do it again in iteration two. Except this time we're going to use this as our validation set.
+The rest of it is training. Again we'll retrain our models from scratch using the training data to get performance on the validation set.
+Store that performance for each of our three models associated with iteration two, and then we'll go through it again for three, four, five.
+by the end of this process,, we'll have, five different,,
+scores for the performance of the performance on validation set for each of our three models.. And then typically what we will do,, is we'll just take the,, the mean performance,, across each of those five different iterations,
+and we'll take whichever of the three models has the highest mean performance across the five iterations.
+And we'll use that as our,, as our final model., two reasons. One,.
+We won primaries, which is that we reduce the risk of bias in choosing our validation set.. during this process, every single point in our,, data available,, is used in the validation set., during the process at some point.., we're not introducing bias, for example, by just taking, let's say, the first,, 20%., and using that as a validation set.., that's the,, that's the primary reason., the other reason is that it also,., because we're also using all the data at some point in the training set, four out of five times it's used in the training set., it,, we reduced that problem of having,, cutting down the data size further., this tends to give you a much more robust evaluation of, of the,, performance,,
+than just doing this one time and picking some subset to be the validation set.
+almost always, we're the only,, when we're comparing models we use,, cross-validation., is there a specific way to determine what k should be.
+That's a good question.. There's no, hard and fast rule around what case should be.. It's,. Really a factor of,,, primarily how much data you have and how large the model files are that you're dealing with.
+if you're dealing with relatively smaller data and not super complex models, you can it's common to use either 5 or 10 for k.,, you'll often see either 5 or 10 if you're dealing with large data sets where it takes a while to train each model.
+Because you're going to you're going to be waiting a long time for this process to run if it.. Because you've got to train,, each of your models you're comparing ten times.,, and related to that,, one particular area where you will find that this approach isn't really used at all is, is in deep learning.
+when we're working with neural networks,, it's actually much more common than just to have a fixed single validation set.
+if it takes two hours to train your network,
+you don't necessarily want to be sitting there for 6 or 10 hours trying to do your cross-validation.
+more commonly with neural networks,, because of the training time, you'll see use of just a single.
+If, if the validation set was the same set of data across all iterations as it assumed that they would converge on the same,, model every time.
+And we're selecting different sets of validation to see if we get slightly different.. Exactly...
+If we just,, ran this five times with this one,, the first 20% was always the validation set up.
+It would generally,, converge to the same place on some of the algorithms have some amount of randomness.
+even if you train the same algorithm five times on the same data, you may have a very slight difference.
+But for the most part,,, it would be.
+It would still be biased by your choice of the validation set.,..
+this gives a much more robust answer because you may find that,, if you have models A, B and C, you might find that model A,, performs a best on,,, on this particular set because it just happens to contain some bias and model just does really there.
+But then you may find that on the other for your model B performs much better in every single., there are a couple other,, variants of,, that's what we call k fold cross validation.
+There are a couple of other variants to be aware of. One is what we call,, shuffle split..., cross-validation.,, this works a little bit differently.
+one of the limiting factors is,,,, here with k folds,
+if your K is five, then you'll use each time you use 20% for your validation set.
+And you go in whether, if, if you're,, K is ten, you'll use 10% each time,, and on.
+the number of iterations and percent of data used are always split with shuffle split it dis aggregates that.
+you can actually set. a shuffle split we randomly select some percentage of observations each time.
+you can you can separate the value for k or number of iterations from the percent you use for validation.
+you could do something set k is equal to four.
+that means we're going to run for the regions. But each time we're going to use just 10%, of the data for our validation set..
+And in particular you might use this if,, you're concerned about,,,, compute time or data size or something that,,
+where you have a particular reason to,, want to you want to maybe go with a smaller validation,,, or a smaller number for K or something that.., let's say you with k fold cross validation, if your validation percentage was ten,
+that means by default you're running ten iterations on it. And if each iteration takes a long time to run, maybe that's not ideal.
+you might go a shuffle split where you'd still use 10% for validation.
+Keep the validation,, fairly small you have enough data for training.
+But instead of running ten iterations, you're just going to run four iterations and randomly pick,, 10% each time.. And then there's another one called leave one out cross-validation.
+This is essentially k fold cross-validation where k is equal to your number of data points.
+and each individual observation becomes a single validation set at some point in time.
+And then just K folds you take your average across some., across.. I can't think of really many great reasons to use this., I used at one point in my life, which is,, actually that power outage prediction model, because we have a very,, there actually,
+even though the data size is very large because of the geospatial nature,
+the number of actual storms that cause power outages for a given utility is not very high.
+across,, five years, you may only have.
+25 storms or that actually cause any significant power outages or.
+you if you really essentially only have 25 independent observations.
+And,, in that case, we actually usually one we call it one storm out validation where,, you take 24 of the storms,
+you run it on, and then you look do you look at the reports on 25th and then you then you take another storm out and you run it again, etc.,. we talked about why use cross-validation., again, the thing to remember with cross-validation is that,, this is the validation set is used for comparing models.
+it's used as part of the modeling process after we finish comparing our models., it's important that we then we can retrain our, our final model on the entire,, training set.. it's a common mistake,, to,, do your cross-validation and then for your final model,
+just pick whichever model performs best on the, on the,,
+But,, if you do that, you're,, hurting yourself a little bit because that model was actually only trained on,, in this case, 80% of the data available for training.
+you're missing out on the opportunity to train on that extra 20%.
+usually what we'll do is we'll take our final model in terms of the features,, the algorithm,
+etc. and then we'll retrain that model on the entire,, 100% of our training and cross-validation data.. we can take advantage of that extra 20% that's now available to us as training data.
+And we train on the full thing. And then we use our test set to calculate the,, the on bias performance.
+All., I'm not going to go through this. You can,, you can look through that on the slide or in the example notebooks in,, in the repo for how that, how they do,,, cross-validation.
+All. We're going to switch,, over a little bit now and talk,, about model selection.
+This idea that when we first start modeling, we don't know which set of features is going to perform best.
+We don't know which algorithm is going to perform best. And there's no there's no real good way to tell.
+And until we actually,, until we actually try it., modeling is in large part still very much a process of trial and error.
+We have some general rules that might indicate that one model,,
+one algorithm or other,, might be better, but we don't actually know that.
+And until we until we just try it., in some sense, modeling is a giant search problem where you have a search space of different possible feature sets., you have different ways of cleaning or preparing your data, different algorithms,
+and you're trying to search across that entire space to find the optimal,.
+The key thing that drives performance of the, of your model is the,, degree of complexity,, of your model.,, some,, some algorithms come with an inherent degree of complexity that will differ from other algorithms,,, obviously a neural network has quite a bit more complexity than a simple linear regression.. the algorithm is probably the most obvious source of complexity,,
+adding more or less,, but there are other things that drive complexity.
+another big one is number of features that you have,., if you have,,, 625 features, you're going to have a more complex model than if you have three features in your model.
+And then also what we call the hyperparameter values.,, those little knobs that you can turn on each of the algorithms.,, those can dial that complexity up or down depending on how you, how you adjust them.
+The process of modeling, actually, if you break it down to the simplest form,
+it's all about finding the amount of complexity,, for your particular problem.
+Because,, phenomena that the,, phenomenon you're trying to model can be geographically very complex.
+in real life, things are usually not as simple, linear relationships., they're very complex patterns that you have to learn.
+And,, you need some amount of complexity to try to identify those patterns.,, but too much complexity can hurt you because it can make your model very expensive.
+It can take a long time to run.
+And if it's too complex,, it may actually not be able to generalize or perform very to data that it's never seen.,,, to be a little more precise about our, our thinking about this,,
+we can break down the error from a model into two key,,, components that make up the overall error of your model.
+One is what we call bias. And the bias term of,,, modeling is heard that results from making incorrect assumptions within the model.
+the most common,, way that this that bias occurs is if we use,, simplifying assumptions that oversimplify the relationship.
+we have some relationship that looks this.
+And we decide the model with us., linear regression..
+We've made a simplifying assumption, which is that the relationship is linear.
+And we've built a model based on that assumption. And, that model has a high degree of bias because it's oversimplified.,,, the actual relationship..
+that's what,, that's what bias is.
+If you think about it in the frame for target., that because you've made this simplifying assumption of this thing as a linear regression,
+it's actually this, you're almost always going to be off target with your model., the other problem, that or the other source of error,, in modeling is what we call variance,
+which refers to the sensitivity of the model,, as you make slight changes or fluctuations in your training data.
+You have this scattershot effect where it may,,, spread out.
+Our bias is low., we've done a good job fitting the actual patterns, and our variance is low., meaning that,, little making little changes in our training data don't cause big changes in our predictions., if we have a low bias, but we have high variance,
+we have this scattershot effect where all of a sudden we have little we make little changes to the inputs and the outputs,., if we put this in some mathematical terms,, we often we'll look at what we call the expected squared error,, of our model., and we'll see this again. We talk about error metrics in a moment, but we can break down the expected square there into two components., the first one, this is the bias squared.
+And then the second one is the variance term.., or we can rewrite it as this.,, the expected squared error of our model is the sum of the is squared plus the
+variance plus a little component here that we call the irreducible error.
+this is just recognition of the fact that, everything has some amount of pure randomness in it.
+And we're never able to, to completely or fully model any, any type of natural phenomenon., we're always going to have some little additional irreducible error term that no matter what we do in our following,
+we're, we're not going to get rid of,, and this is actually, by the way,
+one of the really hard things about modeling is that we don't know what this is or how big this is going into it.
+for some problems we're trying to model, this can be really big.
+And no matter what we do with our modeling or how good our modeling is, we're just not going to get great performance.
+And then for other problems, this could be very small., and we're actually it's actually very easy to get.. if you want to think about it,,, if you're a visual thinker,
+this is maybe another way to think about how those how those components,,, what add up or,, one way to think about it, but,,,,
+that if we've got a set of predictions and we got a target over here, there's two contributions to the error.
+The expected value of our predictions and the distance from the target to that and the others the deviation component.. Which is how scattering are the predictions where we're making.. if our total error,, is the bias and the variance combined,, that makes sense.
+They tend to move in opposite directions, and they're both a function of the complexity of the model.
+as our model becomes more complex, let's look at a bias term first.
+generally the bias comes down. again if our data looks this and we model with a simple linear regression.
+Hi bias. If we now,, model it with let's say a neural network or something that,
+maybe we're doing a much better job fitting,, the actual patterns in their data.
+And the problem is that,,, our variance, tends to increase.
+Because your model has fit itself really to the training data., but then it's,, it has a lot of error in the actual data.,, because of the high variance. the total error is the sum of those two components.
+The bias and the variance of your total error ends up looking something this.
+And the whole point of modeling is to try to find this here.. To try to find that sweet spot where you where you have as low total error as possible,.
+what the degree of complexity of your model is going to get you here.. And the problem is complexity is a is a result of a number of factors.. Algorithm is a big one. But it's not the only one..
+It's also the,, the choice of features, your approach independently and you're preparing your data,,, etc.
+there's a lot of aspects that go into complexity.
+we could break down the whole process of modeling into,, how do we find,, this point here.. And that's that's really what we're doing., when we go through a modeling process., usually.
+And,. when you're working in industry, it's, it's not that common to be talking about,,, bias and variance., usually you use different terms for it.
+And,, the typical terms that I use are what's called underfitting or overfitting.
+underfitting is when you're here,, it's the overall error curve where your model is too simple.,. And you've got,, low variance, maybe, but you got high, high bias because you've, you've made simplifying assumptions.
+that's underfitting., and then overtraining is the opposite problem where you're over here where you've got a model that's too complex,
+you, as we say, overfit,, to the training dataset.
+if this is our,, if the orange is the true function,, and we,, use a linear regression here, this is what underfitting looks., this would be probably a pretty good fit. And, this here, we've used some really,, sophisticated,,,
+algorithm here that is actually doing a pretty good job, fitting itself to the data points that we've been given in our training.
+But it's not actually,, representing the true function of the distribution very.
+Typically we look at what's happening with our,, training error and our validation error.. And we apply what we call validation curves.
+And,, you'll, you'll see that,, they looks something this.
+This is a,, an idealized view.
+if you plot these and you're, it doesn't really look very much this at all, that's pretty normal., it's not going to be they're not perfect curves this.
+But you should generally see this type of a pattern.. And, a common and relatively easy way to do that is to change the hyperparameters to,,
+given one algorithm that you're working with, let's make adjustments to the hyperparameters of it to make it more complex or less complex.
+And as we do that, let's track what our resulting score is or error is on the training set and the validation set.. And, we will see. let's say this we're, let's just say it's, it's let's say it's accuracy or something.
+We'll see that our,, as we make the model more complex,
+typically what happens is your training score or your training performance will get
+better and better because it's fitting itself better and better into your training data.
+Because as you're fitting yourself better and better to the training data, your ability to generalize is actually,, decreasing.
+And if we plot these, then it becomes much easier to identify where that optimal point is.
+Once we see that validation score start to go back down, that's a good indicator that we've reached the area of, of complexity.
+All., I think we talked about,, this.
+And, again,, we want during the modeling process, we want to adjust the algorithms and adjust the feature sets.
+We want to adjust the hyper parameters and try to figure out where that optimal,, point of complexity is.
+There's a demo notebook that I'll let you go through,, on your own time this week in the,, in the repo that shows you how to create those validation curves.
+It shows you what a few different validation curves look.
+That maybe doesn't look quite as ideal. Is that,, that's what I just showed there... That's a good question.
+I think that the practical answer to that is that,, you need to consider what is what is a satisfactory outcome.. And actually this ties into our discussion on metrics. But what level of performance are you trying to get to., where you could say it's good enough.., that's one thing because the reality is there's an almost infinite number of
+different possible configurations between the algorithms and the data,,, cleaning strategies and the features and the hyperparameters.
+Then you could spend a really long time running experiments,, to, to try to optimize it.
+that part of the trick is knowing, when to stop,, when it's good enough.
+the first thing is being really clear about what level of performance do you need to get to,, that,, when you hit that, then maybe it's time to stop and just put in production., that's,, that's probably the first and the biggest thing to think about., the second is, just practical constraints.. practically, how much time you have available to run experiments.
+those would drive things too.,, I think you need to find a balance between the practical constraints., I just mentioned and, and getting good enough performance., your reach,, in everything, there's, diminishing returns.
+as you work on something., and we showed that last class,, you're a strange score,
+but as you work on something, you'll get better and better and better performance and better and better.
+But the curve starts to flatten out.
+And, the more you work on it, you're just getting just very,, incremental returns on your time at that point.
+I think part of the trick of being a good, a good model or a good data science,
+this is knowing when are you hitting that point of diminishing returns where you could keep working on it and keep getting,, small incremental improvements, but it's probably not worth the best use of your time anymore to go., it's, it's a, there's a science to it, but there's also a lot of art to, to finding the balance of these things.., my impression is that validation can also be used for a large training set for a complex model to feel hyperparameter tuning,
+to edit the model itself while you're training., that's a good use of the validation set. the reality is when you're tuning a hyperparameter and you're changing values,
+it's essentially the same thing as comparing different versions of a model., each one having a different,, a different value for that hyperparameter.
+it's,, as if you were comparing models with different algorithms or different feature sets., it's definitely a good use of the validation set.,, to do that. That's in fact exactly why we would use the validation set..,, and we'll talk more about this over the course of the class.
+But when you are,, when you're, when you're building a model, when you start with a problem and all you have is the data and you have,, nothing else,, and you need there's a lot of decisions you have to make., I guess a practical approach would be to think about I have limited amount of time.
+I don't have forever to do this. I want to put my effort into where I can make the biggest improvement, the quickest,
+and the are, generally speaking, the area where you can make the biggest improvement.
+The quickest is going to be on your data and your features.
+how you're cleaning and preparing your data and what features you're using are, generally speaking,
+going to make a much bigger difference than whatever you're doing with the hyperparameters or even the algorithm for that matter., that's number one area to focus on is getting the data and the feature set.,, choosing which algorithm to use., and then once you've got that set,, then it's really just making tweaks to the hyperparameters.
+But by the time you get to, changing hyperparameters, you're going up this curve where you're,, where you,, you're just making., somewhat minor,, improvements to your performance at that point.
+But for all of those things, you'll use the validation set along the way, or cross-validation.. All, let's get into,, let's see how far we get with metrics, and then we'll,, we'll break here for the rest.,. first thing to note,, when we think about metrics, when I say the word metric, you,
+you probably immediately think about accuracy or precision recall or mean square error or something that., as engineers, that's naturally where our brain goes when we think about metrics.
+But the first thing to realize is that they're two different kinds of metrics., the first one is what we would call outcome metrics.
+And the second is output metrics.
+the outcome metric is not a,, it refers to the expected business impact of whatever, not to the actual performance of the model itself.
+the reason we build a model generally in industry is because we expect some business impact.
+We're building a churn prediction model to try to minimize,, customer losses.
+We're building a model for marketing and sales to try to figure out how to target the customer we can increase our revenue.
+We're building a model,, a recommendation system for our product to try to,, get more users or retain their users.
+We have for better customer satisfaction, whatever it is., almost always we can state the outcome metric in terms of dollars., arguably you could maybe do something time savings or something that, but almost always it can be, it can be.
+It can come back to, to quantify it dollar value, whatever., again, these are not things mean squared error or accuracy or anything that.
+this is the first and most important metric to keep in mind when we're doing any modeling.
+The second kind is the more common ones, the output metrics, which is how good is your model at these., these this is where mean square they're,, whatever comes into play,,
+initial time, we'll just go through these examples quickly to show you the difference here.,, these are two,, two of the products I've worked on in the past.
+One is a tool to predict the turbulence, predict turbulence for an airline., in this case, the outcome matrix metric, we might say that,, in one of these things.
+it could be,,, a lower number of,, safety incidents per year on average by avoiding turbulence instead of flying through it by accident,
+we can reduce our,, number of safety incidents. Or maybe,, a lower dollar value of safety related legal claims against our airline., would be another one. And then our output,, might be might have something this.,, second one is a power demand forecasting tool.
+predicting the expected power demand,, the outcome metric might be a,, lower cost,, per megawatt hour of the power produced,
+because when you forecast demand wrong and all of a sudden you're in a bind and you need to produce more power,
+you have to,, start up really expensive extra money called peaker plants or extra power plants that produce energy,
+that a high,, cost., that gets expensive or, and there also tend to be dirty,, higher, higher pollution as.
+if we can do a better job predicting,, demand, we can lower that the generation cost for the utility and also lower the emissions rates., and then the output metric of our demand prediction with,, something this.. it's important to think about both of those for your., we talked about baselines last week., and you might think about things creating a zero roll baseline.
+just using a heuristic,, or a single heuristic and maybe a set of heuristics,
+and then maybe looking at what's the expected human performance as a baseline., or if you're trying to replace some existing,, solution they use today for it.
+What's the performance of the existing solution, and how does your model compare it to the existing solutions performance.
+These are all good ways to get a baseline you to compare your model., now let's dive into our output metrics., they're more familiar to us.. let's talk about regression.
+Regression first and then we'll switch to, to classification., these are probably the three most commonly used metrics for regression.
+Mean squared error. Mean absolute error and major mean absolute percent error., most folks have probably seen mean square there before. And that's probably the most common,, metric for regression.., one of the challenges with Mean Square there is and it's it's heavily influenced by outliers.
+if you have a particular outlier,, or a particularly bad,,, prediction for some reason,
+maybe there's just,,,, some anomalies or outliers in the data.
+And your, your model does not capture them at all. And if, you have one,, one or a couple of really big errors.
+But, the rest of your points are pretty much straight on,, that can,
+that can really,, impact you really results in high mean square there., the other thing with mean square error is it can be hard to interpret because of that square term.,, it's it's hard to tie that back to, what does it actually mean,, in terms of a prediction., if I,.,, predicting,,,, a number,, 0 to 100.
+That's a,, somebody's grade on a test. And I'm trying to predict that.
+And I measure my MSE, and my MSE is in the thousands.
+I it's hard to relate that back to the scale of what we're actually trying to predict.,,, mean absolute error solves that problem.
+Meaning it's it's on it doesn't have that squared term. it's on the same scale as whatever we're trying to predict.
+it can be a little more intuitive for people to understand., it's more robust to outliers.
+it's not penalizing those very high outlier errors as high,, as much because it doesn't have that squared term.,
+and then May is a very commonly used metric that's particularly popular for folks who are not non-technical because it's expressed as a percentage.
+It's just a more intuitive for somebody who's not as familiar with it.
+you can say,, 5% or 8% error and immediately people have some feel for, what, what you're talking about.
+I don't have any concept of what how to think about that.. those are probably the three most.
+to understand the behavior of these and how they differ, let's take a little example here., in this case we're going to compare,, me with, Rmse.
+it's a root mean square error,., instead of, and the mean square error,,,, if we look at three different cases.
+let's have a case one, we've got ten different points. We predicted,, we've got consistent error.
+we're consistently off with our predictions just a little bit.
+And we calculate our Ma and our Rmse. And, both of them end up being,, two,, case number two, we also make ten predictions.
+But are we our errors are not consistent. They're not always two, but they're they're very low level make they're still small,.
+They're one, two, three. if we calculate our Ma RMB actually ends up being the same for these two.
+And our Rmse is almost the same.. Just slightly different.. And now let's take another case where we have for nine of the ten points we made perfect predictions on them.
+And then we had one point where we had a father.. in this case, if we add up the total for,, two times 1020, this is 20, this is 20.
+our total. quantify there is 20 in all three situations.
+But in this third situation our meat is still two.
+Because our MSE shot up to six..
+if we were making some decision off of our messy here,, we might say that,,.
+This is a really bad area. This is really bad,, model.
+Look at how high the risk is there., but if we were making decisions off of, maybe we might look at these and say,, all three of these are a.
+your choice of metric can make a big difference in how you think about the performance of things, particularly when there's outliers involved.
+All. And then,, there's one other,,, one that you'll see show,,
+how many people are familiar with the concept of r squared, and most people have seen it.
+if you take in statistics classes or a lot of other types of classes work through that., r square, there's one that's very common in and a classic course is very common in research people for the R squared very uncommon in industry.
+to talk about r squared.,, much more common to talk about MSI particularly or maybe any.
+Because R-squared typically is calculated what we call in-sample medians calculated on the training data, not on,, separate test set usually., I think most people probably see an R squared, I'm not gonna spend a lot of time on it,
+but,, r squared relates back to the concept of.
+Explain deviation versus unexplained deviation.
+if we have,,, we've got,.
+Some,, input X and some output y that we're trying to predict.. And we have, wherever we have our average y value, which is this line,
+and then we have some actual,, points which are these points here.., if we were to take any point, any x, z, I point here,,
+and then we have a model that we built in this case, just a linear regression model.. for any of these excite points,, the deviation from,
+from the mean or from the expected value can be decomposed into what we call the explain deviation and the unexplained deviation.
+the explained deviation is what portion of this does the model account for.
+the model our linear regression model says I predict that the y value for this show is here.. it's been able to explain why is it here and not here at the mean.. And you can look at the equation for this,,, for this model and say,, it's here and not here because of this.
+But if the model also has error because the actual value is down here.
+this part is what we call the unexplained deviation.
+The model has not been able to account for that. It's error in the model.., and we can,. We can.
+We have this concept of total deviation from the mean, which is the sum of p explained error,, or what you see called sum of squares regression or SSR plus the unexplained error.. Which is the,, the actual value minus the predicted value.. And r squared is,, quantify the,, portion of the error that is explained by the model,, over the total error.
+a better fitting model you can imagine should be able to explain more of the total error or total deviation from the mean.. generally it's intuitive to think that a better model,, would result in a lower a lower R-squared.
+that's that's the logic behind the. The r squared value., as I mentioned earlier, often,, there are a couple issues with r squared.
+Actually, if anybody. This is an interesting read., is r squared useless.
+this is from somebody at University of Virginia that,,
+basically makes the case for why you should not even pay any attention r squared at all.
+And it's worthless as a metric.
+And it's curious that has learned the r squared in the past or used it and wants to see why maybe they should rethink that.
+That's a good or a good read., one of the main reasons not going to industry again is because it's,,
+it's often typically computed in sample mean is computed on the training data because it's considered a goodness of fit measure., how good, how good,
+And in industry, in research, we often care about goodness of fit because we're we're, we're looking to explain phenomena that occur.
+And then we measure,, in research. But in industry we care less about explaining things and more about predicting things.. And we typically will use metrics more related to predictive ability or gener general generalization ability.
+And then that thinking is.
+And there's also a concept, an adjusted R square, which tries to account for one of the problems with r squared,
+which is the that as you add more features, you have more complexity.
+Typically r squared will continue to go up because the model is able to calculate itself.
+that. All.
+I think we're going to stop there.. Let me take a look at this schedule.
+You. We got enough for you to finish up the homework., I think,, I might record a video on the classification error metrics.
+Assignment one do next week. Make sure it's submitted in canvas before,, 8:30 a.m. next Wednesday.., I didn't know about the regression. Parametric.
+you said that,, the maybe is more commonly used in industry.
+do you recommend for classwork assignments you should also use, is that one not as accurate.
+Which is more commonly understood.., that's a good question.,., there are, there are,, good and bad things about all of all three of those.,, and it depends on, it's really depends on your data and what you're looking to measure as.
+the naive way would be to think of them as interchangeable., but the reality is, as we showed that one example where the Rmse was high,,
+your choice of which one to measure has an impact on the decisions that you're making.
+And,, a first thing to think about would be,,, how bad or outlier,,, points how bad or large errors.
+in some situations that were modeling large errors might be a really big deal.,, the outage prediction model I mentioned before,,
+A single large error,, probably can get you fire there, get you utility find a lot.
+when we're training our model, we want to try to do everything we can to try to minimize the risk of large errors., whereas other in other situations maybe,,
+every once in a while can have a large error due to some anomaly is an acceptable
+thing as long as our overall performance is consistently low.
+And if that's the case, then maybe it can make more sense to go with,, with me instead.,,,, depending on this may be a bad example, but if you're going to build a model for,,., predicting stock prices for trading or something that., maybe you're willing to say,, I'm with a really bad miss every once in a while,
+as long as consistently across the board. My performance is really good because I know that I'm every now and then I'm gonna have a bad,, a better I'm going to lose a bunch of money or something. But, more than make up for it.
+If I'm consistently good and,, across everything else., and then May is,, the problem with Mape is because of that percentage, it can be very deceiving., in particular, if you're,, working with very small values,.
+And you're expressing them as a percentage. if you have the let's take the prediction example,, if you have,, if your prediction is, two and there is actually one outage,.
+No, I don't really care. it's small numbers, it doesn't really matter.. What I'm trying to avoid is there were 500,000 and I predicted zero.., that's where Mape can be deceiving is where it went.,, it can be skewed by the small numbers that I can look.
+It's really large.,,, when it actually, the reality is it doesn't really matter.
+that's why I,, part of what I'll have you do,, in some of your work and also on some of the homework and,, exams as,
+is to think about what the metrics should be given different types of problems,
+because it's it's something that a lot of students usually.
+We give you the metric, we say, I want you to use MSE or I want you to use precision or whatever for a classification.
+But,, in the real world, nobody's going to give you those. You have to decide which ones make sense.
+it's it's actually a skill to be able to think about the different possibilities and make the trade off decision and decide for yourself,
+which makes sense.. it does require some thought.
+All, everybody, wake up and,, talk a little bit about the mentoring program.
+I will give you an alternative detector for you. Maybe. You can plug in.
+Perfect. I wouldn't take too long of time. But,, excited to formally launch our mentoring program today,.
+we talked about that briefly during the orientation.
+Everybody knows that..., and,, what we thought was that as students come from different parts of the world,,, and navigate,,
+everything from the classes to pick the electives to choose, manage your time,, start preparing and start applying for your internships and co-ops., and if there is some person,, who can guide you in that journey,, that would be very helpful for students.. And as we brainstormed,, we figured the, the,
+the best group that can help our students would be the ones who have gone through a similar journey not too far back.
+And that got us to,, going out, reaching out to our alums,,, for the program and asking for volunteers.
+I'm very happy to announce that,, we had a big, big part of,,
+our more than a third of that volunteered to go,, do this mentoring program and help you guys out.. we've gone back and forth.,, Amanda has worked really hard,,, helping map,,,,, our student with alumni, and I'll talk about that.
+as of today, each one of you have a minute and I'll go through the,, program a little bit.
+If you have any questions,, ask those. But I must say that before I get formally into it,, this is something that is,., it's completely in your hands, at home. And our expectation is that you will try the program.
+We have set it up. We will provide the Delgado's.
+today is the formal kickoff., we are in touch with our the mentors who have volunteered.
+They expecting this to be kickoff today and the communication starting this week.
+But talk about the overview. Talk about why it matters how what can how can you get the most out of it and some do's and don'ts about it.
+just formally,, managing the logistics is a one year program starting today.
+It will go through the end of August next to,., and that gives us an opportunity as that next batch of students come, and it frees up the mental that they can formulate real ones.
+But I must say upfront here, that does not mean that's the end of your relationship.
+But if you have developed a good relationship with your mentor by that point of time, please do continue that.., it's completely between you and the mentor at that point of time.
+But as a formal program,
+we will we keep it a one year an academic program that every new class coming in have somebody to go work with now., you are paired with,, with a, with a mentor., goals are up in pretty much any aspect of,, your, your, your professional life, even personally if you want to talk about that.,, for your academic growth, your professional growth,,, your personal growth., and the key focus areas we, we are thinking about in your career guidance, a lot of you,,,
+we'll be starting to look for your internship for someone in few months and getting guidance around that,,
+guidance on position and goals and for the job or if somebody is interested more in looking for research areas,, technical skills,
+networking and in general, some of these are pretty accomplished,,, professionals in very short span of time.
+They have made a name for themselves. if you are looking to lots of new things happening in AI, please feel free to go to that.,, it's probably obvious, but I the way I look at it,,,
+the four things you want to get out of participating in a mentoring, if it accelerates your learning,,,
+you can get real first hand experience of from somebody who has very recently gone through the program and now established in their career.
+It helps expand network. That's something you will hear over and over from us in multiple classes.
+We talk about that in capstone as that,, grow your network.
+One of the best ways to get your job for yourself is for the network.
+We are seeding that with a mentor for you. Obviously don't limit yourself to that.
+But, you probably should,, should go beyond that and career advancement.
+I don't know, very, very quick.. In terms of,, the match part of it.
+as I said, just to give you a bit of the logistics, we had 20,,
+alarms volunteered and we have 31 students and some of them had volunteered to mentor.
+More than one died. there's some wonderful ones left over to do.
+What we have done best job. And I must say,, Amanda did a great job,, matching that.,,, based on what we have learned about you far,, in the orientation and all and what we know about alarms,,
+we have made the match there that all, our alumni I talked about that I for the introductory email,, connect the pairs will go out hopefully today., I my goal is to finish all of that before midnight tonight. all of you will get an email with your metal copy introducing each other.,, I'll talk about next step, but my, my hope is that you guys,,
+take the lead from there,, reply back,, reply back.
+And then you'll start setting up times and things,,, and obviously you can feel free to continue relationship after August 26th,, depending on,, what relationship feel that.
+Again, I'm just getting a little bit more details. Academic excellence., we talked about,,, especially with not a lot of electives coming in,
+they can probably provide you,, a good,,, good guidance on what to choose based on your interest., if you have if you have some project you want to get a feedback on, and, on the research side, career progression.,,,, if you want to have them look at your resume, as,, help on the interview process,
+personal support, life work balance, all of you come from different stages in life, confidence building,
+industry insights as,, they were important because if,, a lot of these are in general,
+I am a spaceflight and working in the industry now, but that can be some interesting discussions that you can have..., again, I do not want to very thoroughly,,,,
+make it extremely rigid or professional, but some things to keep in mind,., this is your opportunity with,, with a professional who has volunteered to do that.
+Set some goals for yourself..
+And if you have heard about the Smart goals around,, being specific, measurable,, achievable, relevant and time bound.
+just think about it,. Out of this relationship, I want to I want to go figure out how best to position myself for internships.. And,, when, when you have the conversation work around that.
+I would say prepare,, if you are going to conversation, just don't go back, have topics to discuss., even a good practice I have seen.
+Just send a quick email before the call saying, hey, I want to discuss these two things, I don't think.
+Be receptive. Very, very important., be humble., be open to feedback. If you are getting that and if you're lucky to get actionable feedback, take that and please follow.
+If your mentor has told you to do something, follow through. If you are not able to do that, reply back.
+It's basically 100 tons of,, professional relationship, but please do that.
+Effective cadence., for communication. Meeting cadence.
+my expectation is you are the ones taking lead in setting up meetings.
+They should not be choosing you. You should be the one giving you.
+Once you get that set up a little meeting, I'm assuming you have set up your zoom account on,
+on geography or any other metric that you want to go use,
+that you take the lead in setting it up,, not leave it on the,,, communication channels, emails are best.
+But, I don't want to script in there. If you want to just pick up the phone and call or whatever you want to do that.
+But what we have seen that in a good for LinkedIn for good sometime,,
+if I would articulate just,,, just come to get there,, be proactive., but also very important that be professional respect boundaries.., they're not going to go find the job for you.
+You can ask about help. If you ask something 2 or 3 times and that have not happened.
+Maybe it's time to move on. Very important. We are not paying them.
+They are volunteering for a professional life. But be very professional, mindful of their time, their work environment.
+There could be things they may not be able to talk about now,
+but very important that,, leave a very good impression and be professional.
+I'm prepared. Shop to be meeting on time. Don't don't have the person waiting on your phone for three minutes maybe.
+Good idea to be there one minute earlier.,, listen actively even I would say over and over again, if nothing else, I think you should.,, we have offered them if they are on campus, that we.
+I do want to buy them a coffee. I think that's something that we really want to do that,, and share your success.., we are planning a kickoff after a month or, just as a meeting with all mentors and mentees.
+It's an open dialog of whatever you have learned,, to do for each other.
+I think very formal, but I think,,
+what we want to do is give some momentum and you guys can see other mentor I'd meet other mentors as., we don't expect everybody to show up because during daytime they are working professional.
+But the idea is after the first round of,, things that happen somewhere in mid, mid October will do that.
+And don't please don't cancel the last minute. I show up late to the meetings., don't expect the,, your mentors to solve all your problems tonight,, log in and of course do your homework., that's that's not what the relationship is about. Don't be passive.
+You take ownership and. And,, the discussion doesn't have to be technical in nature., you're completely open to do it. And as I said, we don't want to be very prescriptive about it., you can run the relationship the way you want., if you have a local,, I would strongly advise trying to meet in person., somebody maybe from Durham area because they have a coffee or lunch or dinner together, if possible.
+Or somebody is visiting. Maximize your time.. You., I've,, I tell you, I was at,, 20, 25 years ago was part of a formal program this at my organization at HP., and that really helped me.
+I had somebody who was the head of supply chain,, was assigned to me at a similar one year program, and I still a lot of learning still,, how we would even moderate and also sometimes go to the next steps of,, maybe next few hours, we will have the emails., and you basically can take that email and start setting up your meetings,, confirm your connection by September 15th, or maybe let me change it.. If you are not able to connect for any reason, let me know., other than you are getting 31 emails, I wouldn't forget that if I'm not able to for any reason you're not able to connect with your mentor,
+please let me know and we will have a kickoff meeting. We'll try and mid-semester maybe.
+And., probably February.
+Forget about,, the mental. we have 25 in California.
+Five in North Carolina, two each in Washington and New York, and one each in Texas, Pennsylvania, Indiana and Kansas.,, for the,, as you can see, some of the vendors have more than more than a few of them have too many., and yet I would feel nobody of these. Of you. This is our assignment here., these are our mentors and their current organization. you will see everything from a back to target to some health.,, some at Duke., meta, Google, Amazon, ticktock, Eli Lilly and,, OpenAI and multiple others.. Questions and comments. All good.. Just stress it. This is not about them., find finding you a job.. please,, please don't,, ask your mentor for a job or an internship., if that ends up happening. That's fantastic.
+But that's,, that's not really the main point., it's an opportunity for you all to build your own networking industry to get to know,,, our alumni,, learn more about their company,, job roles., feel free to ask questions about the interview process, what their experience was,
+how they how they applied, how they prepared, what types of questions they,, encountered in the interviewing., that's a great way to engage with the matter to learn more about that., any suggestions they'll have for you in terms of,, job search in your, in terms of searching,,, you can ask them about classes, elective classes, other classes,, anything here at Duke.
+I think all but one of our I think there's one mentor who is not a I am a student., was is a Duke alum., is a good friend. I close connection with us, but,, the rest have been have all been through our program.
+you're rocking to those asking questions. All then, five questions.
+All. Have a good rest. we get everybody. See you Friday. Remind there tend to be there and see the 10 a.m. ready to go.
+Thank you guys. Thank you. Thank.... Maybe they just need to make it.
+That I sound.,, I don't. I don't feel good.
+I was laughing, I know I'm not.
+I hope you might be. it was I ask if I could make with my truck extension for., I know, I know.. It's crazy., there I was, I, I, I, I, I think I've written incognito in academia,,, I haven't done an extension before,
+but I am familiar with college and,, it's,, all that stuff that's happening,, the Alabama stuff that's not inside.
+Yes. Cone.. That's because that's what I would want to the server model.. The VS code is more just reading our file and passing it a lot to write your model.. and I think I should be able to pay for that because all that's doing is creating a file and giving.
+It's not actually doing a little effort inside actually,.,. maybe if it's with an API or something,, maybe,, it could be done very easily for pie charts on a package,.
+if I didn't have anything in my previous,, API that., my Bible.. Oh, my God, I was doing this.,., maybe very.
+I want to go ahead and I think.
+I can, I can send you an email and,.., if you want, I can give you my number on a project now that I.
+Oh, that medicine plus.
+Number or something. You can change your business.. now you can., I can also. Thank you., I. Just I can also I my email.
+that's that's that's. if you on my email for you at least you can recognize.
+Oh.. you can you can at least recognize who I am especially for me.. And then I know I always have airdrop turned on then.... No ice cream.
+Yes. We'd to join you.
+Order. I just joined in yesterday. I just wanted to let that I.
+I know that there's no tomorrow, but..,, if possible, if you can watch. The last time I was with you.
+The different,, I guess, a perfect person,, but I would advise, if possible, before the path begins that.
+Them.,, by the time I've,, I in medicine,,, I got that..., it's,, ideas are generally my free day, talk about stuff that's not or not, but if that works, I think about.
+Just let me know. Yes. Typically, I think the best method you can see that we discussed,, mapping 31 to 24.
+But that's a judgment that I think that. Yes.
+Yes. Yes, yes.
+Just that I should. auditing and not taking those.
+I think also you got limited number of categories of how many are you., I know that time..
+I don't know., I think the 50 of me I don't know anything about,, and,,
+I think a lot of information on this think that I read it all, and I said, this is very important, district.
+And I'm just trying to,, not use of what I've already given.. It's.
+What I don't want is that the student soccer team will look a Nazi, as it respects the dynamics of the class.
+I want them to be part of a class. You don't have to do that.
+But that's one element that will be moderating.
+And then they go off the package, which will open up more just the dynamics of the class and the energy level of math goes down.
+I think you don't want that. And many.
+Things., it would be just, the kick off happened just now,,
+what we're trying to do is get back on the kids and just,, go talk about the program and what they have.
+Not, there's just more of,, in the name of the faith.
+But everybody,,, these people are not out of the country.
+it will be a phone call. And I don't have any questions.
+But, this is more to just,, put people together.
+To. Reasonable.
+I might have happened already this summer, but it's not what I think of.
+And that's something that Adam does add for one of the best.
+Wow. I understand that you guys were going to go with the this.
+think that. You should.. That's cool...
+some of them had volunteered for anyone, and some said they can be useful.
+And. Some of them just. I.
+No. We.
+Are. Here.
+I know..
+
+Goal of Predictive Modeling
+Predict well on unseen data
+Generalization > training performance
+Cannot evaluate on unknown data
+Must simulate “future data”
+Question
+If training accuracy = 99%, does that mean model is good?
+Training & Test Sets
+Training set → build model
+Test set → final evaluation
+Typical split:
+◦	80–90% training
+◦	10–20% testing set = untouched until final
+Question
+What happens if we tune hyperparameters using test set?
+To-Do
+Always split before feature selection
+Fix random_state for reproducibility
+Sampling
+Why Sample?
+Cannot access full population
+Too expensive to process everything
+Sampling happens multiple times
+Types of Sampling
+Nonprobability Sampling
+Convenience
+Snowball
+Judgment
+Quota
+⚠ High risk of bias
+Examples:
+LLM trained on Reddit/Wikipedia
+IMDB sentiment bias
+Self-driving car location bias
+Question
+Does your dataset reflect real-world distribution?
+Random Sampling
+Simple random
+Stratified sampling
+Weighted sampling
+Stratified → preserve class proportions
+Weighted → emphasize certain data (e.g., recent data)
+To-Do
+Use stratify for imbalanced classification
+Data Leakage
+Definition:
+Test information leaks into training
+Consequences:
+Inflated performance
+Over-optimistic results
+Useless model in production
+Common Leakage Sources
+Feature selection before split
+Scaling before split
+Imputing before split
+Duplicate observations
+Future data in training
+Random split in time series
+Question
+Why is random split bad for time series?
+To-Do
+Split first
+Fit preprocessing on training only
+Model Comparison
+Why Not Use Test Set?
+Becomes biased
+Overfits to test set
+Solution:
+Train / Validation / Test split
+Typical:
+60–80% training
+10–20% validation
+10–20% test
+Validation Set Risks
+Small validation set → noisy estimate
+Model selection bias
+Repeated tuning = indirect leakage
+Question
+What happens if validation set too small?
+Cross-Validation
+K-Folds
+Divide into K folds
+Train on K-1
+Validate on 1
+Repeat K times
+Average error
+Benefits:
+More stable performance estimate
+Uses more data
+Other CV Types
+ShuffleSplit
+Leave-One-Out
+Tradeoff:
+More folds → higher compute
+To-Do
+Use 5-fold or 10-fold CV by default
+Bias-Variance Tradeoff
+Bias:
+Model too simple
+Underfitting
+Variance:
+Model too complex
+Overfitting
+Total Error:
+Bias² + Variance + Irreducible error
+Recognizing Overfitting
+Training score ↑
+Validation score ↓
+Divergence
+Question
+Does more features always improve performance?
+ Model Complexity Influenced By
+Algorithm choice
+Number of features
+Hyperparameters
+Amount of data
+More data → tolerate more complexity
+Outcomes vs Outputs
+Outcome:
+Business impact
+$ savings
+Fewer accidents
+Output:
+MSE
+AUROC
+Precision
+Set outcome first
+Question
+Are you optimizing the right thing?
+Baselines
+Metrics meaningless without baseline
+Baselines:
+Zero rule (mean / majority class)
+Heuristic
+Human
+Existing solution
+To-Do
+Always compute baseline first
+Regression Metrics
+MSE:
+Penalizes large errors
+Sensitive to outliers
+MAE:
+More robust
+Easier interpretation
+MAPE:
+Percentage error
+Biased when y small
+R²:
+Variance explained
+In-sample metric
+Adjusted R²:
+Penalizes extra features
+Question
+When is MAE better than MSE?
+Classification Metrics
+Accuracy:
+Misleading with imbalance
+Confusion Matrix:
+TP
+FP
+TN
+FN
+Recall (TPR):
+Of actual positives, how many found?
+Precision:
+Of predicted positives, how many correct?
+FPR:
+Of actual negatives, how many mislabeled?
+Edge Case Thought
+Model predicts all positive:
+Recall = high
+FPR = high
+Precision = low
+ROC Curve
+TPR vs FPR
+Threshold variation
+Default threshold = 0.5
+Higher threshold:
+Lower TPR
+Lower FPR
+Lower threshold:
+Higher TPR
+Higher FPR
+AUROC:
+0.5 = random
+1 = perfect
+Precision-Recall Curve
+Better for imbalanced data
+Ignores TN
+Question
+When should PR curve preferred over ROC?
+Multiclass Evaluation
+Confusion matrix
+classification_report()
+Macro average
+Preparing for Modeling
+Steps:
+Train/test split
+Feature selection
+Feature engineering
+Encoding
+Scaling
+Class imbalance handling
+Feature Selection
+Why:
+Reduce overfitting
+Improve generalization
+Improve interpretability
+Methods:
+Univariate
+SelectKBest
+Random Forest importance
+To-Do
+Remove >50% null features
+Categorical Encoding
+Ordinal:
+Preserve order
+Risk artificial ordering
+One-hot:
+Safer
+Expands dimensions
+Question
+When is ordinal encoding appropriate?
+Scaling
+Needed for:
+KNN
+Clustering
+Regularized regression
+PCA
+MinMax:
+0–1 range
+StandardScaler:
+Mean 0
+Std 1
+Fit scaler on training only
+Class Imbalance
+Model favors majority class
+Fix:
+Collect more minority data
+Undersampling
+Oversampling
+ Accuracy unreliable
+Pipelines
+Why:
+Prevent leakage
+Reproducibility
+Cleaner code
+Pipeline:
+Impute
+Encode
+Scale
+Model
+Fit only on training
+To-Do
+Always use sklearn Pipeline + ColumnTransformer
+Big Reflection Questions
+Did I check for leakage?
+Did I compare against baseline?
+Am I using correct metric for business goal?
+Is my model overfitting?
+Is my data representative?

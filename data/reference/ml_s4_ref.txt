@@ -1,0 +1,13 @@
+Time Series (Week 4)
+
+• Definition: Sequence of observations at successive, equally spaced times; order matters. Not all ordered data is time series (e.g. medical records by date). Common with sensors, hardware, finance.
+
+• Components: Trend (long-term direction); seasonality (repeating cycles—hourly, daily, weekly, yearly). Decomposition: break series into trend + seasonal + residual. Additive: value = trend + seasonal + residual. Multiplicative: value = trend × seasonal × residual. Use additive for roughly constant seasonal amplitude; multiplicative when amplitude grows with level. seasonal_decompose() in statsmodels; choose period and additive/multiplicative. Be cautious: automated decomposition can invent spurious seasonality.
+
+• Why different from regression: Standard regression assumes independent observations. In time series, present is correlated with past; we model that dependence.
+
+• Autocorrelation: Correlation of series with a lagged copy of itself. Measures how much the past predicts the present. Detected by Durbin–Watson or correlation of y_t with y_{t−k}. High autocorrelation at a given lag suggests seasonality at that period.
+
+• Markov process: When current state depends only on the previous state (lag-1 dependence). Described by transition probabilities (transition matrix). Used in many domains (e.g. PageRank, finance, science).
+
+• Autoregression (AR): Use past values as features: y_t = f(y_{t−1}, y_{t−2}, …). Use when there is strong correlation with the past. Other approaches: ARIMA, exponential smoothing.
