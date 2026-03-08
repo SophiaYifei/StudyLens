@@ -5,12 +5,14 @@ for downstream BART summarization.
 """
 
 import warnings
+
+from StudyLens.scripts.naive import process_all_ppts
 warnings.filterwarnings("ignore")
 
 from pathlib import Path
 from transformers import AutoTokenizer
 
-from scripts.make_dataset import load_all_documents
+from scripts.make_dataset import denoise_all_transcripts, load_all_documents
 from scripts.build_features import (
     make_token_counter,
     apply_chunking,
@@ -69,7 +71,10 @@ def main() -> None:
                 or f"{doc['metadata']['chars']:,} chars"
         print(f"  {doc['doc_type']:12s}  {doc['source'][:55]}  ({label})")
     print(f"  {len(documents)} documents loaded.\n")
-
+    # Denoise transcripts
+    denoise_all_transcripts(DATA_DIR)  
+    process_all_ppts(DATA_DIR)  
+    
     # 2. Tokenizer
     print(f"Loading tokenizer: {TOKENIZER_MODEL}")
     tokenizer = AutoTokenizer.from_pretrained(TOKENIZER_MODEL)

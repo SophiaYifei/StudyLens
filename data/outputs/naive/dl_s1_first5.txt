@@ -1,0 +1,23 @@
+‹#›
+Week 1
+Introduction to Neural Networks
+‹#›
+Journey from Neuron to Neural Network
+‹#›
+1943
+‹#›
+A simple linear model that produced a positive or negative output, given a set of inputs and weights:
+f(x,w) = x1w1 + … + xnwn  
+In this original model, weights were set manually.
+The Neuron
+‹#›
+‹#›
+∑
+x1
+x2
+x3
+w1
+w2
+w3
+f(x,w) = x1w1 + x2w2+ x3w3
+f(x,w)

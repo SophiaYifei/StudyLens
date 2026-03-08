@@ -93,3 +93,131 @@ def load_all_documents(data_dir: Path) -> List[Dict]:
         elif ext == ".pptx":
             documents.append(load_pptx(path))
     return documents
+
+
+# Remove noise from transcripts
+import re
+from pathlib import Path
+
+
+def denoise_all_transcripts(directory: Path):
+    """
+    - Finds all .txt files containing 't'
+    - Denoises them
+    - Writes *_cleaned.txt
+    - Prints wordcount before/after
+    """
+
+    # ---------- CONFIG ----------
+    FILLER_WORDS = [
+        "um", "uh", "erm", "like", "you know", "i mean",
+        "sort of", "kind of", "right", "okay", "ok",
+        "alright", "so", "well", "yeah", "yep", "nope"
+    ]
+
+    NOISE_LINE_PATTERNS = [
+        r"^\s*(thanks|thank you).*?$",
+        r"^\s*(welcome|hi|hello).*?$",
+        r"^\s*(can you hear me|audio check).*?$",
+        r"^\s*(let('?s)? get started).*?$",
+        r"^\s*(any questions\??|questions\??)\s*$",
+        r"^\s*(break|short break|quick break).*?$",
+        r"^\s*(welcome back|we('?re)? back).*?$",
+        r"^\s*(wrap( ?)?up|in conclusion).*?$",
+        r"^\s*(bye|goodbye|see you).*?$",
+    ]
+
+    # Remove question lines (often Q&A noise). 
+    DROP_QUESTION_LINES = True
+
+    # Trim these many lines at very start/end if they match noise patterns
+    MAX_TRIM_START_LINES = 50
+    MAX_TRIM_END_LINES = 50
+    # --------------------------------
+
+
+    def wordcount(path: Path) -> int:
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        return len(re.findall(r"\b\w+\b", text))
+
+
+    def clean_text_file(input_path: Path, output_path: Path):
+        raw = input_path.read_text(encoding="utf-8", errors="ignore")
+        lines = raw.splitlines()
+
+        compiled_noise = [re.compile(p, re.IGNORECASE) for p in NOISE_LINE_PATTERNS]
+
+        # ---- Trim start/end ----
+        start, end = 0, len(lines)
+
+        for i in range(min(MAX_TRIM, len(lines))):
+            if any(rx.match(lines[i].strip()) for rx in compiled_noise):
+                start = i + 1
+            else:
+                break
+
+        for i in range(len(lines) - 1, max(-1, len(lines) - MAX_TRIM - 1), -1):
+            if any(rx.match(lines[i].strip()) for rx in compiled_noise):
+                end = i
+            else:
+                break
+
+        lines = lines[start:end]
+
+        # ---- Drop noise lines ----
+        cleaned_lines = []
+        for ln in lines:
+            raw_ln = ln.strip()
+
+            if not raw_ln:
+                continue
+
+            if any(rx.match(raw_ln) for rx in compiled_noise):
+                continue
+
+            if DROP_QUESTION_LINES and ("?" in raw_ln):
+                continue
+
+            cleaned_lines.append(ln)
+
+        text = "\n".join(cleaned_lines)
+
+        # ---- Remove fillers ----
+        for fw in sorted(FILLER_WORDS, key=len, reverse=True):
+            text = re.sub(rf"\b{re.escape(fw)}\b", "", text, flags=re.IGNORECASE)
+
+        # remove repeated words
+        text = re.sub(r"\b(\w+)(\s+\1\b)+", r"\1", text, flags=re.IGNORECASE)
+
+        # clean spacing
+        text = re.sub(r"\s+([,.!?;:])", r"\1", text)
+        text = re.sub(r"[ \t]{2,}", " ", text).strip()
+
+        output_path.write_text(text + "\n", encoding="utf-8")
+
+
+    # ---- Main Processing ----
+    target_files = [
+        f for f in directory.glob("*.txt")
+        if "t" in f.stem.lower() and not f.stem.endswith("_cleaned")
+    ]
+
+    print(f"Found {len(target_files)} matching files.\n")
+
+    for file_path in target_files:
+        output_path = file_path.with_name(file_path.stem + "_cleaned.txt")
+
+        print(f"Denoising: {file_path.name}")
+
+        before = wordcount(file_path)
+        clean_text_file(file_path, output_path)
+        after = wordcount(output_path)
+
+        removed = before - after
+        pct = round((removed / before * 100), 2) if before else 0
+
+        print(f"Before: {before}")
+        print(f"After : {after}")
+        print(f"Removed: {removed} ({pct}%)\n")
+
+

@@ -1,0 +1,58 @@
+CV overview
+
+classification, detection, segmentation, tracking, reconstruction
+
+real-world image pain
+
+lighting, occlusion, pose, backgrounds, perspective
+
+need big labeled datasets, fast inference
+
+traditional CV pipeline
+
+hand-engineered features
+
+color: histograms, moments, dominant colors, coherence vectors
+
+texture: GLCM, LBP, Gabor, Haralick
+
+stats: mean/variance/entropy, wavelets, Zernike
+
+shape: edges (Sobel/Canny), Hu moments, SIFT/SURF, HOG
+
+drawbacks: brittle, loses spatial hierarchy, costly/high-dim
+why CNNs
+locality (receptive fields)
+shared weights → fewer params
+translation invariance
+convolution basics
+1D vs 2D vs 3D conv intuition
+
+kernels/filters → feature maps
+hyperparams: filter size F, stride S, padding P
+“same” conv via P=(F-1)/2
+stride vs pooling tradeoff — what breaks first?
+choose backbone (ResNet/VGG/Inception) by compute + accuracy needs
+
+canonical CNN flow
+
+conv → BN → ReLU → pool (repeat)
+
+flatten → FC → softmax head
+
+architectures
+LeNe (early)
+AlexNet (ImageNet breakthrough)
+VGG (small 3x3 stacks)
+ResNet (skip connections, fix degradation)
+Inception (multi-scale parallel conv + concat)
+transfer learning
+
+feature extraction: freeze backbone, train new head
+fine-tuning: unfreeze some/all, lower LR
+data augmentation
+crop, rotate, brightness/saturation jitter
+apply to train only
+PyTorch transforms / TF ImageDataGenerator
+implementation notes
+ImageFolder structure vs custom Dataset

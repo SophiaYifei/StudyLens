@@ -1,0 +1,1824 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+All the microphones up there in the ceiling, too., it's hard to.
+
+It's hard to hear. if we had a zoom in some of the talking heads, it can actually be tough to hear that system.
+
+Sometimes it doesn't even feel this building has an Hvac system.
+
+That's because all the thermostats are set to,, turn off when it doesn't detect motion., I went in one of those conference rooms. Let me tell you, it was 80 degrees in that one... Same offices.. Please.
+
+I. Did.
+
+My. Son.
+
+At. You.
+
+You. All.
+
+90 or Mr. All.
+
+Good morning everybody. Morning. Out to the bus situation.
+
+Sourcing data., good. I saw that you were building Legos, and,.
+
+Know it was an investment., you're pretty close.
+
+You're close.. Good., we did that exercise, actually, during orientation,, last year for all the new students.,., first order of business today.
+
+All. This is,. This is going to be a first test in this class.
+
+If you can make one., this is a name test.,,, if you look closely, when you get one of these things, you're going to see there's a there's a line in the middle.
+
+ you want to carefully fold it on the line that when it opens it makes a tent.. And then if you,, an optional,, addition here is it looks there's a few little tab things on the top and the bottom.
+
+ you can just pull those off. All., next step, write your name on the tent and it becomes a name tent.
+
+And it's hard for me to remember every single name,, off the bat.
+
+ it's going to probably take me 3 to 4 weeks to get everybody's name,, down.
+
+ that's why we do this.,,, I'm going to pass this around.
+
+Please take it. Please hold on to yours., I don't want to have to buy another pack of these, please don't throw it away.
+
+Please keep your name tent., any you get, you get the benefit of me doing hers.
+
+And,, please keep your name.
+
+Tent., bring it back to class next week., probably bring it to other classes, too.
+
+I will,, check with your the instructors, but I'm going to assume that it will be helpful for them to,, also have you, as I hope these markers.
+
+Mark, those are my son's markers, no guarantees.
+
+Oh, no. And if you go by multiple names,, choose whichever you prefer., and put them on their. It's really happening and I can't ask him.
+
+Name. That's.
+
+There are ways of markers coming around marking the is your pen or marker if you want to wait.
+
+And. I was happy.
+
+All. Looks everybody passed the first test., you'd be surprised how hard those are to figure out if you.
+
+If somebody doesn't show you.., we had trouble with that last year., first class.. Welcome., let's get you an intern. You missed the instructions.. Welcome to air 520.
+
+This is our,, we consider to be our core machine learning class.
+
+And,, we actually split the broader field of machine learning into two core classes.
+
+This is the first one,, and this is focus really on the what you might consider to be classical or more traditional approaches to machine learning., the second one will be API five, the, which is the deep learning class.
+
+And we'll take that in the spring.
+
+And that is entirely focused on,,, deep learning and specifically on application fields of deep learning,
+
+computer vision, natural language processing, recommendation systems., we will spend the majority of our time this semester on the more classical approaches., but we do cover in neural networks as.
+
+ we're going to go through,, all the foundations of neural networks where we'll where we're going to draw the line is,, when we get into the applications of neural networks to specific fields.
+
+ for example, in computer vision or NLP, there are lots of specialized approaches and models to,
+
+to using, different forms of neural networks in that area.
+
+And we're, we're going to stop before we get there. And that's what we're going to pick up in five for the next semester., that gives you the a sense of where the line is between what we're going to do now and what we're going to do in that class.
+
+Raise your hand..,, about two thirds or.., good., that's completely fine.
+
+That's. And that's pretty. Pretty typical.., sometimes folks come in to discuss and wonder,,, they look at the syllabus and see,,, logistic regression or all that work.
+
+I,, I hope that by the end of the class,, you'll be very glad you took the class., that's what we found in the past., I think that even those who have taken maybe multiple machine learning classes in their undergrad will still get a lot of value out of this class., at least that's what we've heard from,, other folks who've taken the class., for folks who are seeing a lot of this for the first time, that's, too, because we're not assuming that you've,, seen any of it before,
+
+but,, you obviously have more of a learning curve with it than,, than the folks who have been through,, some of this before.. This is a. Let's see.
+
+All. a little bit of context for this class. This is a quote from a paper that I'm going to have you read., I read this paper Machine Learning that matters for Wagstaff Jet Propulsion Lab., this is a paper. It's a it's a bit dated now, I don't remember what year this, but it's at least five, five, probably 5 to 10 years old., and,, it was published,, in the this was this was obviously the pre l'homme days and it's published when,, machine learning was getting really big and there were a lot of people coming into the field that,,,
+
+ could pick up a Jupyter notebook or something and use some scikit learn and build a model and then claim that they were a,, machine learning expert., and, and go,, try to get a job and,,, a little bit,, people.
+
+ to treat our today,, and,, the point that this paper makes is that,,
+
+just building a model is actually probably the easiest part of, of the entire process of machine learning., in fact, with things scikit learn, it's literally two, two, maybe three lines of code., very, very easy., but that's just one tiny little piece of,, a building, a machine learning system, because models don't exist in, in isolation.
+
+Nobody builds a model just for the fun of building a model.
+
+We always build models for some specific purpose, and those models then get integrated in some a broader system or a product., and I think it's probably pretty obvious here as you read it,, that,, it's,
+
+it's a really easy thing to do that just go to,,, Kaggle or UCI repository or something that online.
+
+Grab a data set., five lines of code,, in a notebook on your laptop to train a model, run the model,
+
+get,, amazing,, performance out of your model and think this is,, this is super easy., and,, the reality is that,, if you do machine learning, that matters., as the,,, name of the paper implies, it involves a whole lot more than that.
+
+ it's really an end to end process, which starts from the beginning of,, how do I identify a problem,, to try to go solve,, where machine learning may be a good way to solve that problem,
+
+because,, when we get tools machine learning models or LMS, it's you have a hammer in your hand and everything looks a nail.
+
+We have a tendency to think we can solve everything with,, with machine learning.
+
+And you probably even see some of that when you read the news or you look at what companies or are doing today., and that's also not, not correct., there are certain things that are a good fit to solve with machine learning,
+
+and there are other things that really aren't a good fit to solve with machine learning.
+
+ having an appreciation of the difference,, it is,, one of the most important things that we can take out of this class.
+
+These are all the data issues related to machine learning systems.
+
+And, and this is a point of 510 if, if,, Doctor Brant didn't,,, already explain that,, to you that's why we have the 510 class is because of this, this particular part of it., and this is one of the things that we consistently hear from industry is that,, when they go hiring new grads,, into machine learning roles, the grads typically are excellent at,, understanding the algorithms.
+
+They get the mathematical theory, they know how to do the programing,
+
+but then they get thrown into a real world project and they have no
+
+idea they're just lost because they don't understand what to do with the data,
+
+because it never worked with real world,, large scale, messy,, data before.,, and then we can go on and on., these are all the things that,, all the key ingredients that,, need to go into a successful machine learning project., and,, these are the types of things we're going to cover in this class.,, yes, we are going to talk about the algorithms.
+
+We're going to go through the,, some of the underlying,, mathematics behind them., but we're going to take a more holistic view of, of machine learning, which involves all of these different ingredients., with that said, whether we to learn,, I think this is probably a repeat of,,, of what I just said.
+
+Modeling process and algorithms., we're gonna put a lot of emphasis on the process of machine learning., and we're going to do that generally first in this semester, and then we're going to switch over and we're going to go through the algorithms., you have a good understanding of the algorithms., this is a, a I'd say more theory heavy class than most, if not all other classes you're going to take.
+
+But I don't consider it really a theory class., we're going to talk about theory because it's important to understand how things work.,, for multiple reasons.
+
+One, there's a very good chance somebody is going to ask you in an interview to explain,, tell me how a,, logistic regression model works.,,, on the job, you're probably never going to have to explain that to somebody.
+
+What it's actually doing,, behind the scenes. And we're going to try to get you to at least to that level.
+
+ we're not going to go through every probably every nitty gritty detail of the math, although you're welcome to,, if you want to, but,, we're going to go through at least you have a good understanding of how things are working when we apply a different algorithm., we'll talk about the strengths, the limitations of each of the algorithms, when you should use them, when you shouldn't use., we'll talk about how to work with them.,, one of the for those who have taken classes before, in particular,
+
+every algorithm comes with a set of what we call hyperparameters, which are,,,
+
+the best way I could describe them is,, knobs that you can turn dials,
+
+you can turn,, to make things fit a little bit better or fit a little bit worse., and we need to, in order to be able to use those dials.
+
+ when we turn one or the other, what is that actually doing.
+
+ we know which way to turn it and how much to turn., and then finally we're going to talk about applying machine learning to real world,, data.
+
+And in particular, in this class we're going to be working with structured data primarily.
+
+ five four is almost entirely unstructured data.
+
+ this class is going to be primarily structured data., everybody understand structured data is tabular data.
+
+Data., what you might be able to put into a Microsoft Excel,.
+
+Rows and rows and columns etc. And there's a lot.
+
+And what we talk about, there's a lot of different types of unstructured data in ways that create that.
+
+All. Let me pause for any questions before we get into the details of the syllabus.
+
+Questions of our. Don't be shy with questions.
+
+Remember what they said during orientation. Questions are good. Thank.
+
+All. let's take a look at what we're going to do. This.
+
+The service is up on canvas if you haven't. See it yet.. Let me introduce this show a little bit here., this is probably my fifth or maybe sixth time teaching this class., every time I've taught the class, we've changed it a little bit., this time, however, we're we're actually changing it quite a bit., I,, have decided to,, treat you all as guinea pigs for a new approach to,, to teaching this class.., we ask that the class,, gets really good reviews and a lot of positive feedback from students.
+
+ I was a little bit hesitant to,, make changes to it.., but I felt I had to.
+
+And I'll explain why in just a second. historically, the way I've run this class is that,, you'll show up, we'll do a lecture session,
+
+which usually involves me,, talking for 2.5 hours with some questions and maybe some discussion., and then we'll have some homework assignments, which are,, Jupyter notebook based.
+
+And there are a combination of coding and,, conceptual or theory questions., your submit those will grade those., and then we had a,, midterm and we had a final which we're take home., and I gave you up is open book open internet., no, I,, and I gave you up to eight hours to do that, and then you'd submit,, and we grade those., and that's really what we did. it's a very traditional model of,, of teaching at class.
+
+And then I decided that,, that's probably a little bit too structure that I want to give you more opportunity to,,,
+
+to get your own hands on, less structured experience than what, the,, what the homework assignments and the test did.
+
+ we added an open ended project to it., and we said,,, pick a choose whatever topic you want,
+
+figure out your data,, build a machine learning model to do something interesting., evaluate the results, interpret it, and come and show up and present what you what you did.
+
+And that was a nice opportunity to build a good project., but,, I decided this summer,, to change up that model., and there's a few, a few reasons I did that, and I see,, and this is a good,
+
+good point, maybe for your input and discussion if anybody has thoughts on this., one of the things I did this summer was I am on a faculty,, task force that's looking at,, how we need to reshape the,, the undergraduate educational experience and in particular the undergraduate computing education here at Duke.
+
+I'm sure you can. Yes, yes. Go ahead. Because I.
+
+Yes. Because I explain more. Because,, I can use LMS to code.,. He's using markers as markers.
+
+You can very much more competitive than it already has.., as in for the youngsters, when you get into entry level jobs, a lot of them are getting eliminated.
+
+Yes. That's the moral of the story. I'm going to do a poor job recreating the main point of the paper here on the board.
+
+I wish I had, I should have alongside. All, if this is,.
+
+This is time..
+
+And here's,. This is,.
+
+Ever in 2022. And this is,., demand. For software engineers.. what they did is they,, took,, I think that's head count, but the same thing.. They took.
+
+They analyzed all the hiring for the last several years, and they organized it based on,, age bracket of the people into the software., and then they saw for, let's say this is the I'm going to this is not going to be,,,, not going to be exact., but it's. My curve goes something this.
+
+ if this was, let's say the,,, let's make this up for a plus.
+
+And. And then this was the,.
+
+35..
+
+The complete opposite., this is the first time I think anybody has seen any actual data on,, on this,, topic., I think we all probably could have suspected this by guessing what happened., but,, this is a big deal now because,, it's the first time to modify the issue., why is this the most likely cause,, is,..., there could be other causes. And we have to be a little bit careful on what to attribute that to.
+
+Obviously there's macroeconomic factors,, etc., but I think there's probably no question that I plays obviously a really important role in that., what does that mean for,, this course I do could teach you all maybe you a little bit less,
+
+but,, in particular, the undergrads,, teach you how to program.
+
+It means that if we keep doing what we've been doing, preparing you for those jobs,, there might be a lot less of those jobs very soon.
+
+And, in fact, there probably are. They are a lot less of those jobs.
+
+Why are you going to pay all this money and take four years of your life in the case of an undergrad,, to come here,, if we're giving you skills aren't really,, valuable to employers.
+
+ off the back button. Thank you., and that's what this task force that I was on this summer was looking at., and we,, have done we did a lot of interviewing of all sorts of different faculty members and administrators., and actually tonight we're talking a whole bunch of our program alumni to get their input as on this topic.,, but the results have been really interesting.
+
+I think the honest conclusion is,, to the question I posed earlier is,, nobody is really totally sure., because this is a very new way of thinking,, historically, education, if you think back to your undergrad.. It was probably focused around trying to give you,, some set of knowledge.. And whatever, whatever you have to study in your undergrad, there's some,
+
+some domain expertise that you need to obtain to,, be proficient in that field and get a job.
+
+And,, I think that it's not that's all untrue.
+
+I think that's still just as important., but then there's a whole other set of skills and in our case, things,, programing skills..
+
+Which again,, is one of those things that,, you need to have, I don't think I means that you can get away with not knowing how that program,
+
+Which means that,, you have to have it to play the game, but it's not going to help you.
+
+It's not going to help you win the game.. You need something else to win the game.
+
+That there are other skills which you which you might consider, the soft skills which are becoming much more important now., if it's not, if being an expert in Python is no longer your ticket to success in your career,, then what is, and it's probably all those other skills that we generate.
+
+Don't spend a whole lot of time and education working on.
+
+ things,, collaboration, your ability, how can you work with others and work with a team and organize yourselves and,,, you manage your manage your own work,, treat each other with respect, etcetera.,, problem solving.
+
+Not the, structured, highly structured problem sets that you might have gotten in your undergrad.,,, critical thinking.. Obviously now we can use AI for the,, the execution part of work that we do.. the ability to think critically about,,, about things,,
+
+these are the types of skills that we think are,, important,, more important than ever going forward., and as I thought about this, some all of this summer,
+
+I decided to try to restructure my class a bit to put less emphasis on some of the skills that we feel are,, maybe less important now and more emphasis on the skills that I just mentioned.., and we're gonna we're gonna try a few things.
+
+I'm not sure that I have some ideas that I think are good ideas.
+
+And you can tell me whether you find them effective or not, but,, we're going to try,, there's a few reasons. One., I'm not necessarily convinced that doing 2.5 hour lectures every week is the best use of your time or my time.
+
+And when you don't understand something, you could just ask it for follow ups or,, make it simpler or,, go deeper on this or whatever else.
+
+I think it's a highly effective approach to learning, actually.
+
+And it's,, to be really honest, it's the way that I learn to do things now is,, back and forth with I that going deep,
+
+as we say, down the rabbit hole, really deeper and deeper and deeper and deeper into something specific., I think that's a very effective approach, and I'm not sure that I could do any better.
+
+And to be honest,, standing up here and trying to talk to you in particular because you're all at different levels.
+
+And for some of you, you're going to sit here for 2.5 hours and you're going to be bored because you've seen this all five times already.
+
+And for others of you, you're going to sit here and you're going to leave and you're going to be, I went way over my head.
+
+I didn't get that. I got to go study that.,, there's 20, 20 something of you.
+
+I don't know how many exactly 24 of you., and you're always a different starting point, I'm never going to get it exactly for any of you individually.,, that doesn't mean I'm not going to lecture., I still am., but I'm going to try to mix it up a little bit more.. what I'm thinking is,, we'll do a few some sessions as lectures, and then we'll probably do some other sections where I will,, pre-record the lectures and I'll give them to you ahead of time and ask you to go through them.
+
+And,, you can decide if you want to go through them.
+
+I'd to speed because you've seen it, and you could just breeze through,
+
+or you need to go through it,, and replay it four times because it didn't really make any sense.
+
+ then it's totally up to you and you can spend as much or a little time as you want.,,, I think every week, depending on what we're covering each week, I don't want to.
+
+For. We go with one or the other model, because I think there's a good, good case for both, depending on what we're doing., but we're sometimes we'll do a more lecture style.
+
+And here other times I'll give it to you ahead of time, have you watch it. And then we're going to do some other types of things in here.
+
+We'll do some discussion., we'll do questions., we'll do some hands on working stuff in here. that's one change., secondly,, one of the other things I've grown concerned about is that,.
+
+They're sitting here and they were listening to me talk, and we're looking at the slides.
+
+And then but they weren't really absorbing.
+
+They were maybe thinking about something else or thinking about a project they've got to do tomorrow or something else and not really,, not that half paying attention. And, and,, and they actually could get by doing that.
+
+ even if you, didn't show up at all to class within eight hours,
+
+you could probably go figure out your way around everything and after,, reasonably solve the problems, especially having access to the internet and submit something., and you had an open ended project, which again,
+
+you could probably just have I do for you and get a decent grade,, get at least a B on it.,, in theory, you could probably survive this class without even,, showing up to class,, and just figuring it out.
+
+And obviously that's not that's not the model that we want., I want to make sure that you're really understanding this stuff, not just being there in body, but not in spirit.
+
+And then,,, just showing up on the test day and getting enough to pass the class.
+
+ a second thing we're going to try,, this semester is actually going back to something I did, I think two years ago., three years ago, early 2023, after ChatGPT came out, which is that,,
+
+I built a little system that,, this was taken out in November,, starting in January.
+
+That semester, I used a little system with my students where I had a chatbot,, that I would require you to interact with once a week.
+
+And rather than the typical chatbot out of you asking it questions, it would ask you questions., and you would have to respond to its questions,,
+
+and it would then evaluate your responses on its questions, and I would give you some feedback., not a great,, you got you got eight out of ten on this one here.
+
+You got three out of ten on this one. But, constructive feedback on whether you got it all perfectly and very clear explanation or,,
+
+you stated something that was factually incorrect or you,, got most of it,
+
+but you missed the really important point in your explanation of something., and this way, you're getting real time feedback on how you're doing.
+
+And the idea of this was that,, I actually think oral quizzes are really effective., I think it's actually probably the most effective strategy to know whether you're actually learning something or not.
+
+If I were to take each one of you,, next week, one on one, and just go ask you 5 or 6 questions about what we covered this week,
+
+I would pretty quickly find out who was getting it and who wasn't getting it, but that's not really scalable.
+
+I don't have the time to be able to do that with each of you every week., instead I'm going to have my chat bot do that with you.,, because that's infinitely scalable., and that's what we're going to do. every, every week I need to,, every week, I think starting next week at the beginning of class,
+
+we're going to have a little session with our class chat bot., and,, I'll have to come up with a good name for him or her,, or it,,
+
+and you'll go through the session and it'll ask you some questions and what we learned the previous week or what you saw on the videos.
+
+Maybe,, if we're doing a video week and,, your respond to them and it will then evaluate to give you some feedback,
+
+it will also log everything that I can see how you're doing it., why is that important. Less for grading., but more that I can sense if everybody in the class, for example, is getting a particular question wrong.
+
+And it's probably a good sign that I didn't teach it very., or maybe a particular person is just struggling on a lot of questions.
+
+Maybe that's a good sign that I needed to spend some time with that person to talk through what the what the what the concerns are., it gives me a lot of useful insight., it's also great preparation for interviews.
+
+ these are the kinds of questions you could probably expect when you go and do your interviews.,, and I think that having gone through this, hopefully you'll be really -prepared for,, for sure.
+
+I was hoping to do it. Originally, my plan was to try to actually simulate an oral quiz and do this verbally where you were.
+
+It was verbally asking you a question. You were verbally responding immediately., I'm not sure we're going to do that for a couple of reasons.
+
+One, just some of the technical challenges my students in my create lab are still trying to figure out that, but to,, having 20.., and we can always spread you out much in here.
+
+ I think we're going to do it text based,,, instead.,, I'll give you a bit more about that, but I'm hoping that's going to start next week and that will give us a good,.
+
+ that your indicator of whether you're really learning the stuff or whether you're you're not and
+
+you're just going through the motions of things and not that really learning things.. Along with that.., I used to,..
+
+We have four homeworks in this class. As I mentioned Jupyter notebook., mix of coding and conceptual questions.
+
+And, decided to change our policy a little bit on the homeworks as.,, the first I'll explain the motivation and I'll explain the change., the motivation for changing that is that some of the things I ask you to do,
+
+I don't think are really all that important anymore,, if you,., some of the questions might ask you to,,, given some dataset,, use a,,
+
+logistic regression model with cross-validation and evaluate the precision and recall of the optimal model that you find.., that's pretty you could just give that to ChatGPT and it could do it for you, and then you could just put it on the paper., it's not that hard,, to do.
+
+And honestly, the,, what that's evaluating your ability to write 5 or 6 lines of code using scikit learn is really not very important., anymore, to be honest., you need to know how to do it.
+
+But again, it's one of those things that's table stakes. It's not enough., I trust that you'll figure out how to do that. And if you don't, you're just going to have to get some help., some of the things in the homework are really, I think, maybe not as important to assess anymore., but some of them are., there are other cases where,, I'll ask you to write up into your algorithm from scratch in Python.
+
+And the reason why I have you do that is not, not,, not only the practice, your coding skills, that's a little piece of it,
+
+but more, more because if you can write something yourself in code, that means you really understand how it works., and if you can't do that, that means you probably don't really understand how it works.,., because of a couple reasons.
+
+One, because,, even though our official policy on the homework is no,
+
+no AI coding assistance allowed,, I'm also,,, realistic.
+
+And I realize that it's it's very tempting to just go over the ChatGPT and just ask kind
+
+of an equivalent question and get an answer and translate that to the homework., I think it's just too tempting., to some, some of the things that I'll ask you to do in the homework.
+
+I don't think are really that necessarily that important for you to do without any.
+
+I think it's maybe,,.,, to use help., and three,, the way we had you submit the homework and grade the homework was,
+
+And, again, coming back to what we said in orientation last week, that's that's not what I want to focus on.
+
+I want to focus on the learning,, not the grading portion of it.
+
+ I've decided to try a very different approach to the homework., this year, which is we're going to keep the same assignments., you're going to submit,,, but we are not going to grade them away when you submit.
+
+ when you submit the assignments,, you,,, we're then going to give you the answer key,, to each assignment,
+
+and you're going to have one extra week to compare what you did against the answer key and identify if you did anything wrong,, in your assignments. And then you're going to resubmit the same assignment,
+
+and you're going to correct anything that you did wrong and explain where your mistake was and how you've corrected.. And then we're going to grade it after that.
+
+ you're going to you're going to do your work. You're going to compare your you're going to self grade your work against the answer key.
+
+And then you're going to resubmit having the benefit of looking at the answer key.
+
+And then we're going to grade,, after that. And we're just going to grade it on a per question basis.. And having the answer key, I'm hoping that everybody's going to have 100., unless you're lazy, you should all have 100 on these things.., but there's one caveat to that, which is,,, that you have to still put in the work on the first pass,
+
+ you can't just,, submit a blank,, sheet because,, you're going to get the answer key.
+
+And I'm just going to wait until I get the answers, and then I'm going to fix everything.
+
+Or,, this question is too hard. I'm just going to, skip this one.
+
+And then once I get the answers, I'll come back and I'll do it.,, if you don't answer something in the first pass, no matter what you do in the second pass, it's going to be marked wrong.
+
+even if you answer ten out of the ten in the second pass, you're still going to get the two marks wrong that you didn't answer the first time.
+
+That is a little bit confusing. that makes sense to everybody how that how this policy is going to work.. All. Any questions about the policy.
+
+All. that's how that's how we're going to do our homework and try to try something new., and I think that actually the end result is going to be that you're going to actually learn that better than the way., we,, I introduced the AI policy now and then.
+
+It's on the syllabus as., our policy on AI.,. You are welcome to use things ChatGPT or whatever you prefer,, as a thinking partner to help you with,, understanding things, explaining things to you, brainstorming approaches to things., but you cannot use AI for the execution of your homework.
+
+ you can't just,, copy and paste your homework question in and say,,
+
+answer this for me and then take the code it writes and then paste it in your homework.., anything you put in your homework has to be your own work.
+
+And that applies both to code and to writing., no,, no cursor, no copilot, no GPT for actually generating what gets submitted in your homework.
+
+You're welcome to use it to good. Good uses of AI for your homework.,, I didn't really get cross validation in class, and I have to do my homework.
+
+Or,, I forgot to remind me. What's the syntax for how that how to slice a data frame in,, using pandas, I can't remember.
+
+Great., now we take that and we use that for. you're welcome to use it for help with understanding things for help with syntax,, etc., but you can't use it for just generating the answers.
+
+It's just to, to easy to do that... the request.. I think we've covered the homework policy.
+
+ for homework to see the due dates in the syllabus you submit each one.,, you'll then have a week to,,, to resubmit,, lay policy on the homework., I think we went to say I used to not accept actually any late work was an immediate zero., I think because of our new policy,, what I'm going to do., actually, I think we'll probably keep the same. We'll keep the same.
+
+It's just the easiest way to do it.,. No, no labor zero for late work.,, I think that's just a very clear line.
+
+Otherwise it gets hazy of., I submitted it,, five minutes late, or I submitted an hour later.
+
+A day later,, whatever.,,, zero for late work., very simple., that applies to both the set first pass and second pass of your submission.. you got to submit both by the deadline., deadline for homework is going to be start of class and whatever week it's due.
+
+ if, there's no homework through next week.
+
+But if there were a homework assignment due in week two, it would be due at 8:30 a.m. on,, Wednesday of next week.. at the start of class.,.
+
+Questions on the homeworks, homework, new homework policy.., for example, if we got a sign of a homework this week, then we would submit it by 830 next week.
+
+And then we would have to resubmit it with the answers by three next week.
+
+And then we'd also resubmit the second homework.
+
+That's the not correct answer. submitting two things each week.
+
+Exactly.. here's the here's the syllabus. your first homework assignments can be due in two weeks.
+
+Week three.. 8:30 a.m. week three., this will be your first submission deadline,.
+
+ you're expected to submit something.,, there.
+
+Then your second deadline will be the week after.. will are then after you submit your first one, I'll release the answer key.
+
+You'll have that you'll have an extra week and then you'll resubmit your, your,, your second assignment.
+
+That. I sense. Yes. We have a break then between two.
+
+Yes.,. it's not a media thing. you've got a, you got an extra week to do your review and your resubmission.. And I think same pattern applies.. assignment two is do assignment to review three.. All, that was,.
+
+Homework., there's a couple other pieces of,.
+
+What we're going to do in this class.. Let's just go to the what I call the quizzes next because I want to use the word exam.
+
+Give me stress., we're going to have a midterm quiz and a final quiz., these are going to be done in class. I used again, I used to do these out of class.
+
+I an in our time limit. I've decided that it's just too easy to just figure out your way.
+
+If you're given eight hours, even if you know nothing, you can more or less figure it out within eight hours., to, to evaluate better or better evaluate whether you really know what you're doing., we're going to do it in class, and we're going to obviously have the time limit of the duration of the class.
+
+ that's going to force you to be really,, on top of things.
+
+You have to know it coming in.... These are going to be very much the homeworks. They're going to be. Jupyter notebooks are going to be a combination of theory and coding., I don't make these tricky.
+
+I don't try to make the, ask you trick questions or give you anything super hard or anything you haven't seen before.
+
+There should be really nothing new on the on the midterm or the final.
+
+It's all if you've done the homeworks, if you've listened,, paid attention to the lectures,
+
+if you've learned everything, you should have no problem with the midterm and the final quizzes., they should be fairly simple., same, same rules apply., on the,, the midterm in the final.
+
+ no, no, I you can't you can't use AI to generate your answers, obviously., it's a homework midterm quiz. Final quiz.. Let's go next. Let's go to the Kaggle competition.
+
+Something for class. I was for class. Class.
+
+Actually, they want to be one of the. It was a volunteer.
+
+ a made up data set type thing. Cool, good..,.,,, I assume most folks then, since you haven't done one, probably aren't sure what a Kaggle competition.
+
+There is.., Kaggle is a website.
+
+And companies or organizations, nonprofits can post up machine learning challenges on the Kaggle website.
+
+And they'll they'll pose a problem statement and they'll, they'll upload a bunch of data that you can use.
+
+And then your job is to try to build, given the data, to build some a model.. And then they always have a,, they always have a performance metric, which you'll then use to evaluate the quality of your model.., and they keep a, what we call a test set.
+
+ they keep hidden set up data, which,, they use to score your model.
+
+ after you submit your model, they'll run a test set of data and a hidden set through,, your model,
+
+and they'll look at what your predictions were from your model, and then they'll do an automated scoring of that., and then the cool thing about it is that depending on how you score, you'll be placed on a leaderboard.
+
+ there's a public,, table which shows you all the top performers and you can see how you're performing relative to all the,
+
+all the highest performing models out there. And then if you're not doing, you can resubmit.
+
+ you can keep building new models and trying again and see if you can get higher on the leaderboard.
+
+And then for the public ones, a lot of times they'll have prizes actual cash prizes,, for the highest performing models,, on the leaderboard.
+
+ it can be a good way to actually earn a little bit of money as, but they're usually very, very competitive., it tends to be really hard to get,, to get really high up in the, in the rankings., we're going to do our own. Our own one of these., sorry. We're going to run it through the Kaggle platform, but it's going to be a competition.
+
+It's limited just to our class. nobody it's not public.
+
+Nobody else can participate in it., I will talk about the problem statement, the data we're going to use later on in the semester when we get there.
+
+But,, you're going to be doing the same thing. you're going to be given a problem statement.
+
+You're going to be given a whole bunch of data., it's going to be,, a little bit,, maybe messier than what you may have seen in other Kaggle competitions before,
+
+And how should I combine all this data together. And then you'll have to go build a model and then you'll,, submit your,,,, submit,, your predictions from your model, and then we'll do some scoring of your,, of your predictions., and then we'll show you how your,, you're doing on the leaderboard., that's the Kaggle competition. Oh,, how give a full explanation when we get there on the details of how everything works., this is a lot of fun. We found this is tends to be the highlight of this course for a lot of people.,, they liked the idea of competing against their classmates.,, this will be an individual exercise, everybody's doing it on their own.
+
+And,, the leaderboard will be public, you'll be able to see how you're doing at any point in time relative to your classmates., your grading will be based on your performance,, how your model does in predicting the test set,
+
+but you're actually not in competition for grades, it's not we're assigning,
+
+ the top five, getting a the next five going to be or whatever.
+
+There will be different thresholds of performance you have to hit. And depending on what threshold you hit you get that grade.
+
+ if you hit the highest,, threshold for performance, you get an A.
+
+If you,, hit the next one, you get an A minus and then a B plus and on, going down.
+
+ we've run this now several years., this is probably our fourth year maybe running it., I have a pretty good idea of what performance to expect.,, and,, we set the thresholds accordingly., everybody in theory, everybody could get an A-plus on this or everybody together., see on this., depending on how the,. How the models go.
+
+Usually it's. It's pretty good. It's rare that we have,., and,, we throw in a couple of fun things.
+
+The top three performers will get some extra bonus points, they'll give you a little incentive for,, shooting for the top of the leaderboard,
+
+even if you already have your a trying to stay above your,, your classmates,, our,, all time record holder in this is actually currently at OpenAI., and I know what the score is. And we'll see if we can,, we have yet to be he was in the very first cohort of this program.
+
+We have yet to beat this score on,, on this. Actually, I think we're very close last year., but,, I know what that is, I'll tell you when the time comes and see if see if it gets being this year., that exercise is,, is going to be worth a portion of your grade.
+
+And then we've got to,, team projects,, in this class.
+
+And this is a new thing to,, and what we're going to do,
+
+we're going to do one project on it's going to be a regression project, and one is going to be a classification project.
+
+I am going to,, give you a topic., which is going to be a specific thing I want you to do., I'm, I'm may or may not give you some data to start with., or I may ask you that to go figure it out., I haven't decided yet., these are going to be real world,,, tasks.
+
+ I think I haven't finalized the details yet. I think our first one on,,, regression is going to be a weather prediction,, project.
+
+ I think I mentioned my background is in weather prediction., I think it's a really fascinating,, field.. Machine learning models are not the predominant way to do prediction, but you can use them for prediction., I think we're going to attempt to do that. And,, I let you figure out,, to tell you something,,
+
+your job is to predict the daily high temperature for each day within this two week period or something that., and you can go think through all that., the second one, I think,, we're going to do on classification, I think I'm going to have you do a,, clinical trial outcome prediction,,
+
+where you are going to attempt to predict the results from,,, clinical trials that are run on different,, drugs or therapeutics,, which is also a difficult task, although,, achievable., and you're going to have to go figure out how to,
+
+how to set all that up and the data to use and that thing and build up the model..,.
+
+ they should be hopefully pretty interesting projects., our AI policy on these, you are welcome to use AI on these.,, use as much as you want. You can use cursor or whatever you to help with these.
+
+That's that's fine., when we run the projects,
+
+the way I approach grading the projects is I care more about your thought process
+
+in working through the project than I care about what your actual final result is.
+
+ I don't really necessarily care how your model ultimately is performing.
+
+There will probably be some portion of your grade based on the other, maybe some bonus points or something, but it's not your grade., all I need to do is build an amazing model and then I get my advice., you can you can have an amazing model and still get an F on this., if you don't do a good job explaining your process of,, of building that model.. The way I think through a very simple level, if you're going to do any software task and particularly a machine learning task,
+
+you can probably break that down into three phases. One would be,, the planning phase of what I'm going to do.
+
+ if I ask you to build, build this,, prediction model to predict daily high temperatures,
+
+Because it's messy or it's got outliers., how what how when they create a set of features out of this data., all of that is done is the planning phase of things.. And then there's the execution phase, which is,, now I've got my plan.
+
+I know exactly what I'm going to do. I just need to go and just knock out the code to do this.. And that's where I think I can really be helpful to speed you up.
+
+You don't have to use it. But if you want to, you're welcome to for the execution part., and then there's the evaluation part of it and interpretation, which is,, I came up with my plan.
+
+I built my model. Maybe I use I the help, maybe I didn't.
+
+Now, let me evaluate what happened. I need to run my model. I need to look and see how is it performing.
+
+And that's that's again a situation where I really can't help you very much in that's a really,, human activity that you need to do.
+
+ if you think about a planning, execution and evaluation stage, you should plan to do the planning and the execution yourselves.
+
+Maybe, maybe there's an opportunity to use a little bit of help in some way, but it's primarily you driving those things.
+
+And then the execution is could be mixed, could be you doing some could be AI helping you with whatever however you decide to do that.
+
+Question. Answer., two quick questions with regards to,, I guess on that page, say about the class repo with all the requirements., I confirm that's been,, it's been updated if you want, a local copy or will it be,, there's a this one there.,., thanks., thanks for mentioning.
+
+I do want to mention it., I will I have not,, updated the,, I forgot the signature was.
+
+I have not updated the GitHub repo with the latest versions of packages,,, I'll try to do that by tomorrow,
+
+and I'll send an announcement out on canvas once I do it, you can pull the latest one., the current one is a year old.
+
+ it's possible that things scikit learn, they tend to they tend to make breaking changes when they do updates.
+
+ it's entirely possible if you're using the latest version of something scikit learn.
+
+Then you try to run the code that's in the repo. There might be some issue or it might be fine, but either way, you're welcome to look at it now.
+
+But maybe wait till I send the note out to get the latest version of it., likewise, the,, there's a requirements file in there., I'll update that as, and I'll check to make sure all the assignments,, work using that., I'd you to try to use,, creating a virtual environment for yourself,
+
+using the requirements file in the repo and use that for building your assignments.
+
+Otherwise, you may run into a situation where you're using,,, an old.
+
+And we've had this in this class and it's just really,, a pain that it's trying to figure out.
+
+But you're using an older version of scikit learn.
+
+And when you're using a load,, function to load data, it's actually loading a different subset of data from the newer version.
+
+And when you run your model, you get a different answer than, than if you were using the newer version., and then you look at the answer key and say, my answer doesn't match this., and then there's all this confusion, and then it takes time from you and from us to figure that out.
+
+ the easiest thing to do is just make sure you're using the consistent versions of things.
+
+ everything should run., yes or good questions also.
+
+No, no. That one. That's one answer. The two of them..
+
+On the projects and the Kaggle competition. You can use whatever models you want.,, if you decide,,, you really for a weather prediction,
+
+it might be wise, you go to use a,, a sequence model or something., you're welcome to do that.,,,, all auto encoder model or SDF or something, even things we don't, we're not going to cover in this class if you want to.
+
+ just get practice in using other algorithms. You're welcome to do that.
+
+You can use convolution neural networks for sequence modeling whatever you want.
+
+ you can play around if there's other things you want to do., you're not you're not limited to just what we,, what we cover in class.
+
+Likewise, if you,, want to use,, packages that,, we don't talk about in class,
+
+ there are some for, for example, automated,, hyperparameter optimization.
+
+You can use those things as. note the limits of.
+
+On those things., for the,, for the projects and the,.
+
+All. Let's see. we talked about Kaggle. We talked about the team projects the midterm, the final, the homework, the knowledge check ins.
+
+ this is the weekly,,,, quizzes,, that we're going to do and then attendance.,, attendance policy. I'm,.
+
+We,. I realize this class is early., 830, as some of you may be used to,, sleeping a little bit later than that.,, but that being said, you are students in our campus program.
+
+The expectation is that you are physically here,, in class,, every week,, we will we're going to take attendance.
+
+I have yet to decide if we're just going to use the knowledge check ins at the beginning of class to count our attendance,
+
+or we're going to do something separate. But one way or other, starting next week, there will be,,
+
+a mechanism for tracking that you're actually here where you'll somehow do something that indicate your sign and signs you in,
+
+or in the case that you're here.,. That will be available for probably the first ten minutes of class.
+
+After that, it's gone. if you're short 15 minutes late to class or it's an absence,,
+
+you'll have to excuse two absences, which is,, what, during the semester.,, you can I realize that sometimes people get sick, sometimes you might be traveling, or you might have a something else., you can you could miss two times without any penalty., attendance counts for 5% of your grade. think of it as,, five points out of the 100 points possible in the class., if you have a third absence, you're, you're you're five points.
+
+Now it drops down to two points., if you have more than three absences, it goes down to zero.,, you'll you'll be deducted five points from your,.
+
+ if you were on track for a and you missed four classes, you're now down to an eight.
+
+This.., that's the,, that's the attendance policy.,,. Quizzes will be,, open notes.
+
+ you can use your,,, you can use,, the class repo.
+
+You could use your,, your homework assignments, things that to refer to you.. If something happens, it can't be in person., if you are,, missing class., generally speaking, as I mentioned, everybody gets two free absences,,, you don't need to let me know., you can just not show up. It's fine.
+
+You're welcome to let me know, but you do not have to,, it doesn't affect you one way or the other if you let me know or not.,, if you are,, missing more than two,, the only excuse is,, permitted medical or varsity sports absence., and if that's the case, there's a policy for submitting,, a doctor's note in the case of an illness or submitting a formal email.
+
+If it's if there's anybody in varsity sports here. I think we have athletes., that one doesn't apply.,, the only,, excuse absence would be,, with a doctor's note if it's more than your two absences.
+
+ all of us are going to order laptops and Jupyter notes anywhere.
+
+I don't know., whatever you want.
+
+However you want to organize yourself.. the quiz, the midterm final, you can use your homeworks, you can use the class repo.
+
+You can use your notes as a lecture slides. However web reform actually in physical notebooks are great.
+
+That's a good question...
+
+Let me think about that. Oh. I'll communicate. I used to allow that., but I,, let me think about that., that opens up,, possibilities, which I might not want.. let me think about that., I'll give you a link before we start.
+
+Before we get to the week before we do our midterm,, we'll walk through the logistics of it.
+
+Most likely not., the one exception I could see is searching docs for,, pandas or scikit learn.
+
+If you need to,, look at syntax or something., what I might do is,.
+
+I know and there in the other than docs policy or something that., otherwise I don't I don't know whether these questions are out there on StackOverflow or not.
+
+ if I allow you just open searching and it's possible that the exact questions, even field might be around there somewhere.
+
+Other questions. All.
+
+This all makes sense to you. What do you think about this new homework policy that the projections saw as it seemed reasonable and,, their ideas or suggestions over the. Or you want to go back to the old way of doing things.., I have a question about the lectures that you'll have in your class... Oh., thanks., I will I did not this week, but I will., sorry. Next week to try to publish the,, the slides available beforehand., most likely it will be the night before, if not even,, the morning., but if you don't see the slides, they're in canvas.
+
+By the start of the class. Somebody just let me know., and I'll go in quick and put them up there., I know some of those people to take notes on the slides themselves.
+
+That's fine.. And they'll be in canvas., just in canvas,, I think in the files,, tab or something that.
+
+Other questions. For the project.
+
+How much time do we have to finish and what is the.. Think what we're going to do is,.
+
+Split you in the groups and generally four. Depending on the numbers, it's possible we may have 1 or 2 groups of three., I'm going to randomly assign those groups.
+
+You're going to have different groups for the first project and the second project., just I want to force you to get to make some new friends and learn how to work with,, some other folks., I will I will assign those before the, the project.
+
+You have a good amount of time. the first project will be the week seven., we'll probably roll that out next week you can get started if you want to on that.
+
+And then second project is actually do technically after the end of, class wraps up.
+
+ there is no,, there's no official final exam for this class.
+
+Thank you. If you've looked at the academic calendar at classes end by Thanksgiving and then you have,,
+
+a reading week or something that, which is just a study week, and then you have a final exam week.
+
+And it's possible some of your classes may have an actual final exam during that week., we don't have that for this class. your final your final quiz will be during our final class., I think the week before Thanksgiving, probably. And that'll be,, that'll be it.
+
+And then the week after Thanksgiving, your project will be due, even though we're not meeting in class., we'll be able to put it on the on., I can add the dates., I can add the dates in here you can see the dates and everything.
+
+Oh, that must have been my old version., I've,, corrected that, I'll update the,, the syllabus is showing in the canvas, and I'll add the dates to it., thanks. I forgot that the other day., this is the,, I think this is the updated version of it.. I'll double check it up with updates.
+
+And you can see everything that. All.
+
+My questions. I hope I not missed.
+
+ I think I think we have something at two hours and 45 minutes maximum., time to do it., depending on how fast you go, it could be.
+
+Could be quite a bit less than that. Hopefully. Shouldn't be any more.
+
+It's a meaningful job or it's not..
+
+Think of it,, a big homework assignment.
+
+ the format is going to be very similar to your homework.
+
+ it's going to be a Jupyter notebook., it's there's going to be maybe six questions.
+
+And each question might have multiple parts and ask you to do different things.
+
+And some of those things will involve writing code and then others will involve analyzing the results of the code that you wrote.
+
+And then others might be more conceptual,, I'll ask you to explain something to me.
+
+ there'll be those types of questions., sure.
+
+The questions. All.
+
+ as far as the content of what we're going to cover in this class,,
+
+we're going to talk a lot about process in the second half of our time together today., we next week, we will,, due date will probably wrap up the process of next week., we'll do data preparation., actually, we will have a data focused and feature engineering focused discussion., week three, we'll go through linear models for regression and classification, which is the foundation of everything else.
+
+We before we do some time series how many people. we've done time series modeling before and.
+
+A couple of couple of folks have done some time.. It is a number time series.
+
+ we'll,, we'll do a little bit on that., it's not going to be terribly in-depth, but,, we'll cover some basics of time series and sequence modeling., week five, we'll do an assortment of some other,, classification techniques., week six, we'll do,, we have two, two sessions on neural networks.
+
+ we'll do one session in week six., then we'll have a couple of weeks where your, your project one presentations.
+
+Then we'll have a midterm and then we'll finish up,, our second session on neural networks.,, after that.
+
+Then we'll cover,, ensemble models and tree,, boosting models,, clustering,, with a session on ML explainability and ethics.
+
+And then we will have our,, our final. that's the,, the general week by week plan I worked cover.
+
+All., I think. The policy again, you can read it on here.
+
+I just went through a verb, but if you need to consult back., your,, you can do that again.
+
+The overall policy in terms of homework and exams is,.
+
+Fine as conceptual questions about things, but,, anything that you,, submit has to be your,, has to be your own work.
+
+Or anything else. oh., Jared Bailey, who I think everybody met at the returning student panel last week.
+
+Jared is to for this class., I expect to add one more to.
+
+I haven't finalized yet, I'll communicate that before next week, we'll likely end up with two Tas., Jared is,. Just less,, capacity than we had expected initially.
+
+ saw the grass at a second to for some extra help., each of the Tas will have a weekly office hour.
+
+ you will have,, two opportunities to,, with,, a regularly scheduled office hour,, with the Tas., I will also.
+
+ I'm available,, obviously, anytime during class periods, you're welcome to ask questions about things and to talk through things., if you have other things you want to talk through,, as a reminder, I hold a Friday, 9 a.m. office hour over 20, you're welcome to bring it.
+
+Any, any topics to that, whether they relate to class, something we're talking about in this class or other things,
+
+career things or advising things or whatever you want., for your for the show out there, if you, if you have questions.
+
+All. I think that's covered at all time. Logistics stuff with the,, with the.
+
+It's..
+
+ I think we're going to I know to it to,, two hours, 45 minutes or is,
+
+a long time,, to, to say that's a long time for me to stand up here., we're going to generally take a break roughly halfway at the halfway point during each class time will generally take probably a ten minute,, ten minute break,, and give you time to stretch, use the restroom, etc., let's do that now. It's,, it's 953, let's take a ten minute break and, 1003 will restart and we'll start some,, some lecture stuff.. That's., in Python., no, I don't think. I think whatever you should be.
+
+Should be fine with the package version., I think I used three, and I think when I, when I write down any of you.
+
+Sure.. I'll open it up now..., as much as possible, I guess...
+
+There's some,, one issue in the spring semester.
+
+Is that,..
+
+We have,.. We're not,, fortunate that,, continuing that anymore, the,, the financial one... We're not. I continue this year. Of course., we had to make a few budget cuts on this.
+
+One of these graphics here for Julia.,, still encourage you to try to go to,., there are also some local conferences that,, we know about and,,
+
+in particular in the spring, there's,,, an AI conference action here on campus.
+
+We're usually involved in the,, advisory board.
+
+We typically get free admission from our students, which I encourage everyone to get that one., and then there are other there's a big open source that happens in the fall here in college as, which I would go to.
+
+ definitely take advantage of those. And then if there's other ones.., think about whether he's had some questions regarding cyberpunk.
+
+ sure. I actually asked this question.
+
+Do you has everything you prevent, translations to.
+
+Somebody else's.. That's interesting.
+
+How would that how it works., you will get a chance to go out and experience it.
+
+And you're starting next week. Student. It will be up.
+
+Link,, on the board, and then you will come to that message and it'll be,, a chat bot.
+
+It will then ask you a question about something you learned.
+
+That's. You have to try to answer the question, but it will be not just I have one more choice or something that will be the response,
+
+or you have to type some sentences in to respond,
+
+and then the chatbot will look at your response and try to give you some feedback on the quality of your response,
+
+or make any suggestions of the response. And then you'll go to the next question and then go through.
+
+And check on whether you've understood things that we cover this week or not.
+
+And try to try to go ahead and gaps for you if there's something that you're not understanding.... Exactly..
+
+ it's if I were to,, if we were,, talking and I were, ask you some questions and tell me about that.
+
+Yes. And then you have to explain it back to me and I'll give you feedback., that's a good explanation, but you can't you forget about this point or something that's got of about them is trying to do this on.
+
+YouTube as opposed to text based chat.
+
+Oh just it's you're tight. Your tie is text based, meaning you're you're typing.
+
+I know, tight. Tight.. Exactly...
+
+ instead of sorry, it's just typing on your laptop..
+
+We were,, we thought about doing it as a verbal.
+
+ you with,, hit a button and I would verbally ask you a question, and then you'd reply using voice.
+
+But,, we. Because. Because it would be too loud.
+
+Too noisy to have you trying to do that in here especially. We do not have this now.
+
+This is it. This.,, she said.
+
+Oh.,. This is one of our two projects in the lab now.,. He's working on qubit, which is our other one, our coding system.., I was a bit of a Tommy., I'll send the,. I'll ask,, such.
+
+And they send that note out to everybody again about the,, where they can keep it and how to use it., you'll be allowed. I should mention that I should have.
+
+Everybody comes back up. You'll be allowed to use qubits for coding help on the assignment if you want., that's actually the only assistant you can use, for coding, depending on the private about works.
+
+ I will send out a note with Cupid and where they get it from., because I see in April there's a close call competition.
+
+You should start by searching for something.
+
+And eventually she. She'll be.. Unfortunately, you,, had to move away from the area for a new job., I don't think we're gonna offer our own computer vision course this spring., there are some other courses available, through Etsy, for example., you might have one to,.
+
+But,, we probably want to offer probably more number online this spring... Although computer vision, you'll cover it in,, five for the API.
+
+Pretty awesome. Sure.
+
+One. Because I hear that candidates, just for at least the other day.
+
+Exactly. What you're talking about now is not the canvass one.
+
+I haven't seen what they it's basically exactly what you're describing, where the investor gets to go and say,
+
+I want my chat bot to,, challenge students on this, make sure they emphasize this, this and this.
+
+And it's, oh, interesting.. It's it's a chatbot.
+
+You chat with Drag Campus and it's able to automatically grade and give feedback based on how that's good.
+
+We'll have to take a look at that., that was interesting.
+
+I think that because that just came out that even a week ago,, I wonder if Duke has that available on campus.
+
+I haven't heard anything about it yet, I have to check., if,, we might experiment with that., we just created something simple ourselves to use,, that we might,, think about using the campus one that was available.
+
+I was interesting because., that came out, you sound you had this play for a while longer than a week, and that just came out.. We built I built an earlier version of it, actually 2 to 2 years of that source, which is two years ago..,,, we used it.
+
+ we have used to just gonna use a base.
+
+It's actually we've rebuilt a new version of it now.
+
+I think you can just personally.. That's interesting. It makes a lot of sense for that.,. Is it true that I know and I said.. is it definitive. Answer me that. It is., you can just, for that actually for the ages has been., it seems. How did you how did you get it represented in allows you to place I.
+
+It's when it shows you how it is.
+
+Oh I'm sure that's a great name. Next week. You should do that. I'm going to show it is mostly.
+
+But she doesn't have to. I'm sure she's one for that.. That was just.. I know how to bypass it.. Interesting. that's,, that's good to,, get a show.
+
+Fortunately, I think a mass majority of students are not as capable as you are in building Chrome extension, I hope I get the whole other zero.. Wow.., honestly,, I think I think pipeline is such a cool thing and it's but it's I've,, I feel it does no one to be stupid enough to cheat,.. But if I were to get applied in every single university in the United States., it's inevitable someone would make a chrome extension that.. That's interesting. now. And the next thing you should now do is figure out how do you protect against that., I that's exactly what I did. I was having two activity prompts two separate chats back and forth.. One with making the extension. One was defending it.
+
+And I can obviously change the code on my.
+
+But he got super advanced.
+
+It created hey it literally means that you could just type in a couple of sentences and it would determine all of your typing speed stuff.
+
+And it would you can make it sound as realistic as possible.
+
+It even got close to making AMG type faster that all then other even a pause after that period,
+
+it's it made it almost distinguishable from humans. That's amazing.
+
+Wow. This presents a promising.. I think that's., that would be great.,, that'd be great. That show you. That's.
+
+It's been working on that.,, I know what's going on.
+
+I think it's a great idea that I think it's just that these are two ways to.. And,, if you're not fancy.
+
+And that's cool.. It's just some JavaScript that's preventing it.
+
+From history..
+
+And that's a superpower.. And, I.
+
+Don't know. What you're talking about.
+
+It was very easy to engineer and all that. Oh, my., I always wanted to go.
+
+I was,, it's a. Little difficult.
+
+It's great. I use that. It's..
+
+It's a it's a nice. Guy... Just it. Works pretty., it's awesome. I know, that's,, not fun., I see what's happening. This is something... It was nice having it.
+
+It's., it's probably the event, I think better.,,. You guys, I think.
+
+This is,, it's possible. Oh my God.
+
+No.. And your bills are always your best man, and it's never.
+
+Say thank you. tremendous amount of work.
+
+Thank you guys. Thank you much.
+
+Thank you guys. Thank. You.
+
+Thank you. There's a lot.. I think we're distracting ourselves.
+
+Table contents as. There's a lot.. There's. It is hard to. Resist.
+
+I just don't know. I don't know. Oh,.. It's not all. All.
+
+All. We go online.
+
+It's actually..
+
+And. When I.. You can see that.
+
+You get that. All.., I just I said, I'm actually six..,, two weeks, I guess. I'm just not sure that this is something that be next Friday., I would say,, let's get restarted.
+
+Everything is. And. I guess no choice.
+
+It's probably something that's closer to that.
+
+That's. Wonderful.
+
+Mean. I was,, if I put my,, just, oh, I paid for the.
+
+It's. Starting.
+
+To. Evening.
+
+All. We're going to now go through some introductory material very,
+
+very quickly because I'm going to assume most people have some basic understanding of things here.
+
+ we'll try to breeze through this. We'll get into some of the process stuff., we'll probably we'll probably finish up the process stuff if we are patient today.
+
+We'll finish it up,, next week., I did,, sorry.
+
+Mike just asked me to put up the slides., I did put them up.
+
+ if anybody likes to take notes on the slides or,, however it should be,, you should be able to see them now.., this is machine learning.
+
+Somebody must know is..
+
+That's more of a mess model I'm trying to prove.
+
+If you can show you a computer. That computer. Anderson, this model actually uses computer model to process a large data.
+
+It has some, has to model itself.. Good. the model learns from doing something.
+
+And it learns and tries to correct itself and improve itself where software generally does not., you want to train it on a set of inputs that are defined that you can take a new set of inputs that are less than five or less sorted,
+
+and that you can try to hopefully generalize that, that pattern... you train that on a -defined set of inputs to learn to recognize certain patterns.
+
+And then you the hope is you can then use that.
+
+And on a broader set of,, of data that maybe that doesn't exactly match the original sets you trained on, and you can hope it gets to,, what we call it, generalize,, enough to be able to still generate some useful output,, from, from the new set of data.
+
+A mathematician in the 1940s. Partition.. Get closer.,, a guy named Arthur Samuel was an IBM engineer,, in 1959.
+
+It's credited with,, with the term machine learning., and the definition he gave is a philistine against computers ability to learn without being explicitly programed.. in traditional software, if we wanted to make some prediction or give some useful output,
+
+we have to write all the details,, the rules,, to go from the input to the output.. And,, the point of machine learning is that,, we no longer have to write those set of rules.
+
+We let the program figure out the rules for itself, or the pattern for itself that relates the input,, to the output... I,. I was giving a talk, actually, at a,, retirement community last year, and I showed a slide,
+
+and then a woman came up to me afterwards and said,,, I'm glad that you showed Arthur up on this slide.
+
+He and I were good friends when we were younger. And I say,,, it's a very small world., these people.., the way we've always written software., there are two good reasons I can think of for it.
+
+ rather than just doing it manually., there's, there's some benefit for us at using machine learning to do it.
+
+Maybe it's,, faster. It's cheaper., maybe we can do it better than humans can do it manually.
+
+And then the second possible reason would be that it's it's just not practical to do it manually., maybe the rules that relate the input to the output or the patterns
+
+that we need to find are just too complex to try to manually define ourselves in,
+
+in a set of rules,, where it just becomes impossible,,
+
+or overwhelming for us to manually,, do that we can use machine learning to figure out.
+
+This is probably the one I the best. It's a useful approximation of a nonrandom phenomenon.
+
+There's no value in modeling it., it has to be have some amount of non randomness.
+
+Some models are never perfect because of the inherent randomness in everything in the real world., but it's got to have some amount of non randomness which, which we should be able to model., a useful approximation.., needs to be useful.
+
+There's no value in creating a model which is not useful in some way. And again that's an approximation.
+
+ we recognize that, it's unlikely we're going to build models in our,, reach 100% performance., we're trying to approximate some output given some., another way to think about models that is,, popular, especially in the context of large language models, is that it's a way of,,, compressing some knowledge into a,, smaller and finite set of numbers that we call parameters of the models.
+
+And,, with a model, we're trying to store a compressed form of that relationship into the parameters,, or the weights of the model itself.., this is a very simple model, a linear regression that I'm sure everybody has seen that relates some input to an output., this is what I particularly., again, how what we just said all models are wrong, but,, some are useful., we're going to be doing with structured data and tabular data primarily in this class., again, that's the type of data that you can reasonably put into a Microsoft Excel sheet for those who are familiar.
+
+ it's usually represented in a matrix with,, a set of rows and columns.
+
+Typically, the way we organize structured data is that we have rows being the observations,,, individual data points on each row.
+
+And then we structure it that,, columns are typically representing features or attributes of the data., and, you can, you can actually model it,, a surprising number of things using structured data.
+
+ think about even things weather forecasting, for example, or any frankly any time series data generally is,
+
+is, is structured data where you represent each time point as a, as an additional row,, in your data set.
+
+And then we have some,, target that we're trying to predict.. these are all our inputs. And then we're trying to predict some a target,,, value given all the inputs., some more vocabulary stuff. supervised versus unsupervised learning., in supervised learning, we,, we know at least some of the,, inputs, the features and observations and some of the outputs, the targets.
+
+And we can use the ones that we do know to build some,
+
+some a model and train the model on that data to define the relationship between those inputs we know and the outputs of., in unsupervised learning, generally, we only have the inputs., we don't have any specific outputs that we use., we use,, different attributes or features of the inputs,, to,,, try to logically organize,, the input data.., within supervised learning, we have two primary types of regression where predicting,, numeric,, variable.
+
+And we have classification. We're predicting,, a category or a class which might be a binary classification., positive -0 one. Or it might be,, we call a multi-class classification where we may be predicting,, one of 50 different possible diseases or something that, or., those are the two primary types of,., supervised learning. Let's do some practice.
+
+Just,, shout out. make sure we understand the,, differences here.
+
+Detecting fake news, regression or classification, classification and predicting a stock price regression.
+
+Determining a new driver's risk level for insurance., pricing regression.
+
+Go ahead and go. I think of risk as a probability or some rating that's continuous.
+
+ it's a range from say zero to maybe 100% chance that this driver is going to get into an accident or some altercation.., maybe a or predicting a numeric value with an infinite number of possible values., I was thinking about you more have different categories low risk, high risk, medium risk, especially with insurance.
+
+I think it's., more exact.
+
+ it'll be,, a certain,, risk level will yield a certain,, raise in your interest.., I think I think both. I think there's an argument for both.
+
+ the difference between regression and classification seems very simple.
+
+In the real world, it's often not as simple,, and that you can model things both, both ways.
+
+And this would be one example..
+
+Depending on what you want the output to be, if you're going to assign a 0 to 100 score with an infinite number of possible values,, you might structure that as a regression problem if you're going to,, create risk levels.
+
+Or maybe your insurance company just works in risk levels high, medium, low or 1 to 10 or something that., maybe then you structure it as a classification problem.,, this is really important to think through,, because it makes,, obviously a huge difference in terms of how you do your, your modeling.
+
+ they give you a very,, practical example of this., one of the projects that I,,, learned when I was in industry and I worked for the weather forecasting company,
+
+was we were building a,, model that predicted power outages,, for electric utilities.
+
+And,, the reason for this is, is that,.
+
+When you have a bad storm activity, you have customers out of power.
+
+And,, that's not good.
+
+And the customers complain,, and they're not happy.
+
+Or,, you get nasty newspaper articles about why the power out is out long.
+
+And, and there's something called the Public Utility Commission or PSC that,, if, if it's, if you're.
+
+ the response is very slow or you have a lot of outages,
+
+you may get called before the PUC and asked to explain why your response is slow, and why were many customers out of power for long.
+
+And you can even get fines,, depending on,, on how it plays., on the one hand, you want to minimize outages and respond to the outages as quickly as you can., but on the other hand,.,.
+
+ what that might lead you to do is say,,., I think there's got to be a storm coming.
+
+Let me just call on all the crews we have and just have them available that we can immediately start work., when the powers that goes out,, and get these done as quickly as possible.
+
+But on the other hand, if it's not as bad as you thought it was going to be,
+
+then you've got all these crews that you've called in and you're paying them overtime money.
+
+And,,, you may even be feeding them meals and putting up a hotel and stuff., and there's also something that is called mutual assistance, which you may see in the news, if you ever watch the,, news story with,,
+
+a hurricane or a bad snowstorm, you see, a caravan of these utility trucks,
+
+ driving from,, South Carolina up to New York or something that., mutual assistance means that utilities, because they don't compete, they all have a defined territory.
+
+It's a unique industry that they're not competing with each other., they actually help each other.
+
+And if, let's say there's going to be,,.,, let's say a really bad,,, a hurricane that's going to hit North Carolina.
+
+And we're expecting a lot of outages. North Carolina, in advance of that hurricane may request mutual assistance.
+
+And they may ask for help from utilities that say, up in the northeast or something to send some crews down to help.
+
+And then you'll see, a long caravan of all the utility trucks driving,,
+
+from New York down in North Carolina in advance of the storm and getting ready,, they can start work away.
+
+And you got to pay for their hotel. And you can only do that many times, if, if every storm North Carolina calls for help from New York,
+
+eventually New York's going to say, I'm not I'm not sending any more crews., you have to,, use it really carefully.
+
+ if you're a director of operations for a utility, it's a really hard call to make.
+
+Because maybe it's not going to be bad., but if you wait and see, then maybe it is really bad and then you've got all kinds of problems.
+
+Maybe you get fired,,, because you get to do your job.,,, it's a it's,, almost a lose situation, it's hard to get exactly.
+
+And we built a model that used the weather forecast and used historical data on power outages.
+
+ looking at given different weather patterns in the past, how many outages did they cause,,
+
+to predict the location and the severity of power outages in advance of storms that we can actually tell you,
+
+here's how many outages you're gonna expect and where they're going to be,, historically.
+
+ prior to that, what would happen is,,
+
+a person in this job would look at the weather forecast and we'd try to guess from the weather forecast,, and, we were trying to help with this problem.
+
+And we built this model.
+
+And, when we, first we're working on the project, we're trying to you can think of this maybe as a regression task,, where you're trying to just predict,, this, this,, area, however you define,, it could be a township., it could be a,,, grid,, four kilometer by four kilometer grid square on the map., but this area is going to have,, X outages and this area is going to have Y outages, etc., and, you can model it as a regression task, but what we what we found out after we did that and we,
+
+we created the project and we started,, engaging with some utilities who were using that product.
+
+Was that,, actually utilities don't really care about the exact number of outages.
+
+They all have,, typically a five point severity scale.
+
+And what they, they were, they were actually just doing is taking out a number of outages,, for each of the areas,, talent adding it all up, sum it all up and then mapping that back to a one, two three, 4 or 5,, scale.., then we said,, that's silly,, to be predicting a very specific number,
+
+and then you're just going to turn that into a one, two, three or 4 or 5., and then it actually becomes a classification task when you do it that way.
+
+And we ended up having to redo all of the modeling,, for that and switching over to a classification approach.,, those things do happen in the real world quite a bit.
+
+ it's important to think through in particular, what is what is your user or your customer want out of this model., a self-driving car, for example, correctly identifying a pedestrian.
+
+Most people say classification and regression. Think a little bit about that., if you're thinking about whether it's a drink or not,,, depending on how this is structured, it can be also different things.,. Correctly identifying a pedestrian.,,., I drive a Subaru that has,, actually a dual camera system in the front.
+
+And it's working, and it has a detection system,,, which also can apply automatically.
+
+Apply the brake,, if it senses that you're about to run into something., in the wintertime when I drive up to campus, I go pass that on the road.
+
+However, if you drive past the gym and there's a massive,, the manhole is there's a covered,,, steam thing in the ground., and in the winter when it's cold, there's a lot of steam coming up from this manhole.
+
+And when I drive up to it every day, my system goes off and it thinks that I'm about to run into something., when I come to that city,, clearly it's not been trained enough to differentiate,, steam versus,, a person.,, that's classification. Regression would be more in terms of,.
+
+Where that person is in the field of view..
+
+And often that can be a regression task to,
+
+to understand where within the image or the specific locations or bounding box of the object.
+
+ sometimes it can be both regression and classification. Object detection usually involves.
+
+All. Machinery. First heuristics I don't whether a heuristic is., a heuristic would be a schema or simplified way of understanding something that's above the resolution of the real thing., exactly. a, a schema, a simplified way of understanding something., we might in English we have a term called rule of thumb.
+
+Anybody know why that's it's called rule of thumb. now because I used to measure things using their thumb.
+
+And a rule of thumb would be a spitball measurement.
+
+I don't know, but I would believe that makes sense to me. let's go with that.
+
+Oh, it's because in the fall, in the Cold War days.
+
+That the way you measure. see if you're in the safe zone from a mushroom cloud.
+
+If a new bird to hit is if you can cover it with your thumb, that sounds even better.
+
+ let's go ahead and,, look it up., somebody look it up and see what he says about it.
+
+But that sounds very believable., I don't know, but we call it a rule of thumb.
+
+ the rule of thumb is a,, just a rough,,, rule that we can apply to a specific situation., you can think of this,, as a single if then statement,
+
+or maybe a very small series of if then statements that we can apply to something.., heuristics are actually a, an alternative to applying machine learning to types of problems.., there you can think of it almost as a very primitive form of machine learning.
+
+You create some simplified set of rules, generally based on some past experience., the difference is that these are hard coded,, business rules.
+
+ again, it's,,, conditionals or a series of,, if else,,, statements,,
+
+that you would apply one or more of them,, whether some examples or how would we apply this, in real life to something.
+
+Let's suppose we were going to,, do,,, demand prediction.. predicting,,, some demand,, when we,.,, what we might do is just look at,, let's say we have a,., new item or something that we're going to add to our inventory at our retail store.
+
+What we could expect for the demand for that.. And then let's just start from there., or a product classifier.,,, let's give that the same product recommend there.,, if we were going to build Netflix is recommendation algorithm for recommending movies to watch,
+
+A very simple way would be let's just recommend to you whatever the highest rated current movie is.
+
+And,, there's probably a good chance that maybe you're going to that one., or if we were the iTunes store and recommending apps for you to download,, or the App Store or the App Store,, I guess you throw the items.
+
+I think your music too, but we'd recommend the most popular. whatever the most commonly downloaded app is, let's just recommend up to you.
+
+ this really involves no machine learning to do this., and sometimes we can get a reasonable approach., in particular, these actually get used to solve what we call a cold start problem.
+
+ to take a guess at is. It's not obvious which is the best.
+
+ you just have to start. See if one recommendation works... If you just signed up for Netflix and you haven't watched anything yet and Netflix doesn't really know anything about you,,
+
+other than whatever information maybe you have to put in, your agent gender or something that when you sign up, I don't know., and that's all they know., let's say you put in your age,, and that's all they've got.
+
+ they can't really use a recommendation system for you because they don't know anything about you.., this is what they call a cold star problem. you need you still need to deliver some value for the user.,, when I first sign up for Netflix, I still expect to get recommendations., generally, we'd apply heuristics, if I put in my age, for example, what they might do is look and say,,, what,, movies are currently the most popular movies among adults., 40 to 45 years of age or something that., and then let's just recommend,, those movies to John and then,, and that's a good way to start.
+
+And then as I start watching things and they're collecting data on me,
+
+then they then the recommendation system can kick in and they can refine the recommendations.
+
+ it's very common actually when you build recommendation systems to start with your instincts,, to solve that cold star problem and then let the recommend at the machine learning kick in., there are benefits to doing both. Some problems can be solved to a sufficient level just by using heuristics., you can really need machine learning., and if that's the case for your problem, that might be a good idea., the,..
+
+There are benefits to using heuristics. usually they're. They're pretty simple to create.
+
+You can create them very quickly. Have to do a lot of. machine learning training minimal very minimal computational cost to run.. They're very interpretable., you can just look back to your, your., and on the other hand, machine learning can be typically performed better.
+
+It can adapt or absolve much easier.
+
+ if your data is changing, if you have what we call,, data drift,, means that your input data is changing over time with respect,
+
+you have to manually go in and change the race things and come up with a new set of them.
+
+With machine learning, you can just simply retrain and adapt to your new... let's take a simple example.
+
+Suppose we got a,, the university bookstore asked our class to do a project to predict,, daily sales for the bookstore.
+
+And we decide we want to start the project by just building a set of heuristics., rather than doing a,, a machine learning model.
+
+That,, we could potentially track sales just every single day of the week and see if there's,, if it's higher,
+
+ on the weekends, for example, and predict that more people might come in on the weekends, for example.. Just it's really basic.. we might set we might look at sales.
+
+I'd say we're going to make the assumption sales are different on the weekends than during the week.
+
+And we could look at the,, mean sales for a weekday.
+
+You mean sales for a weekend. And then,, for every future day, depending on the whether it's a weekday or weekend, just apply that mean,
+
+ value maybe, as I guess,,,, on special days you can have promotions for discounts and stuff., you can calculate all that throughout the year..
+
+ you might have you might also add another category in which is promotional days or something and figure out the mean for the promotional days.
+
+And then just apply that. And, there's., that's that's a pretty good way to start.
+
+ what about,,,, season of the year.,
+
+ we could speculate that the demand at the bookstore is probably different during
+
+the summer when there's not many people on campus versus during the school year.,,, maybe we factor that in and we add an if statement around that., we could come up with a whole set of,, things.. And for those that have done some machine learning, this now starts to look what we call a decision tree.,, the key difference, though, is with the decision tree, you're letting the,
+
+the software in this case create that model for you based on what it learns among patterns in the data.
+
+Whereas with a heuristic approach, we are using our own subject matter expertise on this particular problem to define those things,
+
+rather than letting the data tell us what, what the what the different,, rules are that we should.
+
+You can just use your mistakes and get a good a good enough approach.,, other times, you,, it's really hard to get enough data to train a model., you have to use heuristics because you don't really have a good option to train a model,, on it., I'll give you I'll give you another example from my own experience.
+
+ I run a,, startup company. I'll talk more about this probably over time, and I'll show you some of the things that we do.
+
+But one of the things we do is,, we work with companies that are involved in the clinical trial process,
+
+and,, we try to assist them with clinical trial planning.
+
+ when you plan a clinical trial, there's a lot of different decisions you have to make around,, the design of that trial.
+
+ there are many different ways to structure the design of a trial,, measuring different things, including different population., patient population sets is something some trials use a very broad set of,,, a broad patient population., some use a very narrow one., all of these,,, different,, factors make an impact on the cost of running that trial., how long we can expect that trial to take, whether,, whether certain designs are more likely to lead to,, whether more positive outcomes from the trial or not.
+
+And this is,,, this is a,, a really interesting problem.. Is very familiar with drug development at all.
+
+I think you might have a guess. less than 10%.., it's a shocking number. Actually. It's under 10%.
+
+Meaning that,, of all the drug candidates that start the process of clinical trials in the US, there's three, three primary phases.
+
+Phase one, two, three,, under 10% of those,, actually make it through and get approval.
+
+I might take a guess. Billion.
+
+ it's a little bit of billions thinking in my head.. One that between 1 and $2 billion is the average cost.
+
+Ten. 10 to $15.... this is a massive.,, it's actually it's very interesting.
+
+There's a lot of talk about and this is this is very much a tangent, but I hope it's interesting to you., there's a lot of focus on AI drug discovery now.
+
+And a lot of amazing things being done,, with drug discovery,, and that is really promising that hopefully,, someday in the near future, we're going to have a lot more drugs for things that we can't treat very today.
+
+But,, one of the really big problems is actually in the what we call the development of the drug.
+
+ after you discover the drug,
+
+there's a preclinical phase that you have to go through and you do animal testing and you have to show safety, etcetera.
+
+And then you go through the clinical phase of it, which involves the three primary phases of trials.
+
+And this is the most expensive and the longest portion of the entire process., and also where most drugs fail. over 90% of the drugs that start that process,, don't make it to the end of the process., they fail along the way., in particular, phase two trials had something a 70% failure rate., and each of these trials, depending on what phase of this one, 2 or 3, the cost is in the millions of dollars., the phase one might be a couple of million, and a phase two might be 10 to 10, 40 million.
+
+And a phase three can be,, 50 to hundreds of millions of dollars., that's,, it's almost lighting $100 million on fire and just watching it burn.,, it's just unbelievable that,, that's the state of things now for somebody who comes from outside., now, if you talk to somebody in the,, who's been in that process there, there are lots of good reasons for why this is it is.
+
+But,,, if you take somebody from the outside of that process,
+
+they would look at this and say, this is absolutely insane that we're wasting every year much money.,, in, in chasing stuff that just ends in failure.
+
+where,, and some of the smartest people on the planet are working on this thing., anyway,, that is,,
+
+ a broad picture of why we are doing some work in this space to try to make, make some difference in that., but one of the things we do is help with the design process of that,, where,, design,, plays a role in some of the failure.
+
+ if you have a poorly designed,, trial,, you either that itself can lead to failure no matter how good your drug is.,, for example, you might select the wrong patient population to study in your trial, or you might,, have selected too few patients, and you may find that your results aren't statistically valid or,, you may have tried to define your patient population too narrowly,
+
+where there's few people in the world that meet those requirements, it becomes just way too hard to recruit people for your trial.
+
+And you,, spending five years just trying to recruit enough people to join your trial.,,, these are really important decisions, and there's a lot of factors that go into them.,, if it's if this is going to drag out the time,
+
+what if a competitor in the meantime concludes their trial and rolls their drug out to market,
+
+and then all of a sudden I'm irrelevant because I we are they haven't,,
+
+a drug or I'm not going to get approval because the other drug is maybe superior to mine.,, there's all these different scenarios that you have to think through., and,, historically, the way this worked is, we you're,,, you came up with some amazing AI algorithm that invented the next,, I don't know anything about trials, I'm going to go pay a consultant to,, to design this for me.
+
+And I'm going to go and I'm going to find somebody that's been involved in some trials before in my specific area of,,, focus.
+
+And I'm going to pay them,, between 40 and $100,000 to design my trial for me.
+
+And whether they're going to do, they're going to use their past experience.
+
+They've maybe been involved in a handful of trials in this area before.
+
+And they're going to say,, last time I, we designed it this way.
+
+And that worked. And we got we. We were able to recruit patients and we got approval.,, let's just do that again., and then they're going to give you a design.
+
+It's called we call it the copy paste method.
+
+ they're going to give you a copy paste of what,, what their previous experience has been.
+
+And that may or may not be for you.., we think in the ideal state of things that,, you ultimately would,
+
+you would be better off if you consider a range of different possible designs., and you were able to look at the predicted,, implications of those designs.
+
+ rather than just having,, consultant hand you,,
+
+a ten page report and say, here, here's your design, this is this is what you should do., we think that you should, let's say, come up with,, five different possible designs,
+
+This one seems to be probably a more optimal design for my trial.
+
+ that's probably what we're trying to do.,, or what we are doing with,. With our software.
+
+One of the problems with doing this in building those models.
+
+ ideally we would have models that could predict given some design we could predict the cost.
+
+Given some design we could predict the recruitment feasibility.
+
+Given some design we could predict the regulatory approval language,, that data either doesn't exist or is really hard to get because,,
+
+no pharmaceutical company wants to share their information about what their trial actually costs them,
+
+or,, how long it actually took them to recruit patients and on.
+
+ you have very limited amount of actual data,, to use.,, currently,, we don't have enough to do.
+
+ the meaning for machine learning,, to, to build those types of models.,, at the moment we have, we have a we're operating with the Ristic system where we're using general,, averages., and we have a series of heuristics,, for example, if it's a,, in oncology trial versus,,, pulmonary trial,.
+
+That's going to make an impact on the cost., if it's,,,,
+
+obviously what phase of the trial is will make an impact on cost if the trial if what I'm measuring in the trial requires,,
+
+specialized equipment imaging,, equipment,, that's going to be a higher cost trial than if it's just,,, a check in,, type of a thing., the number of patients is going to impact the cost,, the number of visits each patient has to make during the trial impacts the cost.
+
+Or whether are the drivers that would impact the cost.
+
+And then we can we can come up with a set of heuristics based on your particular set of these features., we would work these multipliers or these averages and on, and try to get to a reasonable,, estimate of the costs.. this doesn't really involve this is actually this is really not,, which you consider to be a machine learning type of a model., it's more of a heuristics model, but it works reasonably., or at least probably as good as it can at the moment., and that's what we use., this is a real life example of why you might decide to go with your stick based approaches versus a machine learning operation.. And there's a lot. if you don't believe me,, I put some quotes from other people saying the same thing up here., let me introduce the rest of this slide.
+
+ even if you do have enough data, you feel you can do a good job with machine learning for your problem., heuristic still has a lot of value. And the value it has in those cases is using it as a,, a starting point.
+
+And what I recommend for any new modeling work that you're going to do.
+
+ I would certainly recommend with your with your projects that you follow this approach., it's a good idea to start by applying a set of heuristics.
+
+ let's say,, you, let's take the, let's say your weather forecasting,,, project,, and let's just say,
+
+I don't know exactly what I'm going to ask you to do, but let's say I'm going to ask you to predict the,, next day, high temperature,, for RTU airport., and then you're going to do that over the course of two weeks., a good place to start might be to just say, let's use, let's use,, current day high temperature.
+
+And let's just say tomorrow is going to be the same as today., and that's a heuristic,.
+
+And we could use that and we could create a test set ourselves or a validation set,
+
+and we could run that and we could see how, how good is the performance of that.. And,, it might actually surprise you. And now we have a what I call our heuristic baseline.
+
+ whatever evaluation metric we're using, we can calculate the performance of that approach.
+
+And now we have a reasonable starting point to know what is good performance or bad performance., this is one of my pet peeves., I don't think I shared this during orientation..., metrics,, are useless unless you have some comparison,, baseline.
+
+ we one thing and,, one thing I see a lot from students who apply to our program is,
+
+they'll put they'll have done some machine learning projects in the past and they'll write down.,, achieved,,, 93.4%,,, recall and 90,, 98.7% precision on this particular thing., and, sure, out of 100,, as the highest value,, that might sound good,
+
+but when I read that I have I have no,, baseline for comparison.
+
+ I don't know. Is that good or is that actually really bad because maybe it's actually really bad., and maybe,, you can just use a restriction and actually get a higher value.
+
+ I don't know if that's good or bad. whether it's a little tip for your resume,, it's always good to, to add, quantitative stuff.
+
+And if you've done modeling projects it can be useful to put numbers on there.
+
+But try to give some baseline for comparison of the numbers.
+
+ somebody reading it has an understanding of what does that mean.
+
+Is that good or bad. how can you compare it to something.
+
+ instead of I did this project with,,
+
+detecting diseases from chest X-rays and I got,,,, accuracy of 90, 93% or something.
+
+I say,, I did this project, I got 93% accuracy, and that beats the,,, human comparable baseline of 87% accuracy,,
+
+as,,, as determined from a gold standard set of,, three highly trained radiologists or something that.,,, one good starting point for comparison is just apply your heuristics,, get a, get a baseline., and now start using machine learning and see if you can improve on the baseline that you get.
+
+And next phase would be use a very simple algorithm, a logistic regression or a linear regression or something and apply that.
+
+And now you get what I call the machine learning baseline., and now you have a second baseline to compare against.
+
+And now you can start getting fancier with the modeling. And you can put more time into feature engineering and,,
+
+hyperparameter optimization and see if you can continue making an improvement or not as you add more effort.
+
+All., any questions on that...
+
+You have the data.., could you use a large language model, oh five GPT,, generate synthetic data and then check that these the heuristic.. say that again. if you have a problem where you have enough data that can you generate synthetic data and to check things.., you can in some cases.
+
+But you also have to be really careful about synthetic data., I see and you've probably seen and read about companies who are doing this.
+
+And for certain use cases it can make sense to do that., in particular, when the, the population or distribution of the data is reasonably defined and you,
+
+you just need to sample from that distribution.
+
+And you can use large language models to create synthetic samples from the distribution., but if your distribution is not defined, you have to be really careful about just prompting and,, to generate data,
+
+because you may end up with a set of data from the Elm that does not at all match the actual distribution of data in the real world., because,, labs have certain biases and,, if you're not careful, that bias can just propagate into the synthetic data.
+
+And now you've trained your model on a synthetic data set that doesn't actually match the real world.
+
+And when you then go and try to apply your model to the real world data, it's just not going to work, just fall apart., depending I'd say you can use it, but use it cautiously depending,, think about think about how your how you.
+
+All., we'll go a little bit more than we're just.
+
+I think it just go until we,. But out here I would just pick up the remaining., next. All,, by the way, this stuff, I realized that,,,,, we'll get there.
+
+But,, I also wanted to come at the stuff that we're talking about now, actually, in practice is probably a lot more important than the,,, all the details of,, each algorithm individually and on.,,, I think it's useful to spend a lot of time on this., now we're going to start with working our way a little bit deeper into the process here.
+
+Now,, one of the tasks that we have to do is, is, is algorithm selection.., next we want to talk., we're gonna skip over the data and the feature creation part for a moment, and then we're going to come back to that next week., and we're going to jump into algorithm selection.
+
+ there are a lot of different machine learning algorithms. We're going to study unless you study a lot of them., today, not today a lot about this semester in class, but not all of them., there's something called the no free lunch theorem,
+
+which says that there's no single algorithm that only consistently beats the other ones.
+
+Otherwise, there would be no need really, for the other ones. the choice of algorithm is very,, task dependent.
+
+Everybody has their favorite algorithm., random forest happens to me, my favorite algorithm.
+
+And my, one that I always to use, but,, and a lot of people,
+
+it will be our HP boost, which you've probably read about or seen.
+
+And if you, do any internet research or,, look at how people have won Kaggle competitions.
+
+A lot of times they'll be,, XGBoost or some boosting model, but,, no matter what you read,
+
+ there is even neural networks, there is no single model that beats all other models for every use case.
+
+ the choice of model really depends on the,, or the choice of algorithm.
+
+Really depends on your specific use case., it's also important to consider there's, there's more to the decision than just the performance.
+
+ performance obviously is important., but there's also interpretability and computational cost to consider.
+
+Some models neural networks, may give you very high performance, but,, are not nearly as interpretable as other models.
+
+And,, come with a much higher computational cost to train and to run.
+
+All. this is to illustrate this point. This is an interesting thought experiment from,, Japan., suppose you have cancer and you have to choose between a black box eye surgeon.
+
+That cannot explain how it works, but there's a 90% cure rate.
+
+And or you can go with a human surgeon and has an 80% curing,
+
+but you can actually talk to and interact with that person or get an explanation of what they're doing.
+
+All. how many people let's let's think about this a little bit a different way.
+
+There's no or wrong answers.. All.
+
+A few insurgent. All, I served in.
+
+And you could talk with them, understand what they know, and then,, obviously, the advisor would probably do things a little differently.
+
+But you have to start understanding and they're chances are 10% higher... that's an interesting way around. It is, yes.
+
+You may not know or be able to understand exactly what the eye surgery is doing,
+
+but you could go talk to a human surgeon and get some baseline,, understanding, maybe.
+
+I think there's a advantage for the humans because there are somebody responsible for you or a surgeon that has the..... And I feel,, curing a cancer could be,, a long process.
+
+And during this process, it's I can literally talk to nobody.
+
+I might just get really frustrated,,,, during the entire curing process,,
+
+think about the emotional value of that actual person who can give it to you, during the entire, process.
+
+That's, I think it's really, really important to have a human being.
+
+That's humans.,,. having a human connection is really important in a very long and tough process to me.
+
+I also think that it has probably been changed much that it was.
+
+Optimal decisions are that you can get the results you need by human rights.
+
+Change something during the process simply because they think it will be easy for you have to away because that you said,
+
+that creation is there. that's why even though the query might be less, the process might be easier with a human again.... Get it done. Just to expand on that, this question's vague, but is there an alignment question where or,
+
+even the, the optimization where you have a liver tumor and I surgery just takes out the whole liver.. it's big is unspecified. It says we of the interpretability.. You don't know what they're actually going to do.. Good job causing more harm.
+
+It could cure cancer but maybe hurt you in other ways.. All, let me,, let me,, try to tempt you a little bit more.
+
+Let's. This changes slightly, and let's say now the eye surgeon has a 99% cure rate, and the human surgeon has an 80%., maybe we might have picked up 1 or 2, but you're holding your ground., the trade off., it's hard to optimize for all of these things.
+
+whether you're optimizing for,, you optimizing for performance at maybe at the expense of interpretability,
+
+and you're willing to take on a little more computational cost,
+
+or are you optimizing for interpretability because we're talking about something medicine, where it's always critical to build trust., or we optimizing for computational cost, where it just needs to be good enough, but it needs to be really cheap,, to run it.
+
+Otherwise it's not going to be useful.,,, that's another important thing as you're thinking through,,
+
+in the real world, when you're building a model, whether you want to try to optimize for.
+
+And that's going to guide your, your choices,, different algorithms.
+
+All.. Occam's razor. Those who,,, take a machine learning class and probably come across this.
+
+This is,, actually a,.., and against razor,, nothing to do with machine learning., it certainly was at the attention of the,, the phrase, but the,,
+
+phrase can be applied here, and, the razor is always being you cannot use a simpler solution.
+
+And this is a good,,, another one is rule of thumb, but a good, good rule of thumb for life in general,
+
+but certainly for machine learning, is that if other things are more or less equal, it's better to go with the simpler solution.
+
+It's easier to change., and most importantly, probably it likely will generalize better than a complex solution.
+
+That means when we apply it to new sets of data the model hasn't been trained on,, it's actually likely to perform better than a highly complex., and this is,, this is a there's a couple of particular,, tips that I.,, this is one of the two,, there's there's this,,, idea,
+
+I think especially among,,, younger engineers that,, if,,
+
+I'm going to do a modeling project in industry, I need to make,, a really,,, fancy model,, using the latest,, techniques and on., and,, because otherwise,, I'm not going to impress anybody., they're going to if I use, a linear regression or something, they're going to say that's the that's not machine learning.
+
+ that's we should be using that simple stuff., but the reality is actually the opposite is industry., it's all about practicality, not complexity.
+
+ the simpler the better.
+
+If you can get good performance with a linear regression, then you should absolutely do that instead of your,, transformer model or whatever.,, because it's just a lot easier for engineers to maintain over time and,,, that's another consideration.
+
+This is a follow on, I think of, of that,, which is to say if, if I,
+
+if you, learn about machine learning from just reading research papers,
+
+you're led to think that,, it's all about coming up with very novel, very complex architectures for things., and the industry perspective is,, again, it's the opposite.
+
+The simpler the better, even if it's not quite as good.,,, if it's a lot simpler than we should go with that.
+
+ to show that for those,, state of the art that state of the art is the current,, best performance,, a specific task., if you if you are if you want to read more about simple models versus complex models,
+
+these are some interesting a little bit dated about,, some compelling papers demonstrating different,, tasks that they've,,, run using both simple models and complex models and in some cases have actually shown that,,, the simple models actually outperform,, more complex models., again, as I mentioned earlier, a good place to start is building a good,, reasonable heuristic.
+
+ as you're starting point, run your data three realistic, measure your performance., and now you have a baseline. Secondly, pick a simple algorithm., run your data through it, get a,, a second baseline, and now you can experiment with additional algorithms.
+
+All. And I think,, this is probably a good,, stopping point, because if we get too far into this,
+
+it's,, it's going to be cut off in the middle and all there, but in suspense for next week.,, let's pick the let's pick up next week.
+
+We're going to, we're going to start off with how to,, evaluate different models or how they measure performance.,, doing evaluation.,, we'll talk about cross-validation and the importance of test and validation sets,,, talking about different error metrics.
+
+And then we will continue on,, our data topic for next week,, getting into some of the future engineering stuff.,, a couple of things for next week.
+
+I may skip to the end here. I'll send his out in a note as., there's a couple of papers I'd,, you to read.
+
+Papers are articles I'd you to read. This first one is the one I showed.
+
+It would be in a class. Machine learning that matters., there's a second one called Google's role as the ML.
+
+ this is a it's an internal set of rules Google has also published and,, made public now for their engineers on how they approach machine learning projects.
+
+And it's a very practical,, set of rules for how the how know to follow and the machine learning project.
+
+ I'd you to read through that as.., that'll be your homework for next week.. Additional items.
+
+ I mentioned I will I will go through, update the requirements at txt and the GitHub repo and send and know that when that's done.
+
+ everybody can pull that and get that.,, just another about the repo.
+
+I'm not going to spend time, generally speaking, in class looking at the repo.
+
+I may pull up,, notebook here and there that show an example of something, but I'm not going to,, walk you through the code.
+
+I trust that you can,, figure out the code on your own.,, each week,, there usually are, one or more notebooks in there that correspond to what we're talking about in the lecture session.
+
+ take some time to go through the notebooks on your own,, in there and make sure you understand how things work.
+
+I think you'll find they're very helpful with the homework as,, because they'll give you,, some of the syntax and some of the methods that you need for the homework., you can check that out. I'll send another one that's up for you.
+
+Updated. I'll publish the,, assignment one.
+
+ that will be due,, in two weeks..
+
+Week three., your first submission won't be due for that., and then I think next week, we'll,, we'll be ready to publish,, project one, you can get a start on that, too.
+
+Questions start to prepare for the chat bot experience at the top class tomorrow.
+
+Is that going to be the first 30 slides here or., that's a good question.
+
+Actually. I think since we didn't get as far as I wanted, I'll probably hold off,, our first chat bot session for two weeks.
+
+ we have a little bit more content to,, to do. don't worry about that for next week.
+
+In two weeks, we'll do our first one that will cover,, everything that we've covered far.
+
+And we'll cover next week.., wrote in the sample slides in front of them.. It looks it's hidden from you.
+
+ we can change that quickly.
+
+And you can. Sure it works here.
+
+I try to refresh now and see if you see a tab that says files show up.
+
+ you see that we have the slides. All.
+
+Any questions before we wrap up. Thanks.
+
+My reward., what is it that it's,.
+
+It's., it's,, it's,. I need to get off Instagram,., sir.. There you go.. measurement.
+
+Good to know. All. Now, now we know for the future where that came from.
+
+Have a good rest of the week, everybody. Reverend. No., no. 501 this week or starting 501 next week.
+
+ don't worry about the showing up Friday. I also, I have not, because we're not having a seminar.
+
+I'm not going to be doing my name office hour this Friday., but if you have something you want to talk about, just send me a note.
+
+We'll,, we'll figure out a good,, a good time to do that.
+
+All. See everybody next week, I do. Thank you, thank you.
+
+John..
+
+This is a Christian Science reading. Yes, Thomas.
+
+I think. You've been here.,, thank you for that.. I think it's important for us to be involved, because I just think it's essential to have something.
+
+ that..
+
+But I'm not sure I would have guessed that means.
+
+Or, the part you have on a good percentage point... I know where I work.
+
+Oh.., something this... Thank you.,, I have to do,, five.., it was a good idea to.
+
+Oh,. Sorry. I haven't even looked at it.
+
+I know, I have to. I just,.
+
+I have the. Vision for the future.
+
+I don't know if that's it. I don't know.
+
+I'm all. It's. All.
+
+Oh,. I'm fine.
+
+Thanks for speaking with you. I don't know what I did.
+
+I'm just here again. I didn't, I thought I was. I don't know.
+
+I was,, but,, you said something at the time., I don't remember. I didn't want to talk.
+
+I think it was,, I think somewhere between 3 and 400.
+
+I think as long as it works at the devil, I don't care.
+
+I was just really tired., this figure was small, but,, the crazy part is,, I'm a crack.
+
+ I'm having feels., because I get those wonderful hang ups.. They,, they do get more applications. I see them,, I think in around 2000 applications.
+
+ it's a somewhat higher than ours, but we also have a very high.,, we, we have,, we're trying to get hardware in between some of our.,., there's 3 to 400 people and there's.., there's 22 of us, I think in person.. We're., there's another it's,, if it's with six online or six new ones online, I think..,, we have a group for the half of the hour.,, I'm just curious. But that's a great tip actually, because I would in that sense.
+
+Oh, that's about how what I'm doing.
+
+I think it's a common mistake I see at all, but it's just without some comparison that you don't know what's good.. That's, you did.. Sure., typically not, it's usually,, utility records.
+
+They do at the time of outages. It's common and they'll publish it.
+
+ most utilities have,, an online portal that you can go to., if you're a,,, a Duke Energy customer here in South Carolina or something,
+
+they will usually have a portal you can go to, a website during a storm and you can see a map.
+
+And I'll tell you, here's how many outages in different places., because they do, they are required to publish that information.
+
+They say 300,, power outages going on now or something., you can you can get it., but usually you have to get it, in real time as the event is happening.
+
+And then you could store it yourself and keep it.,, there's at least one company I know that they actually, it's just a I think it's just a guy.
+
+And he made a business out of,, he wrote some scripts that just scrape all those and store it all.
+
+And then he kept,, this historical record, and then you could., show the map. And he created this,, gas.
+
+And then they,, charge people to get access to the data set up, all the historical outage records.,, you can do stuff that, and, and you might if you search online now you might find some,
+
+some,, data sets available now for different utilities that may or may not be free.
+
+Or you might., you might have to pay for that. I'm not sure., we got our data typically from the utility customer that we worked with.. Sorry to show you interest and energy.
+
+I was just thinking about it through one of the projects and I thought it was super interesting.. If you don't find where the power outages are, then predicting where the next one is would be.. If you search around, you might find,, you might find some data set somewhere.. I do find that interesting too, because I was on Twitch, I missed it.
+
+And he was the worst offender.. But then as soon as someone hits close to home, I have to have.. I would talk with,, with Daniel,, Davis about that.. I can't really do anything regarding the bootcamp. it's to chat with him.
+
+About what,, what was going on, and make sure that,, with the work you do, that you're still able to pass the bootcamp.. Good..,, just check with him., and then,, let me know, but,,, he., I had some issues..,, I talked to him, and,, I'm not sure how it stands in terms of pass or fail, but,.,. If there were certain things that were,, preventing you from getting it worked on time,
+
+maybe just talk to him about that or something and see if there's something that can be done..
+
+Thank you. Sure thing. And...
+
+I'm. Know.
+
+And. All.....
+
+I.., here I have..
+
+My,. In the background on me.
+
+I my. And.. And then.
+
+And,., I opened., and. You probably haven't had me before.
+
+I give you a lot of information. I want to make sure that what I.
+
+I think that's part of it.
+
+That working together. For life.
