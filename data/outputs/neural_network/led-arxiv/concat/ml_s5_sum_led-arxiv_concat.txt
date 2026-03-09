@@ -1,0 +1,15 @@
+ this is a follow - up to my talk at the classwise workshop on machine learning and data science , held at the university of north carolina , june 27 - 29 , 2011 . 
+ this is a follow - up to my talk at the workshop on machine learning and data science , held at the university of north carolina , june 27 - 29 , 2011 . 
+ this is a follow - up to my talk at the workshop on machine learning and data science , held at the university of north carolina , june 27 - 29 , 2011 . 
+ this is a follow - up to my talk at the workshop on machine learning and data science , held at the university of north carolina , june 27 - 29 , 2011 . 
+ this is a follow - up to my talk at the workshop on machine learning and data science , held at the university of north carolina , june 27 - 29 , 2011 . 
+ this is a follow - up to my talk at the workshop on machine learning and data science , held at the university of north carolina , june 27 - 29 , 2011 . 
+ this is a follow - up to my talk at the workshop on machine learning and data science , held at the university of  in support vector machines today , we introduce a concept that we call gradient descent , and then we come back to talk about how it applies to the particular case of negative block . 
+ we introduce a concept that we call gradient descent , and we come back to talk about how it applies to the particular case of negative block . 
+ we introduce a concept that we call gradient descent , and we come back to talk about how it applies to the particular case of negative block . 
+ we introduce a concept that we call gradient descent , and we come back to talk about how it applies to the particular case of negative block . 
+ we introduce a concept that we call gradient descent , and we come back to talk about how it applies to the particular case of negative block . 
+ we introduce a concept that we call gradient descent , and we come back to talk about how it applies to the particular case of negative block . 
+ we introduce a concept that we call gradient descent , and we come back to talk about how it applies to the particular case of negative block . 
+ we introduce a concept that we call gradient descent , and we come back to talk about how it applies to the particular case of negative block . 
+ we introduce a concept that we call

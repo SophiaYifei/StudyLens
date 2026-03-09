@@ -1,0 +1,44 @@
+Calculate similarity between embeddings
+56
+Text Summarization
+Extractive summarization
+Select a subset of sentences from the original text that attempt to retain the most important points of the document
+All elements come from original document
+Abstractive summarization
+Attempts to understand original document and then attempt to generate a shorter document which retains the key points of the original
+May use different language than original document
+57
+Text Summarization
+Web page summaries
+Email summaries
+Scientific article summaries
+Video transcription summaries
+58
+Text Summarization
+Extractive Example
+TextRank uses an unsupervised graph-based approach to identifying and extracting the most “central” sentences in a document
+59
+Text Summarization
+Abstractive Example
+We can use transformer models pre-trained on a summarization dataset or train them ourselves
+Note that larger documents must be broken into sequences with a max length dictated by the model architecture
+60
+Topic Modeling
+Can be useful to “tag” documents based on topics or attributes
+Applications:
+Auto-tagging of web articles
+Unsupervised document classification
+Identifying attributes in product reviews
+Auto-tagging customer support tickets
+61
+Topic Modeling
+Methods
+Supervised - if sufficient labeled training data is available
+Unsupervised -
+[Traditional] Latent Semantic Analysis (LSA)
+[Traditional] Latent Dirichlet Allocation (LDA)
+Transformer embeddings
+62
+Topic Modeling
+Could assume the topic’s keywords are contained in the document
+Which words are the right keywords? Oh, you can do a spring. It's very boring., I don't them. I some engagement., would be good. By our first word two vectors dot product score one. You have those two different sequences that you want words to attend to each other in those two different sequences. We've got our scaled dot product attention here, which is what we saw on the last slide and what we've been talking about. I was. We decide that we want to use an indifferent embedding model than the one used previously to determine the best chunking approach. And the record is in,, group chat model..,, we would definitely use that train for our.,, you can go in and it might have been an 11 judge approach. But I'm, oh man. Oh wait. Top of every page before I go on. And you're saying there's a there is a correlation, but it's not the reason I was not able to open or it's not that. or being rebuilt??

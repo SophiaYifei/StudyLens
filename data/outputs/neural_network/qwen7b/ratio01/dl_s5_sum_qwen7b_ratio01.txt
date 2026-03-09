@@ -1,0 +1,55 @@
+### Summary of Lecture on Natural Language Processing II
+
+#### Agenda
+- **Attention & Transformers**
+  - Attention Fundamentals
+  - Transformer Architecture
+  - Popular Implementations (BERT, GPT)
+  - Applied NLP Techniques (Text Similarity, Text Summarization, Topic Modeling)
+
+- **Text Representation**
+  - Static vs Contextual Embeddings
+  - Word Embeddings (e.g., Word2Vec, GloVe)
+  - Learned Positional Embeddings
+
+- **Attention Mechanisms**
+  - Self-Attention
+    - Dot Product Attention
+    - Softmax Normalization
+    - Weighted Sum
+  - Multi-Head Attention
+  - Cross-Attention
+
+- **Transformer Architecture**
+  - Encoder-Decoder Structure
+  - Feed Forward Networks
+  - Positional Encoding
+  - Masked Self-Attention
+  - Cross-Attention
+
+- **Applied NLP Tasks**
+  - Text Similarity
+  - Text Summarization (Extractive vs Abstractive)
+  - Topic Modeling (LDA, BERTopic)
+
+- **Advanced Topics**
+  - Visualizing Embedding Spaces
+  - Large Language Models (LLMs)
+  - Multimodal Models (CLIP, ViT)
+
+---
+
+### Detailed Topics Covered
+
+#### Attention & Transformers
+
+**Attention Fundamentals**
+
+- **Self-Attention**
+  - **Dot Product Attention**: 
+    \[
+    \text{score}(i,j) = v_i \cdot v_j
+    \]
+  - **Softmax Normalization**:
+    \[
+    w(i,j) = \frac{\exp(\text{score}(i,j)/\sqrt{d_k})}{\sum_{j'} \exp(\text{score}(i,j')/\sqrt{d

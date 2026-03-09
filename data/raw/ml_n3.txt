@@ -95,7 +95,7 @@ Polynomial Regression
 	•	Add higher-degree terms
 	•	Still linear in coefficients
 	•	Increase model complexity
-Degree 1 → linear Degree 3 → more flexible
+Degree 1 → linearDegree 3 → more flexible
 ⚠ Risk of overfitting
 Question
 	•	How to choose polynomial degree?

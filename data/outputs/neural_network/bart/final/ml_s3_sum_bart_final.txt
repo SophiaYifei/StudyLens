@@ -1,0 +1,1 @@
+ linear regression is the foundation of many ML models. It is a simple, interpretable model that is fast to train and easy to understand. We'll also look at the difference between LASSO and Ridge regression. And we'll talk about how to personalize a quiz to help students learn.

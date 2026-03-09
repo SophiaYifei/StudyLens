@@ -1,0 +1,6 @@
+Be honest. for the second part of my.. Good morning everybody. It's over., always. you click here. We're trying to lobby., and if by now you have a say that you have some have message and you have your name. Especially when it comes into the syntax error., back to our qubits. maybe you can, you can, you can say, hey, I don't I don't want to sing at all. your slides, folder structure. we'll probably maybe even use this example in that course and go deeper in it, but,. All. And you're the one that ends up having to think through all of the sampling and bias issues when you compile the data., in the first place.,,, this is probably the main way that bias gets introduced into models is,
+is through our sampling strategy or how we're, how are choosing the data that we select to do our model train., there are two different main buckets or categories of sampling that we do what's called non probability sampling., and then what we, we call, random sampling. But for the most part,,, it would be. You have to decide which ones make sense. You., I've,, I tell you, I was at,, 20, 25 years ago was part of a formal program this at my organization at HP., and that really helped me. To-Do
+Always split before feature selection
+Fix random_state for reproducibility
+Sampling
+Why Sample?

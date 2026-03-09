@@ -1,0 +1,115 @@
+### Summary of Lecture Material: Modeling Process & Algorithms in Machine Learning
+
+#### Introduction
+- **Context**: 
+  - Situating machine learning in real-world applications.
+  - Emphasizing the broader process beyond just running algorithms.
+  
+- **What We Will Learn**:
+  - Best practices in the modeling process.
+  - Key aspects of modeling, evaluation, and interpretation.
+  - Overview of key algorithms and their strengths and limitations.
+  - Applying machine learning to real-world structured data.
+
+#### Modeling Process
+- **Best Practices**:
+  - Problem identification and framing.
+  - Data collection and feature selection.
+  - Algorithm selection considering performance, interpretability, and computational cost.
+  - Importance of simplicity (Occam's Razor).
+  - Avoiding data leakage and ensuring proper validation.
+  - Balancing bias and variance.
+  - Evaluating models using appropriate metrics and cross-validation.
+
+- **Algorithm Selection**:
+  - No Free Lunch Theorem: No single algorithm universally outperforms others.
+  - Trade-offs between performance, interpretability, and computational cost.
+  - Occam's Razor: Prefer simpler solutions when other factors are equal.
+  - Example: Choosing between a complex model and a simpler one for practicality.
+
+- **Model Evaluation**:
+  - Train-test split to avoid overfitting.
+  - Proper use of validation sets and cross-validation.
+  - Importance of avoiding tuning on the test set.
+  - Sampling strategies: Random vs. non-probability, stratified, weighted.
+  - Identifying and mitigating data leakage.
+  - Understanding the bias-variance tradeoff.
+  - Plotting validation curves to diagnose overfitting.
+
+- **Metrics**:
+  - Distinguishing between outcomes (business goals) and outputs (model performance metrics).
+  - Regression metrics: Mean Squared Error (MSE), Mean Absolute Error (MAE), Mean Absolute Percentage Error (MAPE), R².
+  - Classification metrics: Accuracy, Precision, Recall, False Positive Rate (FPR), Area Under ROC Curve (AUROC), Precision-Recall curve.
+
+- **Feature Selection**:
+  - Removing high-null features and reducing multicollinearity.
+  - Using feature selection methods like `SelectKBest` and Random Forest importance.
+  - Manual inspection of selected features.
+  - Encoding techniques: Ordinal and one-hot encoding.
+  - Scaling for algorithms requiring it (e.g., KNN, clustering, regularized regression).
+
+- **Class Imbalance**:
+  - Addressing class imbalance to avoid accuracy traps.
+  - Techniques: Oversampling, undersampling.
+  - Fixing root causes whenever possible.
+
+- **Pipelines**:
+  - Preventing data leakage.
+  - Ensuring reproducibility.
+  - Cleaner production workflows.
+
+#### Supervised vs. Unsupervised Learning
+- **Supervised Learning**:
+  - Known inputs (features) and outputs (targets).
+  - Types: Regression (predicting numeric values) and Classification (predicting categories).
+  - Examples: Stock price prediction (regression), fake news detection (classification).
+
+- **Unsupervised Learning**:
+  - Only known inputs (features).
+  - Goal: Logical organization of input data.
+
+#### Heuristics vs. Machine Learning
+- **Heuristics**:
+  - Simple rules based on past experience.
+  - Example: Demand prediction using current day temperature.
+  - Value in providing a starting point and baseline performance.
+
+- **Machine Learning**:
+  - More adaptable and scalable compared to heuristics.
+  - Example: Weather forecasting using historical data and weather patterns.
+
+#### Practical Application
+- **Problem Statement Writing**:
+  - Practice framing real-world problems before modeling.
+  - Example: Predicting next day high temperature for RTU airport.
+
+- **Baseline Development**:
+  - Starting with simple heuristics and machine learning algorithms (linear regression, logistic regression).
+  - Improving upon baselines through more complex models.
+
+- **Algorithm Selection**:
+  - Consideration of performance, interpretability, and computational cost.
+  - Example: Choosing between a linear regression and a neural network for a specific task.
+
+- **Evaluation Metrics**:
+  - Importance of setting outcomes (business goals) before evaluating models.
+  - Differentiating between regression and classification tasks.
+
+- **Feature Engineering**:
+  - Removing high-null features and reducing multicollinearity.
+  - Using feature selection methods like `SelectKBest` and Random Forest importance.
+  - Manual inspection of selected features.
+
+- **Handling Class Imbalance**:
+  - Addressing class imbalance to ensure accurate model performance.
+  - Techniques: Oversampling, undersampling.
+
+- **Pipelines**:
+  - Preventing data leakage and ensuring reproducibility.
+  - Cleaner production workflows using pipelines.
+
+### Conclusion
+- **Summary**:
+  - Emphasis on the holistic approach to machine learning, encompassing problem framing, data handling, algorithm selection, and evaluation.
+  - Importance of simplicity, avoiding data leakage, and balancing bias and variance.
+  - Practical considerations for deploying and adopting machine learning models in real-world scenarios.

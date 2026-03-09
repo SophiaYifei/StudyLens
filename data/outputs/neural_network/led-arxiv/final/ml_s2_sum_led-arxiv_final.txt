@@ -1,0 +1,13 @@
+ predictive modeling is the process of creating a predictive model that makes accurate predictions on new unseen data .  the goal of predictive modeling is to create a model that makes accurate predictions on new unseen data .  we can not estimate performance on data we do not have , so instead we split our data into two setsTraining set  - build and train the modelTest set  - evaluate model performance performanceTraining  (~80-90% )Test(~10-20%)Use for model building & trainingUse to evaluate final modelSamplingWhy do we sample ?  
+ two main types of sampling : nonprobability sampling and random samplingNonprobability sampling  
+ is when the selection of data is not based on any probability criteria .  
+ random sampling involves randomly choosing samples from population .  
+ nonprobability sampling is when the selection of data is not based on any probability criteria .  
+ random sampling is when the selection of data is not based on any probability criteria .  
+ samples are not representative of real - world data and thus are highly likely to cause bias in your model .  
+ however , this is a very common approach in practice .  examples : large language models are trained on easily collected data - Wikipedia , Reddit , Common Crawl etc Sentiment analysis models often trained on IMDB movie reviews or Amazon reviews  self-driving cars are initially trained only on Phoenix , AZ and Bay Area for rainy weather  random sampling involves randomly choosing samples from population    this is a talk given at the g8 workshop on machine learning and artificial intelligence .    
+ this is a talk given at the g8 workshop on machine learning and artificial intelligence .    
+ this is a talk given at the g8 workshop on machine learning and artificial intelligence .    
+ this is a talk given at the g8 workshop on machine learning and artificial intelligence .    
+ this is a talk given at the g8 workshop on machine learning and artificial intelligence .    
+ this is a talk given at the g8 workshop on machine

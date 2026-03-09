@@ -1,0 +1,28 @@
+### Summary of Lecture on Classification Models
+
+#### Introduction to Classification
+- **Definition**: Predict a categorical target (e.g., handwritten digits, tumor type, disease category).
+- **Types**:
+  - Binary (two classes): Benign vs. malignant tumors, Type of lung disease.
+  - Multiclass (multiple classes): Income in bins, Sales lead scoring.
+- **Key Differences from Regression**:
+  - Cannot extrapolate beyond training data.
+  - Cannot predict values outside the range of observed data.
+
+#### Logistic Regression
+- **Objective**: Predict the probability \(P(y=1)\) instead of \(y\).
+- **Function**: Use the **sigmoid (logistic)** function to ensure outputs are between 0 and 1.
+- **Mathematical Formulation**:
+  \[
+  P(y=1) = \frac{1}{1 + e^{-(w_0 + w_1x)}}
+  \]
+- **Parameter Estimation**:
+  - **Cost Function**: Maximum Likelihood Estimation (MLE) instead of Sum of Squared Errors (SSE).
+  - **Optimization**: Gradient Descent to minimize Negative Log Likelihood (NLL).
+
+#### Decision Boundary and Threshold
+- **Threshold**: Default is 0.5; adjust to improve precision and recall.
+- **Effect of Threshold**: Higher threshold increases precision but decreases recall, and vice versa.
+
+#### Logistic Regression in scikit-learn
+- **Methods**:

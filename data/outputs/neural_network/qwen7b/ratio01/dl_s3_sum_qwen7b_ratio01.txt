@@ -1,0 +1,24 @@
+### Summary of Lecture 3: Applied Computer Vision
+
+#### Major Topics Covered:
+
+1. **Image Classification**
+   - **Models**: DenseNet, SqueezeNet, ResNet, Inception, VGG, AlexNet
+   - **Key Concepts**:
+     - **DenseNet**: Dense connections and feature reuse; pros: alleviates vanishing gradients, cons: memory-intensive, complex
+     - **SqueezeNet**: Small CNN architecture; pros: efficient, small parameters
+   - **Pre-trained Models**: 
+     - Available in PyTorch Model Zoo and TensorFlow Model Garden
+     - Workflow: Load, freeze, replace head, optional unfreeze and fine-tune
+
+2. **Object Detection**
+   - **Bounding Box Methods**: 
+     - **YOLO (You Only Look Once)**: Grid-based, multiple anchor boxes, fast inference
+     - **Faster R-CNN**: Region Proposal Network (RPN) for proposals, shared feature map, faster than R-CNN
+   - **Concepts**:
+     - Anchor boxes, Non-Maximum Suppression (NMS), Intersection Over Union (IoU)
+
+3. **Semantic Segmentation**
+   - **Methods**: U-Net, Mask R-CNN, DeepLab, SegNet
+   - **Architecture**: U-Net uses encoder-decoder with skip connections to preserve spatial details
+   - **Metrics**: Mean Intersection Over Union (mIoU), pixel accuracy, boundary F

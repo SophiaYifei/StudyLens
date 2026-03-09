@@ -1,0 +1,22 @@
+### Summary of University Lecture on Computer Vision I
+
+#### Introduction to Computer Vision
+- **Topics Covered**: Overview of computer vision, including image recognition, facial recognition, product identification, object detection, autonomous driving, manufacturing, agriculture, image segmentation, medical imaging, object tracking, motion analysis, surveillance, sports tracking, scene reconstruction, and VR/AR.
+- **Challenges**:
+  - Complex and messy real-world data (occlusions, lighting, background, pose, perspective).
+  - Interpreting depth and spatial relationships in images.
+  - Need for large, labeled datasets.
+  - Requirement for fast inference in many applications.
+
+#### Traditional Computer Vision
+- **Features Engineering**:
+  - **Color-Based Features**: Color histograms, color moments, dominant colors, color coherence vectors.
+  - **Texture-Based Features**: Gray level co-occurrence matrices (GLCM), Local Binary Patterns (LBP), Gabor filters, Haralick features.
+  - **Statistical Features**: Mean, variance, entropy, Zernike moments, wavelet transforms.
+  - **Shape-Based Features**: Edge detection (Sobel, Canny), contour descriptors, Hu moments, Scale-Invariant Feature Transform (SIFT), Speeded-Up Robust Features (SURF), Histogram of Oriented Gradients (HOG).
+
+#### Convolutional Neural Networks (CNNs)
+- **Conceptual Overview**:
+  - **Convolution Operation**: Sliding window over an image, calculating weighted sums of kernel values.
+  - **2D Convolution**: Extending 1D convolution to 2D images.
+  - **3D Convolution

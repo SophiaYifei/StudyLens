@@ -6,11 +6,21 @@ import nltk
 import math
 import os
 import torch
+
+import random
+from sklearn.feature_extraction.text import TfidfVectorizer
+
 from pathlib import Path
-from dotenv import load_dotenv
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
-load_dotenv(_PROJECT_ROOT / ".env", override=True)  # reads .env file for ANTHROPIC_API_KEY
+
+# Load .env file if it exists (optional, for local development)
+try:
+    from dotenv import load_dotenv
+    load_dotenv(_PROJECT_ROOT / ".env", override=True)
+except ImportError:
+    pass  # dotenv not installed, rely on system environment variables
+
 
 nltk.download('punkt_tab')
 
@@ -23,6 +33,90 @@ class BaseSummarizer:
 
     def summarize(self, text):
         raise NotImplementedError("Subclasses must implement summarize()")
+
+# --- Naive Baseline: Random Extractive ---
+class RandomExtractiveSummarizer(BaseSummarizer):
+    """
+    Naive baseline: randomly select sentences from the input text.
+    No model, no learning — just random sampling.
+    This establishes the absolute floor that any real model should beat.
+    """
+
+    def __init__(self, num_sentences=15, seed=42):
+        """
+        Args:
+            num_sentences: how many sentences to randomly pick
+            seed: random seed for reproducibility
+        """
+        self.num_sentences = num_sentences
+        self.seed = seed
+
+    def summarize(self, text: str, final_pass: bool = True) -> str:
+        sentences = sent_tokenize(text)
+        print(f"Input: {len(sentences)} sentences.")
+
+        # Pick random sentences (or all if fewer than num_sentences)
+        k = min(self.num_sentences, len(sentences))
+        random.seed(self.seed)
+        selected_indices = sorted(random.sample(range(len(sentences)), k))
+
+        # Keep original order so the summary reads coherently
+        summary = " ".join(sentences[i] for i in selected_indices)
+        print(f"Randomly selected {k} sentences.")
+        return summary
+
+
+# --- Classical ML: TF-IDF Extractive ---
+class TFIDFExtractiveSummarizer(BaseSummarizer):
+    """
+    Classical ML baseline: rank sentences by TF-IDF importance score,
+    then select the top-k most informative sentences.
+
+    How it works:
+    1. Split input into sentences
+    2. Fit TF-IDF on the sentences (each sentence = one "document")
+    3. Score each sentence = sum of its TF-IDF values
+       (sentences with rare, informative words get higher scores)
+    4. Select top-k highest-scoring sentences
+    5. Return them in original order
+
+    This is a standard extractive summarization approach using
+    a classical (non-neural) ML technique.
+    """
+
+    def __init__(self, num_sentences=15):
+        """
+        Args:
+            num_sentences: how many top sentences to select
+        """
+        self.num_sentences = num_sentences
+
+    def summarize(self, text: str, final_pass: bool = True) -> str:
+        sentences = sent_tokenize(text)
+        print(f"Input: {len(sentences)} sentences.")
+
+        if len(sentences) <= self.num_sentences:
+            return text
+
+        # Fit TF-IDF on the sentences
+        # Each sentence is treated as a "document" in the corpus
+        vectorizer = TfidfVectorizer(stop_words="english")
+        tfidf_matrix = vectorizer.fit_transform(sentences)
+
+        # Score each sentence: sum of TF-IDF values across all words
+        # Higher score = more unique/informative content
+        sentence_scores = tfidf_matrix.sum(axis=1).A1  # .A1 converts matrix to flat array
+
+        # Get indices of top-k scoring sentences
+        k = min(self.num_sentences, len(sentences))
+        top_indices = sentence_scores.argsort()[::-1][:k]
+
+        # Sort by original position to maintain document flow
+        top_indices = sorted(top_indices)
+
+        summary = " ".join(sentences[i] for i in top_indices)
+        print(f"Selected top {k} sentences by TF-IDF score.")
+        return summary
 
 # --- BART Summarizer ---
 class BARTSummarizer(BaseSummarizer):
@@ -39,60 +133,63 @@ class BARTSummarizer(BaseSummarizer):
         # Return integer
         return len(self.tokenizer.encode(text, add_special_tokens=False))
 
-    def _split_into_chunks(self, text):
-        # Step 1: Split text into sentences (use nltk sent_tokenize)
+    def _split_into_chunks(self, text: str) -> list[str]:
+        """
+        Greedily fill each chunk sentence by sentence.
+        When adding the next sentence would exceed SAFE_LIMIT,
+        close the current chunk and carry that sentence to the next one.
+        Single sentences that exceed SAFE_LIMIT are hard-truncated at token level.
+        """
+        SAFE_LIMIT = self.max_input_tokens - 2   # reserve 2 for BOS/EOS
+
         sentences = sent_tokenize(text)
-
-        # Step 2: Count total tokens (I changed it to Step 3)
-
-        # Step 3: Count tokens for each sentence (so we don't recount later)
-        sent_token_counts = [self._count_tokens(s) for s in sentences]
-        total_tokens = sum(sent_token_counts)
-
-        # Step 4: Calculate minimum number of chunks, then balanced target
-        num_chunks = math.ceil(total_tokens / self.max_input_tokens)
-        target = total_tokens / num_chunks
-
-        # Step 5: Fill chunks using prefix sum to find nearest sentence boundary
-        #         to each ideal cut point
         chunks = []
-        current_chunk = []
-        current_tokens = 0  # cumulative (for ideal_cutoff comparison)
-        chunk_tokens = 0    # current chunk only (for hard limit check)
-        chunk_index = 0
+        current_sentences = []
+        current_tokens = 0
 
-        for i, sentence in enumerate(sentences):
-            sent_toks = sent_token_counts[i]
+        for sentence in sentences:
+            sent_toks = self._count_tokens(sentence)
 
-            # Hard limit: if adding this sentence would exceed max_input_tokens, flush first
-            if chunk_tokens + sent_toks >= self.max_input_tokens and current_chunk:
-                chunks.append(" ".join(current_chunk))
-                current_chunk = []
-                chunk_tokens = 0
-                chunk_index += 1
+            # Edge case: a single sentence is already over the limit
+            # Hard-truncate it at token level and treat as its own chunk
+            if sent_toks > SAFE_LIMIT:
+                # First, flush whatever we have so far
+                if current_sentences:
+                    chunks.append(" ".join(current_sentences))
+                    current_sentences = []
+                    current_tokens = 0
+                # Truncate the oversized sentence and save it directly
+                token_ids = self.tokenizer.encode(sentence, add_special_tokens=False)
+                truncated = self.tokenizer.decode(token_ids[:SAFE_LIMIT], skip_special_tokens=True)
+                chunks.append(truncated)
+                continue
 
-            current_chunk.append(sentence)
+            # Normal case: adding this sentence would exceed the limit
+            # → close current chunk, start a new one with this sentence
+            if current_tokens + sent_toks > SAFE_LIMIT:
+                chunks.append(" ".join(current_sentences))
+                current_sentences = []
+                current_tokens = 0
+
+            current_sentences.append(sentence)
             current_tokens += sent_toks
-            chunk_tokens += sent_toks
 
-            ideal_cutoff = target * (chunk_index + 1)
+        # Don't forget the last chunk
+        if current_sentences:
+            chunks.append(" ".join(current_sentences))
 
-            if current_tokens >= ideal_cutoff and chunk_index < num_chunks - 1:
-                chunks.append(" ".join(current_chunk))
-                current_chunk = []
-                chunk_tokens = 0
-                chunk_index += 1
-
-        if current_chunk:
-            chunks.append(" ".join(current_chunk))
-
-        # Return list of chunk strings
         return chunks
 
 
     def _summarize_single(self, text: str, max_length=150, min_length=40) -> str:
         # Call self.pipe(text, max_length=..., min_length=..., do_sample=False)
         # Return the summary_text string
+
+        # Failsafe: hard-truncate at token level before passing to model
+        token_ids = self.tokenizer.encode(text, add_special_tokens=False)
+        if len(token_ids) > self.max_input_tokens - 2:
+            token_ids = token_ids[:self.max_input_tokens - 2]
+            text = self.tokenizer.decode(token_ids, skip_special_tokens=True)
 
         # Safety checks
         text_tokens = self._count_tokens(text)
@@ -202,7 +299,7 @@ class QwenSummarizer(BaseSummarizer):
     128K context window allows single-pass summarization without chunking.
     """
 
-    def __init__(self):
+    def __init__(self, output_ratio=0.06):
         from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
         self.model_name = "Qwen/Qwen2.5-7B-Instruct"
@@ -226,6 +323,8 @@ class QwenSummarizer(BaseSummarizer):
 
         # TODO: to see whether we should modify this value
         self.max_input_tokens = 65536  # use 65K of the 128K window, leave room for output
+
+        self.output_ratio = output_ratio
 
     def _count_tokens(self, text):
         return len(self.tokenizer.encode(text, add_special_tokens=False))
@@ -255,8 +354,8 @@ class QwenSummarizer(BaseSummarizer):
                 "well-organized summaries from university lecture materials."
             )},
             {"role": "user", "content": (
-                "Summarize the following university lecture material into a 300-500 word "
-                "summary. The input combines slide text, lecture transcript, and student "
+                "Summarize the following university lecture material into a comprehensive "
+                "yet concise summary. The input combines slide text, lecture transcript, and student "
                 "notes, so it contains filler words, informal language, typos, and "
                 "off-topic conversations — ignore all of these.\n\n"
                 "Your summary should:\n"
@@ -278,9 +377,9 @@ class QwenSummarizer(BaseSummarizer):
         # Tokenize and generate
         inputs = self.tokenizer(prompt, return_tensors="pt").to("cuda")
 
-        # Dynamic output length: ~5-8% of input tokens, clamped to [200, 1500]
-        target_output = int(total_tokens * 0.06)  # 6% of input
-        max_new = max(300, min(target_output, 1500))
+        # Dynamic output length
+        target_output = int(total_tokens * self.output_ratio)  # output ratio of input
+        max_new = max(300, target_output)
         min_new = max(150, max_new // 4)
 
         print("Generating summary...")
@@ -362,7 +461,7 @@ def process_all_topics(input_dir, output_dir, model, model_tag="default", strate
     summarize each, save as _sum.txt in output_dir.
     """
     input_path = Path(input_dir)
-    output_path = Path(output_dir)
+    output_path = Path(output_dir) / model_tag / strategy
     output_path.mkdir(parents=True, exist_ok=True)
 
     # Step 1: Find all files ending with _ori.txt in input_dir
@@ -386,8 +485,9 @@ def process_all_topics(input_dir, output_dir, model, model_tag="default", strate
         summary = model.summarize(text, final_pass=final_pass)
         print(f"Summary length: {len(summary.split())} words")
 
-    #     c. Create output filename: replace _ori with _sum
-        output_filename = file.name.replace("_ori.txt", f"_sum_{model_tag}_{strategy}.txt")
+        # Create output filename: use only the last part of model_tag
+        short_tag = model_tag.split("/")[-1]
+        output_filename = file.name.replace("_ori.txt", f"_sum_{short_tag}_{strategy}.txt")
         output_file = output_path / output_filename
 
     #     d. Write summary to output_dir / output_filename
@@ -414,17 +514,25 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="StudyLens Summarization Pipeline")
     parser.add_argument("--model", type=str, required=True,
-                        choices=["bart", "longt5", "bart-samsum", "led-arxiv", "qwen7b"],
+                        choices=["random", "tfidf", "bart", "longt5", "bart-samsum", "led-arxiv", "qwen7b"],
                         help="Which model to run")
+    parser.add_argument("--num_sentences", type=int, default=15,
+                        help="Number of sentences for extractive models (default: 15)")
     parser.add_argument("--strategy", type=str, default="both",
                         choices=["concat", "final", "both"],
                         help="Summarization strategy (default: both)")
     parser.add_argument("--input_dir", type=str, default="data/processed")
     parser.add_argument("--output_dir", type=str, default="data/outputs")
+    parser.add_argument("--output_ratio", type=float, default=0.06,
+                        help="Output length as fraction of input tokens (default: 0.06)")
     args = parser.parse_args()
 
     # Model dispatch
-    if args.model == "bart":
+    if args.model == "random":
+        model = RandomExtractiveSummarizer(num_sentences=args.num_sentences)
+    elif args.model == "tfidf":
+        model = TFIDFExtractiveSummarizer(num_sentences=args.num_sentences)
+    elif args.model == "bart":
         model = BARTSummarizer()
     elif args.model == "longt5":
         model = LongT5Summarizer()
@@ -433,20 +541,26 @@ if __name__ == "__main__":
     elif args.model == "led-arxiv":
         model = LEDArxivSummarizer()
     elif args.model == "qwen7b":
-        model = QwenSummarizer()
+        model = QwenSummarizer(output_ratio=args.output_ratio)
 
     # Run strategies
-    if args.model == "qwen7b":
-        # LLM only needs one strategy
+    if args.model == "random":
         process_all_topics(args.input_dir, args.output_dir, model,
-                           model_tag=args.model, strategy="final")
+                           model_tag="naive", strategy="random")
+    elif args.model == "tfidf":
+        process_all_topics(args.input_dir, args.output_dir, model,
+                           model_tag="classical_ml", strategy="tfidf")
+    elif args.model == "qwen7b":
+        ratio_tag = f"ratio{int(args.output_ratio * 100):02d}"
+        process_all_topics(args.input_dir, args.output_dir, model,
+                           model_tag="neural_network/qwen7b", strategy=ratio_tag)
     elif args.strategy == "both":
         process_all_topics(args.input_dir, args.output_dir, model,
-                           model_tag=args.model, strategy="concat")
+                           model_tag=f"neural_network/{args.model}", strategy="concat")
         process_all_topics(args.input_dir, args.output_dir, model,
-                           model_tag=args.model, strategy="final")
+                           model_tag=f"neural_network/{args.model}", strategy="final")
     else:
         process_all_topics(args.input_dir, args.output_dir, model,
-                           model_tag=args.model, strategy=args.strategy)
+                           model_tag=f"neural_network/{args.model}", strategy=args.strategy)
 
     print("\nDone!")

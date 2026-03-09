@@ -1,0 +1,111 @@
+### Summary of University Lecture on Linear Regression
+
+#### Introduction
+- **Context**: The lecture covers fundamental concepts of linear regression, including its application in various scenarios like weather forecasting.
+- **Link to Practical Example**: Accessible via `fastapi-app-690891431278.us-central1.run.app/student/quiz/d147bbc6-c9db-46c2-b704-a4373e55690b`.
+
+---
+
+#### Key Topics Covered:
+
+1. **Linear Models**
+   - **Definition**: Linear models are linear in the parameters \( w \). They can model non-linear relationships via transformations.
+   - **Examples**:
+     - Simple Linear Regression: \( y = w_0 + w_1 x \)
+     - Multiple Linear Regression: \( y = w_0 + w_1 x_1 + w_2 x_2 + ... + w_n x_n \)
+
+2. **Linear Regression Basics**
+   - **Definition**: A model that assumes linear relationships between features and targets.
+   - **Importance**: Forms the basis of more complex ML models; can be surprisingly effective if properly used.
+   - **First Model**: Useful as a benchmark to establish a baseline for model performance.
+
+3. **Simple vs. Multiple Linear Regression**
+   - **Simple Linear Regression**: Models \( y \) as a function of a single feature \( x \).
+   - **Multiple Linear Regression**: Models \( y \) as a function of multiple features \( x_1, x_2, ..., x_n \).
+
+4. **Model Formulation**
+   - **Parameters**:
+     - \( w_0 \): Intercept (average value for \( y \) when all \( x \)'s are 0)
+     - \( w_i \): Average increase in \( y \) when \( x_i \) is increased by 1, holding other \( x \)'s constant.
+   - **Prediction Equation**:
+     \[
+     y = w_0 + w_1 x_1 + w_2 x_2 + ... + w_p x_p
+     \]
+
+5. **Estimating Parameters**
+   - **Objective**: Minimize the cost function (often the Sum of Squared Errors, SSE).
+   - **Methods**:
+     - **Closed-form Solution**: Using the Normal Equation.
+       \[
+       w = (X^T X)^{-1} X^T y
+       \]
+     - **Gradient Descent**: An iterative optimization technique.
+   - **Vectorized Form**:
+     \[
+     y = X w
+     \]
+     Where \( X \) is the design matrix and \( w \) is the parameter vector.
+
+6. **Assumptions of Linear Regression**
+   - **Linearity**: Expected value of \( y \) for any given \( x \) is a linear function of \( x \).
+   - **Error Independence**: Errors are uncorrelated random variables with zero mean and constant variance (\( \sigma^2 \)).
+   - **Independence of Features**: Feature variables are independent.
+   - **Consequences of Violating Assumptions**:
+     - Non-linearity: Transform features or add polynomial terms.
+     - Non-constant variance: Transform target (e.g., log, sqrt).
+     - Multicollinearity: Remove features or reduce the feature set.
+
+7. **Checking Model Fit**
+   - **Linearity Check**:
+     - Scatterplot of \( y \) vs. \( x \)
+     - Residual plot (residuals centered around 0, no patterns)
+   - **Homoscedasticity Check**:
+     - Residual plot (variance should be evenly scattered around 0, no funnel shape)
+   - **Multicollinearity Check**:
+     - Correlation matrix (highly correlated features identified)
+
+8. **Improving Model Performance**
+   - **Polynomial Regression**: Add higher-degree terms (still linear in coefficients).
+   - **Interaction Terms**: Generate via `PolynomialFeatures` (synergy effects between features).
+   - **Regularization**: Balance fit and simplicity by adding a penalty term to the cost function.
+
+9. **Regularization Techniques**
+   - **Ridge Regression (L2)**:
+     - Penalize squared coefficients: \( \lambda \sum w_i^2 \)
+     - Shrinks coefficients but does not set them to zero.
+   - **LASSO Regression (L1)**:
+     - Penalize absolute coefficients: \( \lambda \sum |w_i| \)
+     - Produces sparse solutions and performs feature selection.
+
+10. **Geometric Intuition**
+    - **LASSO**: Diamond-shaped constraint (coefficients set to zero at corners).
+    - **Ridge**: Circular constraint (coefficients shrink but remain non-zero).
+
+11. **Choosing Between LASSO and Ridge**
+    - **LASSO**: Prefer if simpler model desired, feature selection important.
+    - **Ridge**: Better with collinear features, complex target relationships.
+    - **Default**: Try both and use cross-validation to select the optimal \( \lambda \).
+
+12. **Practical Considerations**
+    - **Scaling Data**: Always scale features before applying regularization.
+    - **Tuning Hyperparameters**: Use validation set or cross-validation to find optimal \( \lambda \).
+
+13. **Wrapping Up**
+    - **Basics**: Linear regression remains a powerful tool, especially for interpretability and benchmarking.
+    - **Advanced Steps**: Improve models by adding polynomial terms, interaction terms, and regularization.
+    - **Final Thoughts**: Compare with advanced models and ensure thorough diagnostics.
+
+---
+
+### Deep Understanding Questions
+1. **Why does minimizing SSE encourage overfitting?**
+   - **Answer**: Minimizing SSE focuses on fitting the training data perfectly, leading to high variance and poor generalization to unseen data.
+
+2. **Why does L1 produce sparsity but L2 does not?**
+   - **Answer**: L1 regularization penalizes the absolute value of coefficients, driving some coefficients to zero (sparsity). L2 regularization penalizes the squared value, shrinking coefficients but not setting them to zero.
+
+3. **When does interpretation matter more than performance?**
+   - **Answer**: When the goal is to understand the relationships between features and the target, rather than achieving the highest predictive accuracy.
+
+4. **Is linear regression still useful in 2026 with deep learning everywhere?**
+   - **Answer**: Yes, linear regression remains valuable for its interpretability, simplicity, and effectiveness in certain domains where non-linear models might be overkill.

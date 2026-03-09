@@ -1,0 +1,20 @@
+ this is the second in a series of seven papers on the subject of self-attention . 
+ the first paper was published in the journal of natural language processing . 
+ the second paper was published in the journal of natural language processing . 
+ the third paper was published in the journal of natural language processing . 
+ the fourth paper was published in the journal of natural language processing . 
+ the fifth paper was published in the journal of natural language processing . 
+ the sixth paper was published in the journal of natural language processing . 
+ the seventh paper was published in the journal of natural language processing .    
+ # 1#2#3#4#1 * # 2 * , # 3 ( # 4 ) # 1#2#3#4#1 * # 2 * , # 3 ( # 4 ) # 1#2#3#4#1 * # 2 * , # 3 ( # 4 ) # 1#2#3#4#1 * # 2 * , # 3 ( # 4 ) # 1#2#3#4#1 * # 2 * , # 3 ( # 4 ) # 1#2#3#4#1 * # 2 * , # 3 ( # 4  we are going to talk about some applications of applied non - linear programming ( nlp ) . 
+ we are going to talk about text similarity , text summarization and topic modeling . 
+ these might be some topics that can be of interest to you. we are going to try to project image features to a common embedding space and then normalize those. we do that concatenation and put it through a linear or dense layer , which is the exact same thing as what we talked about when we talked about multi-head attention. we do that concatenation and put it through a linear or dense layer , which is the exact same thing as what we talked about when we talked about multi-head attention. we do that concatenation and put it through a linear or dense layer , which is the exact same thing as what we talked about when we talked about multi-head attention. we do that concatenation and put it through a linear or dense layer , which is the exact same thing as what we talked about when we talked about multi-head attention. we do that concatenation and put it through a linear or dense layer , which is the exact same thing as what we talked about when we talked about multi-head attention . 
+ we are going to try to project image features to a common embedding space and then normalize those. we do that concatenation and put it through a linear or dense layer , which is the exact same thing as what we talked about when we talked about multi-head attention. we do that concatenation and put it through a linear or dense layer , which is the exact same thing as what we talked about when we talked about multi-head attention . 
+ we do that concatenation and put it through a linear or  this is a transcript of a talk given at the graduate school of computer science and engineering at the university of california at santa barbara . 
+ this is a transcript of a talk given at the graduate school of computer science and engineering at the university of california at santa barbara . 
+ this is a transcript of a talk given at the graduate school of computer science and engineering at the university of california at santa barbara . 
+ this is a transcript of a talk given at the graduate school of computer science and engineering at the university of california at santa barbara . 
+ this is a transcript of a talk given at the graduate school of computer science and engineering at the university of california at santa barbara . 
+ this is a transcript of a talk given at the graduate school of computer science and engineering at the university of california at santa barbara . 
+ this is a transcript of a talk given at the graduate school of computer science and engineering at the university of california at santa barbara . 
+ this is a transcript of a talk given at the graduate school of computer science and engineering at the university of california at santa barbara .

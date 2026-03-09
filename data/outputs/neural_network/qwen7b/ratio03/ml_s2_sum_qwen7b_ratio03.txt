@@ -1,0 +1,95 @@
+### Summary of Lecture on Model Evaluation and Data Preparation
+
+#### Major Topics Covered:
+
+1. **Model Evaluation**
+   - **Training & Test Sets**:
+     - Goal: Create a model that performs well on unseen data.
+     - Split data into Training (80-90%), Validation (10-20%), and Test (10-20%) sets.
+     - Importance of keeping the test set untouched until final evaluation.
+   
+2. **Sampling Techniques**
+   - **Nonprobability Sampling**: Convenience, Snowball, Judgment, Quota.
+     - Examples: Google Images, Twitter followers, Expert opinions.
+     - Risk of bias.
+   - **Random Sampling**: Simple random, Stratified, Weighted.
+     - Stratified ensures representation of subgroups; Weighted assigns weights to samples.
+   
+3. **Data Leakage**
+   - Definition: Test data influencing training process.
+   - Consequences: Over-optimistic performance, poor generalization.
+   - Common sources: Feature selection, scaling, imputation, duplicate observations, time series splits.
+   - Solutions: Always split data before feature selection, validate on untouched data, use cross-validation.
+   
+4. **Model Comparison and Selection**
+   - Train/validation/test split: 60-80% training, 10-20% validation, 10-20% test.
+   - Cross-validation: K-Fold, ShuffleSplit, Leave-One-Out.
+   - Bias-variance tradeoff: More complex models can overfit.
+   - Recognizing overfitting: Diverging training and validation scores.
+   
+5. **Evaluation Metrics**
+   - Regression: MSE, MAE, MAPE, R², Adjusted R².
+     - MAE is more robust to outliers.
+   - Classification: Accuracy, Precision, Recall, FPR, ROC-AUC, Precision-Recall.
+     - ROC-AUC is better for imbalanced data.
+   - Multiclass: Confusion matrices, classification_report().
+   
+6. **Preparing for Modeling**
+   - Steps: Train/test split, feature selection, feature engineering, encoding, scaling, handling class imbalance.
+   - Feature selection: Univariate, Random Forest.
+   - Encoding: Ordinal, One-Hot.
+   - Scaling: MinMax, StandardScaler.
+   - Handling class imbalance: Collect more data, undersample, oversample.
+   
+7. **Pipelines**
+   - Prevent data leakage, ensure reproducibility, cleaner code.
+   - Example: Impute, Encode, Scale, Model.
+   - Use `sklearn` Pipeline and `ColumnTransformer`.
+
+#### Key Definitions and Technical Details:
+
+- **Training & Test Sets**: 
+  - Training set: Build and train the model.
+  - Test set: Evaluate the final model.
+  
+- **Sampling Techniques**:
+  - Nonprobability: Convenience, Snowball, Judgment, Quota.
+  - Random: Simple random, Stratified, Weighted.
+    - Stratified: Ensures representation of subgroups.
+    - Weighted: Assigns weights to samples.
+    
+- **Data Leakage**:
+  - Definition: Test data influencing training process.
+  - Consequences: Over-optimistic performance, poor generalization.
+  - Common sources: Feature selection, scaling, imputation, duplicate observations, time series splits.
+  - Solutions: Always split data before feature selection, validate on untouched data, use cross-validation.
+  
+- **Model Comparison and Selection**:
+  - Train/validation/test split: 60-80% training, 10-20% validation, 10-20% test.
+  - Cross-validation: K-Fold, ShuffleSplit, Leave-One-Out.
+  - Bias-variance tradeoff: More complex models can overfit.
+  - Recognizing overfitting: Diverging training and validation scores.
+  
+- **Evaluation Metrics**:
+  - Regression: MSE, MAE, MAPE, R², Adjusted R².
+    - MAE is more robust to outliers.
+  - Classification: Accuracy, Precision, Recall, FPR, ROC-AUC, Precision-Recall.
+    - ROC-AUC is better for imbalanced data.
+  - Multiclass: Confusion matrices, classification_report().
+  
+- **Preparing for Modeling**:
+  - Steps: Train/test split, feature selection, feature engineering, encoding, scaling, handling class imbalance.
+  - Feature selection: Univariate, Random Forest.
+  - Encoding: Ordinal, One-Hot.
+  - Scaling: MinMax, StandardScaler.
+  - Handling class imbalance: Collect more data, undersample, oversample.
+  
+- **Pipelines**:
+  - Prevent data leakage, ensure reproducibility, cleaner code.
+  - Example: Impute, Encode, Scale, Model.
+  - Use `sklearn` Pipeline and `ColumnTransformer`.
+
+#### Logical Flow and Academic Language:
+
+- The lecture systematically covers the fundamental concepts of model evaluation, including the importance of training and test sets, various sampling techniques, and the risks of data leakage.
+- It delves into model comparison and selection

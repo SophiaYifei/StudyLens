@@ -1,0 +1,1 @@
+CNN's John Sutter used pandas to analyze the weather in the U.S. Sutter created a series of graphs to show the weather over the past year. One student created a hot encoding of the hour of the day and day of the week.

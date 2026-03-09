@@ -1,0 +1,234 @@
+Forms the basis of more complex ML models
+Can be surprisingly effective if you know how to use it
+Great first model to apply to get a benchmark
+Helps us understand relationships between inputs and outputs (feature and targets)
+Simple vs. multiple linear regression
+Simple linear regression models y as a function of a single feature x
+Multiple linear regression models y as a function of a feature vector x containing multiple features x1,x2…xn
+Image source: https://www.alsharif.info/iom530
+The Linear Regression Model
+The parameters are easy to interpret
+w0 is the intercept (the average value for y if all the x’s are 0)
+wi is the average increase in y when xi is increased by 1 and all other x’s are held constant
+For an observation (x,y):
+Estimating the parameters
+Estimating the parameters
+We want to minimize this cost function
+We cannot change the data (X,y) so we adjust w
+How do we find values for w0…wi that minimize this cost function? Closed form solution – take the derivative of the cost function and set equal to 0
+Apply a gradient descent search algorithm to converge on the optimal values
+Vectorized form
+Written in vectorized form:
+For many observations:
+N x 1
+N x p+1
+=
+p+1 x 1
+X
+w
+Predictions
+Data
+Coefficients
+For a single observation:
+where x0=1
+Closed form solution
+Our model is:
+Our cost function is:
+We can rewrite this in vectorized form as:
+Closed form solution
+(Normal equation)
+Reference on inverse of a matrix: https://www.mathsisfun.com/algebra/matrix-inverse.html
+Assumptions of linear regression
+Linear regression makes three key assumptions:
+Expected value of y for any given x is a linear function of x
+Errors are uncorrelated random variables with 0 mean and constant variance σ2
+Feature variables are independent
+Model fit issues can result from violations of these assumptions:
+Non-linearity of the target-features relationship
+Non-constant variance or correlation of error terms
+Collinearity or multicollinearity of feature variables
+Good explanation: https://statisticsbyjim.com/regression/ols-linear-regression-assumptions/
+Checking for problems
+Problem: Non-linearity of the target-features relationship
+Method 1: Scatterplot of target vs. each feature
+Method 2: Scatterplot of residuals (errors) vs features or vs. predictions
+Errors should be uniformly distributed around the 0 line
+Target should be roughly linearly related to the features (difficult to assess with many features)
+Checking for problems
+Problem: Non-constant variance of errors (heteroscedasticity)
+In the residuals plot, variance should be evenly scattered around the 0 line and should not increase or decrease with the predicted values (no funnel shape)
+Scatterplot of residuals (errors) vs. predictions
+Scatterplot of target vs. a feature
+Checking for problems
+Based on the residuals plot, do you see evidence of any problems with using linear regression:
+Non-linearity of the target-features relationship? We can detect this by looking at the correlation between two features:
+Visualize with a correlation matrix:
+Checking for problems
+Violations of the linear regression assumptions do NOT mean that your model has no value
+The purpose of checking for these problems is to guide us in how to improve our fit:
+Non-linearity may imply we should transform our input feature variables
+Non-constant variance may indicate we should transform our output target variable
+Collinearity may mean we should reduce our features to simplify
+What do we do if we violate an assumption? If we observe non-linearity between features and target:
+We can transform our input features so that we have a linear relationship between the new features and the target
+If we observe non-constant variance of errors across values of y-hat:
+We can transform our output so that we have constant variance of error terms
+Handling Nonlinear Relationships
+Feature variable transformation
+Polynomial regression
+Generally when we use polynomial regression with degree = n we include a feature with every degree from 1 to n
+We now need to learn n+1 parameters in our model
+We can easily do this in Scikit Learn using the PolynomialFeatures class to transform our input data before we build a model
+Remember: Linear Regression is linear in the coefficients
+Polynomial transformation
+X1
+X0 X1  X2  X3
+Degree-1 linear regression
+Degree-3 linear regression
+Interaction Terms
+Linear Regression assumes that the effect of each feature is independent of the other features
+If we increase feature x1 by 1 unit, we increase the target by w1 units (coefficient of x1)
+In real life, we sometimes have synergy effects (or “interaction” effects), of features with each other
+Changing the value of one feature causes the relationship of another feature to the target to change
+These can be observed graphically, but usually rely on domain expertise to know they exist
+Example – Power Outage Prediction
+Power outages are generally caused by wind blowing trees onto lines
+Thus, wind speed is a key feature
+However, when the ground is very wet from recent rain, smaller increases in wind speed can cause more trees to fall
+Thus, the presence of this feature (recent rain) changes the relationship between another feature (wind speed) and target (# of outages)
+Using Interaction Terms
+We can add features to account for potential interaction terms
+Scikit Learn’s PolynomialFeatures() creates interaction terms automatically using the degree provided
+We can also use ONLY the interaction terms if we wish and exclude the polynomial terms
+Regularization
+Motivation for Regularization
+The training method (minimizing sum of squared error) we have been using tends to reward complexity / overfitting
+More complex models fit the training data better and reduce training error
+However, we know that complex models have higher variance and thus may not predict as well on new data
+How can we build a regression model in a more balanced way? We add a penalty factor to our cost function to penalize complexity
+The penalty term we add to the cost function penalizes complexity in terms of number of features and their magnitude of contribution
+Regularization
+We add a penalty term to the cost function that is a function of the sum of the coefficients
+Now, higher number or values of coefficients increases the cost function
+Minimizing this new cost function seeks optimal balance of the model fit with the number & magnitude of coefficients
+Normal linear regression cost function:
+Cost function with regularization:
+Regularization:
+LASSO & Ridge Regression
+LASSO (L1) Regression
+Linear regression cost function:
+LASSO regression cost function:
+Ridge (L2) Regression
+Penalty factor is the sum of squared coefficients (squared L2 norm)
+Forces the coefficients of irrelevant variables to be small but not to 0 -> does not perform feature selection
+Mathematically more convenient
+Linear regression cost function:
+Ridge regression cost function:
+LASSO vs. Ridge Regression
+LASSO Regression
+Ridge Regression
+Example: LASSO vs Ridge
+Example: LASSO vs Ridge
+A geometric perspective
+A geometric perspective - LASSO
+5
+2.5
+Any point on this line yields a perfect model with SSE=0
+Each diamond represents points that have an equal L1 penalty. Increasing size means higher L2 penalty
+The intersection of a circle of given size (same L2 penalty) and the smallest possible constant SSE curve does not fall at a sparse point
+Cost = SSE + L1 penalty
+Summary: LASSO vs. Ridge
+Lambda is a hyperparameter that should be optimized
+Low values of lambda result in more complex models (more variables with higher coefficients) and high lambdas result in simpler models
+The optimal lambda that minimizes error (MSE/MAE) can be found using a validation set or cross-validation
+LASSO regression
+Conclusion: LASSO & Ridge
+Applying regularization will often give us a better model when we are dealing with complex data (many features)
+You might have a reason to prefer one method or the other:
+Desire a simpler, more interpretable model -> LASSO
+Complex relationship of target to many features with collinearity -> Ridge
+If not sure, default to Ridge regression or evaluate both
+Whichever one you choose, be sure to:
+Scale the data before you begin
+Determine the optimal lambda using a validation set / cross-validation
+Wrapping up Linear Regression
+For regression problems, linear regression is a great place to start
+Establish a baseline for model performance
+Better understand relationships between features and target
+Be sure to visualize your data and residuals to identify problems / opportunities to improve fit
+Use polynomial regression and/or regularization to improve fit
+Use cross-validation to adjust hyperparameters (polynomial degree or lambda)
+Then, try more advanced algorithms and compare results
+
+[Auto-generated transcript. Usually it's going to be pretty clear from looking at the solution if there's opportunity for different types of answers,
+but it's pretty obvious,, versus if there's one answer., but, use your best judgment., it can be fine if you don't exactly match the answer.,, sometimes, let's take a couple examples I don't remember what's on assignment one,
+but sometimes I ask you to give, give me an example of a situation when you might use something.. That's obviously a case where there's going to be a lot different answers. The three score on each of the questions,, as far as grading for this class purposes,, we're just going to grade these as effectively pass fail.,, you need to get above a 50% roughly to consider passing the knowledge check., if you complete this and it shows you your score is 67% don't have a panic attack because you think you failed., anything above a 50% in my book is,,, is considered,, decent.,, good. You could you could get 94% accuracy by just predicting zero or false for everybody.. And not even spend any time building your mouth.., if the data set is highly imbalanced, meaning that the vast,
+vast majority of folks are zero and you only have very few ones and you decide to measure accuracy,
+you could get a great accuracy score by doing absolutely nothing., that's a good example of where,, accuracy can be can be very misleading., a better approach,, to measuring,, the quality of a classification model is using what we call a confusion matrix., those of you have taken my classes before, I'm sure you've seen this., this is a simple matrix where on one axis we have the actual value. I'll talk about that in just,, just a second how to handle that situation.., what we can do in addition to just plotting these and if you read,, research papers or blogs or something,
+you may see these kinds of plots,, and then you can visualize and see which model is better., you can also calculate the area under the curve or we call the ROC area under ROC.., by looking at what's the,, what's the area underneath this, this line or this line or this line.. And the closer we get,, up to that perfect classifier, the closer our area under the curve is going to be positive.. we can actually use the area under this curve as a metric for calculating performance,
+which, takes into account both true positive rate and false positive rate of our model.. this then would be more robust than just picking precision or just picking recall to evaluate. And then we have our predicted label.. And the, the,,, the, the,, measuring on the diagonal will give us an indication of how, how good our model is doing.. if,, our model were perfect, all of the values would be on the diagonal matrix.., we can see that we're actually doing pretty, but we've got some issues here confusing virginica and versicolor.,, passes.., and this is very easy to generate these things using scikit learn.,, and this is a very helpful way to look at it in particular., one of the most useful things about actually visualizing the confusion matrix is helping to identify where there's there's issues.. if I were to do this and I where they just look at the overall accuracy or overall precision recall or something that., and I'd say,, the model is not perfect. we could just take the derivative of the cost function, set it equal to zero and solve.., and then we could get our,, optimal set of points., secondly, we could apply,, an iterative solving method.,, in particular, one we commonly use it's called gradient descent, which is,
+basically a search algorithm that converges on the optimal set of values in an iterative way., linear regression is unique among machine learning algorithms. And usually you're better off taking one of them out,, because that will give you a more true representation of,, of the actual relationships.. at what point,, what would be how do you make that decision of,
+I need to take this out versus I should just simplify these set of features using something PCA., I never I actually never advocate using,
+PCA for simplifying the set of features because it actually changes the dimensionality or,, or the space of the features, and it makes it less interpretable., but you could, use statistical tests, for example, to reduce the number of features.., we're going to talk next week about ways to do that..,, I'll give you a quick answer today and then we'll talk a little bit more, I think, actually about feature selection..., feature selection again, it's one of those things that's a lot more art and science, and it depends on your goals as. if your goals are interpret the,,, include interpretability or are heavily weighted towards interpretability,
+usually you're better off simplifying and reducing your feature set as much as you can., if your goal is purely performance in terms of prediction capability,, a lot of the times you actually bother just leaving all the features in,, and maybe using a more complex model to handle the larger feature set or something that., that's that's the way I'd suggest to think about feature selection.,, the problem that removing features as it has a clear benefit,
+which is it makes the model easier to interpret,, by having less features. Regularization Motivation
+Problem:
+SSE minimization rewards complexity
+Complex model → low train error
+High variance
+Solution:
+Add penalty term
+Goal:
+Balance fit + simplicity
+Ridge Regression (L2)
+Penalize squared coefficients
+Shrinks coefficients
+Does NOT set to zero
+Good with collinearity
+Penalty:
+λ Σ w²
+LASSO Regression (L1)
+Penalize absolute coefficients
+Produces sparse solutions
+Performs feature selection
+Penalty:
+λ Σ |w|
+Geometric Intuition
+LASSO:
+Diamond constraint
+Intersects at corners
+Many coefficients = 0
+Ridge:
+Circular constraint
+Coefficients small but rarely zero
+Lambda (λ)
+Hyperparameter
+Low λ → complex model
+High λ → simpler model
+Choose via:
+Validation set
+Cross-validation
+To-Do
+Always scale before L1/L2
+Tune λ using CV
+LASSO vs Ridge Decision
+Choose LASSO if:
+Want simpler model
+Feature selection important
+Choose Ridge if:
+Many correlated features
+Complex target relationships
+If unsure:
+Try both
+Wrapping Up Linear Regression
+Great baseline
+Interpretable
+Diagnose via residuals
+Improve via:
+◦	Polynomial terms
+◦	Interaction terms
+◦	Regularization
+Then:
+Compare with advanced models
+Deep Understanding Questions
+Why does minimizing SSE encourage overfitting?

@@ -1,0 +1,1 @@
+Time series is an interesting topic that probably doesn't get enough attention in most,,... I think you might a little bit. Project one is to predict the hourly temperature as it is for the period starting at the beginning of the. period starting on September 17th today, all the way to 11 p.m. on September 30th.

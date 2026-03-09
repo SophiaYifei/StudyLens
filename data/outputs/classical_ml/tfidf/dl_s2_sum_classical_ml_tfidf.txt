@@ -1,0 +1,428 @@
+Week 2
+1
+Computer Vision I
+Agenda
+Introduction to Computer Vision
+Traditional CV
+Convolutional Neural Networks
+Convolution
+Convolutional NN
+CNN Architectures
+Implementation of CNNs
+Transfer Learning
+Data Augmentation
+2
+Introduction to Computer Vision
+3
+3
+Overview
+4
+Image Recognition
+Facial Recognition
+Product Identification
+Object Detection
+Autonomous Driving
+Manufacturing
+Agriculture
+Image Segmentation
+Medical Imaging (ID regions of interest)
+Object Tracking/
+Motion Analysis
+Surveillance
+Sports tracking
+Scene Reconstruction
+Architecture
+VR/AR
+3D modeling
+5
+Classification
+Object Detection
+Bounding Boxes
+Object Masking
+Image Segmentation
+Keypoint Detection
+Challenges
+Image data from the real world is complex and messy! 10
+11
+Three channels (RGB) per pixel:
+[214,197,205]
+1080 rows
+1920 columns
+12
+Traditional CV
+13
+13
+A very brief and non-exhaustive review of
+Traditional ML Model
+Engineer Features
+Color-based features
+Calculate the distribution of colors in different color spaces (RGB, HSV, LAB)
+Statistical measures like mean, standard deviation, and skewness of color channels
+Color Histograms
+Color Moments
+Extract the most prevalent colors using clustering techniques like k-means
+Distinguish between large similarly-colored regions and small isolated regions
+Adds spatial awareness to color
+Dominant Colors
+Color Coherence Vectors
+14
+Texture-based features
+Captures spatial relationships of pixel intensities
+Examples:
+MRI / CT analysis
+Fabric inspection
+Encodes local texture patterns by comparing pixel intensities
+Gray Level Co-occurrence Matrix (GLCM)
+Local Binary Patterns (LBP)
+Analyze texture patterns at different scales and orientations
+Examples:
+Fingerprint recognition
+Fabric and surface analysis
+Statistical measures derived from GLCM like contrast, correlation, and entropy
+Gabor Filters
+Haralick Features
+15
+Statistical features
+Mean, Variance, Standard Deviation of pixel intensities
+Measure of image complexity
+Standard
+Entropy
+Rotation-invariant descriptors based on polynomial decomposition
+Multi-scale analysis of image features
+Zernike moments
+Wavelet Transforms
+16
+Shape features
+17
+Edge Detection (Sobel, Canny): Identify object boundaries
+Contour Descriptors: Shape signatures, chain codes
+Hu Moments: Shape descriptors invariant to rotation, scale, and translation
+SIFT (Scale-Invariant Feature Transform): Detects keypoints and computes descriptors robust to various transformations
+SURF (Speeded Up Robust Features): A faster alternative to SIFT
+HOG (Histogram of Oriented Gradients): Captures local shape information through gradient directions
+Edge Detection
+Sobel, Canny, and Prewitt operators that identify boundaries in images based on intensity gradients and transitions
+18
+Image Source
+Shape features
+19
+Models
+Challenges
+20
+Feature Engineering is hard (limiting, requires domain expertise, how to capture all relevant properties?) Traditional features often lose spatial relationships between pixels, hard to capture hierarchical patterns at different scales, difficulty handling object deformation and variation, loss of relative positioning of features within image
+Limited generalizability
+Hard to capture very high-level abstract patterns
+Feature computation becomes expensive at high resolutions and feature vectors can become very high dimensional
+Deep Learning
+21
+21
+Neural Network
+Original image
+The number of parameters to learn is very, very large in fully connected (mlp) layers
+Input image
+[228, 228, 3]
+Fully connected layer
+[155952,10]
+22
+155952x10 + 10 =
+1,559,530 weights
+Convolutional Neural Networks
+23
+23
+Convolutional layers significantly reduce the number of parameters to learn! Eg: Color images, videos
+Convolution - 3D
+32
+Image Source
+Convolutional NN
+33
+33
+Two new layers:
+Convolutional layers – act as filters to learn patterns in data
+Pooling layers – reduce dimensions of data
+Convolutional Neural Networks
+34
+Image Source
+Convolution layers utilize a sliding filter containing weights and apply it across the entire input set
+Each node is connected to a limited subset of the nodes in the layer before
+The filters contain shared weights which define the connections between layers
+During training, each filter “learns” to recognize certain patterns
+Convolutional Layers
+35
+Input image
+Filter
+Convolution layers utilize a sliding filter containing weights and apply it across the entire input set
+Each node is connected to a limited subset of the nodes in the layer before
+The filters contain shared weights which define the connections between layers
+During training, each filter “learns” to recognize certain patterns
+Convolutional Layers
+36
+Filter
+Input image
+Convolution layers utilize a sliding filter containing weights and apply it across the entire input set
+Each node is connected to a limited subset of the nodes in the layer before
+The filters contain shared weights which define the connections between layers
+During training, each filter “learns” to recognize certain patterns
+Convolutional Layers
+37
+Filter
+Feature Map
+Input image
+Convolution layers utilize a sliding filter containing weights and apply it across the entire input set
+Each node is connected to a limited subset of the nodes in the layer before
+The filters contain shared weights which define the connections between layers
+During training, each filter “learns” to recognize certain patterns
+Convolutional Layers
+38
+Filter
+Feature Map
+Input image
+Convolution layers utilize a sliding filter containing weights and apply it across the entire input set
+Each node is connected to a limited subset of the nodes in the layer before
+The filters contain shared weights which define the connections between layers
+During training, each filter “learns” to recognize certain patterns
+Convolutional Layers
+39
+Filter
+Feature Map
+Input image
+Resulting feature map
+Input * filter
+Image Source
+40
+41
+1 Filter (3x3x3)
+1 Feature Map
+(3x3)
+1 Input image
+(5x5x3)
+Filter Size
+Filters have dimension   F x F x D where D is the depth of the inputs
+Since color images have 3 channels, our initial filters have D=3
+We often use multiple filters for each conv layer and output a feature map per filter
+42
+Stride
+…
+Stride = 1
+Stride = 2
+3x3 outputs
+2x2 outputs
+We can move our sliding window by more than 1 position at a time
+This increases computational efficiency and downsamples the image
+The number of rows/columns traversed per move is called the stride
+43
+Padding
+Using our standard sliding filter approach, pixels in the middle of the image are used more frequently than those at the edges
+Number of times each pixel is covered by a 3x3 filter:
+44
+Padding
+To minimize information loss from the edge pixels, we can add extra filler pixels around the edges (padding)
+45
+Padding
+To minimize information loss from the edge pixels, we can add extra filler pixels around the edges (padding)
+If the resulting feature map is the same size as the original image, we call it a “same” convolution
+46
+How to calculate feature map size? 47
+Dimensions for conv layers
+Filter size
+Typically use odd numbers for filter size to preserve spatial dimensionality (3,5,7)
+Larger number of smaller filters (3x3) preferable to smaller number of large filters, to learn more complex image features
+Stride
+Generally use stride = 1
+Padding
+Common practice to set P = (F-1)/2 so that the output feature maps have the same dimensions as inputs
+Convolutional layers significantly reduce the number of parameters to learn! We typically use a final fully connected layer as a classifier
+Input features are the feature maps from the previous conv/pooling
+To feed our data in, we must first flatten the feature maps to an array
+Number of outputs corresponds to number of classes
+Convolutional Neural Networks
+53
+Image Source
+Conv
+BatchNorm
+ReLu
+Max Pool
+Conv Block ( x N )
+x M
+Fully Connected
+Softmax
+Head
+[224,224,3]
+[224,224,64]
+[112,112,64]
+[1,112*112*64]
+FLATTEN
+[1,4]
+Dog: 0.82
+Cat: 0.11
+Bear: 0.06
+Bird: 0.01
+55
+56
+CNN Visualizer by
+Adam Harley
+Tutorial for visualizing filters and feature maps
+Tutorial for visualizing filters and feature maps
+57
+Have you ever wanted to look inside an artificial brain? 61
+Neurons in a convolutional layer are connected only to nearby neurons from the previous layer (rather than all neurons like FC layers)
+They represent a narrower range of features / small patches of the image
+Useful when we expect most of the information to be local
+They will not be affected by objects elsewhere
+Because we use the same weights for patches across the image, it gives us the property of translation invariance
+Regardless of where the object is in the image, the network can find it
+CNN Architectures
+62
+Popular
+First successful CNN application in the late 1990s by LeCun et al. Included multiple conv layers prior to pooling
+AlexNet
+66
+Paper
+Introduced as runner-up on ImageNet ILSVRC 2014
+Used many smaller filters (3x3) rather than fewer large filters (7x7 / 11x11) which were previously common
+Very homogeneous architecture using only 3x3 convs and 2x2 pooling
+VGGNet
+67
+Paper
+Image Source
+VGGNet - versions
+68
+Paper
+Bigger must equal better
+! 74
+This happened on BOTH the training and test sets
+So, not overfitting – cannot just add regularization
+This is called accuracy saturation
+Occurs because deeper networks are harder to optimize weights for
+Paper
+Training error (thin) and test error (thick) on CIFAR10
+Architecture used skip connections between layers
+This enables the later layers to easily replicate the identity function by setting their weights to 0 (effectively skipping the layer)
+This “preconditions” the network with the identity mapping, a reasonable starting point. A typical inception module includes 1x1 conv, 3x3 conv, 5x5 conv, max pooling
+Inception
+81
+Paper
+Inception
+82
+learn linear combinations of features at each spatial location - think “feature pooling” across channels
+acts as a bottleneck to reduce computations
+3x3 convolutions capture local spatial patterns and features (edges, textures, and medium-sized patterns)
+5x5 convolutions capture larger spatial patterns like complex shapes or patterns
+max pooling selects the strongest activation in each pooling window. classifying images)
+We then remove the final FC layer and add our own final layer(s) (“custom head”) which we train on our specific task
+97
+Image Source
+Feature Extraction
+A
+XB
+A’
+YB
+B
+Generic model
+Smaller, task-specific dataset
+Specific task outputs
+Pre-trained
+Trainable custom head
+ImageNet dataset
+YA
+Generic outputs
+Dog
+98
+Fine Tuning
+Take a pre-trained model and continue training it (usually with a smaller learning rate) on your new task/dataset
+During fine-tuning:
+Start with pre-trained weights rather than random initialization
+Update some or all of the model's parameters
+Use a lower learning rate to avoid destroying the useful features already learned
+Train for fewer epochs
+Data Augmentation
+99
+99
+100
+Data Augmentation
+We want our model to be able to recognize objects even when they look slightly different from the training data
+Object in different locations
+Object different sizes
+Object different rotations
+Brighter/Darker
+101
+Data Augmentation
+To help our model be more robust, we can apply data augmentation (“transforms”) to our training data (NOT to val/test sets)
+Random cropping, rotation, change brightness/saturation, etc
+102
+In PyTorch
+103
+Load image data
+We store images and corresponding labels in a PyTorch Dataset, and then load them into a DataLoader
+Easiest way to do this is to use the datasets.ImageFolder() method
+We apply a set of transforms on the data as it is loaded to the Dataset
+cat
+dog
+train
+Directory structure:
+/train/cat/123.jpg
+/train/cat/j22.jpg
+/train/cat/example1.jpg
+/train/dog/xyz.jpg
+/train/dog/10112.jpg
+/train/dog/example2.jpg
+Load to Dataset:
+104
+You may have labels organized in some other method
+Stored in a csv along with the image file names
+Incorporated into the file naming e.g. “dog_01.jpg”
+You can reorganize the files to use the ImageFolder loader OR can write your own Dataset class
+Load image data
+105
+Data Augmentation
+In PyTorch, transforms are applied when you iterate the batches in the DataLoader during model training, so if you use randomized transforms each epoch will contain different transformed images
+106
+Resize Transforms
+107
+Rotation Transforms
+108
+Color Jitter
+109
+In TensorFlow
+110
+The class tf.keras.preprocessing.image.ImageDataGenerator generates batches of tensor image data with real-time data augmentation. nobody thought that,, CNNs were super useful., the CNN architecture comes out., Yann LeCun and his team,, of folks who is a,, a graduate student at the time.. Look who he was able to come up with this,, semi useful application., but most people were not super convinced people were still using SVMs for image,, image classification., and then,, in the early 2000,, there was a young professor at Stanford,, Feifei Li, who came up with a concept and she thought,, we really what we really need is to be able to see the world, and we don't have enough data. I do, but..
+
+CV overview
+classification, detection, segmentation, tracking, reconstruction
+real-world image pain
+lighting, occlusion, pose, backgrounds, perspective
+need big labeled datasets, fast inference
+traditional CV pipeline
+hand-engineered features
+color: histograms, moments, dominant colors, coherence vectors
+texture: GLCM, LBP, Gabor, Haralick
+stats: mean/variance/entropy, wavelets, Zernike
+shape: edges (Sobel/Canny), Hu moments, SIFT/SURF, HOG
+drawbacks: brittle, loses spatial hierarchy, costly/high-dim
+why CNNs
+locality (receptive fields)
+shared weights → fewer params
+translation invariance
+convolution basics
+1D vs 2D vs 3D conv intuition
+kernels/filters → feature maps
+hyperparams: filter size F, stride S, padding P
+“same” conv via P=(F-1)/2
+stride vs pooling tradeoff — what breaks first? choose backbone (ResNet/VGG/Inception) by compute + accuracy needs
+canonical CNN flow
+conv → BN → ReLU → pool (repeat)
+flatten → FC → softmax head
+architectures
+LeNe (early)
+AlexNet (ImageNet breakthrough)
+VGG (small 3x3 stacks)
+ResNet (skip connections, fix degradation)
+Inception (multi-scale parallel conv + concat)
+transfer learning
+feature extraction: freeze backbone, train new head
+fine-tuning: unfreeze some/all, lower LR
+data augmentation
+crop, rotate, brightness/saturation jitter
+apply to train only
+PyTorch transforms / TF ImageDataGenerator
+implementation notes
+ImageFolder structure vs custom Dataset

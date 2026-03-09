@@ -1,0 +1,184 @@
+### Summary of University Lecture on Time Series Analysis
+
+**Overview:**
+The lecture covers the foundational concepts of time series analysis, focusing on understanding the unique characteristics and modeling techniques applicable to time-ordered data. Key topics include defining time series, distinguishing them from time-stamped data, and exploring the components of time series like trend and seasonality.
+
+---
+
+#### **1. Definition and Characteristics of Time Series:**
+
+- **Definition:** 
+  - A time series is a sequence of data points observed at successive equally spaced points in time.
+  - It has a natural temporal ordering.
+  
+- **Difference from Time-Stamped Data:**
+  - Time-ordered data isn't necessarily a time series; e.g., medical records.
+  - Sensors and hardware data commonly represent time series.
+
+- **Real-World Examples:**
+  - Temperature
+  - Power demand
+  - Retail/bookstore sales
+
+- **Questions:**
+  - Distinguish trend from seasonality visually.
+  - Identify 3 real-world time series examples and 1 dataset that is time-ordered but not a time series.
+
+---
+
+#### **2. Trend and Seasonality:**
+
+- **Components:**
+  - **Trend:** Long-term movement (increasing/decreasing).
+  - **Seasonality:** Cyclical patterns (hourly, daily, weekly, yearly).
+
+- **Simultaneous Existence:**
+  - Both can coexist in a single time series.
+
+- **Examples:**
+  - Temperature
+  - Power demand
+  - Retail sales
+
+- **Questions:**
+  - How to distinguish trend from seasonality visually?
+
+- **To-Do:**
+  - Sketch a time series with an upward trend and weekly seasonality.
+
+---
+
+#### **3. Time Series Modeling:**
+
+- **Assumptions:**
+  - Standard regression assumes independence among observations.
+  - Time series violate this assumption (present is correlated with past).
+
+- **Key Concept: Autocorrelation:**
+  - Correlation of a signal with a delayed (lagged) copy of itself.
+  - Measured using Pearson correlation or Durbin-Watson test.
+
+- **Methods:**
+  - ARIMA (AutoRegressive Integrated Moving Average)
+  - Exponential Smoothing
+
+- **Question:**
+  - Why is random train/test split problematic for time series?
+
+- **To-Do:**
+  - Explain in one sentence why time dependence breaks the i.i.d. assumption.
+
+---
+
+#### **4. Time Series Decomposition:**
+
+- **Components:**
+  - **Trend:** Long-term movement.
+  - **Seasonality:** Cyclical patterns.
+  - **Residual:** Error or leftover component.
+
+- **Models:**
+  - **Additive Model:**
+    \[
+    Y = \text{Trend} + \text{Seasonality} + \text{Residual}
+    \]
+    Linear trend, constant seasonal amplitude.
+    
+  - **Multiplicative Model:**
+    \[
+    Y = (\text{Trend}) \times (\text{Seasonality}) \times \text{Residual}
+    \]
+    Non-linear trend, seasonal amplitude grows with trend.
+
+- **Question:**
+  - If seasonal swings get larger as values increase, which model fits better?
+
+- **To-Do:**
+  - Look at a dataset and decide between additive or multiplicative seasonal decomposition.
+
+- **Function:**
+  - `statsmodels`' `seasonal_decompose()` method.
+  - Requires estimating the period.
+  - Must choose additive or multiplicative.
+  - Automated detection may overfit patterns.
+
+- **Validation:**
+  - Apparent seasonality may be noise.
+  - Validate by checking if the residuals are small compared to the seasonal component.
+
+- **Question:**
+  - How would you validate that seasonality is real?
+
+- **To-Do:**
+  - Compute lag-1 and lag-24 correlation for a dataset.
+
+---
+
+#### **5. Markov Processes:**
+
+- **Concept:**
+  - Full autocorrelation at lag 1.
+  - Current state depends only on the previous state.
+  - Transition matrix defines probabilities.
+
+- **Applications:**
+  - Used in science, finance, and ranking algorithms (e.g., PageRank).
+
+- **Question:**
+  - Do most real-world time series truly satisfy the Markov property?
+
+- **To-Do:**
+  - Write a simple 2-state transition matrix example.
+
+---
+
+#### **6. Autoregression Model:**
+
+- **Concept:**
+  - Uses past values as features.
+  - Lag features can be used.
+  - Can use multiple lags.
+  - Turns time series into supervised learning.
+
+- **Example:**
+  - \( y(t-1), y(t-24), y(t-168) \)
+
+- **Question:**
+  - How many lags should be included?
+
+- **To-Do:**
+  - Create lag-1, lag-24 features.
+  - Drop rows with missing lag values.
+
+---
+
+#### **7. Project 1: Predicting Hourly Temperature at RDU Airport**
+
+- **Objective:**
+  - Predict hourly temperature at RDU airport for a specified time window.
+
+- **Rules:**
+  - Any data (except ground truth future).
+  - Any features.
+  - Must include 1 linear regression model and 1 other model.
+
+- **Deliverables:**
+  - Presentation: Inputs, data pipeline, features, models, evaluation approach, performance.
+  - Code repository.
+  - 2-4 page writeup covering inputs, data pipeline, feature engineering, models, evaluation approach, and performance.
+
+- **Questions:**
+  - What features beyond past temperature might improve prediction?
+
+- **To-Do:**
+  - Plan feature engineering before modeling.
+  - Use time-based split.
+  - Compare linear vs non-linear model.
+  - Report MAE or RMSE.
+  - Avoid data leakage from future timestamps.
+
+---
+
+### Conclusion:
+
+The lecture emphasizes the importance of understanding the unique properties of time series data and applying

@@ -1,0 +1,1 @@
+The UM continues his lecture on image classification and object detection with an emphasis on machine learning. In this chapter, he discusses how to use "machine learning" to analyze real world applications. This chapter also includes a discussion about Sam's last paper that he was accepted for.

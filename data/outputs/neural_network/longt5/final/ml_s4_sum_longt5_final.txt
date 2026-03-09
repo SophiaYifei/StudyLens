@@ -1,0 +1,1 @@
+Neal continues his lecture on time series with a discussion of taxation. He changes the questioning so that it's easier to answer the questions than it was before. The chapter ends with Neal explaining how to use Time-series information in predicting future events.

@@ -1,0 +1,435 @@
+x3
+z1(2)
+z2(2)
+1
+x2
+x1
+1
+z(3)
+b1(3)
+b1(2)
+w1,1(2)
+w1,1(3)
+Φ1(2)
+Φ2(2)
+z1(2) = w1,1(2)x1 + w2,1(2)x2 + w3,1(2)x3 + b1(2)
+Φ(z1(2)) = activation function
+Input Layer (1)
+Hidden Layer (2)
+Output Layer (3)
+Neural Network
+Φ(3)
+History of Neural Networks
+1950s
+1960s
+1970s
+1980s
+1990s
+2000s
+2010s
+2020s
+1943 - McCulloch and Pitts propose the model of the Neuron
+1958 - Rosenblatt demonstrates Perceptron
+1982 - Hopfield’s bidirectional neural network revives research efforts
+1986 - Three independent research groups develop backpropagation method for training neural networks
+2009 - ImageNet competition(Fei Fei Li)
+2017 - “Attention is all you need” published
+2012 - AlexNet
+Early AI Research
+Deep Learning Boom
+Gen AI Boom
+AI Winter
+AI Winter
+2022 - ChatGPT
+2015 - ResNet architecture
+1940s
+Why Now? Training Data + Labels
+Computational Power
+Algorithmic Advances
+The amount of data available for training has grown exponentially
+Sensors / connected devices
+Lower cost of storage
+Efforts have been made to label vast amounts of data for training
+ImageNet (1.2M images of 1000 objects)
+Computational power has increased tremendously, allowing for much deeper neural nets
+Major algorithmic advances have overcome limitations of neural nets
+When to Use? As a result, NNs can be very power-hungry
+Computational resources of best-in-class NN have doubled every 3-4 months, a 300,000x increase since 2012 [Source]
+Neural networks can be difficult to train
+Use of nonlinear activation functions means the error optimization is non-convex
+Difficult to interpret the outputs of deep neural networks
+Easy to overfit, particularly on small data
+Deep Learning
+"Deep" refers to the number of layers through which the data is transformed. 🏁
+📍
+🏁
+parameter is randomly initialized
+📍
+🏁
+parameter is randomly initialized
+loss: minimize  distance from goal
+📍
+🏁
+parameter is randomly initialized
+loss: minimize  distance from goal
+backpropagation: says which direction to move to reduce loss
+📍
+🏁
+parameter is randomly initialized
+loss: minimize  distance from goal
+backpropagation: says which direction to move to reduce loss
+gradient descent: takes a step in that direction
+📍
+📍
+🏁
+how large this step is is called the learning rate
+📍
+gradient descent: takes a step in that direction
+📍
+🏁
+if your learning rate is too small, it will take a long time to reach your goal (train your model)
+📍
+📍
+🏁
+if your learning rate is too large, you will end up very far from your goal and risk never finding it
+📍
+📍
+🏁
+parameter is randomly initialized
+loss: minimize  distance from goal
+backpropagation: says which direction to move to reduce loss
+gradient descent: takes a step in that direction
+📍
+learning rate: how large this step is
+Gradient Descent
+Image Source
+A first-order iterative algorithm for finding a local minimum of a differentiable multivariate function
+The idea is to take repeated steps in the opposite direction of the gradient (or approximate gradient) of the function at the current point, because this is the direction of steepest descent. Often in the range 0.001 - 0.01
+The most significant hyperparameter to tune
+Training a neuron with Stochastic Gradient Descent
+x3
+z = wTX
+x2
+x1
+1
+w1
+w2
+w3
+w0
+Φ(z) = σ(z)
+Sum z
+Z
+Activation Φ(Z)
+ŷ = Φ(z)
+Step 1: Forward propagate a datapoint
+Training a neuron with Stochastic Gradient Descent
+x3
+z = wTX
+x2
+x1
+1
+w1
+w2
+w3
+w0
+Φ(z) = σ(z)
+Sum z
+Z
+Activation Φ(Z)
+ŷ = Φ(z)
+Step 2: Calculate the gradient of the cost function with respect to each weight
+y-values
+Training a neuron with Stochastic Gradient Descent
+x3
+z = wTX
+x2
+x1
+1
+w1
+w2
+w3
+w0
+Φ(z) = σ(z)
+Sum z
+Z
+Activation Φ(Z)
+ŷ = Φ(z)
+Step 3: Update each weight using gradient descent and repeat
+Training a neuron with Stochastic Gradient Descent
+x3
+z = wTX
+x2
+x1
+1
+w1
+w2
+w3
+w0
+Φ(z) = σ(z)
+Sum z
+Z
+Activation Φ(Z)
+ŷ = Φ(z)
+Step 3: Update each weight using gradient descent and repeat
+x3
+z1(2)
+z2(2)
+1
+x2
+x1
+1
+z(3)
+b1(3)
+b1(2)
+w1,1(2)
+w1,1(3)
+Φ1(2)
+Φ2(2)
+Cost Function J(w)
+Backpropagation
+Φ(3)
+ŷ = Φ(3)(z(3))
+Layer l
+node j
+z2(2)
+1
+Layer l-1
+node i
+1
+bi(out)
+bj(l)
+wi,j(l)
+wi,j(out)
+Cost Function J(w)
+Backpropagation
+ŷ
+x3
+x2
+x1
+1
+Layer l-1
+Layer l
+Gradient Descent Methods
+Momentum
+We add a term to the update rule which helps speed up learning and avoid getting stuck in local minima of the cost function
+The term we add is a factor of the previous weight change. This has the effect of reducing the influence of the current iteration and “smoothing” training
+Without momentum:
+With momentum:
+Image Source
+Optimization Algorithms
+SGD has issues:
+Learning rates and schedules have to be set in advance, without knowing what may work best
+Same learning rate applies to all weight updates each epoch
+If our data is sparse we may want to update frequently occurring features less and rarely occurring features more
+Alternatives
+Adapt the learning rate to the weights
+Image Source
+Adagrad
+Adapts the learning rate to each weight, at each time step
+Lower LR (smaller updates) for weights of frequently occurring features and higher LR (larger updates) for weights of rare features
+Well suited for sparse datasets (e.g. text)
+Eliminates need to manually tune the LR
+Weakness is that accumulated gradient in denominator eventually makes the step size too small to change weights
+RMSprop
+Alternative adaptive LR approach originally proposed by Geoffrey Hinton in his Coursera course
+Attempt to resolve the radically diminishing learning rate in Adagrad
+Adam
+Adaptive Moment Estimation (Adam)
+Combination of the ideas behind RMSprop and momentum:
+Uses both moving average of squared gradient (RMSprop) and moving average of the gradient (momentum)
+Adam is generally regarded as the current “best” all-around optimizer
+Other optimizers may work better for certain situations
+E.g. Radam, Nadam, AdamW
+Image Source
+Popularity
+Get visualization tool here
+Training Challenges
+Challenges
+Vanishing and Exploding Gradients
+Getting stuck in local minima
+Overfitting to training data
+Long training cycles
+When using activation functions like sigmoid or tanh:
+These functions "squish" values into a range (0-1 for sigmoid)
+Their derivatives are always less than 1 (maximum of 0.25 for sigmoid)
+Vanishing Gradients
+Wait, why do we care about the derivative of the activation function? When we multiply many small numbers together during backpropagation, the result gets exponentially smaller
+In a best case scenario, each layer back reduces the gradient by roughly 75% (multiplied by 0.25)
+By the time we reach the early layers, the gradient is practically zero
+Vanishing Gradients
+Vanishing Gradients
+Simplified example to understand theory:
+Start at the last layer (gradient = 1.0)
+Move back to previous layer
+Multiply by sigmoid derivative (let’s assume maximum derivative 0.25)
+Multiply by weight (let’s assume weight ~1)
+New gradient = ~1*0.25 = 0.25
+Move back another layer
+Multiply sigmoid derivative again (<0.25)
+New gradient 0.25 * 0.25 = 0.0625
+Move back another layer
+Multiply sigmoid derivative again (<0.25)
+New gradient 0.25 * 0.0625 = 0.015625
+Repeat for n layers
+Vanishing Gradients
+Solutions:
+Use ReLU activation function
+Exploding gradients occur when large numbers multiply together
+Most commonly happens with:
+Large weight initializations (> 1.0)
+Activation functions with derivatives ≥ 1 (like ReLU)
+Effects compound in deep networks
+Exploding Gradients
+How to spot:
+Loss fluctuates widely across training cycles
+Model weights become very large or go to NaN
+Solutions:
+Reduce mini-batch size
+Use gradient clipping – limit the size of gradients
+Use batch norm
+Training Considerations
+Activation function(s) ✅ (examples: sigmoid, ReLu)
+Loss function ✅ (examples: MSE, binary crossentropy)
+Choice of Optimization Algorithm ✅ (examples: SGD, Adam)
+Data splitting
+Regularization (prevent overfitting)
+TEST DATA
+VALIDATION DATA
+TRAINING DATA
+DATA
+Regularization
+Neural networks are prone to overfitting
+We often use regularization techniques to reduce overfitting risk and improve convergence
+Early Stopping
+Image Source
+The model will overfit at some point during training! We ideally want to stop training when the validation error is at a global minimum
+Good: stop when val error begins to increase
+Better: stop at global minimum of val error
+Best: stop at point that gives best “price-performance” ratio (optimal ratio of training time to val error)
+Early Stopping
+Large Learning Rate
+Larger LRs help avoid getting stuck in local minima, but create risk of not converging
+Has been shown that large initial LRs reduce overfitting [Source]
+LR Schedules
+One strategy is to start with a higher learning rate and reduce it as training progresses and the weights approach the optimum
+There are many methods we can use to decay the LR
+With StepLR we decay the LR every step_size epochs by a factor gamma
+One-cycle LR Policy
+The 1cycle LR policy cycles the LR over the training, changing it after every batch
+Small initial LR increases to a set max value and then decays back down to a small value
+Momentum is cycled inversely to LR to balance regularization applied
+Do LR schedulers play nice with Adam? Use of an adaptive optimizer may not be compatible with use of a learning rate scheduler
+Benefits of adaptive optimizer are few/no hyperparameters to set
+Benefit of LR scheduler (one-cycle policy) is potential for much quicker training (superconvergence)
+In practice, try both – one-cycle policy with SGD, and Adam with no LR scheduler
+Other forms of regularization can be used with adaptive optimizers:
+Early stopping, weight decay, dropout, batch norm
+L1 Regularization (Lasso) -
+Adds a penalty equal to the absolute value of the magnitude of coefficients. Regularization via loss function
+Batch Normalization
+In backpropagation, weights of a layer are updated under the expectation that the prior layer outputs have a given distribution
+In reality the distribution shifts due to variation across batches and updates to prior layer weights (internal covariate shift)
+This slows learning by requiring lower learning rates and careful initialization of weights
+x3
+z1(2)
+z2(2)
+1
+x2
+x1
+1
+z(3)
+b1(3)
+b1(2)
+w1,1(2)
+w1,1(3)
+Φ1(2)
+Φ2(2)
+Φ(3)
+bn
+bn
+Batch Normalization
+BatchNorm standardizes the inputs of each layer, for each minibatch
+Each layer sees a consistent distribution of inputs
+Usually standardize the summed inputs before the activation function
+Helps speed up and smooths training
+Batch Normalization
+These are learned, just like a normal network layer’s weights and biases, and updated through backpropagation
+Batch Normalization
+Impact of batch norm is largest when combined with other changes it enables:
+Increase initial learning rate
+Accelerate learning rate decay
+Reduce weight decay regularization
+Remove dropout
+Image Source
+Dropout
+Original Network:                 Network with Dropout:
+o   o   o   o              			o   x   o   o
+\ / \ / \ / \              			\ / \   \ / \
+o---o---o---o              			o---x---o---o
+\ / \ / \ / \              			\ /   \   \ / \
+o---o---o---o              			o---o---x---o
+Dropout is when you randomly drops neurons during training to prevent overfitting. The use of dropout produces this distinctive morphology and sharp patterns during the training process
+SOURCE: losslandscape.com
+Code Resources
+<>
+PyTorch:
+GitHub
+WarpWire (Demo by Jon Reifschneider)
+Tensorflow:
+GitHub
+Panopto
+Before you leave
+Find a group of 2-3 people for Module Project 1 (Computer Vision)
+Ask: do you have aligned goals for the module project? That's cool., the same with Buddha...
+
+neuron (McCulloch & Pitts, 1943)
+weighted sum, linear separator, manual weights
+perceptron (Rosenblatt, 1958)
+threshold / activation concept
+still linear decision boundary
+perceptron limitation
+XOR / non-linear separability vibe
+linear hyperplane only with single unit
+multilayer perceptron
+hidden layers → nonlinearity
+universal approximation (enough units)
+“why now” deep learning
+data + labels (ImageNet)
+compute growth
+algorithmic advances
+when to use NNs
+lots of data, unstructured, complex relationships, low explainability needs
+limitations
+expensive compute/energy
+non-convex optimization
+interpretability hard
+overfitting risk
+activation functions
+role: gate signal, add nonlinearity, output range control
+examples: sigmoid, ReLU, softmax
+training loop overview
+init weights small random
+forward pass → prediction
+loss function
+backprop gradients
+gradient descent update
+repeat epochs / batches
+loss vs cost
+loss: per example
+cost: averaged over dataset
+gradient descent
+learning rate sensitivity (too small slow / too big diverge)
+optimizers
+SGD issues
+momentum, Adagrad, RMSprop, Adam (+ variants)
+what loss makes sense for “blueberries count” vs classification? training challenges
+vanishing gradients (sigmoid/tanh)
+exploding gradients (large weights, deep nets)
+local minima / long cycles / overfit
+regularization + training tricks
+early stopping
+LR schedules (StepLR, one-cycle)
+L1/L2 penalties
+batch norm
+dropout
+create a 5-min exercise: tune LR (too small vs too large) + observe curves

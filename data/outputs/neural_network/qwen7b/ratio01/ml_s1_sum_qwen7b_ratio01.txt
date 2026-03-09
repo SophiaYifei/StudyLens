@@ -1,0 +1,35 @@
+### Summary of Lecture Material: Modeling Process & Algorithms in Machine Learning
+
+#### Introduction
+- **Context**: 
+  - Situating machine learning in real-world applications.
+  - Emphasizing the broader process beyond just running algorithms.
+  
+- **What We Will Learn**:
+  - Best practices in the modeling process.
+  - Key aspects of modeling, evaluation, and interpretation.
+  - Overview of key algorithms and their strengths and limitations.
+  - Applying machine learning to real-world structured data.
+
+#### Modeling Process
+- **Best Practices**:
+  - Problem identification and framing.
+  - Data collection and feature selection.
+  - Algorithm selection considering performance, interpretability, and computational cost.
+  - Importance of simplicity (Occam's Razor).
+  - Avoiding data leakage and ensuring proper validation.
+  - Balancing bias and variance.
+  - Evaluating models using appropriate metrics and cross-validation.
+
+- **Algorithm Selection**:
+  - No Free Lunch Theorem: No single algorithm universally outperforms others.
+  - Trade-offs between performance, interpretability, and computational cost.
+  - Occam's Razor: Prefer simpler solutions when other factors are equal.
+  - Example: Choosing between a complex model and a simpler one for practicality.
+
+- **Model Evaluation**:
+  - Train-test split to avoid overfitting.
+  - Proper use of validation sets and cross-validation.
+  - Importance of avoiding tuning on the test set.
+  - Sampling strategies: Random vs. non-probability, stratified, weighted.
+  - Identifying and mitigating data leakage.

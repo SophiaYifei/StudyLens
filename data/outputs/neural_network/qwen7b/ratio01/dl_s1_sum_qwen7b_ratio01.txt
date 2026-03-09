@@ -1,0 +1,33 @@
+### Summary of Lecture on Introduction to Neural Networks
+
+#### Major Topics Covered:
+
+1. **Historical Background**:
+   - **1943**: McCulloch and Pitts proposed the model of the neuron.
+   - **1958**: Rosenblatt demonstrated the perceptron.
+   - **1982**: Hopfield introduced bidirectional neural networks.
+   - **1986**: Three independent research groups developed backpropagation for training neural networks.
+   - **2009**: ImageNet competition led to significant advancements.
+   - **2017**: Transformer architecture introduced.
+
+2. **From Neuron to Neural Network**:
+   - **Simple Linear Model (McCulloch & Pitts)**: 
+     \[
+     f(x, w) = \sum_{i} x_i w_i
+     \]
+   - **Perceptron**: Introduced a threshold \( T \):
+     \[
+     y = 
+     \begin{cases}
+     1, & \text{if } \sum_{i} w_i x_i - T > 0 \\
+     0, & \text{otherwise}
+     \end{cases}
+     \]
+   - **Multilayer Perceptron**: Nonlinear decision boundaries through multiple layers.
+
+3. **Activation Functions**:
+   - **Role**: Control output range, add nonlinearity, enable complex pattern learning.
+   - **Examples**: Sigmoid (\(\sigma(z)\)), ReLU, Softmax.
+
+4. **Training a Neural Network**:
+   - **Initialization**: Randomly initialize weights and biases

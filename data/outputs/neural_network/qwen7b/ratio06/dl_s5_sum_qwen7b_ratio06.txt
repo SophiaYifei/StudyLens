@@ -1,0 +1,177 @@
+### Summary of Lecture on Natural Language Processing II
+
+#### Agenda
+- **Attention & Transformers**
+  - Attention Fundamentals
+  - Transformer Architecture
+  - Popular Implementations (BERT, GPT)
+  - Applied NLP Techniques (Text Similarity, Text Summarization, Topic Modeling)
+
+- **Text Representation**
+  - Static vs Contextual Embeddings
+  - Word Embeddings (e.g., Word2Vec, GloVe)
+  - Learned Positional Embeddings
+
+- **Attention Mechanisms**
+  - Self-Attention
+    - Dot Product Attention
+    - Softmax Normalization
+    - Weighted Sum
+  - Multi-Head Attention
+  - Cross-Attention
+
+- **Transformer Architecture**
+  - Encoder-Decoder Structure
+  - Feed Forward Networks
+  - Positional Encoding
+  - Masked Self-Attention
+  - Cross-Attention
+
+- **Applied NLP Tasks**
+  - Text Similarity
+  - Text Summarization (Extractive vs Abstractive)
+  - Topic Modeling (LDA, BERTopic)
+
+- **Advanced Topics**
+  - Visualizing Embedding Spaces
+  - Large Language Models (LLMs)
+  - Multimodal Models (CLIP, ViT)
+
+---
+
+### Detailed Topics Covered
+
+#### Attention & Transformers
+
+**Attention Fundamentals**
+
+- **Self-Attention**
+  - **Dot Product Attention**: 
+    \[
+    \text{score}(i,j) = v_i \cdot v_j
+    \]
+  - **Softmax Normalization**:
+    \[
+    w(i,j) = \frac{\exp(\text{score}(i,j)/\sqrt{d_k})}{\sum_{j'} \exp(\text{score}(i,j')/\sqrt{d_k})}
+    \]
+  - **Weighted Sum**:
+    \[
+    Y_i = \sum_j w(i,j) \times v_j
+    \]
+
+- **Multi-Head Attention**
+  - **Query, Key, Value Matrices**:
+    \[
+    Q = v \times W_Q, \quad K = v \times W_K, \quad V = v \times W_V
+    \]
+  - **Concatenation and Dense Layer**:
+    \[
+    \text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_H) \times W_O
+    \]
+
+- **Cross-Attention**
+  - **Query Sequence**: Computes attention scores based on its relationship with every element in the key-value sequence.
+
+**Transformer Architecture**
+
+- **Encoder-Decoder Structure**
+  - **Encoder**: Processes input text through self-attention, produces context-rich representations.
+  - **Decoder**: Generates output sequence, uses masked self-attention and cross-attention.
+
+- **Feed Forward Network**: Adds and normalizes the output.
+
+- **Positional Encoding**: Adds position information to embeddings.
+
+- **Masking**: Prevents tokens from attending to future tokens in the sequence.
+
+- **Layer Normalization**: Normalizes across feature dimensions.
+
+#### Applied NLP Techniques
+
+**Text Similarity**
+
+- Lexical Similarity: Similar vocabulary.
+- Semantic Similarity: Similar meaning.
+- Calculating Similarity Using Embeddings.
+
+**Text Summarization**
+
+- Extractive Summarization: Selects sentences from the original text.
+- Abstractive Summarization: Generates new text retaining key points.
+
+**Topic Modeling**
+
+- Traditional Methods: LSA, LDA.
+- Deep Learning Approaches: Transformer Embeddings.
+
+#### Advanced Topics
+
+**Visualizing Embedding Spaces**
+
+- Dimensionality Reduction Techniques: PCA, t-SNE, UMAP.
+- Measuring Similarity: Cosine Similarity, Euclidean Distance, Jaccard Similarity.
+
+**Large Language Models (LLMs)**
+
+- Scale Laws: Loss decreases with more data, parameters, and compute.
+- Emergent Abilities: Few-shot learning, chain-of-thought reasoning.
+- Examples: GPT-4, Claude, Gemini.
+
+**Multimodal Models**
+
+- CLIP (Contrastive Learning for Image and Text): Joint image-text encoder.
+- Visual Question Answering: Image encoder (ViT) + LLM decoder.
+
+---
+
+### Key Formulas
+
+- **Self-Attention Score**:
+  \[
+  \text{score}(i,j) = v_i \cdot v_j
+  \]
+- **Self-Attention Weight**:
+  \[
+  w(i,j) = \frac{\exp(\text{score}(i,j)/\sqrt{d_k})}{\sum_{j'} \exp(\text{score}(i,j')/\sqrt{d_k})}
+  \]
+- **Self-Attention Output**:
+  \[
+  Y_i = \sum_j w(i,j) \times v_j
+  \]
+- **Scaled Dot-Product Attention**:
+  \[
+  \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right) \times V
+  \]
+- **Multi-Head Attention**:
+  \[
+  \text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_H) \times W_O
+  \]
+  where \(\text{head}_i = \text{Attention}(Q@W_Q^i, K@W_K^i, V@W_V^i)\).
+
+---
+
+### Evaluation Metrics
+
+- **ROUGE (Recall-Oriented Understudy for Gisting Evaluation)**:
+  - Precision, Recall, F1 calculated.
+  - Range: 0 to 1, higher = better.
+- **BERTScore**:
+  - Uses contextual BERT embeddings.
+  - Token-level precision, recall, F1.
+- **NLI-Based Factual Consistency**:
+  - Checks logical entailment between summary and source.
+  - Uses Roberta-large-mnli model.
+
+---
+
+### TODO List for Hackathon
+
+- Finish data pipeline.
+- Pre-generate and save summary outputs.
+- Pre-compute ROUGE scores.
+- Chunk transcript before NLI.
+- Write reference summary for ROUGE comparison.
+- Note 2 concrete failure cases for pitch.
+- Ensure BERTScore code runs.
+- Prepare 4-slide presentation.
+- Rehearse 3-minute pitch.

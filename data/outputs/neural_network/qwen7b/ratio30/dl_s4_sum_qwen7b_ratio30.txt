@@ -1,0 +1,231 @@
+### Summary of Lecture on Natural Language Processing (NLP)
+
+#### Introduction to NLP
+- **Tasks**: Search, machine translation, spam tagging, sentiment analysis, topic modeling, Q&A, chatbots, text summarization, text generation, multimodal processing.
+- **Applications**: Google Translate, Amazon review summaries, chatbot implementations, etc.
+- **Challenges**:
+  - Homonyms and synonyms
+  - Observations not independent (history matters)
+  - Semantic ambiguity
+  - Slang and colloquialisms
+  - Acronyms
+  - Variable length sequences
+  - Sarcasm and humor
+
+#### Text Preprocessing
+- **Pipeline**: Raw text → Tokenization → Stop word removal → Lemmatization/Stemming → Model input
+- **Tokenization**: 
+  - Word-level: Split text into words (e.g., "I love NLP" → ["I", "love", "NLP"])
+  - Subword-level: Learn common subwords (e.g., "unhappiness" → ["un", "happy", "ness"])
+  - Character-level: Split into individual characters (e.g., "I love NLP" → ["I", " ", "l", "o", "v", "e", " ", "N", "L", "P"])
+- **Stop Words**: Common words with little semantic content (e.g., "the", "is", "a").
+- **Lemmatization vs. Stemming**: 
+  - **Stemming**: Fast, crude (e.g., "running" → "run"). Produces non-words.
+  - **Lemmatization**: Accurate, always produces real words (e.g., "studies" → "study").
+
+#### Representing Text
+- **One-Hot Encoding**: Each word is represented as a vector of length `V` (vocab size) with a 1 in its position and 0 elsewhere.
+- **Bag of Words (BoW)**: Represent text as word frequency counts (ignores order).
+- **TF-IDF**: Combine term frequency (count of word in doc) and inverse document frequency (log of total docs divided by docs containing term).
+
+#### Word Embeddings
+- **Static Embeddings**: Static vectors for words (e.g., word2vec, GloVe, FastText).
+  - **word2vec**: Shallow neural network for dense embeddings (CBOW and Skip-gram).
+  - **GloVe**: Global co-occurrence matrix-based method.
+  - **FastText**: Extends word2vec with subword information.
+- **Contextual Embeddings**: Vary based on context (e.g., transformers).
+
+#### Sequence Models
+- **Recurrent Neural Networks (RNNs)**: Process tokens one-by-one sequentially.
+  - **Vanishing Gradient Problem**: Long sequences lose information.
+- **LSTM (Long Short-Term Memory)**: Adds cell state and gates (forget, input, output) to manage long-term dependencies.
+- **GRU (Gated Recurrent Unit)**: Simplified version of LSTM with fewer parameters.
+
+#### NLP Implementation
+- **Handling Variable Length Sequences**: Padding, packed sequences.
+- **Data Augmentation**: Back-translation, synonym replacement, random insertion/deletion, swap/substitution.
+- **Handling Imbalanced Data**: Sampling techniques (undersampling, oversampling), class weighting, ensemble methods.
+- **Data Splitting Best Practices**: Temporal dependencies, maintaining topic distribution, avoiding cross-contamination.
+- **Transfer Learning**: Full fine-tuning, frozen backbone, partial freezing.
+- **Popular Libraries**: NLTK, spaCy, Hugging Face Transformers.
+
+#### Next Week: Attention Mechanisms and Transformers
+- **Fundamentals of Attention**
+- **Transformer Architecture**
+- **Popular Implementations (BERT, GPT)**
+- **Applications (Text Similarity, Summarization, Topic Modeling)**
+- **Advanced Topics (Large Language Models, Multimodal Models)**
+
+### Key Takeaways
+- **Polysemy**: Words with multiple meanings.
+- **Synonyms**: Multiple words with the same meaning.
+- **Observations not Independent**: Context matters (e.g., "dog ate the bone; it tasted good").
+- **TF-IDF**: Combines term frequency and inverse document frequency.
+- **Word Embeddings**: Static (word2vec, GloVe, FastText) vs. Contextual (transformers).
+- **RNNs**: Sequential processing with vanishing gradient problem.
+- **LSTMs**: Add cell state and gates to manage long-term dependencies.
+- **GRUs**: Simplified version of LSTMs.
+- **Handling Variable Length Sequences**: Padding, packed sequences.
+- **Data Augmentation**: Various techniques to improve model robustness.
+- **Transfer Learning**: Strategies for fine-tuning pre-trained models.
+- **Key Terms Cheat Sheet**: Polysemy, synonym, tokenization, lemmatization, TF-IDF, BoW, N-grams, word2vec, CBOW, Skip-gram, OOV, static embedding, contextual embedding. 
+
+This summary covers the major topics and technical details discussed in the lecture on NLP, ensuring a clear and organized overview of the key concepts and techniques.<tool_call>
+assistant
+### Summary of Lecture on Natural Language Processing (NLP)
+
+#### Introduction to NLP
+- **Tasks**: Search, machine translation, spam tagging, sentiment analysis, topic modeling, Q&A, chatbots, text summarization, text generation, multimodal processing.
+- **Applications**: Google Translate, Amazon review summaries, chatbot implementations, etc.
+- **Challenges**:
+  - Homonyms and synonyms
+  - Observations not independent (history matters)
+  - Semantic ambiguity
+  - Slang and colloquialisms
+  - Acronyms
+  - Variable length sequences
+  - Sarcasm and humor
+
+#### Text Preprocessing
+- **Pipeline**: Raw text → Tokenization → Stop word removal → Lemmatization/Stemming → Model input
+- **Tokenization**:
+  - Word-level: Split text into words (e.g., "I love NLP" → ["I", "love", "NLP"])
+  - Subword-level: Learn common subwords (e.g., "unhappiness" → ["un", "happy", "ness"])
+  - Character-level: Split into individual characters (e.g., "I love NLP" → ["I", " ", "l", "o", "v", "e", " ", "N", "L", "P"])
+- **Stop Words**: Common words with little semantic content (e.g., "the", "is", "a").
+- **Lemmatization vs. Stemming**:
+  - **Stemming**: Fast, crude (e.g., "running" → "run"). Produces non-words.
+  - **Lemmatization**: Accurate, always produces real words (e.g., "studies" → "study").
+
+#### Representing Text
+- **One-Hot Encoding**: Each word is represented as a vector of length `V` (vocab size) with a 1 in its position and 0 elsewhere.
+- **Bag of Words (BoW)**: Represent text as word frequency counts (ignores order).
+- **TF-IDF**: Combine term frequency (count of word in doc) and inverse document frequency (log of total docs divided by docs containing term).
+
+#### Word Embeddings
+- **Static Embeddings**: Static vectors for words (e.g., word2vec, GloVe, FastText).
+  - **word2vec**: Shallow neural network for dense embeddings (CBOW and Skip-gram).
+    - **CBOW**: Context → center word (e.g., [deep, is, cool] → predict [learning])
+    - **Skip-gram**: Center word → context words (e.g., [learning] → predict [deep, is, cool])
+  - **GloVe**: Global co-occurrence matrix-based method.
+  - **FastText**: Extends word2vec with subword information (e.g., "unhappiness" → {"un", "happy", "ness"}).
+- **Contextual Embeddings**: Vary based on context (e.g., transformers).
+
+#### Sequence Models
+- **Recurrent Neural Networks (RNNs)**: Process tokens one-by-one sequentially.
+  - **Vanishing Gradient Problem**: Long sequences lose information.
+- **LSTM (Long Short-Term Memory)**: Adds cell state and gates (forget, input, output) to manage long-term dependencies.
+  - **Forget Gate**: Decide what to erase from cell state.
+  - **Input Gate**: Decide what new info to store.
+  - **Output Gate**: Decide what to output from cell state.
+- **GRU (Gated Recurrent Unit)**: Simplified version of LSTM with fewer parameters (combines forget and input gates into a single update gate).
+
+#### NLP Implementation
+- **Handling Variable Length Sequences**: Padding, packed sequences.
+- **Data Augmentation**: Back-translation, synonym replacement, random insertion/deletion, swap/substitution.
+- **Handling Imbalanced Data**: Sampling techniques (undersampling, oversampling), class weighting, ensemble methods.
+- **Data Splitting Best Practices**: Temporal dependencies, maintaining topic distribution, avoiding cross-contamination.
+- **Transfer Learning**: Full fine-tuning, frozen backbone, partial freezing.
+- **Popular Libraries**: NLTK, spaCy, Hugging Face Transformers.
+
+#### Next Week: Attention Mechanisms and Transformers
+- **Fundamentals of Attention**
+- **Transformer Architecture**
+- **Popular Implementations (BERT, GPT)**
+- **Applications (Text Similarity, Summarization, Topic Modeling)**
+- **Advanced Topics (Large Language Models, Multimodal Models)**
+
+### Key Takeaways
+- **Polysemy**: Words with multiple meanings.
+- **Synonyms**: Multiple words with the same meaning.
+- **Observations not Independent**: Context matters (e.g., "dog ate the bone; it tasted good").
+- **TF-IDF**: Combines term frequency and inverse document frequency.
+- **Word Embeddings**: Static (word2vec, GloVe, FastText) vs. Contextual (transformers).
+- **RNNs**: Sequential processing with vanishing gradient problem.
+- **LSTMs**: Add cell state and gates to manage long-term dependencies.
+- **GRUs**: Simplified version of LSTMs.
+- **Handling Variable Length Sequences**: Padding, packed sequences.
+- **Data Augmentation**: Various techniques to improve model robustness.
+- **Transfer Learning**: Strategies for fine-tuning pre-trained models.
+- **Key Terms Cheat Sheet**: Polysemy, synonym, tokenization, lemmatization, TF-IDF, BoW, N-grams, word2vec, CBOW, Skip-gram, OOV, static embedding, contextual embedding.
+
+This summary covers the major topics and technical details discussed in the lecture on NLP, ensuring a clear and organized overview of the key concepts and techniques. It highlights the importance of preprocessing, word embeddings, sequence models, and practical considerations in NLP implementation. Additionally, it outlines the upcoming topics for next week.<tool_call>
+assistant
+### Summary of University Lecture on Natural Language Processing (NLP)
+
+#### Introduction to NLP
+- **Tasks**: Search, machine translation, spam tagging, sentiment analysis, topic modeling, Q&A, chatbots, text summarization, text generation, multimodal processing.
+- **Applications**: Google Translate, Amazon review summaries, chatbot implementations, etc.
+- **Challenges**:
+  - Homonyms and synonyms
+  - Observations not independent (history matters)
+  - Semantic ambiguity
+  - Slang and colloquialisms
+  - Acronyms
+  - Variable length sequences
+  - Sarcasm and humor
+
+#### Text Preprocessing
+- **Pipeline**: Raw text → Tokenization → Stop word removal → Lemmatization/Stemming → Model input
+- **Tokenization**:
+  - Word-level: Split text into words (e.g., "I love NLP" → ["I", "love", "NLP"])
+  - Subword-level: Learn common subwords (e.g., "unhappiness" → ["un", "happy", "ness"])
+  - Character-level: Split into individual characters (e.g., "I love NLP" → ["I", " ", "l", "o", "v", "e", " ", "N", "L", "P"])
+- **Stop Words**: Common words with little semantic content (e.g., "the", "is", "a").
+- **Lemmatization vs. Stemming**:
+  - **Stemming**: Fast, crude (e.g., "running" → "run"). Produces non-words.
+  - **Lemmatization**: Accurate, always produces real words (e.g., "studies" → "study").
+
+#### Representing Text
+- **One-Hot Encoding**: Each word is represented as a vector of length `V` (vocab size) with a 1 in its position and 0 elsewhere.
+- **Bag of Words (BoW)**: Represent text as word frequency counts (ignores order).
+- **TF-IDF**: Combine term frequency (count of word in doc) and inverse document frequency (log of total docs divided by docs containing term).
+
+#### Word Embeddings
+- **Static Embeddings**: Static vectors for words (e.g., word2vec, GloVe, FastText).
+  - **word2vec**: Shallow neural network for dense embeddings (CBOW and Skip-gram).
+    - **CBOW**: Context → center word (e.g., [deep, is, cool] → predict [learning])
+    - **Skip-gram**: Center word → context words (e.g., [learning] → predict [deep, is, cool])
+  - **GloVe**: Global co-occurrence matrix-based method.
+  - **FastText**: Extends word2vec with subword information (e.g., "unhappiness" → {"un", "happy", "ness"}).
+- **Contextual Embeddings**: Vary based on context (e.g., transformers).
+
+#### Sequence Models
+- **Recurrent Neural Networks (RNNs)**: Process tokens one-by-one sequentially.
+  - **Vanishing Gradient Problem**: Long sequences lose information.
+- **LSTM (Long Short-Term Memory)**: Adds cell state and gates (forget, input, output) to manage long-term dependencies.
+  - **Forget Gate**: Decide what to erase from cell state.
+  - **Input Gate**: Decide what new info to store.
+  - **Output Gate**: Decide what to output from cell state.
+- **GRU (Gated Recurrent Unit)**: Simplified version of LSTM with fewer parameters (combines forget and input gates into a single update gate).
+
+#### NLP Implementation
+- **Handling Variable Length Sequences**: Padding, packed sequences.
+- **Data Augmentation**: Back-translation, synonym replacement, random insertion/deletion, swap/substitution.
+- **Handling Imbalanced Data**: Sampling techniques (undersampling, oversampling), class weighting, ensemble methods.
+- **Data Splitting Best Practices**: Temporal dependencies, maintaining topic distribution, avoiding cross-contamination.
+- **Transfer Learning**: Full fine-tuning, frozen backbone, partial freezing.
+- **Popular Libraries**: NLTK, spaCy, Hugging Face Transformers.
+
+#### Next Week: Attention Mechanisms and Transformers
+- **Fundamentals of Attention**
+- **Transformer Architecture**
+- **Popular Implementations (BERT, GPT)**
+- **Applications (Text Similarity, Summarization, Topic Modeling)**
+- **Advanced Topics (Large Language Models, Multimodal Models)**
+
+### Key Takeaways
+- **Polysemy**: Words with multiple meanings.
+- **Synonyms**: Multiple words with the same meaning.
+- **Observations not Independent**: Context matters (e.g., "dog ate the bone; it tasted good").
+- **TF-IDF**: Combines term frequency and inverse document frequency.
+- **Word Embeddings**: Static (word2vec, GloVe, FastText) vs. Contextual (transformers).
+- **RNNs**: Sequential processing with vanishing gradient problem.
+- **LSTMs**: Add cell state and gates to manage long-term dependencies.
+- **GRUs**: Simplified version of LSTMs.
+- **Handling Variable Length Sequences**: Padding, packed sequences.
+- **Data Augmentation**: Various techniques to improve model robustness.
+- **Transfer Learning**: Strategies for fine-tuning pre-trained models.
+- **Key Terms Cheat Sheet**: Polysemy, synonym, tokenization, lemmatization, TF-IDF, BoW, N-grams, word2vec, CBOW, Skip-gram, OOV, static embedding, contextual embedding.
+
+This summary covers the major topics and technical details discussed in the lecture on NLP, ensuring a clear and organized overview of the key concepts and techniques. It highlights the importance of preprocessing, word embeddings, sequence models, and practical considerations in NLP implementation. Additionally, it outlines the upcoming topics for next week.

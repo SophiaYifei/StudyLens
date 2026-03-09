@@ -216,3 +216,4 @@ outputs/*.json
 data/.DS_Store
 .DS_Store
 data/raw
+data/processed

@@ -1,0 +1,1 @@
+The first week of a two-week course on Computer Vision. Second week of the course will focus on the second week. The goal is to learn how to use CNNs to learn deep-learning techniques. Think of convolution like a sliding window operation across multiple dimensions.

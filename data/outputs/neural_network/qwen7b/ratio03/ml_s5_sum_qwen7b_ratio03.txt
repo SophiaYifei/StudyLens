@@ -1,0 +1,70 @@
+### Summary of Lecture on Classification Models
+
+#### Introduction to Classification
+- **Definition**: Predict a categorical target (e.g., handwritten digits, tumor type, disease category).
+- **Types**:
+  - Binary (two classes): Benign vs. malignant tumors, Type of lung disease.
+  - Multiclass (multiple classes): Income in bins, Sales lead scoring.
+- **Key Differences from Regression**:
+  - Cannot extrapolate beyond training data.
+  - Cannot predict values outside the range of observed data.
+
+#### Logistic Regression
+- **Objective**: Predict the probability \(P(y=1)\) instead of \(y\).
+- **Function**: Use the **sigmoid (logistic)** function to ensure outputs are between 0 and 1.
+- **Mathematical Formulation**:
+  \[
+  P(y=1) = \frac{1}{1 + e^{-(w_0 + w_1x)}}
+  \]
+- **Parameter Estimation**:
+  - **Cost Function**: Maximum Likelihood Estimation (MLE) instead of Sum of Squared Errors (SSE).
+  - **Optimization**: Gradient Descent to minimize Negative Log Likelihood (NLL).
+
+#### Decision Boundary and Threshold
+- **Threshold**: Default is 0.5; adjust to improve precision and recall.
+- **Effect of Threshold**: Higher threshold increases precision but decreases recall, and vice versa.
+
+#### Logistic Regression in scikit-learn
+- **Methods**:
+  - `model.predict`: Returns class labels.
+  - `model.predict_proba`: Returns probabilities.
+- **Regularization**: L2 penalty (ridge) by default.
+- **Features**: Still a linear model, but the decision boundary is linear.
+
+#### Softmax Regression for Multiclass Classification
+- **Objective**: Predict the probability of each class.
+- **Function**: Apply **softmax** to the scores obtained from the weighted sum of features.
+- **Mathematical Formulation**:
+  \[
+  P(y=k) = \frac{e^{z_k}}{\sum_{j} e^{z_j}}
+  \]
+- **Cost Function**: Cross Entropy, equivalent to MLE for binary classification.
+
+#### K Nearest Neighbors (KNN)
+- **Approach**: Assign class based on the majority vote of the k nearest neighbors.
+- **Parameters**:
+  - **k**: Number of neighbors.
+  - **Distance Metric**: Euclidean, Cosine Similarity.
+  - **Feature Scaling**: Important to prevent dominance of features with larger scales.
+- **Trade-offs**:
+  - Small k: Low bias, High variance (risk of overfitting).
+  - Large k: High bias, Smooth decision boundary.
+
+#### Support Vector Machines (SVM)
+- **Objective**: Find the optimal separating hyperplane.
+- **Core Concepts**:
+  - **Margin**: Maximizing the margin between classes.
+  - **Support Vectors**: Points closest to the margin.
+- **Soft Margin SVC**:
+  - Allows some misclassification to achieve a wider margin.
+  - Hyperparameter \(C\) controls the trade-off between margin width and errors.
+- **Kernels**:
+  - **Linear Kernel**: Simplest form.
+  - **Polynomial Kernel**: Adds polynomial interactions.
+  - **Radial Basis Function (RBF) Kernel**: Uses distances from landmarks.
+- **Implementation in scikit-learn**:
+  - Standardize features first.
+  - Choose appropriate kernel and \(C\); tune via cross-validation.
+- **Pros and Cons**:
+  - Advantages: Flexible with kernels, works well in high dimensions, convex optimization.
+  - Disadvantages: Slow for large datasets, often outperformed by tree ensembles or neural networks,
