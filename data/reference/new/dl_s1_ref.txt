@@ -1,0 +1,478 @@
+# Week 1: Introduction to Neural Networks  
+## From Biological Neuron to Deep Learning Systems
+
+---
+
+## 1. Historical Foundations
+
+### 1.1 McCulloch & Pitts Neuron (1943)
+
+The first mathematical model of a biological neuron was proposed by **McCulloch and Pitts (1943)**.  
+
+It models a neuron as a **weighted linear combination of inputs**:
+
+\[
+f(x, w) = \sum_{i=1}^{n} x_i w_i
+\]
+
+Where:
+- \( x_i \) = input features  
+- \( w_i \) = weights  
+- Output is a linear combination of inputs  
+
+This is equivalent to **linear regression**:
+
+\[
+y_i = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots
+\]
+
+It represents a **linear hyperplane** decision boundary.
+
+Initially, weights were set manually.
+
+---
+
+### 1.2 The Perceptron (Rosenblatt, 1958)
+
+Rosenblatt introduced the **perceptron**, adding a **threshold (activation)**:
+
+\[
+y =
+\begin{cases}
+1 & \text{if } \sum w_i x_i - T > 0 \\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+This introduced the idea of an **activation function**, which:
+- Converts weighted sum into a decision
+- Acts as a binary classifier
+
+However:
+
+> A single perceptron can only learn **linear decision boundaries**.
+
+Thus, problems like **non-linearly separable data (e.g., XOR)** cannot be solved with a single neuron.
+
+---
+
+## 2. Multilayer Perceptron (MLP)
+
+Adding hidden layers introduces **nonlinearity**.
+
+Structure:
+- **Input layer**
+- **Hidden layer(s)**
+- **Output layer**
+
+Example hidden neuron:
+
+\[
+z^{(2)}_1 = w^{(2)}_{1,1}x_1 + w^{(2)}_{2,1}x_2 + w^{(2)}_{3,1}x_3 + b^{(2)}_1
+\]
+
+\[
+a^{(2)}_1 = \Phi(z^{(2)}_1)
+\]
+
+Where:
+- \( \Phi \) = activation function
+- \( b \) = bias term
+
+### Universal Approximation Theorem
+
+With sufficiently many hidden units, an MLP can approximate **any function**.
+
+Stacking linear units + nonlinear activations enables modeling **nonlinear decision boundaries**.
+
+---
+
+## 3. Evolution of Neural Networks
+
+### Timeline Highlights
+
+- **1943** – McCulloch & Pitts neuron  
+- **1958** – Perceptron  
+- **1982** – Hopfield networks  
+- **1986** – Backpropagation rediscovered  
+- **2009** – ImageNet (Fei-Fei Li)  
+- **2012** – AlexNet (CNN breakthrough)  
+- **2015** – ResNet  
+- **2017** – *Attention is All You Need* (Transformers)  
+- **2022** – ChatGPT (Generative AI boom)
+
+Periods of low funding are known as **AI Winters**.
+
+---
+
+## 4. Why Deep Learning Now?
+
+Three major drivers:
+
+### 4.1 Data Availability
+- Massive labeled datasets (e.g., ImageNet: 1.2M images)
+- Sensors, internet-scale data
+- Crowdsourced labeling (e.g., Mechanical Turk)
+
+### 4.2 Computational Power
+- GPUs
+- Cloud infrastructure
+- Exponential growth in compute
+
+### 4.3 Algorithmic Advances
+- Backpropagation
+- CNNs
+- Transformers
+- Improved optimizers
+
+---
+
+## 5. When to Use Neural Networks
+
+Neural networks are appropriate when:
+
+- Large training datasets available  
+- High-dimensional or unstructured data (images, text)  
+- Complex nonlinear relationships  
+- Low need for interpretability  
+
+---
+
+## 6. Limitations of Neural Networks
+
+- Computationally expensive  
+- Power-hungry  
+- Non-convex optimization  
+- Difficult to interpret  
+- High overfitting risk  
+
+Example:  
+A small 28×28 image with 3 layers can require:
+
+\[
+28 \times 28 \times 100 \times 10 = 784,000 \text{ weights}
+\]
+
+---
+
+## 7. Deep Learning
+
+“Deep” refers to **number of layers**.
+
+More layers → hierarchical feature learning:
+- Early layers: simple features
+- Deeper layers: abstract features
+
+Deep learning:
+- Automatically learns features
+- Excels in:
+  - Computer Vision
+  - NLP
+  - Generative modeling
+
+---
+
+## 8. Activation Functions
+
+### Purpose
+- Introduce **nonlinearity**
+- Control output range
+- Decide signal propagation
+
+### Common Activation Functions
+
+#### **Sigmoid**
+\[
+\sigma(z) = \frac{1}{1 + e^{-z}}
+\]
+- Range: (0,1)
+- Used in binary classification output
+- Suffers from vanishing gradients
+
+#### **Tanh**
+- Range: (-1,1)
+- Zero-centered
+- Still vanishing gradient issue
+
+#### **ReLU**
+\[
+\text{ReLU}(z) = \max(0,z)
+\]
+- Efficient
+- Default for hidden layers
+- Avoids vanishing gradients (mostly)
+
+#### **Leaky ReLU**
+- Small slope for negative inputs
+- Prevents “dying ReLU”
+
+#### **Softmax**
+\[
+\text{Softmax}(z_i) = \frac{e^{z_i}}{\sum_j e^{z_j}}
+\]
+- Outputs probability distribution
+- Used in multi-class classification
+
+---
+
+## 9. Bias Term
+
+Bias allows shifting the activation function:
+
+\[
+z = w^T x + b
+\]
+
+Without bias:
+- Only scaling possible  
+With bias:
+- Shift decision boundary  
+
+Bias is a **learnable parameter**.
+
+---
+
+## 10. Training a Neural Network
+
+### Step 1: Initialize
+- Small random weights
+
+### Step 2: Forward Pass
+- Compute predictions
+
+### Step 3: Compute Loss
+
+Example (Regression):
+- Mean Absolute Error (MAE):
+\[
+L = |y - \hat{y}|
+\]
+- Mean Squared Error (MSE):
+\[
+L = (y - \hat{y})^2
+\]
+
+### Loss vs Cost
+- **Loss**: error per example  
+- **Cost**: average loss across dataset  
+
+### Classification Loss
+- Binary Cross Entropy
+- Categorical Cross Entropy
+
+---
+
+## 11. Backpropagation
+
+Goal: Compute gradient of loss w.r.t. each parameter.
+
+Uses **chain rule**:
+
+\[
+\frac{\partial J}{\partial w}
+\]
+
+General result:
+
+\[
+\frac{\partial J}{\partial w_{ij}^{(l)}} = \delta_j^{(l)} a_i^{(l-1)}
+\]
+
+Where:
+- \( \delta \) = error term
+- \( a \) = activation
+
+---
+
+## 12. Gradient Descent
+
+Update rule:
+
+\[
+w_{j}^{(t+1)} = w_{j}^{(t)} - \eta \frac{\partial J}{\partial w_j}
+\]
+
+Where:
+- \( \eta \) = learning rate
+
+### Learning Rate Effects
+- Too small → slow convergence
+- Too large → divergence
+- Optimal → fast, stable convergence
+
+Typical range:
+\[
+0.001 \text{ to } 0.01
+\]
+
+---
+
+## 13. Optimization Algorithms
+
+### SGD
+- Updates per sample
+- Noisy but useful for online learning
+
+### Momentum
+- Adds previous update term
+- Smooths training
+
+### Adagrad
+- Adaptive per-parameter learning rate
+- Good for sparse data
+- Learning rate shrinks too much over time
+
+### RMSprop
+- Exponential moving average of squared gradients
+
+### Adam
+Combines:
+- Momentum
+- RMSprop
+
+Most widely used optimizer.
+
+Variants:
+- AdamW
+- RAdam
+- Nadam
+
+---
+
+## 14. Training Challenges
+
+### 14.1 Vanishing Gradients
+
+Occurs when:
+- Using sigmoid/tanh
+- Gradients < 1 repeatedly multiplied
+
+Example:
+\[
+0.25^n \rightarrow 0
+\]
+
+Solution:
+- Use ReLU in hidden layers
+
+---
+
+### 14.2 Exploding Gradients
+
+Occurs when:
+- Large weights
+- Deep networks
+
+Symptoms:
+- Loss fluctuates wildly
+- Weights become very large or NaN
+
+Solutions:
+- Gradient clipping
+- Smaller batch size
+- Batch normalization
+
+---
+
+## 15. Data Splitting
+
+Three sets:
+
+- **Training set**
+- **Validation set**
+- **Test set**
+
+Rules:
+- Test set used only once at final evaluation
+- Same test set across models
+
+---
+
+## 16. Regularization Techniques
+
+### Early Stopping
+Stop training when validation error increases.
+
+### Learning Rate Schedules
+- StepLR
+- One-cycle policy
+
+### L1 Regularization (Lasso)
+\[
+\lambda \sum |w|
+\]
+Encourages sparsity.
+
+### L2 Regularization (Ridge)
+\[
+\lambda \sum w^2
+\]
+Encourages small weights.
+
+### Batch Normalization
+- Normalizes layer inputs
+- Stabilizes training
+- Learnable scale + shift parameters
+
+### Dropout
+- Randomly disables neurons
+- Prevents co-adaptation
+- Reduces overfitting
+
+---
+
+# 5-Minute Exercise: Learning Rate Tuning
+
+### Objective
+Observe effect of learning rate on convergence.
+
+### Setup
+Train a small neural network (e.g., 2-layer MLP) on simple dataset.
+
+### Experiment 1 — Too Small LR
+- Set \( \eta = 0.00001 \)
+- Observe:
+  - Very slow loss decrease
+  - Many epochs required
+
+### Experiment 2 — Too Large LR
+- Set \( \eta = 1.0 \)
+- Observe:
+  - Loss oscillates or diverges
+  - May produce NaN
+
+### Experiment 3 — Good LR
+- Set \( \eta = 0.01 \)
+- Observe:
+  - Smooth convergence
+  - Stable loss reduction
+
+### Discussion Questions
+1. What does divergence look like in the loss curve?
+2. How can you detect exploding gradients early?
+3. Why might Adam be more stable than SGD?
+4. For counting blueberries (regression), which loss function would you choose and why?
+5. When would SGD + one-cycle outperform Adam?
+
+---
+
+# Summary
+
+This lecture covered:
+
+- Evolution from linear neuron → perceptron → multilayer perceptron  
+- Universal approximation and nonlinearity  
+- Activation functions and bias  
+- Forward pass, loss functions, backpropagation  
+- Gradient descent and learning rate sensitivity  
+- Modern optimizers (Adam)  
+- Training challenges (vanishing/exploding gradients)  
+- Regularization and generalization strategies  
+
+Neural networks combine:
+- Linear algebra
+- Calculus (chain rule)
+- Optimization
+- Large-scale computation
+
+They remain powerful but require careful tuning, sufficient data, and thoughtful regularization.

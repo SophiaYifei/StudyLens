@@ -1,0 +1,27 @@
+### Summary of Lecture on Natural Language Processing (NLP)
+
+#### Introduction to NLP
+- **Tasks**: Search, machine translation, spam tagging, sentiment analysis, topic modeling, Q&A, chatbots, text summarization, text generation, multimodal processing.
+- **Applications**: Google Translate, Amazon review summaries, chatbot implementations, etc.
+- **Challenges**:
+  - Homonyms and synonyms
+  - Observations not independent (history matters)
+  - Semantic ambiguity
+  - Slang and colloquialisms
+  - Acronyms
+  - Variable length sequences
+  - Sarcasm and humor
+
+#### Text Preprocessing
+- **Pipeline**: Raw text → Tokenization → Stop word removal → Lemmatization/Stemming → Model input
+- **Tokenization**: 
+  - Word-level: Split text into words (e.g., "I love NLP" → ["I", "love", "NLP"])
+  - Subword-level: Learn common subwords (e.g., "unhappiness" → ["un", "happy", "ness"])
+  - Character-level: Split into individual characters (e.g., "I love NLP" → ["I", " ", "l", "o", "v", "e", " ", "N", "L", "P"])
+- **Stop Words**: Common words with little semantic content (e.g., "the", "is", "a").
+- **Lemmatization vs. Stemming**: 
+  - **Stemming**: Fast, crude (e.g., "running" → "run"). Produces non-words.
+  - **Lemmatization**: Accurate, always produces real words (e.g., "studies" → "study").
+
+#### Representing Text
+- **One-Hot Encoding**:

@@ -1,1 +1,0 @@
-This is our first lecture of two. We're going to talk about tasks challenges and applications and NLP. We'll talk about text pre-processing and then those traditional approaches. Next week we'll discuss applications similar to what we did for computer vision. This Week:  Introduction, NLP Neural Networks, Implementation, and Implementation.

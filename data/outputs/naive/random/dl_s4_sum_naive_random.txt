@@ -1,0 +1,6 @@
+Input Gate
+Image Source
+87
+What It Does: Updates the cell's memory with new information while removing unnecessary information. Without this, batching and parallel processing would not be possible. Unlike images where flipping or rotating preserves semantics, replacing or deleting words in text may change sentiment or intent. Also, one note here is that if you get 100 on this exam, you're not optimizing your time here. if the question is worth eight points and you didn't answer that question or you missed that question,
+you will get four points back for answering incorrectly and citing it... Questions there..
+All, let's jump into some natural language processing. it uses a lot of the, architectures that we're going to talk about for NLP. let's take a look at what this could look. Early in the season, show up for some food, art and if you can come up with negatives. I was asking us it just came up. I got money, I have a house,., I'm the first to,, actually look a plus or minus.,, I was about,, one, but I had. I have this obviously because I have, mixed up for five... No parameters for the either way though you probably if you, I,, if you don't her then don't. we've got the activation function. I'm just shoehorning drones in first. Then summarize normally.

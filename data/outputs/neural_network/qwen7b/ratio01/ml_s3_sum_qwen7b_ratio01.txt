@@ -1,0 +1,24 @@
+### Summary of University Lecture on Linear Regression
+
+#### Introduction
+- **Context**: The lecture covers fundamental concepts of linear regression, including its application in various scenarios like weather forecasting.
+- **Link to Practical Example**: Accessible via `fastapi-app-690891431278.us-central1.run.app/student/quiz/d147bbc6-c9db-46c2-b704-a4373e55690b`.
+
+---
+
+#### Key Topics Covered:
+
+1. **Linear Models**
+   - **Definition**: Linear models are linear in the parameters \( w \). They can model non-linear relationships via transformations.
+   - **Examples**:
+     - Simple Linear Regression: \( y = w_0 + w_1 x \)
+     - Multiple Linear Regression: \( y = w_0 + w_1 x_1 + w_2 x_2 + ... + w_n x_n \)
+
+2. **Linear Regression Basics**
+   - **Definition**: A model that assumes linear relationships between features and targets.
+   - **Importance**: Forms the basis of more complex ML models; can be surprisingly effective if properly used.
+   - **First Model**: Useful as a benchmark to establish a baseline for model performance.
+
+3. **Simple vs. Multiple Linear Regression**
+   - **Simple Linear Regression**: Models \( y \) as a function of a single feature \( x \).
+   - **Multiple Linear

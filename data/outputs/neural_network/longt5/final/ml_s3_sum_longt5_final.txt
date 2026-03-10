@@ -1,0 +1,1 @@
+This chapter introduces a number of important concepts, such as the concept of "linear regression" and the use of confusion matrionics. In particular, the speaker discusses how to use this information to predict class imbalances within his model.

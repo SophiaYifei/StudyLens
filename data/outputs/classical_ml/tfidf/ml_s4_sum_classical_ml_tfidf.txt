@@ -1,0 +1,130 @@
+Time Series Decomposition
+We can decompose a time series into three main components:
+Trend
+Seasonality
+Residuals
+They are combined using the additive or multiplicative model
+Additive:
+Multiplicative:
+Additive vs. Multiplicative
+Additive model:
+Linear trend
+Constant seasonal periods over time
+Multiplicative model:
+Non-linear trend
+Width or height of seasonal periods changes over time
+Decomposing Time Series
+We can use the seasonal_decompose() function from the statsmodels package to decompose time series into their trend, seasonal, and residual components
+We must select additive or multiplicative time series and input the estimated period
+Be careful about automated time series decomposition
+It may do well at identifying trend, but sometimes finds seasonal patterns that don’t really exist
+Autocorrelation
+Autocorrelation is the correlation of a signal with a delayed (lagged) copy of itself
+Detected using the Durbin-Watson test or using the Pearson correlation coefficient of the two series (actual and lagged)
+Autocorrelation is an indicator of seasonality
+Markov Processes
+A process with full autocorrelation with a lag = 1 is called a Markov process or a Markov chain
+The current state depends only on the state attained at the previous timestep
+A transition matrix specifies the probabilities of shifting between states
+Markov models are used in the sciences, predicting stock market prices, and ranking web search results (PageRank)
+https://en.wikipedia.org/wiki/Markov_chain
+Autoregression Model
+If we identify strong correlation with the past, we can build a model using the past values as features
+This is called an autoregression model
+We can create features using past data at one lag or multiple
+Time series demo
+Exercise
+Project 1
+Project 1 objective
+Predict the hourly temperature measured at RDU airport for the period 12am September 17 – 11pm September 30’
+Rules
+Any data (other than ground truth)
+Any inputs/features
+Any model(s)
+MUST include 1 linear regression model + 1 other model
+Deliverables
+Presentation: Inputs, data pipeline, features, models, eval approach, performance
+Code repo
+Writeup (2-4 pages): your approach to the problem, how you applied what we learned in class
+
+[Auto-generated transcript. I don't know if there's an indication of the point value of this one to give the reviewer a shorter answer for that one other than.. And,, that's an interesting that you caught that because,,
+the way this works, I think I told you on the back end is I upload my lecture size,
+it generates the quite I tell how many questions it generated that generates questions for me., last night, very late last night when I generated that,,
+the third question was actually also quite long, and I decided to be a little bit kind to you. very similar to, I think, building a product,, where, the best way to do it is really to just do it in an iterative way,
+rather than spending three weeks trying to build the perfect system and show it to you guys,, spending a little bit of time,,,
+to build something that you can use and that can get in your hands and you can start to give me feedback on it is better., if I had shown up last week and said, hey, I'm thinking about building this thing,
+they ask you questions and then you respond and it gives you some feedback., I probably wouldn't have gotten as good of feedback from you as, as,,
+as we did have a you be, use something, even if it wasn't very good., and I think a lot of people ask when we talk about building products, you have an idea., and,, my answer is always, just build it, but build it quickly.,, if it takes you more than a week to build it, you're spending too long.,, build the simplest possible thing very, very quickly and then show it to people and get some feedback. Who are funded by,,, any grant funding to go and do things., this group, I think, works with those faculty and, and students at times to,,
+either try to license or sell technology that they build tech companies or they try to help them start up companies,
+depending on whatever they're interested in doing., and that's an expert in all of that., and in particular, he's going to talk about intellectual property as it relates to software and AI,
+because that it is quite a bit different in our area versus in biotech or something that,
+where you're probably if you invent something, you're going to go get a patent on it,
+and then you have some tangible intellectual property that you can go sell., with I it's pretty rare to go try to patent things. there's lots of things in the world that,, we,, that we model as a time series., the main difference is that,, when we build models in machine learning,
+we have a fundamental,, assumption that the observations are not correlated with each other,
+that the observations in XY points in our, in our data set are independent of each other, independent observations.., but in time series, that's generally not true., the, typically the, the present is correlated with the past in some way.. what happened is,, the temperature now is highly correlated with the temperature of five minutes. that's part one,, is understanding how to decompose these and how to think about trend versus seasonality., and how I combine those to form a model,, of a time series., we're gonna switch over to part two, which is,, that's called autocorrelation.,, I mentioned before that,, that the unique thing about time series data versus regular data modeling is that correlation with the past.. And we call this, autocorrelation.. it's correlation of, of the present with a delayed or lag copy of itself., we could think of this,, again, the simplest way to think about it is, is in weather..,, the temperature at 2 p.m. today is probably somewhat correlated with the temperature at 2 p.m. yesterday,
+and it's probably somewhat correlated with the temperature at 2 p.m. on September.. we understand that there is some correlation, but it's not correlation to all data points in the past. Typically we consider a Markov process to be,, if we think about,, some process and we're trying to model that as,,, full auto correlation with,, the data point with a lag of one, meaning whatever happened last,, we have,, full correlation with,,, with the presence,,, and,, or put another way,
+the current state depends only on the, the previous what happened at the previous timestamp., and this is,, sometimes true, but often not exactly true, but it still can be useful for modeling purposes.,, the most common example you see, given a Markov process would be,, if you're trying to model the weather condition. if yesterday was,, sunny, then,, we're going to take that information and we're going to say,, based on that,
+there's a 70% chance that today is going to be sunny and there's a 30 a 20% chance it's going to be cloudy and a 10% chance it's going to be rain.. And then based on that,, we can run., we can we can,, model out what today is going to be, and then we can use today's and we can go to the next step and say,
+And we can we can keep modeling that.,,, this is a,, not,, it's a, it's a model that's not often correct, but still is useful for modeling things this., and you'll see models that use a Markov process approach,, in lots of different places, in different areas of science., some people use it for predicting equity prices,, etc.,, we're not gonna spend a lot of time on I just want to introduce it to you. And, it's cool stuff, but, we're going to do something very simple with it today,
+which is we're just going to look at the, the,,, the time series of, the total number of flights occurring each day.. we're going to we're going to do take a very aggregated view of that., we've got this is what the data looks., for each day we've got, a list of here's all the different flights, the carrier, the er, what airport it was coming from,
+when it was going to, when the departed, whether it's delayed, whether the weather had any impact on it or not, etc. we're going to do a little activity now,, to get some hands on,, practice with this.,,., and the answer to that is,,, it depends on how easy it is to, to figure out the seasonality,
+because that's really the key a key component to make this work.. if you can,, figure that out using your human judgment or consult with a domain expert to understand that,
+or it's relatively straightforward to visualize it, then you can probably do a pretty good job using an approach this., if it's not obvious either visually or by talking to somebody what the seasonality is,
+what features degrade because you don't know what the seasonality is or how many seasonal components there might be or what the lags are., other than just a lot of trial and error, it would be tough to build an effective model. Heavy rain., probably not a lot of people,, biking around when it's three or especially four., you got the weather situation,, temperature.,, for an actual temperature, it feels temperature, humidity, wind speed., and you've got a bunch of different potential,, useful information there for you., what you're going to do is try to build,, you're going to take this information and try to build a model,,, that,,, can effectively model the demand for bikes., and,, you're going to run this to download the data, set up the regression model., you're going to go through, load the data, clean it. To-Do
+Identify 3 real-world time series examples
+Identify 1 dataset that is time-ordered but not a true time series
+Trend and Seasonality
+Trend = long-term movement
+Seasonality = cyclical patterns
+Can exist simultaneously
+Trend may increase or decrease
+Seasonality may repeat hourly, daily, weekly, yearly
+Examples
+Temperature
+Power demand
+Retail / bookstore sales
+Question
+How would you distinguish trend from seasonality visually? To-Do
+Sketch a time series with upward trend + weekly seasonality
+Time Series Modeling
+Standard regression assumes independence
+Time series violates independence
+Present correlated with past
+Autocorrelation key concept
+Must model time dependence explicitly
+Methods include ARIMA, exponential smoothing
+Question
+Why is random train/test split problematic for time series? To-Do
+Compute lag-1 and lag-24 correlation for a dataset
+Markov Processes
+Full autocorrelation at lag 1
+Current state depends only on previous state
+Transition matrix defines probabilities
+Used in science, finance, ranking algorithms
+Question
+Do most real-world time series truly satisfy Markov property? To-Do
+Create lag-1, lag-24 features
+Drop rows with missing lag values
+Project 1
+Objective
+Predict hourly temperature at RDU airport
+Specific time window
+Rules
+Any data except ground truth future
+Any features
+Must include:
+◦	1 linear regression model
+◦	1 other model
+Deliverables
+Presentation
+Code repository
+2–4 page writeup
+Writeup should cover
+Inputs
+Data pipeline
+Feature engineering
+Models
+Evaluation approach
+Performance
+Question
+What features beyond past temperature might improve prediction?

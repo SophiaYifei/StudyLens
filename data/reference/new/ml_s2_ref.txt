@@ -1,0 +1,502 @@
+# Model Evaluation and Data Preparation in Predictive Modeling
+
+## 1. Goal of Predictive Modeling
+
+The fundamental objective of predictive modeling is **accurate generalization to unseen data**, not merely high performance on training data.
+
+- A model with **99% training accuracy** is not necessarily good.
+- Performance must be evaluated on data **not used during model development**.
+- Generalization performance is the true measure of model quality.
+
+---
+
+## 2. Training, Validation, and Test Sets
+
+### 2.1 Train–Test Split
+
+Since we cannot evaluate performance on future unseen data directly, we simulate it by splitting available data:
+
+- **Training set (80–90%)** → used to fit the model
+- **Test set (10–20%)** → used only once for final evaluation
+
+The **test set must remain completely untouched** during model development.
+
+### 2.2 Why Not Use the Test Set for Model Selection?
+
+If hyperparameters or model choices are tuned using the test set:
+
+- The test set becomes biased
+- Performance estimates become overly optimistic
+- This constitutes a form of **data leakage**
+
+### 2.3 Train–Validation–Test Split
+
+To compare models properly:
+
+- **Training set (60–80%)**
+- **Validation set (10–20%)**
+- **Test set (10–20%)**
+
+Workflow:
+1. Train multiple candidate models on training data.
+2. Select best model using validation performance.
+3. Evaluate final chosen model once on test set.
+
+### Risks of a Validation Set
+
+- Small validation sets → noisy estimates
+- Repeated tuning → indirect leakage
+- Model selection bias
+
+---
+
+## 3. Cross-Validation
+
+To mitigate validation bias and improve stability:
+
+### 3.1 K-Fold Cross-Validation
+
+Procedure:
+1. Split training data into **K folds**
+2. For each iteration:
+   - Train on K−1 folds
+   - Validate on remaining fold
+3. Compute average validation error
+
+Typical choices:
+- **K = 5 or 10**
+
+Benefits:
+- Reduces validation bias
+- Uses more data for training
+- More stable performance estimate
+
+### 3.2 Other Cross-Validation Variants
+
+- **ShuffleSplit**: Random subset per iteration
+- **Leave-One-Out (LOOCV)**: K = number of samples
+
+Tradeoff:
+- Larger K → better estimate but higher computational cost
+- Rarely used in deep learning due to training time
+
+After model selection:
+- Retrain final model on full training + validation data
+- Evaluate once on test set
+
+---
+
+## 4. Sampling
+
+### 4.1 Why Sample?
+
+- Cannot access full population
+- Computational constraints
+- Sampling occurs:
+  - When constructing dataset
+  - When splitting train/test
+  - During experimentation
+
+### 4.2 Nonprobability Sampling
+
+Selection not based on probability criteria.
+
+Types:
+- **Convenience sampling**
+- **Snowball sampling**
+- **Judgment sampling**
+- **Quota sampling**
+
+⚠ High risk of bias.
+
+Examples:
+- LLMs trained on Reddit/Wikipedia
+- IMDB sentiment datasets
+- Early self-driving car datasets limited to dry climates
+
+Key question:
+> Does the dataset reflect real-world distribution?
+
+### 4.3 Random Sampling
+
+- **Simple random sampling**
+- **Stratified sampling** (preserves class proportions)
+- **Weighted sampling** (e.g., emphasize recent data)
+
+Best practice:
+- Use `stratify` for imbalanced classification.
+
+---
+
+## 5. Data Leakage
+
+### Definition
+
+Data leakage occurs when **information from the test set influences model training**, directly or indirectly.
+
+### Consequences
+
+- Inflated performance
+- Over-optimistic evaluation
+- Poor production performance
+
+### Common Sources
+
+- Feature selection before splitting
+- Scaling before splitting
+- Imputation before splitting
+- Duplicate observations
+- Future data in training
+- Random splits in time series
+- Different data generation processes across classes
+
+### Special Case: Time Series
+
+Random splits are inappropriate because:
+- They introduce future information into training
+- Must split chronologically
+
+### Best Practice
+
+1. **Split first**
+2. Fit preprocessing (imputation, scaling, encoding) on training only
+3. Apply transformations to validation/test sets
+
+---
+
+## 6. Bias–Variance Tradeoff
+
+Total expected squared error:
+
+\[
+\text{Error} = \text{Bias}^2 + \text{Variance} + \text{Irreducible Error}
+\]
+
+### Bias
+
+- Error from incorrect model assumptions
+- Underfitting
+- Model too simple
+
+### Variance
+
+- Sensitivity to training data fluctuations
+- Overfitting
+- Model too complex
+
+### Behavior with Increasing Complexity
+
+- Bias ↓
+- Variance ↑
+- Total error forms U-shaped curve
+
+Goal:
+> Find optimal model complexity minimizing total error.
+
+### Influencing Factors
+
+- Algorithm choice
+- Number of features
+- Hyperparameters
+- Dataset size
+
+More data → allows higher complexity safely.
+
+---
+
+## 7. Outcomes vs Outputs
+
+### Outcome Metrics
+
+Business impact:
+- Revenue increase
+- Cost reduction
+- Risk reduction
+
+Usually measured in dollars.
+
+### Output Metrics
+
+Technical performance:
+- MSE
+- AUROC
+- Precision/Recall
+
+Critical principle:
+> Define outcome first, then choose output metric.
+
+---
+
+## 8. Baselines
+
+Metrics are meaningless without comparison.
+
+Common baselines:
+- **Zero-rule** (mean / majority class)
+- Heuristic baseline
+- Human baseline
+- Existing solution baseline
+
+Always compute baseline first.
+
+---
+
+## 9. Regression Metrics
+
+### 9.1 Mean Squared Error (MSE)
+
+\[
+MSE = \frac{1}{n} \sum (y_i - \hat{y}_i)^2
+\]
+
+- Penalizes large errors heavily
+- Sensitive to outliers
+- Harder to interpret due to squared units
+
+### 9.2 Mean Absolute Error (MAE)
+
+\[
+MAE = \frac{1}{n} \sum |y_i - \hat{y}_i|
+\]
+
+- More robust to outliers
+- Easier interpretation
+- Same units as target
+
+### 9.3 Mean Absolute Percentage Error (MAPE)
+
+\[
+MAPE = \frac{1}{n} \sum \left|\frac{y_i - \hat{y}_i}{y_i}\right|
+\]
+
+- Expressed as %
+- Intuitive for non-technical audiences
+- Problematic when \( y \) is small
+
+### 9.4 R² (Coefficient of Determination)
+
+\[
+R^2 = \frac{\text{Explained Variation}}{\text{Total Variation}}
+\]
+
+- Measures goodness of fit
+- Typically in-sample
+- Often misused in predictive modeling
+
+### Adjusted R²
+
+Penalizes added features:
+- Helps mitigate overfitting
+- Still limited for predictive evaluation
+
+---
+
+## 10. Classification Metrics
+
+### 10.1 Accuracy
+
+\[
+\frac{TP + TN}{TP + TN + FP + FN}
+\]
+
+Problem:
+- Misleading under class imbalance
+
+### 10.2 Confusion Matrix
+
+|               | Predicted Positive | Predicted Negative |
+|---------------|-------------------|-------------------|
+| Actual Positive | TP | FN |
+| Actual Negative | FP | TN |
+
+### 10.3 Recall (TPR)
+
+\[
+\frac{TP}{TP + FN}
+\]
+
+Of actual positives, how many identified?
+
+### 10.4 Precision
+
+\[
+\frac{TP}{TP + FP}
+\]
+
+Of predicted positives, how many correct?
+
+### 10.5 False Positive Rate (FPR)
+
+\[
+\frac{FP}{FP + TN}
+\]
+
+---
+
+## 11. ROC and PR Curves
+
+### ROC Curve
+
+Plots:
+- TPR vs FPR
+- Across threshold values
+
+Threshold effects:
+- Higher threshold → lower TPR and FPR
+- Lower threshold → higher TPR and FPR
+
+### AUROC
+
+- 0.5 → random classifier
+- 1.0 → perfect classifier
+
+### Precision–Recall Curve
+
+- Better for imbalanced data
+- Ignores TN
+- More informative when positive class is rare
+
+Use PR curves when class imbalance is significant.
+
+---
+
+## 12. Multiclass Evaluation
+
+- Multiclass confusion matrix
+- `classification_report()` in sklearn
+- Macro-averaged precision and recall
+
+---
+
+## 13. Feature Selection
+
+### Why?
+
+- Reduce overfitting
+- Improve generalization
+- Improve interpretability
+- Reduce training time
+
+### Methods
+
+- Univariate selection (e.g., ANOVA, Chi-square)
+- `SelectKBest`
+- Random Forest feature importance
+- Embedded methods
+
+Practical strategy:
+- Remove features with >50% missing
+- Apply filter methods
+- Apply embedded methods
+
+---
+
+## 14. Categorical Encoding
+
+### Ordinal Encoding
+
+- Preserves order
+- Risk of artificial ordering
+
+Use when:
+- Categories have meaningful order
+
+### One-Hot Encoding
+
+- Creates binary indicators
+- Safer for nominal categories
+- Increases dimensionality
+
+---
+
+## 15. Scaling and Standardization
+
+Required for:
+- KNN
+- Clustering
+- PCA
+- Regularized regression
+- Neural networks
+
+### MinMax Scaling
+
+- Scales to [0,1]
+- Sensitive to outliers
+
+### Standardization
+
+\[
+z = \frac{x - \mu}{\sigma}
+\]
+
+- Mean = 0
+- Std = 1
+- Preferred for PCA and many ML models
+
+Fit scaler on training only.
+
+---
+
+## 16. Class Imbalance
+
+Problem:
+- Model favors majority class
+- Accuracy becomes misleading
+
+Solutions:
+- Collect more minority data
+- Undersampling majority
+- Oversampling minority
+
+Always choose metrics carefully (e.g., recall, PR curve).
+
+---
+
+## 17. Pipelines
+
+### Why Use Pipelines?
+
+- Prevent data leakage
+- Improve reproducibility
+- Cleaner code
+- Easier deployment
+
+Typical pipeline:
+
+1. Imputation
+2. Encoding
+3. Scaling
+4. Model
+
+Use:
+- `Pipeline`
+- `ColumnTransformer`
+
+Fit pipeline on training only.
+
+---
+
+## 18. Key Reflection Questions
+
+- Did I check for leakage?
+- Did I compute a baseline?
+- Am I optimizing the correct business outcome?
+- Is my model overfitting?
+- Is my dataset representative?
+- Is my validation strategy sound?
+
+---
+
+# Summary
+
+Model evaluation is not merely computing metrics; it is a structured process involving:
+
+- Proper data splitting
+- Leakage prevention
+- Cross-validation
+- Bias–variance management
+- Appropriate metric selection
+- Thoughtful preprocessing
+- Clear linkage between technical outputs and business outcomes
+
+The central theme is **generalization**: building models that perform reliably on unseen data while aligning with real-world objectives.

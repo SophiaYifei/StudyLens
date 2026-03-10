@@ -1,0 +1,65 @@
+### Summary of University Lecture on Linear Regression
+
+#### Introduction
+- **Context**: The lecture covers fundamental concepts of linear regression, including its application in various scenarios like weather forecasting.
+- **Link to Practical Example**: Accessible via `fastapi-app-690891431278.us-central1.run.app/student/quiz/d147bbc6-c9db-46c2-b704-a4373e55690b`.
+
+---
+
+#### Key Topics Covered:
+
+1. **Linear Models**
+   - **Definition**: Linear models are linear in the parameters \( w \). They can model non-linear relationships via transformations.
+   - **Examples**:
+     - Simple Linear Regression: \( y = w_0 + w_1 x \)
+     - Multiple Linear Regression: \( y = w_0 + w_1 x_1 + w_2 x_2 + ... + w_n x_n \)
+
+2. **Linear Regression Basics**
+   - **Definition**: A model that assumes linear relationships between features and targets.
+   - **Importance**: Forms the basis of more complex ML models; can be surprisingly effective if properly used.
+   - **First Model**: Useful as a benchmark to establish a baseline for model performance.
+
+3. **Simple vs. Multiple Linear Regression**
+   - **Simple Linear Regression**: Models \( y \) as a function of a single feature \( x \).
+   - **Multiple Linear Regression**: Models \( y \) as a function of multiple features \( x_1, x_2, ..., x_n \).
+
+4. **Model Formulation**
+   - **Parameters**:
+     - \( w_0 \): Intercept (average value for \( y \) when all \( x \)'s are 0)
+     - \( w_i \): Average increase in \( y \) when \( x_i \) is increased by 1, holding other \( x \)'s constant.
+   - **Prediction Equation**:
+     \[
+     y = w_0 + w_1 x_1 + w_2 x_2 + ... + w_p x_p
+     \]
+
+5. **Estimating Parameters**
+   - **Objective**: Minimize the cost function (often the Sum of Squared Errors, SSE).
+   - **Methods**:
+     - **Closed-form Solution**: Using the Normal Equation.
+       \[
+       w = (X^T X)^{-1} X^T y
+       \]
+     - **Gradient Descent**: An iterative optimization technique.
+   - **Vectorized Form**:
+     \[
+     y = X w
+     \]
+     Where \( X \) is the design matrix and \( w \) is the parameter vector.
+
+6. **Assumptions of Linear Regression**
+   - **Linearity**: Expected value of \( y \) for any given \( x \) is a linear function of \( x \).
+   - **Error Independence**: Errors are uncorrelated random variables with zero mean and constant variance (\( \sigma^2 \)).
+   - **Independence of Features**: Feature variables are independent.
+   - **Consequences of Violating Assumptions**:
+     - Non-linearity: Transform features or add polynomial terms.
+     - Non-constant variance: Transform target (e.g., log, sqrt).
+     - Multicollinearity: Remove features or reduce the feature set.
+
+7. **Checking Model Fit**
+   - **Linearity Check**:
+     - Scatterplot of \( y \) vs. \( x \)
+     - Residual plot (residuals centered around 0, no patterns)
+   - **Homoscedasticity Check**:
+     - Residual plot (variance should be evenly scattered around 0, no funnel shape)
+   - **Multicollinearity Check**:
+     - Cor

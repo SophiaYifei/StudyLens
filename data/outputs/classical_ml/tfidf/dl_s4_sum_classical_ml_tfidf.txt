@@ -1,0 +1,420 @@
+Week 6
+1
+Natural Language Processing I
+NLP Module
+This Week:
+Introduction, NLP Neural Networks, Implementation
+Next Week:
+NLP Applications, Transformers, Advanced Topics (LLMs)
+2
+Agenda
+Introduction to Natural Language Processing
+Tasks, Challenges, & Applications
+Text Preprocessing
+Traditional Approaches
+NLP Neural Networks
+Word Embeddings (Word2Vec)
+Recurrent Neural Networks
+LSTM and GRU architectures
+NLP Implementation
+3
+Introduction to Natural Language Processing
+4
+Image Source: nadi borodina, Surendran MP
+Overview
+5
+Search
+Search within app
+Search Engines (ie Google, Bing)
+Machine Translation
+Google Translate
+Translation Apps
+Text Classification
+Spam tagging
+Sorting articles
+Sentiment Analysis
+Market Research
+Behavioral studies
+Social media analysis
+Text Similarity
+Plagiarism checkers
+Overview
+6
+Q&A
+Chatbots
+Text Summarization
+Amazon Review Summaries
+Text Generation
+ChatGPT, Claude, Gemini
+Topic Modeling
+Auto-tag web articles
+Attributes in product reviews
+Multimodal (NLP+)
+Applications combining text and images (or other modalities)
+Multimodal LLMs
+Representing Text
+7
+bank of the river
+[34, 56, 24, ….. 23, 56]
+Representing Text
+8
+deposited money at the bank
+[51, 22, 19, ….. 40, 95]
+bank of the river
+[34, 56, 24, ….. 23, 56]
+Challenges
+9
+deposited money at the bank
+[51, 22, 19, ….. 40, 95]
+bank of the river
+[34, 56, 24, ….. 23, 56]
+Words with different meanings (homonyms)
+Challenges
+10
+Words with different meanings (homonyms)
+Words with the same meaning (synonyms)
+Sneakers, running shoes, tennis shoes
+Challenges
+11
+Words with different meanings (homonyms)
+Words with the same meaning (synonyms)
+Observations are not independent. Lemmatize/Stem
+Traditional NLP
+28
+28
+Bag of Words
+Term Frequency-Inverse Document Frequency (TF-IDF)
+29
+Bag of Words
+Converts text into a fixed-length numerical vector
+Counts word frequencies while disregarding grammar and word order
+Creates a vocabulary from all unique words in the corpus
+Represents text by the frequency of each word, disregarding order and context
+Image Source: Kelly Sikkema
+30
+Bag of Words
+Corpus of data
+Positive reviews:
+- "Great movie, amazing, amazing plot"
+- "Loved it, fantastic acting"
+- "Best film this year"
+Negative reviews:
+- "Terrible waste of time"
+- "Bad acting, horrible plot"
+- "Worst ever movie ever made"
+Example
+31
+Bag of Words
+vocabulary = [acting, amazing, bad, best, ever, fantastic, film, great, horrible, it, loved, made, movie, plot, terrible, time, waste, worst, year]
+Example
+review_vectors = [
+# “Great movie, amazing, amazing plot”
+[0, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0],
+# “Loved it, fantastic acting”
+[1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+# "Best film this year"
+[0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+# "Terrible waste of time"
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0],
+# "Bad acting, horrible plot"
+[1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+# "Worst ever movie ever made"
+[0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0] ]
+labels = [1, 1, 1, 0, 0, 0]
+32
+Bag of Words
+Now, train your traditional model (i.e. Learn More Here
+Image Source: G4G
+Love
+conveyed him and his five cousins at a suitable hour to Meryton and the girls may go or you may send them by themselves you know â Elizabeth was distressed She felt that Janeâ s feelings she is not half so handsome as Jane nor half so good humoured as Lydia But you are always giving _her_ the preference â â They have none of them do we â Darcy had walked away to another part of the business On finding Mrs Bennet Elizabeth and one of its narrowest parts They crossed it by a simple bridge in character with the general air of the scene it was a spot less adorned than any they had yet visited and the valley here contracted into a glen allowed room only for the stream and a narrow walk amidst the rough coppice wood which bordered it Elizabeth longed to observe that Mr Bingley had been a most delightful friend so easily guided that his worth was invaluable but she checked herself She remembered that he had but just courage enough to make her former assurance of her sisterâ s ready acquiescence â I hope â said she â Your cousinâ s conduct does not suit my feelings Why was he to be the judge â â You are then resolved to have him â â I have two small favours to request First that you will always exceed your income â â I hope not so Imprudence or thoughtlessness in money matters would be unpardonable in _me_ â â Exceed their income My dear Mr Bennet But I knew not I was afraid of doing too much Wretched wretched mistake â Darcy made no answer and seemed desirous of changing the subject At that moment Sir William Lucas appeared close to them meaning to pass
+HMM text generation, predicts the next word, trained on the novel Pride and Prejudice:
+45
+Issues
+Doesn’t take into account contextual information
+Doesn’t address many of our challenges, like homonyms and synonyms
+Why you may use traditional methods:
+Computationally inexpensive, easy to implement
+Context may not be necessary for text classification or text clustering tasks
+Neural Networks for Natural Language Processing
+46
+46
+Word Embeddings (Word2Vec)
+Representing Text
+47
+[0,1,0]
+Corpus to train BoW: “I like cats”
+“cats”
+“I”
+“like”
+Representing Text
+48
+[0,1,0,…,1,1,0]
+In a larger corpus, you will have hundreds or thousands of dimensions, where each dimension corresponds to a single word/phrase from your training corpus. 57
+Word2Vec (2013)
+Shallow neural network architecture
+Vectors encode semantic and syntactic word relationships
+Enables arithmetic operations on words: king - man + woman = queen
+58
+Word2Vec
+Single hidden layer neural network
+Input layer: One-hot encoded vectors (vocabulary size)
+Hidden layer: Dense linear projection (embedding dimension)
+Output layer: Softmax over vocabulary
+No non-linear activations between layers
+Weights between input and hidden layer become final word embeddings
+59
+Word2Vec
+Two training methods:
+Skip-gram: Predict context words given center word
+Better for rare words, works better with small training data
+Continuous Bag of Words (CBOW): Predict center word from context
+Faster training, better for frequent words
+60
+Word2Vec
+input = words are one-hot encoded vectors (sparse, high-dimensional)
+embedding layer transforms these into dense, lower-dimensional vectors
+Word2Vec - CBOW
+Input layer = 2*window_length
+window_size = 2
+Don’t you think deep learning is very fun? input = words are one-hot encoded vectors (sparse, high-dimensional)
+embedding layer transforms these into dense, lower-dimensional vectors
+61
+predicting probabilities over vocabulary (7834 tokens in vocabulary)
+Word2Vec - CBOW
+CBOW assumes all context words contribute equally to predicting the target
+Averaging creates a fixed-size representation regardless of window size
+Helps capture the general context rather than specific word positions
+Makes the model more robust to word order variations
+Lambda layer averages context word embeddings
+62
+Word2Vec - CBOW
+Dense layer acts as a classifier over entire vocabulary
+Softmax used at dense layer
+Each output represents the probability of that word being the target
+Through training via backpropagation, model learns optimized embeddings for all words in the vocab (loss typically categorical crossentropy)
+63
+Word2Vec - CBOW
+Getting embeddings:
+Directly extract weights of embedding layer = word embeddings
+Why does this work? 🔥 Key Difference Summary
+LSTM:
+Separate memory (cell state) + 3 gates
+GRU:
+Combined memory + 2 gates
+Challenges
+They have issues with sequences of different lengths
+The size of the network depends on the length of the sequence, so optimization requires a longer time to train and lots of steps
+They don’t work well with long text documents
+Issues with long-range dependencies
+They are hard to train
+SLOW: They do not allow for parallel computation (all computation occurs sequentially and therefore cannot be parallelized)
+CHALLENGING HYPERPARAMETER TUNING: Lots of parameters that are interlinked with one another
+98
+RNNs struggle with long-range dependencies because information must pass sequentially through many time steps, and they cannot be parallelized during training. 108
+Handling Imbalanced Data
+Challenge:
+Real-world text datasets often have severe class imbalance:
+Spam detection (99% normal, 1% spam)
+Hate speech detection (majority non-toxic)
+Intent classification (some intents rare)
+Image Source: Samuel Regan-Asante
+109
+Handling Imbalanced Data
+Sampling Techniques
+Undersampling majority class
+Oversampling minority class
+Random oversampling, SMOTE for text (with word embeddings)
+Loss Function Modifications
+Class weights in cross-entropy loss
+Inverse frequency weighting, Sqrt inverse frequency weighting
+Architectural Approaches
+Two-stage training
+First train on balanced subset
+Fine-tune on full dataset
+Ensemble methods
+Train multiple models on balanced subsets
+Combine predictions with weighted voting
+❓ Why is class imbalance a serious issue in NLP? 111
+Data Splitting Best Practices
+Challenges:
+Temporal dependencies in text data
+News articles should be split by date
+Social media conversations need chronological splits
+Cross-contamination between splits
+Similar documents may appear across splits
+Duplicate or near-duplicate content
+112
+Data Splitting Best Practices
+Split by document source/author when possible
+Prevents data leakage from writing style
+Important for authorship attribution tasks
+Maintain similar topic distributions across splits
+Account for domain shift between train/val/test
+Conversation data
+Split by conversation thread, not individual messages
+Keep context-reply pairs together
+Sequential data
+Time-based splits for forecasting tasks
+❓ Why is random splitting sometimes dangerous in NLP? 114
+Transfer Learning / FT
+Full Fine-tuning
+Update all model parameters
+Requires more compute and data
+Frozen Backbone
+Only train task-specific layers
+Preserves pretrained knowledge
+Less prone to overfitting
+Partial Freezing
+Update only top N layers
+Common strategy: freeze embeddings + first few layers
+115
+Transfer Learning / FT
+Gradual Unfreezing
+Process:
+Start with all layers frozen except final layer
+Train for N epochs
+Unfreeze next layer
+Repeat until desired depth
+Benefits:
+Prevents sudden changes to pretrained weights
+Allows model to adapt gradually
+Reduces overfitting risk
+❓ What is the difference between full fine-tuning and frozen backbone? (Also useful for non-NLP tasks like computer vision and audio)
+Documentation
+119
+NLP libraries
+👉 Code tutorial for applications in main libraries:
+NLTK
+Tokenization
+Parts-of-speech Tagging
+spaCy
+Named Entity Recognition
+Dependency Parsing
+transformers
+Sentiment Analysis
+Text Summarization
+Text Generation
+Next Week:
+Attention & Transformers
+Attention Fundamentals
+Transformer Architecture
+Popular Implementations (BERT, GPT)
+Applied NLP
+Text Similarity
+Text Summarization
+Topic Modeling
+Advanced Topics
+LLMs
+Multimodal models (CLIP)
+120
+
+[Auto-generated transcript. this "it" dependency thing is why RNNs were invented, remember for exam
+SEARCH
+- google bing etc all use nlp under hood
+- query understanding = nlp
+MACHINE TRANSLATION
+- google translate, deepl etc
+- seq2seq problem
+TEXT CLASSIFICATION
+- spam detection (email filter)
+- article sorting/tagging
+SENTIMENT ANALYSIS
+- market research, social media monitoring, product reviews
+- ex: amazon reviews -> pos/neg/neutral
+TEXT SIMILARITY
+- plagiarism detection (grammarly etc)
+- doc dedup
+TOPIC MODELING
+- auto-tag web articles
+- tag product review attributes
+- unsupervised!! N-GRAMS:
+- unigram = single word
+- bigram = 2 consecutive words
+- trigram = 3 consecutive words
+- "machine learning is cool" -> bigrams: [machine learning], [learning is], [is cool]
+- captures LOCAL context unlike pure BoW
+- but combinatorial explosion as n grows
+- sparsity gets worse w/ higher n
+example: bigram for sentiment
+"not good" = DIFFERENT from "good" (BoW cant tell diff, bigram can)
+use case: find most relevant lecture note given a query
+step 1: vectorize all docs w/ TfidfVectorizer
+step 2: vectorize query same way
+step 3: cosine_sim = dot(A, B) / (||A|| * ||B||)
+- 1.0 = identical, 0.0 = totally diff
+step 4: return doc w/ highest cosine sim to query
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
+docs = ["deep learning uses backprop", "NLP uses transformers", "RNNs process sequences"]
+query = ["sequence model"]
+vec = TfidfVectorizer()
+X = vec.fit_transform(docs)
+q = vec.transform(query)
+sims = cosine_similarity(q, X)  # shape (1, n_docs)
+best = np.argmax(sims)
+# returns index of most similar doc
+this = basically original retrieval before neural search
+dense retrieval (like FAISS + BERT embeds) = modern version of this
+"the OG RAG before RAG was RAG" - my words not profs lmao
+ORDER MATTERS (usually):
+1. lowercasing (Running -> running)
+2. punct removal (hello, world! STEMMING vs LEMMATIZATION:
+stemming (fast, crude):
+chops off suffix w/ rules
+running -> run, studies -> studi, happily -> happili
+Porter Stemmer = most common
+often produces non-words ("studi")
+lemmatization (slow, accurate):
+uses dict + morphological analysis
+studies -> study, better -> good (knows it's comparative)
+WordNet lemmatizer in nltk
+always produces real words
+use stemming for speed (IR tasks), lemmatiz for accuracy (NLU tasks)
+motivation: one-hot = no relationships
+want: similar words -> similar vectors
+word2vec (Mikolov et al. =============================================
+SEQUENCE MODELS (brief, more next week)
+=============================================
+why needed: BoW/TF-IDF ignore order, embeddings static
+RNN (Recurrent Neural Network):
+- processes tokens ONE AT A TIME sequentially
+- hidden state h_t = f(h_{t-1}, x_t) carries info forward
+- problem: VANISHING GRADIENT (long sequences = info from early tokens lost)
+- "the cat that sat on the mat was ___" -> by the time we reach blank, "cat" info faded
+LSTM (Long Short-Term Memory, Hochreiter & Schmidhuber 1997):
+- adds CELL STATE (long-term memory) + gates
+- forget gate: what to erase from cell state
+- input gate: what new info to store
+- output gate: what to output from cell state
+- solves vanishing gradient to some extent
+- still sequential -> slow, cant parallelize
+GRU (Gated Recurrent Unit):
+- simpler than LSTM (fewer params)
+- combines forget + input gate into single update gate
+- often similar performance to LSTM
+- slightly faster to train
+ALL still have issues with very long deps -> TRANSFORMERS solve this
+=============================================
+MISC / RANDOM NOTES
+=============================================
+progression of NLP:
+BoW -> TF-IDF -> N-grams -> one-hot -> word2vec/GloVe/FastText -> RNN/LSTM -> TRANSFORMER
+traditional approach required for project!! need to finish data pipeline by then at least
+=============================================
+KEY TERMS CHEAT SHEET
+=============================================
+polysemy = one word multiple meanings
+synonym = multiple words one meaning
+tokenization = split text into units
+stemming = crude suffix removal
+lemmatization = dict-based root finding
+TF-IDF = term freq * inverse doc freq
+BoW = word count vector, no order
+N-gram = sequence of N words
+word2vec = shallow NN for static embeddings
+CBOW = context -> center
+skip-gram = center -> context
+OOV = out of vocabulary
+static embedding = same vector regardless of context
+contextual embedding = changes w/ surrounding words (transformers)

@@ -1,0 +1,89 @@
+### Summary of University Lecture on Time Series Analysis
+
+**Overview:**
+The lecture covers the foundational concepts of time series analysis, focusing on understanding the unique characteristics and modeling techniques applicable to time-ordered data. Key topics include defining time series, distinguishing them from time-stamped data, and exploring the components of time series like trend and seasonality.
+
+---
+
+#### **1. Definition and Characteristics of Time Series:**
+
+- **Definition:** 
+  - A time series is a sequence of data points observed at successive equally spaced points in time.
+  - It has a natural temporal ordering.
+  
+- **Difference from Time-Stamped Data:**
+  - Time-ordered data isn't necessarily a time series; e.g., medical records.
+  - Sensors and hardware data commonly represent time series.
+
+- **Real-World Examples:**
+  - Temperature
+  - Power demand
+  - Retail/bookstore sales
+
+- **Questions:**
+  - Distinguish trend from seasonality visually.
+  - Identify 3 real-world time series examples and 1 dataset that is time-ordered but not a time series.
+
+---
+
+#### **2. Trend and Seasonality:**
+
+- **Components:**
+  - **Trend:** Long-term movement (increasing/decreasing).
+  - **Seasonality:** Cyclical patterns (hourly, daily, weekly, yearly).
+
+- **Simultaneous Existence:**
+  - Both can coexist in a single time series.
+
+- **Examples:**
+  - Temperature
+  - Power demand
+  - Retail sales
+
+- **Questions:**
+  - How to distinguish trend from seasonality visually?
+
+- **To-Do:**
+  - Sketch a time series with an upward trend and weekly seasonality.
+
+---
+
+#### **3. Time Series Modeling:**
+
+- **Assumptions:**
+  - Standard regression assumes independence among observations.
+  - Time series violate this assumption (present is correlated with past).
+
+- **Key Concept: Autocorrelation:**
+  - Correlation of a signal with a delayed (lagged) copy of itself.
+  - Measured using Pearson correlation or Durbin-Watson test.
+
+- **Methods:**
+  - ARIMA (AutoRegressive Integrated Moving Average)
+  - Exponential Smoothing
+
+- **Question:**
+  - Why is random train/test split problematic for time series?
+
+- **To-Do:**
+  - Explain in one sentence why time dependence breaks the i.i.d. assumption.
+
+---
+
+#### **4. Time Series Decomposition:**
+
+- **Components:**
+  - **Trend:** Long-term movement.
+  - **Seasonality:** Cyclical patterns.
+  - **Residual:** Error or leftover component.
+
+- **Models:**
+  - **Additive Model:**
+    \[
+    Y = \text{Trend} + \text{Seasonality} + \text{Residual}
+    \]
+    Linear trend, constant seasonal amplitude.
+    
+  - **Multiplicative Model:**
+    \[
+    Y = (\text{Trend}) \times (\text{Seasonality})

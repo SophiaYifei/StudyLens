@@ -9,3 +9,4 @@ scikit-learn
 matplotlib
 rouge-score
 bert-score
+python-dotenv

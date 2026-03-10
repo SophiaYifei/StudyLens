@@ -1,1 +1,0 @@
-Today's agenda is to improve embeddings. Next week's topic is Attention Fundamentals, Transformer Architecture, Text Summarization, Topic Modeling, and Multimodal models. Sam is teaching his class how to create large language models. Kanter will see Kanter next week for a hackathon. Alex needs to create a knowledge module for the final project. Sam wants to improve the API.

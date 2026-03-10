@@ -1,0 +1,1 @@
+This chapter introduces Anderson to a deeplearning approach to prediction. Anderson shows how to use a simple convolutional neural network to predict blueberries from an app called "Bleaberry Muffin" and then uses regularization to reduce the risk of learning mis predictions by using update rules. Anderson then gives each student a course project to complete in class.

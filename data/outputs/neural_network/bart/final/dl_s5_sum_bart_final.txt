@@ -1,0 +1,1 @@
+The transformers library has 3 building blocks: a tokenizer, a transformer architecture, and a head for NLP tasks. Large language models (LLM) are a few million to a few billion parameters in size. Small LMs can be used for fine-tuning/Transfer Learning.

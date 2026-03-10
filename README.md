@@ -6,7 +6,7 @@ AI-powered lecture review platform that consolidates slides, transcripts, and no
 This project uses two environments due to dependency conflicts between
 summarization models (BART/Long-T5) and LLM models (Qwen2.5-7B).
 
-### Option 1: Base environment (BART, Long-T5, BART-SAMSum, LED-arXiv, Evaluation)
+### Option 1: Base environment (BART, Long-T5, BART-SAMSum, LED-arXiv, Claude, Evaluation)
 ```bash
 pip install -r requirements.txt
 ```
@@ -99,3 +99,24 @@ python scripts/eval.py
 Evaluation auto-discovers all `*_sum_*.txt` files in `data/outputs/`
 and computes ROUGE-L, NLI factual consistency, and BERTScore for each.
 Results are saved to `data/outputs/evaluation_results.csv`.
+
+### Configure API keys
+
+This project uses the Anthropic API for the Claude-based summarizer.
+API keys are **never committed to the repository**.
+
+Copy the example environment file and fill in your credentials:
+
+cp .env.example .env
+
+Then open `.env` and replace the placeholder with your actual key:
+
+ANTHROPIC_API_KEY=your-key-here
+
+You can obtain an API key at https://console.anthropic.com.
+
+> **Note:** The `.env` file is listed in `.gitignore` and will never be
+> tracked by Git. Do not remove this entry.
+
+If you do not have an API key, all models except `ClaudeSummarizer` will
+still run without any configuration.

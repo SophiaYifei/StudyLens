@@ -1,1 +1,0 @@
-The transformers library has 3 building blocks: A tokenizer, a transformer architecture, and a head for NLP taskse. In canvas you will find a code tutorial. Code tutorial for applications in main libraries: BERT, GPT, SpaCy, NLP-Tagging, and TensorFlow.

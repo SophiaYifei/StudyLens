@@ -1,0 +1,509 @@
+Lecture 3
+Computer Vision II
+Agenda
+Applied Computer Vision
+Image Classification (DenseNet, SqueezeNet, pre-trained model use)
+Bounding Boxes (YOLO, Faster R-CNN)
+Semantic segmentation (U-Net, Mask R-CNN)
+Model Evaluation
+Advanced Topics
+SOTA Object Detection + Segmentation (Grounding DINO + SAM)
+Diffusion Models (Stable Diffusion)
+Vision Transformers
+Applied
+Computer Vision
+Image Classification
+Dog: 0.82
+Cat: 0.11
+Bear: 0.06
+Bird: 0.01
+…
+Model
+Example: Dominos Pizza 🍕
+Learn More
+Example: Google Derm Assist 🩺
+Learn More
+Classification Models
+AlexNet ✅
+VGG11, 13, 16, 19 ✅
+ResNet18, 34, 101, 152 ✅
+Inception v3 ✅
+DenseNet 121, 169, 201
+SqueezeNet
+…
+Classification Models
+Image Source
+Every layer is connected to all previous layers through concatenation
+If there are L layers, there will be L(L+1)/2 direct connections
+Features are reused through the entire network
+DenseNet
+Image Source
+PROS:
+Alleviates vanishing gradient
+Strengthens feature propagation
+CONS:
+Requires more memory due to storing and concatenating feature maps
+More complex = harder to tune
+DenseNet
+Paper
+Small CNN architecture
+A "squeeze" layer that reduces input channels using 1x1 convolutions
+An "expand" layer that has a mix of 1x1 and 3x3 convolutions to learn features
+This design significantly reduces parameters + computation
+SqueezeNet
+Classification Models
+AlexNet ✅
+VGG11, 13, 16, 19 ✅
+ResNet18, 34, 101, 152 ✅
+Inception v3 ✅
+DenseNet 121, 169, 201
+SqueezeNet
+…
+Pre-trained Classification Models
+Available in:
+PyTorch Model Zoo
+TensorFlow Model Garden (API docs)
+Classification Models
+Pre-trained Classification Models
+An ML model that has been trained on a large dataset and can be used as a starting point for developing new ML models
+Sound familiar? This has been recently rebranded to “foundation” models or “foundational” models
+Classification Models
+Using pre-trained models
+Select and load an existing pre-trained model
+Freeze the model weights (turn autograd off)
+Remove final fully connected layer and replace with empty FC layer, matching output dimensions to # of classes desired
+Train the model as normal, which trains only the final layer weights
+Optionally, unfreeze the model and re-train all weights (this may take a long time!) Explainability – enables human validation
+Autonomy – require spatial awareness
+Image Source
+Object Detection
+Bounding boxes
+Object masking
+Bounding Boxes:
+Object Masking:
+detections = [
+{
+'bbox': [0.4, 0.3, 0.2, 0.4],     # [x, y, width, height] normalized to [0,1]
+'class_id': 2,                    # e.g., '2' means 'car'
+'confidence': 0.98,               # 98% confident it's a car
+},
+{
+'bbox': [0.7, 0.5, 0.15, 0.3],
+'class_id': 0,
+'confidence': 0.95,
+},
+{
+'bbox': [0.2, 0.6, 0.25, 0.35],
+'class_id': 2,
+'confidence': 0.89,
+}
+]
+Bounding Boxes:
+Variations:
+Min/max coordinates → 'bbox': [x_min, y_min, x_max, y_max]
+Class names instead of IDs → 'class': 'car'
+Raw output as three lists → one for boxes, one for scores, and one for classes
+Object Detection
+Image segmentation
+Keypoint detection
+Keypoint Detection:
+keypoints = [
+{
+'x': 0.5,         	# normalized x coordinate
+'y': 0.2,         	# normalized y coordinate
+'type': 0,        	# 0 = nose
+'confidence': 0.98 # 98% confident
+},
+{
+'x': 0.52,        	# normalized x coordinate
+'y': 0.25,        	# normalized y coordinate
+'type': 1,        	# 1 = left eye
+'confidence': 0.96 # 96% confident
+},
+# ... more keypoints
+]
+Object Detection
+Semantic Segmentation
+The task of assigning a class label to every single pixel of an input image. Image Source
+Output is list of instance masks
+detections = [
+{
+'mask': numpy.array(shape=[480, 640]),  			# Binary mask of 0s and 1s
+'class_id': 2,                          			# e.g., '2' means 'car'
+'confidence': 0.98,                     		# 98% confident it's a car
+},
+{
+'mask': numpy.array(shape=[480, 640]),
+'class_id': 0,
+'confidence': 0.95,
+},
+{
+'mask': numpy.array(shape=[480, 640]),
+'class_id': 2,
+'confidence': 0.89,
+}
+]
+Object Detection
+Most object detection models were pre-trained on the Common Objects in Context (CoCo) dataset
+>200k labeled images
+1.5 million object instances
+80 object categories
+Object Detection with Bounding Boxes
+{
+‘bbox’: [0.4, 0.3, 0.2, 0.4],
+‘class_id’: 2,
+‘confidence’: 0.98
+}
+Model
+Example: Lego Brick finder
+DIY tutorial
+Example: DTN Smart Trap
+Learn More
+Example: Teeth Numbering for Dentists
+Learn More
+Bounding Boxes
+Bounding boxes are defined using the CoCo annotation standard:
+Top left X
+Top left Y
+Width
+Height
+Each object is also labeled with object class
+CoCo object annotation
+Simple approach
+Image Source
+Anchor Boxes
+Anchor 1
+Anchor 2
+Anchor 5
+Anchor 8
+Anchor 9
+Anchor 7
+Anchor 6
+Anchor 3
+Anchor 4
+We have objects of varying size/shape/location in the image
+We take thousands of patches of the image of different sizes/shapes, make a prediction for each and keep only the best
+These patches of varying size/shape/location are called anchor boxes
+We can set the anchor box size/shape range or determine it from our training data (e.g. large objects or small)
+1% of the anchor boxes in RetinaNet
+If we make predictions for every anchor box, many will be low probability and many will be overlapping
+Issue:
+Keep only the best ones:
+Remove all predicted boxes that have a detection probability less than a confidence threshold we set
+Eliminate duplicate boxes which refer to the same object
+Calculate the Intersection over Union value for each pair of boxes and eliminate one when IoU is above a certain threshold
+The box we keep is the one with the higher detection probability
+Non-maximal suppression (NMS)
+Intersection over Union (IoU)
+Intersection over Union (IoU)
+☹️
+😐
+🙂
+YOLO divides image into a grid of S x S cells
+Each grid cell is responsible for predicting objects centered in it
+Each grid cell predicts N bounding boxes of varying shape/dimensions for each cell (so we have S x S x N total predictions)
+You Only Look Once (YOLO)
+Paper
+Anchor 1
+Anchor 2
+Anchor 5
+Anchor 8
+Anchor 9
+Anchor 7
+Anchor 6
+Anchor 3
+Anchor 4
+YOLOv3
+For each grid cell, we use 9 anchor boxes to make bounding box predictions centered within the grid cell
+Paper
+YOLOv3
+What we predict for each bounding box is the offsets from its corresponding anchor box
+Center point location within grid cell
+Change in width from anchor box
+Change in height from anchor box
+We also predict a class for each box
+Paper
+Original anchor box dimensions in black dotted, predicted bounding box in blue
+YOLOv3
+Backbone is Darknet-53
+“Our new network is a hybrid approach between the network used in YOLOv2, Darknet-19, and that newfangled residual network stuff” [Paper, 2018]
+Image Source
+YOLOv3 Paper Excerpts
+“We tried lots of stuff while we were working on YOLOv3. Oh.” [Paper, 2018]
+Paper
+YOLOv3
+The primary benefit of YOLO v3 was reasonably high performance with very quick inference (can even run almost real-time)
+Paper
+“Region proposals”
+3 stage pipeline:
+Generates ~2000 region proposals using selective search
+Warps or crops each region proposal to a standard size (227x227) before feeding it through a pre-trained CNN (originally AlexNet)
+Extracts CNN features from each proposed region
+Classifies each region with SVMs
+Bounding box (bbox) regressor predicts scale offset adjustments for x,y, width and height, refining the initial region proposals to better fit the actual objects
+R-CNN (Regions with CNN features)
+Image Source
+Issues:
+CNN features must be computed for each region proposal independently → training and inference are slow
+CNN features need to be cached for each region proposal from all training images to train the SVMs → requires significant storage space
+R-CNN (Regions with CNN features)
+Replaced the slow selective search with a neural network to generate proposals
+Uses anchor boxes - predefined boxes of different scales and aspect ratios at each position
+R-CNN required separate training stages for CNN features, SVMs, and bbox regression. Faster R-CNN can be trained end-to-end with a multi-task loss
+Faster R-CNN
+Instead of computing CNN features for each region proposal separately:
+Computes features for the entire image once
+Uses RoI Pooling to extract features for each proposal from the shared feature map
+Faster R-CNN
+47s
+R-CNN
+(processing time per image)
+Faster R-CNN
+0.2s
+Faster R-CNN
+(processing time per image)
+Eliminated need to store features for each proposal on disk
+Semantic Segmentation
+Output is list of instance masks
+Paper
+Paper
+U-Net
+Paper (2015)
+Main Idea:
+labels each pixel in an image with its corresponding class
+U-Net
+Paper (2015)
+Contracting path (encoder) uses repeated blocks of convolution and max pooling operations to capture hierarchical features:
+reducing spatial dimensions while increasing the number of feature channels
+U-Net
+Paper (2015)
+Expanding path (decoder) uses upsampling operations followed by convolutions to restore spatial resolution: combines high-level semantic information with fine-grained spatial details from the encoder through skip connections
+U-Net
+Paper (2015)
+Skip connections concatenate feature maps from the encoder to corresponding decoder layers:
+preserve fine spatial details that would otherwise be lost during downsampling and enabling more accurate segmentation boundaries
+U-Net
+Paper (2015)
+The final layer uses a 1x1 convolution to map the feature vector to the desired number of classes, followed by a pixel-wise softmax activation to produce class probability maps for each pixel
+Many more models! Mask R-CNN
+DeepLabV3+
+PSPNet (Pyramid Scene Parsing Network)
+SegNet
+Model Evaluation
+Classification Models
+Evaluation of Image Classification
+Primary Metrics
+Accuracy: Correct predictions / Total predictions
+Precision: True Positives / (True Positives + False Positives)
+Recall: True Positives / (True Positives + False Negatives)
+F1 Score: 2 * (Precision * Recall) / (Precision + Recall)
+Area Under ROC Curve (AUC-ROC)
+Confusion Matrix
+Best Practices
+Use stratified sampling for train/validation/test splits to handle class imbalance
+Report per-class metrics for multi-class problems
+Use top-k accuracy for problems with many classes
+Use cross-validation for smaller datasets
+Classification Models
+Evaluation of Bounding Boxes
+Primary Metrics
+Mean Average Precision (mAP)
+Intersection over Union (IoU)
+Standard thresholds: 0.5 (mAP@0.5) or 0.75 (mAP@0.75)
+COCO metric uses average over multiple IoU thresholds (0.5:0.95)
+Precision-Recall curves
+False Positives Per Image (FPPI)
+Log Average Miss Rate (LAMR)
+Best Practices
+Use COCO evaluation protocol for standardized comparison
+Report performance at different scales (small, medium, large objects)
+Evaluate with different IoU thresholds
+Mean Average Precision (mAP)
+Measure of prediction quality in object detection
+First, calculate the IoU for each box
+Then set an IoU threshold and use it to classify predictions as True Positives and False Positives
+Image Source
+Image Source
+Mean Average Precision (mAP)
+We can vary the IoU threshold value and calculate the Precision-Recall curve for each class
+The area under the PR curve is the Average Precision (AP)
+We calculate the mean AP across all classes
+Image Source
+Classification Models
+Evaluation of Semantic Segmentation
+Primary Metrics
+Mean Intersection over Union (mIoU)
+Pixel Accuracy
+Mean Pixel Accuracy
+Frequency Weighted IoU
+Boundary F1 score (for boundary accuracy)
+Best Practices
+Evaluate performance on different object sizes
+Report per-class IoU scores
+Use both global and class-averaged metrics
+Classification Models
+General Evaluation - Computer Vision
+Error Analysis
+Qualitative analysis of failure cases
+Visualization of predictions
+Analysis of performance across different conditions (lighting, scale, occlusion)
+Confusion matrices or error patterns
+Model Resources
+Report computational resources (FLOPs, parameter count)
+Measure inference time
+Consider model size and memory requirements
+57% accuracy
+Accuracy - Cat 50%
+Accuracy - Dog 61%
+Accuracy - Cat 50%
+Accuracy - Dog 61%
+Advanced Topics
+A Note
+Transformers are discussed IN GREAT DETAIL in a couple weeks under NLP
+In this lecture we will gloss over the details of the transformer architecture. This is on purpose (since I think it is much easier to learn transformers in the context of text)
+We will go over diffusion models IN GREAT DETAIL in the generative AI lecture at the end of the semester
+We will cover just a few basics here
+Vision Transformers
+Adapt the transformer architecture from NLP to handle image processing tasks
+Treat images as sequences of patches, similar to how text transformers process sequences of words
+Vision Transformers (ViT)
+Paper, 2021
+“Visual tokens”  → word tokens
+Images are divided into fixed-size patches (typically 16x16 pixels)
+Each patch is flattened into a 1D vector and linearly embedded
+Position embeddings are added to maintain spatial information
+Vision Transformers (ViT)
+Paper, 2021
+Standard Transformer encoder blocks:
+Multi-head self-attention to capture relationships between patches
+MLP blocks with GELU activation
+Layer normalization and residual connections
+Vision Transformers (ViT)
+Paper, 2021
+Multi Head Attention - what it allows
+Each patch can attend to (pay attention to) all other patches in the image
+Attention weights reveal which parts of the image are relevant for the model's decisions
+Multiple attention heads learn different types of relationships between patches
+Vision Transformers (ViT)
+Paper, 2021
+Advantages:
+Global receptive field from the start
+Strong performance on large datasets
+More flexible architecture for multi-modal tasks
+Challenges:
+Computationally intensive for high-resolution images
+Requires large datasets for training
+May miss fine-grained local features that CNNs naturally capture
+Vision Transformers (ViT)
+Vision Transformers (ViT)
+Image classification
+Object Detection
+Semantic Segmentation
+Image Generation and Editing
+Video understanding
+Vision Transformers (ViT)
+Image classification
+Object Detection
+Semantic Segmentation
+Image Generation and Editing
+Video understanding
+SOTA Object Detection + Segmentation
+SOTA zero-shot object detection model
+What does this mean? It does this by using  vision-language modality fusion at multiple phases
+It has set new records on benchmarks for object detection, including the ODinW zero-shot benchmark
+Grounding DINO 🦕
+Source
+(See video on Grounding DINO in Canvas for more details)
+Released by Meta in April 2023
+Two-stage architecture
+Image encoder using a ViT that computes image embeddings once per image
+Prompt encoder coupled with a mask decoder - the mask decoder uses a transformer architecture to combine the image embeddings with prompt embeddings, generating masks through cross-attention layers
+Segment Anything Model (SAM)
+Paper
+Image Source
+Grounded Segment Anything (2024)
+GitHub
+YOLOv8 backbone
++ pre-trained CLIP text encoder
+Re-parameterizable Vision-Language Path Aggregation Network (RepVL-PAN) to connect text features and image features
+During inference, the text encoder can be removed and the text embeddings can be re-parameterized into weights of RepVL-PAN for efficient deployment
+YOLO-World (2024)
+Paper
+Resource for fine-tuning
+Resource for fine-tuning (with ultralytics)
+Diffusion Models
+Image Generation
+Diffusion models learn to gradually denoise data, transforming random noise into high-quality samples by reversing a fixed noising process. Gradually adding Gaussian noise to training images until they become pure noise
+Then training a neural network to predict and reverse this noise
+Diffusion Models (2020-)
+Image Encoder
+Training a Diffusion Model
+Diffusion Model Inference (Generation)
+Forward Diffusion - Adding Noise
+Training Image
+Diffusion Model Inference (Generation)
+Image Decoder
+Pre-trained classifier
+Reverse Diffusion - Removing Noise
+START
+© Bent, 2024
+Classifier Guidance: Uses a pre-trained classifier to guide the diffusion process by predicting class labels at each denoising step and using the gradient of the classifier to steer the generation
+DALL-E 2, 3
+Stable Diffusion
+FLUX.1, .2, etc
+Extended the basic diffusion framework to enable text-conditional image generation, inpainting, and image editing. maybe you could use a 3D sculpture... That's great., I think preparation can definitely be a thing if we're all in agreement that's how we would the hackathons to be., the original,, motivation for the hackathons,
+and basically the hackathon is the time that you have in class to be able to do that is
+what was happening was a lot of people were struggling with these exact same issues,
+but it was the day before the project was due., and now, at least as a couple of weeks before the project is due, and that's the main idea there., I was actually,, really impressed with how much you guys were able to do in such a short period of time. And all of your classes, the model you trained, all of the classes are related just to facial features,, the eyes, nose, the mouth., and actually they have really detailed,, keypoint detection for faces of all these different points on the face that,,,, I wouldn't be able to necessarily point out myself,
+but a model can, a lot of the models that you'll see in an application are more of the typical one at the wrist,
+one of the top of the hand, one of the elbow, one of the shoulder. But I was,,
+we were having a debate about this yesterday because when we were setting up for a project because, I know,,
+you said we had actually I said, look,,,
+in a sense that we can't just be streaming that I'm trying to fix for, my final submission on this., and I was wondering,, we were debating between server and serverless where,, hosting everything,
+running pod and stuff, because that's when you were set to,, have your friends or server because,, I was advocating for server because even though there's no GPU we Alex has cluster,
+I guess we would be training the model on the cluster and then just loading it out on a server, that CPU only. applied CV map
+classification → probabilities
+detection → boxes
+segmentation → pixel labels / instance masks
+classification models
+DenseNet
+dense connections (concat), feature reuse
+pros: gradient flow, propagation
+cons: memory, complexity
+SqueezeNet
+squeeze 1x1 + expand (1x1,3x3)
+small params / efficient
+pretrained model workflow
+load, freeze, replace head
+optional unfreeze + fine-tune
+object detection framing
+why location matters: explainability, autonomy
+bbox formats (COCO: x,y,w,h) + variants
+anchor boxes concept
+NMS + IoU thresholding
+YOLO
+grid cells, multiple anchors
+predict offsets + class + confidence
+fast inference / near real-time emphasis
+R-CNN family
+R-CNN: selective search + per-region CNN features (slow)
+Faster R-CNN: RPN proposals + shared feature map + RoI pooling (faster)
+semantic segmentation
+U-Net encoder-decoder
+skip connections preserve spatial detail
+mention Mask R-CNN / DeepLab as neighbors
+evaluation
+classification: accuracy, precision/recall/F1, AUC, confusion matrix
+detection: mAP, IoU thresholds (0.5, 0.75, COCO 0.5:0.95)
+segmentation: mIoU, pixel accuracy, boundary metrics
+error analysis: qualitative failures, condition slices
+advanced topics
+Vision Transformers
+patches → tokens, position embeddings
+attention global context, compute cost
+Grounding DINO + SAM
+zero-shot detection + promptable masks
+diffusion models
+forward noise, reverse denoise
+text-conditioned diffusion, latent diffusion
+fine-tuning pointers

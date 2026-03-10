@@ -1,0 +1,336 @@
+It is very hard to identify a problem for which machine learning may offer a solution, determine what data should be collected, select or extract relevant features, chose an appropriate learning method, select an evaluation method, interpret the results, involve domain experts, publicize the results to the relevant scientific community, persuade users to adopt the technique, and (only then) to truly have made a difference.”
+- Wagstaff, “Machine Learning that Matters”
+What we will learn
+Modeling process best practices
+Modeling, evaluation, interpretation
+Key algorithms
+How they work
+Strengths and limitations
+How to get the most from them
+Applying ML to real-world structured data
+Syllabus review
+Introduction to Machine Learning
+What is Machine Learning? Why are simpler systems better
+Easier to build, scale and maintain
+Lower operational costs
+Generalize better and are more robust to data drift
+Do not necessarily perform worse than complex models
+Tree-based models > deep neural networks on 45 mid-sized tabular datasets
+Simple averaging ≥ complex optimizers on multi-task learning problems
+Simple methods > complex methods in forecasting accuracy across 32 papers
+Dot product > neural collaborative filtering in item recommendation and retrieval
+Recommended article: https://eugeneyan.com/writing/simplicity/
+Algorithm selection best practice
+Start with developing a simple but reasonable heuristic, and measure the performance using your heuristic to make predictions
+Next, apply a simple ML algorithm (e.g. linear regression, or KNN for classification) and evaluate performance to get a baseline
+Now, experiment with different algorithms, keeping in mind the right balance between your three goals:
+Performance
+Interpretability
+Computational efficiency
+Model Evaluation
+Training & Test Sets
+Goal of predictive modeling is to create a model that makes accurate predictions on new unseen data
+We cannot estimate performance on data we do not have, so instead we split our data into two sets
+Training set  - build and train the model
+Test set – Evaluate model performance performance
+Training  (~80-90%)
+Test
+(~10-20%)
+Use for model building & training
+Use to evaluate final model
+Sampling
+Why do we sample? a survey where you collect 100 responses from users of each age group
+Nonprobability sampling
+Samples are not representative of real-world data and thus are highly likely to cause bias in your model
+However, this is a very common approach in practice
+Examples:
+Large language models are trained on easily collected data – Wikipedia, Reddit, Common Crawl etc
+Sentiment analysis models often trained on IMDB movie reviews or Amazon reviews – biased towards people who leave reviews online
+Self-driving cars – initially trained only on Phoenix, AZ and Bay Area. Waymo later expanded to include Kirkland, WA for rainy weather
+Random sampling
+Random sampling involves randomly choosing samples from population
+Several types:
+Simple random sampling – all samples have equal probability of being selected
+Downside – certain rare categories may not appear in the sampled data
+Stratified sampling – divide population into groups you care about and sample a % randomly from each group
+One challenge is that some observations may fall into multiple groups
+Weighted sampling – each sample is given a weight which determines the probability of being selected
+Allows you to apply domain expertise in selection e.g. weight recent data higher
+Helps when your available data has a different distribution than the true data
+Sampling for test set
+Take a random sample of indices to use for test set, use remainder for training
+Use Scikit-learn’s train_test_split method
+If we want to do stratified sampling we use the ‘stratify’ parameter
+Data Leakage
+“Data leakage” occurs when some of our test set data “leaks” into model building and influences the development of the model
+For example, if we use all of our data to select our features, or compare algorithms
+This invalidates the estimated performance of the model and causes it to be overoptimistic
+In severe cases, it can cause our model to be worthless
+Data Leakage
+Data from the future is accidentally used within training data
+Data Leakage
+A variable within the training data is an indicator of the target
+Common causes of data leakage
+Selecting features before splitting
+Scaling before splitting
+Filling missing values before splitting
+Grouped observations are separated into different splits
+E.g. two CT scans from the same patient taken a week apart
+Not great
+Bad
+Splitting time series data randomly instead of by time
+Failure to remove duplicate observations
+Particularly dangerous when merging multiple datasets together
+Common issue in several studies using ML to detect COVID-19
+Different data generation processes for different classes
+Comparing Models
+Comparing models- validation sets
+Often we want to compare models to select the optimal model
+If we use the test set to compare model performance, it is not longer an unbiased indicator of performance
+Instead, we split the data 3 ways into training, validation and test sets
+We use the validation set for model selection, and report performance on the test set
+Training
+(~60-80%)
+Validation
+(~10-20%)
+Test
+(~10-20%)
+Use for model comparison/selection
+Use to evaluate final model
+Question
+What might be some potential problems with using a validation set to do your model selection? Maximizes the data available for training the model – important for small datasets
+Provides a better evaluation of how well the model can generalize to new data – validation performance is not accidentally biased by choice of datapoints to use for validation
+Cross-validation is the typical approach used in industry for model selection and tuning, except in cases of very large datasets
+CV and Model Evaluation
+Remember, when you complete your cross-validation and do your model selection, you still need to evaluate your model on the test set for a fair approximation of performance
+Training + cross-validation
+(~80-90%)
+Test
+(~10-20%)
+Use for model comparison/selection
+Use to evaluate final model
+Val set
+Val set
+Val set
+Val set
+Val set
+Iteration
+Validation fold
+Training folds
+1
+2
+3
+4
+5
+CV using Scikit-learn
+Divide data into ”k” folds
+For each model you want to compare:
+For each of “k” iterations:
+Get the training folds and the validation fold for the iteration
+Fit the model on the training data
+Get predictions for the validation fold, calculate performance and store it
+Calculate mean validation performance across all iterations
+Compare CV average performance and select model
+Model Selection:
+The Bias-Variance Tradeoff
+Model Complexity
+Model Complexity
+Number of Features
+Algorithm
+Hyper-parameter Values
+Bias and Variance
+Bias is error from incorrect assumptions within the model
+Often introduced by modeling a real-life problem using a simpler model that is unable to fully capture the underlying patterns in data
+Variance refers to the sensitivity of the model to fluctuations in the training data
+Usually due to model fitting itself to fine patterns which may just be noise
+See: http://scott.fortmann-roe.com/docs/BiasVariance.html
+Bias – Variance Tradeoff
+Irreducible error
+Bias2
+Variance
+Bias
+Deviation
+Expected Error
+Bias – Variance Tradeoff
+Error
+Model complexity
+Total error
+Variance
+Bias2
+Optimal model complexity
+Underfitting vs. Overfitting
+Image source: http://scott.fortmann-roe.com/docs/BiasVariance.html
+Underfitting
+Model is too simple
+Overfitting
+Model is too complex
+Underfitting vs. Overfitting
+Underfitting
+Model is too simple
+Overfitting
+Model is too complex
+Image source: Scikit Learn documentation
+Good Fit
+Model fits well, with some error
+How do we recognize overfitting? Choice of algorithm
+Number of features
+Hyperparameter settings
+Optimal complexity varies with amount of data – the more data, the more complex model you can use
+We find this using the validation approaches we discussed last class
+Image source: Python Data Science Handbook
+DEMO Notebook:
+Validation Curves
+Metrics
+Outcomes vs. Outputs
+Refers to the desired business impact on your organization or for your customer
+Stated in terms of the expected impact (which is often $)
+Does NOT contain model performance metrics or other technical metrics
+Outcome
+Output
+Refers to the desired output from the model
+Measured in terms of a model performance metric
+Typically not communicated to the customer
+Set this AFTER setting the desired outcome
+Outcomes vs. Outputs
+A tool to predict turbulence for airlines
+Output
+Outcome
+Low # of safety incidents per year, or lower $ of safety-related claims
+AUROC or precision/recall of turbulence prediction (binary or 1-5 scale)
+A power demand forecasting tool for a utility
+Lower cost per MWh of power produced
+Lower emissions rate per MWh
+MSE (most likely) or MAE/MAPE
+Baselines
+Metrics are meaningless without a baseline for comparison
+There are a few important baselines to determine:
+Zero rule baseline (Most common class / mean value)
+Heuristic baseline
+Human baseline
+Existing solution baseline
+Regression Error Metrics
+MSE, MAE and MAPE
+Also influenced by scale
+More robust to outliers
+Can be easier to interpret in context of the problem
+Abs value is less desirable for calculations (squared terms are easier to minimize via differentiation)
+Mean Absolute Error
+Mean Squared Error
+Most popular regression error metric
+Heavily influenced by outliers - penalizes large errors much more than small ones
+Influenced by scale of data
+Sometimes used as RMSE
+Converts error to a percentage
+Popular among non-technical managers because it is easily understood
+Skewed by high % errors for low values of y
+Mean Absolute % Error
+Example: MAE vs. MSE/RMSE
+MSE/RMSE penalizes severe errors much more than MAE
+This can be desirable if being off by a lot one time is much worse than being off by a little every time
+Image source: https://medium.com/human-in-a-machine-world/mae-and-rmse-which-metric-is-better-e60ac3bde13d
+Coefficient of determination (R2)
+Deviation of points from mean can be broken down into two components:
+”Explained deviation” – portion of deviation predicted by your model
+“Unexplained deviation” – difference between prediction and actual point
+Coefficient of determination (R2)
+R2 ranges between 0 and 1
+Unexplained deviation (error)
+Deviation explained by model
+Total deviation from mean
+R-squared is typically used to communicate how well your feature variables (X) explain the variability in your target variable (y)
+Adjusted R2
+R-squared is often viewed as a measure of goodness of fit rather than prediction ability -> calculated “in-sample” on the training data itself
+As we add more features, the R-squared almost always goes up because the model finds additional patterns of correlation (which might be noise)
+However, this does not mean the model can generate better predictions on new data -> remember our discussion on overfitting
+To help with this problem, we often report ”adjusted R-squared”, which penalizes for more features (added complexity)
+“Is R-squared useless?”: https://data.library.virginia.edu/is-r-squared-useless/
+Questions? we're not going to go through every probably every nitty gritty detail of the math, although you're welcome to,, if you want to, but,, we're going to go through at least you have a good understanding of how things are working when we apply a different algorithm., we'll talk about the strengths, the limitations of each of the algorithms, when you should use them, when you shouldn't use., we'll talk about how to work with them.,, one of the for those who have taken classes before, in particular,
+every algorithm comes with a set of what we call hyperparameters, which are,,,
+the best way I could describe them is,, knobs that you can turn dials,
+you can turn,, to make things fit a little bit better or fit a little bit worse., and we need to, in order to be able to use those dials. And you,, spending five years just trying to recruit enough people to join your trial.,,, these are really important decisions, and there's a lot of factors that go into them.,, if it's if this is going to drag out the time,
+what if a competitor in the meantime concludes their trial and rolls their drug out to market,
+and then all of a sudden I'm irrelevant because I we are they haven't,,
+a drug or I'm not going to get approval because the other drug is maybe superior to mine.,, there's all these different scenarios that you have to think through., and,, historically, the way this worked is, we you're,,, you came up with some amazing AI algorithm that invented the next,, I don't know anything about trials, I'm going to go pay a consultant to,, to design this for me. That means when we apply it to new sets of data the model hasn't been trained on,, it's actually likely to perform better than a highly complex., and this is,, this is a there's a couple of particular,, tips that I.,, this is one of the two,, there's there's this,,, idea,
+I think especially among,,, younger engineers that,, if,,
+I'm going to do a modeling project in industry, I need to make,, a really,,, fancy model,, using the latest,, techniques and on., and,, because otherwise,, I'm not going to impress anybody., they're going to if I use, a linear regression or something, they're going to say that's the that's not machine learning. Approximation of reality
+y = f(x) + error
+Parameters compress knowledge
+Inputs (features) → Outputs (targets)
+Key idea
+All models wrong, some useful
+Supervised vs Unsupervised
+Supervised → X + Y known
+Unsupervised → only X
+Regression = numeric
+Classification = categorical
+Practice Thought
+Stock price → regression
+Fake news detection → classification
+Heuristics vs ML
+Heuristics = simple rules
+ML = adaptable, scalable
+Heuristics baseline important
+To-Do
+Always build simple baseline first
+Algorithm Selection
+No free lunch theorem
+Tradeoff:
+◦	Performance
+◦	Interpretability
+◦	Compute cost
+Occam’s Razor
+Simpler often better
+Question
+Do I need deep learning for tabular data? Bias-Variance Tradeoff
+Bias = too simple
+Variance = too complex
+Sweet spot in middle
+Overfitting sign
+Train ↑
+Validation ↓
+To-Do
+Plot validation curves
+Metrics – Outcomes vs Outputs
+Outcome = business goal
+Output = model metric
+Example:
+Airline safety ↓ incidents (outcome)
+AUROC (output)
+Reminder
+Set outcome first
+Regression Metrics
+MSE → penalizes outliers
+MAE → robust
+MAPE → % based
+R² → variance explained
+Question
+Does scale affect metric interpretation? Feature Selection
+Remove high null features
+Reduce multicollinearity
+Use SelectKBest
+Use Random Forest importance
+To-Do
+Always inspect selected features manually
+Encoding
+Ordinal encoding
+One-hot encoding
+Avoid artificial ordering
+Scaling
+Needed for:
+◦	KNN
+◦	Clustering
+◦	Regularized regression
+StandardScaler vs MinMax
+Rule
+Scale before LASSO/Ridge
+Class Imbalance
+Accuracy trap
+Oversampling
+Undersampling
+Fix root cause if possible
+Pipelines
+Prevent leakage
+Reproducibility
+Cleaner production workflow
+To-Do
+Always use sklearn Pipeline

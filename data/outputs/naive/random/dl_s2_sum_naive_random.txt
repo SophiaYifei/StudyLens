@@ -1,0 +1,44 @@
+Paper
+Implementation of CNNs
+85
+85
+Transfer Learning
+Data Augmentation
+Source: 540 Deep Learning Apps GitHub
+Valid = no padding
+W = 28
+F = 3
+P = 0 (valid)
+S = 1
+(28 - 3 + 2(0))/(1) + 1 = 26
+Source: 540 Deep Learning Apps GitHub
+W = 26
+F = 2
+P = 0 (valid)
+S = 2
+(26 - 2 + 2(0))/(2) + 1 = 13
+Source: 540 Deep Learning Apps GitHub
+W = 13
+F = 3
+P = 0 (valid)
+S = 1
+(13 - 3 + 2(0))/(1) + 1 = 11
+Source: 540 Deep Learning Apps GitHub
+W = 11
+F = 2
+P = 0 (valid)
+S = 2
+(11 - 2 + 2(0))/(2) + 1 = 5.5
+Source: 540 Deep Learning Apps GitHub
+Flatten = 5 x 5 x 20 = 500
+Source: 540 Deep Learning Apps GitHub
+10 output classes
+Source: 540 Deep Learning Apps GitHub
+Transfer Learning
+93
+93
+Image Source: Olah, et.al. if you just remove this thing, the legs are here, and then there's this weird lamp here,
+and then you have to superimpose some feedback in, which gets really tricky. we can do something called a gray level co-occurrence matrix or Geochem which is
+going to capture some of those spatial relationships of your pixel intensities. And that when I showed you the picture of the bedroom,, we actually did use a lot of these, more traditional,, approaches to,, looking at the edges of things, especially for quality detection to see how our segment Anything model was working at the time.. Let's see, when you're working on projects that with the furniture,
+do you typically go through all of them or is there a standard first
+you should try these two because I assume they can be very time consuming. this is the layers that we were talking about in our neural networks last week. This week we're going to add two new layers. That's very common, but we can move it by more than one position at a time. these are all things that you get to set when you are building a layer in your neural network., it's a good question. It's going to allow us to reduce computations. And,, if we look at our,, schedule,, here, we even have one of our own who is speaking,,, Thursday morning. But in case there weren't, you might look at surveillance data sets instead of sentiment classification. We freeze all of these weights and then we train it on just specific task output. And I think Stuart has office hours today sometime in town... Know with no difference between and I think you're. I don't know if I had to go I to the big cluster.

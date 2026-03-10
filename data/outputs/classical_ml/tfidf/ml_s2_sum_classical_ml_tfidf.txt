@@ -1,0 +1,413 @@
+a survey where you collect 100 responses from users of each age group
+Nonprobability sampling
+Samples are not representative of real-world data and thus are highly likely to cause bias in your model
+However, this is a very common approach in practice
+Examples:
+Large language models are trained on easily collected data – Wikipedia, Reddit, Common Crawl etc
+Sentiment analysis models often trained on IMDB movie reviews or Amazon reviews – biased towards people who leave reviews online
+Self-driving cars – initially trained only on Phoenix, AZ and Bay Area. Waymo later expanded to include Kirkland, WA for rainy weather
+Random sampling
+Random sampling involves randomly choosing samples from population
+Several types:
+Simple random sampling – all samples have equal probability of being selected
+Downside – certain rare categories may not appear in the sampled data
+Stratified sampling – divide population into groups you care about and sample a % randomly from each group
+One challenge is that some observations may fall into multiple groups
+Weighted sampling – each sample is given a weight which determines the probability of being selected
+Allows you to apply domain expertise in selection e.g. weight recent data higher
+Helps when your available data has a different distribution than the true data
+Sampling for test set
+Take a random sample of indices to use for test set, use remainder for training
+Use Scikit-learn’s train_test_split method
+If we want to do stratified sampling we use the ‘stratify’ parameter
+Data Leakage
+“Data leakage” occurs when some of our test set data “leaks” into model building and influences the development of the model
+For example, if we use all of our data to select our features, or compare algorithms
+This invalidates the estimated performance of the model and causes it to be overoptimistic
+In severe cases, it can cause our model to be worthless
+Data Leakage
+Data from the future is accidentally used within training data
+Data Leakage
+A variable within the training data is an indicator of the target
+Common causes of data leakage
+Selecting features before splitting
+Scaling before splitting
+Filling missing values before splitting
+Grouped observations are separated into different splits
+E.g. two CT scans from the same patient taken a week apart
+Not great
+Bad
+Splitting time series data randomly instead of by time
+Failure to remove duplicate observations
+Particularly dangerous when merging multiple datasets together
+Common issue in several studies using ML to detect COVID-19
+Different data generation processes for different classes
+Comparing Models
+Comparing models- validation sets
+Often we want to compare models to select the optimal model
+If we use the test set to compare model performance, it is not longer an unbiased indicator of performance
+Instead, we split the data 3 ways into training, validation and test sets
+We use the validation set for model selection, and report performance on the test set
+Training
+(~60-80%)
+Validation
+(~10-20%)
+Test
+(~10-20%)
+Use for model comparison/selection
+Use to evaluate final model
+Question
+What might be some potential problems with using a validation set to do your model selection? Maximizes the data available for training the model – important for small datasets
+Provides a better evaluation of how well the model can generalize to new data – validation performance is not accidentally biased by choice of datapoints to use for validation
+Cross-validation is the typical approach used in industry for model selection and tuning, except in cases of very large datasets
+CV and Model Evaluation
+Remember, when you complete your cross-validation and do your model selection, you still need to evaluate your model on the test set for a fair approximation of performance
+Training + cross-validation
+(~80-90%)
+Test
+(~10-20%)
+Use for model comparison/selection
+Use to evaluate final model
+Val set
+Val set
+Val set
+Val set
+Val set
+Iteration
+Validation fold
+Training folds
+1
+2
+3
+4
+5
+CV using Scikit-learn
+Divide data into ”k” folds
+For each model you want to compare:
+For each of “k” iterations:
+Get the training folds and the validation fold for the iteration
+Fit the model on the training data
+Get predictions for the validation fold, calculate performance and store it
+Calculate mean validation performance across all iterations
+Compare CV average performance and select model
+Model Selection:
+The Bias-Variance Tradeoff
+Model Complexity
+Model Complexity
+Number of Features
+Algorithm
+Hyper-parameter Values
+Bias and Variance
+Bias is error from incorrect assumptions within the model
+Often introduced by modeling a real-life problem using a simpler model that is unable to fully capture the underlying patterns in data
+Variance refers to the sensitivity of the model to fluctuations in the training data
+Usually due to model fitting itself to fine patterns which may just be noise
+See: http://scott.fortmann-roe.com/docs/BiasVariance.html
+Bias – Variance Tradeoff
+Irreducible error
+Bias2
+Variance
+Bias
+Deviation
+Expected Error
+Bias – Variance Tradeoff
+Error
+Model complexity
+Total error
+Variance
+Bias2
+Optimal model complexity
+Underfitting vs. Overfitting
+Image source: http://scott.fortmann-roe.com/docs/BiasVariance.html
+Underfitting
+Model is too simple
+Overfitting
+Model is too complex
+Underfitting vs. Overfitting
+Underfitting
+Model is too simple
+Overfitting
+Model is too complex
+Image source: Scikit Learn documentation
+Good Fit
+Model fits well, with some error
+How do we recognize overfitting? Choice of algorithm
+Number of features
+Hyperparameter settings
+Optimal complexity varies with amount of data – the more data, the more complex model you can use
+We find this using the validation approaches we discussed last class
+Image source: Python Data Science Handbook
+DEMO Notebook:
+Validation Curves
+Metrics
+Outcomes vs. Outputs
+Refers to the desired business impact on your organization or for your customer
+Stated in terms of the expected impact (which is often $)
+Does NOT contain model performance metrics or other technical metrics
+Outcome
+Output
+Refers to the desired output from the model
+Measured in terms of a model performance metric
+Typically not communicated to the customer
+Set this AFTER setting the desired outcome
+Outcomes vs. Outputs
+A tool to predict turbulence for airlines
+Output
+Outcome
+Low # of safety incidents per year, or lower $ of safety-related claims
+AUROC or precision/recall of turbulence prediction (binary or 1-5 scale)
+A power demand forecasting tool for a utility
+Lower cost per MWh of power produced
+Lower emissions rate per MWh
+MSE (most likely) or MAE/MAPE
+Baselines
+Metrics are meaningless without a baseline for comparison
+There are a few important baselines to determine:
+Zero rule baseline (Most common class / mean value)
+Heuristic baseline
+Human baseline
+Existing solution baseline
+Regression Error Metrics
+MSE, MAE and MAPE
+Also influenced by scale
+More robust to outliers
+Can be easier to interpret in context of the problem
+Abs value is less desirable for calculations (squared terms are easier to minimize via differentiation)
+Mean Absolute Error
+Mean Squared Error
+Most popular regression error metric
+Heavily influenced by outliers - penalizes large errors much more than small ones
+Influenced by scale of data
+Sometimes used as RMSE
+Converts error to a percentage
+Popular among non-technical managers because it is easily understood
+Skewed by high % errors for low values of y
+Mean Absolute % Error
+Example: MAE vs. MSE/RMSE
+MSE/RMSE penalizes severe errors much more than MAE
+This can be desirable if being off by a lot one time is much worse than being off by a little every time
+Image source: https://medium.com/human-in-a-machine-world/mae-and-rmse-which-metric-is-better-e60ac3bde13d
+Coefficient of determination (R2)
+Deviation of points from mean can be broken down into two components:
+”Explained deviation” – portion of deviation predicted by your model
+“Unexplained deviation” – difference between prediction and actual point
+Coefficient of determination (R2)
+R2 ranges between 0 and 1
+Unexplained deviation (error)
+Deviation explained by model
+Total deviation from mean
+R-squared is typically used to communicate how well your feature variables (X) explain the variability in your target variable (y)
+Adjusted R2
+R-squared is often viewed as a measure of goodness of fit rather than prediction ability -> calculated “in-sample” on the training data itself
+As we add more features, the R-squared almost always goes up because the model finds additional patterns of correlation (which might be noise)
+However, this does not mean the model can generate better predictions on new data -> remember our discussion on overfitting
+To help with this problem, we often report ”adjusted R-squared”, which penalizes for more features (added complexity)
+“Is R-squared useless?”: https://data.library.virginia.edu/is-r-squared-useless/
+Classification Error Metrics
+Accuracy
+Accuracy is the most popular and easiest to understand error metric
+However, accuracy can be deceiving when there is a class imbalance
+Consider this situation:
+I am building a model to predict whether patients will have a certain rare disease
+I gather a dataset with thousands of patients and several features, along with a label of whether they were diagnosed with the rare disease (“1”) or not (“0”)
+Using this dataset, I create a classifier with 99.4% accuracy! a lot of 0’s and only a few 1’s)
+Unlike ROC curves, they do not factor in True Negatives
+Image source: https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html#sphx-glr-auto-examples-model-selection-plot-precision-recall-py
+Multiclass Confusion Matrix
+The multiclass confusion matrix shows us where the classifier model is struggling to differentiate between classes
+A perfect classifier would have values only on the diagonals
+To plot the confusion matrix we use scikit learn’s plot_confusion_matrix() method
+Multiclass Confusion Matrix
+We can calculate the same metrics as we did before, but now we do it for each class
+Scikit learn will do this for us using the classification_report() method
+We can also report  overall “macro-averaged” precision and recall using a simple average across all classes
+Image source: https://towardsdatascience.com/multi-class-classification-extracting-performance-metrics-from-the-confusion-matrix-b379b427a872
+F1 Score
+Preparing for Modeling
+Aspects of preparing data
+Splitting data - train/test sets
+Feature selection
+Creating new derivative features
+Encoding categorical features
+Scaling/standardizing features
+Adjusting for class imbalance
+Feature Selection
+Why do feature selection? features with no/low correlation to the output)
+Identify features which are correlated with each other and determine how to resolve (this is called multicollinearity)
+Univariate selection methods
+Output Type
+Input Type
+Numeric
+Categorical
+Numeric (Regression)
+Categorical (Classification)
+ANOVA
+Mutual Information
+Pearson’s Correlation
+Spearman’s Correlation
+ANOVA
+Mutual Information
+Chi-Squared
+Mutual Information
+Univariate selection using scikit-learn
+Scikit-learn provides the SelectKBest class
+Select a user-specified number of features which score highest on a univariate statistical test
+Inputs: features (X), response (y), number to select (k), statistical test (score-func)
+Do not use this blindly – always look at the details and confirm the selection makes sense! can directly compare coefficients of a regression model and interpret intercept)
+Scaling vs. Standardizing
+Min-Max Scaling (Normalization)
+Change the values for each feature so they fall in a fixed range – usually 0 to 1
+Commonly used for computer vision applications (scaling pixel values to 0–255)
+Used when data distribution is not approximately normal
+May diminish the impact of outliers
+Standardization
+(Z-score normalization)
+Change the values for each feature so they have properties of a standard normal distribution with μ=0 and σ=1
+Important for clustering analysis and PCA, helps neural networks
+May distort differences between features if not approximately normally distributed
+Scikit learn: MinMaxScaler()
+Scikit learn: StandardScaler()
+Rules of Thumb
+Some algorithms require either scaling or standardizing
+Distance-based algorithms such as KNN, clustering
+Regression with L1/L2 penalty
+Some (e.g. Dealing with class imbalance
+If the class imbalance is a result of bias in collecting training data, fix the root problem by collecting more data
+If the imbalance is inherent in the problem, two common techniques uses are undersampling the majority class, and oversampling the minority class
+https://www.kaggle.com/rafjaa/resampling-strategies-for-imbalanced-datasets
+Pipelines
+Pipelines
+We can think of the steps in preparing & modeling our data as a “pipeline”
+We “fit” the pipeline using the training data only, and then we can apply it to new data going forward (including the test set)
+Fill missing data
+Reduce feature set
+Encode
+categorical data
+Scale numerical data
+Model
+Data pipeline
+New data
+Predictions
+Pipelines in Scikit-learn
+Fill missing data using mode
+One-hot encode
+Standardize
+Model
+Input data
+Fill missing data using median
+Categorical data
+Numeric data
+Predictions
+Pipeline.fit(X_train, y_train)
+Pipeline.predict(new_data)
+ColumnTransformer
+Benefits of pipelines
+Fit once, then reuse for testing, production
+Less code to maintain
+Ease of adaptation to changing data
+Reproducibility / data lineage
+Questions? But as a formal program,
+we will we keep it a one year an academic program that every new class coming in have somebody to go work with now., you are paired with,, with a, with a mentor., goals are up in pretty much any aspect of,, your, your, your professional life, even personally if you want to talk about that.,, for your academic growth, your professional growth,,, your personal growth., and the key focus areas we, we are thinking about in your career guidance, a lot of you,,,
+we'll be starting to look for your internship for someone in few months and getting guidance around that,,
+guidance on position and goals and for the job or if somebody is interested more in looking for research areas,, technical skills,
+networking and in general, some of these are pretty accomplished,,, professionals in very short span of time. Academic excellence., we talked about,,, especially with not a lot of electives coming in,
+they can probably provide you,, a good,,, good guidance on what to choose based on your interest., if you have if you have some project you want to get a feedback on, and, on the research side, career progression.,,,, if you want to have them look at your resume, as,, help on the interview process,
+personal support, life work balance, all of you come from different stages in life, confidence building,
+industry insights as,, they were important because if,, a lot of these are in general,
+I am a spaceflight and working in the industry now, but that can be some interesting discussions that you can have..., again, I do not want to very thoroughly,,,,
+make it extremely rigid or professional, but some things to keep in mind,., this is your opportunity with,, with a professional who has volunteered to do that. Cross-Validation
+K-Folds
+Divide into K folds
+Train on K-1
+Validate on 1
+Repeat K times
+Average error
+Benefits:
+More stable performance estimate
+Uses more data
+Other CV Types
+ShuffleSplit
+Leave-One-Out
+Tradeoff:
+More folds → higher compute
+To-Do
+Use 5-fold or 10-fold CV by default
+Bias-Variance Tradeoff
+Bias:
+Model too simple
+Underfitting
+Variance:
+Model too complex
+Overfitting
+Total Error:
+Bias² + Variance + Irreducible error
+Recognizing Overfitting
+Training score ↑
+Validation score ↓
+Divergence
+Question
+Does more features always improve performance? Multiclass Evaluation
+Confusion matrix
+classification_report()
+Macro average
+Preparing for Modeling
+Steps:
+Train/test split
+Feature selection
+Feature engineering
+Encoding
+Scaling
+Class imbalance handling
+Feature Selection
+Why:
+Reduce overfitting
+Improve generalization
+Improve interpretability
+Methods:
+Univariate
+SelectKBest
+Random Forest importance
+To-Do
+Remove >50% null features
+Categorical Encoding
+Ordinal:
+Preserve order
+Risk artificial ordering
+One-hot:
+Safer
+Expands dimensions
+Question
+When is ordinal encoding appropriate? Scaling
+Needed for:
+KNN
+Clustering
+Regularized regression
+PCA
+MinMax:
+0–1 range
+StandardScaler:
+Mean 0
+Std 1
+Fit scaler on training only
+Class Imbalance
+Model favors majority class
+Fix:
+Collect more minority data
+Undersampling
+Oversampling
+ Accuracy unreliable
+Pipelines
+Why:
+Prevent leakage
+Reproducibility
+Cleaner code
+Pipeline:
+Impute
+Encode
+Scale
+Model
+Fit only on training
+To-Do
+Always use sklearn Pipeline + ColumnTransformer
+Big Reflection Questions
+Did I check for leakage?

@@ -1,0 +1,509 @@
+# Natural Language Processing I — Week 6
+
+## 1. Overview of Natural Language Processing (NLP)
+
+### 1.1 Definition
+**Natural Language Processing (NLP)** is the field of artificial intelligence concerned with enabling machines to understand, represent, generate, and reason over human language.
+
+Unlike images (which are naturally represented as pixel intensity matrices), text must be transformed into numerical representations before being processed by machine learning models.
+
+---
+
+## 2. NLP Tasks and Applications
+
+### 2.1 Core Applications
+
+- **Search Engines**
+  - Query understanding
+  - Document retrieval and ranking
+  - Examples: Google, Bing
+
+- **Machine Translation**
+  - Sequence-to-sequence mapping
+  - Examples: Google Translate, DeepL
+
+- **Text Classification**
+  - Spam detection
+  - Article tagging
+  - Intent classification
+
+- **Sentiment Analysis**
+  - Product reviews (positive/negative/neutral)
+  - Market research
+  - Social media monitoring
+
+- **Text Similarity**
+  - Plagiarism detection
+  - Document deduplication
+  - Retrieval systems
+
+- **Topic Modeling**
+  - Automatic tagging of documents
+  - Attribute extraction
+  - Typically unsupervised
+
+- **Question Answering (Q&A) and Chatbots**
+  - Rule-based systems (legacy)
+  - Retrieval-Augmented Generation (RAG)
+  - Generative models (e.g., GPT)
+
+- **Text Summarization**
+  - **Extractive**: selects original sentences
+  - **Abstractive**: generates new text
+
+- **Text Generation**
+  - Large language models (e.g., GPT, Claude, Gemini)
+
+- **Multimodal NLP**
+  - Text + vision models (e.g., CLIP, GPT-4V)
+  - Referred to as “NLP+”
+
+---
+
+## 3. Challenges in NLP
+
+### 3.1 Linguistic Challenges
+
+- **Polysemy (Homonymy)**  
+  One word, multiple meanings  
+  - *“bank”* (river bank vs. financial bank)
+
+- **Synonymy**  
+  Multiple words, same meaning  
+  - *sneakers / tennis shoes / running shoes*
+
+- **Context Dependency**
+  Observations are not independent.
+  - “The dog ate the bone. It tasted good.”  
+    → What does “it” refer to?
+
+- **Semantic Ambiguity**
+  - “I saw the boy on the beach with my binoculars.”
+
+- **Slang and Colloquialisms**
+  - “That jump was sick.”
+
+- **Acronyms**
+
+- **Variable-Length Sequences**
+  - Sentences and documents vary in length.
+
+- **Sarcasm and Humor**
+  - Difficult for literal models to interpret.
+
+---
+
+## 4. Text Representation
+
+### 4.1 One-Hot Encoding
+
+- Vocabulary size = \( V \)
+- Each word → vector of length \( V \)
+- Exactly one position = 1, others = 0
+
+Example:
+"cat" → [0,0,1,0,...,0]
+
+
+**Problems:**
+- Extremely high-dimensional and sparse
+- No semantic similarity captured
+- “cat” as different from “kitten” as from “nuclear”
+
+---
+
+## 5. Traditional NLP Methods
+
+### 5.1 Bag of Words (BoW)
+
+- Represents document as word frequency vector
+- Ignores grammar and word order
+- Vocabulary = all unique words in corpus
+
+Example:
+"the cat sat" → {the:1, cat:1, sat:1}
+
+
+**Limitations:**
+- Order ignored
+- Sparse representation
+- Overemphasizes common words
+
+---
+
+### 5.2 TF-IDF (Term Frequency–Inverse Document Frequency)
+
+Improves upon BoW by down-weighting common words.
+
+#### Term Frequency (TF)
+\[
+TF(t,d) = \frac{\text{count of } t \text{ in } d}{\text{total words in } d}
+\]
+
+#### Inverse Document Frequency (IDF)
+\[
+IDF(t) = \log\left(\frac{N}{df_t}\right)
+\]
+
+- \( N \) = total documents
+- \( df_t \) = documents containing term \( t \)
+
+#### TF-IDF Score
+\[
+TF\text{-}IDF(t,d) = TF(t,d) \times IDF(t)
+\]
+
+**Intuition:**
+- Common words → low IDF → low weight
+- Rare but document-specific words → high weight
+
+---
+
+### 5.3 N-grams
+
+Capture local word order.
+
+- **Unigram**: 1 word
+- **Bigram**: 2 consecutive words
+- **Trigram**: 3 consecutive words
+
+Example:
+- "machine learning is cool"
+- Bigrams: [machine learning], [learning is], [is cool]
+
+
+Advantages:
+- Captures local context
+- Distinguishes “not good” from “good”
+
+Limitations:
+- Vocabulary explosion
+- Increased sparsity
+
+---
+
+### 5.4 Cosine Similarity for Retrieval
+
+Used in classical document retrieval.
+
+\[
+\text{cosine similarity} = \frac{A \cdot B}{||A|| \, ||B||}
+\]
+
+- 1 → identical
+- 0 → orthogonal
+
+Used in TF-IDF-based retrieval systems (precursor to neural retrieval).
+
+---
+
+## 6. Text Preprocessing Pipeline
+
+### Recommended Order
+
+1. **Lowercasing**
+2. **Punctuation removal**
+3. **Tokenization**
+4. **Stopword removal**
+5. **Stemming or Lemmatization**
+
+---
+
+### 6.1 Tokenization
+
+Splitting text into units.
+
+#### Word-level
+"I love NLP" → ["I", "love", "NLP"]
+- Simple
+- Struggles with out-of-vocabulary (OOV)
+
+#### Subword (e.g., BPE)
+"unhappiness" → ["un", "happy", "ness"]
+
+- Handles OOV
+- Used in GPT and BERT
+
+#### Character-level
+["I"," ","l","o","v","e"]
+
+- Robust
+- Long sequences, limited semantics
+
+---
+
+### 6.2 Stopwords
+
+Common words with low semantic content:
+- the, is, a, of, and, etc.
+
+**Caution:**  
+Removing stopwords may alter meaning:
+"not good" → remove "not" → "good"
+
+
+---
+
+### 6.3 Stemming vs. Lemmatization
+
+| Method | Description | Output Quality | Speed |
+|--------|------------|---------------|--------|
+| **Stemming** | Rule-based suffix removal | May produce non-words | Fast |
+| **Lemmatization** | Dictionary-based normalization | Real words | Slower |
+
+Examples:
+- running → run
+- studies → study
+- better → good (lemmatization only)
+
+---
+
+## 7. Word Embeddings
+
+### Motivation
+One-hot vectors do not encode meaning.
+
+Goal:
+- Map words into **dense, low-dimensional vectors**
+- Similar words → similar vectors
+
+---
+
+### 7.1 Word2Vec (2013, Mikolov et al.)
+
+Shallow neural network with one hidden layer.
+
+#### Two Architectures
+
+**1. CBOW (Continuous Bag of Words)**
+- Context → predict center word
+- Faster
+- Better for frequent words
+
+**2. Skip-gram**
+- Center word → predict context
+- Better for rare words
+
+---
+
+### Word2Vec Properties
+
+- Dense embeddings (100–300 dimensions typical)
+- Captures semantic relationships
+- Enables vector arithmetic:
+
+\[
+king - man + woman \approx queen
+\]
+
+- **Static embeddings**  
+  Same vector regardless of context.
+
+Limitation:
+- “bank” has identical embedding in all contexts.
+
+---
+
+### 7.2 GloVe (2014)
+
+- Uses global co-occurrence matrix
+- Matrix factorization approach
+- Combines global and local statistics
+- Static embeddings
+
+---
+
+### 7.3 FastText (2016)
+
+- Extends Word2Vec
+- Uses character n-grams
+- Handles OOV words
+- Effective for morphologically rich languages
+- Static embeddings
+
+---
+
+## 8. Sequence Models
+
+Traditional models ignore order. Sequence models capture dependencies.
+
+---
+
+### 8.1 Recurrent Neural Networks (RNNs)
+
+Hidden state update:
+
+\[
+h_t = \tanh(W_x x_t + W_h h_{t-1} + b)
+\]
+
+- Processes tokens sequentially
+- Suffers from **vanishing gradient problem**
+
+---
+
+### 8.2 LSTM (Long Short-Term Memory)
+
+Introduces:
+- **Cell state**
+- **Forget gate**
+- **Input gate**
+- **Output gate**
+
+Additive memory updates allow gradients to flow over long sequences.
+
+Advantages:
+- Handles long-term dependencies better than vanilla RNN.
+
+Limitations:
+- Sequential computation (not parallelizable)
+- Slow training
+
+---
+
+### 8.3 GRU (Gated Recurrent Unit)
+
+- Simplified LSTM
+- Two gates:
+  - Update gate
+  - Reset gate
+- No separate cell state
+
+Often:
+- Comparable performance to LSTM
+- Fewer parameters
+
+---
+
+## 9. Limitations of RNN-Based Models
+
+- Slow (sequential processing)
+- Difficult hyperparameter tuning
+- Struggle with very long sequences
+- Cannot fully capture long-range dependencies
+
+These limitations motivate **Transformers**, which use self-attention (covered next week).
+
+---
+
+## 10. Implementation Considerations
+
+### 10.1 Handling Variable-Length Sequences
+
+Neural networks require fixed-size tensors.
+
+#### Padding
+- Add `<PAD>` tokens
+- Use padding masks to ignore during training
+
+#### Packed Sequences (PyTorch)
+- Avoid unnecessary computation on padded tokens
+
+---
+
+### 10.2 Data Augmentation for Text
+
+Techniques:
+- Back-translation
+- Synonym replacement
+- Random insertion/deletion
+- Random word swapping
+
+Challenges:
+- Small changes can alter meaning
+- Must preserve label integrity
+
+---
+
+### 10.3 Handling Imbalanced Data
+
+Approaches:
+- Oversampling minority class
+- Undersampling majority class
+- Class-weighted cross-entropy loss
+- SMOTE (with embeddings)
+- Two-stage training
+- Ensemble methods
+
+---
+
+### 10.4 Data Splitting Best Practices
+
+Avoid data leakage.
+
+- Chronological splits for temporal data
+- Split conversation threads as units
+- Avoid duplicate documents across splits
+- Maintain domain consistency
+
+---
+
+## 11. Transfer Learning and Fine-Tuning
+
+Strategies:
+
+- **Full Fine-Tuning**
+  - Update all parameters
+
+- **Frozen Backbone**
+  - Train only task-specific layers
+
+- **Partial Freezing**
+  - Freeze lower layers
+
+- **Gradual Unfreezing**
+  - Unfreeze layers progressively during training
+
+---
+
+## 12. NLP Libraries
+
+### NLTK
+- Educational
+- Tokenization, stemming, corpora access
+
+### spaCy
+- Industrial-grade NLP
+- Efficient tokenization, NER, parsing
+
+### HuggingFace Transformers
+- Pretrained models (BERT, GPT, T5)
+- PyTorch and TensorFlow support
+- State-of-the-art architectures
+
+---
+
+## 13. Historical Progression of NLP Methods
+- BoW → TF-IDF → N-grams → Word2Vec/GloVe/FastText →
+- RNN/LSTM/GRU → Transformers → Large Language Models
+
+
+---
+
+## 14. Key Definitions
+
+- **Polysemy**: One word, multiple meanings  
+- **Synonymy**: Multiple words, same meaning  
+- **Tokenization**: Splitting text into units  
+- **Stemming**: Rule-based word root extraction  
+- **Lemmatization**: Dictionary-based normalization  
+- **TF-IDF**: Frequency × inverse document rarity  
+- **Static Embedding**: Same vector in all contexts  
+- **Contextual Embedding**: Vector depends on surrounding words  
+
+---
+
+## 15. Summary
+
+This lecture introduced:
+
+- Core NLP tasks and challenges
+- Text preprocessing techniques
+- Traditional vectorization methods (BoW, TF-IDF, N-grams)
+- Static word embeddings (Word2Vec, GloVe, FastText)
+- Sequence models (RNNs, LSTMs, GRUs)
+- Practical NLP implementation considerations
+
+The key limitation of earlier methods is their inability to fully capture context and long-range dependencies — a problem addressed by **Transformers**, which form the foundation of modern large language models.
+
+Next topic: **Attention and Transformer Architectures**.

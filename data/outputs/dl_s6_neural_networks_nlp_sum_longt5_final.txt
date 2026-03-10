@@ -1,1 +1,0 @@
-The Narrator explains how to use neural networks to learn new words. He uses a price-predicting example to illustrate how this can be used. In order to overcome the challenges of learning new words, the Neural Grid uses reinforcement learning in order to speed up the process.

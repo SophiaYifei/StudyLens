@@ -1,0 +1,37 @@
+ the goal of predictive modeling is to create a model that makes accurate predictions on new unseen data . 
+ we can not estimate performance on data we do not have , so instead we split our data into two setsTraining set  - build and train the modelTest set  - evaluate model performance performanceTraining  (~80-90%)Test(~10-20%)Use for model building & trainingUse to evaluate final modelSamplingWhy do we sample? 
+ two main types of sampling : nonprobability sampling and random samplingNonprobability sampling 
+ is when the selection of data is not based on any probability criteria . 
+ nonprobability sampling is when the selection of data is not based on any probability criteria . 
+ samples are not representative of real-world data and thus are highly likely to cause bias in your model . 
+ however , this is a very common approach in practice . 
+ examples : large language models are trained on easily collected data - Wikipedia , Reddit , Common Crawl etc 
+Sentiment analysis models often trained on IMDB movie reviews or Amazon reviews 
+ self-driving cars are initially trained only on Phoenix , AZ and Bay Area for rainy weather 
+ random sampling involves randomly choosing samples from population   this is a talk given at the g8 workshop on machine learning and artificial intelligence . 
+ this is a talk given at the g8 workshop on machine learning and artificial intelligence . 
+ this is a talk given at the g8 workshop on machine learning and artificial intelligence . 
+ this is a talk given at the g8 workshop on machine learning and artificial intelligence . 
+ this is a talk given at the g8 workshop on machine learning and artificial intelligence . 
+ this is a talk given at the g8 workshop on machine learning and artificial intelligence . 
+ this is a talk given at the g8 workshop on machine learning and artificial intelligence . 
+ this is a talk given at the g8 workshop on machine learning and artificial intelligence . 
+ this is a talk given at the g8 workshop on machine learning and artificial intelligence . 
+ this is a talk given at the g8 workshop . 
+ this is a talk given at the g8 workshop . 
+ this is a talk given at the g8 workshop . 
+ this is a talk given at the g8 workshop . 
+ this is a talk given at the g8 workshop . 
+ this is a talk given at the g8 workshop . 
+ this is a talk given at the g8 workshop . 
+ this is a talk given at the g8 workshop . 
+ this is a talk given at the g8 workshop . 
+ this is a talk given at the g8 workshop . 
+ this is a talk given at the g8 workshop . 
+ this is a talk given at the g8 workshop . 
+ this is a talk given at the g8 workshop . 
+ this is a talk given at the g8 workshop . 
+ this is a talk given at the g8 workshop . 
+ this is a talk given at the g8 workshop . 
+ this is a talk given at the g8 workshop . 
+ this is a talk given at the  we are going to formally launch our mentoring program today , we talked about that briefly during the orientation. we talked about why use cross-validation , again , the thing to remember with cross-validation is that,, this is the validation set is used for comparing models. it's used as part of the modeling process after we finish comparing our models . it's important that we then we can retrain our, our final model on the entire,, training set . it's a common mistake,, to,, do your cross-validation and then for your final model , just pick whichever model performs best on the, on the,, but,, if you do that , you're hurting yourself a little bit because that model was actually only trained on 80% of the data available for training. and we train on the full thing. and we retrain that model on the entire,, 100% of our training and cross-validation data . we can take advantage of that extra 20% that is now available to us as training data. and then we use our test set to calculate the,, the on bias performance . and then we use our test set to calculate the on bias performance . and then we use our test set to calculate the on bias performance . and then we

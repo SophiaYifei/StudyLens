@@ -1,0 +1,528 @@
+v4 = s14
+→ normalize (via softmax)
+all weights need to sum to 1
+bank
+of
+the
+river
+v1
+v2
+v3
+v4
+← Vector Embeddings
+Improve embeddings with context
+y1
+y2
+y3
+y4
+← New representations that are better than original embeddings
+→
+dot product
+w11
+w12
+w13
+w14
+13
+Self Attention
+bank
+of
+the
+river
+v1
+v2
+v3
+v4
+← Vector Embeddings
+Improve embeddings with context
+y1
+y2
+y3
+y4
+← New representations that are better than original embeddings
+w11v1 + w12v2 + w13v3 + w14v4 = y1
+← Reweighs all vectors towards v1, so river influences bank and vice-versa
+→
+14
+Self Attention
+w11
+w12
+w13
+w14
+w11v1 + w12v2 + w13v3 + w14v4 = y1
+These are called “weights” because they allow us to re-weigh all the vectors. 15
+Self Attention
+bank
+of
+the
+river
+v1
+v2
+v3
+v4
+Improve embeddings with context
+y1
+y2
+y3
+y4
+w11v1 + w12v2 + w13v3 + w14v4 = y1
+w21v1 + w22v2 + w23v3 + w24v4 = y2
+w31v1 + w32v2 + w33v3 + w34v4 = y3
+w41v1 + w42v2 + w43v3 + w44v4 = y4
+→
+Order has no influence
+Proximity has no influence
+Shape independent (long or short sequences work)
+16
+Self Attention
+bank
+of
+the
+river
+v1
+v2
+v3
+v4
+DOT PRODUCT
+y1
+y2
+y3
+y4
+v1
+←
+←
+←
+←
+←
+s11
+s12
+s13
+s14
+NORMALIZE
+w11
+w12
+w13
+w14
+WEIGHTED SUM
+v1
+v2
+v3
+v4
+←
+←
+←
+←
+←
+←
+←
+←
+←
+17
+Self Attention
+bank
+of
+the
+river
+v1
+v2
+v3
+v4
+DOT PRODUCT
+y1
+y2
+y3
+y4
+v1
+←
+←
+←
+←
+←
+s11
+s12
+s13
+s14
+NORMALIZE
+w11
+w12
+w13
+w14
+WEIGHTED SUM
+v1
+v2
+v3
+v4
+←
+←
+←
+←
+←
+←
+←
+←
+←
+No weights are being trained so far. 42
+Decoder
+Evaluating Decoder Output:
+We get the probabilistic prediction of each word at each position
+We can compare this to the actual words at each position and use cross-entropy loss to train the model
+43
+Encoder-Decoder
+Encoder compresses input into contextualized representations before passing to decoder, creating an information bottleneck that helps focus on relevant information
+Cross-Attention Mechanism: Decoders attend to encoder outputs, creating direct information pathways between input and output
+Encoder:
+Processes entire input at once
+Uses bidirectional self-attention
+Produces contextual representations
+Decoder:
+Generates output token by token
+Uses masked self-attention
+Uses cross-attention to encoder (in encoder-decoder models)
+Required Reading:
+The Annotated Transformer
+https://nlp.seas.harvard.edu/annotated-transformer/
+Recommended Reading:
+Transformers from Scratch
+https://e2eml.school/transformers.html
+Transformers explained visually
+https://www.youtube.com/watch?v=wjZofJX0v4M
+Build GPT from scratch (Andrej Karpathy)
+https://www.youtube.com/watch?v=kCc8FmEb1nY
+46
+At Inference
+Input data tokenized
+Token → embedding
+Positional encodings added to embeddings
+47
+At Inference
+Encoder Layers
+Self attention weighs importance of other tokens when processing specific token in input sequence
+FF NN
+Decode Layers
+Each decoder layer has a self attention mechanism, but it is masked to prevent tokens from attending to future tokens in sequence
+In encoder-decoder models, the decoder also has cross-attention layers that allow it to attend to the output of the encoder layers
+Output Generation
+Final decoder layer’s output passed to linear layer + softmax function to generate probabilities for each token in the model’s vocabulary
+Token with highest probability is often selected as the output at each step
+48
+At Inference
+Generated sequence of tokens then converted back into desired format (ie string of text)
+49
+At Inference
+Different Embeddings for Different Meanings
+In the context of "I ate an orange," the embedding for "orange" would be closer to embeddings for other fruits or food-related contexts 🍊🍎🫐
+In the context of "The sunset is orange," the embedding for "orange" would be closer to color-related terms or descriptions of nature 🟧 🌅 🌈
+Inference
+At inference time, when a model encounters the word "orange," it doesn't rely on a predetermined static vector. Longformer, BigBird)
+Techniques like gradient checkpointing and mixed-precision training to manage memory more efficiently
+Parallel processing (specialized GPUs)
+51
+BERT, ELMo, and GPT
+Encoder-only
+Decoder-only
+Hugging Face Transformers 🤗
+The transformers library has 3 building blocks:
+A tokenizer
+A transformer architecture
+A head for NLP tasks
+e.g Text Classification, Generation, Sentiment Analysis, Translation, Summarization
+52
+Applied NLP
+53
+53
+Text Similarity
+Text Summarization
+Topic Modeling
+54
+Text Similarity
+Measures how similar two documents are
+Lexical Similarity:
+Similar vocabulary
+Semantic Similarity:
+Similar meaning
+55
+Text Similarity
+Measures how similar two documents are
+How? Calculate similarity between embeddings
+56
+Text Summarization
+Extractive summarization
+Select a subset of sentences from the original text that attempt to retain the most important points of the document
+All elements come from original document
+Abstractive summarization
+Attempts to understand original document and then attempt to generate a shorter document which retains the key points of the original
+May use different language than original document
+57
+Text Summarization
+Web page summaries
+Email summaries
+Scientific article summaries
+Video transcription summaries
+58
+Text Summarization
+Extractive Example
+TextRank uses an unsupervised graph-based approach to identifying and extracting the most “central” sentences in a document
+59
+Text Summarization
+Abstractive Example
+We can use transformer models pre-trained on a summarization dataset or train them ourselves
+Note that larger documents must be broken into sequences with a max length dictated by the model architecture
+60
+Topic Modeling
+Can be useful to “tag” documents based on topics or attributes
+Applications:
+Auto-tagging of web articles
+Unsupervised document classification
+Identifying attributes in product reviews
+Auto-tagging customer support tickets
+61
+Topic Modeling
+Methods
+Supervised - if sufficient labeled training data is available
+Unsupervised -
+[Traditional] Latent Semantic Analysis (LSA)
+[Traditional] Latent Dirichlet Allocation (LDA)
+Transformer embeddings
+62
+Topic Modeling
+Could assume the topic’s keywords are contained in the document
+Which words are the right keywords? Compare the encoding of each word in the document to the overall document encoding
+Words with closest embedding to document (based on cosine similarity) are probably the keywords
+Advanced Topics
+63
+63
+Visualizing Embedding Spaces
+LLMs
+Beyond language (multimodality)
+64
+Image Source: David McClure Twitter
+512 dimensions
+Plot in 2 dimensions
+65
+Food									Not Food
+🍦
+🍲
+Cold										Hot
+🍦
+🍲
+🍦
+🍲
+Bitter	Spicy	Salty	     Umami	     Sour	      Sweet
+🍲
+🍦
+Served in bowl/cone				   Served on its own
+🍲
+🍦
+Contains vegetables						Shouldn’t
+🍦
+🍲
+66
+🍦
+🍲
+🍦
+🍲
+🍜
+🍝
+🍧
+🍪
+🧁
+🍓
+🍎
+🍊
+🍅
+🥕
+🥦
+🧅
+🧢
+👗
+Compressed dimension 1
+Compressed dimension 2
+67
+Dimensionality Reduction
+PCA
+Focus is on capturing global linear relationships in the data
+Use to: simplify and find global linear relationships and patterns in the data
+t-SNE
+Constructs a lower-dimensional representation where similar data points are placed closer together
+Use to: Emphasize visualization, reveal local patterns and clusters
+UMAP
+Uses manifold learning (nonlinear dimensionality reduction) to understand the underlying structure or shape of the data
+Focus on capturing complex, non-linear relationships in the data
+Use to: preserve local structure and handle complex, nonlinear relationships
+Deep Dive into How they Work
+68
+Similarity in Semantic Space
+Cosine similarity
+Euclidean distance
+Dot product
+Manhattan Distance
+Mahalanobis Distance
+Jaccard Similarity
+Many, many others! "tokenize" the image by chopping it into patches of 16x16px, and treating each patch as a token, embedding it into input space
+ViT (2020)
+CLIP (2021)
+Image Source
+93
+Text Encoder: CLIP
+I[n, h, w, c]: A batch of n images with height h, width w, and c channels
+T[n, l]: A batch of n text sequences, each with length l
+t: A learned temperature parameter to scale the similarity scores
+I_f = image_encoder(I): Images are encoded using a vision model (ResNet or Vision Transformer) into feature vectors of dimension d_i
+T_f = text_encoder(T): Text is encoded using a text model (CBOW or Text Transformer) into feature vectors of dimension d_t
+I_e = l2_normalize(np.dot(I_f, W_i), axis=1): Project image features to a common embedding space and normalize
+T_e = l2_normalize(np.dot(T_f, W_t), axis=1): Project text features to the same embedding space and normalize
+logits = np.dot(I_e, T_e.T) * np.exp(t): Calculate pairwise cosine similarities between all image-text pairs in the batch, scaled by the temperature parameter
+labels = np.arange(n): Create diagonal labels (each image matches with its corresponding text)
+loss_i: Cross-entropy loss treating rows as predictions (image-to-text direction)
+loss_t: Cross-entropy loss treating columns as predictions (text-to-image direction)
+loss = (loss_i + loss_t)/2: The final loss is the average of both directional losses
+CLIP (2021)
+GIF source
+Mixture of Experts
+In traditional transformers, all parameters are used for every input, but MoE models only activate a small subset of parameters (the "experts") for each input token
+Instead of the dense FFN, MoE layers have a certain number of “Experts” where each expert is a NN (any NN!) problem with naive: no trainable params = model cant LEARN attention patterns
+solution: add weight matrices W_Q, W_K, W_V
+if v = embedding vector (1 x k)
+W_Q, W_K, W_V = trainable matrices (k x k)
+Q = v @ W_Q  (query - what am I looking for)
+K = v @ W_K  (key - what do I offer)
+V = v @ W_V  (value - what I actually contribute)
+FULL ATTENTION FORMULA:
+Attention(Q, K, V) = softmax( Q @ K^T / sqrt(d_k) ) @ V
+- Q @ K^T -> unnormalized attention scores
+- / sqrt(d_k) -> SCALE to prevent huge values -> vanishing grad in softmax
+d_k = embedding dimension
+- softmax -> attention weights (still non-trainable in the sense they're derived)
+- @ V -> weighted sum = new contextual embedding
+>>>> PROF QUOTE (close enough): "keys queries values sounds like elegant database design but its really not, dont overthink the names"
+>>>> ADV: NOTE - the correct formula omits the sqrt(d_k) scaling because modern implementations handle this automatically via layer normalization. - 2-4x wall-clock speedup on A100 GPUs
+- no approximation - EXACT same output as standard attention
+pseudo-logic:
+for block_i in Q_blocks:
+running_sum = 0
+running_max = -inf
+for block_j in K_blocks, V_blocks:
+compute partial QK^T for this tile
+update running softmax online (log-sum-exp trick)
+accumulate partial output
+return final Y
+why relevant NOW:
+- FlashAttention 2 (2023) + FlashAttention 3 (2024) even faster
+- used in: GPT-4, LLaMA 2/3, Claude, Mistral, Gemma
+- directly enables LONG context windows (128k+ tokens) to be feasible
+- if ur model cant do 100k ctx -> prob not using FA
+- transformers library + vllm enable by default
+tl;dr: same math, smarter GPU memory management = fast + long ctx
+single head = model learns ONE "type" of attention relationship
+multi-head = run H heads in PARALLEL, each w/ OWN W_Q^i, W_K^i, W_V^i
+for each head i in [1..H]:
+Q_i = x @ W_Q^i
+K_i = x @ W_K^i
+V_i = x @ W_V^i
+head_i = Attention(Q_i, K_i, V_i)
+concat all heads: [head_1 | head_2 | ... | head_H]
+project: output = concat @ W_O
+benefit:
+- diff heads can attend to diff things
+- head 1 might learn syntax (subject-verb agreement)
+- head 2 might learn coreference (pronouns)
+- head 3 might learn long-range deps etc
+- more expressivity
+BERT base = 12 heads, BERT large = 16 heads
+original transformer (2017) = 8 heads
+>>>> ADV: in multi-head attention, each head shares the same W_Q and W_K matrices but has separate W_V. encoder-decoder for seq2seq tasks (translation etc)
+ENCODER (left side):
+input tokens
+-> token embeddings + POSITIONAL ENCODING (sin/cos waves, add position info bc attn has none)
+-> [multi-head SELF-attention] -> add & layer norm
+-> [feed-forward NN (2 linear layers + ReLU)] -> add & layer norm
+-> repeat N=6 times (N = num encoder layers)
+-> encoder output = context-rich representations
+DECODER (right side):
+target tokens (shifted right, <SOS> prepended)
+-> token embeds + pos encoding
+-> [MASKED multi-head self-attn] <- can only attend to PAST tokens (causal mask)
+-> add & layer norm
+-> [CROSS-ATTENTION] <- queries from decoder, keys+values from ENCODER OUTPUT
+-> add & layer norm
+-> [FFN] -> add & layer norm
+-> repeat N=6 times
+-> linear -> softmax -> token probs
+add & norm = residual connection (add input to output) + layer normalization
+- residual: Y = F(X) + X (helps gradient flow)
+- layer norm: normalize across feature dim per token
+>>>> ADV: In BERT's decoder, cross-attention allows the model to attend to future tokens in the target sequence. =============================================
+NLP APPLICATIONS (lec 2 specific)
+=============================================
+TEXT SIMILARITY:
+cosine sim on BERT/SBERT embeddings
+SBERT (Sentence BERT) = trained to produce good sentence-level embeddings
+use: semantic search, duplicate detection, paraphrase detection
+TEXT SUMMARIZATION:
+extractive = pull actual sentences from source (no hallucination risk)
+abstractive = generate NEW text summarizing source (can hallucinate)
+BART/T5/Pegasus = popular abstractive models
+eval w/ ROUGE + factual consistency (NLI)
+TOPIC MODELING:
+LDA (Latent Dirichlet Allocation):
+- traditional probabilistic model
+- each doc = mixture of topics
+- each topic = distribution over words
+- UNSUPERVISED!! no labels
+- hyperparams: num topics k (must specify manually)
+BERTopic (modern):
+- uses BERT embeds + UMAP dim reduce + HDBSCAN clustering
+- better at capturing semantic topics
+=============================================
+EVALUATION METRICS (IMPORTANT FOR HACKATHON)
+=============================================
+ROUGE (Recall-Oriented Understudy for Gisting Evaluation):
+compares generated summary to REFERENCE summary
+types:
+ROUGE-1: unigram (single word) overlap
+ROUGE-2: bigram overlap
+ROUGE-L: longest common subsequence (order-aware)
+formula each: precision, recall, F1 calculated
+range: 0 to 1, higher = better
+WEAKNESS:
+- surface-level only!! 2019):
+- uses contextual BERT embeddings instead of exact word match
+- for each token in generated: find most similar token in reference (cosine sim)
+- P, R, F1 computed at token level
+- better semantic matching than ROUGE
+- still needs reference summary
+NLI-based Factual Consistency (our hackathon metric 2):
+idea: if summary claims X, source should ENTAIL X (not contradict)
+setup:
+premise = source transcript/doc
+hypothesis = each sentence of generated summary
+labels: entailment (good) / neutral (ok) / contradiction (BAD = hallucination!) PPO (policy optimization) to maximize reward model score
+- instruction tuning = SFT on (instruction, good response) pairs
+MULTIMODAL:
+CLIP (OpenAI 2021):
+- joint image + text encoder
+- trained on 400M (image, caption) pairs
+- contrastive loss: pull matching pairs together, push apart non-matching
+- zero-shot image classif: compare image embed vs class name embeds
+LLaVA, GPT-4V:
+- visual question answering
+- image encoder (ViT) + LLM decoder
+- cross-modal attention or projection layer
+used in: image captioning, visual Q&A, doc understanding
+>>>> RANDOM MID-CLASS THOUGHT: imagine if transformers couldnt do math. prof: if u study too much ur not optimizing ur time (she said this abt exams but applies to life)
+=============================================
+KEY FORMULAS CHEAT SHEET
+=============================================
+self-attn score (naive):    score(i,j) = v_i · v_j
+self-attn weight:           w(i,j) = softmax(score(i,:))[j]
+self-attn output:           Y_i = sum_j w(i,j) * v_j
+scaled dot-product attn:    Attention(Q,K,V) = softmax(QK^T / sqrt(d_k)) @ V
+multi-head:                 MultiHead(Q,K,V) = Concat(head_1,...,head_H) @ W_O
+where head_i = Attention(Q@W_Qi, K@W_Ki, V@W_Vi)
+TF-IDF:                     tf-idf(t,d) = tf(t,d) * log(N / df(t))
+cosine sim:                 sim(A,B) = (A·B) / (||A|| * ||B||)
+ROUGE-L:                    based on LCS length / len(reference) and LCS / len(generated)
+=============================================
+TODO before hackathon
+=============================================
+[ ] finish data pipeline - combine transcript + slides text
+[ ] pre-generate and save summary outputs (dont run live!!)

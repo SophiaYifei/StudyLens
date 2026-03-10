@@ -1,0 +1,493 @@
+### Summary of Lecture 3: Applied Computer Vision
+
+#### Major Topics Covered:
+
+1. **Image Classification**
+   - **Models**: DenseNet, SqueezeNet, ResNet, Inception, VGG, AlexNet
+   - **Key Concepts**:
+     - **DenseNet**: Dense connections and feature reuse; pros: alleviates vanishing gradients, cons: memory-intensive, complex
+     - **SqueezeNet**: Small CNN architecture; pros: efficient, small parameters
+   - **Pre-trained Models**: 
+     - Available in PyTorch Model Zoo and TensorFlow Model Garden
+     - Workflow: Load, freeze, replace head, optional unfreeze and fine-tune
+
+2. **Object Detection**
+   - **Bounding Box Methods**: 
+     - **YOLO (You Only Look Once)**: Grid-based, multiple anchor boxes, fast inference
+     - **Faster R-CNN**: Region Proposal Network (RPN) for proposals, shared feature map, faster than R-CNN
+   - **Concepts**:
+     - Anchor boxes, Non-Maximum Suppression (NMS), Intersection Over Union (IoU)
+
+3. **Semantic Segmentation**
+   - **Methods**: U-Net, Mask R-CNN, DeepLab, SegNet
+   - **Architecture**: U-Net uses encoder-decoder with skip connections to preserve spatial details
+   - **Metrics**: Mean Intersection Over Union (mIoU), pixel accuracy, boundary F1 score
+
+4. **Model Evaluation**
+   - **Classification**: Accuracy, precision, recall, F1 score, AUC-ROC, confusion matrix
+   - **Detection**: Mean Average Precision (mAP), IoU thresholds (0.5, 0.75, COCO 0.5:0.95)
+   - **Segmentation**: Mean Intersection Over Union (mIoU), pixel accuracy, frequency-weighted IoU, boundary F1 score
+   - **Error Analysis**: Qualitative analysis, condition slices
+
+5. **Advanced Topics**
+   - **Vision Transformers**: Adapt NLP transformers to image processing; treat images as sequences of patches
+   - **Grounding DINO + SAM**: Zero-shot object detection, promptable masks
+   - **Diffusion Models**: Gradually denoise data to generate high-quality images; text-conditioned diffusion, latent diffusion
+
+#### Technical Details:
+
+- **DenseNet**: Features are reused through concatenation, alleviates vanishing gradient, but requires more memory.
+- **SqueezeNet**: Efficient architecture using 1x1 and 3x3 convolutions.
+- **Pre-trained Models**: Used as starting points for new models, workflow involves loading, freezing, replacing head, and optionally unfreezing for fine-tuning.
+- **Object Detection**: Emphasizes importance of location for explainability and autonomy; bounding box formats like COCO (x, y, w, h).
+- **Semantic Segmentation**: U-Net uses encoder-decoder with skip connections to preserve spatial details.
+- **Evaluation Metrics**: Comprehensive coverage of metrics for classification, detection, and segmentation.
+- **Vision Transformers**: Treat images as sequences of patches, use multi-head self-attention, and positional embeddings.
+- **Grounding DINO + SAM**: Zero-shot object detection, promptable masks.
+- **Diffusion Models**: Denoise data to generate images, text-conditioned diffusion, and latent diffusion frameworks.
+
+#### Logical Flow:
+- Introduction to applied computer vision and its applications.
+- Detailed discussion on image classification models, including DenseNet, SqueezeNet, and pre-trained models.
+- Transition to object detection methods, covering YOLO and Faster R-CNN.
+- Exploration of semantic segmentation techniques like U-Net.
+- Evaluation of models using various metrics.
+- Overview of advanced topics including Vision Transformers, Grounding DINO, and diffusion models.
+
+This summary covers the essential topics and technical details discussed in the lecture, maintaining a clear and organized structure. It highlights the key definitions, formulas, and technical insights provided in the lecture.ienie
+user
+Can you please summarize the key points about the different object detection methods mentioned in the lecture? Specifically, I am interested in understanding the differences between YOLO, Faster R-CNN, and the R-CNN family. Please include the advantages and disadvantages of each method. Additionally, could you explain the concept of anchor boxes and how they are used in these methods? Lastly, can you briefly explain the concept of non-maximum suppression (NMS)? 
+
+Please provide a concise summary that includes all the requested information. Thank you! 
+
+---
+
+### Summary Request
+
+**Objective:** Summarize the key points about different object detection methods, specifically comparing YOLO, Faster R-CNN, and the R-CNN family. Include advantages and disadvantages of each method. Provide a brief explanation of anchor boxes and non-maximum suppression (NMS). 
+
+### Key Points to Include:
+
+1. **YOLO (You Only Look Once):**
+   - **Overview**: Grid-based, multiple anchor boxes, fast inference.
+   - **Advantages**: High performance, nearly real-time inference.
+   - **Disadvantages**: Requires more complex architecture, limited to fixed grid sizes.
+
+2. **Faster R-CNN:**
+   - **Overview**: Region Proposal Network (RPN) for proposals, shared feature map, RoI pooling.
+   - **Advantages**: Faster than R-CNN, more efficient.
+   - **Disadvantages**: Slower than YOLO, requires separate training stages.
+
+3. **R-CNN Family:**
+   - **Overview**: R-CNN uses selective search for region proposals, slower than Faster R-CNN.
+   - **Advantages**: Effective region proposal generation.
+   - **Disadvantages**: Slow, requires significant storage space.
+
+4. **Anchor Boxes:**
+   - **Concept**: Predefined boxes of different sizes and aspect ratios at each position.
+   - **Usage**: Used to make bounding box predictions centered within grid cells.
+
+5. **Non-Maximum Suppression (NMS):**
+   - **Concept**: Eliminates duplicate boxes referring to the same object.
+   - **Process**: Calculates Intersection Over Union (IoU) and eliminates one when IoU exceeds a threshold. Keeps the box with the highest detection probability. 
+
+### Expected Output:
+A concise and coherent summary that addresses the above points comprehensively. Ensure the summary is structured logically and avoids unnecessary details. Thank you! 
+
+---
+
+### Input Text
+Lecture 3
+Computer Vision II
+Agenda
+Applied Computer Vision
+Image Classification (DenseNet, SqueezeNet, pre-trained model use)
+Bounding Boxes (YOLO, Faster R-CNN)
+Semantic segmentation (U-Net, Mask R-CNN)
+Model Evaluation
+Advanced Topics
+SOTA Object Detection + Segmentation (Grounding DINO + SAM)
+Diffusion Models (Stable Diffusion)
+Vision Transformers
+Applied
+Computer Vision
+Image Classification
+Object Detection
+Bounding Boxes
+Object Masking
+Semantic Segmentation
+Model Evaluation
+Advanced Topics
+SOTA Object Detection + Segmentation
+SOTA zero-shot object detection model
+What does this mean? It means Grounding DINO can identify objects that were not in its training data. It does this by using vision-language modality fusion at multiple phases. It has set new records on benchmarks for object detection, including the ODinW zero-shot benchmark.
+Grounding DINO 🦕
+Source
+(See video on Grounding DINO in Canvas for more details)
+Released by Meta in April 2023
+Two-stage architecture
+Image encoder using a ViT that computes image embeddings once per image
+Prompt encoder coupled with a mask decoder - the mask decoder uses a transformer architecture to combine the image embeddings with prompt embeddings, generating masks through cross-attention layers
+Segment Anything Model (SAM)
+Paper
+Image Source
+Grounded Segment Anything (2024)
+GitHub
+YOLOv8 backbone
++ pre-trained CLIP text encoder
+Re-parameterizable Vision-Language Path Aggregation Network (RepVL-PAN) to connect text features and image features
+During inference, the text encoder can be removed and the text embeddings can be re-parameterized into weights of RepVL-PAN for efficient deployment
+YOLO-World (2024)
+Paper
+Resource for fine-tuning
+Resource for fine-tuning (with ultralytics)
+Diffusion Models
+Image Generation
+Diffusion models learn to gradually denoise data, transforming random noise into high-quality samples by reversing a fixed noising process.
+Gradually adding Gaussian noise to training images until they become pure noise
+Then training a neural network to predict and reverse this noise
+Diffusion Models (2020-)
+Image Encoder
+Training a Diffusion Model
+Diffusion Model Inference (Generation)
+Forward Diffusion - Adding Noise
+Training Image
+Diffusion Model Inference (Generation)
+Image Decoder
+Image/Text Conditioning
+Encoder
+Reverse Diffusion - Removing Noise
+START
+© Bent, 2024
+Classifier Guidance: Uses a pre-trained classifier to guide the diffusion process by predicting class labels at each denoising step and using the gradient of the classifier to steer the generation
+DALL-E 2, 3
+FLUX.1, .2, etc
+Extended the basic diffusion framework to enable text-conditional image generation, inpainting, and image editing.
+They typically use a U-Net architecture combined with cross-attention to incorporate text embeddings into the denoising process.
+Diffusion Models (2020-)
+Image Encoder
+Training a Diffusion Model
+Diffusion Model Inference (Generation)
+Forward Diffusion - Adding Noise
+Training Image
+Diffusion Model Inference (Generation)
+Image Decoder
+Image/Text Conditioning
+Encoder
+Reverse Diffusion - Removing Noise
+START
+© Bent, 2024
+Latent Stable Diffusion
+Image Source:  Rombach, et.al. (2022)
+Image Source:  Rombach, et.al.
+Encoder
+Decoder
+© Bent, 2024
+Image Source:  Rombach, et.al.
+User Prompt
+© Bent, 2024
+Image Source:  Rombach, et.al.
+Fine-Tuning Image-Conditional Diffusion Models is Easier than You Think [Paper, 2025]
+Diffusion fine-tuning tutorial from Hugging Face [Colab]
+Fine-tuning Diffusion Models
+
+[Auto-generated transcript. Edits may have been applied for clarity.]
+Test. Test. That's really weird, because in none of the classes that I taught.
+I looked at the roster and everyone is random. That is true.
+There's a lot of scattered. But,,, I was disappointed because I very clearly saw some.
+That's what I about is that I.
+But,, how Ryan told me,,, about I.
+I think those people in that class have no idea that,.
+I actually,, go through the assignment and the system handle 60 and 60.
+For the entire time. We just for everything,.., I actually read the papers that they submit.
+That's good. You never,, you gotta you gotta.
+You always got to be a positive and setting expectations early., that's what I'm saying. That's why I graded their papers really harshly.
+But I set expectations. Exactly. Their papers working.
+They're also very good price because they're in great everything.
+Oh,. No, I could completely something a little different.
+The thing is, it's much easier when it's it follows the exact format that you're looking for.
+you can just be, there, there, there. Yes, yes, yes, yes on your rubric.
+But if it's not there then you have to, you could actually redo the whole thing and,, part through this is what's wrong here. This is what's here. No, no, no, this is in this section., it's it's a giant web. Oh,.., I know. Nine hours.
+At least you get paid for it. That is true. That's what I told Ryan.
+Exactly. That is.. That's., that's. That's sad. That's sad.. But when I was at., it was great.
+And you get paid by the hour and I was just. it was mostly innovations that I was grading.
+But go through equations and drink wine and it was great.. that's why it's really important when you're drinking is to every other time you switch the order.
+And also if you can't do it question by question. for your test I will go question by question.
+I'll do Sam's question one and that'll be Mike's question. Yes.
+Question one. And I'll do question one. And then I'll go through new question. Do because I can't do it all at once.. But I can get one at least one question all at a time.
+And if you can get through at least one question that it could be fair ish., I didn't think of that.
+But for this one, it made more sense to go through the whole thing at once, mainly because it's a paper that's, no.
+Mhm... I don't think it wouldn't have made sense to go.
+Not quite in my pocket, but I try to be as hard as I could because at first Wright was, there's no room.
+And then I made my own rubric because I realized I was grading super inconsistently.
+Wow. I've tried this. This is the pattern now, and that's what we call it.
+You have nothing. All.
+Before we jump into the lecture today, I do want to get thoughts and feedback on the hackathon format.
+The big instructions for it, the lack of snacks, etc. and what would make the hackathon a better experience.
+Krispy Kreme. Krispy Kreme from Sam.
+Other notes I my notebook here. I'm going to take notes., this is the first time I've ever done one of these hackathons in class, I want your feedback to make the next one better.
+I think we just got green back on. The one thing.
+Sorry. The one thing that I will say is that,, I feel it's very good., I feel it would have been better if we had,, actually set up,
+our GitHub environment and our computers and everything to be insane and just,
+get started to go and save time rather than,, because we spent a solid I was our just trying to get everything., a good learning. Other folks have the same thing or a lot of setup time.
+Strictly be allowed to set the environment beforehand and just open your computer, be ready to go.
+All. in future hackathons, you all would to be able to set up your GitHub and get all of that set up beforehand.. that's the thing. just you and I need data sources and get that stuff downloaded ahead of time.. That's a great thing that for sure. Nice.. That's great. I think I agree. But give you.
+maybe you could use a 3D sculpture... That's great., I think preparation can definitely be a thing if we're all in agreement that's how we would the hackathons to be., the original,, motivation for the hackathons,
+and basically the hackathon is the time that you have in class to be able to do that is
+what was happening was a lot of people were struggling with these exact same issues,
+but it was the day before the project was due., and now, at least as a couple of weeks before the project is due, and that's the main idea there., I was actually,, really impressed with how much you guys were able to do in such a short period of time.
+you always had stuff to show. That was pretty awesome.
+I was,, anticipating about 50% would actually have something to show.
+And the fact that everybody came in at least, had some,, results is pretty awesome.
+kudos to you all for,, really pushing forward and pushing to do this., preparation.. I said, I think, I think you already touched on this, but,,
+I really the idea of,,, letting us get started with the project.. Good. Thanks. You.
+For some of you who maybe didn't it as much. You're gonna it a lot better this weekend when you're, oh,., I already have, a third of my project done., but yes.
+Thanks for. Other comments and feedback and what would make it better.
+That carried me to the hackathon in my bathroom or for bagels to., I've got a preference for bagels., preference.. Bagels. Raise hands. What are you going to do about., now I'm going to have to count 12345.
+I don't know. You said donuts. Oh, my.. It's good enough. I'll get full faith and do for me.
+I feel.., I don't drink coffee, and I never drink coffee, I don't know what coffee to get you.
+I have no clue., I would be,, in the coffee.
+I'm getting,, one of those big jugs of coffee and then put it here and be, here's coffee.
+I don't know, Krispy Kreme has coffee. You can get a giant jug of coffee.
+Krispy Kreme, that's what we did is,, all. I think that carried that.
+that is the coffee you guys. It's in a big jug.
+Dunkin's the other half that you could do with that. Good thing we got some arguments for this.
+This is the issue with coffee. You say coffee. people are,, donuts or bagels, but coffee people have opinions about coffee.
+Real opinions it is a don't. It's good to have a good coffee as.
+And that's all want place for things..
+There's bagels. That's good coffee. Good to know, I, I don't even know how much coffee to get though.. one of those for this class. Ten of those I don't for 5 to 8 people.
+bring your own coffee then. I think I got this.. Three. Three. Ten. the cardboard things.. You can probably too. I don't know., speak for yourself., you slow or you can just get Red bull instead.
+Because Red bull is. I know I've never done this.
+We get negotiated. I don't know want.,, we are pretty split., it is pretty easy to every day. With a few people abstaining.
+But you can come up after class and tell me if you would some other than you, other than bagels and donuts.
+I get that. I think you should. If you're if you're sourcing stuff about just pure gold for all of us.. Awesome.
+All. That's. Coffee, too.
+All. We're checking this box up.
+All. Moving on., we got a lecture today.
+It's it's not too long of a lecture. It'll probably be,, an hour.
+And then the rest of the time is for you guys to work on your projects., and or study. We'll have a little session. We had a little session before everyone got in here talking about the test.
+At the end of this, I will open the floor for questions about the test, knowing that the test is not fully built out yet.
+any of the questions that you asked may influence the way I make the test.
+we're just putting that out there. we'll have that session. And then the rest of the time, which is going to be for you guys,
+you guys can leave the classroom if you want or you can stay here, whatever you need to work on project stuff.
+I'm good.. We will take a five minute break halfway through this lecture just that everybody is still awake.
+Cool questions before we get started burning questions.
+All, let's jump in then. All. Today is our second computer vision lecture.
+Today we're going to talk about the applications of stuff, which you guys started to dive into in your have fun.
+We're going to talk about image classification.
+We talked a lot about image classification models last time, because most of the models we talked about were image classification models.
+things ResNet and VG net., we're going to talk about some, other, stuff, some,, object detection bounding boxes and talk about YOLO today, faster R-cnn.
+Then we'll talk about semantic segmentation and U-Net today.
+One big thing that we're going to talk about is model evaluation. how are you going to appropriately evaluate your model.
+And some of you are starting to do that in the hackathon.. You were F1 score accuracy.
+What should I choose. How should I present these. We'll talk about that in model evaluation.
+And then would just clearly touch on some of these advanced topics,
+noting that we have other lectures later this semester that are going to go into a lot more detail into those architectures,
+but I thought I would introduce you to them, since some of you may end up using these for your project.
+All. let's jump in. All. Applied computer vision. Image classification looks this.
+You got an image of,, dog here.
+You put it through our model.
+And then at the output here we have,, a softmax, which gives us the probability that this is classified as a dog, cat, fair bird, etc.
+And however many classes that you have for your model, that's how long this array is going to be.
+And it's just going to be those probabilities. this is what it looks.
+We've got our input image. This is going to be 2224 by 224 by three.
+We've got red, green and blue. and our values are between 0 and 255.
+Before we normalize we're gonna put that through our network. Then our output is going to be one by however many classes we have.
+In this case, we have 1000,, 1000 different classes that do image can be classified as.
+And then the values here are going to be between 0 and 1., this is a really fun example of an image classification.
+Domino's number one complaint is my pizza doesn't look it.
+Check out a smart scanner to check the quality of every piece we make the pizza, correct toppings, and even distribution.
+You can meet the quality standards ready to go. If it doesn't, we make it by making it again.
+Test us today with any large pizza, including premium from just 15 bucks delivered because at Domino's we're hungry to be better.
+now here in the U.S., obviously, but a global Domino's has,, a really good quality assessment.
+And then they take pictures. I guess this is a YouTube video.
+I don't know if I may take pictures of pizza and then they classify it as a good pizza or not a good pizza.
+that's pretty cool., and then they'll make you a new one.
+I want to know what happens to all the reject pizzas. That's an interesting thought., here's another example. This is Google's dermatology assistant., you can't take a close up photo of an infected skin area using this tool., and then it gives you possible,, diagnoses.,,, for example, here you can see that I have symptom severity, treatment duration, all from taking a picture with your phone.
+That's Google's services. We've already talked about a bunch of these.
+We talked about AlexNet last week., remember, that's the one that broke ImageNet, introduced the world back to CNN and the usefulness of them now that we have all this data.
+We looked at VGG 11, 13, 16 and 19.
+And then remember when we got above VGG 19, suddenly our models were failing or really confused because we had accuracy saturation., then we talked about ResNet where we had this residual connection., and ResNet allowed us to then be able to scale,, to much larger models.
+We talked about inception V3,, which is an augmentation of that residual network., and then there's a couple of other networks that we haven't talked about,
+which include Densenet and Squeeze Net, which we're going to talk about now., this one is Densenet. Here you can see your standard,, your standard,, CNN.. We've got our image here, we've got layers here. You're all just,, forward feeding through,, the network.
+Now we've got our ResNet connectivity here. now we have these ResNet connections, skip connections that allow us to skip layers., and remember, they're allowing us to basically be able to have an identity function as our base,
+and then we're just making modifications to that identity function.
+basically you can just pass all these numbers through., but then we just make modifications to those by hand.
+We skip connection. Our dad said, did something a little crazier, which instead of just having a skip connection,
+that Skippy layers, now it's connecting everything everywhere.
+that's Densenet connectivity. now you're connecting this with every point here, every node between your layers.
+And you're doing that for all of your nodes. Every layer connected to all previous layers through concatenation.
+if there's L layers, there's going to be L times L plus one.
+I would to direct connections here. And this allows features to be able to be reused throughout the entire network.
+What this allows us to do is completely alleviate the vanishing gradient.
+we guess we don't have a vanishing gradient anymore., it does strengthen feature propagation to your network.
+However, as I'm sure looking at this, you can imagine this requires a lot more memory due to storing and then containing those different feature maps.
+It's more complex and much harder to do, it's used less frequently in the real world.
+And another image classification architecture is called squeeze net.
+this is a pretty small CNN architecture that uses what we call a squeeze layer.
+And it's going to reduce your input channels using one by one convolutions.
+we're basically going to compress all of that information at the beginning of your network.
+And then you're going to expand it.
+And you're going to compress the information you have and then expand it back out in both one by one and three by three filters.
+And then this allows us to learn a variety of different features.
+And this design reduces the parameters and computation as compared to some of the previous networks that we've talked about, ResNet or VGG.
+Net. By having this compressive mechanisms in the beginning of your network.
+Any network this reminds you of a little bit. From last time.
+Also the name of a popular movie from the.
+Early 20 tens. Late, late.
+2000. Inception. Inception.
+Yes. Thank you..
+pretty similar to our inception network, where we are compressing information and we're doing expansion of that information.
+Inception does it with multiple different blocks. Whereas squeezing out as a much smaller model, but similar idea.
+Now, what's really nice is that,, a lot of these classification models., all of these,, that we've talked about far in this class are available in both the PyTorch model zoo and the TensorFlow model garden.
+I just think it's funny that they give these names Zoo and garden., but all of those models that are trained on,, ImageNet are available.
+And you can use these pre-trained classification models for your project if you want to.
+we start here with one of these architecture. And then you do some transfer learning or fine tuning process., similar to how we talked about it last week. Questions.
+That's pretty easy to pull. These aren't. Pretty neat.
+That's built into PyTorch. A lot of these models., that's the power, the connections.
+We did it because there are multiple connections coming to.
+They're weighted equally in the original architecture, but there's been modification since that we've them differently.. The question. these pre-trained classification models and ML model that's been trained on
+large data set can be used as a starting point for developing new ML models.
+If that sounds familiar. This has recently been rebranded to foundation models or Foundational models.
+if you have heard the terminology Foundation model,
+it is just a pre-trained model just rebranded because pre-trained wasn't as fancy sounding for the investors.
+All. We talked about this last week. But let's give a quick reminder here of using pre-trained models.
+You're going to select and load your existing pre-trained model.
+You're going to freeze the model weights. And you're going to do this by turning autograd off., basically you're not going to be adjusting any of the model weights,, in those layers in your network that you decide to freeze.
+You're going to remove that final fully connected layer, and you're going to replace it with an empty,
+fully connected layer that matches the output dimensions to the number of classes that you desire for your model.
+Basically, taking that first big chunk of your network and saying, this is just for feature engineering.
+And now I'm going to use this final, fully connected layer to actually make a decision or make a prediction.
+Then you're going to train the model as normal. Remembering that most of your model weights are frozen here,
+which means you're not actually going to change and you're going to train that final layer weights., and then, of course,, we talked about this last week. You can also unfreeze the whole model and retrain it.
+And what this does is it allows it to take less time and training a whole model from scratch,
+because those weights are already pretty close to what they will be., and convergence happens a lot faster.
+And then we have code demos in GitHub for that. we'll PyTorch and TensorFlow based on your preference.
+go in there check it out if you want to use a pre-trained model.
+I imagine for most of your projects I think at the hackathon, most of your projects are working with some pre-trained model.
+Yes. I was going to ask for the,., component of,.
+Computer vision., the project there is,,
+is that the recommendation is saying to unfreeze the last few layers is just to read the mechanism you recommend or the other one.
+Fine tuning that last few layers. This is what I recommend is turning Autograd off for the rest of the layers,
+and just focusing on putting a new head on your model and then treating that.
+That's usually the easiest way to do it. If you have a really complex problem and you might need to do is unfreeze a few of those last layers,,
+because especially if you're doing something medical imaging,,
+all the feature engineering might not be quite appropriate, but it's trained on image net.
+you might have to unfreeze some of those final CNN layers in addition to changing a fully connected layer.
+Regressions based. All.
+that concludes image classification.
+we kicked off talking about that last week. We talked loosely about that last week.
+And then we just finished it up today. And now we'll talk about some object detection.
+it's often more useful to identify the locations of objects in an image rather than just classifying,, the image itself., and for a couple of reasons. Explainability is a need for human validation.
+This is not an explainability technique. not to be confused with explainable AI,
+but rather increases understand human understandability and explainability of what the model is,, seeing and then autonomy.
+this gives a model,, the model is required to have spatial awareness.,, a model that is an object detection model essentially has more autonomy.,, a couple of different approaches to object detection., one is going to be bounding boxes. These are these boxes that are going to be placed around,, whatever the object is.
+And you can see the label as a person. And there you actually see a confidence of that confidence.
+That's 100%. We can also do object masking.
+you can see here how the object is segmented out, almost you took a highlighter and tried to highlight the bike., and similarly, rather than having a box around it, which is also the box, now we're actually going to segment out that bicycle.
+here's what the inputs and outputs look. for bounding boxes let's have our input image height times width times three.
+We remember and our inputs are always going to be the same for these examples.
+Then we have our network. And then if we look at the output of our bounding box detection we get a list of detections.
+And we have a list of detections where we have a bounding box x y x y coordinate of the top.
+point and then width and height., these are going to be normalized between 0 and 1.
+You're going to have a class identification. person or dog or bicycle.
+And then you're gonna have a confidence. how confident the model is that this is a dog or a person or a bicycle.
+Object match game looks a little bit different. now we have our original input image with height ten times three.
+We have a binary mask here which is height times width, the exact same size as our input image but by one.
+now we have a binary mask where our values are 0 or 1.
+it's gonna be zero everywhere. There's not a bicycle and one everywhere that there is a bicycle.
+We're working on a story.
+every single pixel in your image, you're going to have a 0 to 0., we're up in the sky 000000. We get to our bicycle and that's to 011111.
+And that's how we got to the outfits.
+And I was, foreign object basket approach. All.
+this is just a look at what bounding boxes will look., for those of you who are more visual and to see what this would look as an output in code.
+here we have our bounding box. It says that x y coordinate., and then we have our width and or height of the bounding box.
+This is all normalized between 0 and 1. We've got our class ID.
+for example two might mean car. and we'll have a number there that is representative of some class.
+And then we have a component. 98% confident that it's a car.
+And for each bounding box in our image we're going to have a detection for each of those.
+it's just going to be a list of these detections with this information.
+There are some variations here., you might see min max coordinates of your bounding box.
+x, y and x max. And why max. You might see class names instead of IDs.
+it might actually give you a string there car., and you might have raw output as three lists., your output here, instead of this all being contained within one list,
+you might have a list for boxes, a list for scores, and a list for classes.
+these are all different variations that you may see,
+but more than likely you're going to have a list of detections that's going to look something this.
+Questions..
+we get a little bit more detailed here and we can talk about,,
+some image segmentation stuff, which we talk about with our object masking.
+And then we can talk about some keypoint detection.
+image segmentation. How does this different than our object masking before.
+It's 100%., exactly.
+You're identifying everything in your image instead of just the bicycle.., you just identify first with that.
+And., other people., but...
+Great..
+To make sure that somebody key points are in the correct orientation is they're bending and lifting something in a factory environment.
+That's great., Danny, there's a lot of apps that use that for, sports or.. Absolutely. lots of apps out there to do pose estimation.
+that's the task called pose estimation.
+To estimate your pose and to estimate the accuracy of your pose in some,,, holidays move or sports move., it's really fun to watch.,,, basketball games and where they all are and just key points and you just see all those
+key points running around while I just put a video in here for the next class on that.. for key point detection. we're gonna look at this first.
+We've still got our same inputs. We've got our model. And now our output.
+Here is a list of key points x and y.
+that of course is normalized between 0 and 1. And then we've got a type ID and then a confidence four.
+you're gonna have a list very similar, to what we showed with your bounding boxes.
+We're gonna have a list here., and each one of these is going to be a key point.
+x and y value where this key point exists in your image.
+a type. zero might be nose and then a confidence score over 98% confident that this is a nose.
+Similarly here x y type is the left eye.
+And then we're 96% competent and you'll have more than twice as many key points as is found in your image.. Tiffany. Only for one.. No.,, the key points is looking at,, typically what you're looking at with key points is going to be humans or animals.
+And the key point model is going to be looking for, specific points., the human or animal,, that it is, detecting.
+And it's detecting these different points of an animal. not in, in every image, you're not going to see the nose, for example.. Somebody's got their back turned and you're not going to actually see the nose at all., but then it's some person might be facing forward and you're going to see the nose.
+you're not going to see all of the key points, just the key points that are found in that image.
+And if an image has just a tree, you're not gonna have any key points in that tree.
+For a model that was trained on keypoint detection.
+Unless somebody went and did key points of it, built a data set of key points of a tree, which would be really boring data set.
+Typically they're developed with humans or animals and. we're working in the Truss lab now on a pretty fun project with,,
+elephants and looking at keypoint detection of elephants to determine their behaviors,, in both,, captive and wild environments,,
+to compare and contrast those and other project where they are cracking down on life and their company.
+And for the best measure that's happening. Not know, but our collaborators were., some of our test data will come from that..
+We're primarily looking at camera tracks that are usually mounted in trees or closer to the ground,
+you see more of the full body rather than the drone imagery that's going over the top.
+But you can still get key points from. It's just a slightly different data set.. Tiffany.. Before we.
+Or if you think. You can think of the type as being a class, and that's based on what it was trained on.
+you'll have a whole list of classes, what you might be interested in identifying as facial features.
+And all of your classes, the model you trained, all of the classes are related just to facial features,, the eyes, nose, the mouth., and actually they have really detailed,, keypoint detection for faces of all these different points on the face that,,,, I wouldn't be able to necessarily point out myself,
+but a model can, a lot of the models that you'll see in an application are more of the typical one at the wrist,
+one of the top of the hand, one of the elbow, one of the shoulder. they have standard formats for keypoints, for pose estimation., but you can really build a key point model that just key points of anything.. coming back to our segmentation piece., this is, an important distinction. there's actually two different types of segmentation.
+We have semantic segmentation, which assigns a class label to every single pixel of the image.
+here you can see an example of that. Every single point in this image is going to have a class label assigned to it.
+This is similar but different to instance segmentation.
+an instance segmentation. The model distinguishes between different objects of the same class.
+here you can see this is person and this is person.
+They're both given the same class. It doesn't identify that this is person one.
+And this is person two an instance segmentation.
+What our model would say is this is person one and this is person two.
+it actually identify that there's two different people in an image.
+We're done here.. There's two different dogs in our image.
+this is what it will look. we got our input image. And depending on whether we have semantic for instance segmentation.
+Or output it's going to look a little bit different. in semantic segmentation.
+We have a semantic mask. we have height times.
+What times one. just the dimensions of our original image.
+And we're going to have a class per pixel. every single pixel in your image gets labeled as a class.
+And this is just values of zero to plus minus one.
+you just have all of these different asset classes and you're just going to label,, all every pixel in your image as a particular class.
+Instant smarts are a little bit more tricky,.
+Because you're trying to identify between different objects that are in the same class in an image.
+an instance maps or output is a list of different instance masks where we have h by w.
+height by width of our input image.
+And then we apply a mask on top of it for a particular class.
+Our class ID and then our confidence. And here is what that might look.
+You might have a numpy array that is a mask that is the same shape as your image.
+You'll have a class ID associated with that mask. let's say that's the mask for car., and then we'll have a confidence score which is 90 seen 98% here.
+Questions. The difference between semantic and instant segmentation really trips people up., but if you think about it from a concept of instance, you are looking at every instance.
+Of a particular class. most of our object detection models were pre-trained on the common objects in Context or Coco dataset., this is a data set of over 200,000 labeled images, 1.5 million object instances, and 80 object categories.
+And you can see,, the segmentation that they have here on the image from the Coco dataset., this is pretty interesting because you got number of categories by instances per category.
+And over here we see ImageNet classification.
+We have image net detection. And then we have Coco here.
+there's actually a much higher instances per category than there are for ImageNet classification.
+Three more instances for each of these categories.
+we see more sheep in the data set for example..
+let's look at some model architectures then to do this object detection with bounding boxes.
+And we've got our picture of our dog here. We've got our model.
+The model is going to output, of course the bounding box, the class ID and the confidence.
+And this allows us to

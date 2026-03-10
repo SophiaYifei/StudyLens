@@ -1,0 +1,1 @@
+Machine Learning (ML) gives computers the ability to learn without being explicitly programmed. Duke University's computer science class will focus on applying machine learning to real world data. Starting next week, there will be a mechanism for tracking that you're actually here where you'll somehow do something that indicate your sign and signs you in.
