@@ -1,13 +1,439 @@
-Time Series (Week 4)
+# Week 4: Time Series Modeling
 
-• Definition: Sequence of observations at successive, equally spaced times; order matters. Not all ordered data is time series (e.g. medical records by date). Common with sensors, hardware, finance.
+## 1. What Is a Time Series?
 
-• Components: Trend (long-term direction); seasonality (repeating cycles—hourly, daily, weekly, yearly). Decomposition: break series into trend + seasonal + residual. Additive: value = trend + seasonal + residual. Multiplicative: value = trend × seasonal × residual. Use additive for roughly constant seasonal amplitude; multiplicative when amplitude grows with level. seasonal_decompose() in statsmodels; choose period and additive/multiplicative. Be cautious: automated decomposition can invent spurious seasonality.
+### Definition
 
-• Why different from regression: Standard regression assumes independent observations. In time series, present is correlated with past; we model that dependence.
+A **time series** is:
 
-• Autocorrelation: Correlation of series with a lagged copy of itself. Measures how much the past predicts the present. Detected by Durbin–Watson or correlation of y_t with y_{t−k}. High autocorrelation at a given lag suggests seasonality at that period.
+- A sequence of data points  
+- Observed at **successive, equally spaced time intervals**  
+- With a **natural temporal ordering**
 
-• Markov process: When current state depends only on the previous state (lag-1 dependence). Described by transition probabilities (transition matrix). Used in many domains (e.g. PageRank, finance, science).
+### Important Distinction
 
-• Autoregression (AR): Use past values as features: y_t = f(y_{t−1}, y_{t−2}, …). Use when there is strong correlation with the past. Other approaches: ARIMA, exponential smoothing.
+- **Time-ordered data ≠ true time series**
+  - Example: Medical records collected at irregular visits.
+- A true time series typically:
+  - Has consistent time intervals
+  - Is analyzed specifically for temporal dependence
+
+### Common Examples
+
+- Sensor and hardware measurements
+- Stock prices
+- Website traffic
+- Temperature readings
+- Power demand
+
+---
+
+# 2. Core Components of a Time Series
+
+Time series data can generally be decomposed into:
+
+1. **Trend**
+2. **Seasonality**
+3. **Residual (Error)**
+
+---
+
+## 2.1 Trend
+
+**Trend** = long-term movement in the data.
+
+- Upward trend
+- Downward trend
+- Stable trend
+
+Represents structural changes over time.
+
+---
+
+## 2.2 Seasonality
+
+**Seasonality** = repeating cyclical patterns.
+
+Can occur at multiple scales:
+
+- Hourly
+- Daily
+- Weekly
+- Monthly
+- Annually
+
+### Examples
+
+| Domain | Possible Seasonality |
+|---------|----------------------|
+| Temperature | Daily + yearly |
+| Power demand | Hourly + weekly |
+| Retail sales | Weekly + annual |
+
+### Visual Distinction
+
+- **Trend**: smooth long-term movement
+- **Seasonality**: regular oscillations around trend
+
+---
+
+# 3. Why Time Series Is Different from Standard Regression
+
+Standard regression assumes:
+
+\[
+(X_i, y_i) \text{ are independent and identically distributed (i.i.d.)}
+\]
+
+Time series violates this assumption because:
+
+\[
+y_t \text{ is correlated with } y_{t-1}, y_{t-2}, \dots
+\]
+
+This dependence is called:
+
+## Autocorrelation
+
+> Correlation of a signal with a lagged version of itself.
+
+Because of temporal dependence:
+
+- Random train/test splits are invalid.
+- We must use **time-based splits**.
+
+---
+
+# 4. Time Series Decomposition
+
+We can decompose a time series into:
+
+- **Trend**
+- **Seasonality**
+- **Residual**
+
+Two primary models:
+
+---
+
+## 4.1 Additive Model
+
+\[
+Y_t = T_t + S_t + R_t
+\]
+
+Use when:
+
+- Trend is approximately linear
+- Seasonal amplitude is constant over time
+
+---
+
+## 4.2 Multiplicative Model
+
+\[
+Y_t = T_t \times S_t \times R_t
+\]
+
+Use when:
+
+- Seasonal amplitude grows or shrinks with trend
+- Seasonal swings increase as values increase
+
+### Key Insight
+
+If seasonal peaks become larger as the trend increases →  
+**Multiplicative model is more appropriate.**
+
+---
+
+## 4.3 Using `seasonal_decompose()`
+
+From `statsmodels`:
+
+Requirements:
+
+- Must specify:
+  - Additive or multiplicative
+  - Estimated period (e.g., 7 for weekly)
+
+### Warning
+
+Automated decomposition may:
+
+- Detect artificial seasonality
+- Overfit noise
+
+### Validation Strategy
+
+Compare:
+
+- Magnitude of seasonal component
+- Magnitude of residuals
+
+If residual variance >> seasonal variance →  
+Seasonality may not be real.
+
+---
+
+# 5. Autocorrelation
+
+## Definition
+
+\[
+\text{Autocorrelation at lag } k = \text{Corr}(y_t, y_{t-k})
+\]
+
+Measured using:
+
+- Pearson correlation
+- Autocorrelation plots
+- Durbin–Watson test
+
+---
+
+## Interpreting Lags
+
+If hourly data shows strong correlation at lag 24:
+
+→ There is **daily seasonality**.
+
+If strong correlation at lag 168 (24×7):
+
+→ There is **weekly seasonality**.
+
+### Important
+
+Strong positive OR negative correlation is useful.
+
+Weak correlations may be noise.
+
+---
+
+# 6. Markov Processes
+
+A **Markov process** assumes:
+
+\[
+P(y_t | y_{t-1}, y_{t-2}, \dots) = P(y_t | y_{t-1})
+\]
+
+Meaning:
+
+- Current state depends only on previous state.
+- Full autocorrelation at lag 1.
+
+### Transition Matrix
+
+For discrete states:
+
+\[
+P =
+\begin{bmatrix}
+p_{11} & p_{12} \\
+p_{21} & p_{22}
+\end{bmatrix}
+\]
+
+Example (Weather Model):
+
+| Yesterday | Sunny | Rain |
+|------------|--------|-------|
+| Sunny | 0.7 | 0.3 |
+| Rain | 0.4 | 0.6 |
+
+### Reality Check
+
+Most real-world time series:
+
+- Do **not** strictly satisfy the Markov property
+- Often depend on multiple past values
+
+---
+
+# 7. Autoregression (AR) Models
+
+If we detect autocorrelation, we can:
+
+Use past values as features.
+
+Example:
+
+\[
+y_t = \beta_1 y_{t-1} + \beta_2 y_{t-24} + \beta_3 y_{t-168} + \epsilon_t
+\]
+
+This converts time series into a supervised learning problem.
+
+---
+
+## Lag Feature Engineering
+
+Common lags:
+
+- \( y_{t-1} \) → previous timestep
+- \( y_{t-24} \) → previous day (hourly data)
+- \( y_{t-168} \) → previous week
+
+Rows with missing lag values must be dropped.
+
+---
+
+## How Many Lags?
+
+Determined by:
+
+- Autocorrelation plots
+- Domain knowledge
+- Cross-validation
+
+Too few → underfitting  
+Too many → overfitting
+
+---
+
+# 8. Practical Modeling Example: Bike Share Demand
+
+### Dataset Components
+
+1. Bike usage counts (hourly)
+2. Weather data:
+   - Temperature
+   - Feels-like temperature
+   - Humidity
+   - Wind speed
+   - Weather condition (categorical)
+
+---
+
+## Modeling Strategy
+
+### Step 1: Time-Based Split
+
+- Train: Up to July 31, 2012
+- Test: August 1 – December 31, 2012
+
+Never randomly split time series data.
+
+---
+
+### Step 2: Feature Engineering
+
+Possible features:
+
+- Hour of day (one-hot encoded)
+- Day of week
+- Month
+- Lag features (e.g., lag-24, lag-168)
+- Weather features
+
+---
+
+### Step 3: Linear Regression
+
+Even complex patterns can be modeled using:
+
+- Trend feature
+- One-hot encoded seasonal features
+- Lag features
+
+Linear regression becomes powerful when feature engineering is done correctly.
+
+---
+
+## Key Insight
+
+Feature engineering often matters more than algorithm choice.
+
+A well-designed linear model can compete with complex models.
+
+---
+
+# 9. Project 1: Weather Forecasting
+
+## Objective
+
+Predict **hourly temperature at RDU airport**
+
+For:
+
+- September 17 (00:00) – September 30 (23:00)
+
+---
+
+## Rules
+
+- Use any historical data prior to prediction period
+- No future data (no leakage)
+- Must include:
+  - 1 Linear Regression model
+  - 1 Additional (non-linear) model
+
+---
+
+## Deliverables
+
+### 1. Presentation (10 minutes)
+
+Cover:
+
+- Inputs
+- Data pipeline
+- Feature engineering
+- Models used
+- Evaluation approach
+- Final performance
+
+### 2. Code Repository
+
+- Clean
+- Structured
+- Documented
+
+### 3. Writeup (2–4 pages)
+
+Focus on:
+
+- Modeling decisions
+- Feature engineering logic
+- Algorithm selection
+- Evaluation methodology
+- Application of class concepts
+
+---
+
+# 10. Evaluation Strategy
+
+- Use time-based split
+- Use validation window (e.g., early September)
+- Final evaluation on Sept 17–30
+
+Metrics:
+
+- MAE
+- RMSE
+- Avoid accuracy (regression task)
+
+---
+
+# 11. Data Leakage Warning
+
+Never:
+
+- Use future timestamps as features
+- Normalize using full dataset
+- Tune hyperparameters using test set
+
+---
+
+# 12. Summary of Key Concepts
+
+- Time series violates independence assumption.
+- Trend and seasonality are fundamental components.
+- Additive vs multiplicative depends on seasonal scaling.
+- Autocorrelation reveals useful lag features.
+- Markov assumption simplifies but is rarely exact.
+- Autoregression converts time series to supervised learning.
+- Linear regression + good features can be highly effective.
+- Always split by time.
+- Avoid data leakage.
