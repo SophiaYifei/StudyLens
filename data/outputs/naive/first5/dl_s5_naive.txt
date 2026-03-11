@@ -1,0 +1,28 @@
+Week 7
+1
+Natural Language Processing II
+Test corrections can be put in the folder on the front table (test face down)
+Agenda
+Attention & Transformers
+Attention Fundamentals
+Transformer Architecture
+Popular Implementations (BERT, GPT)
+Applied NLP
+Text Similarity
+Text Summarization
+Topic Modeling
+Advanced Topics
+LLMs
+Multimodal models (CLIP)
+3
+Representing Text
+4
+bank of the river
+[34, 56, 24, ….. 23, 56]
+?
+Representing Text
+5
+Word embeddings (i.e. Word2Vec)!
+Getting better, but static embeddings still lack contextual awareness.
+The Same Challenges
+
