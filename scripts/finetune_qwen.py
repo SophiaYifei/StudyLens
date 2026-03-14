@@ -45,9 +45,6 @@ def prepare_training_data():
     The 2 test topics should NOT have reference files —
     only create references for the 8 training topics.
     """
-    from nltk.tokenize import sent_tokenize
-    import nltk
-    nltk.download('punkt_tab', quiet=True)
 
     # Same prompt used in QwenSummarizer — keeps training consistent with inference
     instruction = (
