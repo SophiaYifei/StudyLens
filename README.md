@@ -104,17 +104,17 @@ Fine-tuning requires the LLM environment and A100 GPU.
 
 **Step 1: Prepare training data** (builds JSON from transcripts + references):
 ```bash
-python scripts/finetune.py --mode prepare
+python scripts/finetune_qwen.py --mode prepare
 ```
 
 **Step 2: Train** (QLoRA, ~1 min on A100):
 ```bash
-python scripts/finetune.py --mode train --epochs 5
+python scripts/finetune_qwen.py --mode train --epochs 5
 ```
 
 **Step 3: Run inference with fine-tuned model** (all 10 topics):
 ```bash
-python scripts/finetune.py --mode inference
+python scripts/finetune_qwen.py --mode inference
 ```
 
 Fine-tuned adapter weights are saved to `models/qwen7b-lora/` (~50MB).
