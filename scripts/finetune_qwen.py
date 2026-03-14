@@ -257,7 +257,7 @@ def finetune(epochs=3, val_ratio=0.1):
 def run_finetuned_inference():
     """
     Load base model + LoRA adapter, run inference on all topics,
-    save outputs to data/outputs/neural_network/qwen7b-ft/final/
+    save outputs to data/outputs/finetune/qwen7b-ft/final/
     """
     from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
     from peft import PeftModel
