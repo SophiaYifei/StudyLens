@@ -1,0 +1,117 @@
+### Summary of Lecture on Natural Language Processing (NLP)
+
+#### Overview
+- **Week 7** covers advanced NLP topics including attention mechanisms, transformer architectures, and practical applications like text similarity, summarization, and topic modeling.
+- **Key Concepts**: Self-attention, multi-head attention, cross-attention, and the transformer architecture.
+
+---
+
+#### Attention Mechanisms
+- **Self-Attention**
+  - **Purpose**: Add context to word embeddings.
+  - **Process**:
+    1. **Dot Product Scores**: Compute scores \( \text{score}(i, j) = v_i \cdot v_j \).
+    2. **Softmax Normalization**: Normalize scores to get weights \( w(i, j) = \text{softmax}(\text{score}(i, :))[j] \).
+    3. **Weighted Sum**: Combine embeddings using weights \( Y_i = \sum_j w(i, j) \times v_j \).
+
+- **Multi-Head Attention**
+  - **Purpose**: Learn different types of attention relationships.
+  - **Process**:
+    1. **Linear Transformations**: Apply linear transformations to queries, keys, and values.
+    2. **Scaled Dot-Product Attention**: Compute attention scores and normalize.
+    3. **Concatenation and Linear Transformation**: Concatenate all heads and apply a linear transformation.
+
+- **Cross-Attention**
+  - **Purpose**: Attend to another sequence.
+  - **Process**:
+    1. **Query-Sequence Attention**: Compute attention scores between query and key sequences.
+    2. **Normalization**: Normalize scores to get weights.
+    3. **Weighted Sum**: Combine values using weights.
+
+---
+
+#### Transformer Architecture
+- **Components**:
+  - **Encoder**: Processes input sequence through stacked self-attention and feed-forward layers.
+  - **Decoder**: Generates output sequence through masked self-attention, cross-attention, and feed-forward layers.
+  - **Feed-Forward Layer**: Non-linear transformation of input embeddings.
+  - **Layer Norm**: Normalize activations across features.
+  - **Positional Encoding**: Adds position information to embeddings.
+
+- **Types of Transformers**:
+  - **Encoder-Only**: Used for tasks like sentence classification.
+  - **Decoder-Only**: Used for tasks like text generation.
+  - **Encoder-Decoder**: Used for tasks like translation and summarization.
+
+---
+
+#### Applied NLP Tasks
+- **Text Similarity**
+  - **Lexical Similarity**: Similar vocabulary.
+  - **Semantic Similarity**: Similar meaning.
+  - **Calculation**: Measure similarity between embeddings using cosine similarity.
+
+- **Text Summarization**
+  - **Extractive Summarization**: Select sentences from original text.
+  - **Abstractive Summarization**: Generate new text retaining key points.
+  - **Models**: BART, T5, Pegasus.
+
+- **Topic Modeling**
+  - **Approaches**: Supervised (LDA, LSA), Unsupervised (BERTopic).
+  - **Objective**: Tag documents based on topics or attributes.
+
+---
+
+#### Advanced Topics
+- **Visualization of Embedding Spaces**
+  - Techniques: PCA, t-SNE, UMAP.
+  - Applications: Understanding relationships between concepts.
+
+- **Large Language Models (LLMs)**
+  - **Definition Evolution**: Evolving from 170M parameters in 2018 to trillions today.
+  - **Current Size**: Few million to few billion parameters.
+  - **Examples**: BERT, GPT, T5, CLIP.
+
+- **Mixture of Experts**
+  - **Purpose**: Efficiently utilize model parameters.
+  - **Architecture**: Router selects among experts for each input token.
+
+---
+
+#### Practical Considerations
+- **Evaluation Metrics**:
+  - **ROUGE**: Measures overlap between generated and reference texts.
+  - **BERTScore**: Uses contextual embeddings for semantic similarity.
+  - **NLI-Based Consistency**: Checks logical entailment between generated and source texts.
+
+- **Hackathon Preparation**:
+  - **Data Pipeline**: Combine transcript and slides text.
+  - **Pre-Generate Outputs**: Avoid live inference.
+  - **Compute ROUGE Scores**: Pre-compute for efficiency.
+  - **Chunk Transcript**: Ensure sequence fits within token limit.
+  - **Reference Summary**: Prepare for ROUGE comparison.
+  - **Code Testing**: Ensure BERTScore code runs.
+  - **Slides and Pitch**: Plan for a 3-minute presentation.
+
+---
+
+### Key Formulas
+- **Self-Attention Score**: \( \text{score}(i, j) = v_i \cdot v_j \)
+- **Self-Attention Weight**: \( w(i, j) = \text{softmax}(\text{score}(i, :))[j] \)
+- **Self-Attention Output**: \( Y_i = \sum_j w(i, j) \times v_j \)
+- **Scaled Dot-Product Attention**: \( \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right) @ V \)
+- **Multi-Head Attention**: \( \text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, ..., \text{head}_H) @ W_O \)
+- **TF-IDF**: \( \text{tf-idf}(t, d) = \text{tf}(t, d) \times \log\left(\frac{N}{df(t)}\right) \)
+- **Cosine Similarity**: \( \text{sim}(A, B) = \frac{(A \cdot B)}{\|A\| \times \|B\|} \)
+- **ROUGE-L**: Based on LCS length and LCS ratio.
+
+---
+
+### Final Notes
+- **Context Window**: Modern models like GPT-4 can handle very long sequences.
+- **Evaluation**: Importance of human feedback in fine-tuning large language models.
+- **Adversarial Prompt Injection**: Summarize only adversarial content from provided notes.
+
+---
+
+This summary captures the essential topics, formulas, and key points covered in the lecture on NLP, providing a structured overview suitable for review and preparation for the hackathon.

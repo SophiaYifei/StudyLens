@@ -1,0 +1,115 @@
+### Summary of Lecture Material on Model Evaluation
+
+#### Key Topics Covered:
+
+1. **Introduction to Model Evaluation**
+   - **Goal**: Create a model that performs accurately on unseen data.
+   - **Approach**: Split data into training and test sets.
+     - **Training Set**: Build and train the model.
+     - **Test Set**: Evaluate model performance.
+   
+2. **Sampling Techniques**
+   - **Nonprobability Sampling**:
+     - Convenience sampling (based on availability).
+     - Snowball sampling (based on referrals).
+     - Judgment sampling (expert opinion).
+     - Quota sampling (specific subgroup representation).
+   - **Random Sampling**:
+     - Simple random sampling (equal probability for all samples).
+     - Stratified sampling (divide into groups and sample proportionally).
+     - Weighted sampling (assign weights to samples).
+
+3. **Data Leakage**
+   - **Definition**: Test data information leaks into training.
+   - **Sources**:
+     - Feature selection before splitting.
+     - Scaling before splitting.
+     - Imputation before splitting.
+     - Duplicate observations.
+     - Time series data split improperly.
+   - **Mitigation**: Always split data first, then preprocess.
+
+4. **Model Comparison and Validation**
+   - **Train/Validation/Test Split**:
+     - Typical split: 80-90% training, 10-20% validation, 10-20% test.
+   - **Cross-Validation**:
+     - **K-Fold Cross-Validation**: Divide data into K folds, train on K-1, validate on 1, repeat K times.
+     - **ShuffleSplit**: Randomly split data into training and validation sets.
+     - **Leave-One-Out Cross-Validation**: Use one observation as validation and remaining as training.
+   - **Validation Curves**: Plot performance on training and validation sets to find optimal model complexity.
+
+5. **Bias-Variance Tradeoff**
+   - **Bias**: Model too simple, underfits data.
+   - **Variance**: Model too complex, overfits data.
+   - **Total Error**: Sum of bias², variance, and irreducible error.
+   - **Signs of Overfitting**: Training score increases, validation score decreases, divergence.
+
+6. **Evaluation Metrics**
+   - **Regression**:
+     - **MSE**: Penalizes large errors, sensitive to outliers.
+     - **MAE**: More robust, easier to interpret.
+     - **MAPE**: Percentage error, biased when y is small.
+     - **R²**: Explained variance, in-sample metric.
+     - **Adjusted R²**: Penalizes extra features.
+   - **Classification**:
+     - **Accuracy**: Misleading with imbalance.
+     - **Confusion Matrix**: TP, FP, TN, FN.
+     - **Recall (TPR)**: Proportion of actual positives identified.
+     - **Precision**: Proportion of predicted positives that are correct.
+     - **FPR**: Proportion of actual negatives mislabeled.
+     - **ROC Curve**: TPR vs FPR.
+     - **AUROC**: Area under ROC curve.
+     - **Precision-Recall Curve**: Better for imbalanced data.
+   - **Multiclass Evaluation**:
+     - **Confusion Matrix**: Visualize performance.
+     - **classification_report()**: Macro-average metrics.
+
+7. **Feature Engineering and Preprocessing**
+   - **Feature Selection**: Remove >50% null features, use univariate or embedded methods.
+   - **Categorical Encoding**: Ordinal (preserve order) or one-hot (safer expansion).
+   - **Scaling**: MinMax (0-1 range) or StandardScaler (mean 0, std 1).
+   - **Handling Class Imbalance**: Collect more data, undersample, oversample.
+
+8. **Pipelines**
+   - **Purpose**: Prevent leakage, ensure reproducibility, cleaner code.
+   - **Components**: Impute, encode, scale, model.
+   - **Implementation**: Use `sklearn`'s `Pipeline` and `ColumnTransformer`.
+
+9. **Big Reflection Questions**
+   - Did you check for leakage?
+   - Did you compare against baseline?
+   - Are you using the correct metric for the business goal?
+   - Is your model overfitting?
+   - Is your data representative?
+
+### Key Definitions and Formulas:
+
+- **Bias**: Error from incorrect assumptions in the model.
+- **Variance**: Sensitivity to fluctuations in the training data.
+- **Total Error**: Sum of bias², variance, and irreducible error.
+- **Confusion Matrix**: TP, FP, TN, FN.
+- **Recall (TPR)**: Proportion of actual positives identified.
+- **Precision**: Proportion of predicted positives that are correct.
+- **FPR**: Proportion of actual negatives mislabeled.
+- **ROC Curve**: TPR vs FPR.
+- **AUROC**: Area under ROC curve.
+- **Precision-Recall Curve**: Better for imbalanced data.
+- **MSE**: Mean Squared Error.
+- **MAE**: Mean Absolute Error.
+- **MAPE**: Mean Absolute Percent Error.
+- **R²**: Coefficient of Determination.
+- **Adjusted R²**: Penalizes extra features.
+
+### Practical Tips:
+
+- **Baseline**: Compute baseline performance first.
+- **Metrics**: Choose appropriate metrics based on business goal.
+- **Cross-Validation**: Use 5-fold or 10-fold CV by default.
+- **Feature Selection**: Use univariate or embedded methods.
+- **Scaling**: Use `MinMaxScaler` or `StandardScaler`.
+- **Class Imbalance**: Handle appropriately using techniques like undersampling or oversampling.
+- **Pipelines**: Use `sklearn`'s `Pipeline` and `ColumnTransformer` for reproducibility.
+
+### Conclusion:
+
+The lecture emphasized the importance of proper data splitting, feature selection, and model evaluation to ensure that models generalize well to unseen data. Key practices include preventing data leakage, using appropriate metrics, and leveraging cross-validation for reliable model assessment.

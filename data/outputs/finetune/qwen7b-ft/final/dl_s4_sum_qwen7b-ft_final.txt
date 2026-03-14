@@ -1,0 +1,73 @@
+### Summary of Lecture on Natural Language Processing (NLP)
+
+#### Introduction to NLP
+- **Tasks**: Search, Machine Translation, Spam Detection, Sentiment Analysis, Text Similarity, Topic Modeling, Q&A, Chatbots, Text Summarization, Text Generation, Multimodal Processing
+- **Challenges**:
+  - Semantic Ambiguity (Homonyms, Synonyms)
+  - Observations Dependent on Context (History Matters)
+  - Variable Length Sequences (Sentences of Different Lengths)
+  - Sarcasm and Humor
+  - Rare Words and Long-Tail Words
+  - Context Independence (Observations Not Independent)
+
+#### Text Preprocessing
+- **Pipeline**: Tokenization, Stop Word Removal, Lemmatization/Stemming
+- **Tokenization**: Dividing text into substrings (whitespace, punctuation, words, sentences, characters)
+- **Stop Words**: Common words removed to focus on meaningful words (e.g., "the", "is", "a")
+- **Lemmatization/Stemming**: Converting words to base form (e.g., "running" -> "run")
+
+#### Traditional Approaches
+- **Bag of Words (BoW)**: Count word frequencies, ignoring order and context
+  - **Advantages**: Computationally inexpensive, easy to implement
+  - **Disadvantages**: Ignores word order, context, and rare words
+- **TF-IDF**: Weight words by their frequency and rarity
+- **N-Grams**: Capture word sequences (unigrams, bigrams, trigrams)
+- **Hidden Markov Models (HMMs)**: Model sequences using probabilistic transitions and emissions
+
+#### Word Embeddings
+- **Word2Vec**: Shallow neural network for word embeddings
+  - **Architecture**: Input (one-hot encoding), Hidden Layer (linear transformation), Output (softmax over vocabulary)
+  - **Training Methods**: Skip-gram (rare words), Continuous Bag of Words (common words)
+- **GloVe**: Matrix factorization-based method for word embeddings
+- **Doc2Vec**: Extends Word2Vec to document-level embeddings
+- **GloVe vs Word2Vec**: GloVe uses global co-occurrence matrix, Word2Vec uses local context windows
+
+#### Recurrent Neural Networks (RNNs)
+- **Basic Structure**: Sequential processing, hidden state retains information from previous inputs
+- **Vanishing Gradient Problem**: Hard to capture long-range dependencies
+- **LSTM (Long Short-Term Memory)**: Adds cell state and gates (forget, input, output) to manage long-term dependencies
+- **GRU (Gated Recurrent Unit)**: Simplified version of LSTM with fewer parameters
+
+#### NLP Implementation
+- **Handling Variable-Length Sequences**: Padding, Packed Sequences
+- **Data Augmentation**: Back-translation, synonym replacement, random insertion/deletion, swap/substitution
+- **Handling Imbalanced Data**: Sampling techniques (undersampling, oversampling), loss function modifications (class weights), ensemble methods
+- **Data Splitting Best Practices**: Temporal dependencies, chronological splits, maintaining topic distribution, avoiding cross-contamination
+- **Transfer Learning**: Full fine-tuning, frozen backbone, partial freezing, gradual unfreezing
+- **Popular Libraries**: NLTK, SpaCy, Hugging Face Transformers
+
+#### Next Week: Attention Mechanisms and Transformers
+- **Attention Fundamentals**
+- **Transformer Architecture**
+- **Popular Implementations (BERT, GPT)**
+- **Applied NLP Tasks**
+
+### Key Takeaways
+- **Representation Learning**: Convert text into numerical vectors capturing semantic and syntactic relationships
+- **Sequence Models**: Handle ordered data (time-series, text) using RNNs, LSTMs, GRUs, and Transformers
+- **Embedding Methods**: Word2Vec, GloVe, Doc2Vec, FastText
+- **Text Preprocessing**: Tokenization, stop word removal, lemmatization/stemming
+- **Challenges**: Semantic ambiguity, context dependence, variable length sequences, rare words
+- **Implementation Tips**: Use appropriate preprocessing, consider data augmentation, handle imbalanced data, use transfer learning, employ popular libraries
+
+### Exam Preparation
+- **Feedback**: Prof suggests reviewing slides for missed questions, rewriting answers for half credit
+- **Index Card**: Bring one card for the next exam (both sides allowed)
+
+### Project Guidance
+- **Module Project**: Use traditional approaches for the project, considering the challenges and limitations of NLP tasks
+- **Hackathon**: Prepare for the in-class hackathon on March 3rd
+
+### Final Thoughts
+- **Optimization**: Balance study time with other activities to optimize learning outcomes
+- **Engagement**: Actively engage in class and outside of class to maximize learning benefits

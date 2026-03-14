@@ -1,0 +1,98 @@
+### Summary of University Lecture Material on Time Series Analysis
+
+#### Overview
+The lecture covers the basics of time series analysis, focusing on understanding the unique characteristics and challenges of time series data compared to traditional regression datasets. Key topics include:
+
+1. **Definition and Characteristics**:
+   - **Time Series**: Sequence of data points equally spaced in time with a natural temporal order.
+   - **Real-world Examples**: Temperature, power demand, retail sales.
+   - **Difference Between Time Series and Time-Ordered Data**: Time-ordered data lacks the inherent temporal dependency.
+
+2. **Components of Time Series**:
+   - **Trend**: Long-term movement (increasing or decreasing).
+   - **Seasonality**: Cyclical patterns repeating at fixed intervals (hourly, daily, weekly, yearly).
+
+3. **Modeling Time Series**:
+   - **Standard Regression Assumptions Broken**: Time series data violates the independence assumption.
+   - **Autocorrelation**: Correlation of a signal with a delayed (lagged) copy of itself.
+   - **Markov Process**: Current state depends only on the previous state; used in various fields like finance and ranking algorithms.
+
+4. **Time Series Decomposition**:
+   - **Components**: Trend, Seasonality, Residuals.
+   - **Models**:
+     - **Additive Model**: \( Y = \text{Trend} + \text{Seasonality} + \text{Residual} \)
+     - **Multiplicative Model**: \( Y = (\text{Trend}) \times (\text{Seasonality}) \times \text{Residual} \)
+
+5. **Validation Techniques**:
+   - **Autocorrelation Plot**: Visualizes correlation with lagged versions of the data.
+   - **Durbin-Watson Test**: Statistical test indicating the presence of seasonality.
+   - **Markov Property**: Full autocorrelation at lag 1, current state depends only on previous state.
+
+6. **Autoregressive Models**:
+   - **Using Past Values as Features**: Lag features (past temperatures, weather conditions).
+   - **Multiple Lags**: Including multiple past values to capture more complex patterns.
+
+7. **Project 1**:
+   - **Objective**: Predict hourly temperature at RDU airport for a specified time window.
+   - **Rules**:
+     - Any data except ground truth future.
+     - Any features.
+     - Must include 1 linear regression model and 1 other model.
+   - **Deliverables**:
+     - Presentation covering inputs, data pipeline, features, models, evaluation approach, and performance.
+     - Code repository.
+     - Writeup (2-4 pages) covering inputs, data pipeline, feature engineering, models, evaluation approach, and performance.
+
+### Major Topics Covered
+1. **Definition and Characteristics**
+   - Definition of time series.
+   - Real-world examples.
+   - Difference between time series and time-ordered data.
+
+2. **Components of Time Series**
+   - Trend and seasonality.
+   - Types of seasonality (hourly, daily, weekly, yearly).
+
+3. **Modeling Time Series**
+   - Standard regression assumptions broken.
+   - Autocorrelation.
+   - Markov process.
+
+4. **Time Series Decomposition**
+   - Components: Trend, seasonality, residuals.
+   - Additive vs. multiplicative models.
+   - Using `statsmodels` library for decomposition (`seasonal_decompose()`).
+
+5. **Validation Techniques**
+   - Autocorrelation plot.
+   - Durbin-Watson test.
+   - Markov property.
+
+6. **Autoregressive Models**
+   - Using past values as features.
+   - Multiple lags.
+
+7. **Project 1**
+   - Objective: Predict hourly temperature at RDU airport.
+   - Rules: Any data, any features, 1 linear regression model and 1 other model.
+   - Deliverables: Presentation, code repository, writeup.
+
+### Technical Details
+- **Autocorrelation**: Measured using Pearson correlation or Durbin-Watson test.
+- **Markov Process**: Full autocorrelation at lag 1, current state depends only on previous state.
+- **Additive vs. Multiplicative Models**: 
+  - Additive: Linear trend, constant seasonal amplitude.
+  - Multiplicative: Non-linear trend, seasonal amplitude grows with trend.
+- **Seasonal Decomposition**: Using `statsmodels`' `seasonal_decompose()` function.
+- **Autoregression Model**: Using past values as features, including multiple lags.
+
+### Practical Application
+- **Hands-on Activity**: Working with a flight dataset to perform time series decomposition and modeling.
+- **Project 1**: Applying learned techniques to predict hourly temperature at RDU airport.
+
+### Key Takeaways
+- Understanding the unique properties of time series data.
+- Identifying and separating trend and seasonality.
+- Validating the presence of seasonality.
+- Building autoregressive models using past values.
+- Preparing a structured presentation and writeup for the project.

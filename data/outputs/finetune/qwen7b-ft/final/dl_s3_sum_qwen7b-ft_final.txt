@@ -1,0 +1,61 @@
+### Summary of Lecture 3: Applied Computer Vision
+
+#### Major Topics Covered:
+
+1. **Image Classification**
+   - Overview of image classification models (AlexNet, VGG, ResNet, Inception, DenseNet, SqueezeNet).
+   - Pre-trained models and transfer learning.
+   - Evaluation metrics: accuracy, precision, recall, F1-score, AUC-ROC, confusion matrix.
+
+2. **Object Detection**
+   - Bounding Box Detection:
+     - COCO annotations (top-left corner, width, height).
+     - Anchor boxes and Non-Max Suppression (NMS).
+     - Popular models: YOLO, Faster R-CNN.
+   - Example applications: Lego brick finder, dental tooth numbering.
+
+3. **Semantic Segmentation**
+   - Task: Assign class labels to every pixel.
+   - Models: U-Net, Mask R-CNN, DeepLab, PSPNet.
+   - Evaluation metrics: mIoU, pixel accuracy, boundary F1 score.
+
+4. **Advanced Topics**
+   - **Vision Transformers**:
+     - Adaptation of transformer architecture for image processing.
+     - Treat images as sequences of patches.
+     - Multi-head self-attention, positional embeddings.
+   - **Grounding DINO + SAM**:
+     - Zero-shot object detection.
+     - Promptable segmentation masks.
+   - **Diffusion Models**:
+     - Gradual denoising to generate images.
+     - Text-conditioned diffusion, latent diffusion.
+     - Fine-tuning pointers.
+
+#### Key Definitions and Concepts:
+
+- **Image Classification**: Predicting the class label of an image.
+- **Object Detection**: Identifying the locations of objects in an image.
+- **Bounding Boxes**: Rectangular regions enclosing objects.
+- **Semantic Segmentation**: Assigning class labels to every pixel.
+- **Mask R-CNN**: Combines object detection and segmentation.
+- **U-Net**: Encoder-decoder architecture with skip connections.
+- **Transformer Architecture**: Adapted for image processing; treats images as sequences of patches.
+- **Grounding DINO**: Zero-shot object detection model with promptable masks.
+- **Diffusion Models**: Gradually denoise data to generate images; text-conditioned diffusion.
+
+#### Best Practices for Evaluation:
+
+- **Classification**: Accuracy, precision, recall, F1-score, AUC-ROC, confusion matrix.
+- **Detection**: Mean Average Precision (mAP), Intersection over Union (IoU) thresholds.
+- **Segmentation**: Mean Intersection over Union (mIoU), pixel accuracy, boundary F1 score.
+- **Error Analysis**: Qualitative analysis, condition slices, error patterns.
+
+#### Future Lectures:
+
+- **Vision Transformers**: Detailed discussion on architecture and applications.
+- **Diffusion Models**: Generative AI lecture covering text-conditioned diffusion, latent diffusion, and fine-tuning.
+
+---
+
+This summary covers the essential topics, key definitions, and best practices discussed in the lecture, maintaining the logical flow of the material.

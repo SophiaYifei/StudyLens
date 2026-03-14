@@ -4,3 +4,6 @@ accelerate
 sentencepiece
 bitsandbytes
 nltk
+peft
+trl
+datasets

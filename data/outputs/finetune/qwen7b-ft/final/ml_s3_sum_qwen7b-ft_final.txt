@@ -1,0 +1,100 @@
+### Summary of University Lecture Material on Linear Regression
+
+#### Introduction
+- **Knowledge Check**: Weekly quiz to ensure understanding and engagement.
+- **Feedback System**: Chatbot-style quiz to provide immediate feedback and guidance.
+
+---
+
+#### Linear Models
+- **Definition**: Linear models are linear in the parameters \( w \). They can model non-linear relationships via transformations.
+- **Examples**:
+  - Simple Linear Regression: \( y = w_0 + w_1 x \)
+  - Multiple Linear Regression: \( y = w_0 + w_1 x_1 + w_2 x_2 + ... \)
+
+---
+
+#### Linear Regression Basics
+- **Definition**: Model that assumes linear relationships between features and targets.
+- **Importance**: Forms the foundation of more complex ML models; helps understand feature relationships.
+- **Types**:
+  - **Simple Linear Regression**: One feature (\( y = w_0 + w_1 x \))
+  - **Multiple Linear Regression**: Multiple features (\( y = w_0 + w_1 x_1 + w_2 x_2 + ... \))
+
+---
+
+#### Estimating Parameters
+- **Objective**: Minimize the cost function (often the Sum of Squared Errors, SSE).
+- **Methods**:
+  - **Closed Form Solution**: Using the Normal Equation (matrix inversion).
+    - Pros: Fast, but computationally intensive for large datasets.
+    - Cons: Not scalable for large datasets.
+  - **Gradient Descent**: Iterative optimization.
+    - Pros: Scalable for large datasets.
+    - Cons: Requires choosing initial parameters and step size.
+
+---
+
+#### Assumptions of Linear Regression
+1. **Linearity**: Expected value of \( y \) for any given \( x \) is a linear function of \( x \).
+2. **Independence of Errors**: Errors are uncorrelated random variables with zero mean and constant variance \( \sigma^2 \).
+3. **No Multicollinearity**: Features are independent.
+4. **Homoscedasticity**: Error terms have constant variance and are not correlated.
+
+---
+
+#### Checking Assumptions
+- **Non-Linearity**:
+  - **Scatterplot**: Plot \( y \) vs \( x \).
+  - **Residual Plots**: Plot residuals (errors) vs features or vs predictions.
+- **Heteroscedasticity**:
+  - **Residual Plots**: Funnel-shaped patterns indicate non-constant variance.
+- **Multicollinearity**:
+  - **Correlation Matrix**: Identify highly correlated features.
+  - **Impact**: May not affect prediction but hurts model interpretability.
+
+---
+
+#### Addressing Issues
+- **Non-Linearity**: Transform features (e.g., polynomial terms).
+- **Non-Constant Variance**: Transform target (e.g., logarithmic, square root).
+- **Multicollinearity**: Remove features or use regularization techniques.
+
+---
+
+#### Regularization
+- **Purpose**: Balance model fit and complexity.
+- **Penalty Term**: Adds a penalty to the cost function to penalize complexity.
+- **Formulas**:
+  - **Ridge Regression (L2)**: \( \text{Cost} = \text{SSE} + \lambda \sum_{i} w_i^2 \)
+  - **LASSO Regression (L1)**: \( \text{Cost} = \text{SSE} + \lambda \sum_{i} |w_i| \)
+
+---
+
+#### Geometric Perspective
+- **LASSO**:
+  - Diamond constraint: Intersects at corners, leading to sparse solutions.
+- **Ridge**:
+  - Circular constraint: Coefficients remain small but rarely zero.
+
+---
+
+#### Choosing Regularization Method
+- **LASSO**: Prefer if simpler model desired, feature selection important.
+- **Ridge**: Prefer if many correlated features, complex target relationships.
+- **Both**: Try both and compare using cross-validation.
+
+---
+
+#### Wrapping Up
+- **Always try linear regression first** as a benchmark.
+- **Improvements**: Add polynomial terms, interaction terms, regularization.
+- **Advanced Models**: Compare with more sophisticated methods after improving linear regression.
+
+---
+
+### Deep Understanding Questions
+1. **Overfitting**: Minimizing SSE encourages overfitting because it rewards complexity, leading to high variance.
+2. **Sparsity**: L1 produces sparsity by setting some coefficients to zero, while L2 shrinks coefficients but keeps them non-zero.
+3. **Interpretation**: Interpretation matters more when understanding feature relationships is crucial, such as in healthcare or finance.
+4. **Utility**: Linear regression remains useful in 2026 due to its interpretability, scalability, and foundational role in more complex models.
