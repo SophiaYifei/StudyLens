@@ -28,6 +28,7 @@ OUTPUTS_DIR = DATA_DIR / "outputs"
 REFERENCE_DIR = DATA_DIR / "reference"
 TRAINING_JSON = OUTPUTS_DIR / "finetune" / "ft_training_data.json"
 ADAPTER_DIR = _PROJECT_ROOT / "models" / "qwen7b-lora"
+CHECKPOINTS_DIR = OUTPUTS_DIR / "qwen-finetune-checkpoints"
 
 
 # ============================================================
@@ -196,7 +197,7 @@ def finetune(epochs=3, val_ratio=0.1):
 
     # --- Training config ---
     training_args = SFTConfig(
-        output_dir="./qwen-finetune-checkpoints",
+        output_dir=str(CHECKPOINTS_DIR),
         num_train_epochs=epochs,
         per_device_train_batch_size=1,
         gradient_accumulation_steps=4,
