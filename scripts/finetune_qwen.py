@@ -30,6 +30,9 @@ TRAINING_JSON = OUTPUTS_DIR / "finetune" / "ft_training_data.json"
 ADAPTER_DIR = _PROJECT_ROOT / "models" / "qwen7b-lora"
 CHECKPOINTS_DIR = OUTPUTS_DIR / "qwen-finetune-checkpoints"
 
+# Topics held out as test set (excluded from training data)
+TEST_TOPICS = {"dl_s5", "ml_s5"}
+
 
 # ============================================================
 # Step 1: Prepare training data
@@ -67,7 +70,6 @@ def prepare_training_data():
     for ori_file in sorted(PROCESSED_DIR.glob("*_ori.txt")):
         topic_key = ori_file.stem.replace("_ori", "")
         # Skip test topics — these are held out for final evaluation
-        TEST_TOPICS = {"dl_s5", "ml_s5"}
         if topic_key in TEST_TOPICS:
             print(f"  SKIP (test set): {topic_key}")
             continue
