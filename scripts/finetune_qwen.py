@@ -1,4 +1,4 @@
-# scripts/finetune.py
+# scripts/finetune_qwen.py
 # QLoRA fine-tuning for Qwen2.5-7B-Instruct
 # Run in Colab LLM environment with A100 GPU
 #
@@ -7,13 +7,13 @@
 #   !pip install peft trl datasets
 #
 #   # Step 1: Prepare training data
-#   !python scripts/finetune.py --mode prepare
+#   !python scripts/finetune_qwen.py --mode prepare
 #
 #   # Step 2: Train
-#   !python scripts/finetune.py --mode train --epochs 3
+#   !python scripts/finetune_qwen.py --mode train --epochs 3
 #
 #   # Step 3: Run inference with fine-tuned model
-#   !python scripts/finetune.py --mode inference
+#   !python scripts/finetune_qwen.py --mode inference
 
 import json
 import torch
