@@ -1,0 +1,143 @@
+### Summary of Lecture Material: Modeling Process & Algorithms (Week 5)
+
+#### **1. Introduction to Classification**
+- **Definition**: 
+  - **Classification** models predict a categorical target (e.g., handwritten digits, tumor type).
+  - Binary classification: Two classes (e.g., 0 or 1).
+  - Multiclass classification: Multiple classes (e.g., 10 classes for digits).
+
+- **Example Applications**:
+  - Handwritten character recognition.
+  - Benign vs. malignant tumor classification.
+  - Type of lung disease diagnosis.
+  - Next-word prediction in language models.
+
+- **Key Points**:
+  - Unlike regression, classification models cannot extrapolate beyond the training data.
+  - Cannot predict values outside the observed ranges.
+
+#### **2. Logistic Regression**
+- **Objective**: Predict the probability \(P(y=1)\) instead of the class label.
+- **Mathematical Formulation**:
+  - **Sigmoid Function** (\( \sigma(z) \)):
+    \[
+    \sigma(z) = \frac{1}{1 + e^{-z}}
+    \]
+    - Maps real numbers to probabilities between 0 and 1.
+  
+  - **Logistic Regression Model**:
+    \[
+    P(y=1 | x; w) = \sigma(w_0 + w_1 x_1 + w_2 x_2 + ... + w_p x_p)
+    \]
+
+- **Parameter Estimation**:
+  - **Cost Function**:
+    - **Negative Log Likelihood (NLL)**:
+      \[
+      J(w) = -\sum_{i} [y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i)]
+      \]
+    - **Gradient Descent**:
+      \[
+      w_j := w_j - \alpha \nabla_w J(w)
+      \]
+      - \(\alpha\) is the learning rate.
+      - \(\nabla_w J(w)\) is the gradient of the cost function with respect to the weights.
+
+- **Implementation in Sklearn**:
+  - `model.predict(x)` returns class labels.
+  - `model.predict_proba(x)` returns class probabilities.
+  - Default uses L2 regularization (Ridge).
+
+- **Important Concepts**:
+  - **Threshold**: Default is 0.5, but can be adjusted.
+  - **Softmax Regression**: Generalizes logistic regression for multiclass classification.
+
+#### **3. Decision Boundary**
+- **Linear Decision Boundary**: 
+  - Logistic regression produces a linear decision boundary.
+  - Visualized as a straight line in 2D space.
+
+#### **4. K-Nearest Neighbors (KNN)**
+- **Overview**:
+  - Instance-based method without explicit model training.
+  - Assign class based on the majority vote of the k nearest neighbors.
+  - \(k\) is a hyperparameter.
+
+- **Parameters**:
+  - **\(k\)**: Number of nearest neighbors.
+  - **Distance Metric**: Euclidean, cosine similarity, etc.
+  - **Feature Scaling**: Important to ensure all features contribute equally.
+
+- **Performance**:
+  - Small \(k\): Low bias, high variance (risk of overfitting).
+  - Large \(k\): High bias, smooth decision boundary.
+
+- **Limitations**:
+  - Computationally expensive for large datasets.
+  - Memory-intensive.
+
+#### **5. Support Vector Machines (SVM)**
+- **Overview**:
+  - Can perform both classification and regression.
+  - Often used for classification tasks.
+  - Strong theoretical foundation and convex optimization.
+
+- **Core Idea**:
+  - Find a hyperplane that best separates the classes.
+  - Maximize the margin between the classes.
+  - **Support Vectors**: Points closest to the margin.
+
+- **Soft Margin SVM**:
+  - Allows some misclassification to achieve a wider margin.
+  - Hyperparameter \(C\): Controls the trade-off between margin width and errors.
+    - Large \(C\): Smaller margin, fewer training errors.
+    - Small \(C\): Larger margin, more tolerance for errors.
+
+- **Kernels**:
+  - **Linear Kernel**: Simplest form.
+  - **Polynomial Kernel**: Adds polynomial interactions.
+  - **Radial Basis Function (RBF) Kernel**: Uses distances from landmarks.
+
+- **Implementation in Sklearn**:
+  - Standardize features first.
+  - Choose kernel (default is linear).
+  - Set \(C\) and other parameters via cross-validation.
+
+- **Pros and Cons**:
+  - Advantages: Flexible with kernels, works well in high dimensions, convex optimization.
+  - Disadvantages: Slow for large datasets, often outperformed by tree ensembles or neural networks, no native probabilistic output.
+
+- **Important Concepts**:
+  - **No Inherent Probabilistic Output**: Use Platt scaling for probabilities.
+  - **Best Suited for**: "Short and fat" datasets, high feature dimension.
+
+#### **6. Concept Review Questions**
+- **Difference between Logistic Regression and Softmax**:
+  - Logistic regression is for binary classification, while softmax extends to multiclass classification.
+  
+- **Why Cross Entropy Better for Classification**:
+  - More suitable for classification tasks compared to Sum of Squared Errors (SSE).
+
+- **Bias-Variance Tradeoff in KNN**:
+  - Small \(k\): Low bias, high variance.
+  - Large \(k\): High bias, low variance.
+
+- **Role of \(C\) in SVM**:
+  - Controls the trade-off between margin width and errors.
+
+- **When to Choose Logistic Regression vs. SVM vs. KNN**:
+  - Logistic regression: Simple, interpretable, works well for binary classification.
+  - SVM: Powerful for high-dimensional data, works well for non-linear boundaries.
+  - KNN: Simple, works well for short and fat datasets.
+
+#### **7. To-Do List**
+- Implement logistic regression.
+- Tune the threshold.
+- Compare logistic regression, KNN, and SVM.
+- Use cross-validation for tuning.
+- Standardize data when necessary.
+- Evaluate models using precision and recall metrics.
+
+---
+
+This summary covers the essential topics and key points from the lecture, ensuring a clear understanding of the concepts and practical aspects of classification models.

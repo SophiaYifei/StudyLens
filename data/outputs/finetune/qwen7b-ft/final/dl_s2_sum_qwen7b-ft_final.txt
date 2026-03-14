@@ -1,0 +1,136 @@
+### Summary of University Lecture on Computer Vision I
+
+#### Introduction to Computer Vision
+- **Applications**: 
+  - Image recognition, facial recognition, product identification, object detection, autonomous driving, manufacturing, agriculture, image segmentation, medical imaging, object tracking, motion analysis, surveillance, sports tracking, scene reconstruction, architecture, VR/AR, 3D modeling.
+- **Challenges**:
+  - Complex and messy real-world data (occlusions, lighting, background, pose, perspective).
+  - Interpreting depth and spatial relationships in images.
+  - Need for very large, labeled datasets.
+  - Need for fast inference for many applications.
+
+#### Traditional Computer Vision
+- **Features**:
+  - **Color-Based Features**:
+    - Color histograms, color moments, dominant colors, color coherence vectors.
+  - **Texture-Based Features**:
+    - Gray level co-occurrence matrices (GLCM), Local Binary Patterns (LBP), Gabor filters, Haralick features.
+  - **Statistical Features**:
+    - Mean, variance, standard deviation, entropy, Zernike moments, wavelet transforms.
+  - **Shape Features**:
+    - Edge detection (Sobel, Canny), contour descriptors, Hu moments, Scale-Invariant Feature Transform (SIFT), Speeded-Up Robust Features (SURF), Histogram of Oriented Gradients (HOG).
+
+- **Drawbacks**:
+  - Limited spatial relationships between pixels.
+  - Difficult to capture hierarchical patterns at different scales.
+  - Hard to handle object deformations and variations.
+  - High-dimensional feature spaces.
+  - Expensive to compute at high resolutions.
+
+#### Convolutional Neural Networks (CNNs)
+- **Concept**:
+  - Sliding window operation across multiple dimensions.
+  - **1D Convolution**:
+    - Example: Accelerometer data.
+  - **2D Convolution**:
+    - Example: Image data.
+  - **3D Convolution**:
+    - Example: Videos or volumetric data.
+  
+- **Layers**:
+  - **Convolutional Layers**:
+    - Utilize a sliding filter containing weights.
+    - Output feature maps.
+    - Parameters: Filter size \( F \times F \times D \), Stride \( S \), Padding \( P \).
+  - **Pooling Layers**:
+    - Reduce dimensions of data.
+    - Max pooling or mean pooling.
+    
+- **Hyperparameters**:
+  - Filter size (\( F \))
+  - Stride (\( S \))
+  - Padding (\( P \))
+
+- **Feature Maps**:
+  - Result of applying filters to input images.
+  - Compresses information content.
+
+- **Architectural Flow**:
+  - Input image -> Convolutional layers -> Pooling layers -> Fully connected layers -> Softmax output.
+
+- **Example Implementation**:
+  ```python
+  # PyTorch example
+  import torch.nn as nn
+  
+  class SimpleCNN(nn.Module):
+      def __init__(self):
+          super(SimpleCNN, self).__init__()
+          self.conv1 = nn.Conv2d(in_channels=1, out_channels=10, kernel_size=3, stride=1, padding=1)
+          self.pool = nn.MaxPool2d(kernel_size=2, stride=2)
+          self.fc = nn.Linear(10 * 13 * 13, 10)
+
+      def forward(self, x):
+          x = self.pool(F.relu(self.conv1(x)))
+          x = x.view(-1, 10 * 13 * 13)
+          x = self.fc(x)
+          return x
+  ```
+
+#### CNN Architectures
+- **LeNet (Late 1990s)**:
+  - Early successful CNN for handwritten digit recognition.
+- **AlexNet (2012)**:
+  - Won ImageNet ILSVRC 2012.
+  - Used many smaller filters (3x3) instead of fewer large filters (7x7/11x11).
+  - Very homogeneous architecture using only 3x3 convs and 2x2 pooling.
+- **VGGNet (2014)**:
+  - Similar to AlexNet but deeper and wider.
+  - Included multiple conv layers before pooling.
+- **ResNet (2015)**:
+  - Introduced skip connections to address accuracy saturation.
+  - Allows later layers to easily replicate identity mappings.
+- **Inception (2015)**:
+  - Uses multiple convolution operations in parallel.
+  - Concatenates results to capture different spatial patterns.
+- **Transfer Learning**:
+  - Start from a pre-trained model (e.g., ResNet, VGG).
+  - Remove the final fully connected layer.
+  - Add a trainable custom head.
+  - Freeze pre-trained weights and train the custom head.
+- **Fine-Tuning**:
+  - Continue training the pre-trained model.
+  - Update some or all of the model's parameters.
+  - Use a lower learning rate to avoid destroying useful features.
+  - Train for fewer epochs.
+- **Data Augmentation**:
+  - Apply random transformations to training data (not validation/test sets).
+  - Examples: Random cropping, rotation, changing brightness and saturation.
+  - Libraries: `torchvision.transforms` in PyTorch, `ImageDataGenerator` in TensorFlow.
+
+#### Implementation Notes
+- **Image Folder Structure**:
+  ```
+  train/
+  ├── class1/
+  │   └── img1.jpg
+  │   └── img2.jpg
+  └── class2/
+      └── img1.jpg
+      └── img2.jpg
+  ```
+- **Custom Dataset Class**:
+  ```python
+  from torchvision.datasets.folder import ImageFolder
+  from torchvision.transforms import ToTensor
+
+  train_dataset = ImageFolder(root='path/to/train', transform=ToTensor())
+  train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+  ```
+
+### Key Takeaways
+- **CNN Basics**: Understanding convolution, pooling, and feature maps.
+- **Architectures**: Recognizing key differences between LeNet, AlexNet, VGGNet, ResNet, and Inception.
+- **Transfer Learning**: Using pre-trained models for feature extraction and fine-tuning.
+- **Data Augmentation**: Techniques to improve model robustness and generalization.
+- **Implementation**: Practical steps for building and training CNNs using frameworks like PyTorch and TensorFlow.
