@@ -10,9 +10,9 @@ tags:
 - trl
 ---
 
-# Model Card for Model ID
+# Model Card for qwen7b-lora Adapter
 
-<!-- Provide a quick summary of what the model is/does. -->
+This document describes a LoRA adapter built on top of the `Qwen/Qwen2.5-7B-Instruct` base model for general text generation and instruction following.
 
 
 
@@ -20,29 +20,29 @@ tags:
 
 ### Model Description
 
-<!-- Provide a longer summary of what this model is. -->
+This adapter uses Low-Rank Adaptation (LoRA) to fine-tune the `Qwen/Qwen2.5-7B-Instruct` model using the PEFT library. It is intended to be loaded together with the base model for text generation and instruction-following tasks.
 
 
 
-- **Developed by:** [More Information Needed]
-- **Funded by [optional]:** [More Information Needed]
-- **Shared by [optional]:** [More Information Needed]
-- **Model type:** [More Information Needed]
-- **Language(s) (NLP):** [More Information Needed]
-- **License:** [More Information Needed]
-- **Finetuned from model [optional]:** [More Information Needed]
+- **Developed by:** Project contributors to this repository
+- **Funded by:** Not disclosed
+- **Shared by:** This repository
+- **Model type:** LoRA adapter for a 7B parameter instruction-tuned language model
+- **Language(s) (NLP):** Same language coverage as `Qwen/Qwen2.5-7B-Instruct`
+- **License:** See the LICENSE file in this repository for licensing terms
+- **Finetuned from model:** `Qwen/Qwen2.5-7B-Instruct`
 
-### Model Sources [optional]
+### Model Sources
 
-<!-- Provide the basic links for the model. -->
+Basic links and references for this adapter:
 
-- **Repository:** [More Information Needed]
-- **Paper [optional]:** [More Information Needed]
-- **Demo [optional]:** [More Information Needed]
+- **Repository:** This repository (model files under `models/qwen7b-lora/`)
+- **Paper:** Not provided
+- **Demo:** Not provided
 
 ## Uses
 
-<!-- Address questions around how the model is intended to be used, including the foreseeable users of the model and those affected by the model. -->
+This adapter is intended for text generation and instruction-following use cases when loaded alongside the `Qwen/Qwen2.5-7B-Instruct` base model.
 
 ### Direct Use
 
