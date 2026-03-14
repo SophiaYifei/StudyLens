@@ -40,7 +40,7 @@ pipeline interface. Use `--model` to select which model to run and
 | BART-SAMSum     | `bart-samsum`   | Deep learning   | Base        | Dialogue-trained, 1024 token limit         |
 | LED-arXiv       | `led-arxiv`     | Deep learning   | Base        | Academic paper-trained, 16384 token limit  |
 | Qwen2.5-7B     | `qwen7b`        | Deep learning   | LLM         | Instruction-tuned LLM, 128K context, 4-bit |
-| Qwen2.5-7B FT  | via finetune.py | Deep learning   | LLM         | QLoRA fine-tuned on lecture data            |Instruction-tuned LLM, 128K context, 4-bit quantized |
+| Qwen2.5-7B FT  | via finetune.py | Deep learning   | LLM         | QLoRA fine-tuned on lecture data, 128K context, 4-bit quantized |
 
 ### Generate summaries
 ```bash
