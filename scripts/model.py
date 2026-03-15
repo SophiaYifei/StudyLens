@@ -30,9 +30,9 @@ DEVICE = 0 if torch.cuda.is_available() else -1
 
 # --- Base Class ---
 class BaseSummarizer:
-    """All summarizers must implement .summarize(text) -> str"""
+    """All summarizers must implement .summarize(text, final_pass: bool = True) -> str"""
 
-    def summarize(self, text):
+    def summarize(self, text: str, final_pass: bool = True) -> str:
         raise NotImplementedError("Subclasses must implement summarize()")
 
 # --- Naive Baseline: First Sentence from First 5 Slides ---
