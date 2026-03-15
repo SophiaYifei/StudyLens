@@ -1,7 +1,6 @@
 topic,topic_key,model,strategy,ratio,file,summary_words,entailment_ratio,avg_entailment_score,contradiction_ratio,rouge_l_precision,rouge_l_recall,rouge_l_f1,bertscore_precision,bertscore_recall,bertscore_f1
 Introduction to Deep Learning,dl_s1,naive_first5,naive,,dl_s1_naive.txt,68,,,,0.4918,0.0267,0.0506,0.0259,-0.2322,-0.1048
 Introduction to Deep Learning,dl_s1,tfidf,tfidf,,dl_s1_sum_classical_ml_tfidf.txt,2046,,,,0.1279,0.2338,0.1653,-0.2518,-0.2837,-0.2662
-Introduction to Deep Learning,dl_s1,bart,concat,,dl_s1_sum_bart_concat.txt,117,,,,0.2333,0.0249,0.045,-0.0742,-0.6117,-0.3565
 Introduction to Deep Learning,dl_s1,led-arxiv,concat,,dl_s1_sum_led-arxiv_concat.txt,809,,,,0.0864,0.0587,0.0699,-0.5766,-0.5938,-0.5827
 Introduction to Deep Learning,dl_s1,qwen7b,ratio,ratio06,dl_s1_sum_qwen7b_ratio06.txt,525,,,,0.2899,0.1244,0.1741,-0.0322,-0.1534,-0.0937
 Introduction to Deep Learning,dl_s1,qwen7b,ratio,ratio09,dl_s1_sum_qwen7b_ratio09.txt,525,,,,0.2899,0.1244,0.1741,-0.0322,-0.1534,-0.0937
@@ -9,7 +8,6 @@ Introduction to Deep Learning,dl_s1,qwen7b,ratio,ratio15,dl_s1_sum_qwen7b_ratio1
 Introduction to Deep Learning,dl_s1,qwen7b,ratio,ratio30,dl_s1_sum_qwen7b_ratio30.txt,1534,,,,0.1404,0.1796,0.1576,-0.1803,-0.0192,-0.1004
 Computer Vision 1,dl_s2,naive_first5,naive,,dl_s2_naive.txt,82,,,,0.3494,0.0278,0.0516,0.0199,-0.275,-0.1303
 Computer Vision 1,dl_s2,tfidf,tfidf,,dl_s2_sum_classical_ml_tfidf.txt,2167,,,,0.1384,0.2965,0.1888,-0.1563,-0.2248,-0.1902
-Computer Vision 1,dl_s2,bart,concat,,dl_s2_sum_bart_concat.txt,143,,,,0.2013,0.0288,0.0504,-0.1391,-0.4109,-0.2769
 Computer Vision 1,dl_s2,led-arxiv,concat,,dl_s2_sum_led-arxiv_concat.txt,582,,,,0.0836,0.0432,0.057,-0.4938,-0.5453,-0.5174
 Computer Vision 1,dl_s2,qwen7b,ratio,ratio06,dl_s2_sum_qwen7b_ratio06.txt,509,,,,0.4126,0.1881,0.2584,-0.0399,-0.1797,-0.1109
 Computer Vision 1,dl_s2,qwen7b,ratio,ratio09,dl_s2_sum_qwen7b_ratio09.txt,509,,,,0.4126,0.1881,0.2584,-0.0399,-0.1797,-0.1109
@@ -17,7 +15,6 @@ Computer Vision 1,dl_s2,qwen7b,ratio,ratio15,dl_s2_sum_qwen7b_ratio15.txt,1461,,
 Computer Vision 1,dl_s2,qwen7b,ratio,ratio30,dl_s2_sum_qwen7b_ratio30.txt,1728,,,,0.1305,0.2063,0.1599,-0.1702,-0.0589,-0.1142
 Computer Vision 2,dl_s3,naive_first5,naive,,dl_s3_naive.txt,67,,,,0.7231,0.0365,0.0696,0.1323,-0.179,-0.0267
 Computer Vision 2,dl_s3,tfidf,tfidf,,dl_s3_sum_classical_ml_tfidf.txt,2931,,,,0.1961,0.458,0.2746,-0.0855,-0.1729,-0.1278
-Computer Vision 2,dl_s3,bart,concat,,dl_s3_sum_bart_concat.txt,112,,,,0.313,0.028,0.0514,0.0063,-0.4779,-0.2463
 Computer Vision 2,dl_s3,led-arxiv,concat,,dl_s3_sum_led-arxiv_concat.txt,428,,,,0.1078,0.0334,0.051,-0.7171,-0.6039,-0.6586
 Computer Vision 2,dl_s3,qwen7b,ratio,ratio06,dl_s3_sum_qwen7b_ratio06.txt,454,,,,0.4018,0.1384,0.2059,-0.0508,-0.3335,-0.199
 Computer Vision 2,dl_s3,qwen7b,ratio,ratio09,dl_s3_sum_qwen7b_ratio09.txt,454,,,,0.4018,0.1384,0.2059,-0.0508,-0.3335,-0.199
@@ -25,7 +22,6 @@ Computer Vision 2,dl_s3,qwen7b,ratio,ratio15,dl_s3_sum_qwen7b_ratio15.txt,747,,,
 Computer Vision 2,dl_s3,qwen7b,ratio,ratio30,dl_s3_sum_qwen7b_ratio30.txt,6707,,,,0.0407,0.2208,0.0688,-0.2257,-0.27,-0.246
 NLP 1,dl_s4,naive_first5,naive,,dl_s4_naive.txt,103,,,,0.3333,0.0269,0.0499,0.0499,-0.1937,-0.0732
 NLP 1,dl_s4,tfidf,tfidf,,dl_s4_sum_classical_ml_tfidf.txt,2407,,,,0.1223,0.2266,0.1589,-0.2621,-0.236,-0.2474
-NLP 1,dl_s4,bart,concat,,dl_s4_sum_bart_concat.txt,102,,,,0.3077,0.0254,0.0469,-0.0353,-0.3986,-0.2219
 NLP 1,dl_s4,led-arxiv,concat,,dl_s4_sum_led-arxiv_concat.txt,609,,,,0.0892,0.0412,0.0564,-0.636,-0.5398,-0.586
 NLP 1,dl_s4,qwen7b,ratio,ratio06,dl_s4_sum_qwen7b_ratio06.txt,551,,,,0.4462,0.1807,0.2572,-0.0897,-0.1496,-0.1196
 NLP 1,dl_s4,qwen7b,ratio,ratio09,dl_s4_sum_qwen7b_ratio09.txt,551,,,,0.4462,0.1807,0.2572,-0.0897,-0.1496,-0.1196
@@ -33,7 +29,6 @@ NLP 1,dl_s4,qwen7b,ratio,ratio15,dl_s4_sum_qwen7b_ratio15.txt,1229,,,,0.248,0.22
 NLP 1,dl_s4,qwen7b,ratio,ratio30,dl_s4_sum_qwen7b_ratio30.txt,1931,,,,0.1769,0.2528,0.2082,-0.1029,-0.036,-0.0682
 NLP 2,dl_s5,naive_first5,naive,,dl_s5_naive.txt,82,,,,0.45,0.0325,0.0606,0.0079,-0.3343,-0.1674
 NLP 2,dl_s5,tfidf,tfidf,,dl_s5_sum_classical_ml_tfidf.txt,2500,,,,0.1096,0.2435,0.1511,-0.1797,-0.2643,-0.2205
-NLP 2,dl_s5,bart,concat,,dl_s5_sum_bart_concat.txt,110,,,,0.2672,0.028,0.0506,-0.0861,-0.5221,-0.3123
 NLP 2,dl_s5,led-arxiv,concat,,dl_s5_sum_led-arxiv_concat.txt,703,,,,0.1045,0.0613,0.0773,-0.5159,-0.4965,-0.504
 NLP 2,dl_s5,qwen7b,ratio,ratio06,dl_s5_sum_qwen7b_ratio06.txt,592,,,,0.3278,0.1767,0.2296,-0.0175,-0.0244,-0.0193
 NLP 2,dl_s5,qwen7b,ratio,ratio09,dl_s5_sum_qwen7b_ratio09.txt,592,,,,0.3278,0.1767,0.2296,-0.0175,-0.0244,-0.0193
@@ -41,7 +36,6 @@ NLP 2,dl_s5,qwen7b,ratio,ratio15,dl_s5_sum_qwen7b_ratio15.txt,621,,,,0.3211,0.18
 NLP 2,dl_s5,qwen7b,ratio,ratio30,dl_s5_sum_qwen7b_ratio30.txt,1965,,,,0.1063,0.1839,0.1347,-0.0866,-0.089,-0.086
 Machine Learning Intro,ml_s1,naive_first5,naive,,ml_s1_naive.txt,66,,,,0.4545,0.0312,0.0585,0.0965,-0.3218,-0.12
 Machine Learning Intro,ml_s1,tfidf,tfidf,,ml_s1_sum_classical_ml_tfidf.txt,2329,,,,0.0961,0.2385,0.137,-0.1448,-0.234,-0.1879
-Machine Learning Intro,ml_s1,bart,concat,,ml_s1_sum_bart_concat.txt,125,,,,0.2576,0.0354,0.0623,-0.1321,-0.3668,-0.2503
 Machine Learning Intro,ml_s1,led-arxiv,concat,,ml_s1_sum_led-arxiv_concat.txt,772,,,,0.0898,0.0625,0.0737,-0.5073,-0.5204,-0.5149
 Machine Learning Intro,ml_s1,qwen7b,ratio,ratio06,ml_s1_sum_qwen7b_ratio06.txt,650,,,,0.2273,0.1354,0.1697,-0.0732,-0.0969,-0.0835
 Machine Learning Intro,ml_s1,qwen7b,ratio,ratio09,ml_s1_sum_qwen7b_ratio09.txt,650,,,,0.2273,0.1354,0.1697,-0.0732,-0.0969,-0.0835
@@ -49,7 +43,6 @@ Machine Learning Intro,ml_s1,qwen7b,ratio,ratio15,ml_s1_sum_qwen7b_ratio15.txt,1
 Machine Learning Intro,ml_s1,qwen7b,ratio,ratio30,ml_s1_sum_qwen7b_ratio30.txt,1686,,,,0.1001,0.1625,0.1239,-0.158,-0.1773,-0.166
 Supervised Learning,ml_s2,naive_first5,naive,,ml_s2_naive.txt,185,,,,0.4396,0.0661,0.1149,0.0012,-0.1236,-0.0602
 Supervised Learning,ml_s2,tfidf,tfidf,,ml_s2_sum_classical_ml_tfidf.txt,2492,,,,0.1205,0.2609,0.1649,-0.1955,-0.3088,-0.2514
-Supervised Learning,ml_s2,bart,concat,,ml_s2_sum_bart_concat.txt,117,,,,0.275,0.0273,0.0496,-0.0112,-0.3621,-0.1912
 Supervised Learning,ml_s2,led-arxiv,concat,,ml_s2_sum_led-arxiv_concat.txt,731,,,,0.1328,0.076,0.0966,-0.4066,-0.3495,-0.3779
 Supervised Learning,ml_s2,qwen7b,ratio,ratio06,ml_s2_sum_qwen7b_ratio06.txt,627,,,,0.2884,0.1412,0.1896,-0.058,-0.1169,-0.0866
 Supervised Learning,ml_s2,qwen7b,ratio,ratio09,ml_s2_sum_qwen7b_ratio09.txt,627,,,,0.2884,0.1412,0.1896,-0.058,-0.1169,-0.0866
@@ -57,7 +50,6 @@ Supervised Learning,ml_s2,qwen7b,ratio,ratio15,ml_s2_sum_qwen7b_ratio15.txt,1276
 Supervised Learning,ml_s2,qwen7b,ratio,ratio30,ml_s2_sum_qwen7b_ratio30.txt,6375,,,,0.0349,0.1519,0.0568,-0.2115,-0.205,-0.2067
 Unsupervised Learning,ml_s3,naive_first5,naive,,ml_s3_naive.txt,62,,,,0.3587,0.0341,0.0623,-0.3664,-0.4049,-0.3835
 Unsupervised Learning,ml_s3,tfidf,tfidf,,ml_s3_sum_classical_ml_tfidf.txt,2449,,,,0.0982,0.2541,0.1416,-0.0952,-0.2915,-0.1941
-Unsupervised Learning,ml_s3,bart,concat,,ml_s3_sum_bart_concat.txt,81,,,,0.3333,0.0289,0.0532,0.0648,-0.5621,-0.2676
 Unsupervised Learning,ml_s3,led-arxiv,concat,,ml_s3_sum_led-arxiv_concat.txt,568,,,,0.1328,0.0702,0.0919,-0.6059,-0.5581,-0.5795
 Unsupervised Learning,ml_s3,qwen7b,ratio,ratio06,ml_s3_sum_qwen7b_ratio06.txt,804,,,,0.3245,0.2417,0.2771,-0.0218,0.0497,0.0153
 Unsupervised Learning,ml_s3,qwen7b,ratio,ratio09,ml_s3_sum_qwen7b_ratio09.txt,804,,,,0.3245,0.2417,0.2771,-0.0218,0.0497,0.0153
@@ -65,7 +57,6 @@ Unsupervised Learning,ml_s3,qwen7b,ratio,ratio15,ml_s3_sum_qwen7b_ratio15.txt,80
 Unsupervised Learning,ml_s3,qwen7b,ratio,ratio30,ml_s3_sum_qwen7b_ratio30.txt,1467,,,,0.1774,0.25,0.2075,-0.0867,-0.0445,-0.064
 Evaluation & Model Selection,ml_s4,naive_first5,naive,,ml_s4_naive.txt,87,,,,0.5204,0.0543,0.0984,-0.0119,-0.2253,-0.1192
 Evaluation & Model Selection,ml_s4,tfidf,tfidf,,ml_s4_sum_classical_ml_tfidf.txt,1842,,,,0.0886,0.181,0.119,-0.2967,-0.3595,-0.3267
-Evaluation & Model Selection,ml_s4,bart,concat,,ml_s4_sum_bart_concat.txt,117,,,,0.232,0.0309,0.0545,-0.1944,-0.535,-0.3688
 Evaluation & Model Selection,ml_s4,led-arxiv,concat,,ml_s4_sum_led-arxiv_concat.txt,377,,,,0.1406,0.0479,0.0715,-0.6367,-0.5098,-0.5716
 Evaluation & Model Selection,ml_s4,qwen7b,ratio,ratio06,ml_s4_sum_qwen7b_ratio06.txt,726,,,,0.3922,0.2694,0.3194,0.0097,-0.022,-0.0046
 Evaluation & Model Selection,ml_s4,qwen7b,ratio,ratio09,ml_s4_sum_qwen7b_ratio09.txt,763,,,,0.3777,0.2748,0.3181,0.0095,-0.0215,-0.0045
@@ -73,9 +64,78 @@ Evaluation & Model Selection,ml_s4,qwen7b,ratio,ratio15,ml_s4_sum_qwen7b_ratio15
 Evaluation & Model Selection,ml_s4,qwen7b,ratio,ratio30,ml_s4_sum_qwen7b_ratio30.txt,1017,,,,0.2818,0.2833,0.2825,-0.0349,-0.1457,-0.0899
 Advanced Topics in ML,ml_s5,naive_first5,naive,,ml_s5_naive.txt,79,,,,0.4409,0.0378,0.0696,-0.1373,-0.294,-0.215
 Advanced Topics in ML,ml_s5,tfidf,tfidf,,ml_s5_sum_classical_ml_tfidf.txt,2026,,,,0.1144,0.2247,0.1516,-0.1332,-0.2583,-0.1948
-Advanced Topics in ML,ml_s5,bart,concat,,ml_s5_sum_bart_concat.txt,99,,,,0.2621,0.0249,0.0454,-0.1378,-0.5339,-0.3422
 Advanced Topics in ML,ml_s5,led-arxiv,concat,,ml_s5_sum_led-arxiv_concat.txt,467,,,,0.0971,0.0368,0.0534,-0.4356,-0.6451,-0.5431
 Advanced Topics in ML,ml_s5,qwen7b,ratio,ratio06,ml_s5_sum_qwen7b_ratio06.txt,621,,,,0.3643,0.1915,0.2511,-0.0241,-0.1478,-0.0869
 Advanced Topics in ML,ml_s5,qwen7b,ratio,ratio09,ml_s5_sum_qwen7b_ratio09.txt,621,,,,0.3643,0.1915,0.2511,-0.0241,-0.1478,-0.0869
 Advanced Topics in ML,ml_s5,qwen7b,ratio,ratio15,ml_s5_sum_qwen7b_ratio15.txt,621,,,,0.3643,0.1915,0.2511,-0.0241,-0.1478,-0.0869
 Advanced Topics in ML,ml_s5,qwen7b,ratio,ratio30,ml_s5_sum_qwen7b_ratio30.txt,1649,,,,0.1425,0.2026,0.1673,-0.0843,-0.1525,-0.1174
+Introduction to Deep Learning,dl_s1,bart,final,,dl_s1_sum_bart_final.txt,58,,,,0.25,0.0133,0.0253,-0.0865,-0.6759,-0.398
+Computer Vision 1,dl_s2,bart,final,,dl_s2_sum_bart_final.txt,45,,,,0.3617,0.0163,0.0312,-0.0125,-0.5124,-0.2738
+Computer Vision 2,dl_s3,bart,final,,dl_s3_sum_bart_final.txt,43,,,,0.4884,0.0163,0.0316,0.0257,-0.5529,-0.2795
+NLP 1,dl_s4,bart,final,,dl_s4_sum_bart_final.txt,60,,,,0.3548,0.0174,0.0332,-0.0033,-0.4808,-0.2522
+NLP 2,dl_s5,bart,final,,dl_s5_sum_bart_final.txt,41,,,,0.4651,0.018,0.0347,-0.0317,-0.5426,-0.2991
+Machine Learning Intro,ml_s1,bart,final,,ml_s1_sum_bart_final.txt,55,,,,0.4138,0.025,0.0472,0.0681,-0.4546,-0.2057
+Supervised Learning,ml_s2,bart,final,,ml_s2_sum_bart_final.txt,56,,,,0.3684,0.0173,0.0331,0.0173,-0.4318,-0.216
+Unsupervised Learning,ml_s3,bart,final,,ml_s3_sum_bart_final.txt,48,,,,0.42,0.0217,0.0413,0.1466,-0.6011,-0.2549
+Evaluation & Model Selection,ml_s4,bart,final,,ml_s4_sum_bart_final.txt,56,,,,0.3276,0.0202,0.0381,-0.1459,-0.5574,-0.3587
+Advanced Topics in ML,ml_s5,bart,final,,ml_s5_sum_bart_final.txt,43,,,,0.2222,0.0092,0.0177,-0.0784,-0.6027,-0.3533
+Introduction to Deep Learning,dl_s1,longt5,concat,,dl_s1_sum_longt5_concat.txt,351,,,,0.1899,0.0604,0.0917,-0.0847,-0.4953,-0.297
+Computer Vision 1,dl_s2,longt5,concat,,dl_s2_sum_longt5_concat.txt,565,,,,0.1263,0.0701,0.0901,-0.1445,-0.4216,-0.2856
+Computer Vision 2,dl_s3,longt5,concat,,dl_s3_sum_longt5_concat.txt,190,,,,0.2423,0.0365,0.0635,-0.0392,-0.4672,-0.2609
+NLP 1,dl_s4,longt5,concat,,dl_s4_sum_longt5_concat.txt,469,,,,0.1279,0.0483,0.0702,-0.1664,-0.5115,-0.3454
+NLP 2,dl_s5,longt5,concat,,dl_s5_sum_longt5_concat.txt,485,,,,0.1151,0.0523,0.0719,-0.1809,-0.502,-0.345
+Machine Learning Intro,ml_s1,longt5,concat,,ml_s1_sum_longt5_concat.txt,545,,,,0.1525,0.0875,0.1112,-0.1269,-0.3699,-0.2501
+Supervised Learning,ml_s2,longt5,concat,,ml_s2_sum_longt5_concat.txt,519,,,,0.1632,0.0718,0.0998,-0.0927,-0.3687,-0.2338
+Unsupervised Learning,ml_s3,longt5,concat,,ml_s3_sum_longt5_concat.txt,214,,,,0.1907,0.0424,0.0693,-0.127,-0.5369,-0.3389
+Evaluation & Model Selection,ml_s4,longt5,concat,,ml_s4_sum_longt5_concat.txt,233,,,,0.1974,0.049,0.0785,-0.1173,-0.4463,-0.2855
+Advanced Topics in ML,ml_s5,longt5,concat,,ml_s5_sum_longt5_concat.txt,155,,,,0.2468,0.0359,0.0627,-0.0469,-0.4711,-0.2666
+Introduction to Deep Learning,dl_s1,longt5,final,,dl_s1_sum_longt5_final.txt,57,,,,0.3158,0.016,0.0305,-0.057,-0.5902,-0.3368
+Computer Vision 1,dl_s2,longt5,final,,dl_s2_sum_longt5_final.txt,90,,,,0.2717,0.024,0.0441,-0.0005,-0.4313,-0.2238
+Computer Vision 2,dl_s3,longt5,final,,dl_s3_sum_longt5_final.txt,47,,,,0.3542,0.0132,0.0255,0.1183,-0.5354,-0.2291
+NLP 1,dl_s4,longt5,final,,dl_s4_sum_longt5_final.txt,42,,,,0.2143,0.0071,0.0138,-0.0114,-0.5966,-0.3204
+NLP 2,dl_s5,longt5,final,,dl_s5_sum_longt5_final.txt,99,,,,0.2255,0.0207,0.038,-0.0441,-0.5396,-0.3029
+Machine Learning Intro,ml_s1,longt5,final,,ml_s1_sum_longt5_final.txt,61,,,,0.2951,0.0187,0.0353,0.0147,-0.455,-0.2298
+Supervised Learning,ml_s2,longt5,final,,ml_s2_sum_longt5_final.txt,85,,,,0.3218,0.0231,0.0431,0.0223,-0.3842,-0.1877
+Unsupervised Learning,ml_s3,longt5,final,,ml_s3_sum_longt5_final.txt,38,,,,0.4211,0.0165,0.0318,0.0116,-0.5591,-0.2891
+Evaluation & Model Selection,ml_s4,longt5,final,,ml_s4_sum_longt5_final.txt,43,,,,0.3556,0.017,0.0325,0.0406,-0.5342,-0.2624
+Advanced Topics in ML,ml_s5,longt5,final,,ml_s5_sum_longt5_final.txt,66,,,,0.403,0.0249,0.0468,0.0239,-0.5197,-0.2616
+Introduction to Deep Learning,dl_s1,bart-samsum,concat,,dl_s1_sum_bart-samsum_concat.txt,112,,,,0.2609,0.0267,0.0484,-0.0807,-0.6168,-0.3622
+Computer Vision 1,dl_s2,bart-samsum,concat,,dl_s2_sum_bart-samsum_concat.txt,183,,,,0.1862,0.0336,0.0569,-0.1344,-0.3997,-0.2688
+Computer Vision 2,dl_s3,bart-samsum,concat,,dl_s3_sum_bart-samsum_concat.txt,140,,,,0.3472,0.0389,0.0699,-0.0112,-0.4488,-0.2382
+NLP 1,dl_s4,bart-samsum,concat,,dl_s4_sum_bart-samsum_concat.txt,155,,,,0.2484,0.0317,0.0562,-0.1822,-0.4397,-0.3124
+NLP 2,dl_s5,bart-samsum,concat,,dl_s5_sum_bart-samsum_concat.txt,141,,,,0.2098,0.0271,0.0479,-0.0934,-0.5111,-0.3096
+Machine Learning Intro,ml_s1,bart-samsum,concat,,ml_s1_sum_bart-samsum_concat.txt,126,,,,0.2713,0.0365,0.0643,-0.0921,-0.4279,-0.264
+Supervised Learning,ml_s2,bart-samsum,concat,,ml_s2_sum_bart-samsum_concat.txt,179,,,,0.212,0.0322,0.0559,-0.1746,-0.421,-0.299
+Unsupervised Learning,ml_s3,bart-samsum,concat,,ml_s3_sum_bart-samsum_concat.txt,167,,,,0.1706,0.03,0.051,-0.1482,-0.4707,-0.3129
+Evaluation & Model Selection,ml_s4,bart-samsum,concat,,ml_s4_sum_bart-samsum_concat.txt,88,,,,0.2247,0.0213,0.0389,-0.1038,-0.5075,-0.3123
+Advanced Topics in ML,ml_s5,bart-samsum,concat,,ml_s5_sum_bart-samsum_concat.txt,104,,,,0.2243,0.0221,0.0402,-0.1824,-0.5383,-0.365
+Introduction to Deep Learning,dl_s1,bart-samsum,final,,dl_s1_sum_bart-samsum_final.txt,81,,,,0.253,0.0187,0.0348,-0.0664,-0.6139,-0.3543
+Computer Vision 1,dl_s2,bart-samsum,final,,dl_s2_sum_bart-samsum_final.txt,135,,,,0.2158,0.0288,0.0508,-0.0863,-0.4199,-0.257
+Computer Vision 2,dl_s3,bart-samsum,final,,dl_s3_sum_bart-samsum_final.txt,84,,,,0.3488,0.0233,0.0437,0.0777,-0.4845,-0.2182
+NLP 1,dl_s4,bart-samsum,final,,dl_s4_sum_bart-samsum_final.txt,139,,,,0.269,0.0309,0.0554,-0.1556,-0.4315,-0.2956
+NLP 2,dl_s5,bart-samsum,final,,dl_s5_sum_bart-samsum_final.txt,94,,,,0.2292,0.0198,0.0365,-0.1194,-0.5711,-0.3541
+Machine Learning Intro,ml_s1,bart-samsum,final,,ml_s1_sum_bart-samsum_final.txt,71,,,,0.3288,0.025,0.0465,-0.0077,-0.4409,-0.2322
+Supervised Learning,ml_s2,bart-samsum,final,,ml_s2_sum_bart-samsum_final.txt,115,,,,0.178,0.0173,0.0316,-0.1609,-0.5272,-0.3492
+Unsupervised Learning,ml_s3,bart-samsum,final,,ml_s3_sum_bart-samsum_final.txt,46,,,,0.2174,0.0103,0.0197,-0.1051,-0.6735,-0.4048
+Evaluation & Model Selection,ml_s4,bart-samsum,final,,ml_s4_sum_bart-samsum_final.txt,67,,,,0.2794,0.0202,0.0377,-0.1057,-0.5212,-0.3207
+Advanced Topics in ML,ml_s5,bart-samsum,final,,ml_s5_sum_bart-samsum_final.txt,67,,,,0.2571,0.0166,0.0311,-0.1464,-0.5603,-0.3605
+Introduction to Deep Learning,dl_s1,naive_random,random,,dl_s1_sum_naive_random.txt,183,,,,0.1692,0.0293,0.05,-0.1709,-0.5565,-0.3696
+Computer Vision 1,dl_s2,naive_random,random,,dl_s2_sum_naive_random.txt,460,,,,0.1166,0.0499,0.0699,-0.22,-0.4916,-0.3615
+Computer Vision 2,dl_s3,naive_random,random,,dl_s3_sum_naive_random.txt,133,,,,0.1655,0.0187,0.0335,-0.2151,-0.5449,-0.3837
+NLP 1,dl_s4,naive_random,random,,dl_s4_sum_naive_random.txt,224,,,,0.1319,0.0246,0.0414,-0.2541,-0.4395,-0.3465
+NLP 2,dl_s5,naive_random,random,,dl_s5_sum_naive_random.txt,380,,,,0.1454,0.0514,0.0759,-0.2387,-0.3509,-0.2933
+Machine Learning Intro,ml_s1,naive_random,random,,ml_s1_sum_naive_random.txt,318,,,,0.1189,0.0406,0.0606,-0.3544,-0.4362,-0.3934
+Supervised Learning,ml_s2,naive_random,random,,ml_s2_sum_naive_random.txt,236,,,,0.1619,0.033,0.0549,-0.2935,-0.3527,-0.3211
+Unsupervised Learning,ml_s3,naive_random,random,,ml_s3_sum_naive_random.txt,339,,,,0.1404,0.0517,0.0755,-0.3123,-0.5373,-0.4253
+Evaluation & Model Selection,ml_s4,naive_random,random,,ml_s4_sum_naive_random.txt,304,,,,0.134,0.0458,0.0683,-0.3343,-0.4801,-0.4061
+Advanced Topics in ML,ml_s5,naive_random,random,,ml_s5_sum_naive_random.txt,186,,,,0.1735,0.0313,0.053,-0.2746,-0.5523,-0.4154
+Introduction to Deep Learning,dl_s1,qwen7b-ft,final,,dl_s1_sum_qwen7b-ft_final.txt,463,,,,0.4098,0.1556,0.2255,-0.0852,-0.2652,-0.1789
+Computer Vision 1,dl_s2,qwen7b-ft,final,,dl_s2_sum_qwen7b-ft_final.txt,692,,,,0.3669,0.2236,0.2779,-0.1396,-0.0837,-0.11
+Computer Vision 2,dl_s3,qwen7b-ft,final,,dl_s3_sum_qwen7b-ft_final.txt,347,,,,0.3569,0.0902,0.144,-0.0325,-0.0727,-0.051
+NLP 1,dl_s4,qwen7b-ft,final,,dl_s4_sum_qwen7b-ft_final.txt,551,,,,0.3782,0.1537,0.2186,-0.1536,-0.2946,-0.2245
+NLP 2,dl_s5,qwen7b-ft,final,,dl_s5_sum_qwen7b-ft_final.txt,664,,,,0.2944,0.1704,0.2159,-0.0326,-0.0621,-0.0457
+Machine Learning Intro,ml_s1,qwen7b-ft,final,,ml_s1_sum_qwen7b-ft_final.txt,495,,,,0.2774,0.1292,0.1763,-0.0082,-0.1888,-0.1002
+Supervised Learning,ml_s2,qwen7b-ft,final,,ml_s2_sum_qwen7b-ft_final.txt,691,,,,0.3742,0.1941,0.2556,-0.0594,-0.0649,-0.0604
+Unsupervised Learning,ml_s3,qwen7b-ft,final,,ml_s3_sum_qwen7b-ft_final.txt,582,,,,0.4087,0.2128,0.2799,0.0564,-0.026,0.0158
+Evaluation & Model Selection,ml_s4,qwen7b-ft,final,,ml_s4_sum_qwen7b-ft_final.txt,599,,,,0.3333,0.1938,0.2451,0.0232,-0.1342,-0.0556
+Advanced Topics in ML,ml_s5,qwen7b-ft,final,,ml_s5_sum_qwen7b-ft_final.txt,753,,,,0.3859,0.2413,0.2969,-0.0233,-0.0555,-0.0379
