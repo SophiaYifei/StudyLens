@@ -215,8 +215,8 @@ outputs/*.json
 # Data
 data/.DS_Store
 .DS_Store
-data/raw
-data/processed
+# data/raw
+# data/processed
 
 # checkpoints during the Fine-Tuning
 qwen-finetune-checkpoints/
