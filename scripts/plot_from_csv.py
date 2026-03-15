@@ -259,6 +259,53 @@ def plot_radar(avg_df, plots_dir):
     print(f"  Saved: {out}")
 
 
+def plot_finetune_train_test(avg_csv_path, plots_dir):
+    """Fig 7: Compare qwen7b-ft on train vs test topics."""
+    per_file = pd.read_csv(avg_csv_path.parent / "evaluation_results_all.csv")
+    
+    ft = per_file[per_file["model"] == "qwen7b-ft"].copy()
+    if ft.empty:
+        print("  No qwen7b-ft data found.")
+        return
+
+    test_topics = {"dl_s5", "ml_s5"}
+    ft["split"] = ft["topic_key"].apply(lambda x: "Test (unseen)" if x in test_topics else "Train")
+
+    metrics = ["rouge_l_f1", "bertscore_f1"]
+    labels = ["ROUGE-L F1", "BERTScore F1"]
+    if "avg_entailment_score" in ft.columns:
+        metrics.append("avg_entailment_score")
+        labels.append("NLI Entailment")
+
+    grouped = ft.groupby("split")[metrics].mean()
+
+    x = np.arange(len(metrics))
+    width = 0.35
+    fig, ax = plt.subplots(figsize=(8, 5))
+
+    train_vals = grouped.loc["Train"].values
+    test_vals = grouped.loc["Test (unseen)"].values
+
+    ax.bar(x - width/2, train_vals, width, label="Train (8 topics)", color="#42a5f5")
+    ax.bar(x + width/2, test_vals, width, label="Test (2 unseen topics)", color="#e91e63")
+
+    for i, (tv, uv) in enumerate(zip(train_vals, test_vals)):
+        ax.text(i - width/2, tv + 0.005, f"{tv:.3f}", ha="center", fontsize=9, fontweight="bold")
+        ax.text(i + width/2, uv + 0.005, f"{uv:.3f}", ha="center", fontsize=9, fontweight="bold")
+
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels)
+    ax.set_ylabel("Score")
+    ax.set_title("Qwen2.5-7B Fine-Tuned: Train vs. Test (Unseen) Topics")
+    ax.legend()
+    ax.axhline(y=0, color="gray", linewidth=0.5, linestyle="--")
+
+    plt.tight_layout()
+    out = plots_dir / "finetune_train_vs_test.png"
+    plt.savefig(out, bbox_inches="tight")
+    plt.close()
+    print(f"  Saved: {out}")
+
 # ═══════════════════════════════════════════════════════════════
 
 def main():
@@ -289,6 +336,9 @@ def main():
 
     # Fig 6: Radar
     plot_radar(avg_df, plots_dir)
+
+    # Fig 7: Fine-tune train vs test
+    plot_finetune_train_test(plots_dir.parent / "evaluation_averages.csv", plots_dir)
 
     print(f"\nAll plots saved to {plots_dir}")
 
