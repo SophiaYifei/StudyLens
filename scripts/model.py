@@ -68,6 +68,7 @@ class FirstSentenceSummarizer(BaseSummarizer):
             if i >= self.num_slides:
                 break
 
+            slide_sentence_found = False
             for shape in slide.shapes:
                 if hasattr(shape, "text") and shape.text:
                     text = shape.text.strip()
@@ -76,7 +77,10 @@ class FirstSentenceSummarizer(BaseSummarizer):
                         clean = sentence.strip()
                         if clean:
                             collected_sentences.append(clean)
+                            slide_sentence_found = True
                             break
+                    if slide_sentence_found:
+                        break
         return " ".join(collected_sentences)
 
     def summarize(self, text: str, final_pass: bool = True) -> str:
