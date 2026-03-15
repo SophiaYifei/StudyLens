@@ -11,6 +11,7 @@ import random
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 from pathlib import Path
+import re
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
@@ -33,6 +34,48 @@ class BaseSummarizer:
 
     def summarize(self, text):
         raise NotImplementedError("Subclasses must implement summarize()")
+
+# --- Naive Baseline: First Sentence from First 5 Slides ---
+class FirstSentenceSummarizer(BaseSummarizer):
+    """
+    Naive baseline: extract the first sentence from each of the first 5 slides.
+    Requires the original .pptx file path, not processed text.
+    This is a heuristic approach assuming slide titles/first sentences
+    capture the main topic of each slide.
+    """
+
+    def __init__(self, num_slides=5):
+        self.num_slides = num_slides
+
+    def summarize_from_pptx(self, filepath: str) -> str:
+        """Summarize by extracting first sentence from first N slides."""
+        from pptx import Presentation
+        from zipfile import BadZipFile
+
+        prs = Presentation(filepath)
+        collected_sentences = []
+
+        for i, slide in enumerate(prs.slides):
+            if i >= self.num_slides:
+                break
+
+            for shape in slide.shapes:
+                if hasattr(shape, "text") and shape.text:
+                    text = shape.text.strip()
+                    sentences = re.split(r'(?<=[.!?])\s+', text)
+                    for sentence in sentences:
+                        clean = sentence.strip()
+                        if clean:
+                            collected_sentences.append(clean)
+                            break
+        return " ".join(collected_sentences)
+
+    def summarize(self, text: str, final_pass: bool = True) -> str:
+        """Fallback: if called with text instead of pptx, use first 5 sentences."""
+        sentences = sent_tokenize(text)
+        k = min(self.num_slides, len(sentences))
+        return " ".join(sentences[:k])
+
 
 # --- Naive Baseline: Random Extractive ---
 class RandomExtractiveSummarizer(BaseSummarizer):
@@ -514,7 +557,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="StudyLens Summarization Pipeline")
     parser.add_argument("--model", type=str, required=True,
-                        choices=["random", "tfidf", "bart", "longt5", "bart-samsum", "led-arxiv", "qwen7b"],
+                        choices=["first5", "random", "tfidf", "bart", "longt5", "bart-samsum", "led-arxiv", "qwen7b"],
                         help="Which model to run")
     parser.add_argument("--num_sentences", type=int, default=15,
                         help="Number of sentences for extractive models (default: 15)")
@@ -528,7 +571,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Model dispatch
-    if args.model == "random":
+    if args.model == "first5":
+        model = FirstSentenceSummarizer(num_slides=5)
+    elif args.model == "random":
         model = RandomExtractiveSummarizer(num_sentences=args.num_sentences)
     elif args.model == "tfidf":
         model = TFIDFExtractiveSummarizer(num_sentences=args.num_sentences)
@@ -544,7 +589,10 @@ if __name__ == "__main__":
         model = QwenSummarizer(output_ratio=args.output_ratio)
 
     # Run strategies
-    if args.model == "random":
+    if args.model == "first5":
+        process_all_topics(args.input_dir, args.output_dir, model,
+                           model_tag="naive", strategy="first5")
+    elif args.model == "random":
         process_all_topics(args.input_dir, args.output_dir, model,
                            model_tag="naive", strategy="random")
     elif args.model == "tfidf":
