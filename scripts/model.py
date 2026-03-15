@@ -39,16 +39,22 @@ class BaseSummarizer:
 class FirstSentenceSummarizer(BaseSummarizer):
     """
     Naive baseline: extract the first sentence from each of the first 5 slides.
-    Requires the original .pptx file path, not processed text.
-    This is a heuristic approach assuming slide titles/first sentences
-    capture the main topic of each slide.
+
+    There are two usage modes:
+      * `summarize(text)`: expects preprocessed slide text (as used in the pipeline)
+        and returns the first sentence from up to the first `num_slides` sentences.
+      * `summarize_from_pptx(filepath)`: expects a path to a `.pptx` file and
+        extracts the first sentence from each of the first `num_slides` slides.
+
+    This is a heuristic approach assuming slide titles/first sentences capture
+    the main topic of each slide.
     """
 
     def __init__(self, num_slides=5):
         self.num_slides = num_slides
 
     def summarize_from_pptx(self, filepath: str) -> str:
-        """Summarize by extracting first sentence from first N slides."""
+        """Summarize a `.pptx` by extracting the first sentence from the first N slides."""
         from pptx import Presentation
         from zipfile import BadZipFile
 
@@ -71,7 +77,13 @@ class FirstSentenceSummarizer(BaseSummarizer):
         return " ".join(collected_sentences)
 
     def summarize(self, text: str, final_pass: bool = True) -> str:
-        """Fallback: if called with text instead of pptx, use first 5 sentences."""
+        """
+        Summarize preprocessed slide text by taking the first sentence from up to
+        `num_slides` sentences in the input.
+
+        This is used as a fallback/text-only baseline when the original `.pptx`
+        file is not available.
+        """
         sentences = sent_tokenize(text)
         k = min(self.num_slides, len(sentences))
         return " ".join(sentences[:k])
