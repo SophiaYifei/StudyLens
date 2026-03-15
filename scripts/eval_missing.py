@@ -219,9 +219,11 @@ def main():
 
     if existing_csv.exists():
         old_df = pd.read_csv(existing_csv)
-        # Remove any rows for models we're re-evaluating to avoid duplicates
-        new_models = set(new_df["model"].unique())
-        old_df = old_df[~old_df["model"].isin(new_models)]
+        # Remove any rows for (model, strategy, ratio) combos we're re-evaluating
+        key_cols = ["model", "strategy", "ratio"]
+        new_keys = set(new_df[key_cols].astype(str).agg("||".join, axis=1))
+        old_keys = old_df[key_cols].astype(str).agg("||".join, axis=1)
+        old_df = old_df[~old_keys.isin(new_keys)]
         combined = pd.concat([old_df, new_df], ignore_index=True)
         print(f"\nMerged with existing CSV ({len(old_df)} old + {len(new_df)} new "
               f"= {len(combined)} total rows)")
