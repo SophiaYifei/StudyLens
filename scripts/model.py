@@ -1,16 +1,15 @@
 # scripts/model.py
-import torch
-from transformers import pipeline, AutoTokenizer
-from nltk.tokenize import sent_tokenize
-import nltk
 import math
 import os
-import torch
-
 import random
-from sklearn.feature_extraction.text import TfidfVectorizer
-
+import re
 from pathlib import Path
+
+import nltk
+import torch
+from nltk.tokenize import sent_tokenize
+from sklearn.feature_extraction.text import TfidfVectorizer
+from transformers import pipeline, AutoTokenizer
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
@@ -29,10 +28,73 @@ DEVICE = 0 if torch.cuda.is_available() else -1
 
 # --- Base Class ---
 class BaseSummarizer:
-    """All summarizers must implement .summarize(text) -> str"""
+    """All summarizers must implement .summarize(text, final_pass: bool = True) -> str"""
 
-    def summarize(self, text):
+    def summarize(self, text: str, final_pass: bool = True) -> str:
         raise NotImplementedError("Subclasses must implement summarize()")
+
+# --- Naive Baseline: First Sentence from First 5 Slides ---
+class FirstSentenceSummarizer(BaseSummarizer):
+    """
+    Naive baseline: extract the first sentence from each of the first 5 slides.
+
+    There are two usage modes:
+      * `summarize(text)`: expects preprocessed slide text (as used in the pipeline)
+        and returns the first sentence from up to the first `num_slides` sentences.
+      * `summarize_from_pptx(filepath)`: expects a path to a `.pptx` file and
+        extracts the first sentence from each of the first `num_slides` slides.
+
+    This is a heuristic approach assuming slide titles/first sentences capture
+    the main topic of each slide.
+    """
+
+    def __init__(self, num_slides=5):
+        self.num_slides = num_slides
+
+    def summarize_from_pptx(self, filepath: str) -> str:
+        """Summarize a `.pptx` by extracting the first sentence from the first N slides."""
+        from pptx import Presentation
+        from zipfile import BadZipFile
+
+        try:
+            prs = Presentation(filepath)
+        except BadZipFile as exc:
+            # Provide a clear, deterministic error for invalid/corrupted .pptx inputs
+            raise ValueError(f"Invalid or corrupted .pptx file: {filepath}") from exc
+
+        collected_sentences = []
+
+        for i, slide in enumerate(prs.slides):
+            if i >= self.num_slides:
+                break
+
+            slide_sentence_found = False
+            for shape in slide.shapes:
+                if hasattr(shape, "text") and shape.text:
+                    text = shape.text.strip()
+                    sentences = re.split(r'(?<=[.!?])\s+', text)
+                    for sentence in sentences:
+                        clean = sentence.strip()
+                        if clean:
+                            collected_sentences.append(clean)
+                            slide_sentence_found = True
+                            break
+                    if slide_sentence_found:
+                        break
+        return " ".join(collected_sentences)
+
+    def summarize(self, text: str, final_pass: bool = True) -> str:
+        """
+        Summarize preprocessed slide text by taking the first sentence from up to
+        `num_slides` sentences in the input.
+
+        This is used as a fallback/text-only baseline when the original `.pptx`
+        file is not available.
+        """
+        sentences = sent_tokenize(text)
+        k = min(self.num_slides, len(sentences))
+        return " ".join(sentences[:k])
+
 
 # --- Naive Baseline: Random Extractive ---
 class RandomExtractiveSummarizer(BaseSummarizer):
@@ -514,7 +576,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="StudyLens Summarization Pipeline")
     parser.add_argument("--model", type=str, required=True,
-                        choices=["random", "tfidf", "bart", "longt5", "bart-samsum", "led-arxiv", "qwen7b"],
+                        choices=["first5", "random", "tfidf", "bart", "longt5", "bart-samsum", "led-arxiv", "qwen7b"],
                         help="Which model to run")
     parser.add_argument("--num_sentences", type=int, default=15,
                         help="Number of sentences for extractive models (default: 15)")
@@ -528,7 +590,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Model dispatch
-    if args.model == "random":
+    if args.model == "first5":
+        model = FirstSentenceSummarizer(num_slides=5)
+    elif args.model == "random":
         model = RandomExtractiveSummarizer(num_sentences=args.num_sentences)
     elif args.model == "tfidf":
         model = TFIDFExtractiveSummarizer(num_sentences=args.num_sentences)
@@ -544,7 +608,10 @@ if __name__ == "__main__":
         model = QwenSummarizer(output_ratio=args.output_ratio)
 
     # Run strategies
-    if args.model == "random":
+    if args.model == "first5":
+        process_all_topics(args.input_dir, args.output_dir, model,
+                           model_tag="naive", strategy="first5")
+    elif args.model == "random":
         process_all_topics(args.input_dir, args.output_dir, model,
                            model_tag="naive", strategy="random")
     elif args.model == "tfidf":
