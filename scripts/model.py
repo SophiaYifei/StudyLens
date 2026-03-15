@@ -56,7 +56,12 @@ class FirstSentenceSummarizer(BaseSummarizer):
         from pptx import Presentation
         from zipfile import BadZipFile
 
-        prs = Presentation(filepath)
+        try:
+            prs = Presentation(filepath)
+        except BadZipFile as exc:
+            # Provide a clear, deterministic error for invalid/corrupted .pptx inputs
+            raise ValueError(f"Invalid or corrupted .pptx file: {filepath}") from exc
+
         collected_sentences = []
 
         for i, slide in enumerate(prs.slides):
