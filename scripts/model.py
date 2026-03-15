@@ -1,17 +1,15 @@
 # scripts/model.py
-import torch
-from transformers import pipeline, AutoTokenizer
-from nltk.tokenize import sent_tokenize
-import nltk
 import math
 import os
-import torch
-
 import random
-from sklearn.feature_extraction.text import TfidfVectorizer
-
-from pathlib import Path
 import re
+from pathlib import Path
+
+import nltk
+import torch
+from nltk.tokenize import sent_tokenize
+from sklearn.feature_extraction.text import TfidfVectorizer
+from transformers import pipeline, AutoTokenizer
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
