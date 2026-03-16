@@ -17,7 +17,7 @@ from pathlib import Path
 from scripts.make_dataset import denoise_all_transcripts, load_all_documents
 from scripts.build_features import write_per_slide_set_ori_files
 
-# ── Paths ────────────────────────────────────────────────────────────────
+# ── Paths ───────────────────────────────────────────────────────────────
 ROOT_DIR      = Path(__file__).resolve().parent
 DATA_DIR      = ROOT_DIR / "data" / "raw"
 PROCESSED_DIR = ROOT_DIR / "data" / "processed"

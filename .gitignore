@@ -217,6 +217,7 @@ data/.DS_Store
 .DS_Store
 data/raw
 data/processed
+data/user_notes
 
 # checkpoints during the Fine-Tuning
 qwen-finetune-checkpoints/
