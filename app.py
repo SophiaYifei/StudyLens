@@ -291,16 +291,29 @@ class SummarizeRequest(BaseModel):
     notes_content: str = ""
 
 
+# @app.post("/api/summarize")
+# async def summarize(req: SummarizeRequest):
+#     """Generate an AI summary from slides + transcript + notes."""
+#     slides = _extract_slide_text(req.topic_id)
+#     transcript = _get_transcript(req.topic_id)
+#     combined = (f"SLIDE TEXT:\n{slides[:20000]}\n\n"
+#                 f"TRANSCRIPT:\n{transcript[:20000]}")
+#     if req.notes_content:
+#         combined += f"\n\nSTUDENT NOTES:\n{req.notes_content[:5000]}"
+
 @app.post("/api/summarize")
 async def summarize(req: SummarizeRequest):
-    """Generate an AI summary from slides + transcript + notes."""
     slides = _extract_slide_text(req.topic_id)
     transcript = _get_transcript(req.topic_id)
+    
+    # Use notes from request, fall back to saved notes
+    notes = req.notes_content if req.notes_content else _get_notes(req.topic_id)
+    
     combined = (f"SLIDE TEXT:\n{slides[:20000]}\n\n"
                 f"TRANSCRIPT:\n{transcript[:20000]}")
-    if req.notes_content:
-        combined += f"\n\nSTUDENT NOTES:\n{req.notes_content[:5000]}"
-
+    if notes:
+        combined += f"\n\nSTUDENT NOTES:\n{notes[:5000]}"
+        
     system = (
         "You are StudyLens, an expert academic summarizer for CS courses. "
         "Create clear, structured summaries for exam review. "
@@ -332,18 +345,33 @@ class ChatRequest(BaseModel):
     history: list = []
 
 
+# @app.post("/api/chat")
+# async def chat(req: ChatRequest):
+#     slides = _extract_slide_text(req.topic_id)
+#     transcript = _get_transcript(req.topic_id)
+    
+#     # ADD THIS LINE for debugging
+#     logger.info(f"Chat context: slides={len(slides)} chars, transcript={len(transcript)} chars, notes={len(req.notes_content)} chars")
+    
+#     context = (f"SLIDE TEXT:\n{slides[:15000]}\n\n"
+#                f"TRANSCRIPT:\n{transcript[:15000]}")
+#     if req.notes_content:
+#         context += f"\n\nYOUR NOTES:\n{req.notes_content[:3000]}"
+
 @app.post("/api/chat")
 async def chat(req: ChatRequest):
     slides = _extract_slide_text(req.topic_id)
     transcript = _get_transcript(req.topic_id)
     
-    # ADD THIS LINE for debugging
-    logger.info(f"Chat context: slides={len(slides)} chars, transcript={len(transcript)} chars, notes={len(req.notes_content)} chars")
+    # Use notes from request, fall back to saved notes
+    notes = req.notes_content if req.notes_content else _get_notes(req.topic_id)
+    
+    logger.info(f"Chat context: slides={len(slides)} chars, transcript={len(transcript)} chars, notes={len(notes)} chars")
     
     context = (f"SLIDE TEXT:\n{slides[:15000]}\n\n"
                f"TRANSCRIPT:\n{transcript[:15000]}")
-    if req.notes_content:
-        context += f"\n\nYOUR NOTES:\n{req.notes_content[:3000]}"
+    if notes:
+        context += f"\n\nYOUR NOTES:\n{notes[:3000]}"
 
     system = (
         "You are StudyLens, the student's personal study assistant. "
