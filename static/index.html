@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyLens</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.1/marked.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<style>
+:root{--bg-p:#fafaf9;--bg-s:#fff;--bg-t:#f5f5f4;--bg-h:#e7e5e4;--tx-p:#1c1917;--tx-s:#57534e;--tx-m:#a8a29e;--ac:#3b5998;--ac-l:#e8edf5;--ac-h:#2d4a86;--bd:#e7e5e4;--bd-l:#f0efee;--r:10px;--rs:6px;--fb:'DM Sans',-apple-system,sans-serif;--fd:'Playfair Display',Georgia,serif;--fm:'JetBrains Mono',monospace;--th:52px}
+[data-theme=dark]{--bg-p:#0c0a09;--bg-s:#1c1917;--bg-t:#292524;--bg-h:#3a3633;--tx-p:#fafaf9;--tx-s:#a8a29e;--tx-m:#78716c;--ac:#6d8fd4;--ac-l:#1e293b;--ac-h:#8aaae8;--bd:#292524;--bd-l:#1c1917}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--fb);background:var(--bg-p);color:var(--tx-p);height:100vh;overflow:hidden;transition:background .3s,color .3s}
+.app{display:flex;flex-direction:column;height:100vh}
+.topbar{height:var(--th);background:var(--bg-s);border-bottom:1px solid var(--bd);display:flex;align-items:center;padding:0 20px;gap:16px;z-index:100;flex-shrink:0}
+.topbar-logo{font-family:var(--fd);font-size:20px;font-weight:700;color:var(--ac);display:flex;align-items:center;gap:8px}
+.topbar-logo svg{width:24px;height:24px}
+.tc{flex:1;display:flex;align-items:center;justify-content:center;gap:4px}
+.mb{padding:6px 16px;border:1px solid var(--bd);background:transparent;color:var(--tx-s);font-family:var(--fb);font-size:13px;font-weight:500;cursor:pointer;transition:all .2s}
+.mb:first-child{border-radius:var(--rs) 0 0 var(--rs)}.mb:last-child{border-radius:0 var(--rs) var(--rs) 0}
+.mb.a{background:var(--ac);color:#fff;border-color:var(--ac)}
+.ta{display:flex;align-items:center;gap:8px}
+.ib{width:34px;height:34px;border:1px solid var(--bd);background:transparent;border-radius:var(--rs);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--tx-s);transition:all .2s}
+.ib:hover{background:var(--bg-h);color:var(--tx-p)}.ib.a{background:var(--ac-l);color:var(--ac);border-color:var(--ac)}
+.mc{flex:1;display:flex;overflow:hidden}
+
+.sb{width:260px;min-width:160px;background:var(--bg-s);border-right:1px solid var(--bd);display:flex;flex-direction:column;flex-shrink:0;overflow:hidden;transition:min-width .2s,width .2s}
+.sb.hd{width:0!important;min-width:0!important;overflow:hidden}
+.st{display:flex;border-bottom:1px solid var(--bd)}
+.stb{flex:1;padding:12px;font-size:13px;font-weight:500;text-align:center;cursor:pointer;color:var(--tx-m);border:none;border-bottom:2px solid transparent;background:none;font-family:var(--fb)}
+.stb.a{color:var(--ac);border-bottom-color:var(--ac)}.stb:hover{color:var(--tx-p)}
+.sl{flex:1;overflow-y:auto;padding:8px}
+.ti{padding:12px 14px;border-radius:var(--rs);cursor:pointer;margin-bottom:2px;transition:all .15s}
+.ti:hover{background:var(--bg-h)}.ti.a{background:var(--ac);color:#fff}
+.ti.a .tw{color:rgba(255,255,255,.7)}.ti.a .tc2{display:flex}
+.tw{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tx-m);margin-bottom:2px}
+.tt{font-size:14px;font-weight:500;line-height:1.3;display:flex;align-items:center;justify-content:space-between}
+.tc2{display:none;width:18px;height:18px;align-items:center;justify-content:center;flex-shrink:0}
+
+.rh{width:5px;cursor:col-resize;background:transparent;flex-shrink:0;z-index:10;transition:background .2s}
+.rh:hover,.rh.dr{background:var(--ac);opacity:.3}
+.rv{height:5px;cursor:row-resize;background:transparent;flex-shrink:0;z-index:10;transition:background .2s}
+.rv:hover,.rv.dr{background:var(--ac);opacity:.3}
+
+.cp{flex:1;display:flex;flex-direction:column;min-width:300px;background:var(--bg-p)}
+.cc{flex:1;overflow-y:auto;padding:32px;min-height:0;} /* min-height:0 让出空间，防止挤爆底部 */
+.es{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:16px;color:var(--tx-m)}
+.es svg{width:48px;height:48px;opacity:.3}.es h3{font-size:18px;font-weight:600;color:var(--tx-s)}
+.es p{font-size:14px;max-width:360px;text-align:center;line-height:1.5}
+.sb2{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:var(--ac);color:#fff;border:none;border-radius:var(--r);font-family:var(--fb);font-size:15px;font-weight:600;cursor:pointer;transition:all .2s;margin-top:8px}
+.sb2:hover{background:var(--ac-h);transform:translateY(-1px)}.sb2:disabled{opacity:.6;cursor:not-allowed;transform:none}
+.sb2 svg{width:18px;height:18px}
+.sb3{padding:10px 20px;font-size:13px;background:var(--bg-t);color:var(--tx-p);border:1px solid var(--bd);border-radius:var(--rs);cursor:pointer;font-family:var(--fb);font-weight:500;margin-top:8px;transition:all .2s}
+.sb3:hover{border-color:var(--ac)}
+.sc{max-width:720px;margin:0 auto}
+.sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:8px}
+.slbl{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--ac)}
+.smd{font-size:11px;padding:3px 10px;border-radius:20px;font-weight:500}
+.smd-ai{background:var(--ac-l);color:var(--ac)}.smd-ft{background:#fff3e0;color:#e65100}
+.stog{display:flex;gap:6px;margin-top:20px;flex-wrap:wrap}
+.stog button{padding:8px 16px;font-size:12px;font-weight:600;border:1px solid var(--bd);background:var(--bg-t);color:var(--tx-s);border-radius:var(--rs);cursor:pointer;font-family:var(--fb);transition:all .2s}
+.stog button.a{background:var(--ac);color:#fff;border-color:var(--ac)}
+.stog button:hover:not(.a){background:var(--bg-h)}
+
+.md{font-size:15px;line-height:1.75;color:var(--tx-p)}
+.md h1,.md h2,.md h3{margin-top:20px;margin-bottom:8px;font-weight:600}.md h2{font-size:18px}.md h3{font-size:16px}
+.md ul,.md ol{padding-left:24px;margin:8px 0}.md li{margin-bottom:4px}
+.md strong{color:var(--ac)}.md code{font-family:var(--fm);font-size:13px;background:var(--bg-t);padding:2px 6px;border-radius:4px}
+.md pre{background:var(--bg-t);padding:16px;border-radius:var(--rs);overflow-x:auto;margin:12px 0}.md pre code{background:none;padding:0}.md p{margin-bottom:8px}
+
+.sv{max-width:100%;margin:0 auto}.pdf-frame{width:100%;height:calc(100vh - var(--th) - 80px);border:none;border-radius:var(--r)}
+.scard{background:var(--bg-s);border:1px solid var(--bd);border-radius:var(--r);padding:24px;margin-bottom:16px}
+.sn{font-size:11px;font-weight:600;color:var(--tx-m);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.stxt{font-size:14px;line-height:1.6;white-space:pre-wrap}
+
+.spin{display:inline-block;width:20px;height:20px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:sp .6s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.td{display:inline-flex;gap:4px;align-items:center;padding:8px 0}
+.td span{width:7px;height:7px;background:var(--tx-m);border-radius:50%;animation:bn 1.4s ease-in-out infinite}
+.td span:nth-child(2){animation-delay:.2s}.td span:nth-child(3){animation-delay:.4s}
+@keyframes bn{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-8px)}}
+
+.cs{border-top:1px solid var(--bd);background:var(--bg-s);flex-shrink:0; display:flex; flex-direction:column;}
+.cm{flex:1; overflow-y:auto; padding:16px 24px; min-height:0;} 
+.cir{display:flex;align-items:center;padding:12px 24px;gap:10px;border-top:1px solid var(--bd-l);flex-shrink:0;}
+
+.msg{margin-bottom:12px;display:flex;gap:10px}
+.av{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;margin-top:2px}
+.msg.u .av{background:var(--ac);color:#fff}.msg.ai .av{background:var(--bg-t);color:var(--tx-s)}
+.mb2{font-size:14px;line-height:1.6;max-width:680px}
+.mb2 h1,.mb2 h2,.mb2 h3{font-size:15px;font-weight:600;margin:8px 0 4px}
+.mb2 ul{padding-left:20px;margin:4px 0}.mb2 li{margin-bottom:2px}
+.mb2 code{font-family:var(--fm);font-size:12px;background:var(--bg-t);padding:1px 4px;border-radius:3px}
+.mb2 strong{color:var(--ac)}.mb2 p{margin-bottom:6px}
+
+.chb{width:34px;height:34px;border:none;background:none;color:var(--tx-m);cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:var(--rs);transition:all .2s}
+.chb:hover{background:var(--bg-h);color:var(--tx-p)}
+.ci{flex:1;padding:10px 16px;border:1px solid var(--bd);border-radius:24px;font-family:var(--fb);font-size:14px;background:var(--bg-p);color:var(--tx-p);outline:none;transition:border-color .2s}
+.ci:focus{border-color:var(--ac)}.ci::placeholder{color:var(--tx-m)}
+.csb{width:36px;height:36px;border-radius:50%;border:none;background:var(--ac);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.csb:hover{background:var(--ac-h)}.csb:disabled{opacity:.4;cursor:not-allowed}
+
+.rp{width:320px;min-width:200px;background:var(--bg-s);border-left:1px solid var(--bd);display:flex;flex-direction:column;flex-shrink:0;overflow:hidden;transition:min-width .2s,width .2s}
+.rp.hd{width:0!important;min-width:0!important;overflow:hidden}
+.ph{padding:14px 18px;font-size:13px;font-weight:600;color:var(--tx-p);border-bottom:1px solid var(--bd-l);display:flex;align-items:center;gap:8px;flex-shrink:0}
+.ph svg{width:16px;height:16px;color:var(--ac)}
+.pb{flex:1;overflow-y:auto;padding:14px 18px}
+.rs{font-size:13px;line-height:1.6;color:var(--tx-s);overflow-y:auto;flex-shrink:0}
+.rs .pb{padding:12px 18px}.rs .md{font-size:13px}
+.na{width:100%;height:100%;border:none;resize:none;font-family:var(--fm);font-size:13px;line-height:1.7;color:var(--tx-p);background:transparent;outline:none;padding:0}
+.na::placeholder{color:var(--tx-m)}
+.ns{padding:8px 18px;font-size:11px;color:var(--tx-m);border-top:1px solid var(--bd-l);display:flex;align-items:center;gap:6px;flex-shrink:0}
+.ps{display:flex;flex-direction:column;flex:1;min-height:0}
+
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--bd);border-radius:3px}::-webkit-scrollbar-thumb:hover{background:var(--tx-m)}
+
+body.is-dragging { user-select: none !important; }
+body.is-dragging iframe { pointer-events: none !important; }
+body.is-dragging .sb, body.is-dragging .rp, body.is-dragging .cs, body.is-dragging .rs { transition: none !important; }
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="topbar">
+    <div class="topbar-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>StudyLens</div>
+    <div class="tc">
+      <button class="mb a" onclick="setMode('review')" id="mr">Review Mode</button>
+      <button class="mb" onclick="setMode('lecture')" id="ml">Lecture Mode</button>
+    </div>
+    <div class="ta">
+      <button class="ib a" id="bs" onclick="togglePanel('sb')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg></button>
+      <button class="ib a" id="br" onclick="togglePanel('rp')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="15" y1="3" x2="15" y2="21"/></svg></button>
+      <button class="ib" onclick="toggleTheme()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
+    </div>
+  </div>
+  <div class="mc">
+    <div class="sb" id="sb">
+      <div class="st">
+        <button class="stb a" onclick="setSTab('m')" id="tm">Modules</button>
+        <button class="stb" onclick="setSTab('t')" id="tt2">Transcripts</button>
+      </div>
+      <div class="sl" id="slist"></div>
+    </div>
+    <div class="rh" id="rl"></div>
+    <div class="cp">
+      <div class="cc" id="cc">
+        <div class="es"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><h3>Welcome to StudyLens</h3><p>Select a lecture to begin.</p></div>
+      </div>
+      <div class="rv" id="cvh" style="display:none"></div>
+      <div class="cs" id="cs" style="display:none">
+        <div class="cm" id="cmsg" style="display:none"></div>
+        <div class="cir">
+          <button class="chb" onclick="clearChat()" title="Clear"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></button>
+          <input class="ci" id="cin" placeholder="Ask about this lecture..." onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendChat()}"/>
+          <button class="csb" onclick="sendChat()" id="csnd"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="rh" id="rr"></div>
+    <div class="rp" id="rp">
+        <div class="rs" id="rsum" style="display:none;flex-shrink:0;height:40%;overflow-y:auto;border-bottom:1px solid var(--bd)">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Summary</div>
+          <div class="pb" id="rsbody"></div>
+        </div>
+        <div class="rv" id="rvh" style="display:none"></div>
+        <div class="ps" style="display:flex;flex-direction:column;flex:1;min-height:0">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Notes</div>
+          <div class="pb" style="flex:1;overflow-y:auto"><textarea class="na" id="na" placeholder="Start typing your notes..."></textarea></div>
+          <div class="ns"><span id="ns-dot" style="width:6px;height:6px;border-radius:50%;background:var(--success,#22c55e);display:inline-block"></span> <span id="ns-status">Auto-saved</span></div>
+        </div>
+      </div>
+  </div>
+</div>
+<script>
+marked.setOptions({breaks:true,gfm:true});
+let S={topics:[],cur:null,td:null,mode:'review',stab:'m',theme:localStorage.getItem('sl-t')||'light',
+  ch:[],aiSum:null,view:'none',sir:false,pv:{sb:true,rp:true},notesTimer:null};
+
+function fixLatex(t){
+  if(!t)return'';
+  t=t.replace(/\\\[/g,'$$').replace(/\\\]/g,'$$').replace(/\\\(/g,'$').replace(/\\\)/g,'$');
+  t=t.replace(/\$\$([\s\S]*?)\$\$/g,(m,inner)=>'$$'+inner.replace(/\n/g,' ').trim()+'$$');
+  t=t.replace(/\$([^$]*\n[^$]*)\$/g,(m,inner)=>inner.includes('\\begin')?'$$'+inner.replace(/\n/g,' ').trim()+'$$':m);
+  return t;
+}
+function rmd(t){return t?marked.parse(fixLatex(t)):'';}
+function mth(el){if(typeof renderMathInElement==='function')renderMathInElement(el,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});}
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function gn(){return document.getElementById('na').value;}
+
+async function init(){applyTheme();S.topics=await(await fetch('/api/topics')).json();rSb();}
+function applyTheme(){document.documentElement.setAttribute('data-theme',S.theme);}
+function toggleTheme(){S.theme=S.theme==='light'?'dark':'light';localStorage.setItem('sl-t',S.theme);applyTheme();}
+
+function togglePanel(p){
+  S.pv[p]=!S.pv[p];
+  document.getElementById(p).classList.toggle('hd',!S.pv[p]);
+  document.getElementById(p==='sb'?'bs':'br').classList.toggle('a',S.pv[p]);
+}
+
+function setMode(m){S.mode=m;document.getElementById('mr').classList.toggle('a',m==='review');document.getElementById('ml').classList.toggle('a',m==='lecture');if(S.cur)rC();}
+function setSTab(t){S.stab=t;document.getElementById('tm').classList.toggle('a',t==='m');document.getElementById('tt2').classList.toggle('a',t==='t');rSb();}
+
+function rSb(){document.getElementById('slist').innerHTML=S.topics.map(t=>`<div class="ti ${S.cur===t.id?'a':''}" onclick="sel('${t.id}')"><div class="tw">Week ${t.week} · ${t.course}</div><div class="tt"><span>${S.stab==='t'?'Transcript: ':''}${t.title}</span><span class="tc2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span></div></div>`).join('');}
+
+async function sel(id){
+  S.cur=id;S.aiSum=null;S.view='none';S.sir=false;S.ch=[];rSb();
+  document.getElementById('cc').innerHTML='<div class="es"><div class="spin" style="border-color:var(--bd);border-top-color:var(--ac);width:32px;height:32px;border-width:3px"></div><p>Loading...</p></div>';
+  S.td=await(await fetch(`/api/topics/${id}`)).json();
+  document.getElementById('na').value=S.td.notes||'';
+  rC();
+  
+  // 彻底修复：点击课程时，高度重置为自动，并隐藏多余区域
+  document.getElementById('cs').style.display='';
+  document.getElementById('cs').style.height='auto'; 
+  document.getElementById('cmsg').innerHTML='';
+  document.getElementById('cmsg').style.display='none';
+  document.getElementById('cvh').style.display='none';
+  
+  document.getElementById('rsum').style.display='none';
+  document.getElementById('rvh').style.display='none';
+}
+
+function rC(){
+  const el=document.getElementById('cc');if(!S.td)return;
+
+  if(S.mode==='lecture'){
+    rSlides(el);
+    return;
+  }
+
+  // Review mode: after chat starts, show slides in center
+  if(S.sir){
+    rSlides(el);
+    return;
+  }
+
+  if(S.view==='ai'||S.view==='ft'){
+    const txt=S.view==='ft'?S.td.precomputed_summary:S.aiSum;
+    const lbl=S.view==='ft'?'Qwen2.5-7B Fine-Tuned':'Nemotron 120B';
+    const cls=S.view==='ft'?'smd-ft':'smd-ai';
+    el.innerHTML=`<div class="sc"><div class="sh"><span class="slbl">Summary</span><span class="smd ${cls}">${lbl}</span></div><div class="md" id="sren">${rmd(txt)}</div><div class="stog">${S.aiSum?`<button class="${S.view==='ai'?'a':''}" onclick="sw('ai')">AI Generated</button>`:`<button onclick="doSum()">Generate AI Summary</button>`}${S.td.precomputed_summary?`<button class="${S.view==='ft'?'a':''}" onclick="sw('ft')">Qwen-FT</button>`:''}</div></div>`;
+    mth(document.getElementById('sren'));
+    return;
+  }
+
+  el.innerHTML=`<div class="es"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:42px;height:42px"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><h3>${S.td.title}</h3><p>Generate a summary from slides, transcript, and your notes.</p><button class="sb2" onclick="doSum()" id="sbtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Summarize This Lecture</button>${S.td.precomputed_summary?'<br><button class="sb3" onclick="sw(\'ft\')">View Pre-computed Qwen-FT Summary</button>':''}</div>`;
+}
+
+function sw(v){S.view=v;rC();}
+
+function rSlides(el){
+  if(S.td.has_slides_pdf){
+    el.innerHTML=`<div class="sv"><iframe class="pdf-frame" src="/api/slides-pdf/${S.cur}"></iframe></div>`;
+    return;
+  }
+  const txt=S.td.slides_text||'';
+  const parts=txt.split(/---\s*Slide\s+\d+\s*---/).filter(s=>s.trim());
+  if(!parts.length){el.innerHTML='<div class="es"><p>No slides available.</p></div>';return;}
+  el.innerHTML=`<div class="sv">${parts.map((p,i)=>`<div class="scard"><div class="sn">Slide ${i+1}</div><div class="stxt">${esc(p.trim())}</div></div>`).join('')}</div>`;
+}
+
+async function doSum(){
+  const btn=document.getElementById('sbtn');
+  if(btn){btn.disabled=true;btn.innerHTML='<span class="spin"></span> Generating...';}
+  else{document.getElementById('cc').innerHTML='<div class="es"><div class="spin" style="border-color:var(--bd);border-top-color:var(--ac);width:32px;height:32px;border-width:3px"></div><p>Generating AI summary...</p></div>';}
+  try{
+    const r=await fetch('/api/summarize',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({topic_id:S.cur,notes_content:gn()})});
+    const d=await r.json();S.aiSum=d.summary;S.view='ai';rC();
+  }catch(e){document.getElementById('cc').innerHTML=`<div class="es"><h3>Error</h3><p>${e.message}</p></div>`;}
+}
+
+async function sendChat(){
+  const inp=document.getElementById('cin');const q=inp.value.trim();if(!q||!S.cur)return;inp.value='';
+
+  if(!S.sir){
+    S.sir=true;
+    // 首次发送消息：展开面板并显示对应区域
+    document.getElementById('cmsg').style.display='';
+    document.getElementById('cvh').style.display='';
+    document.getElementById('cs').style.height='40vh'; 
+    
+    const txt=S.aiSum||S.td.precomputed_summary;
+    if(txt){
+      document.getElementById('rsum').style.display='';
+      document.getElementById('rvh').style.display='';
+      const b=document.getElementById('rsbody');
+      b.innerHTML='<div class="md">'+rmd(txt)+'</div>';
+      mth(b);
+    }
+    rC();
+  }
+
+  S.ch.push({role:'user',content:q});rChat();
+
+  const msgs=document.getElementById('cmsg');
+  const ti=document.createElement('div');ti.className='msg ai';ti.id='tind';
+  ti.innerHTML='<div class="av">AI</div><div class="mb2"><div class="td"><span></span><span></span><span></span></div></div>';
+  msgs.appendChild(ti);msgs.scrollTop=msgs.scrollHeight;
+
+  document.getElementById('csnd').disabled=true;
+  try{
+    const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({topic_id:S.cur,question:q,notes_content:gn(),history:S.ch.slice(-6)})});
+    const d=await r.json();
+    S.ch.push({role:'assistant',content:d.answer});
+  }catch(e){S.ch.push({role:'assistant',content:'Sorry, an error occurred.'});}
+  const t=document.getElementById('tind');if(t)t.remove();
+  rChat();document.getElementById('csnd').disabled=false;
+}
+
+function rChat(){
+  const el=document.getElementById('cmsg');
+  el.innerHTML=S.ch.map(m=>`<div class="msg ${m.role==='user'?'u':'ai'}"><div class="av">${m.role==='user'?'Y':'AI'}</div><div class="mb2">${m.role==='assistant'?rmd(m.content):esc(m.content)}</div></div>`).join('');
+  el.querySelectorAll('.msg.ai .mb2').forEach(mth);
+  el.scrollTop=el.scrollHeight;
+}
+
+function clearChat(){
+  S.ch=[];S.sir=false;
+  document.getElementById('rsum').style.display='none';
+  document.getElementById('rvh').style.display='none';
+  document.getElementById('cmsg').innerHTML='';
+  
+  // 清理对话后，面板缩回到只有输入框
+  document.getElementById('cmsg').style.display='none';
+  document.getElementById('cvh').style.display='none';
+  document.getElementById('cs').style.height='auto'; 
+  
+  rC();
+}
+
+// ═══ Notes autosave ═══
+document.getElementById('na').addEventListener('input',()=>{
+  clearTimeout(S.notesTimer);
+  const dot=document.getElementById('ns-dot');
+  const st=document.getElementById('ns-status');
+  if(dot)dot.style.background='var(--warning, #f59e0b)';
+  if(st)st.textContent='Saving...';
+  S.notesTimer=setTimeout(async()=>{
+    if(!S.cur)return;
+    try{
+      await fetch('/api/notes',{method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({topic_id:S.cur,content:document.getElementById('na').value})});
+      if(dot)dot.style.background='var(--success, #22c55e)';
+      if(st)st.textContent='Auto-saved';
+    }catch(e){
+      if(dot)dot.style.background='#ef4444';
+      if(st)st.textContent='Save failed';
+    }
+  },1000);
+});
+
+// ═══ 优化的拖拽大小逻辑 ═══
+function initR(){
+  rz('rl','sb','left');
+  rz('rr','rp','right');
+
+  // 右侧面板垂直切分
+  const rvh=document.getElementById('rvh');
+  const rsum=document.getElementById('rsum');
+  const rpEl=document.getElementById('rp');
+  if(rvh&&rsum){
+    rvh.addEventListener('mousedown',e=>{
+      e.preventDefault();
+      document.body.classList.add('is-dragging'); 
+      const sy=e.clientY;
+      const sh=rsum.offsetHeight;
+      const rpH=rpEl.offsetHeight;
+      const notesMinH=80; 
+      rvh.classList.add('dr');
+      const mv=e2=>{
+        const newH=Math.max(60, Math.min(rpH-notesMinH, sh+(e2.clientY-sy)));
+        rsum.style.height=newH+'px';
+        rsum.style.maxHeight='none';
+      };
+      const up=()=>{
+        rvh.classList.remove('dr');
+        document.body.classList.remove('is-dragging');
+        document.removeEventListener('mousemove',mv);
+        document.removeEventListener('mouseup',up);
+      };
+      document.addEventListener('mousemove',mv);document.addEventListener('mouseup',up);
+    });
+  }
+
+  // 中间面板垂直切分 (Chatbot 面板)
+  const cvh=document.getElementById('cvh');
+  const csEl=document.getElementById('cs');
+  const cpEl=cvh?cvh.closest('.cp'):null;
+  if(cvh&&csEl&&cpEl){
+    cvh.addEventListener('mousedown',e=>{
+      e.preventDefault();
+      document.body.classList.add('is-dragging'); 
+      const sy=e.clientY;
+      const sh=csEl.offsetHeight;
+      const cpH=cpEl.offsetHeight;
+      cvh.classList.add('dr');
+      const mv=e2=>{
+        // 关键修复：增加最小高度限制到120px，保证完全覆盖输入框及边距
+        const newH=Math.max(120, Math.min(cpH-100, sh-(e2.clientY-sy)));
+        csEl.style.height=newH+'px';
+      };
+      const up=()=>{
+        cvh.classList.remove('dr');
+        document.body.classList.remove('is-dragging');
+        document.removeEventListener('mousemove',mv);
+        document.removeEventListener('mouseup',up);
+      };
+      document.addEventListener('mousemove',mv);document.addEventListener('mouseup',up);
+    });
+  }
+}
+
+// 左右侧边栏水平拖动
+function rz(hid,pid,side){
+  const h=document.getElementById(hid);const p=document.getElementById(pid);
+  if(!h||!p)return;
+  h.addEventListener('mousedown',e=>{
+    e.preventDefault();
+    document.body.classList.add('is-dragging'); 
+    const sx=e.clientX;
+    const sw=p.offsetWidth;
+    h.classList.add('dr');
+    const mv=e2=>{
+      p.style.width=Math.max(160,sw+(side==='left'?1:-1)*(e2.clientX-sx))+'px';
+    };
+    const up=()=>{
+      h.classList.remove('dr');
+      document.body.classList.remove('is-dragging');
+      document.removeEventListener('mousemove',mv);
+      document.removeEventListener('mouseup',up);
+    };
+    document.addEventListener('mousemove',mv);document.addEventListener('mouseup',up);
+  });
+}
+
+initR();init();
+</script>
+</body>
+</html>
