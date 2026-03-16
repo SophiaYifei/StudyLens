@@ -334,27 +334,26 @@ class ChatRequest(BaseModel):
 
 @app.post("/api/chat")
 async def chat(req: ChatRequest):
-    """Answer a student question using lecture materials as context (RAG)."""
     slides = _extract_slide_text(req.topic_id)
     transcript = _get_transcript(req.topic_id)
+    
+    # ADD THIS LINE for debugging
+    logger.info(f"Chat context: slides={len(slides)} chars, transcript={len(transcript)} chars, notes={len(req.notes_content)} chars")
+    
     context = (f"SLIDE TEXT:\n{slides[:15000]}\n\n"
                f"TRANSCRIPT:\n{transcript[:15000]}")
     if req.notes_content:
         context += f"\n\nYOUR NOTES:\n{req.notes_content[:3000]}"
 
     system = (
-        "You are StudyLens, the student's personal study assistant and TA. "
-        "Speak directly to the student using 'you' and 'your'. "
-        "Be warm, helpful, and concise.\n\n"
-        "Style rules:\n"
-        "- Say 'your notes mention...' not 'the student notes contain...'\n"
-        "- Say 'In the slides, you can see...' not 'The slides show...'\n"
-        "- Be conversational but accurate, like a friendly TA\n"
-        "- Use markdown and $...$ for math. Keep LaTeX on single lines.\n"
-        "- Cite sources naturally: 'from your slides', 'the transcript'\n"
-        "- If not in materials: 'That wasn't covered here, but...'\n"
-        "- Keep under 250 words\n\n"
-        f"LECTURE MATERIALS:\n{context}"
+        "You are StudyLens, the student's personal study assistant. "
+        "You MUST answer based on the LECTURE MATERIALS provided below. "
+        "ALWAYS cite specific slide numbers or transcript content. "
+        "If a student asks a concept question, find the relevant part in the slides/transcript and reference it. "
+        "If you cannot find the answer in the materials, say 'I couldn't find this in your lecture materials.'\n\n"
+        "IMPORTANT: The lecture materials are provided after this system message. READ THEM CAREFULLY.\n\n"
+        "Style: Use 'you/your', be warm like a TA. Use markdown and $...$ for math.\n\n"
+        f"=== LECTURE MATERIALS ===\n{context}"
     )
     messages = [
         {"role": h["role"], "content": h["content"]}
