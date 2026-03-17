@@ -1,4 +1,10 @@
-# scripts/model.py
+"""
+scripts/model.py - Summarization models for StudyLens.
+
+AI Attribution: Code co-authored with Claude (Anthropic, https://claude.ai)
+for structural design, debugging, and documentation.
+"""
+
 import math
 import os
 import random
@@ -184,6 +190,7 @@ class TFIDFExtractiveSummarizer(BaseSummarizer):
 class BARTSummarizer(BaseSummarizer):
 
     def __init__(self):
+        """Initialize BART-CNN summarization pipeline."""
         # Load the HuggingFace pipeline once
         self.model_name = "facebook/bart-large-cnn"
         self.pipe = pipeline("summarization", model=self.model_name, device=DEVICE)
@@ -191,6 +198,7 @@ class BARTSummarizer(BaseSummarizer):
         self.max_input_tokens = 1024
 
     def _count_tokens(self, text):
+        """Count BPE tokens in text."""
         # Use self.tokenizer to count tokens in text
         # Return integer
         return len(self.tokenizer.encode(text, add_special_tokens=False))
@@ -244,6 +252,7 @@ class BARTSummarizer(BaseSummarizer):
 
 
     def _summarize_single(self, text: str, max_length=150, min_length=40) -> str:
+        """Summarize a single chunk within token limits."""
         # Call self.pipe(text, max_length=..., min_length=..., do_sample=False)
         # Return the summary_text string
 

@@ -4,6 +4,9 @@ Fetch content from loaded raw data (PPT, notes, transcripts), create one combine
 source file per topic in data/processed
 Raw files are loaded by scripts.make_dataset.load_all_documents(data/raw); this
 module consumes that document list.
+
+AI Attribution: Code co-authored with Claude (Anthropic, https://claude.ai)
+for structural design, debugging, and documentation.
 """
 
 import re, json

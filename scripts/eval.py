@@ -16,11 +16,11 @@ Usage:
     python scripts/eval.py --run-nli                # also run NLI (slower)
     python scripts/eval.py --models bart longt5     # only eval specific models
 
-Original eval logic by Sharmil; unified auto-discovery by Sophia.
+AI Attribution: Code co-authored with Claude (Anthropic, https://claude.ai)
+for structural design, debugging, and documentation.
 """
 
 import warnings
-warnings.filterwarnings("ignore")
 
 import argparse
 import gc
@@ -405,6 +405,8 @@ def _plot_rag_radar(rag_df: pd.DataFrame, filename: Path) -> None:
 # ════════════════════════════════════════════════════════════════════════
 
 def main():
+    warnings.filterwarnings("ignore")
+
     parser = argparse.ArgumentParser(description="StudyLens Evaluation")
     parser.add_argument("--run-nli", action="store_true",
                         help="Also compute NLI factual consistency (slower)")

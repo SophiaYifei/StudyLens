@@ -1,29 +1,34 @@
 """
 main.py - StudyLens pipeline entry point.
-Loads lecture materials, then for each index i combines dl_s{i}.pptx + dl_t{i}_cleaned.txt + dl_n{i}.txt
-into dl_s{i}_ori.txt (and same for ml_*), producing 10 files in data/processed.
+
+Loads lecture materials, then for each index i combines dl_s{i}.pptx +
+dl_t{i}_cleaned.txt + dl_n{i}.txt into dl_s{i}_ori.txt (and same for ml_*),
+producing 10 files in data/processed.
+
+AI Attribution: Code co-authored with Claude (Anthropic, claude.ai) for
+structural design, debugging, and documentation.
 """
 
 import warnings
+from pathlib import Path
 
 try:
     from StudyLens.scripts.naive import process_all_ppts
 except ImportError:
     from scripts.naive import process_all_ppts
-warnings.filterwarnings("ignore")
-
-from pathlib import Path
 
 from scripts.make_dataset import denoise_all_transcripts, load_all_documents
 from scripts.build_features import write_per_slide_set_ori_files
 
-# ── Paths ───────────────────────────────────────────────────────────────
+# Module-level constants (not executable logic, just path definitions)
 ROOT_DIR      = Path(__file__).resolve().parent
 DATA_DIR      = ROOT_DIR / "data" / "raw"
 PROCESSED_DIR = ROOT_DIR / "data" / "processed"
 
 
 def main() -> None:
+    """Run the full StudyLens data processing pipeline."""
+    warnings.filterwarnings("ignore")
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 
     if not DATA_DIR.exists():

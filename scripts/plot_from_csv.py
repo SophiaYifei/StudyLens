@@ -6,6 +6,9 @@ produces publication-quality figures saved to data/eval/plots/.
 
 Usage:
     python scripts/plot_from_csv.py
+
+AI Attribution: Code co-authored with Claude (Anthropic, https://claude.ai)
+for structural design, debugging, and documentation.
 """
 
 import matplotlib
@@ -16,16 +19,6 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 
-plt.rcParams.update({
-    "figure.dpi": 150,
-    "font.size": 11,
-    "axes.titlesize": 14,
-    "axes.labelsize": 12,
-    "xtick.labelsize": 9,
-    "ytick.labelsize": 10,
-    "legend.fontsize": 10,
-    "figure.facecolor": "white",
-})
 
 COLORS = {
     "naive_first5":  "#9e9e9e",
@@ -309,6 +302,17 @@ def plot_finetune_train_test(avg_csv_path, plots_dir):
 # ═══════════════════════════════════════════════════════════════
 
 def main():
+    plt.rcParams.update({
+    "figure.dpi": 150,
+    "font.size": 11,
+    "axes.titlesize": 14,
+    "axes.labelsize": 12,
+    "xtick.labelsize": 9,
+    "ytick.labelsize": 10,
+    "legend.fontsize": 10,
+    "figure.facecolor": "white",
+    })
+
     avg_df, plots_dir = load_data()
     print("Generating plots...\n")
 

@@ -11,6 +11,8 @@ Usage:
     python app.py
 
 Attribution: FastAPI framework, OpenRouter API, HuggingFace Hub.
+AI Attribution: Code co-authored with Claude (Anthropic, https://claude.ai)
+for structural design, debugging, and documentation.
 """
 
 import os
@@ -37,7 +39,6 @@ DATA_RAW = DATA_DIR / "raw"
 DATA_PROCESSED = DATA_DIR / "processed"
 DATA_OUTPUTS = DATA_DIR / "outputs"
 USER_NOTES_DIR = DATA_DIR / "user_notes"
-USER_NOTES_DIR.mkdir(parents=True, exist_ok=True)
 
 OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
 HF_TOKEN = os.environ.get("HF_TOKEN", "")
@@ -222,7 +223,7 @@ app = FastAPI(title="StudyLens", version="1.0")
 async def startup():
     """Download data from HuggingFace on first startup."""
     download_data()
-
+    USER_NOTES_DIR.mkdir(parents=True, exist_ok=True)
 
 static_dir = ROOT_DIR / "static"
 if static_dir.exists():
@@ -370,9 +371,10 @@ async def chat(req: ChatRequest):
     
     context = (f"SLIDE TEXT:\n{slides[:15000]}\n\n"
                f"TRANSCRIPT:\n{transcript[:15000]}")
+    # if notes:
+    #     context += f"\n\nYOUR NOTES:\n{notes[:3000]}"
     if notes:
-        context += f"\n\nYOUR NOTES:\n{notes[:3000]}"
-
+        context += f"\n\n⚠️ STUDENT'S PERSONAL NOTES (the student wrote these themselves):\n{notes[:3000]}"
     system = (
         "You are StudyLens, the student's personal study assistant. "
         "You MUST answer based on the LECTURE MATERIALS provided below. "

@@ -2,6 +2,9 @@
 scripts/make_dataset.py
 Data loading and text cleaning for lecture materials (PPTX slides,
 auto-generated transcripts, student notes).
+
+AI Attribution: Code co-authored with Claude (Anthropic, https://claude.ai)
+for structural design, debugging, and documentation.
 """
 
 import re
