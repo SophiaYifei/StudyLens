@@ -51,10 +51,10 @@ HF_DATASET_REPO = "YifeiGuo/studylens-data"  # Change to your repo
 # OPENROUTER_MODEL = "meta-llama/llama-3.3-70b-instruct:free"
 
 # FREE - strong but slow
-OPENROUTER_MODEL = "nvidia/nemotron-3-super-120b-a12b:free"
+# OPENROUTER_MODEL = "nvidia/nemotron-3-super-120b-a12b:free"
 
 # PAID ~$0.25/1M input - best value, fast, excellent quality
-# OPENROUTER_MODEL = "deepseek/deepseek-chat"
+OPENROUTER_MODEL = "deepseek/deepseek-chat"
 
 # PAID ~$0.10/1M input - cheapest and fastest
 # OPENROUTER_MODEL = "google/gemini-2.0-flash-001"
