@@ -240,7 +240,7 @@ function rC(){
 
   if(S.view==='ai'||S.view==='ft'){
     const txt=S.view==='ft'?S.td.precomputed_summary:S.aiSum;
-    const lbl=S.view==='ft'?'Qwen2.5-7B Fine-Tuned':'Deepseek';
+    const lbl=S.view==='ft'?'Qwen2.5-7B Fine-Tuned':'nemotron-3';
     const cls=S.view==='ft'?'smd-ft':'smd-ai';
     el.innerHTML=`<div class="sc"><div class="sh"><span class="slbl">Summary</span><span class="smd ${cls}">${lbl}</span></div><div class="md" id="sren">${rmd(txt)}</div><div class="stog">${S.aiSum?`<button class="${S.view==='ai'?'a':''}" onclick="sw('ai')">AI Generated</button>`:`<button onclick="doSum()">Generate AI Summary</button>`}${S.td.precomputed_summary?`<button class="${S.view==='ft'?'a':''}" onclick="sw('ft')">Qwen-FT</button>`:''}</div></div>`;
     mth(document.getElementById('sren'));
